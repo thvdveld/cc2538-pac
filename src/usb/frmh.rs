@@ -1,0 +1,52 @@
+#[doc = "Register `FRMH` reader"]
+pub struct R(crate::R<FRMH_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<FRMH_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<FRMH_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<FRMH_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `FRAMEH` reader - Bits 10:8 of the 11-bit frame number The frame number is only updated upon successful reception of SOF tokens"]
+pub struct FRAMEH_R(crate::FieldReader<u8, u8>);
+impl FRAMEH_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        FRAMEH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FRAMEH_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl R {
+    #[doc = "Bits 0:2 - Bits 10:8 of the 11-bit frame number The frame number is only updated upon successful reception of SOF tokens"]
+    #[inline(always)]
+    pub fn frameh(&self) -> FRAMEH_R {
+        FRAMEH_R::new((self.bits & 0x07) as u8)
+    }
+}
+#[doc = "Frame number (high byte)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [frmh](index.html) module"]
+pub struct FRMH_SPEC;
+impl crate::RegisterSpec for FRMH_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [frmh::R](R) reader structure"]
+impl crate::Readable for FRMH_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets FRMH to value 0"]
+impl crate::Resettable for FRMH_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
+    }
+}

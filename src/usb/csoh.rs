@@ -1,0 +1,204 @@
+#[doc = "Register `CSOH` reader"]
+pub struct R(crate::R<CSOH_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CSOH_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<CSOH_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<CSOH_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `CSOH` writer"]
+pub struct W(crate::W<CSOH_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CSOH_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<CSOH_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CSOH_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `AUTOCLEAR` reader - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
+pub struct AUTOCLEAR_R(crate::FieldReader<bool, bool>);
+impl AUTOCLEAR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        AUTOCLEAR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for AUTOCLEAR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `AUTOCLEAR` writer - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
+pub struct AUTOCLEAR_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> AUTOCLEAR_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w
+    }
+}
+#[doc = "Field `ISO` reader - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
+pub struct ISO_R(crate::FieldReader<bool, bool>);
+impl ISO_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ISO_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ISO_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ISO` writer - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
+pub struct ISO_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> ISO_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w
+    }
+}
+#[doc = "Field `OUTDBLBUF` reader - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
+pub struct OUTDBLBUF_R(crate::FieldReader<bool, bool>);
+impl OUTDBLBUF_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        OUTDBLBUF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for OUTDBLBUF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `OUTDBLBUF` writer - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
+pub struct OUTDBLBUF_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> OUTDBLBUF_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w
+    }
+}
+impl R {
+    #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
+    #[inline(always)]
+    pub fn autoclear(&self) -> AUTOCLEAR_R {
+        AUTOCLEAR_R::new(((self.bits >> 7) & 0x01) != 0)
+    }
+    #[doc = "Bit 6 - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
+    #[inline(always)]
+    pub fn iso(&self) -> ISO_R {
+        ISO_R::new(((self.bits >> 6) & 0x01) != 0)
+    }
+    #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
+    #[inline(always)]
+    pub fn outdblbuf(&self) -> OUTDBLBUF_R {
+        OUTDBLBUF_R::new((self.bits & 0x01) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
+    #[inline(always)]
+    pub fn autoclear(&mut self) -> AUTOCLEAR_W {
+        AUTOCLEAR_W { w: self }
+    }
+    #[doc = "Bit 6 - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
+    #[inline(always)]
+    pub fn iso(&mut self) -> ISO_W {
+        ISO_W { w: self }
+    }
+    #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
+    #[inline(always)]
+    pub fn outdblbuf(&mut self) -> OUTDBLBUF_W {
+        OUTDBLBUF_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Indexed register: For USB_INDEX = 1-5: OUT endpoint {1-5} control and status (high byte)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csoh](index.html) module"]
+pub struct CSOH_SPEC;
+impl crate::RegisterSpec for CSOH_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [csoh::R](R) reader structure"]
+impl crate::Readable for CSOH_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [csoh::W](W) writer structure"]
+impl crate::Writable for CSOH_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets CSOH to value 0"]
+impl crate::Resettable for CSOH_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
+    }
+}

@@ -1,0 +1,21 @@
+[package]
+authors = ["Thibaut Vandervelden <thvdveld@vub.be>"]
+description = "Peripheral access API for CC2538 System-on-Chip"
+keywords = ["no-std", "arm", "cortex-m", "cc2538"]
+name = "cc2538-pac"
+version = "0.1.0"
+edition = "2018"
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/cc2538-pac"
+
+[dependencies]
+bare-metal = "1.0.0"
+cortex-m = "0.7.1"
+vcell = "0.1.3"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.7"
+
+[features]
+rt = ["cortex-m-rt/device"]
