@@ -37,6 +37,7 @@ impl From<crate::W<CR1_SPEC>> for W {
 #[doc = "Field `SOD` reader - SSI slave mode output disable (R/W) Reset value: 0x0 This bit is relevant only in the slave mode (MS = 1). In multiple-slave systems, it is possible for the SSI master to broadcast a message to all slaves in the system while ensuring that only one slave drives data onto the serial output line. In such systems, the RXD lines from multiple slaves could be tied together. To operate in such a system, the SOD bit can be set if the SSI slave is not suppose to drive the SSITXD line. 0: SSI can drive SSITXD in slave output mode 1: SSI must not drive the SSITXD output in slave mode"]
 pub struct SOD_R(crate::FieldReader<bool, bool>);
 impl SOD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOD_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SOD_W<'a> {
 #[doc = "Field `MS` reader - SSI master and slave select (R/W) Reset value: 0x0 This bit can be modified only when the SSI is disabled (SSE = 0). 0: Device configured as a master (default) 1: Device configured as a slave"]
 pub struct MS_R(crate::FieldReader<bool, bool>);
 impl MS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MS_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> MS_W<'a> {
 #[doc = "Field `SSE` reader - SSI synchronous serial port enable (R/W) Reset value: 0x0 0: SSI operation is disabled. 1: SSI operation is enabled."]
 pub struct SSE_R(crate::FieldReader<bool, bool>);
 impl SSE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> SSE_W<'a> {
 #[doc = "Field `LBM` reader - SSI loop-back mode (R/W) Reset value: 0x0 0: Normal serial port operation is enabled. 1: The output of the transmit serial shifter is connected to the input of the receive serial shift register internally."]
 pub struct LBM_R(crate::FieldReader<bool, bool>);
 impl LBM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LBM_R(crate::FieldReader::new(bits))
     }

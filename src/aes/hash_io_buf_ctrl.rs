@@ -37,6 +37,7 @@ impl From<crate::W<HASH_IO_BUF_CTRL_SPEC>> for W {
 #[doc = "Field `PAD_DMA_MESSAGE` reader - Note: This bit must only be used when data is supplied through the DMA. It should not be used when data is supplied through the slave interface. This bit indicates whether the hash engine has to pad the message, received through the DMA and finalize the hash. When set to 1, the hash engine pads the last block using the programmed length. After padding, the final hash result is calculated. When set to 0, the hash engine treats the last written block as block-size aligned and calculates the intermediate digest. This bit is automatically cleared when the last DMA data block is arrived in the hash engine."]
 pub struct PAD_DMA_MESSAGE_R(crate::FieldReader<bool, bool>);
 impl PAD_DMA_MESSAGE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAD_DMA_MESSAGE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> PAD_DMA_MESSAGE_W<'a> {
 #[doc = "Field `GET_DIGEST` reader - Note: The bit description below is only applicable when data is sent through the slave interface. This bit must be set to 0 when data is received through the DMA. This bit indicates whether the hash engine should provide the hash digest. When provided simultaneously with data_in_av, the hash digest is provided after processing the data that is currently in the HASH_DATA_IN register. When provided without data_in_av, the current internal digest buffer value is copied to the HASH_DIGEST_n registers. The host must write a 1 to this bit to make the intermediate hash digest available. Writing 0 to this bit has no effect. This bit is automatically cleared (that is, reads 0) when the hash engine has processed the contents of the HASH_DATA_IN register. In the period between this bit is set by the host and the actual HASH_DATA_IN processing, this bit reads 1."]
 pub struct GET_DIGEST_R(crate::FieldReader<bool, bool>);
 impl GET_DIGEST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GET_DIGEST_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> GET_DIGEST_W<'a> {
 #[doc = "Field `PAD_MESSAGE` reader - Note: The bit description below is only applicable when data is sent through the slave interface. This bit must be set to 0 when data is received through the DMA. This bit indicates that the HASH_DATA_IN registers hold the last data of the message and hash padding must be applied. The host must write this bit to 1 in order to indicate to the hash engine that the HASH_DATA_IN register currently holds the last data of the message. When pad_message is set to 1, the hash engine will add padding bits to the data currently in the HASH_DATA_IN register. When the last message block is smaller than 512 bits, the pad_message bit must be set to 1 together with the data_in_av bit. When the last message block is equal to 512 bits, pad_message may be set together with data_in_av. In this case the pad_message bit may also be set after the last data block has been written to the hash engine (so when the rfd_in bit has become 1 again after writing the last data block). Writing 0 to this bit has no effect. This bit is automatically cleared (i.e. reads 0) by the hash engine. This bit reads 1 between the time it was set by the host and the hash engine interpreted its value."]
 pub struct PAD_MESSAGE_R(crate::FieldReader<bool, bool>);
 impl PAD_MESSAGE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAD_MESSAGE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PAD_MESSAGE_W<'a> {
 #[doc = "Field `RFD_IN` reader - Note: The bit description below is only applicable when data is sent through the slave interface. This bit can be ignored when data is received through the DMA. Read-only status of the input buffer of the hash engine. When 1, the input buffer of the hash engine can accept new data; the HASH_DATA_IN registers can safely be populated with new data. When 0, the input buffer of the hash engine is processing the data that is currently in HASH_DATA_IN; writing new data to these registers is not allowed."]
 pub struct RFD_IN_R(crate::FieldReader<bool, bool>);
 impl RFD_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFD_IN_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> RFD_IN_W<'a> {
 #[doc = "Field `DATA_IN_AV` reader - Note: The bit description below is only applicable when data is sent through the slave interface. This bit must be set to 0 when data is received through the DMA. This bit indicates that the HASH_DATA_IN registers contain new input data for processing. The host must write a 1 to this bit to start processing the data in HASH_DATA_IN; the hash engine will process the new data as soon as it is ready for it (rfd_in bit is 1). Writing 0 to this bit has no effect. This bit is automatically cleared (i.e. reads as 0) when the hash engine starts processing the HASH_DATA_IN contents. This bit reads 1 between the time it was set by the host and the hash engine actually starts processing the input data block."]
 pub struct DATA_IN_AV_R(crate::FieldReader<bool, bool>);
 impl DATA_IN_AV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DATA_IN_AV_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> DATA_IN_AV_W<'a> {
 #[doc = "Field `OUTPUT_FULL` reader - Indicates that the output buffer registers (HASH_DIGEST_n) are available for reading by the host. When this bit reads 0, the output buffer registers are released; the hash engine is allowed to write new data to it. In this case, the registers should not be read by the host. When this bit reads 1, the hash engine has stored the result of the latest hash operation in the output buffer registers. As long as this bit reads 1, the host may read output buffer registers and the hash engine is prevented from writing new data to the output buffer. After retrieving the hash result data from the output buffer, the host must write a 1 to this bit to clear it. This makes the digest output buffer available for the hash engine to store new hash results. Writing 0 to this bit has no effect. Note: If this bit is asserted (1) no new operation should be started before the digest is retrieved from the hash engine and this bit is cleared (0)."]
 pub struct OUTPUT_FULL_R(crate::FieldReader<bool, bool>);
 impl OUTPUT_FULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTPUT_FULL_R(crate::FieldReader::new(bits))
     }

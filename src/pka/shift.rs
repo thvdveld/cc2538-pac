@@ -37,6 +37,7 @@ impl From<crate::W<SHIFT_SPEC>> for W {
 #[doc = "Field `NUM_BITS_TO_SHIFT` reader - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
 pub struct NUM_BITS_TO_SHIFT_R(crate::FieldReader<u8, u8>);
 impl NUM_BITS_TO_SHIFT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         NUM_BITS_TO_SHIFT_R(crate::FieldReader::new(bits))
     }

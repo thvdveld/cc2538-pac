@@ -16,6 +16,7 @@ impl From<crate::R<OIF_SPEC>> for R {
 #[doc = "Field `OUTEP5IF` reader - Interrupt flag for OUT endpoint 5 Cleared by hardware when read"]
 pub struct OUTEP5IF_R(crate::FieldReader<bool, bool>);
 impl OUTEP5IF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP5IF_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for OUTEP5IF_R {
 #[doc = "Field `OUTEP4IF` reader - Interrupt flag for OUT endpoint 4 Cleared by hardware when read"]
 pub struct OUTEP4IF_R(crate::FieldReader<bool, bool>);
 impl OUTEP4IF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP4IF_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for OUTEP4IF_R {
 #[doc = "Field `OUTEP3IF` reader - Interrupt flag for OUT endpoint 3 Cleared by hardware when read"]
 pub struct OUTEP3IF_R(crate::FieldReader<bool, bool>);
 impl OUTEP3IF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP3IF_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for OUTEP3IF_R {
 #[doc = "Field `OUTEP2IF` reader - Interrupt flag for OUT endpoint 2 Cleared by hardware when read"]
 pub struct OUTEP2IF_R(crate::FieldReader<bool, bool>);
 impl OUTEP2IF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP2IF_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for OUTEP2IF_R {
 #[doc = "Field `OUTEP1IF` reader - Interrupt flag for OUT endpoint 1 Cleared by hardware when read"]
 pub struct OUTEP1IF_R(crate::FieldReader<bool, bool>);
 impl OUTEP1IF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP1IF_R(crate::FieldReader::new(bits))
     }

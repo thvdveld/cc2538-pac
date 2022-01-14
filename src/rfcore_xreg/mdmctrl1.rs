@@ -37,6 +37,7 @@ impl From<crate::W<MDMCTRL1_SPEC>> for W {
 #[doc = "Field `CORR_THR_SFD` reader - Defines requirements for SFD detection: 0: The correlation value of one of the zero symbols of the preamble must be above the correlation threshold. 1: The correlation value of one zero symbol of the preamble and both symbols in the SFD must be above the correlation threshold."]
 pub struct CORR_THR_SFD_R(crate::FieldReader<bool, bool>);
 impl CORR_THR_SFD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CORR_THR_SFD_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CORR_THR_SFD_W<'a> {
 #[doc = "Field `CORR_THR` reader - Demodulator correlator threshold value, required before SFD search. Threshold value adjusts how the receiver synchronizes to data from the radio. If the threshold is set too low, sync can more easily be found on noise. If set too high, the sensitivity is reduced, but sync is not likely to be found on noise. In combination with DEM_NUM_ZEROS, the system can be tuned so sensitivity is high with less sync found on noise."]
 pub struct CORR_THR_R(crate::FieldReader<u8, u8>);
 impl CORR_THR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CORR_THR_R(crate::FieldReader::new(bits))
     }

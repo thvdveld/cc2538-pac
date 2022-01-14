@@ -16,6 +16,7 @@ impl From<crate::R<COMPARE_SPEC>> for R {
 #[doc = "Field `A_GREATER_THAN_B` reader - Vector_A is greater than Vector_B"]
 pub struct A_GREATER_THAN_B_R(crate::FieldReader<bool, bool>);
 impl A_GREATER_THAN_B_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         A_GREATER_THAN_B_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for A_GREATER_THAN_B_R {
 #[doc = "Field `A_LESS_THAN_B` reader - Vector_A is less than Vector_B"]
 pub struct A_LESS_THAN_B_R(crate::FieldReader<bool, bool>);
 impl A_LESS_THAN_B_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         A_LESS_THAN_B_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for A_LESS_THAN_B_R {
 #[doc = "Field `A_EQUALS_B` reader - Vector_A is equal to Vector_B"]
 pub struct A_EQUALS_B_R(crate::FieldReader<bool, bool>);
 impl A_EQUALS_B_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         A_EQUALS_B_R(crate::FieldReader::new(bits))
     }

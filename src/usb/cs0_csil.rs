@@ -37,6 +37,7 @@ impl From<crate::W<CS0_CSIL_SPEC>> for W {
 #[doc = "Field `CLRSETUPEND_or_Reserved8` reader - USB_CS0.CLRSETUPEND \\[RW\\]: Software sets this bit to clear the USB_CS0.SETUPEND bit. It is cleared automatically. USB_CSIL.Reserved \\[RO\\]: Reserved"]
 pub struct CLRSETUPEND_OR_RESERVED8_R(crate::FieldReader<bool, bool>);
 impl CLRSETUPEND_OR_RESERVED8_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLRSETUPEND_OR_RESERVED8_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CLRSETUPEND_OR_RESERVED8_W<'a> {
 #[doc = "Field `CLROUTPKTRDY_or_CLRDATATOG` reader - USB_CS0.CLROUTPKTRDY \\[RW\\]: Software sets this bit to clear the USB_CS0.OUTPKTRDY bit. It is cleared automatically. USB_CSIL.CLRDATATOG \\[RW\\]: Software sets this bit to reset the IN endpoint data toggle to 0."]
 pub struct CLROUTPKTRDY_OR_CLRDATATOG_R(crate::FieldReader<bool, bool>);
 impl CLROUTPKTRDY_OR_CLRDATATOG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLROUTPKTRDY_OR_CLRDATATOG_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> CLROUTPKTRDY_OR_CLRDATATOG_W<'a> {
 #[doc = "Field `SENDSTALL_or_SENTSTALL` reader - USB_CS0.SENDSTALL \\[RW\\]: Software sets this bit to terminate the current transaction with a STALL handshake. The bit is cleared automatically when the STALL handshake has been transmitted. USB_CSIL.SENTSTALL \\[RW\\]: For bulk/interrupt mode IN endpoints: This bit is set when a STALL handshake is transmitted. The FIFO is flushed and the USB_CSIL.INPKTRDY bit cleared. Software should clear this bit."]
 pub struct SENDSTALL_OR_SENTSTALL_R(crate::FieldReader<bool, bool>);
 impl SENDSTALL_OR_SENTSTALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SENDSTALL_OR_SENTSTALL_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> SENDSTALL_OR_SENTSTALL_W<'a> {
 #[doc = "Field `SETUPEND_or_SENDSTALL` reader - USB_CS0.SETUPEND \\[RO\\]: This bit is set when a control transaction ends before the USB_CS0.DATAEND bit has been set. An interrupt is generated and the FIFO flushed at this time. Software clears this bit by setting USB_CS0.CLRSETUPEND. CSIL.SENDSTALL \\[RW\\]: For bulk/interrupt mode IN endpoints: Software sets this bit to issue a STALL handshake. Software clears this bit to terminate the stall condition."]
 pub struct SETUPEND_OR_SENDSTALL_R(crate::FieldReader<bool, bool>);
 impl SETUPEND_OR_SENDSTALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SETUPEND_OR_SENDSTALL_R(crate::FieldReader::new(bits))
     }
@@ -159,6 +163,7 @@ impl core::ops::Deref for SETUPEND_OR_SENDSTALL_R {
 #[doc = "Field `DATAEND_or_FLUSHPACKET` reader - USB_CS0.DATAEND \\[RW\\]: This bit is used to signal the end of the data stage, and must be set: 1. When the last data packet is loaded and USB_CS0.INPKTRDY is set. 2. When the last data packet is unloaded and USB_CS0.CLROUTPKTRDY is set. 3. When USB_CS0.INPKTRDY is set to send a zero-length packet. The USB controller clears this bit automatically. USB_CSIL.FLUSHPACKET \\[RW\\]: Software sets this bit to flush the next packet to be transmitted from the IN endpoint FIFO. The FIFO pointer is reset and the USB_CSIL.INPKTRDY bit is cleared. Note: If the FIFO contains two packets, USB_CSIL.FLUSHPACKET will need to be set twice to completely clear the FIFO."]
 pub struct DATAEND_OR_FLUSHPACKET_R(crate::FieldReader<bool, bool>);
 impl DATAEND_OR_FLUSHPACKET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DATAEND_OR_FLUSHPACKET_R(crate::FieldReader::new(bits))
     }
@@ -195,6 +200,7 @@ impl<'a> DATAEND_OR_FLUSHPACKET_W<'a> {
 #[doc = "Field `SENTSTALL_or_UNDERRUN` reader - USB_CS0.SENTSTALL \\[RW\\]: This bit is set when a STALL handshake is sent. An interrupt is generated is generated when this bit is set. Software must clear this bit. USB_CSIL.UNDERRUN \\[RW\\]: In isochronous mode, this bit is set when a zero length data packet is sent after receiving an IN token with USB_CSIL.INPKTRDY not set. In bulk/interrupt mode, this bit is set when a NAK is returned in response to an IN token. Software should clear this bit."]
 pub struct SENTSTALL_OR_UNDERRUN_R(crate::FieldReader<bool, bool>);
 impl SENTSTALL_OR_UNDERRUN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SENTSTALL_OR_UNDERRUN_R(crate::FieldReader::new(bits))
     }
@@ -231,6 +237,7 @@ impl<'a> SENTSTALL_OR_UNDERRUN_W<'a> {
 #[doc = "Field `INPKTRDY_or_PKTPRESENT` reader - USB_CS0. INPKTRDY \\[RW\\]: Software sets this bit after loading a data packet into the endpoint 0 FIFO. It is cleared automatically when the data packet has been transmitted. An interrupt is generated when the bit is cleared. USB_CSIL.PKTPRESENT \\[RO\\]: This bit is set when there is at least one packet in the IN endpoint FIFO."]
 pub struct INPKTRDY_OR_PKTPRESENT_R(crate::FieldReader<bool, bool>);
 impl INPKTRDY_OR_PKTPRESENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INPKTRDY_OR_PKTPRESENT_R(crate::FieldReader::new(bits))
     }
@@ -267,6 +274,7 @@ impl<'a> INPKTRDY_OR_PKTPRESENT_W<'a> {
 #[doc = "Field `OUTPKTRDY_or_INPKTRDY` reader - USB_CS0.OUTPKTRDY \\[RO\\]: Endpoint 0 data packet received An interrupt request (EP0) is generated if the interrupt is enabled. Software must read the endpoint 0 FIFO empty, and clear this bit by setting USB_CS0.CLROUTPKTRDY USB_CSIL.INPKTRDY \\[RW\\]: IN endpoint {1-5} packet transfer pending Software sets this bit after loading a data packet into the FIFO. It is cleared automatically when a data packet has been transmitted. An interrupt is generated (if enabled) when the bit is cleared. When using double-buffering, the bit is cleared immediately if the other FIFO is empty."]
 pub struct OUTPKTRDY_OR_INPKTRDY_R(crate::FieldReader<bool, bool>);
 impl OUTPKTRDY_OR_INPKTRDY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTPKTRDY_OR_INPKTRDY_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<RXCTRL_SPEC>> for W {
 #[doc = "Field `GBIAS_LNA2_REF` reader - Adjusts front-end LNA2/mixer PTAT current output (from M = 3 to M = 6), default: M = 5"]
 pub struct GBIAS_LNA2_REF_R(crate::FieldReader<u8, u8>);
 impl GBIAS_LNA2_REF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         GBIAS_LNA2_REF_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> GBIAS_LNA2_REF_W<'a> {
 #[doc = "Field `GBIAS_LNA_REF` reader - Adjusts front-end LNA PTAT current output (from M = 3 to M = 6), default: M = 5"]
 pub struct GBIAS_LNA_REF_R(crate::FieldReader<u8, u8>);
 impl GBIAS_LNA_REF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         GBIAS_LNA_REF_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> GBIAS_LNA_REF_W<'a> {
 #[doc = "Field `MIX_CURRENT` reader - Control of the output current from the receiver mixers The current increases with increasing setting set."]
 pub struct MIX_CURRENT_R(crate::FieldReader<u8, u8>);
 impl MIX_CURRENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MIX_CURRENT_R(crate::FieldReader::new(bits))
     }

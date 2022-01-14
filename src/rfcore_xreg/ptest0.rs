@@ -37,6 +37,7 @@ impl From<crate::W<PTEST0_SPEC>> for W {
 #[doc = "Field `PRE_PD` reader - Prescaler power-down signal When PD_OVERRIDE = 1"]
 pub struct PRE_PD_R(crate::FieldReader<bool, bool>);
 impl PRE_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PRE_PD_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for PRE_PD_R {
 #[doc = "Field `CHP_PD` reader - Charge pump power-down signal When PD_OVERRIDE = 1"]
 pub struct CHP_PD_R(crate::FieldReader<bool, bool>);
 impl CHP_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CHP_PD_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +89,7 @@ impl<'a> CHP_PD_W<'a> {
 #[doc = "Field `ADC_PD` reader - ADC power-down signal When PD_OVERRIDE = 1"]
 pub struct ADC_PD_R(crate::FieldReader<bool, bool>);
 impl ADC_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADC_PD_R(crate::FieldReader::new(bits))
     }
@@ -123,6 +126,7 @@ impl<'a> ADC_PD_W<'a> {
 #[doc = "Field `DAC_PD` reader - DAC power-down signal When PD_OVERRIDE = 1"]
 pub struct DAC_PD_R(crate::FieldReader<bool, bool>);
 impl DAC_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DAC_PD_R(crate::FieldReader::new(bits))
     }
@@ -159,6 +163,7 @@ impl<'a> DAC_PD_W<'a> {
 #[doc = "Field `LNA_PD` reader - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
 pub struct LNA_PD_R(crate::FieldReader<u8, u8>);
 impl LNA_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LNA_PD_R(crate::FieldReader::new(bits))
     }
@@ -185,6 +190,7 @@ impl<'a> LNA_PD_W<'a> {
 #[doc = "Field `TXMIX_PD` reader - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
 pub struct TXMIX_PD_R(crate::FieldReader<bool, bool>);
 impl TXMIX_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXMIX_PD_R(crate::FieldReader::new(bits))
     }
@@ -221,6 +227,7 @@ impl<'a> TXMIX_PD_W<'a> {
 #[doc = "Field `AAF_PD` reader - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
 pub struct AAF_PD_R(crate::FieldReader<bool, bool>);
 impl AAF_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AAF_PD_R(crate::FieldReader::new(bits))
     }

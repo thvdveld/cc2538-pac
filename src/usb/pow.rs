@@ -37,6 +37,7 @@ impl From<crate::W<POW_SPEC>> for W {
 #[doc = "Field `ISOWAITSOF` reader - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
 pub struct ISOWAITSOF_R(crate::FieldReader<bool, bool>);
 impl ISOWAITSOF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ISOWAITSOF_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> ISOWAITSOF_W<'a> {
 #[doc = "Field `RST` reader - Indicates that reset signaling is present on the bus"]
 pub struct RST_R(crate::FieldReader<bool, bool>);
 impl RST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RST_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +89,7 @@ impl core::ops::Deref for RST_R {
 #[doc = "Field `RESUME` reader - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
 pub struct RESUME_R(crate::FieldReader<bool, bool>);
 impl RESUME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESUME_R(crate::FieldReader::new(bits))
     }
@@ -123,6 +126,7 @@ impl<'a> RESUME_W<'a> {
 #[doc = "Field `SUSPEND` reader - Indicates entry into suspend mode Suspend mode must be enabled by setting USB_POW.SUSPENDEN Software clears this bit by reading the USB_CIF register or by asserting USB_POW.RESUME"]
 pub struct SUSPEND_R(crate::FieldReader<bool, bool>);
 impl SUSPEND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SUSPEND_R(crate::FieldReader::new(bits))
     }
@@ -137,6 +141,7 @@ impl core::ops::Deref for SUSPEND_R {
 #[doc = "Field `SUSPENDEN` reader - Enables detection of and entry into suspend mode."]
 pub struct SUSPENDEN_R(crate::FieldReader<bool, bool>);
 impl SUSPENDEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SUSPENDEN_R(crate::FieldReader::new(bits))
     }

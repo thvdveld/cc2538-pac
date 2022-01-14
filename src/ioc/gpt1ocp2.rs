@@ -37,6 +37,7 @@ impl From<crate::W<GPT1OCP2_SPEC>> for W {
 #[doc = "Field `INPUT_SEL` reader - 0: PA0 selected as GPT1OCP2 1: PA1 selected as GPT1OCP2 ... 31: PD7 selected as GPT1OCP2"]
 pub struct INPUT_SEL_R(crate::FieldReader<u8, u8>);
 impl INPUT_SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         INPUT_SEL_R(crate::FieldReader::new(bits))
     }

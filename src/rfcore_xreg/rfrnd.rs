@@ -16,6 +16,7 @@ impl From<crate::R<RFRND_SPEC>> for R {
 #[doc = "Field `QRND` reader - Random bit from the Q channel of the receiver"]
 pub struct QRND_R(crate::FieldReader<bool, bool>);
 impl QRND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         QRND_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for QRND_R {
 #[doc = "Field `IRND` reader - Random bit from the I channel of the receiver"]
 pub struct IRND_R(crate::FieldReader<bool, bool>);
 impl IRND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IRND_R(crate::FieldReader::new(bits))
     }

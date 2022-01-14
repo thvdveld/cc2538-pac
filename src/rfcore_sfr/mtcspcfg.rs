@@ -37,6 +37,7 @@ impl From<crate::W<MTCSPCFG_SPEC>> for W {
 #[doc = "Field `MACTIMER_EVENMT_CFG` reader - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
 pub struct MACTIMER_EVENMT_CFG_R(crate::FieldReader<u8, u8>);
 impl MACTIMER_EVENMT_CFG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MACTIMER_EVENMT_CFG_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> MACTIMER_EVENMT_CFG_W<'a> {
 #[doc = "Field `MACTIMER_EVENT1_CFG` reader - Selects the event that triggers an MT_EVENT1 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
 pub struct MACTIMER_EVENT1_CFG_R(crate::FieldReader<u8, u8>);
 impl MACTIMER_EVENT1_CFG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MACTIMER_EVENT1_CFG_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<DIECFG0_SPEC>> for R {
 #[doc = "Field `CHIPID` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit field is equal to the field with the same name in the information page."]
 pub struct CHIPID_R(crate::FieldReader<u16, u16>);
 impl CHIPID_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         CHIPID_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for CHIPID_R {
 #[doc = "Field `CLK_SEL_GATE_EN_N` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
 pub struct CLK_SEL_GATE_EN_N_R(crate::FieldReader<bool, bool>);
 impl CLK_SEL_GATE_EN_N_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SEL_GATE_EN_N_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for CLK_SEL_GATE_EN_N_R {
 #[doc = "Field `SRAM_SIZE` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit field is equal to the field with the same name in the information page."]
 pub struct SRAM_SIZE_R(crate::FieldReader<u8, u8>);
 impl SRAM_SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SRAM_SIZE_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for SRAM_SIZE_R {
 #[doc = "Field `FLASH_SIZE` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit field is equal to the field with the same name in the information page."]
 pub struct FLASH_SIZE_R(crate::FieldReader<u8, u8>);
 impl FLASH_SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FLASH_SIZE_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for FLASH_SIZE_R {
 #[doc = "Field `USB_ENABLE` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
 pub struct USB_ENABLE_R(crate::FieldReader<bool, bool>);
 impl USB_ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USB_ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for USB_ENABLE_R {
 #[doc = "Field `MASS_ERASE_ENABLE` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
 pub struct MASS_ERASE_ENABLE_R(crate::FieldReader<bool, bool>);
 impl MASS_ERASE_ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MASS_ERASE_ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for MASS_ERASE_ENABLE_R {
 #[doc = "Field `LOCK_FWT_N` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
 pub struct LOCK_FWT_N_R(crate::FieldReader<bool, bool>);
 impl LOCK_FWT_N_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LOCK_FWT_N_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for LOCK_FWT_N_R {
 #[doc = "Field `LOCK_IP_N` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
 pub struct LOCK_IP_N_R(crate::FieldReader<bool, bool>);
 impl LOCK_IP_N_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LOCK_IP_N_R(crate::FieldReader::new(bits))
     }

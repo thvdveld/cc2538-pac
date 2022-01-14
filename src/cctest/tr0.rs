@@ -37,6 +37,7 @@ impl From<crate::W<TR0_SPEC>> for W {
 #[doc = "Field `ADCTM` reader - Set to 1 to connect the temperature sensor to the SOC_ADC. See also RFCORE_XREG_ATEST register description to enable the temperature sensor."]
 pub struct ADCTM_R(crate::FieldReader<bool, bool>);
 impl ADCTM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADCTM_R(crate::FieldReader::new(bits))
     }

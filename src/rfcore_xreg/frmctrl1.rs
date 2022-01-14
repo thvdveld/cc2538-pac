@@ -37,6 +37,7 @@ impl From<crate::W<FRMCTRL1_SPEC>> for W {
 #[doc = "Field `PENDING_OR` reader - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
 pub struct PENDING_OR_R(crate::FieldReader<bool, bool>);
 impl PENDING_OR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PENDING_OR_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> PENDING_OR_W<'a> {
 #[doc = "Field `IGNORE_TX_UNDERF` reader - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
 pub struct IGNORE_TX_UNDERF_R(crate::FieldReader<bool, bool>);
 impl IGNORE_TX_UNDERF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IGNORE_TX_UNDERF_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> IGNORE_TX_UNDERF_W<'a> {
 #[doc = "Field `SET_RXENMASK_ON_TX` reader - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
 pub struct SET_RXENMASK_ON_TX_R(crate::FieldReader<bool, bool>);
 impl SET_RXENMASK_ON_TX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SET_RXENMASK_ON_TX_R(crate::FieldReader::new(bits))
     }

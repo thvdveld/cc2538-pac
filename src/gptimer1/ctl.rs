@@ -37,6 +37,7 @@ impl From<crate::W<CTL_SPEC>> for W {
 #[doc = "Field `TBPWML` reader - GPTM Timer B PWM output level 0: Output is unaffected. 1: Output is inverted."]
 pub struct TBPWML_R(crate::FieldReader<bool, bool>);
 impl TBPWML_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBPWML_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TBPWML_W<'a> {
 #[doc = "Field `TBOTE` reader - GPTM Timer B output trigger enable 0: The ADC trigger of output Timer B is disabled. 1: The ADC trigger of output Timer B is enabled."]
 pub struct TBOTE_R(crate::FieldReader<bool, bool>);
 impl TBOTE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBOTE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> TBOTE_W<'a> {
 #[doc = "Field `TBEVENT` reader - GPTM Timer B event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
 pub struct TBEVENT_R(crate::FieldReader<u8, u8>);
 impl TBEVENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TBEVENT_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> TBEVENT_W<'a> {
 #[doc = "Field `TBSTALL` reader - GPTM Timer B stall enable 0: Timer B continues counting while the processor is halted by the debugger. 1: Timer B freezes counting while the processor is halted by the debugger."]
 pub struct TBSTALL_R(crate::FieldReader<bool, bool>);
 impl TBSTALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBSTALL_R(crate::FieldReader::new(bits))
     }
@@ -171,6 +175,7 @@ impl<'a> TBSTALL_W<'a> {
 #[doc = "Field `TBEN` reader - GPTM Timer B enable 0: Timer B is disabled. 1: Timer B is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
 pub struct TBEN_R(crate::FieldReader<bool, bool>);
 impl TBEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBEN_R(crate::FieldReader::new(bits))
     }
@@ -207,6 +212,7 @@ impl<'a> TBEN_W<'a> {
 #[doc = "Field `TAPWML` reader - GPTM Timer A PWM output level 0: Output is unaffected. 1: Output is inverted."]
 pub struct TAPWML_R(crate::FieldReader<bool, bool>);
 impl TAPWML_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAPWML_R(crate::FieldReader::new(bits))
     }
@@ -243,6 +249,7 @@ impl<'a> TAPWML_W<'a> {
 #[doc = "Field `TAOTE` reader - GPTM Timer A output trigger enable 0: The ADC trigger of output Timer A is disabled. 1: The ADC trigger of output Timer A is enabled."]
 pub struct TAOTE_R(crate::FieldReader<bool, bool>);
 impl TAOTE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAOTE_R(crate::FieldReader::new(bits))
     }
@@ -279,6 +286,7 @@ impl<'a> TAOTE_W<'a> {
 #[doc = "Field `TAEVENT` reader - GPTM Timer A event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
 pub struct TAEVENT_R(crate::FieldReader<u8, u8>);
 impl TAEVENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TAEVENT_R(crate::FieldReader::new(bits))
     }
@@ -305,6 +313,7 @@ impl<'a> TAEVENT_W<'a> {
 #[doc = "Field `TASTALL` reader - GPTM Timer A stall enable 0: Timer A continues counting while the processor is halted by the debugger. 1: Timer A freezes counting while the processor is halted by the debugger."]
 pub struct TASTALL_R(crate::FieldReader<bool, bool>);
 impl TASTALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TASTALL_R(crate::FieldReader::new(bits))
     }
@@ -341,6 +350,7 @@ impl<'a> TASTALL_W<'a> {
 #[doc = "Field `TAEN` reader - GPTM Timer A enable 0: Timer A is disabled. 1: Timer A is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
 pub struct TAEN_R(crate::FieldReader<bool, bool>);
 impl TAEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAEN_R(crate::FieldReader::new(bits))
     }

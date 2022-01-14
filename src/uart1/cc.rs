@@ -37,6 +37,7 @@ impl From<crate::W<CC_SPEC>> for W {
 #[doc = "Field `CS` reader - UART baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the UART. bit0 (PIOSC): 1: The UART baud clock is determined by the IO DIV setting in the system controller. 0: The UART baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The UART system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The UART system clock is determined by the SYS DIV setting in the system controller."]
 pub struct CS_R(crate::FieldReader<u8, u8>);
 impl CS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CS_R(crate::FieldReader::new(bits))
     }

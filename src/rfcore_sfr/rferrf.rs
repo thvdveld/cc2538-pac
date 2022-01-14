@@ -37,6 +37,7 @@ impl From<crate::W<RFERRF_SPEC>> for W {
 #[doc = "Field `STROBEERR` reader - A command strobe was issued when it could not be processed. Triggered if trying to disable the radio when it is already disabled, or when trying to do a SACK, SACKPEND, or SNACK command when not in active RX. 0: No interrupt pending 1: Interrupt pending"]
 pub struct STROBEERR_R(crate::FieldReader<bool, bool>);
 impl STROBEERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STROBEERR_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> STROBEERR_W<'a> {
 #[doc = "Field `TXUNDERF` reader - TX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
 pub struct TXUNDERF_R(crate::FieldReader<bool, bool>);
 impl TXUNDERF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXUNDERF_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> TXUNDERF_W<'a> {
 #[doc = "Field `TXOVERF` reader - TX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
 pub struct TXOVERF_R(crate::FieldReader<bool, bool>);
 impl TXOVERF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXOVERF_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> TXOVERF_W<'a> {
 #[doc = "Field `RXUNDERF` reader - RX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
 pub struct RXUNDERF_R(crate::FieldReader<bool, bool>);
 impl RXUNDERF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXUNDERF_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> RXUNDERF_W<'a> {
 #[doc = "Field `RXOVERF` reader - RX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
 pub struct RXOVERF_R(crate::FieldReader<bool, bool>);
 impl RXOVERF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXOVERF_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> RXOVERF_W<'a> {
 #[doc = "Field `RXABO` reader - Reception of a frame was aborted. 0: No interrupt pending 1: Interrupt pending"]
 pub struct RXABO_R(crate::FieldReader<bool, bool>);
 impl RXABO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXABO_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> RXABO_W<'a> {
 #[doc = "Field `NLOCK` reader - The frequency synthesizer failed to achieve lock after time-out, or lock is lost during reception. The receiver must be restarted to clear this error situation. 0: No interrupt pending 1: Interrupt pending"]
 pub struct NLOCK_R(crate::FieldReader<bool, bool>);
 impl NLOCK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NLOCK_R(crate::FieldReader::new(bits))
     }

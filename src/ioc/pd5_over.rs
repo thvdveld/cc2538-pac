@@ -37,6 +37,7 @@ impl From<crate::W<PD5_OVER_SPEC>> for W {
 #[doc = "Field `PD5_over` reader - 0x8: oe - output enable 0x4: pue - pullup enable 0x2: pde - pulldown enable 0x1: ana - analog enable"]
 pub struct PD5_OVER_R(crate::FieldReader<u8, u8>);
 impl PD5_OVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PD5_OVER_R(crate::FieldReader::new(bits))
     }

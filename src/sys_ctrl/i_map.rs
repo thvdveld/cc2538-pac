@@ -37,6 +37,7 @@ impl From<crate::W<I_MAP_SPEC>> for W {
 #[doc = "Field `ALTMAP` reader - 1: Select alternate interrupt map. 0: Select regular interrupt map. (See the ASD document for details.)"]
 pub struct ALTMAP_R(crate::FieldReader<bool, bool>);
 impl ALTMAP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ALTMAP_R(crate::FieldReader::new(bits))
     }

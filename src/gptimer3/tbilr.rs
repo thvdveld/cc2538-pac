@@ -37,6 +37,7 @@ impl From<crate::W<TBILR_SPEC>> for W {
 #[doc = "Field `TBILR` reader - GPTM B interval load register"]
 pub struct TBILR_R(crate::FieldReader<u16, u16>);
 impl TBILR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         TBILR_R(crate::FieldReader::new(bits))
     }

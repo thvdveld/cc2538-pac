@@ -37,6 +37,7 @@ impl From<crate::W<IVCTRL_SPEC>> for W {
 #[doc = "Field `DAC_CURR_CTRL` reader - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
 pub struct DAC_CURR_CTRL_R(crate::FieldReader<u8, u8>);
 impl DAC_CURR_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAC_CURR_CTRL_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> DAC_CURR_CTRL_W<'a> {
 #[doc = "Field `LODIV_BIAS_CTRL` reader - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
 pub struct LODIV_BIAS_CTRL_R(crate::FieldReader<bool, bool>);
 impl LODIV_BIAS_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LODIV_BIAS_CTRL_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> LODIV_BIAS_CTRL_W<'a> {
 #[doc = "Field `TXMIX_DC_CTRL` reader - Controls DC bias in TXMIX"]
 pub struct TXMIX_DC_CTRL_R(crate::FieldReader<bool, bool>);
 impl TXMIX_DC_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXMIX_DC_CTRL_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> TXMIX_DC_CTRL_W<'a> {
 #[doc = "Field `PA_BIAS_CTRL` reader - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
 pub struct PA_BIAS_CTRL_R(crate::FieldReader<u8, u8>);
 impl PA_BIAS_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PA_BIAS_CTRL_R(crate::FieldReader::new(bits))
     }

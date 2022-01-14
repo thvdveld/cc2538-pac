@@ -29,7 +29,7 @@ impl<'a> C_LENGTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits |= value as u32;
+        self.w.bits = value as u32;
         self.w
     }
 }

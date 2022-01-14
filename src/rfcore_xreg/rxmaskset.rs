@@ -37,6 +37,7 @@ impl From<crate::W<RXMASKSET_SPEC>> for W {
 #[doc = "Field `RXENMASKSET` reader - When written, the written data is ORed with the RXENMASK and stored in RXENMASK."]
 pub struct RXENMASKSET_R(crate::FieldReader<u8, u8>);
 impl RXENMASKSET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXENMASKSET_R(crate::FieldReader::new(bits))
     }

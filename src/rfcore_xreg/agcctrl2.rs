@@ -37,6 +37,7 @@ impl From<crate::W<AGCCTRL2_SPEC>> for W {
 #[doc = "Field `LNA1_CURRENT` reader - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
 pub struct LNA1_CURRENT_R(crate::FieldReader<u8, u8>);
 impl LNA1_CURRENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LNA1_CURRENT_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> LNA1_CURRENT_W<'a> {
 #[doc = "Field `LNA2_CURRENT` reader - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
 pub struct LNA2_CURRENT_R(crate::FieldReader<u8, u8>);
 impl LNA2_CURRENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LNA2_CURRENT_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> LNA2_CURRENT_W<'a> {
 #[doc = "Field `LNA3_CURRENT` reader - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
 pub struct LNA3_CURRENT_R(crate::FieldReader<u8, u8>);
 impl LNA3_CURRENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LNA3_CURRENT_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> LNA3_CURRENT_W<'a> {
 #[doc = "Field `LNA_CURRENT_OE` reader - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
 pub struct LNA_CURRENT_OE_R(crate::FieldReader<bool, bool>);
 impl LNA_CURRENT_OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LNA_CURRENT_OE_R(crate::FieldReader::new(bits))
     }

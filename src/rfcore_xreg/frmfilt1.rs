@@ -37,6 +37,7 @@ impl From<crate::W<FRMFILT1_SPEC>> for W {
 #[doc = "Field `ACCEPT_FT_3_MAC_CMD` reader - Defines whether MAC command frames are accepted or not. MAC command frames have frame type = 011. 0: Reject 1: Accept"]
 pub struct ACCEPT_FT_3_MAC_CMD_R(crate::FieldReader<bool, bool>);
 impl ACCEPT_FT_3_MAC_CMD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ACCEPT_FT_3_MAC_CMD_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> ACCEPT_FT_3_MAC_CMD_W<'a> {
 #[doc = "Field `ACCEPT_FT_2_ACK` reader - Defines whether acknowledgment frames are accepted or not. Acknowledgement frames have frame type = 010. 0: Reject 1: Accept"]
 pub struct ACCEPT_FT_2_ACK_R(crate::FieldReader<bool, bool>);
 impl ACCEPT_FT_2_ACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ACCEPT_FT_2_ACK_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> ACCEPT_FT_2_ACK_W<'a> {
 #[doc = "Field `ACCEPT_FT_1_DATA` reader - Defines whether data frames are accepted or not. Data frames have frame type = 001. 0: Reject 1: Accept"]
 pub struct ACCEPT_FT_1_DATA_R(crate::FieldReader<bool, bool>);
 impl ACCEPT_FT_1_DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ACCEPT_FT_1_DATA_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> ACCEPT_FT_1_DATA_W<'a> {
 #[doc = "Field `ACCEPT_FT_0_BEACON` reader - Defines whether beacon frames are accepted or not. Beacon frames have frame type = 000. 0: Reject 1: Accept"]
 pub struct ACCEPT_FT_0_BEACON_R(crate::FieldReader<bool, bool>);
 impl ACCEPT_FT_0_BEACON_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ACCEPT_FT_0_BEACON_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> ACCEPT_FT_0_BEACON_W<'a> {
 #[doc = "Field `MODIFY_FT_FILTER` reader - These bits are used to modify the frame type field of a received frame before frame type filtering is performed. The modification does not influence the frame that is written to the RX FIFO. 00: Leave the frame type as it is. 01: Invert MSB of the frame type. 10: Set MSB of the frame type to 0. 11: Set MSB of the frame type to 1."]
 pub struct MODIFY_FT_FILTER_R(crate::FieldReader<u8, u8>);
 impl MODIFY_FT_FILTER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MODIFY_FT_FILTER_R(crate::FieldReader::new(bits))
     }

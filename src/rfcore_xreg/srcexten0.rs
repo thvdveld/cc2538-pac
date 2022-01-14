@@ -39,6 +39,7 @@ bits are read only. Read access: Extended address enable for table entry n (0 to
 and EXT_ADDR_EN\\[2n + 1\\]. Optional safety feature: To ensure that an entry in the source matching table is not used while it is being updated, set the corresponding EXT_ADDR_EN bit to 0 while updating."]
 pub struct EXT_ADDR_EN_R(crate::FieldReader<u8, u8>);
 impl EXT_ADDR_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         EXT_ADDR_EN_R(crate::FieldReader::new(bits))
     }

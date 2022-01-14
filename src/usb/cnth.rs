@@ -16,6 +16,7 @@ impl From<crate::R<CNTH_SPEC>> for R {
 #[doc = "Field `FIFOCNTH` reader - Bits 10:8 of the of the number of bytes received in the packet in the OUT endpoint {1-5} FIFO Valid only when USB_CSOL.OUTPKTRDY is set"]
 pub struct FIFOCNTH_R(crate::FieldReader<u8, u8>);
 impl FIFOCNTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FIFOCNTH_R(crate::FieldReader::new(bits))
     }

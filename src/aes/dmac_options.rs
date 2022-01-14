@@ -16,6 +16,7 @@ impl From<crate::R<DMAC_OPTIONS_SPEC>> for R {
 #[doc = "Field `NR_OF_CHANNELS` reader - Number of channels implemented, value in the range 1-8."]
 pub struct NR_OF_CHANNELS_R(crate::FieldReader<u8, u8>);
 impl NR_OF_CHANNELS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         NR_OF_CHANNELS_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for NR_OF_CHANNELS_R {
 #[doc = "Field `NR_OF_PORTS` reader - Number of ports implemented, value in range 1-4."]
 pub struct NR_OF_PORTS_R(crate::FieldReader<u8, u8>);
 impl NR_OF_PORTS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         NR_OF_PORTS_R(crate::FieldReader::new(bits))
     }

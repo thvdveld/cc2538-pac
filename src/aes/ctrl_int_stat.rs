@@ -16,6 +16,7 @@ impl From<crate::R<CTRL_INT_STAT_SPEC>> for R {
 #[doc = "Field `DMA_BUS_ERR` reader - This bit is set when a DMA bus error is detected during a DMA operation. The value of this register is held until it is cleared through the CTRL_INT_CLR register. Note: This error is asserted if an error is detected on the AHB master interface during a DMA operation."]
 pub struct DMA_BUS_ERR_R(crate::FieldReader<bool, bool>);
 impl DMA_BUS_ERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DMA_BUS_ERR_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for DMA_BUS_ERR_R {
 #[doc = "Field `KEY_ST_WR_ERR` reader - This bit is set when a write error is detected during the DMA write operation to the key store memory. The value of this register is held until it is cleared through the CTRL_INT_CLR register. Note: This error is asserted if a DMA operation does not cover a full key area or more areas are written than expected."]
 pub struct KEY_ST_WR_ERR_R(crate::FieldReader<bool, bool>);
 impl KEY_ST_WR_ERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         KEY_ST_WR_ERR_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for KEY_ST_WR_ERR_R {
 #[doc = "Field `KEY_ST_RD_ERR` reader - This bit is set when a read error is detected during the read of a key from the key store, while copying it to the AES core. The value of this register is held until it is cleared through the CTRL_INT_CLR register. Note: This error is asserted if a key location is selected in the key store that is not available."]
 pub struct KEY_ST_RD_ERR_R(crate::FieldReader<bool, bool>);
 impl KEY_ST_RD_ERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         KEY_ST_RD_ERR_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for KEY_ST_RD_ERR_R {
 #[doc = "Field `DMA_IN_DONE` reader - This read only bit returns the actual DMA data in done (irq_data_in_done) interrupt status of the DMA data in done interrupt output pin (irq_data_in_done)."]
 pub struct DMA_IN_DONE_R(crate::FieldReader<bool, bool>);
 impl DMA_IN_DONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DMA_IN_DONE_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for DMA_IN_DONE_R {
 #[doc = "Field `RESULT_AV` reader - This read only bit returns the actual result available (irq_result_av) interrupt status of the result available interrupt output pin (irq_result_av)."]
 pub struct RESULT_AV_R(crate::FieldReader<bool, bool>);
 impl RESULT_AV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESULT_AV_R(crate::FieldReader::new(bits))
     }

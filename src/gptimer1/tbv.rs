@@ -37,6 +37,7 @@ impl From<crate::W<TBV_SPEC>> for W {
 #[doc = "Field `PRE` reader - GPTM Timer B prescale register (16-bit mode)"]
 pub struct PRE_R(crate::FieldReader<u8, u8>);
 impl PRE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PRE_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for PRE_R {
 #[doc = "Field `TBV` reader - GPTM Timer B register"]
 pub struct TBV_R(crate::FieldReader<u16, u16>);
 impl TBV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         TBV_R(crate::FieldReader::new(bits))
     }

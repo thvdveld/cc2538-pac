@@ -37,6 +37,7 @@ impl From<crate::W<SCGCRFC_SPEC>> for W {
 #[doc = "Field `RFC0` reader - 0: Clock for RF CORE is gated. 1: Clock for RF CORE is enabled."]
 pub struct RFC0_R(crate::FieldReader<bool, bool>);
 impl RFC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFC0_R(crate::FieldReader::new(bits))
     }

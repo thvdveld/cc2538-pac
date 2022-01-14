@@ -37,6 +37,7 @@ impl From<crate::W<MTIRQM_SPEC>> for W {
 #[doc = "Field `MACTIMER_OVF_COMPARE2M` reader - Enables the MACTIMER_OVF_COMPARE2 interrupt"]
 pub struct MACTIMER_OVF_COMPARE2M_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_OVF_COMPARE2M_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_OVF_COMPARE2M_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> MACTIMER_OVF_COMPARE2M_W<'a> {
 #[doc = "Field `MACTIMER_OVF_COMPARE1M` reader - Enables the MACTIMER_OVF_COMPARE1 interrupt"]
 pub struct MACTIMER_OVF_COMPARE1M_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_OVF_COMPARE1M_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_OVF_COMPARE1M_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> MACTIMER_OVF_COMPARE1M_W<'a> {
 #[doc = "Field `MACTIMER_OVF_PERM` reader - Enables the MACTIMER_OVF_PER interrupt"]
 pub struct MACTIMER_OVF_PERM_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_OVF_PERM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_OVF_PERM_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> MACTIMER_OVF_PERM_W<'a> {
 #[doc = "Field `MACTIMER_COMPARE2M` reader - Enables the MACTIMER_COMPARE2 interrupt"]
 pub struct MACTIMER_COMPARE2M_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_COMPARE2M_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_COMPARE2M_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> MACTIMER_COMPARE2M_W<'a> {
 #[doc = "Field `MACTIMER_COMPARE1M` reader - Enables the MACTIMER_COMPARE1 interrupt"]
 pub struct MACTIMER_COMPARE1M_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_COMPARE1M_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_COMPARE1M_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> MACTIMER_COMPARE1M_W<'a> {
 #[doc = "Field `MACTIMER_PERM` reader - Enables the MACTIMER_PER interrupt"]
 pub struct MACTIMER_PERM_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_PERM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_PERM_R(crate::FieldReader::new(bits))
     }

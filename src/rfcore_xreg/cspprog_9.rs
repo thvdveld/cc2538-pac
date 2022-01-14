@@ -16,6 +16,7 @@ impl From<crate::R<CSPPROG_9_SPEC>> for R {
 #[doc = "Field `CSP_INSTR` reader - Byte N of the CSP program memory"]
 pub struct CSP_INSTR_R(crate::FieldReader<u8, u8>);
 impl CSP_INSTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CSP_INSTR_R(crate::FieldReader::new(bits))
     }

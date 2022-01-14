@@ -37,6 +37,7 @@ impl From<crate::W<SRCSHORTPENDEN0_SPEC>> for W {
 #[doc = "Field `SRCSHORTPENDEN0` reader - 8 LSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
 pub struct SRCSHORTPENDEN0_R(crate::FieldReader<u8, u8>);
 impl SRCSHORTPENDEN0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SRCSHORTPENDEN0_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<GPIOLOCK_SPEC>> for W {
 #[doc = "Field `LOCK` reader - A read of this register returns the following values: Locked: 0x00000001 Unlocked: 0x00000000"]
 pub struct LOCK_R(crate::FieldReader<u32, u32>);
 impl LOCK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         LOCK_R(crate::FieldReader::new(bits))
     }
@@ -56,7 +57,7 @@ impl<'a> LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits |= value as u32;
+        self.w.bits = value as u32;
         self.w
     }
 }

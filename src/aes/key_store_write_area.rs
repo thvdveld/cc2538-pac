@@ -37,6 +37,7 @@ impl From<crate::W<KEY_STORE_WRITE_AREA_SPEC>> for W {
 #[doc = "Field `RAM_AREA7` reader - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA7 is not selected to be written. 1: RAM_AREA7 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
 pub struct RAM_AREA7_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA7_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> RAM_AREA7_W<'a> {
 #[doc = "Field `RAM_AREA6` reader - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA6 is not selected to be written. 1: RAM_AREA6 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
 pub struct RAM_AREA6_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA6_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RAM_AREA6_W<'a> {
 #[doc = "Field `RAM_AREA5` reader - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA5 is not selected to be written. 1: RAM_AREA5 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
 pub struct RAM_AREA5_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA5_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> RAM_AREA5_W<'a> {
 #[doc = "Field `RAM_AREA4` reader - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA4 is not selected to be written. 1: RAM_AREA4 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
 pub struct RAM_AREA4_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA4_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> RAM_AREA4_W<'a> {
 #[doc = "Field `RAM_AREA3` reader - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA3 is not selected to be written. 1: RAM_AREA3 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
 pub struct RAM_AREA3_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA3_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> RAM_AREA3_W<'a> {
 #[doc = "Field `RAM_AREA2` reader - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA2 is not selected to be written. 1: RAM_AREA2 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
 pub struct RAM_AREA2_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA2_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> RAM_AREA2_W<'a> {
 #[doc = "Field `RAM_AREA1` reader - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA1 is not selected to be written. 1: RAM_AREA1 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
 pub struct RAM_AREA1_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA1_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> RAM_AREA1_W<'a> {
 #[doc = "Field `RAM_AREA0` reader - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA0 is not selected to be written. 1: RAM_AREA0 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
 pub struct RAM_AREA0_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA0_R(crate::FieldReader::new(bits))
     }

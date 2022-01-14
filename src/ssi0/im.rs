@@ -37,6 +37,7 @@ impl From<crate::W<IM_SPEC>> for W {
 #[doc = "Field `TXIM` reader - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
 pub struct TXIM_R(crate::FieldReader<bool, bool>);
 impl TXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXIM_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TXIM_W<'a> {
 #[doc = "Field `RXIM` reader - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
 pub struct RXIM_R(crate::FieldReader<bool, bool>);
 impl RXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXIM_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RXIM_W<'a> {
 #[doc = "Field `RTIM` reader - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
 pub struct RTIM_R(crate::FieldReader<bool, bool>);
 impl RTIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTIM_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> RTIM_W<'a> {
 #[doc = "Field `RORIM` reader - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
 pub struct RORIM_R(crate::FieldReader<bool, bool>);
 impl RORIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RORIM_R(crate::FieldReader::new(bits))
     }

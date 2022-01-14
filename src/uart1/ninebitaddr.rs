@@ -37,6 +37,7 @@ impl From<crate::W<NINEBITADDR_SPEC>> for W {
 #[doc = "Field `NINEBITEN` reader - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
 pub struct NINEBITEN_R(crate::FieldReader<bool, bool>);
 impl NINEBITEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NINEBITEN_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> NINEBITEN_W<'a> {
 #[doc = "Field `ADDR` reader - Self address for 9-bit mode This field contains the address that should be matched when UART9BITAMASK is 0xFF."]
 pub struct ADDR_R(crate::FieldReader<u8, u8>);
 impl ADDR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADDR_R(crate::FieldReader::new(bits))
     }

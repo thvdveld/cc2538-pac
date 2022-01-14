@@ -37,6 +37,7 @@ impl From<crate::W<DCGCSSI_SPEC>> for W {
 #[doc = "Field `SSI1` reader - 0: Clock for SSI1 is gated. 1: Clock for SSI1 is enabled."]
 pub struct SSI1_R(crate::FieldReader<bool, bool>);
 impl SSI1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSI1_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SSI1_W<'a> {
 #[doc = "Field `SSI0` reader - 0: Clock for SSI0 is gated. 1: Clock for SSI0 is enabled."]
 pub struct SSI0_R(crate::FieldReader<bool, bool>);
 impl SSI0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSI0_R(crate::FieldReader::new(bits))
     }

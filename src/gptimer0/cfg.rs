@@ -38,6 +38,7 @@ impl From<crate::W<CFG_SPEC>> for W {
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
 pub struct GPTMCFG_R(crate::FieldReader<u8, u8>);
 impl GPTMCFG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         GPTMCFG_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<DIECFG1_SPEC>> for R {
 #[doc = "Field `I2C_EN` reader - 1: I2C is enabled. 0: I2C is permanently disabled."]
 pub struct I2C_EN_R(crate::FieldReader<bool, bool>);
 impl I2C_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         I2C_EN_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for I2C_EN_R {
 #[doc = "Field `UART1_EN` reader - 1: UART1 is enabled. 0: UART1 is permanently disabled."]
 pub struct UART1_EN_R(crate::FieldReader<bool, bool>);
 impl UART1_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART1_EN_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for UART1_EN_R {
 #[doc = "Field `UART0_EN` reader - 1: UART0 is enabled. 0: UART0 is permanently disabled."]
 pub struct UART0_EN_R(crate::FieldReader<bool, bool>);
 impl UART0_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART0_EN_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for UART0_EN_R {
 #[doc = "Field `SSI1_EN` reader - 1: SSI1 is enabled. 0: SSI1 is permanently disabled."]
 pub struct SSI1_EN_R(crate::FieldReader<bool, bool>);
 impl SSI1_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSI1_EN_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for SSI1_EN_R {
 #[doc = "Field `SSI0_EN` reader - 1: SSI0 is enabled. 0: SSI0 is permanently disabled."]
 pub struct SSI0_EN_R(crate::FieldReader<bool, bool>);
 impl SSI0_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSI0_EN_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for SSI0_EN_R {
 #[doc = "Field `GPTM3_EN` reader - 1: GPTM3 is enabled. 0: GPTM3 is permanently disabled."]
 pub struct GPTM3_EN_R(crate::FieldReader<bool, bool>);
 impl GPTM3_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPTM3_EN_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for GPTM3_EN_R {
 #[doc = "Field `GPTM2_EN` reader - 1: GPTM2 is enabled. 0: GPTM2 is permanently disabled."]
 pub struct GPTM2_EN_R(crate::FieldReader<bool, bool>);
 impl GPTM2_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPTM2_EN_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for GPTM2_EN_R {
 #[doc = "Field `GPTM1_EN` reader - 1: GPTM1 is enabled. 0: GPTM1 is permanently disabled."]
 pub struct GPTM1_EN_R(crate::FieldReader<bool, bool>);
 impl GPTM1_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPTM1_EN_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for GPTM1_EN_R {
 #[doc = "Field `GPTM0_EN` reader - 1: GPTM0 is enabled. 0: GPTM0 is permanently disabled."]
 pub struct GPTM0_EN_R(crate::FieldReader<bool, bool>);
 impl GPTM0_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPTM0_EN_R(crate::FieldReader::new(bits))
     }

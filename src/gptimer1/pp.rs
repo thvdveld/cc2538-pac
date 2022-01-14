@@ -16,6 +16,7 @@ impl From<crate::R<PP_SPEC>> for R {
 #[doc = "Field `ALTCLK` reader - Alternate clock source 0: Timer is not capable of using an alternate clock. 1: Timer is capable of using an alternate clock."]
 pub struct ALTCLK_R(crate::FieldReader<bool, bool>);
 impl ALTCLK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ALTCLK_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for ALTCLK_R {
 #[doc = "Field `SYNCNT` reader - Synchronized start 0: Timer is not capable of synchronizing the count value with other timers. 1: Timer is capable of synchronizing the count value with other timers."]
 pub struct SYNCNT_R(crate::FieldReader<bool, bool>);
 impl SYNCNT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SYNCNT_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for SYNCNT_R {
 #[doc = "Field `CHAIN` reader - Chain with other timers 0: Timer is not capable of chaining with previously numbered Timers. 1: Timer is capable of chaining with previously numbered timers."]
 pub struct CHAIN_R(crate::FieldReader<bool, bool>);
 impl CHAIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CHAIN_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for CHAIN_R {
 #[doc = "Field `SIZE` reader - Timer size 0: Timer A and Timer B are 16 bits wide with 8-bit prescale. 1: Timer A and Timer B are 32 bits wide with 16-bit prescale."]
 pub struct SIZE_R(crate::FieldReader<u8, u8>);
 impl SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SIZE_R(crate::FieldReader::new(bits))
     }

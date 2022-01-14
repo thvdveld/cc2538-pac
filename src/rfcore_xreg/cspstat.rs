@@ -16,6 +16,7 @@ impl From<crate::R<CSPSTAT_SPEC>> for R {
 #[doc = "Field `CSP_RUNNING` reader - 1: CSP is running. 0: CSP is idle."]
 pub struct CSP_RUNNING_R(crate::FieldReader<bool, bool>);
 impl CSP_RUNNING_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CSP_RUNNING_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for CSP_RUNNING_R {
 #[doc = "Field `CSP_PC` reader - CSP program counter"]
 pub struct CSP_PC_R(crate::FieldReader<u8, u8>);
 impl CSP_PC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CSP_PC_R(crate::FieldReader::new(bits))
     }

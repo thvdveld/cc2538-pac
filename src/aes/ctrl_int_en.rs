@@ -37,6 +37,7 @@ impl From<crate::W<CTRL_INT_EN_SPEC>> for W {
 #[doc = "Field `DMA_IN_DONE` reader - If this bit is set to 0, the DMA input done (irq_dma_in_done) interrupt output is disabled and remains 0. If this bit is set to 1, the DMA input done interrupt output is enabled."]
 pub struct DMA_IN_DONE_R(crate::FieldReader<bool, bool>);
 impl DMA_IN_DONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DMA_IN_DONE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> DMA_IN_DONE_W<'a> {
 #[doc = "Field `RESULT_AV` reader - If this bit is set to 0, the result available (irq_result_av) interrupt output is disabled and remains 0. If this bit is set to 1, the result available interrupt output is enabled."]
 pub struct RESULT_AV_R(crate::FieldReader<bool, bool>);
 impl RESULT_AV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESULT_AV_R(crate::FieldReader::new(bits))
     }

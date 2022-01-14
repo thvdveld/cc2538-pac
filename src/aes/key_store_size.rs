@@ -37,6 +37,7 @@ impl From<crate::W<KEY_STORE_SIZE_SPEC>> for W {
 #[doc = "Field `KEY_SIZE` reader - Key size: 00: Reserved 01: 128 bits 10: 192 bits 11: 256 bits When writing this to this register, the KEY_STORE_WRITTEN_AREA register is reset."]
 pub struct KEY_SIZE_R(crate::FieldReader<u8, u8>);
 impl KEY_SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         KEY_SIZE_R(crate::FieldReader::new(bits))
     }

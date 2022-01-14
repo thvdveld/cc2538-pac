@@ -37,6 +37,7 @@ impl From<crate::W<ERRCLR_SPEC>> for W {
 #[doc = "Field `ERRCLR` reader - uDMA bus error status 0: No bus error is pending 1: A bus error is pending This bit is cleared by writing 1 to it."]
 pub struct ERRCLR_R(crate::FieldReader<bool, bool>);
 impl ERRCLR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERRCLR_R(crate::FieldReader::new(bits))
     }

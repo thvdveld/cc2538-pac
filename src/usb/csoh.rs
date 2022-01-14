@@ -37,6 +37,7 @@ impl From<crate::W<CSOH_SPEC>> for W {
 #[doc = "Field `AUTOCLEAR` reader - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
 pub struct AUTOCLEAR_R(crate::FieldReader<bool, bool>);
 impl AUTOCLEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AUTOCLEAR_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> AUTOCLEAR_W<'a> {
 #[doc = "Field `ISO` reader - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
 pub struct ISO_R(crate::FieldReader<bool, bool>);
 impl ISO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ISO_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> ISO_W<'a> {
 #[doc = "Field `OUTDBLBUF` reader - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
 pub struct OUTDBLBUF_R(crate::FieldReader<bool, bool>);
 impl OUTDBLBUF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTDBLBUF_R(crate::FieldReader::new(bits))
     }

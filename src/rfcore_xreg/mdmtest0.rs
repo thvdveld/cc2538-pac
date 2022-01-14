@@ -37,6 +37,7 @@ impl From<crate::W<MDMTEST0_SPEC>> for W {
 #[doc = "Field `TX_TONE` reader - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
 pub struct TX_TONE_R(crate::FieldReader<u8, u8>);
 impl TX_TONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TX_TONE_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> TX_TONE_W<'a> {
 #[doc = "Field `DC_WIN_SIZE` reader - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
 pub struct DC_WIN_SIZE_R(crate::FieldReader<u8, u8>);
 impl DC_WIN_SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DC_WIN_SIZE_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> DC_WIN_SIZE_W<'a> {
 #[doc = "Field `DC_BLOCK_MODE` reader - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
 pub struct DC_BLOCK_MODE_R(crate::FieldReader<u8, u8>);
 impl DC_BLOCK_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DC_BLOCK_MODE_R(crate::FieldReader::new(bits))
     }

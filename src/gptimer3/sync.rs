@@ -37,6 +37,7 @@ impl From<crate::W<SYNC_SPEC>> for W {
 #[doc = "Field `SYNC3` reader - Synchronize GPTM3 0x0: GPTM3 is not affected. 0x1: A time-out event for Timer A of GPTM3 is triggered. 0x2: A time-out event for Timer B of GPTM3 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM3 is triggered."]
 pub struct SYNC3_R(crate::FieldReader<u8, u8>);
 impl SYNC3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SYNC3_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> SYNC3_W<'a> {
 #[doc = "Field `SYNC2` reader - Synchronize GPTM2 0x0: GPTM2 is not affected. 0x1: A time-out event for Timer A of GPTM2 is triggered. 0x2: A time-out event for Timer B of GPTM2 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM2 is triggered."]
 pub struct SYNC2_R(crate::FieldReader<u8, u8>);
 impl SYNC2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SYNC2_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> SYNC2_W<'a> {
 #[doc = "Field `SYNC1` reader - Synchronize GPTM1 0x0: GPTM1 is not affected. 0x1: A time-out event for Timer A of GPTM1 is triggered. 0x2: A time-out event for Timer B of GPTM1 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM1 is triggered."]
 pub struct SYNC1_R(crate::FieldReader<u8, u8>);
 impl SYNC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SYNC1_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> SYNC1_W<'a> {
 #[doc = "Field `SYNC0` reader - Synchronize GPTM0 0x0: GPTM0 is not affected. 0x1: A time-out event for Timer A of GPTM0 is triggered. 0x2: A time-out event for Timer B of GPTM0 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM0 is triggered."]
 pub struct SYNC0_R(crate::FieldReader<u8, u8>);
 impl SYNC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SYNC0_R(crate::FieldReader::new(bits))
     }

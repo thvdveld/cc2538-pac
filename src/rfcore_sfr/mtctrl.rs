@@ -37,6 +37,7 @@ impl From<crate::W<MTCTRL_SPEC>> for W {
 #[doc = "Field `LATCH_MODE` reader - 0: Reading MTM0 with MTMSEL.MTMSEL = 000 latches the high byte of the timer, making it ready to be read from MTM1. Reading MTMOVF0 with MTMSEL.MTMOVFSEL = 000 latches the two most-significant bytes of the overflow counter, making it possible to read these from MTMOVF1 and MTMOVF2. 1: Reading MTM0 with MTMSEL.MTMSEL = 000 latches the high byte of the timer and the entire overflow counter at once, making it possible to read the values from MTM1, MTMOVF0, MTMOVF1, and MTMOVF2."]
 pub struct LATCH_MODE_R(crate::FieldReader<bool, bool>);
 impl LATCH_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LATCH_MODE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> LATCH_MODE_W<'a> {
 #[doc = "Field `STATE` reader - State of MAC Timer 0: Timer idle 1: Timer running"]
 pub struct STATE_R(crate::FieldReader<bool, bool>);
 impl STATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STATE_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +89,7 @@ impl core::ops::Deref for STATE_R {
 #[doc = "Field `SYNC` reader - 0: Starting and stopping of timer is immediate; that is, synchronous with clk_rf_32m. 1: Starting and stopping of timer occurs at the first positive edge of the 32-kHz clock. For more details regarding timer start and stop, see Section 22.4."]
 pub struct SYNC_R(crate::FieldReader<bool, bool>);
 impl SYNC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SYNC_R(crate::FieldReader::new(bits))
     }
@@ -123,6 +126,7 @@ impl<'a> SYNC_W<'a> {
 #[doc = "Field `RUN` reader - Write 1 to start timer, write 0 to stop timer. When read, it returns the last written value."]
 pub struct RUN_R(crate::FieldReader<bool, bool>);
 impl RUN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RUN_R(crate::FieldReader::new(bits))
     }

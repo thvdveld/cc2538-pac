@@ -37,6 +37,7 @@ impl From<crate::W<TBMATCHR_SPEC>> for W {
 #[doc = "Field `TBMR` reader - GPTM Timer B match register"]
 pub struct TBMR_R(crate::FieldReader<u16, u16>);
 impl TBMR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         TBMR_R(crate::FieldReader::new(bits))
     }

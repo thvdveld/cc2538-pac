@@ -38,6 +38,7 @@ impl From<crate::W<SHORT_ADDR1_SPEC>> for W {
 The short address used during destination address filtering"]
 pub struct SHORT_ADDR1_R(crate::FieldReader<u8, u8>);
 impl SHORT_ADDR1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SHORT_ADDR1_R(crate::FieldReader::new(bits))
     }

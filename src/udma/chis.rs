@@ -38,6 +38,7 @@ impl From<crate::W<CHIS_SPEC>> for W {
 interrupt status 0: The corresponding uDMA channel has not caused an interrupt. 1: The corresponding uDMA channel has caused an interrupt. This bit is cleared by writing 1 to it."]
 pub struct CHIS_R(crate::FieldReader<u32, u32>);
 impl CHIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         CHIS_R(crate::FieldReader::new(bits))
     }
@@ -58,7 +59,7 @@ impl<'a> CHIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits |= value as u32;
+        self.w.bits = value as u32;
         self.w
     }
 }

@@ -16,6 +16,7 @@ impl From<crate::R<RSR_SPEC>> for R {
 #[doc = "Field `OE` reader - UART overrun error 1: New data was received when the FIFO was full, resulting in data loss. 0: No data has been lost due to a FIFO overrun. This bit is cleared by a write to UARTECR. The FIFO contents remain valid because no further data is written when the FIFO is full, only the contents of the shift register are overwritten. The CPU must read the data in order to empty the FIFO."]
 pub struct OE_R(crate::FieldReader<bool, bool>);
 impl OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OE_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for OE_R {
 #[doc = "Field `BE` reader - UART break error 1: A break condition has been detected, indicating that the receive data input was held low for longer than a full-word transmission time (defined as start, data, parity, and stop bits). 0: No break condition has occurred. This bit is cleared to 0 by a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO. When a break occurs, only one 0 character is loaded into the FIFO. The next character is only enabled after the receive data input goes to a 1 (marking state) and the next valid start bit is received."]
 pub struct BE_R(crate::FieldReader<bool, bool>);
 impl BE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BE_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for BE_R {
 #[doc = "Field `PE` reader - UART parity error 1: The parity of the received data character does not match the parity defined by bits 2 and 7 of the UARTLCRH register. 0: No parity error has occurred. This bit is cleared to 0 by a write to UARTECR."]
 pub struct PE_R(crate::FieldReader<bool, bool>);
 impl PE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PE_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for PE_R {
 #[doc = "Field `FE` reader - UART framing error 1: The received character does not have a valid stop bit (a valid stop bit is 1). 0: No framing error has occurred. This bit is cleared to 0 by a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO."]
 pub struct FE_R(crate::FieldReader<bool, bool>);
 impl FE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FE_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<DMAC_STATUS_SPEC>> for R {
 #[doc = "Field `PORT_ERR` reader - Reflects possible transfer errors on the AHB port."]
 pub struct PORT_ERR_R(crate::FieldReader<bool, bool>);
 impl PORT_ERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PORT_ERR_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for PORT_ERR_R {
 #[doc = "Field `CH1_ACT` reader - A value of 1 indicates that channel 1 is active (DMA transfer on-going)."]
 pub struct CH1_ACT_R(crate::FieldReader<bool, bool>);
 impl CH1_ACT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH1_ACT_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for CH1_ACT_R {
 #[doc = "Field `CH0_ACT` reader - A value of 1 indicates that channel 0 is active (DMA transfer on-going)."]
 pub struct CH0_ACT_R(crate::FieldReader<bool, bool>);
 impl CH0_ACT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH0_ACT_R(crate::FieldReader::new(bits))
     }

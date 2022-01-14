@@ -16,6 +16,7 @@ impl From<crate::R<FSMSTAT1_SPEC>> for R {
 #[doc = "Field `FIFO` reader - FIFO is high when there is data in the RX FIFO. FIFO is low during RX FIFO overflow."]
 pub struct FIFO_R(crate::FieldReader<bool, bool>);
 impl FIFO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FIFO_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for FIFO_R {
 #[doc = "Field `FIFOP` reader - FIFOP is set high when there are at more than FIFOP_THR bytes of data in the RX FIFO that has passed frame filtering. FIFOP is set high when there is at least one complete frame in the RX FIFO. FIFOP is high during RX FIFO overflow."]
 pub struct FIFOP_R(crate::FieldReader<bool, bool>);
 impl FIFOP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FIFOP_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for FIFOP_R {
 #[doc = "Field `SFD` reader - In TX 0: When a complete frame with SFD was sent or no SFD was sent 1: SFD was sent. In RX 0: When a complete frame was received or no SFD was received 1: SFD was received."]
 pub struct SFD_R(crate::FieldReader<bool, bool>);
 impl SFD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SFD_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for SFD_R {
 #[doc = "Field `CCA` reader - Clear channel assessment Dependent on CCA_MODE settings. See CCACTRL1 for details."]
 pub struct CCA_R(crate::FieldReader<bool, bool>);
 impl CCA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CCA_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for CCA_R {
 #[doc = "Field `SAMPLED_CCA` reader - Contains a sampled value of the CCA The value is updated when a SSAMPLECCA or STXONCCA strobe is issued."]
 pub struct SAMPLED_CCA_R(crate::FieldReader<bool, bool>);
 impl SAMPLED_CCA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SAMPLED_CCA_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for SAMPLED_CCA_R {
 #[doc = "Field `LOCK_STATUS` reader - 1 when PLL is in lock; otherwise 0"]
 pub struct LOCK_STATUS_R(crate::FieldReader<bool, bool>);
 impl LOCK_STATUS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LOCK_STATUS_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for LOCK_STATUS_R {
 #[doc = "Field `TX_ACTIVE` reader - Status signal Active when FFC is in one of the transmit states"]
 pub struct TX_ACTIVE_R(crate::FieldReader<bool, bool>);
 impl TX_ACTIVE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_ACTIVE_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for TX_ACTIVE_R {
 #[doc = "Field `RX_ACTIVE` reader - Status signal Active when FFC is in one of the receive states"]
 pub struct RX_ACTIVE_R(crate::FieldReader<bool, bool>);
 impl RX_ACTIVE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX_ACTIVE_R(crate::FieldReader::new(bits))
     }

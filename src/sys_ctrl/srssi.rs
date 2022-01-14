@@ -37,6 +37,7 @@ impl From<crate::W<SRSSI_SPEC>> for W {
 #[doc = "Field `SSI1` reader - 0: SSI1 module is not reset 1: SSI1 module is reset"]
 pub struct SSI1_R(crate::FieldReader<bool, bool>);
 impl SSI1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSI1_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SSI1_W<'a> {
 #[doc = "Field `SSI0` reader - 0: SSI0 module is not reset 1: SSI0 module is reset"]
 pub struct SSI0_R(crate::FieldReader<bool, bool>);
 impl SSI0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSI0_R(crate::FieldReader::new(bits))
     }

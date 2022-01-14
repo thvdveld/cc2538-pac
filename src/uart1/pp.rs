@@ -16,6 +16,7 @@ impl From<crate::R<PP_SPEC>> for R {
 #[doc = "Field `NB` reader - 9-bit support 1: The UART module provides support for the transmission of 9-bit data for RS-485 support. 0: The UART module does not provide support for the transmission of 9-bit data for RS-485 support."]
 pub struct NB_R(crate::FieldReader<bool, bool>);
 impl NB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NB_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for NB_R {
 #[doc = "Field `SC` reader - Smart card support 1: The UART module provides smart card support. 0: The UART module does not provide smart card support."]
 pub struct SC_R(crate::FieldReader<bool, bool>);
 impl SC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SC_R(crate::FieldReader::new(bits))
     }

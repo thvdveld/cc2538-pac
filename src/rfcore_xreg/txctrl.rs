@@ -37,6 +37,7 @@ impl From<crate::W<TXCTRL_SPEC>> for W {
 #[doc = "Field `DAC_CURR` reader - Change the current in the DAC."]
 pub struct DAC_CURR_R(crate::FieldReader<u8, u8>);
 impl DAC_CURR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAC_CURR_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> DAC_CURR_W<'a> {
 #[doc = "Field `DAC_DC` reader - Adjusts the DC level to the TX mixer."]
 pub struct DAC_DC_R(crate::FieldReader<u8, u8>);
 impl DAC_DC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAC_DC_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> DAC_DC_W<'a> {
 #[doc = "Field `TXMIX_CURRENT` reader - Transmit mixers core current Current increases with increasing setting."]
 pub struct TXMIX_CURRENT_R(crate::FieldReader<u8, u8>);
 impl TXMIX_CURRENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXMIX_CURRENT_R(crate::FieldReader::new(bits))
     }

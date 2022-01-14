@@ -37,6 +37,7 @@ impl From<crate::W<SRCMATCH_SPEC>> for W {
 #[doc = "Field `PEND_DATAREQ_ONLY` reader - When this bit is set, the AUTOPEND function also requires that the received frame is a DATA REQUEST MAC command frame."]
 pub struct PEND_DATAREQ_ONLY_R(crate::FieldReader<bool, bool>);
 impl PEND_DATAREQ_ONLY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEND_DATAREQ_ONLY_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> PEND_DATAREQ_ONLY_W<'a> {
 #[doc = "Field `AUTOPEND` reader - Automatic acknowledgment pending flag enable When a frame is received, the pending bit in the (possibly) returned acknowledgment is set automatically when the following conditions are met: - FRMFILT.FRAME_FILTER_EN is set. - SRCMATCH.SRC_MATCH_EN is set. - SRCMATCH.AUTOPEND is set. - The received frame matches the current SRCMATCH.PEND_DATAREQ_ONLY setting. - The received source address matches at least one source match table entry, which is enabled in SHORT_ADDR_EN and SHORT_PEND_EN or in EXT_ADDR_EN and EXT_PEND_EN."]
 pub struct AUTOPEND_R(crate::FieldReader<bool, bool>);
 impl AUTOPEND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AUTOPEND_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> AUTOPEND_W<'a> {
 #[doc = "Field `SRC_MATCH_EN` reader - Source address matching enable (requires that FRMFILT.FRAME_FILTER_EN = 1)"]
 pub struct SRC_MATCH_EN_R(crate::FieldReader<bool, bool>);
 impl SRC_MATCH_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRC_MATCH_EN_R(crate::FieldReader::new(bits))
     }

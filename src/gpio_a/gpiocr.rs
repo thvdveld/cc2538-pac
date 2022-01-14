@@ -37,6 +37,7 @@ impl From<crate::W<GPIOCR_SPEC>> for W {
 #[doc = "Field `CR` reader - On a bit-wise basis, any bit set allows the corresponding GPIOAFSEL bit to be set to its alternate function."]
 pub struct CR_R(crate::FieldReader<u8, u8>);
 impl CR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CR_R(crate::FieldReader::new(bits))
     }

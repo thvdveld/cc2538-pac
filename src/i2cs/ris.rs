@@ -16,6 +16,7 @@ impl From<crate::R<RIS_SPEC>> for R {
 #[doc = "Field `STOPRIS` reader - Stop condition raw interrupt status 1: A STOP condition interrupt is pending. 0: No interrupt This bit is cleared by writing 1 to the STOPIC bit in the I2CSICR register."]
 pub struct STOPRIS_R(crate::FieldReader<bool, bool>);
 impl STOPRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STOPRIS_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for STOPRIS_R {
 #[doc = "Field `STARTRIS` reader - Start condition raw interrupt status 1: A START condition interrupt is pending. 0: No interrupt This bit is cleared by writing 1 to the STARTIC bit in the I2CSICR register."]
 pub struct STARTRIS_R(crate::FieldReader<bool, bool>);
 impl STARTRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STARTRIS_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for STARTRIS_R {
 #[doc = "Field `DATARIS` reader - Data raw interrupt status 1: A data received or data requested interrupt is pending. 0: No interrupt This bit is cleared by writing 1 to the DATAIC bit in the I2CSICR register."]
 pub struct DATARIS_R(crate::FieldReader<bool, bool>);
 impl DATARIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DATARIS_R(crate::FieldReader::new(bits))
     }

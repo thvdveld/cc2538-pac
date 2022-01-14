@@ -37,6 +37,7 @@ impl From<crate::W<OIE_SPEC>> for W {
 #[doc = "Field `OUTEP5IE` reader - Interrupt enable for OUT endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct OUTEP5IE_R(crate::FieldReader<bool, bool>);
 impl OUTEP5IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP5IE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> OUTEP5IE_W<'a> {
 #[doc = "Field `OUTEP4IE` reader - Interrupt enable for OUT endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct OUTEP4IE_R(crate::FieldReader<bool, bool>);
 impl OUTEP4IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP4IE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> OUTEP4IE_W<'a> {
 #[doc = "Field `OUTEP3IE` reader - Interrupt enable for OUT endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct OUTEP3IE_R(crate::FieldReader<bool, bool>);
 impl OUTEP3IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP3IE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> OUTEP3IE_W<'a> {
 #[doc = "Field `OUTEP2IE` reader - Interrupt enable for OUT endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct OUTEP2IE_R(crate::FieldReader<bool, bool>);
 impl OUTEP2IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP2IE_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> OUTEP2IE_W<'a> {
 #[doc = "Field `OUTEP1IE` reader - Interrupt enable for OUT endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct OUTEP1IE_R(crate::FieldReader<bool, bool>);
 impl OUTEP1IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTEP1IE_R(crate::FieldReader::new(bits))
     }

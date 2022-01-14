@@ -39,6 +39,7 @@ impl From<crate::W<FRMFILT0_SPEC>> for W {
 and frame filtering is enabled, the frame is rejected."]
 pub struct MAX_FRAME_VERSION_R(crate::FieldReader<u8, u8>);
 impl MAX_FRAME_VERSION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MAX_FRAME_VERSION_R(crate::FieldReader::new(bits))
     }
@@ -67,6 +68,7 @@ impl<'a> MAX_FRAME_VERSION_W<'a> {
 #[doc = "Field `PAN_COORDINATOR` reader - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
 pub struct PAN_COORDINATOR_R(crate::FieldReader<bool, bool>);
 impl PAN_COORDINATOR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAN_COORDINATOR_R(crate::FieldReader::new(bits))
     }
@@ -106,6 +108,7 @@ and SRCMATCH\\[2:0\\]
 are don't care.) 1: Frame filtering on."]
 pub struct FRAME_FILTER_EN_R(crate::FieldReader<bool, bool>);
 impl FRAME_FILTER_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FRAME_FILTER_EN_R(crate::FieldReader::new(bits))
     }

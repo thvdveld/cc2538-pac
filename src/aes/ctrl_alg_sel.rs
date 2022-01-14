@@ -37,6 +37,7 @@ impl From<crate::W<CTRL_ALG_SEL_SPEC>> for W {
 #[doc = "Field `TAG` reader - If this bit is cleared to 0, the DMA operation involves only data. If this bit is set, the DMA operation includes a TAG (Authentication Result / Digest). For SHA-256 operation, a DMA must be set up for both input data and TAG. For any other selected module, setting this bit only allows a DMA that reads the TAG. No data allowed to be transferred to or from the selected module via the DMA."]
 pub struct TAG_R(crate::FieldReader<bool, bool>);
 impl TAG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAG_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TAG_W<'a> {
 #[doc = "Field `HASH` reader - If set to one, selects the hash engine as destination for the DMA The maximum transfer size to DMA engine is set to 64 bytes for reading and 32 bytes for writing (the latter is only applicable if the hash result is written out through the DMA)."]
 pub struct HASH_R(crate::FieldReader<bool, bool>);
 impl HASH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HASH_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> HASH_W<'a> {
 #[doc = "Field `AES` reader - If set to one, selects the AES engine as source/destination for the DMA The read and write maximum transfer size to the DMA engine is set to 16 bytes."]
 pub struct AES_R(crate::FieldReader<bool, bool>);
 impl AES_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AES_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> AES_W<'a> {
 #[doc = "Field `KEYSTORE` reader - If set to one, selects the Key Store as destination for the DMA The maximum transfer size to DMA engine is set to 32 bytes (however transfers of 16, 24 and 32 bytes are allowed)"]
 pub struct KEYSTORE_R(crate::FieldReader<bool, bool>);
 impl KEYSTORE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         KEYSTORE_R(crate::FieldReader::new(bits))
     }

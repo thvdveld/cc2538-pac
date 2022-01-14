@@ -37,6 +37,7 @@ impl From<crate::W<CIE_SPEC>> for W {
 #[doc = "Field `SOFIE` reader - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct SOFIE_R(crate::FieldReader<bool, bool>);
 impl SOFIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOFIE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SOFIE_W<'a> {
 #[doc = "Field `RSTIE` reader - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct RSTIE_R(crate::FieldReader<bool, bool>);
 impl RSTIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RSTIE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RSTIE_W<'a> {
 #[doc = "Field `RESUMEIE` reader - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct RESUMEIE_R(crate::FieldReader<bool, bool>);
 impl RESUMEIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESUMEIE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> RESUMEIE_W<'a> {
 #[doc = "Field `SUSPENDIE` reader - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct SUSPENDIE_R(crate::FieldReader<bool, bool>);
 impl SUSPENDIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SUSPENDIE_R(crate::FieldReader::new(bits))
     }

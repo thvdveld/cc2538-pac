@@ -37,6 +37,7 @@ impl From<crate::W<RFIRQF1_SPEC>> for W {
 #[doc = "Field `CSP_WAIT` reader - Execution continued after a wait instruction in CSP. 0: No interrupt pending 1: Interrupt pending"]
 pub struct CSP_WAIT_R(crate::FieldReader<bool, bool>);
 impl CSP_WAIT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CSP_WAIT_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CSP_WAIT_W<'a> {
 #[doc = "Field `CSP_STOP` reader - CSP has stopped program execution. 0: No interrupt pending 1: Interrupt pending"]
 pub struct CSP_STOP_R(crate::FieldReader<bool, bool>);
 impl CSP_STOP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CSP_STOP_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> CSP_STOP_W<'a> {
 #[doc = "Field `CSP_MANINT` reader - Manual interrupt generated from CSP 0: No interrupt pending 1: Interrupt pending"]
 pub struct CSP_MANINT_R(crate::FieldReader<bool, bool>);
 impl CSP_MANINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CSP_MANINT_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> CSP_MANINT_W<'a> {
 #[doc = "Field `RFIDLE` reader - Radio state-machine has entered the IDLE state. 0: No interrupt pending 1: Interrupt pending"]
 pub struct RFIDLE_R(crate::FieldReader<bool, bool>);
 impl RFIDLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFIDLE_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> RFIDLE_W<'a> {
 #[doc = "Field `TXDONE` reader - A complete frame has been transmitted. 0: No interrupt pending 1: Interrupt pending"]
 pub struct TXDONE_R(crate::FieldReader<bool, bool>);
 impl TXDONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXDONE_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> TXDONE_W<'a> {
 #[doc = "Field `TXACKDONE` reader - An acknowledgement frame has been completely transmitted. 0: No interrupt pending 1: Interrupt pending"]
 pub struct TXACKDONE_R(crate::FieldReader<bool, bool>);
 impl TXACKDONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXACKDONE_R(crate::FieldReader::new(bits))
     }

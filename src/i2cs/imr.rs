@@ -37,6 +37,7 @@ impl From<crate::W<IMR_SPEC>> for W {
 #[doc = "Field `STOPIM` reader - Stop condition interrupt mask 1: The STOP condition interrupt is sent to the interrupt controller when the STOPRIS bit in the I2CSRIS register is set. 0: The STOPRIS interrupt is supressed and not sent to the interrupt controller."]
 pub struct STOPIM_R(crate::FieldReader<bool, bool>);
 impl STOPIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STOPIM_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for STOPIM_R {
 #[doc = "Field `STARTIM` reader - Start condition interrupt mask 1: The START condition interrupt is sent to the interrupt controller when the STARTRIS bit in the I2CSRIS register is set. 0: The STARTRIS interrupt is supressed and not sent to the interrupt controller."]
 pub struct STARTIM_R(crate::FieldReader<bool, bool>);
 impl STARTIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STARTIM_R(crate::FieldReader::new(bits))
     }
@@ -65,6 +67,7 @@ impl core::ops::Deref for STARTIM_R {
 #[doc = "Field `DATAIM` reader - Data interrupt mask 1: The data received or data requested interrupt is sent to the interrupt controller when the DATARIS bit in the I2CSRIS register is set. 0: The DATARIS interrupt is surpressed and not sent to the interrupt controller."]
 pub struct DATAIM_R(crate::FieldReader<bool, bool>);
 impl DATAIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DATAIM_R(crate::FieldReader::new(bits))
     }

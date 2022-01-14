@@ -37,6 +37,7 @@ impl From<crate::W<IFLS_SPEC>> for W {
 #[doc = "Field `RXIFLSEL` reader - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
 pub struct RXIFLSEL_R(crate::FieldReader<u8, u8>);
 impl RXIFLSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXIFLSEL_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> RXIFLSEL_W<'a> {
 #[doc = "Field `TXIFLSEL` reader - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO <= 7/8 empty 0x1: TX FIFO <= 3/4 empty 0x2: TX FIFO <= 1/2 empty (default) 0x3: TX FIFO <= 1/4 empty 0x4: TX FIFO <= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
 pub struct TXIFLSEL_R(crate::FieldReader<u8, u8>);
 impl TXIFLSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXIFLSEL_R(crate::FieldReader::new(bits))
     }

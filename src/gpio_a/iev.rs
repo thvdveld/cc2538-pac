@@ -37,6 +37,7 @@ impl From<crate::W<IEV_SPEC>> for W {
 #[doc = "Field `IEV` reader - Bits set: Rising edges or high levels on corresponding pin trigger interrupts Bits cleared: Falling edges or low levels on corresponding pin trigger interrupts"]
 pub struct IEV_R(crate::FieldReader<u8, u8>);
 impl IEV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IEV_R(crate::FieldReader::new(bits))
     }

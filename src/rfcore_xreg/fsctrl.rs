@@ -37,6 +37,7 @@ impl From<crate::W<FSCTRL_SPEC>> for W {
 #[doc = "Field `PRE_CURRENT` reader - Prescaler current setting"]
 pub struct PRE_CURRENT_R(crate::FieldReader<u8, u8>);
 impl PRE_CURRENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PRE_CURRENT_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> PRE_CURRENT_W<'a> {
 #[doc = "Field `LODIV_BUF_CURRENT_TX` reader - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
 pub struct LODIV_BUF_CURRENT_TX_R(crate::FieldReader<u8, u8>);
 impl LODIV_BUF_CURRENT_TX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LODIV_BUF_CURRENT_TX_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> LODIV_BUF_CURRENT_TX_W<'a> {
 #[doc = "Field `LODIV_BUF_CURRENT_RX` reader - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
 pub struct LODIV_BUF_CURRENT_RX_R(crate::FieldReader<u8, u8>);
 impl LODIV_BUF_CURRENT_RX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LODIV_BUF_CURRENT_RX_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> LODIV_BUF_CURRENT_RX_W<'a> {
 #[doc = "Field `LODIV_CURRENT` reader - Adjusts divider currents, except mixer and PA buffers"]
 pub struct LODIV_CURRENT_R(crate::FieldReader<u8, u8>);
 impl LODIV_CURRENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LODIV_CURRENT_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<MIS_SPEC>> for R {
 #[doc = "Field `MIS` reader - Masked value of interrupt due to corresponding pin Bits clear: GPIO line interrupt not active Bits set: GPIO line asserting interrupt"]
 pub struct MIS_R(crate::FieldReader<u8, u8>);
 impl MIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MIS_R(crate::FieldReader::new(bits))
     }

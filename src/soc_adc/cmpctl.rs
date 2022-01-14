@@ -37,6 +37,7 @@ impl From<crate::W<CMPCTL_SPEC>> for W {
 #[doc = "Field `EN` reader - Comparator enable"]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> EN_W<'a> {
 #[doc = "Field `OUTPUT` reader - Comparator output"]
 pub struct OUTPUT_R(crate::FieldReader<bool, bool>);
 impl OUTPUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTPUT_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<OPTIONS_SPEC>> for R {
 #[doc = "Field `FIRST_LNME_FIFO_DEPTH` reader - Number of words in the first LNME's FIFO RAM Should be ignored if LNME configuration is 0. The contents of this field indicate the actual depth as selected by the LNME FIFO RAM size strap input, fifo_size_sel. Note: Reset value is undefined"]
 pub struct FIRST_LNME_FIFO_DEPTH_R(crate::FieldReader<u8, u8>);
 impl FIRST_LNME_FIFO_DEPTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FIRST_LNME_FIFO_DEPTH_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for FIRST_LNME_FIFO_DEPTH_R {
 #[doc = "Field `FIRST_LNME_NR_OF_PES` reader - Number of processing elements in the pipeline of the first LNME Should be ignored if LNME configuration is 0. Note: Reset value is undefined."]
 pub struct FIRST_LNME_NR_OF_PES_R(crate::FieldReader<u8, u8>);
 impl FIRST_LNME_NR_OF_PES_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FIRST_LNME_NR_OF_PES_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for FIRST_LNME_NR_OF_PES_R {
 #[doc = "Field `MMM3A` reader - Reserved for a future functional extension to the LNME Always 0b"]
 pub struct MMM3A_R(crate::FieldReader<bool, bool>);
 impl MMM3A_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MMM3A_R(crate::FieldReader::new(bits))
     }
@@ -59,6 +62,7 @@ impl core::ops::Deref for MMM3A_R {
 of the interrupts output bus) is the direct complement of the run bit in the PKA_CONTROL register, value 1b indicates that interrupt masking logic is present for this output. Note: Reset value is undefined"]
 pub struct INT_MASKING_R(crate::FieldReader<bool, bool>);
 impl INT_MASKING_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INT_MASKING_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +77,7 @@ impl core::ops::Deref for INT_MASKING_R {
 #[doc = "Field `PROTECTION_OPTION` reader - Value 0 indicates no additional protection against side channel attacks, value 1 indicates the SCAP option, value 3 indicates the PROT option; other values are reserved. Note: Reset value is undefined"]
 pub struct PROTECTION_OPTION_R(crate::FieldReader<u8, u8>);
 impl PROTECTION_OPTION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PROTECTION_OPTION_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +92,7 @@ impl core::ops::Deref for PROTECTION_OPTION_R {
 #[doc = "Field `PROGRAM_RAM` reader - Value 1b indicates sequencer program storage in RAM, value 0b in ROM. Note: Reset value is undefined"]
 pub struct PROGRAM_RAM_R(crate::FieldReader<bool, bool>);
 impl PROGRAM_RAM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROGRAM_RAM_R(crate::FieldReader::new(bits))
     }
@@ -101,6 +107,7 @@ impl core::ops::Deref for PROGRAM_RAM_R {
 #[doc = "Field `SEQUENCER_CONFIGURATION` reader - Value 1 indicates a standard sequencer; other values are reserved."]
 pub struct SEQUENCER_CONFIGURATION_R(crate::FieldReader<u8, u8>);
 impl SEQUENCER_CONFIGURATION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SEQUENCER_CONFIGURATION_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +122,7 @@ impl core::ops::Deref for SEQUENCER_CONFIGURATION_R {
 #[doc = "Field `LNME_CONFIGURATION` reader - Value 0 indicates NO LNME, value 1 indicates one standard LNME (with alpha = 32, beta = 8); other values reserved. Note: Reset value is undefined"]
 pub struct LNME_CONFIGURATION_R(crate::FieldReader<u8, u8>);
 impl LNME_CONFIGURATION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LNME_CONFIGURATION_R(crate::FieldReader::new(bits))
     }
@@ -129,6 +137,7 @@ impl core::ops::Deref for LNME_CONFIGURATION_R {
 #[doc = "Field `PKCP_CONFIGURATION` reader - Value 1 indicates a PKCP with a 16x16 multiplier, value 2 indicates a PKCP with a 32x32 multiplier, other values reserved. Note: Reset value is undefined."]
 pub struct PKCP_CONFIGURATION_R(crate::FieldReader<u8, u8>);
 impl PKCP_CONFIGURATION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PKCP_CONFIGURATION_R(crate::FieldReader::new(bits))
     }

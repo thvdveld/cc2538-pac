@@ -39,6 +39,7 @@ of the Sleep Timer count. When writing this register sets the high bits \\[23:16
 of the compare value. The value read is latched at the time of reading register ST0. The value written is latched when ST0 is written."]
 pub struct ST2_R(crate::FieldReader<u8, u8>);
 impl ST2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ST2_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<MDMCTRL0_SPEC>> for W {
 #[doc = "Field `DEM_NUM_ZEROS` reader - Sets how many zero symbols must be detected before the sync word when searching for sync. Only one zero symbol is required to have a correlation value above the correlation threshold set in the MDMCTRL1 register. 00: Reserved 01: 1 zero symbol 10: 2 zero symbols 11: 3 zero symbols"]
 pub struct DEM_NUM_ZEROS_R(crate::FieldReader<u8, u8>);
 impl DEM_NUM_ZEROS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DEM_NUM_ZEROS_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> DEM_NUM_ZEROS_W<'a> {
 #[doc = "Field `DEMOD_AVG_MODE` reader - Defines the behavior or the frequency offset averaging filter. 0: Lock average level after preamble match. Restart frequency offset calibration when searching for the next frame. 1: Continuously update average level."]
 pub struct DEMOD_AVG_MODE_R(crate::FieldReader<bool, bool>);
 impl DEMOD_AVG_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DEMOD_AVG_MODE_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> DEMOD_AVG_MODE_W<'a> {
 #[doc = "Field `PREAMBLE_LENGTH` reader - The number of preamble bytes (two zero-symbols) to be sent in TX mode before the SFD, encoded in steps of 2 symbols (1 byte). The reset value of 2 is compliant with IEEE 802.15.4. 0000: 2 leading-zero bytes 0001: 3 leading-zero bytes 0010: 4 leading-zero bytes ... 1111: 17 leading-zero bytes"]
 pub struct PREAMBLE_LENGTH_R(crate::FieldReader<u8, u8>);
 impl PREAMBLE_LENGTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PREAMBLE_LENGTH_R(crate::FieldReader::new(bits))
     }
@@ -125,6 +128,7 @@ impl<'a> PREAMBLE_LENGTH_W<'a> {
 #[doc = "Field `TX_FILTER` reader - Defines the kind of TX filter that is used. The normal TX filter is as defined by the IEEE 802.15.4 standard. Extra filtering may be applied to lower the out-of-band emissions. 0: Normal TX filtering 1: Enable extra filtering"]
 pub struct TX_FILTER_R(crate::FieldReader<bool, bool>);
 impl TX_FILTER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_FILTER_R(crate::FieldReader::new(bits))
     }

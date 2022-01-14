@@ -37,6 +37,7 @@ impl From<crate::W<PA1_OVER_SPEC>> for W {
 #[doc = "Field `PA1_over` reader - 0x8: oe - output enable 0x4: pue - pullup enable 0x2: pde - pulldown enable 0x1: ana - analog enable"]
 pub struct PA1_OVER_R(crate::FieldReader<u8, u8>);
 impl PA1_OVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PA1_OVER_R(crate::FieldReader::new(bits))
     }

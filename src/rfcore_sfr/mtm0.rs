@@ -38,6 +38,7 @@ impl From<crate::W<MTM0_SPEC>> for W {
 of an internal register depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the timer (MTtim) value is latched. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the timer (MTtim) and overflow counter (MTovf) values are latched."]
 pub struct MTM0_R(crate::FieldReader<u8, u8>);
 impl MTM0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MTM0_R(crate::FieldReader::new(bits))
     }

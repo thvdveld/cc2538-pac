@@ -37,6 +37,7 @@ impl From<crate::W<OBSSEL7_SPEC>> for W {
 #[doc = "Field `EN` reader - Observation output 7 enable control for PC7 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC7."]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }
@@ -74,6 +75,7 @@ impl<'a> EN_W<'a> {
 output on output 7: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
 pub struct SEL_R(crate::FieldReader<u8, u8>);
 impl SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SEL_R(crate::FieldReader::new(bits))
     }

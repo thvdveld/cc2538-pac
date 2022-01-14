@@ -39,6 +39,7 @@ or PB\\[7\\]
 pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
 pub struct CKOEN_R(crate::FieldReader<bool, bool>);
 impl CKOEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CKOEN_R(crate::FieldReader::new(bits))
     }
@@ -79,6 +80,7 @@ becomes the 32-kHz clock output. When 1, PB\\[7\\]
 becomes the 32-kHz clock output."]
 pub struct CKOPIN_R(crate::FieldReader<bool, bool>);
 impl CKOPIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CKOPIN_R(crate::FieldReader::new(bits))
     }
@@ -119,6 +121,7 @@ or PB\\[0\\]
 pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
 pub struct DCEN_R(crate::FieldReader<bool, bool>);
 impl DCEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCEN_R(crate::FieldReader::new(bits))
     }
@@ -165,6 +168,7 @@ becomes the power-on-reset indicator. When DCEN and DCPIN are set, PB\\[0\\]
 becomes the on-die digital regulator status."]
 pub struct DCPIN_R(crate::FieldReader<bool, bool>);
 impl DCPIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCPIN_R(crate::FieldReader::new(bits))
     }

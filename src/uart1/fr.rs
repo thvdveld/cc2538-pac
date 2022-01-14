@@ -16,6 +16,7 @@ impl From<crate::R<FR_SPEC>> for R {
 #[doc = "Field `TXFE` reader - UART transmit FIFO empty The meaning of this bit depends on the state of the FEN bit in the UARTLCRH register. 1: If the FIFO is disabled (FEN is 0), the transmit holding register is empty. If the FIFO is enabled (FEN is 1), the transmit FIFO is empty. 0: The transmitter has data to transmit."]
 pub struct TXFE_R(crate::FieldReader<bool, bool>);
 impl TXFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXFE_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for TXFE_R {
 #[doc = "Field `RXFF` reader - UART receive FIFO full The meaning of this bit depends on the state of the FEN bit in the UARTLCRH register. 1: If the FIFO is disabled (FEN is 0), the receive holding register is full. If the FIFO is enabled (FEN is 1), the receive FIFO is full. 0: The receiver can receive data."]
 pub struct RXFF_R(crate::FieldReader<bool, bool>);
 impl RXFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXFF_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for RXFF_R {
 #[doc = "Field `TXFF` reader - UART transmit FIFO full The meaning of this bit depends on the state of the FEN bit in the UARTLCRH register. 1: If the FIFO is disabled (FEN is 0), the transmit holding register is full. If the FIFO is enabled (FEN is 1), the transmit FIFO is full. 0: The transmitter is not full."]
 pub struct TXFF_R(crate::FieldReader<bool, bool>);
 impl TXFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXFF_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for TXFF_R {
 #[doc = "Field `RXFE` reader - UART receive FIFO empty The meaning of this bit depends on the state of the FEN bit in the UARTLCRH register. 1: If the FIFO is disabled (FEN is 0), the receive holding register is empty. If the FIFO is enabled (FEN is 1), the receive FIFO is empty. 0: The receiver is not empty."]
 pub struct RXFE_R(crate::FieldReader<bool, bool>);
 impl RXFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXFE_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for RXFE_R {
 #[doc = "Field `BUSY` reader - UART busy 1: The UART is busy transmitting data. This bit remains set until the complete byte, including all stop bits, has been sent from the shift register. 0: The UART is not busy. This bit is set as soon as the transmit FIFO becomes non-empty (regardless of whether UART is enabled)."]
 pub struct BUSY_R(crate::FieldReader<bool, bool>);
 impl BUSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUSY_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for BUSY_R {
 #[doc = "Field `CTS` reader - Clear to send (UART1 only, reserved for UART0). 1: The U1CTS signal is asserted. 0: The U1CTS signal is not asserted."]
 pub struct CTS_R(crate::FieldReader<bool, bool>);
 impl CTS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTS_R(crate::FieldReader::new(bits))
     }

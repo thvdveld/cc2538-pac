@@ -16,6 +16,7 @@ impl From<crate::R<MIS_SPEC>> for R {
 #[doc = "Field `STOPMIS` reader - Stop condition masked interrupt status 1: An unmasked STOP condition interrupt is pending. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the STOPIC bit in the I2CSICR register."]
 pub struct STOPMIS_R(crate::FieldReader<bool, bool>);
 impl STOPMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STOPMIS_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for STOPMIS_R {
 #[doc = "Field `STARTMIS` reader - Start condition masked interrupt status 1: An unmasked START condition interrupt is pending. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the STARTIC bit in the I2CSICR register."]
 pub struct STARTMIS_R(crate::FieldReader<bool, bool>);
 impl STARTMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STARTMIS_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for STARTMIS_R {
 #[doc = "Field `DATAMIS` reader - Data masked interrupt status 1: An unmasked data received or data requested interrupt is pending. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the DATAIC bit in the I2CSICR register."]
 pub struct DATAMIS_R(crate::FieldReader<bool, bool>);
 impl DATAMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DATAMIS_R(crate::FieldReader::new(bits))
     }

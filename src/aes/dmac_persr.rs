@@ -16,6 +16,7 @@ impl From<crate::R<DMAC_PERSR_SPEC>> for R {
 #[doc = "Field `PORT1_AHB_ERROR` reader - A value of 1 indicates that the EIP-101 has detected an AHB bus error"]
 pub struct PORT1_AHB_ERROR_R(crate::FieldReader<bool, bool>);
 impl PORT1_AHB_ERROR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PORT1_AHB_ERROR_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for PORT1_AHB_ERROR_R {
 #[doc = "Field `PORT1_CHANNEL` reader - Indicates which channel has serviced last (channel 0 or channel 1) by AHB master port."]
 pub struct PORT1_CHANNEL_R(crate::FieldReader<bool, bool>);
 impl PORT1_CHANNEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PORT1_CHANNEL_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<STAT_SPEC>> for R {
 #[doc = "Field `BUSBSY` reader - Bus busy 0: The I2C bus is idle. 1: The I2C bus is busy. The bit changes based on the START and STOP conditions."]
 pub struct BUSBSY_R(crate::FieldReader<bool, bool>);
 impl BUSBSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUSBSY_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for BUSBSY_R {
 #[doc = "Field `IDLE` reader - I2C idle 0: The I2C controller is not idle. 1: The I2C controller is idle."]
 pub struct IDLE_R(crate::FieldReader<bool, bool>);
 impl IDLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IDLE_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for IDLE_R {
 #[doc = "Field `ARBLST` reader - Arbitration lost 0: The I2C controller won arbitration. 1: The I2C controller lost arbitration."]
 pub struct ARBLST_R(crate::FieldReader<bool, bool>);
 impl ARBLST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ARBLST_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for ARBLST_R {
 #[doc = "Field `DATACK` reader - Acknowledge data 0: The transmited data was acknowledged. 1: The transmited data was not acknowledged."]
 pub struct DATACK_R(crate::FieldReader<bool, bool>);
 impl DATACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DATACK_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for DATACK_R {
 #[doc = "Field `ADRACK` reader - Acknowledge address 0: The transmited address was acknowledged. 1: The transmited address was not acknowledged."]
 pub struct ADRACK_R(crate::FieldReader<bool, bool>);
 impl ADRACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADRACK_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for ADRACK_R {
 #[doc = "Field `ERROR` reader - Error 0: No error was detected on the last operation. 1: An error occurred on the last operation."]
 pub struct ERROR_R(crate::FieldReader<bool, bool>);
 impl ERROR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERROR_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for ERROR_R {
 #[doc = "Field `BUSY` reader - I2C busy 0: The controller is idle. 1: The controller is busy. When the BUSY bit is set, the other status bits are not valid."]
 pub struct BUSY_R(crate::FieldReader<bool, bool>);
 impl BUSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUSY_R(crate::FieldReader::new(bits))
     }

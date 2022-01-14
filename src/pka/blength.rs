@@ -37,6 +37,7 @@ impl From<crate::W<BLENGTH_SPEC>> for W {
 #[doc = "Field `BLENGTH` reader - This register specifies the length (in 32-bit words) of Vector B."]
 pub struct BLENGTH_R(crate::FieldReader<u16, u16>);
 impl BLENGTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         BLENGTH_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<AFSEL_SPEC>> for W {
 #[doc = "Field `AFSEL` reader - Bit set: Enables hardware (peripheral) control mode Bit cleared: Enables software control mode"]
 pub struct AFSEL_R(crate::FieldReader<u8, u8>);
 impl AFSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AFSEL_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<ADDR_SPEC>> for W {
 #[doc = "Field `UPDATE` reader - This bit is set by hardware when writing to this register, and is cleared by hardware when the new address becomes effective."]
 pub struct UPDATE_R(crate::FieldReader<bool, bool>);
 impl UPDATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UPDATE_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for UPDATE_R {
 #[doc = "Field `USBADDR` reader - Device address. The address shall be updated upon successful completion of the status stage of the SET_ADDRESS request."]
 pub struct USBADDR_R(crate::FieldReader<u8, u8>);
 impl USBADDR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         USBADDR_R(crate::FieldReader::new(bits))
     }

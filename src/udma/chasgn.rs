@@ -38,6 +38,7 @@ impl From<crate::W<CHASGN_SPEC>> for W {
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
 pub struct CHASGN_R(crate::FieldReader<u32, u32>);
 impl CHASGN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         CHASGN_R(crate::FieldReader::new(bits))
     }
@@ -58,7 +59,7 @@ impl<'a> CHASGN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits |= value as u32;
+        self.w.bits = value as u32;
         self.w
     }
 }

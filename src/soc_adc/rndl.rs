@@ -37,6 +37,7 @@ impl From<crate::W<RNDL_SPEC>> for W {
 #[doc = "Field `RNDL` reader - Random value/seed or CRC result, low byte When used for random-number generation, writing to this register twice seeds the random-number generator. Writing to this register copies the 8 LSBs of the LFSR to the 8 MSBs and replaces the 8 LSBs with the data value written. The value returned when reading from this register is the 8 LSBs of the LFSR. When used for random-number generation, reading this register returns the 8 LSBs of the random number. When used for CRC calculations, reading this register returns the 8 LSBs of the CRC result."]
 pub struct RNDL_R(crate::FieldReader<u8, u8>);
 impl RNDL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RNDL_R(crate::FieldReader::new(bits))
     }

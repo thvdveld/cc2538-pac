@@ -37,6 +37,7 @@ impl From<crate::W<FUNCTION_SPEC>> for W {
 #[doc = "Field `STALL_RESULT` reader - When written with a 1b, updating of the PKA_COMPARE, PKA_MSW and PKA_DIVMSW registers, as well as resetting the run bit is stalled beyond the point that a running operation is actually finished. Use this to allow software enough time to read results from a previous operation when the newly started operation is known to take only a short amount of time. If a result is waiting, the result registers is updated and the run bit is reset in the clock cycle following writing the stall result bit back to 0b. The Stall result function may only be used for basic PKCP operations."]
 pub struct STALL_RESULT_R(crate::FieldReader<bool, bool>);
 impl STALL_RESULT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STALL_RESULT_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> STALL_RESULT_W<'a> {
 #[doc = "Field `RUN` reader - The host sets this bit to instruct the PKA module to begin processing the basic PKCP or complex sequencer operation. This bit is reset low automatically when the operation is complete. The complement of this bit is output as interrupts\\[1\\]. After a reset, the run bit is always set to 1b. Depending on the option, program ROM or program RAM, the following applies: Program ROM - The first sequencer instruction sets the bit to 0b. This is done immediately after the hardware reset is released. Program RAM - The sequencer must set the bit to 0b. As a valid firmware may not have been loaded, the sequencer is held in software reset after the hardware reset is released (the reset bit in PKA_SEQ_CRTL is set to 1b). After the FW image is loaded and the Reset bit is cleared, the sequencer starts to execute the FW. The first instruction clears the run bit. In both cases a few clock cycles are needed before the first instruction is executed and the run bit state has been propagated."]
 pub struct RUN_R(crate::FieldReader<bool, bool>);
 impl RUN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RUN_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RUN_W<'a> {
 #[doc = "Field `SEQUENCER_OPERATIONS` reader - These bits select the complex sequencer operation to perform: 000b: None 001b: ExpMod-CRT 010b: ExpMod-ACT4 (compatible with EIP2315) 011b: ECC-ADD (if available in firmware, otherwise reserved) 100b: ExpMod-ACT2 (compatible with EIP2316) 101b: ECC-MUL (if available in firmware, otherwise reserved) 110b: ExpMod-variable 111b: ModInv (if available in firmware, otherwise reserved) The encoding of these operations is determined by sequencer firmware."]
 pub struct SEQUENCER_OPERATIONS_R(crate::FieldReader<u8, u8>);
 impl SEQUENCER_OPERATIONS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SEQUENCER_OPERATIONS_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> SEQUENCER_OPERATIONS_W<'a> {
 #[doc = "Field `COPY` reader - Perform copy operation"]
 pub struct COPY_R(crate::FieldReader<bool, bool>);
 impl COPY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         COPY_R(crate::FieldReader::new(bits))
     }
@@ -171,6 +175,7 @@ impl<'a> COPY_W<'a> {
 #[doc = "Field `COMPARE` reader - Perform compare operation"]
 pub struct COMPARE_R(crate::FieldReader<bool, bool>);
 impl COMPARE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         COMPARE_R(crate::FieldReader::new(bits))
     }
@@ -207,6 +212,7 @@ impl<'a> COMPARE_W<'a> {
 #[doc = "Field `MODULO` reader - Perform modulo operation"]
 pub struct MODULO_R(crate::FieldReader<bool, bool>);
 impl MODULO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MODULO_R(crate::FieldReader::new(bits))
     }
@@ -243,6 +249,7 @@ impl<'a> MODULO_W<'a> {
 #[doc = "Field `DIVIDE` reader - Perform divide operation"]
 pub struct DIVIDE_R(crate::FieldReader<bool, bool>);
 impl DIVIDE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DIVIDE_R(crate::FieldReader::new(bits))
     }
@@ -279,6 +286,7 @@ impl<'a> DIVIDE_W<'a> {
 #[doc = "Field `LSHIFT` reader - Perform left shift operation"]
 pub struct LSHIFT_R(crate::FieldReader<bool, bool>);
 impl LSHIFT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LSHIFT_R(crate::FieldReader::new(bits))
     }
@@ -315,6 +323,7 @@ impl<'a> LSHIFT_W<'a> {
 #[doc = "Field `RSHIFT` reader - Perform right shift operation"]
 pub struct RSHIFT_R(crate::FieldReader<bool, bool>);
 impl RSHIFT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RSHIFT_R(crate::FieldReader::new(bits))
     }
@@ -351,6 +360,7 @@ impl<'a> RSHIFT_W<'a> {
 #[doc = "Field `SUBTRACT` reader - Perform subtract operation"]
 pub struct SUBTRACT_R(crate::FieldReader<bool, bool>);
 impl SUBTRACT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SUBTRACT_R(crate::FieldReader::new(bits))
     }
@@ -387,6 +397,7 @@ impl<'a> SUBTRACT_W<'a> {
 #[doc = "Field `ADD` reader - Perform add operation"]
 pub struct ADD_R(crate::FieldReader<bool, bool>);
 impl ADD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADD_R(crate::FieldReader::new(bits))
     }
@@ -424,6 +435,7 @@ impl<'a> ADD_W<'a> {
 of the PKA_DIVMSW register - can only be used with basic PKCP operations, except for Divide, Modulo and Compare."]
 pub struct MS_ONE_R(crate::FieldReader<bool, bool>);
 impl MS_ONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MS_ONE_R(crate::FieldReader::new(bits))
     }
@@ -461,6 +473,7 @@ impl<'a> MS_ONE_W<'a> {
 #[doc = "Field `ADDSUB` reader - Perform combined add/subtract operation"]
 pub struct ADDSUB_R(crate::FieldReader<bool, bool>);
 impl ADDSUB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADDSUB_R(crate::FieldReader::new(bits))
     }
@@ -497,6 +510,7 @@ impl<'a> ADDSUB_W<'a> {
 #[doc = "Field `MULTIPLY` reader - Perform multiply operation"]
 pub struct MULTIPLY_R(crate::FieldReader<bool, bool>);
 impl MULTIPLY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MULTIPLY_R(crate::FieldReader::new(bits))
     }

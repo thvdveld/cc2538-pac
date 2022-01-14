@@ -37,6 +37,7 @@ impl From<crate::W<IO_SPEC>> for W {
 #[doc = "Field `SC` reader - I/O strength control bit Common to all digital output pads Should be set when unregulated voltage is below approximately 2.6 V."]
 pub struct SC_R(crate::FieldReader<bool, bool>);
 impl SC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SC_R(crate::FieldReader::new(bits))
     }

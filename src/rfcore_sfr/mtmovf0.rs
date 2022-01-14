@@ -38,6 +38,7 @@ impl From<crate::W<MTMOVF0_SPEC>> for W {
 of an internal register, depending on the value of MTMSEL.MTMOVFSEL. When reading the MTMOVF0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the overflow counter value (MTovf) is latched. When reading the MTM0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the overflow counter value (MTovf) is latched."]
 pub struct MTMOVF0_R(crate::FieldReader<u8, u8>);
 impl MTMOVF0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MTMOVF0_R(crate::FieldReader::new(bits))
     }

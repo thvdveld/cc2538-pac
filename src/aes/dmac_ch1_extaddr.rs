@@ -37,6 +37,7 @@ impl From<crate::W<DMAC_CH1_EXTADDR_SPEC>> for W {
 #[doc = "Field `ADDR` reader - Channel external address value. When read during operation, it holds the last updated external address after being sent to the master interface."]
 pub struct ADDR_R(crate::FieldReader<u32, u32>);
 impl ADDR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         ADDR_R(crate::FieldReader::new(bits))
     }
@@ -56,7 +57,7 @@ impl<'a> ADDR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits |= value as u32;
+        self.w.bits = value as u32;
         self.w
     }
 }

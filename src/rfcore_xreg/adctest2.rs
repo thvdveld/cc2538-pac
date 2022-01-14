@@ -37,6 +37,7 @@ impl From<crate::W<ADCTEST2_SPEC>> for W {
 #[doc = "Field `ADC_TEST_MODE` reader - Test mode to enable output of ADC data from demodulator. When enabled, raw ADC data is clocked out on the GPIO pins. 00: Test mode disabled 01: Data from the I and Q ADCs are output (data rate 76 MHz) 10: Data from the I ADC is output. Two and two ADC samples grouped (data rate 38 MHz) 11: Data from the Q ADC is output. Two and two ADC samples grouped (data rate 38 MHz)"]
 pub struct ADC_TEST_MODE_R(crate::FieldReader<u8, u8>);
 impl ADC_TEST_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_TEST_MODE_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> ADC_TEST_MODE_W<'a> {
 #[doc = "Field `AAF_RS` reader - Controls series resistance of AAF"]
 pub struct AAF_RS_R(crate::FieldReader<u8, u8>);
 impl AAF_RS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AAF_RS_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> AAF_RS_W<'a> {
 #[doc = "Field `ADC_FF_ADJ` reader - Adjust feed forward"]
 pub struct ADC_FF_ADJ_R(crate::FieldReader<u8, u8>);
 impl ADC_FF_ADJ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_FF_ADJ_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> ADC_FF_ADJ_W<'a> {
 #[doc = "Field `ADC_DAC_ROT` reader - Control of DAC DWA scheme 0 = DWA (scrambling) disabled 1 = DWA enabled"]
 pub struct ADC_DAC_ROT_R(crate::FieldReader<bool, bool>);
 impl ADC_DAC_ROT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADC_DAC_ROT_R(crate::FieldReader::new(bits))
     }

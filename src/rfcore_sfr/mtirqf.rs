@@ -37,6 +37,7 @@ impl From<crate::W<MTIRQF_SPEC>> for W {
 #[doc = "Field `MACTIMER_OVF_COMPARE2F` reader - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
 pub struct MACTIMER_OVF_COMPARE2F_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_OVF_COMPARE2F_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_OVF_COMPARE2F_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> MACTIMER_OVF_COMPARE2F_W<'a> {
 #[doc = "Field `MACTIMER_OVF_COMPARE1F` reader - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
 pub struct MACTIMER_OVF_COMPARE1F_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_OVF_COMPARE1F_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_OVF_COMPARE1F_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> MACTIMER_OVF_COMPARE1F_W<'a> {
 #[doc = "Field `MACTIMER_OVF_PERF` reader - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
 pub struct MACTIMER_OVF_PERF_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_OVF_PERF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_OVF_PERF_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> MACTIMER_OVF_PERF_W<'a> {
 #[doc = "Field `MACTIMER_COMPARE2F` reader - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
 pub struct MACTIMER_COMPARE2F_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_COMPARE2F_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_COMPARE2F_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> MACTIMER_COMPARE2F_W<'a> {
 #[doc = "Field `MACTIMER_COMPARE1F` reader - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
 pub struct MACTIMER_COMPARE1F_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_COMPARE1F_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_COMPARE1F_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> MACTIMER_COMPARE1F_W<'a> {
 #[doc = "Field `MACTIMER_PERF` reader - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
 pub struct MACTIMER_PERF_R(crate::FieldReader<bool, bool>);
 impl MACTIMER_PERF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MACTIMER_PERF_R(crate::FieldReader::new(bits))
     }

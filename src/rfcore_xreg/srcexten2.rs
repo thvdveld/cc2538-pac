@@ -37,6 +37,7 @@ impl From<crate::W<SRCEXTEN2_SPEC>> for W {
 #[doc = "Field `EXT_ADDR_EN` reader - 23:16 part of the 24-bit word EXT_ADDR_EN See description of SRCEXTEN0.EXT_ADDR_EN."]
 pub struct EXT_ADDR_EN_R(crate::FieldReader<u8, u8>);
 impl EXT_ADDR_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         EXT_ADDR_EN_R(crate::FieldReader::new(bits))
     }

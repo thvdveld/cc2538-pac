@@ -37,6 +37,7 @@ impl From<crate::W<IM_SPEC>> for W {
 #[doc = "Field `LME5IM` reader - LIN mode edge 5 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME5RIS bit in the UARTRIS register is set. 0: The LME5RIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct LME5IM_R(crate::FieldReader<bool, bool>);
 impl LME5IM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LME5IM_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> LME5IM_W<'a> {
 #[doc = "Field `LME1IM` reader - LIN mode edge 1 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME1RIS bit in the UARTRIS register is set. 0: The LME1RIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct LME1IM_R(crate::FieldReader<bool, bool>);
 impl LME1IM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LME1IM_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> LME1IM_W<'a> {
 #[doc = "Field `LMSBIM` reader - LIN mode sync break interrupt mask 1: An interrupt is sent to the interrupt controller when the LMSBRIS bit in the UARTRIS register is set. 0: The LMSBRIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct LMSBIM_R(crate::FieldReader<bool, bool>);
 impl LMSBIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LMSBIM_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> LMSBIM_W<'a> {
 #[doc = "Field `NINEBITIM` reader - 9-bit mode interrupt mask 1: An interrupt is sent to the interrupt controller when the 9BITRIS bit in the UARTRIS register is set. 0: The 9BITRIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct NINEBITIM_R(crate::FieldReader<bool, bool>);
 impl NINEBITIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NINEBITIM_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> NINEBITIM_W<'a> {
 #[doc = "Field `OEIM` reader - UART overrun error interrupt mask 1: An interrupt is sent to the interrupt controller when the OERIS bit in the UARTRIS register is set. 0: The OERIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct OEIM_R(crate::FieldReader<bool, bool>);
 impl OEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OEIM_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> OEIM_W<'a> {
 #[doc = "Field `BEIM` reader - UART break error interrupt mask 1: An interrupt is sent to the interrupt controller when the BERIS bit in the UARTRIS register is set. 0: The BERIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct BEIM_R(crate::FieldReader<bool, bool>);
 impl BEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BEIM_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> BEIM_W<'a> {
 #[doc = "Field `PEIM` reader - UART parity error interrupt mask 1: An interrupt is sent to the interrupt controller when the PERIS bit in the UARTRIS register is set. 0: The PERIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct PEIM_R(crate::FieldReader<bool, bool>);
 impl PEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEIM_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> PEIM_W<'a> {
 #[doc = "Field `FEIM` reader - UART framing error interrupt mask 1: An interrupt is sent to the interrupt controller when the FERIS bit in the UARTRIS register is set. 0: The FERIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct FEIM_R(crate::FieldReader<bool, bool>);
 impl FEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FEIM_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> FEIM_W<'a> {
 #[doc = "Field `RTIM` reader - UART receive time-out interrupt mask 1: An interrupt is sent to the interrupt controller when the RTRIS bit in the UARTRIS register is set. 0: The RTRIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct RTIM_R(crate::FieldReader<bool, bool>);
 impl RTIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTIM_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> RTIM_W<'a> {
 #[doc = "Field `TXIM` reader - UART transmit interrupt mask 1: An interrupt is sent to the interrupt controller when the TXRIS bit in the UARTRIS register is set. 0: The TXRIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct TXIM_R(crate::FieldReader<bool, bool>);
 impl TXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXIM_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> TXIM_W<'a> {
 #[doc = "Field `RXIM` reader - UART receive interrupt mask 1: An interrupt is sent to the interrupt controller when the RXRIS bit in the UARTRIS register is set. 0: The RXRIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct RXIM_R(crate::FieldReader<bool, bool>);
 impl RXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXIM_R(crate::FieldReader::new(bits))
     }

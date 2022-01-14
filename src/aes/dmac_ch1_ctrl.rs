@@ -37,6 +37,7 @@ impl From<crate::W<DMAC_CH1_CTRL_SPEC>> for W {
 #[doc = "Field `PRIO` reader - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
 pub struct PRIO_R(crate::FieldReader<bool, bool>);
 impl PRIO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PRIO_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> PRIO_W<'a> {
 #[doc = "Field `EN` reader - Channel enable 0: Disabled 1: Enable Note: Disabling an active channel interrupts the DMA operation. The ongoing block transfer completes, but no new transfers are requested."]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }

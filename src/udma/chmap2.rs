@@ -37,6 +37,7 @@ impl From<crate::W<CHMAP2_SPEC>> for W {
 #[doc = "Field `CH23SEL` reader - uDMA channel 23 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub struct CH23SEL_R(crate::FieldReader<u8, u8>);
 impl CH23SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH23SEL_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> CH23SEL_W<'a> {
 #[doc = "Field `CH22SEL` reader - uDMA channel 22 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub struct CH22SEL_R(crate::FieldReader<u8, u8>);
 impl CH22SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH22SEL_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> CH22SEL_W<'a> {
 #[doc = "Field `CH21SEL` reader - uDMA channel 21 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub struct CH21SEL_R(crate::FieldReader<u8, u8>);
 impl CH21SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH21SEL_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> CH21SEL_W<'a> {
 #[doc = "Field `CH20SEL` reader - uDMA channel 20 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub struct CH20SEL_R(crate::FieldReader<u8, u8>);
 impl CH20SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH20SEL_R(crate::FieldReader::new(bits))
     }
@@ -141,6 +145,7 @@ impl<'a> CH20SEL_W<'a> {
 #[doc = "Field `CH19SEL` reader - uDMA channel 19 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub struct CH19SEL_R(crate::FieldReader<u8, u8>);
 impl CH19SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH19SEL_R(crate::FieldReader::new(bits))
     }
@@ -167,6 +172,7 @@ impl<'a> CH19SEL_W<'a> {
 #[doc = "Field `CH18SEL` reader - uDMA channel 18 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub struct CH18SEL_R(crate::FieldReader<u8, u8>);
 impl CH18SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH18SEL_R(crate::FieldReader::new(bits))
     }
@@ -193,6 +199,7 @@ impl<'a> CH18SEL_W<'a> {
 #[doc = "Field `CH17SEL` reader - uDMA channel 17 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub struct CH17SEL_R(crate::FieldReader<u8, u8>);
 impl CH17SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH17SEL_R(crate::FieldReader::new(bits))
     }
@@ -219,6 +226,7 @@ impl<'a> CH17SEL_W<'a> {
 #[doc = "Field `CH16SEL` reader - uDMA channel 16 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub struct CH16SEL_R(crate::FieldReader<u8, u8>);
 impl CH16SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH16SEL_R(crate::FieldReader::new(bits))
     }

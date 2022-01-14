@@ -37,6 +37,7 @@ impl From<crate::W<ADCCON3_SPEC>> for W {
 #[doc = "Field `EREF` reader - Selects reference voltage used for the extra conversion 00: Internal reference 01: External reference on AIN7 pin 10: AVDD5 pin 11: External reference on AIN6-AIN7 differential input"]
 pub struct EREF_R(crate::FieldReader<u8, u8>);
 impl EREF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         EREF_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> EREF_W<'a> {
 #[doc = "Field `EDIV` reader - Sets the decimation rate used for the extra conversion The decimation rate also determines the resolution and the time required to complete the conversion. 00: 64 decimation rate (7 bits ENOB) 01: 128 decimation rate (9 bits ENOB) 10: 256 decimation rate (10 bits ENOB) 11: 512 decimation rate (12 bits ENOB)"]
 pub struct EDIV_R(crate::FieldReader<u8, u8>);
 impl EDIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         EDIV_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> EDIV_W<'a> {
 #[doc = "Field `ECH` reader - Single channel select. Selects the channel number of the single conversion that is triggered by writing to ADCCON3. 0000: AIN0 0001: AIN1 0010: AIN2 0011: AIN3 0100: AIN4 0101: AIN5 0110: AIN6 0111: AIN7 1000: AIN0-AIN1 1001: AIN2-AIN3 1010: AIN4-AIN5 1011: AIN6-AIN7 1100: GND 1101: Reserved 1110: Temperature sensor 1111: VDD/3"]
 pub struct ECH_R(crate::FieldReader<u8, u8>);
 impl ECH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ECH_R(crate::FieldReader::new(bits))
     }

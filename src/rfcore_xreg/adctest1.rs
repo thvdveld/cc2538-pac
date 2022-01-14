@@ -37,6 +37,7 @@ impl From<crate::W<ADCTEST1_SPEC>> for W {
 #[doc = "Field `ADC_TEST_CTRL` reader - ADC test mode selector"]
 pub struct ADC_TEST_CTRL_R(crate::FieldReader<u8, u8>);
 impl ADC_TEST_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_TEST_CTRL_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> ADC_TEST_CTRL_W<'a> {
 #[doc = "Field `ADC_C2_ADJ` reader - Used to adjust capacitor values in ADC"]
 pub struct ADC_C2_ADJ_R(crate::FieldReader<u8, u8>);
 impl ADC_C2_ADJ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_C2_ADJ_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> ADC_C2_ADJ_W<'a> {
 #[doc = "Field `ADC_C3_ADJ` reader - Used to adjust capacitor values in ADC"]
 pub struct ADC_C3_ADJ_R(crate::FieldReader<u8, u8>);
 impl ADC_C3_ADJ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_C3_ADJ_R(crate::FieldReader::new(bits))
     }

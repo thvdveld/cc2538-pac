@@ -37,6 +37,7 @@ impl From<crate::W<PC2_OVER_SPEC>> for W {
 #[doc = "Field `PC2_over` reader - 0: output disable 1: oe - output enable"]
 pub struct PC2_OVER_R(crate::FieldReader<bool, bool>);
 impl PC2_OVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PC2_OVER_R(crate::FieldReader::new(bits))
     }

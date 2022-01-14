@@ -37,6 +37,7 @@ impl From<crate::W<MTMSEL_SPEC>> for W {
 #[doc = "Field `MTMOVFSEL` reader - The value of this register selects the internal registers that are modified or read when accessing MTMOVF0, MTMOVF1, and MTMOVF2. 000: MTovf (overflow counter) 001: MTovf_cap (overflow capture) 010: MTovf_per (overflow period) 011: MTovf_cmp1 (overflow compare 1) 100: MTovf_cmp2 (overflow compare 2) 101 to 111: Reserved"]
 pub struct MTMOVFSEL_R(crate::FieldReader<u8, u8>);
 impl MTMOVFSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MTMOVFSEL_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> MTMOVFSEL_W<'a> {
 #[doc = "Field `MTMSEL` reader - The value of this register selects the internal registers that are modified or read when accessing MTM0 and MTM1. 000: MTtim (timer count value) 001: MT_cap (timer capture) 010: MT_per (timer period) 011: MT_cmp1 (timer compare 1) 100: MT_cmp2 (timer compare 2) 101 to 111: Reserved MTM0"]
 pub struct MTMSEL_R(crate::FieldReader<u8, u8>);
 impl MTMSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MTMSEL_R(crate::FieldReader::new(bits))
     }

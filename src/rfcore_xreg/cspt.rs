@@ -16,6 +16,7 @@ impl From<crate::R<CSPT_SPEC>> for R {
 #[doc = "Field `CSPT` reader - Content is decremented each time the MAC Timer overflows while the CSP program is running. The SCP program stops when decremented to 0. Setting CSPT = 0xFF prevents the register from being decremented."]
 pub struct CSPT_R(crate::FieldReader<u8, u8>);
 impl CSPT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CSPT_R(crate::FieldReader::new(bits))
     }

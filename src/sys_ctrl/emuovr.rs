@@ -37,6 +37,7 @@ impl From<crate::W<EMUOVR_SPEC>> for W {
 #[doc = "Field `ICEPICK_FORCE_CLOCK_CG` reader - ICEPick 'Force Active' clock gate override bit. 'Force Active' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
 pub struct ICEPICK_FORCE_CLOCK_CG_R(crate::FieldReader<bool, bool>);
 impl ICEPICK_FORCE_CLOCK_CG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICEPICK_FORCE_CLOCK_CG_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> ICEPICK_FORCE_CLOCK_CG_W<'a> {
 #[doc = "Field `ICEPICK_FORCE_POWER_CG` reader - ICEPick 'Force Power' clock gate override bit. 'Force Power' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
 pub struct ICEPICK_FORCE_POWER_CG_R(crate::FieldReader<bool, bool>);
 impl ICEPICK_FORCE_POWER_CG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICEPICK_FORCE_POWER_CG_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> ICEPICK_FORCE_POWER_CG_W<'a> {
 #[doc = "Field `ICEPICK_INHIBIT_SLEEP_CG` reader - ICEPick 'Inhibit Sleep' clock gate override bit. 'Inhibit Sleep' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
 pub struct ICEPICK_INHIBIT_SLEEP_CG_R(crate::FieldReader<bool, bool>);
 impl ICEPICK_INHIBIT_SLEEP_CG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICEPICK_INHIBIT_SLEEP_CG_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> ICEPICK_INHIBIT_SLEEP_CG_W<'a> {
 #[doc = "Field `ICEMELTER_WKUP_CG` reader - ICEMelter 'WAKEUPEMU' clock gate override bit. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings"]
 pub struct ICEMELTER_WKUP_CG_R(crate::FieldReader<bool, bool>);
 impl ICEMELTER_WKUP_CG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICEMELTER_WKUP_CG_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> ICEMELTER_WKUP_CG_W<'a> {
 #[doc = "Field `ICEPICK_FORCE_CLOCK_PM` reader - ICEPick 'Force Active' power mode override bit. 'Force Active' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
 pub struct ICEPICK_FORCE_CLOCK_PM_R(crate::FieldReader<bool, bool>);
 impl ICEPICK_FORCE_CLOCK_PM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICEPICK_FORCE_CLOCK_PM_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> ICEPICK_FORCE_CLOCK_PM_W<'a> {
 #[doc = "Field `ICEPICK_FORCE_POWER_PM` reader - ICEPick 'Force Power' power mode override bit. 'Force Power' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
 pub struct ICEPICK_FORCE_POWER_PM_R(crate::FieldReader<bool, bool>);
 impl ICEPICK_FORCE_POWER_PM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICEPICK_FORCE_POWER_PM_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> ICEPICK_FORCE_POWER_PM_W<'a> {
 #[doc = "Field `ICEPICK_INHIBIT_SLEEP_PM` reader - ICEPick 'Inhibit Sleep' power mode override bit. 'Inhibit Sleep' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
 pub struct ICEPICK_INHIBIT_SLEEP_PM_R(crate::FieldReader<bool, bool>);
 impl ICEPICK_INHIBIT_SLEEP_PM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICEPICK_INHIBIT_SLEEP_PM_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> ICEPICK_INHIBIT_SLEEP_PM_W<'a> {
 #[doc = "Field `ICEMELTER_WKUP_PM` reader - ICEMelter 'WAKEUPEMU' power mode override bit. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
 pub struct ICEMELTER_WKUP_PM_R(crate::FieldReader<bool, bool>);
 impl ICEMELTER_WKUP_PM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICEMELTER_WKUP_PM_R(crate::FieldReader::new(bits))
     }

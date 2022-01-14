@@ -17,6 +17,7 @@ impl From<crate::R<STCV0_SPEC>> for R {
 of Sleep Timer capture value"]
 pub struct STCV0_R(crate::FieldReader<u8, u8>);
 impl STCV0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         STCV0_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<DIR_SPEC>> for W {
 #[doc = "Field `DIR` reader - Bits set: Corresponding pin is output Bits cleared: Corresponding pin is input"]
 pub struct DIR_R(crate::FieldReader<u8, u8>);
 impl DIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DIR_R(crate::FieldReader::new(bits))
     }

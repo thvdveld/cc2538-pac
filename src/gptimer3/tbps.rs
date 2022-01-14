@@ -16,6 +16,7 @@ impl From<crate::R<TBPS_SPEC>> for R {
 #[doc = "Field `PSS` reader - GPTM Timer B prescaler"]
 pub struct PSS_R(crate::FieldReader<u16, u16>);
 impl PSS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         PSS_R(crate::FieldReader::new(bits))
     }

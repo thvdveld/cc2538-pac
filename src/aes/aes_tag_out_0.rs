@@ -18,6 +18,7 @@ Bits \\[31:0\\]
 of the AES_TAG registers store the authentication value for the combined and authentication only modes. For a host read operation, these registers contain the last 128-bit TAG output of the EIP-120t; the TAG is available until the next context is written. This register will only contain valid data if the TAG is available and when the store_ready bit from AES_CTRL register is set. During processing or for operations/modes that do not return a TAG, reads from this register return data from the IV register."]
 pub struct AES_TAG_R(crate::FieldReader<u32, u32>);
 impl AES_TAG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         AES_TAG_R(crate::FieldReader::new(bits))
     }

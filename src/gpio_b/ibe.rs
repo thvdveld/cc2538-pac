@@ -37,6 +37,7 @@ impl From<crate::W<IBE_SPEC>> for W {
 #[doc = "Field `IBE` reader - Bits set: Both edges on corresponding pin trigger an interrupt Bits cleared: Interrupt generation event is controlled by GPIOIEV Single edge: Determined by corresponding bit in GPIOIEV register"]
 pub struct IBE_R(crate::FieldReader<u8, u8>);
 impl IBE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IBE_R(crate::FieldReader::new(bits))
     }

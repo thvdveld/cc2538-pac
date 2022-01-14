@@ -38,6 +38,7 @@ impl From<crate::W<MTMOVF1_SPEC>> for W {
 of an internal register, depending on the value of MTMSEL.MTMSEL. Reading this register with MTMSEL.MTMOVFSEL set to 000 returns the latched value of MTovf\\[15:8\\]."]
 pub struct MTMOVF1_R(crate::FieldReader<u8, u8>);
 impl MTMOVF1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MTMOVF1_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<RIS_SPEC>> for R {
 #[doc = "Field `TXRIS` reader - SSI SSITXINTR raw state (RO) Reset value: 0x1 Gives the raw interrupt state (before masking) of SSITXINTR"]
 pub struct TXRIS_R(crate::FieldReader<bool, bool>);
 impl TXRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXRIS_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for TXRIS_R {
 #[doc = "Field `RXRIS` reader - SSI SSIRXINTR raw state (RO) Reset value: 0x0 Gives the raw interrupt state (before masking) of SSIRXINTR"]
 pub struct RXRIS_R(crate::FieldReader<bool, bool>);
 impl RXRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXRIS_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for RXRIS_R {
 #[doc = "Field `RTRIS` reader - SSI SSIRTINTR raw state (RO) Reset value: 0x0 Gives the raw interrupt state (before masking) of SSIRTINTR"]
 pub struct RTRIS_R(crate::FieldReader<bool, bool>);
 impl RTRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTRIS_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for RTRIS_R {
 #[doc = "Field `RORRIS` reader - SSI SSIRORINTR raw state (RO) Reset value: 0x0 Gives the raw interrupt state (before masking) of SSIRORINTR"]
 pub struct RORRIS_R(crate::FieldReader<bool, bool>);
 impl RORRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RORRIS_R(crate::FieldReader::new(bits))
     }

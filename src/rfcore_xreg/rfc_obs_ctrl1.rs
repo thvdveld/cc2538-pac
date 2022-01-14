@@ -37,6 +37,7 @@ impl From<crate::W<RFC_OBS_CTRL1_SPEC>> for W {
 #[doc = "Field `RFC_OBS_POL1` reader - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
 pub struct RFC_OBS_POL1_R(crate::FieldReader<bool, bool>);
 impl RFC_OBS_POL1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFC_OBS_POL1_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> RFC_OBS_POL1_W<'a> {
 #[doc = "Field `RFC_OBS_MUX1` reader - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
 pub struct RFC_OBS_MUX1_R(crate::FieldReader<u8, u8>);
 impl RFC_OBS_MUX1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RFC_OBS_MUX1_R(crate::FieldReader::new(bits))
     }

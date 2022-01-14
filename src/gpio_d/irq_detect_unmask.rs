@@ -37,6 +37,7 @@ impl From<crate::W<IRQ_DETECT_UNMASK_SPEC>> for W {
 #[doc = "Field `PDIACK7` reader - Port D bit 7 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PDIACK7_R(crate::FieldReader<bool, bool>);
 impl PDIACK7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIACK7_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> PDIACK7_W<'a> {
 #[doc = "Field `PDIACK6` reader - Port D bit 6 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PDIACK6_R(crate::FieldReader<bool, bool>);
 impl PDIACK6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIACK6_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> PDIACK6_W<'a> {
 #[doc = "Field `PDIACK5` reader - Port D bit 5 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PDIACK5_R(crate::FieldReader<bool, bool>);
 impl PDIACK5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIACK5_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PDIACK5_W<'a> {
 #[doc = "Field `PDIACK4` reader - Port D bit 4 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PDIACK4_R(crate::FieldReader<bool, bool>);
 impl PDIACK4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIACK4_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> PDIACK4_W<'a> {
 #[doc = "Field `PDIACK3` reader - Port D bit 3 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PDIACK3_R(crate::FieldReader<bool, bool>);
 impl PDIACK3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIACK3_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> PDIACK3_W<'a> {
 #[doc = "Field `PDIACK2` reader - Port D bit 2 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PDIACK2_R(crate::FieldReader<bool, bool>);
 impl PDIACK2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIACK2_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> PDIACK2_W<'a> {
 #[doc = "Field `PDIACK1` reader - Port D bit 1 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PDIACK1_R(crate::FieldReader<bool, bool>);
 impl PDIACK1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIACK1_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> PDIACK1_W<'a> {
 #[doc = "Field `PDIACK0` reader - Port D bit 0 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PDIACK0_R(crate::FieldReader<bool, bool>);
 impl PDIACK0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIACK0_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> PDIACK0_W<'a> {
 #[doc = "Field `PCIACK7` reader - Port C bit 7 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PCIACK7_R(crate::FieldReader<bool, bool>);
 impl PCIACK7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIACK7_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> PCIACK7_W<'a> {
 #[doc = "Field `PCIACK6` reader - Port C bit 6 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PCIACK6_R(crate::FieldReader<bool, bool>);
 impl PCIACK6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIACK6_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> PCIACK6_W<'a> {
 #[doc = "Field `PCIACK5` reader - Port C bit 5 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PCIACK5_R(crate::FieldReader<bool, bool>);
 impl PCIACK5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIACK5_R(crate::FieldReader::new(bits))
     }
@@ -433,6 +444,7 @@ impl<'a> PCIACK5_W<'a> {
 #[doc = "Field `PCIACK4` reader - Port C bit 4 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PCIACK4_R(crate::FieldReader<bool, bool>);
 impl PCIACK4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIACK4_R(crate::FieldReader::new(bits))
     }
@@ -469,6 +481,7 @@ impl<'a> PCIACK4_W<'a> {
 #[doc = "Field `PCIACK3` reader - Port C bit 3 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PCIACK3_R(crate::FieldReader<bool, bool>);
 impl PCIACK3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIACK3_R(crate::FieldReader::new(bits))
     }
@@ -505,6 +518,7 @@ impl<'a> PCIACK3_W<'a> {
 #[doc = "Field `PCIACK2` reader - Port C bit 2 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PCIACK2_R(crate::FieldReader<bool, bool>);
 impl PCIACK2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIACK2_R(crate::FieldReader::new(bits))
     }
@@ -541,6 +555,7 @@ impl<'a> PCIACK2_W<'a> {
 #[doc = "Field `PCIACK1` reader - Port C bit 1 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PCIACK1_R(crate::FieldReader<bool, bool>);
 impl PCIACK1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIACK1_R(crate::FieldReader::new(bits))
     }
@@ -577,6 +592,7 @@ impl<'a> PCIACK1_W<'a> {
 #[doc = "Field `PCIACK0` reader - Port C bit 0 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PCIACK0_R(crate::FieldReader<bool, bool>);
 impl PCIACK0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIACK0_R(crate::FieldReader::new(bits))
     }
@@ -613,6 +629,7 @@ impl<'a> PCIACK0_W<'a> {
 #[doc = "Field `PBIACK7` reader - Port B bit 7 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PBIACK7_R(crate::FieldReader<bool, bool>);
 impl PBIACK7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIACK7_R(crate::FieldReader::new(bits))
     }
@@ -649,6 +666,7 @@ impl<'a> PBIACK7_W<'a> {
 #[doc = "Field `PBIACK6` reader - Port B bit 6 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PBIACK6_R(crate::FieldReader<bool, bool>);
 impl PBIACK6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIACK6_R(crate::FieldReader::new(bits))
     }
@@ -685,6 +703,7 @@ impl<'a> PBIACK6_W<'a> {
 #[doc = "Field `PBIACK5` reader - Port B bit 5 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PBIACK5_R(crate::FieldReader<bool, bool>);
 impl PBIACK5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIACK5_R(crate::FieldReader::new(bits))
     }
@@ -721,6 +740,7 @@ impl<'a> PBIACK5_W<'a> {
 #[doc = "Field `PBIACK4` reader - Port B bit 4 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PBIACK4_R(crate::FieldReader<bool, bool>);
 impl PBIACK4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIACK4_R(crate::FieldReader::new(bits))
     }
@@ -757,6 +777,7 @@ impl<'a> PBIACK4_W<'a> {
 #[doc = "Field `PBIACK3` reader - Port B bit 3 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PBIACK3_R(crate::FieldReader<bool, bool>);
 impl PBIACK3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIACK3_R(crate::FieldReader::new(bits))
     }
@@ -793,6 +814,7 @@ impl<'a> PBIACK3_W<'a> {
 #[doc = "Field `PBIACK2` reader - Port B bit 2 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PBIACK2_R(crate::FieldReader<bool, bool>);
 impl PBIACK2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIACK2_R(crate::FieldReader::new(bits))
     }
@@ -829,6 +851,7 @@ impl<'a> PBIACK2_W<'a> {
 #[doc = "Field `PBIACK1` reader - Port B bit 1 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PBIACK1_R(crate::FieldReader<bool, bool>);
 impl PBIACK1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIACK1_R(crate::FieldReader::new(bits))
     }
@@ -865,6 +888,7 @@ impl<'a> PBIACK1_W<'a> {
 #[doc = "Field `PBIACK0` reader - Port B bit 0 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PBIACK0_R(crate::FieldReader<bool, bool>);
 impl PBIACK0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIACK0_R(crate::FieldReader::new(bits))
     }
@@ -901,6 +925,7 @@ impl<'a> PBIACK0_W<'a> {
 #[doc = "Field `PAIACK7` reader - Port A bit 7 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PAIACK7_R(crate::FieldReader<bool, bool>);
 impl PAIACK7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIACK7_R(crate::FieldReader::new(bits))
     }
@@ -937,6 +962,7 @@ impl<'a> PAIACK7_W<'a> {
 #[doc = "Field `PAIACK6` reader - Port A bit 6 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PAIACK6_R(crate::FieldReader<bool, bool>);
 impl PAIACK6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIACK6_R(crate::FieldReader::new(bits))
     }
@@ -973,6 +999,7 @@ impl<'a> PAIACK6_W<'a> {
 #[doc = "Field `PAIACK5` reader - Port A bit 5 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PAIACK5_R(crate::FieldReader<bool, bool>);
 impl PAIACK5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIACK5_R(crate::FieldReader::new(bits))
     }
@@ -1009,6 +1036,7 @@ impl<'a> PAIACK5_W<'a> {
 #[doc = "Field `PAIACK4` reader - Port A bit 4 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PAIACK4_R(crate::FieldReader<bool, bool>);
 impl PAIACK4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIACK4_R(crate::FieldReader::new(bits))
     }
@@ -1045,6 +1073,7 @@ impl<'a> PAIACK4_W<'a> {
 #[doc = "Field `PAIACK3` reader - Port A bit 3 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PAIACK3_R(crate::FieldReader<bool, bool>);
 impl PAIACK3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIACK3_R(crate::FieldReader::new(bits))
     }
@@ -1081,6 +1110,7 @@ impl<'a> PAIACK3_W<'a> {
 #[doc = "Field `PAIACK2` reader - Port A bit 2 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PAIACK2_R(crate::FieldReader<bool, bool>);
 impl PAIACK2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIACK2_R(crate::FieldReader::new(bits))
     }
@@ -1117,6 +1147,7 @@ impl<'a> PAIACK2_W<'a> {
 #[doc = "Field `PAIACK1` reader - Port A bit 1 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PAIACK1_R(crate::FieldReader<bool, bool>);
 impl PAIACK1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIACK1_R(crate::FieldReader::new(bits))
     }
@@ -1153,6 +1184,7 @@ impl<'a> PAIACK1_W<'a> {
 #[doc = "Field `PAIACK0` reader - Port A bit 0 unmasked interrupt status: 1: Detected 0: Undetected"]
 pub struct PAIACK0_R(crate::FieldReader<bool, bool>);
 impl PAIACK0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIACK0_R(crate::FieldReader::new(bits))
     }

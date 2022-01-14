@@ -37,6 +37,7 @@ impl From<crate::W<TPR_SPEC>> for W {
 #[doc = "Field `TPR` reader - SCL clock period This field specifies the period of the SCL clock. SCL_PRD = 2 * (1+TPR)*(SCL_LP + SCL_HP)*CLK_PRD where: SCL_PRD is the SCL line period (I2C clock). TPR is the timer period register value (range of 1 to 127) SCL_LP is the SCL low period (fixed at 6). SCL_HP is the SCL high period (fixed at 4). CLK_PRD is the system clock period in ns."]
 pub struct TPR_R(crate::FieldReader<u8, u8>);
 impl TPR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TPR_R(crate::FieldReader::new(bits))
     }

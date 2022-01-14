@@ -38,6 +38,7 @@ impl From<crate::W<EXT_ADDR3_SPEC>> for W {
 The IEEE extended address used during destination address filtering"]
 pub struct EXT_ADDR3_R(crate::FieldReader<u8, u8>);
 impl EXT_ADDR3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         EXT_ADDR3_R(crate::FieldReader::new(bits))
     }

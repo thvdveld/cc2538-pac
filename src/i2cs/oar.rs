@@ -37,6 +37,7 @@ impl From<crate::W<OAR_SPEC>> for W {
 #[doc = "Field `OAR` reader - I2C slave own address This field specifies bits A6 through A0 of the slave address."]
 pub struct OAR_R(crate::FieldReader<u8, u8>);
 impl OAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         OAR_R(crate::FieldReader::new(bits))
     }

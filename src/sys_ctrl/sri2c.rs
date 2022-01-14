@@ -37,6 +37,7 @@ impl From<crate::W<SRI2C_SPEC>> for W {
 #[doc = "Field `I2C0` reader - 0: I2C0 module is not reset 1: I2C0 module is reset"]
 pub struct I2C0_R(crate::FieldReader<bool, bool>);
 impl I2C0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         I2C0_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<SRCRESMASK0_SPEC>> for W {
 #[doc = "Field `SRCRESMASK0` reader - Extended address matching When there is a match on entry ext_n, bits 2n and 2n + 1 are set in SRCRESMASK."]
 pub struct SRCRESMASK0_R(crate::FieldReader<u8, u8>);
 impl SRCRESMASK0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SRCRESMASK0_R(crate::FieldReader::new(bits))
     }

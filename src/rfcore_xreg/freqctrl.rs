@@ -42,6 +42,7 @@ are 0 to 113. Settings outside of the usable range (114 to 127) give a frequency
 = 11 + 5 (channel number - 11)."]
 pub struct FREQ_R(crate::FieldReader<u8, u8>);
 impl FREQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FREQ_R(crate::FieldReader::new(bits))
     }

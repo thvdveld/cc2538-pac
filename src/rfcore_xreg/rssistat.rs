@@ -16,6 +16,7 @@ impl From<crate::R<RSSISTAT_SPEC>> for R {
 #[doc = "Field `RSSI_VALID` reader - RSSI value is valid. Occurs eight symbol periods after entering RX."]
 pub struct RSSI_VALID_R(crate::FieldReader<bool, bool>);
 impl RSSI_VALID_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RSSI_VALID_R(crate::FieldReader::new(bits))
     }

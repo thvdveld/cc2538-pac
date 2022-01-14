@@ -37,6 +37,7 @@ impl From<crate::W<TAPR_SPEC>> for W {
 #[doc = "Field `TAPSR` reader - GPTM Timer A prescale"]
 pub struct TAPSR_R(crate::FieldReader<u8, u8>);
 impl TAPSR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TAPSR_R(crate::FieldReader::new(bits))
     }

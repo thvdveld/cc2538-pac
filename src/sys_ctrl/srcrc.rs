@@ -37,6 +37,7 @@ impl From<crate::W<SRCRC_SPEC>> for W {
 #[doc = "Field `CRC_REN_USB` reader - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
 pub struct CRC_REN_USB_R(crate::FieldReader<bool, bool>);
 impl CRC_REN_USB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CRC_REN_USB_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CRC_REN_USB_W<'a> {
 #[doc = "Field `CRC_REN_RF` reader - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
 pub struct CRC_REN_RF_R(crate::FieldReader<bool, bool>);
 impl CRC_REN_RF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CRC_REN_RF_R(crate::FieldReader::new(bits))
     }

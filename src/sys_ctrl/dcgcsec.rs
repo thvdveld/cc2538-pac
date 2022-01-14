@@ -37,6 +37,7 @@ impl From<crate::W<DCGCSEC_SPEC>> for W {
 #[doc = "Field `AES` reader - 0: Clock for AES is gated. 1: Clock for AES is enabled."]
 pub struct AES_R(crate::FieldReader<bool, bool>);
 impl AES_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AES_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> AES_W<'a> {
 #[doc = "Field `PKA` reader - 0: Clock for PKA is gated. 1: Clock for PKA is enabled."]
 pub struct PKA_R(crate::FieldReader<bool, bool>);
 impl PKA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PKA_R(crate::FieldReader::new(bits))
     }

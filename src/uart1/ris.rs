@@ -16,6 +16,7 @@ impl From<crate::R<RIS_SPEC>> for R {
 #[doc = "Field `LME5RIS` reader - LIN mode edge 5 raw interrupt status 1: The timer value at the 5th falling edge of the LIN sync field has been captured. 0: No interrupt This bit is cleared by writing 1 to the LME5IC bit in the UARTICR register."]
 pub struct LME5RIS_R(crate::FieldReader<bool, bool>);
 impl LME5RIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LME5RIS_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for LME5RIS_R {
 #[doc = "Field `LME1RIS` reader - LIN mode edge 1 raw interrupt status 1: The timer value at the 1st falling edge of the LIN Sync Field has been captured. 0: No interrupt This bit is cleared by writing 1 to the LME1IC bit in the UARTICR register."]
 pub struct LME1RIS_R(crate::FieldReader<bool, bool>);
 impl LME1RIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LME1RIS_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for LME1RIS_R {
 #[doc = "Field `LMSBRIS` reader - LIN mode sync break raw interrupt status 1: A LIN sync break has been detected. 0: No interrupt This bit is cleared by writing 1 to the LMSBIC bit in the UARTICR register."]
 pub struct LMSBRIS_R(crate::FieldReader<bool, bool>);
 impl LMSBRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LMSBRIS_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for LMSBRIS_R {
 #[doc = "Field `NINEBITRIS` reader - 9-mit mode raw interrupt status 1: A receive address match has occurred. 0: No interrupt This bit is cleared by writing 1 to the 9BITIC bit in the UARTICR register."]
 pub struct NINEBITRIS_R(crate::FieldReader<bool, bool>);
 impl NINEBITRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NINEBITRIS_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for NINEBITRIS_R {
 #[doc = "Field `OERIS` reader - UART overrun error raw interrupt status 1: An overrun error has occurred. 0: No interrupt This bit is cleared by writing 1 to the OEIC bit in the UARTICR register."]
 pub struct OERIS_R(crate::FieldReader<bool, bool>);
 impl OERIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OERIS_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for OERIS_R {
 #[doc = "Field `BERIS` reader - UART break error raw interrupt status 1: A break error has occurred. 0: No interrupt This bit is cleared by writing 1 to the BEIC bit in the UARTICR register."]
 pub struct BERIS_R(crate::FieldReader<bool, bool>);
 impl BERIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BERIS_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for BERIS_R {
 #[doc = "Field `PERIS` reader - UART parity error raw interrupt status 1: A parity error has occurred. 0: No interrupt This bit is cleared by writing 1 to the PEIC bit in the UARTICR register."]
 pub struct PERIS_R(crate::FieldReader<bool, bool>);
 impl PERIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PERIS_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for PERIS_R {
 #[doc = "Field `FERIS` reader - UART framing error raw interrupt status 1: A framing error has occurred. 0: No interrupt This bit is cleared by writing 1 to the FEIC bit in the UARTICR register."]
 pub struct FERIS_R(crate::FieldReader<bool, bool>);
 impl FERIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FERIS_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for FERIS_R {
 #[doc = "Field `RTRIS` reader - UART receive time-out raw interrupt status 1: A receive time out has occurred. 0: No interrupt This bit is cleared by writing 1 to the RTIC bit in the UARTICR register."]
 pub struct RTRIS_R(crate::FieldReader<bool, bool>);
 impl RTRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTRIS_R(crate::FieldReader::new(bits))
     }
@@ -142,6 +151,7 @@ impl core::ops::Deref for RTRIS_R {
 #[doc = "Field `TXRIS` reader - UART transmit raw interrupt status 1: If the EOT bit in the UARTCTL register is clear, the transmit FIFO level has passed through the condition defined in the UARTIFLS register. If the EOT bit is set, the last bit of all transmitted data and flags has left the serializer. 0: No interrupt This bit is cleared by writing 1 to the TXIC bit in the UARTICR register."]
 pub struct TXRIS_R(crate::FieldReader<bool, bool>);
 impl TXRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXRIS_R(crate::FieldReader::new(bits))
     }
@@ -156,6 +166,7 @@ impl core::ops::Deref for TXRIS_R {
 #[doc = "Field `RXRIS` reader - UART receive raw interrupt status 1: The receive FIFO level has passed through the condition defined in the UARTIFLS register. 0: No interrupt This bit is cleared by writing 1 to the RXIC bit in the UARTICR register."]
 pub struct RXRIS_R(crate::FieldReader<bool, bool>);
 impl RXRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXRIS_R(crate::FieldReader::new(bits))
     }

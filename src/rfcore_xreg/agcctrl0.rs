@@ -37,6 +37,7 @@ impl From<crate::W<AGCCTRL0_SPEC>> for W {
 #[doc = "Field `AGC_DR_XTND_EN` reader - 0: The AGC performs no adjustment of attenuation in the AAF. 1: The AGC adjusts the gain in the AAF to achieve extra dynamic range for the receiver."]
 pub struct AGC_DR_XTND_EN_R(crate::FieldReader<bool, bool>);
 impl AGC_DR_XTND_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AGC_DR_XTND_EN_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> AGC_DR_XTND_EN_W<'a> {
 #[doc = "Field `AGC_DR_XTND_THR` reader - If the measured error between the AGC reference magnitude and the actual magnitude in dB is larger than this threshold, the extra attenuation is enabled in the front end. This threshold must be set higher than 0x0C. This feature is enabled by AGC_DR_XTND_EN."]
 pub struct AGC_DR_XTND_THR_R(crate::FieldReader<u8, u8>);
 impl AGC_DR_XTND_THR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AGC_DR_XTND_THR_R(crate::FieldReader::new(bits))
     }

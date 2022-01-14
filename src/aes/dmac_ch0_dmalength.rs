@@ -37,6 +37,7 @@ impl From<crate::W<DMAC_CH0_DMALENGTH_SPEC>> for W {
 #[doc = "Field `DMALEN` reader - Channel DMA length in bytes During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
 pub struct DMALEN_R(crate::FieldReader<u16, u16>);
 impl DMALEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DMALEN_R(crate::FieldReader::new(bits))
     }

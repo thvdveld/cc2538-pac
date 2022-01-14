@@ -16,6 +16,7 @@ impl From<crate::R<MIS_SPEC>> for R {
 #[doc = "Field `MIS` reader - Masked interrupt status 1: An unmasked master interrupt is pending. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the IC bit in the I2CMICR register."]
 pub struct MIS_R(crate::FieldReader<bool, bool>);
 impl MIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MIS_R(crate::FieldReader::new(bits))
     }

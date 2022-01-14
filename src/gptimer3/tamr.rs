@@ -37,6 +37,7 @@ impl From<crate::W<TAMR_SPEC>> for W {
 #[doc = "Field `TAPLO` reader - Legacy PWM operation 0: Legacy operation 1: CCP is set to 1 on time-out."]
 pub struct TAPLO_R(crate::FieldReader<bool, bool>);
 impl TAPLO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAPLO_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TAPLO_W<'a> {
 #[doc = "Field `TAMRSU` reader - Timer A match register update mode 0: Update GPTMAMATCHR and GPTMAPR if used on the next cycle. 1: Update GPTMAMATCHR and GPTMAPR if used on the next time-out. If the timer is disabled (TAEN is clear) when this bit is set, GPTMTAMATCHR and GPTMTAPR are updated when the timer is enabled. If the timer is stalled (TASTALL is set), GPTMTAMATCHR and GPTMTAPR are updated according to the configuration of this bit."]
 pub struct TAMRSU_R(crate::FieldReader<bool, bool>);
 impl TAMRSU_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAMRSU_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> TAMRSU_W<'a> {
 #[doc = "Field `TAPWMIE` reader - GPTM Timer A PWM interrupt enable This bit enables interrupts in PWM mode on rising, falling, or both edges of the CCP output. 0: Interrupt is disabled. 1: Interrupt is enabled. This bit is valid only in PWM mode."]
 pub struct TAPWMIE_R(crate::FieldReader<bool, bool>);
 impl TAPWMIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAPWMIE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> TAPWMIE_W<'a> {
 #[doc = "Field `TAILD` reader - GPTM Timer A PWM interval load write 0: Update the GPTMTAR register with the value in the GPTMTAILR register on the next cycle. If the prescaler is used, update the GPTMTAPS register with the value in the GPTMTAPR register on the next cycle. 1: Update the GPTMTAR register with the value in the GPTMTAILR register on the next cycle. If the prescaler is used, update the GPTMTAPS register with the value in the GPTMTAPR register on the next time-out."]
 pub struct TAILD_R(crate::FieldReader<bool, bool>);
 impl TAILD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAILD_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> TAILD_W<'a> {
 #[doc = "Field `TASNAPS` reader - GPTM Timer A snap-shot mode 0: Snap-shot mode is disabled. 1: If Timer A is configured in periodic mode, the actual free-running value of Timer A is loaded at the time-out event into the GPTM Timer A (GPTMTAR) register."]
 pub struct TASNAPS_R(crate::FieldReader<bool, bool>);
 impl TASNAPS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TASNAPS_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> TASNAPS_W<'a> {
 #[doc = "Field `TAWOT` reader - GPTM Timer A wait-on-trigger 0: Timer A begins counting as soon as it is enabled. 1: If Timer A is enabled (TAEN is set in the GPTMCTL register), Timer A does not begin counting until it receives a trigger from the Timer in the previous position in the daisy-chain. This bit must be clear for GP Timer module 0, Timer A."]
 pub struct TAWOT_R(crate::FieldReader<bool, bool>);
 impl TAWOT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAWOT_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> TAWOT_W<'a> {
 #[doc = "Field `TAMIE` reader - GPTM Timer A match interrupt enable 0: The match interrupt is disabled. 1: An interrupt is generated when the match value in the GPTMTAMATCHR register is reached in the one-shot and periodic modes."]
 pub struct TAMIE_R(crate::FieldReader<bool, bool>);
 impl TAMIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAMIE_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> TAMIE_W<'a> {
 #[doc = "Field `TACDIR` reader - GPTM Timer A count direction 0: The timer counts down. 1: The timer counts up. When counting up, the timer starts from a value of 0x0."]
 pub struct TACDIR_R(crate::FieldReader<bool, bool>);
 impl TACDIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TACDIR_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> TACDIR_W<'a> {
 #[doc = "Field `TAAMS` reader - GPTM Timer A alternate mode 0: Capture mode is enabled. 1: PWM mode is enabled. Note: To enable PWM mode, the TACM bit must be cleared and the TAMR field must be configured to 0x2."]
 pub struct TAAMS_R(crate::FieldReader<bool, bool>);
 impl TAAMS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAAMS_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> TAAMS_W<'a> {
 #[doc = "Field `TACMR` reader - GPTM Timer A capture mode 0: Edge-count mode 1: Edge-time mode"]
 pub struct TACMR_R(crate::FieldReader<bool, bool>);
 impl TACMR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TACMR_R(crate::FieldReader::new(bits))
     }
@@ -398,6 +408,7 @@ impl<'a> TACMR_W<'a> {
 in the GPTMCFG register."]
 pub struct TAMR_R(crate::FieldReader<u8, u8>);
 impl TAMR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TAMR_R(crate::FieldReader::new(bits))
     }

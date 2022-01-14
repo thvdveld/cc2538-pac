@@ -37,6 +37,7 @@ impl From<crate::W<PTME2_SPEC>> for W {
 #[doc = "Field `T3TME` reader - Timer3 test mode enable"]
 pub struct T3TME_R(crate::FieldReader<bool, bool>);
 impl T3TME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         T3TME_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> T3TME_W<'a> {
 #[doc = "Field `MTTME` reader - MacTimer test mode enable"]
 pub struct MTTME_R(crate::FieldReader<bool, bool>);
 impl MTTME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MTTME_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> MTTME_W<'a> {
 #[doc = "Field `T1TME` reader - Timer1 test mode enable"]
 pub struct T1TME_R(crate::FieldReader<bool, bool>);
 impl T1TME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         T1TME_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> T1TME_W<'a> {
 #[doc = "Field `T0TME` reader - Timer0 test mode enable"]
 pub struct T0TME_R(crate::FieldReader<bool, bool>);
 impl T0TME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         T0TME_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> T0TME_W<'a> {
 #[doc = "Field `I2C0TME` reader - I2C 0 test mode enable"]
 pub struct I2C0TME_R(crate::FieldReader<bool, bool>);
 impl I2C0TME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         I2C0TME_R(crate::FieldReader::new(bits))
     }

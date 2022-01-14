@@ -16,6 +16,7 @@ impl From<crate::R<CLOCK_STA_SPEC>> for R {
 #[doc = "Field `SYNC_32K` reader - 32-kHz clock source synced to undivided system clock (16 or 32 MHz)."]
 pub struct SYNC_32K_R(crate::FieldReader<bool, bool>);
 impl SYNC_32K_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SYNC_32K_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for SYNC_32K_R {
 #[doc = "Field `OSC32K_CALDIS` reader - Disable calibration 32-kHz RC oscillator. 0: Calibration enabled 1: Calibration disabled"]
 pub struct OSC32K_CALDIS_R(crate::FieldReader<bool, bool>);
 impl OSC32K_CALDIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSC32K_CALDIS_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for OSC32K_CALDIS_R {
 #[doc = "Field `OSC32K` reader - Current 32-kHz clock oscillator selected. 0: 32-kHz crystal oscillator 1: 32-kHz RC oscillator"]
 pub struct OSC32K_R(crate::FieldReader<bool, bool>);
 impl OSC32K_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSC32K_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for OSC32K_R {
 #[doc = "Field `RST` reader - Returns last source of reset 00: POR 01: External reset 10: WDT 11: CLD or software reset"]
 pub struct RST_R(crate::FieldReader<u8, u8>);
 impl RST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RST_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for RST_R {
 #[doc = "Field `SOURCE_CHANGE` reader - 0: System clock is not requested to change. 1: A change of system clock source has been initiated and is not finished. Same as when OSC bit in CLOCK_STA and CLOCK_CTRL register are not equal"]
 pub struct SOURCE_CHANGE_R(crate::FieldReader<bool, bool>);
 impl SOURCE_CHANGE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOURCE_CHANGE_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for SOURCE_CHANGE_R {
 #[doc = "Field `XOSC_STB` reader - XOSC stable status 0: XOSC is not powered up or not yet stable. 1: XOSC is powered up and stable."]
 pub struct XOSC_STB_R(crate::FieldReader<bool, bool>);
 impl XOSC_STB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         XOSC_STB_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for XOSC_STB_R {
 #[doc = "Field `HSOSC_STB` reader - HSOSC stable status 0: HSOSC is not powered up or not yet stable. 1: HSOSC is powered up and stable."]
 pub struct HSOSC_STB_R(crate::FieldReader<bool, bool>);
 impl HSOSC_STB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HSOSC_STB_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for HSOSC_STB_R {
 #[doc = "Field `OSC_PD` reader - 0: Both oscillators powered up and stable and OSC_PD_CMD = 0. 1: Oscillator not selected by CLOCK_CTRL.OSC bit is powered down."]
 pub struct OSC_PD_R(crate::FieldReader<bool, bool>);
 impl OSC_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSC_PD_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for OSC_PD_R {
 #[doc = "Field `OSC` reader - Current clock source selected 0: 32-MHz crystal oscillator 1: 16-MHz HF-RC oscillator"]
 pub struct OSC_R(crate::FieldReader<bool, bool>);
 impl OSC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSC_R(crate::FieldReader::new(bits))
     }
@@ -142,6 +151,7 @@ impl core::ops::Deref for OSC_R {
 #[doc = "Field `IO_DIV` reader - Returns current functional frequency for IO_CLK (may differ from setting in the CLOCK_CTRL register) 000: 32 MHz 001: 16 MHz 010: 8 MHz 011: 4 MHz 100: 2 MHz 101: 1 MHz 110: 0.5 MHz 111: 0.25 MHz"]
 pub struct IO_DIV_R(crate::FieldReader<u8, u8>);
 impl IO_DIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IO_DIV_R(crate::FieldReader::new(bits))
     }
@@ -156,6 +166,7 @@ impl core::ops::Deref for IO_DIV_R {
 #[doc = "Field `RTCLK_FREQ` reader - Returns current functional frequency for real-time clock. (may differ from setting in the CLOCK_CTRL register) 1x : 8 MHz 01: 2 MHz 00: 62.5 kHz"]
 pub struct RTCLK_FREQ_R(crate::FieldReader<u8, u8>);
 impl RTCLK_FREQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RTCLK_FREQ_R(crate::FieldReader::new(bits))
     }
@@ -170,6 +181,7 @@ impl core::ops::Deref for RTCLK_FREQ_R {
 #[doc = "Field `SYS_DIV` reader - Returns current functional frequency for system clock (may differ from setting in the CLOCK_CTRL register) 000: 32 MHz 001: 16 MHz 010: 8 MHz 011: 4 MHz 100: 2 MHz 101: 1 MHz 110: 0.5 MHz 111: 0.25 MHz"]
 pub struct SYS_DIV_R(crate::FieldReader<u8, u8>);
 impl SYS_DIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SYS_DIV_R(crate::FieldReader::new(bits))
     }

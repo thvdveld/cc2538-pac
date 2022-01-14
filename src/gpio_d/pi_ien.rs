@@ -37,6 +37,7 @@ impl From<crate::W<PI_IEN_SPEC>> for W {
 #[doc = "Field `PDIEN7` reader - Port D bit 7 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PDIEN7_R(crate::FieldReader<bool, bool>);
 impl PDIEN7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIEN7_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> PDIEN7_W<'a> {
 #[doc = "Field `PDIEN6` reader - Port D bit 6 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PDIEN6_R(crate::FieldReader<bool, bool>);
 impl PDIEN6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIEN6_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> PDIEN6_W<'a> {
 #[doc = "Field `PDIEN5` reader - Port D bit 5 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PDIEN5_R(crate::FieldReader<bool, bool>);
 impl PDIEN5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIEN5_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PDIEN5_W<'a> {
 #[doc = "Field `PDIEN4` reader - Port D bit 4 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PDIEN4_R(crate::FieldReader<bool, bool>);
 impl PDIEN4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIEN4_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> PDIEN4_W<'a> {
 #[doc = "Field `PDIEN3` reader - Port D bit 3 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PDIEN3_R(crate::FieldReader<bool, bool>);
 impl PDIEN3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIEN3_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> PDIEN3_W<'a> {
 #[doc = "Field `PDIEN2` reader - Port D bit 2 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PDIEN2_R(crate::FieldReader<bool, bool>);
 impl PDIEN2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIEN2_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> PDIEN2_W<'a> {
 #[doc = "Field `PDIEN1` reader - Port D bit 1 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PDIEN1_R(crate::FieldReader<bool, bool>);
 impl PDIEN1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIEN1_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> PDIEN1_W<'a> {
 #[doc = "Field `PDIEN0` reader - Port D bit 0 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PDIEN0_R(crate::FieldReader<bool, bool>);
 impl PDIEN0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIEN0_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> PDIEN0_W<'a> {
 #[doc = "Field `PCIEN7` reader - Port C bit 7 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PCIEN7_R(crate::FieldReader<bool, bool>);
 impl PCIEN7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIEN7_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> PCIEN7_W<'a> {
 #[doc = "Field `PCIEN6` reader - Port C bit 6 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PCIEN6_R(crate::FieldReader<bool, bool>);
 impl PCIEN6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIEN6_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> PCIEN6_W<'a> {
 #[doc = "Field `PCIEN5` reader - Port C bit 5 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PCIEN5_R(crate::FieldReader<bool, bool>);
 impl PCIEN5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIEN5_R(crate::FieldReader::new(bits))
     }
@@ -433,6 +444,7 @@ impl<'a> PCIEN5_W<'a> {
 #[doc = "Field `PCIEN4` reader - Port C bit 4 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PCIEN4_R(crate::FieldReader<bool, bool>);
 impl PCIEN4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIEN4_R(crate::FieldReader::new(bits))
     }
@@ -469,6 +481,7 @@ impl<'a> PCIEN4_W<'a> {
 #[doc = "Field `PCIEN3` reader - Port C bit 3 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PCIEN3_R(crate::FieldReader<bool, bool>);
 impl PCIEN3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIEN3_R(crate::FieldReader::new(bits))
     }
@@ -505,6 +518,7 @@ impl<'a> PCIEN3_W<'a> {
 #[doc = "Field `PCIEN2` reader - Port C bit 2 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PCIEN2_R(crate::FieldReader<bool, bool>);
 impl PCIEN2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIEN2_R(crate::FieldReader::new(bits))
     }
@@ -541,6 +555,7 @@ impl<'a> PCIEN2_W<'a> {
 #[doc = "Field `PCIEN1` reader - Port C bit 1 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PCIEN1_R(crate::FieldReader<bool, bool>);
 impl PCIEN1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIEN1_R(crate::FieldReader::new(bits))
     }
@@ -577,6 +592,7 @@ impl<'a> PCIEN1_W<'a> {
 #[doc = "Field `PCIEN0` reader - Port C bit 0 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PCIEN0_R(crate::FieldReader<bool, bool>);
 impl PCIEN0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIEN0_R(crate::FieldReader::new(bits))
     }
@@ -613,6 +629,7 @@ impl<'a> PCIEN0_W<'a> {
 #[doc = "Field `PBIEN7` reader - Port B bit 7 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PBIEN7_R(crate::FieldReader<bool, bool>);
 impl PBIEN7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIEN7_R(crate::FieldReader::new(bits))
     }
@@ -649,6 +666,7 @@ impl<'a> PBIEN7_W<'a> {
 #[doc = "Field `PBIEN6` reader - Port B bit 6 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PBIEN6_R(crate::FieldReader<bool, bool>);
 impl PBIEN6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIEN6_R(crate::FieldReader::new(bits))
     }
@@ -685,6 +703,7 @@ impl<'a> PBIEN6_W<'a> {
 #[doc = "Field `PBIEN5` reader - Port B bit 5 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PBIEN5_R(crate::FieldReader<bool, bool>);
 impl PBIEN5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIEN5_R(crate::FieldReader::new(bits))
     }
@@ -721,6 +740,7 @@ impl<'a> PBIEN5_W<'a> {
 #[doc = "Field `PBIEN4` reader - Port B bit 4 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PBIEN4_R(crate::FieldReader<bool, bool>);
 impl PBIEN4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIEN4_R(crate::FieldReader::new(bits))
     }
@@ -757,6 +777,7 @@ impl<'a> PBIEN4_W<'a> {
 #[doc = "Field `PBIEN3` reader - Port B bit 3 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PBIEN3_R(crate::FieldReader<bool, bool>);
 impl PBIEN3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIEN3_R(crate::FieldReader::new(bits))
     }
@@ -793,6 +814,7 @@ impl<'a> PBIEN3_W<'a> {
 #[doc = "Field `PBIEN2` reader - Port B bit 2 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PBIEN2_R(crate::FieldReader<bool, bool>);
 impl PBIEN2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIEN2_R(crate::FieldReader::new(bits))
     }
@@ -829,6 +851,7 @@ impl<'a> PBIEN2_W<'a> {
 #[doc = "Field `PBIEN1` reader - Port B bit 1 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PBIEN1_R(crate::FieldReader<bool, bool>);
 impl PBIEN1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIEN1_R(crate::FieldReader::new(bits))
     }
@@ -865,6 +888,7 @@ impl<'a> PBIEN1_W<'a> {
 #[doc = "Field `PBIEN0` reader - Port B bit 0 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PBIEN0_R(crate::FieldReader<bool, bool>);
 impl PBIEN0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIEN0_R(crate::FieldReader::new(bits))
     }
@@ -901,6 +925,7 @@ impl<'a> PBIEN0_W<'a> {
 #[doc = "Field `PAIEN7` reader - Port A bit 7 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PAIEN7_R(crate::FieldReader<bool, bool>);
 impl PAIEN7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIEN7_R(crate::FieldReader::new(bits))
     }
@@ -937,6 +962,7 @@ impl<'a> PAIEN7_W<'a> {
 #[doc = "Field `PAIEN6` reader - Port A bit 6 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PAIEN6_R(crate::FieldReader<bool, bool>);
 impl PAIEN6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIEN6_R(crate::FieldReader::new(bits))
     }
@@ -973,6 +999,7 @@ impl<'a> PAIEN6_W<'a> {
 #[doc = "Field `PAIEN5` reader - Port A bit 5 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PAIEN5_R(crate::FieldReader<bool, bool>);
 impl PAIEN5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIEN5_R(crate::FieldReader::new(bits))
     }
@@ -1009,6 +1036,7 @@ impl<'a> PAIEN5_W<'a> {
 #[doc = "Field `PAIEN4` reader - Port A bit 4 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PAIEN4_R(crate::FieldReader<bool, bool>);
 impl PAIEN4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIEN4_R(crate::FieldReader::new(bits))
     }
@@ -1045,6 +1073,7 @@ impl<'a> PAIEN4_W<'a> {
 #[doc = "Field `PAIEN3` reader - Port A bit 3 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PAIEN3_R(crate::FieldReader<bool, bool>);
 impl PAIEN3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIEN3_R(crate::FieldReader::new(bits))
     }
@@ -1081,6 +1110,7 @@ impl<'a> PAIEN3_W<'a> {
 #[doc = "Field `PAIEN2` reader - Port A bit 2 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PAIEN2_R(crate::FieldReader<bool, bool>);
 impl PAIEN2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIEN2_R(crate::FieldReader::new(bits))
     }
@@ -1117,6 +1147,7 @@ impl<'a> PAIEN2_W<'a> {
 #[doc = "Field `PAIEN1` reader - Port A bit 1 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PAIEN1_R(crate::FieldReader<bool, bool>);
 impl PAIEN1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIEN1_R(crate::FieldReader::new(bits))
     }
@@ -1153,6 +1184,7 @@ impl<'a> PAIEN1_W<'a> {
 #[doc = "Field `PAIEN0` reader - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
 pub struct PAIEN0_R(crate::FieldReader<bool, bool>);
 impl PAIEN0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIEN0_R(crate::FieldReader::new(bits))
     }

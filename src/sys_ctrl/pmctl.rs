@@ -37,6 +37,7 @@ impl From<crate::W<PMCTL_SPEC>> for W {
 #[doc = "Field `PM` reader - 00: No action 01: PM1 10: PM2 11: PM3"]
 pub struct PM_R(crate::FieldReader<u8, u8>);
 impl PM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PM_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<TAR_SPEC>> for R {
 #[doc = "Field `TAR` reader - GPTM Timer A register"]
 pub struct TAR_R(crate::FieldReader<u32, u32>);
 impl TAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         TAR_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<SRUART_SPEC>> for W {
 #[doc = "Field `UART1` reader - 0: UART1 module is not reset 1: UART1 module is reset"]
 pub struct UART1_R(crate::FieldReader<bool, bool>);
 impl UART1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART1_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> UART1_W<'a> {
 #[doc = "Field `UART0` reader - 0: UART0 module is not reset 1: UART0 module is reset"]
 pub struct UART0_R(crate::FieldReader<bool, bool>);
 impl UART0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART0_R(crate::FieldReader::new(bits))
     }

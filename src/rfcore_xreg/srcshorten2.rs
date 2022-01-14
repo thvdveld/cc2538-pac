@@ -37,6 +37,7 @@ impl From<crate::W<SRCSHORTEN2_SPEC>> for W {
 #[doc = "Field `SHORT_ADDR_EN` reader - 23:16 part of the 24-bit word SHORT_ADDR_EN See description of SRCSHORTEN0.SHORT_ADDR_EN."]
 pub struct SHORT_ADDR_EN_R(crate::FieldReader<u8, u8>);
 impl SHORT_ADDR_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SHORT_ADDR_EN_R(crate::FieldReader::new(bits))
     }

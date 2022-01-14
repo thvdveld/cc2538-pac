@@ -37,6 +37,7 @@ impl From<crate::W<FIFOPCTRL_SPEC>> for W {
 #[doc = "Field `FIFOP_THR` reader - Threshold used when generating FIFOP signal"]
 pub struct FIFOP_THR_R(crate::FieldReader<u8, u8>);
 impl FIFOP_THR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FIFOP_THR_R(crate::FieldReader::new(bits))
     }

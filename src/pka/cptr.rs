@@ -38,6 +38,7 @@ impl From<crate::W<CPTR_SPEC>> for W {
 must be zero to ensure that the vector starts at an 8-byte boundary."]
 pub struct CPTR_R(crate::FieldReader<u16, u16>);
 impl CPTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         CPTR_R(crate::FieldReader::new(bits))
     }

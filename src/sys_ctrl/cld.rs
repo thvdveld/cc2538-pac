@@ -37,6 +37,7 @@ impl From<crate::W<CLD_SPEC>> for W {
 #[doc = "Field `VALID` reader - 0: CLD status in always-on domain is not equal to status in the EN register. 1: CLD status in always-on domain and EN register are equal."]
 pub struct VALID_R(crate::FieldReader<bool, bool>);
 impl VALID_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VALID_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for VALID_R {
 #[doc = "Field `EN` reader - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }

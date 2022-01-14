@@ -37,6 +37,7 @@ impl From<crate::W<IE_SPEC>> for W {
 #[doc = "Field `IE` reader - Bits set: Corresponding pin is not masked Bits cleared: Corresponding pin is masked"]
 pub struct IE_R(crate::FieldReader<u8, u8>);
 impl IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IE_R(crate::FieldReader::new(bits))
     }

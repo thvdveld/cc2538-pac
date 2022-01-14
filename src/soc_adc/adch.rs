@@ -16,6 +16,7 @@ impl From<crate::R<ADCH_SPEC>> for R {
 #[doc = "Field `ADC` reader - Most-significant part of ADC conversion result"]
 pub struct ADC_R(crate::FieldReader<u8, u8>);
 impl ADC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_R(crate::FieldReader::new(bits))
     }

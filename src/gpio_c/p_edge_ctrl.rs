@@ -37,6 +37,7 @@ impl From<crate::W<P_EDGE_CTRL_SPEC>> for W {
 #[doc = "Field `PDIRC7` reader - Port D bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PDIRC7_R(crate::FieldReader<bool, bool>);
 impl PDIRC7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIRC7_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> PDIRC7_W<'a> {
 #[doc = "Field `PDIRC6` reader - Port D bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PDIRC6_R(crate::FieldReader<bool, bool>);
 impl PDIRC6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIRC6_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> PDIRC6_W<'a> {
 #[doc = "Field `PDIRC5` reader - Port D bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PDIRC5_R(crate::FieldReader<bool, bool>);
 impl PDIRC5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIRC5_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PDIRC5_W<'a> {
 #[doc = "Field `PDIRC4` reader - Port D bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PDIRC4_R(crate::FieldReader<bool, bool>);
 impl PDIRC4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIRC4_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> PDIRC4_W<'a> {
 #[doc = "Field `PDIRC3` reader - Port D bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PDIRC3_R(crate::FieldReader<bool, bool>);
 impl PDIRC3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIRC3_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> PDIRC3_W<'a> {
 #[doc = "Field `PDIRC2` reader - Port D bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PDIRC2_R(crate::FieldReader<bool, bool>);
 impl PDIRC2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIRC2_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> PDIRC2_W<'a> {
 #[doc = "Field `PDIRC1` reader - Port D bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PDIRC1_R(crate::FieldReader<bool, bool>);
 impl PDIRC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIRC1_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> PDIRC1_W<'a> {
 #[doc = "Field `PDIRC0` reader - Port D bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PDIRC0_R(crate::FieldReader<bool, bool>);
 impl PDIRC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDIRC0_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> PDIRC0_W<'a> {
 #[doc = "Field `PCIRC7` reader - Port C bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PCIRC7_R(crate::FieldReader<bool, bool>);
 impl PCIRC7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIRC7_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> PCIRC7_W<'a> {
 #[doc = "Field `PCIRC6` reader - Port C bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PCIRC6_R(crate::FieldReader<bool, bool>);
 impl PCIRC6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIRC6_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> PCIRC6_W<'a> {
 #[doc = "Field `PCIRC5` reader - Port C bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PCIRC5_R(crate::FieldReader<bool, bool>);
 impl PCIRC5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIRC5_R(crate::FieldReader::new(bits))
     }
@@ -433,6 +444,7 @@ impl<'a> PCIRC5_W<'a> {
 #[doc = "Field `PCIRC4` reader - Port C bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PCIRC4_R(crate::FieldReader<bool, bool>);
 impl PCIRC4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIRC4_R(crate::FieldReader::new(bits))
     }
@@ -469,6 +481,7 @@ impl<'a> PCIRC4_W<'a> {
 #[doc = "Field `PCIRC3` reader - Port C bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PCIRC3_R(crate::FieldReader<bool, bool>);
 impl PCIRC3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIRC3_R(crate::FieldReader::new(bits))
     }
@@ -505,6 +518,7 @@ impl<'a> PCIRC3_W<'a> {
 #[doc = "Field `PCIRC2` reader - Port C bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PCIRC2_R(crate::FieldReader<bool, bool>);
 impl PCIRC2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIRC2_R(crate::FieldReader::new(bits))
     }
@@ -541,6 +555,7 @@ impl<'a> PCIRC2_W<'a> {
 #[doc = "Field `PCIRC1` reader - Port C bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PCIRC1_R(crate::FieldReader<bool, bool>);
 impl PCIRC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIRC1_R(crate::FieldReader::new(bits))
     }
@@ -577,6 +592,7 @@ impl<'a> PCIRC1_W<'a> {
 #[doc = "Field `PCIRC0` reader - Port C bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PCIRC0_R(crate::FieldReader<bool, bool>);
 impl PCIRC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PCIRC0_R(crate::FieldReader::new(bits))
     }
@@ -613,6 +629,7 @@ impl<'a> PCIRC0_W<'a> {
 #[doc = "Field `PBIRC7` reader - Port B bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PBIRC7_R(crate::FieldReader<bool, bool>);
 impl PBIRC7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIRC7_R(crate::FieldReader::new(bits))
     }
@@ -649,6 +666,7 @@ impl<'a> PBIRC7_W<'a> {
 #[doc = "Field `PBIRC6` reader - Port B bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PBIRC6_R(crate::FieldReader<bool, bool>);
 impl PBIRC6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIRC6_R(crate::FieldReader::new(bits))
     }
@@ -685,6 +703,7 @@ impl<'a> PBIRC6_W<'a> {
 #[doc = "Field `PBIRC5` reader - Port B bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PBIRC5_R(crate::FieldReader<bool, bool>);
 impl PBIRC5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIRC5_R(crate::FieldReader::new(bits))
     }
@@ -721,6 +740,7 @@ impl<'a> PBIRC5_W<'a> {
 #[doc = "Field `PBIRC4` reader - Port B bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PBIRC4_R(crate::FieldReader<bool, bool>);
 impl PBIRC4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIRC4_R(crate::FieldReader::new(bits))
     }
@@ -757,6 +777,7 @@ impl<'a> PBIRC4_W<'a> {
 #[doc = "Field `PBIRC3` reader - Port B bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PBIRC3_R(crate::FieldReader<bool, bool>);
 impl PBIRC3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIRC3_R(crate::FieldReader::new(bits))
     }
@@ -793,6 +814,7 @@ impl<'a> PBIRC3_W<'a> {
 #[doc = "Field `PBIRC2` reader - Port B bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PBIRC2_R(crate::FieldReader<bool, bool>);
 impl PBIRC2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIRC2_R(crate::FieldReader::new(bits))
     }
@@ -829,6 +851,7 @@ impl<'a> PBIRC2_W<'a> {
 #[doc = "Field `PBIRC1` reader - Port B bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PBIRC1_R(crate::FieldReader<bool, bool>);
 impl PBIRC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIRC1_R(crate::FieldReader::new(bits))
     }
@@ -865,6 +888,7 @@ impl<'a> PBIRC1_W<'a> {
 #[doc = "Field `PBIRC0` reader - Port B bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PBIRC0_R(crate::FieldReader<bool, bool>);
 impl PBIRC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PBIRC0_R(crate::FieldReader::new(bits))
     }
@@ -901,6 +925,7 @@ impl<'a> PBIRC0_W<'a> {
 #[doc = "Field `PAIRC7` reader - Port A bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PAIRC7_R(crate::FieldReader<bool, bool>);
 impl PAIRC7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIRC7_R(crate::FieldReader::new(bits))
     }
@@ -937,6 +962,7 @@ impl<'a> PAIRC7_W<'a> {
 #[doc = "Field `PAIRC6` reader - Port A bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PAIRC6_R(crate::FieldReader<bool, bool>);
 impl PAIRC6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIRC6_R(crate::FieldReader::new(bits))
     }
@@ -973,6 +999,7 @@ impl<'a> PAIRC6_W<'a> {
 #[doc = "Field `PAIRC5` reader - Port A bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PAIRC5_R(crate::FieldReader<bool, bool>);
 impl PAIRC5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIRC5_R(crate::FieldReader::new(bits))
     }
@@ -1009,6 +1036,7 @@ impl<'a> PAIRC5_W<'a> {
 #[doc = "Field `PAIRC4` reader - Port A bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PAIRC4_R(crate::FieldReader<bool, bool>);
 impl PAIRC4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIRC4_R(crate::FieldReader::new(bits))
     }
@@ -1045,6 +1073,7 @@ impl<'a> PAIRC4_W<'a> {
 #[doc = "Field `PAIRC3` reader - Port A bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PAIRC3_R(crate::FieldReader<bool, bool>);
 impl PAIRC3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIRC3_R(crate::FieldReader::new(bits))
     }
@@ -1081,6 +1110,7 @@ impl<'a> PAIRC3_W<'a> {
 #[doc = "Field `PAIRC2` reader - Port A bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PAIRC2_R(crate::FieldReader<bool, bool>);
 impl PAIRC2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIRC2_R(crate::FieldReader::new(bits))
     }
@@ -1117,6 +1147,7 @@ impl<'a> PAIRC2_W<'a> {
 #[doc = "Field `PAIRC1` reader - Port A bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PAIRC1_R(crate::FieldReader<bool, bool>);
 impl PAIRC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIRC1_R(crate::FieldReader::new(bits))
     }
@@ -1153,6 +1184,7 @@ impl<'a> PAIRC1_W<'a> {
 #[doc = "Field `PAIRC0` reader - Port A bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
 pub struct PAIRC0_R(crate::FieldReader<bool, bool>);
 impl PAIRC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAIRC0_R(crate::FieldReader::new(bits))
     }

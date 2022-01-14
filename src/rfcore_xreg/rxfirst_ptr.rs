@@ -16,6 +16,7 @@ impl From<crate::R<RXFIRST_PTR_SPEC>> for R {
 #[doc = "Field `RXFIRST_PTR` reader - RAM address offset of the first byte in the RX FIFO"]
 pub struct RXFIRST_PTR_R(crate::FieldReader<u8, u8>);
 impl RXFIRST_PTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXFIRST_PTR_R(crate::FieldReader::new(bits))
     }

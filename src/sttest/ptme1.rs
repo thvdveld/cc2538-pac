@@ -37,6 +37,7 @@ impl From<crate::W<PTME1_SPEC>> for W {
 #[doc = "Field `UART1TME` reader - UART1 test mode enable"]
 pub struct UART1TME_R(crate::FieldReader<bool, bool>);
 impl UART1TME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART1TME_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> UART1TME_W<'a> {
 #[doc = "Field `UART0TME` reader - UART0 test mode enable"]
 pub struct UART0TME_R(crate::FieldReader<bool, bool>);
 impl UART0TME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART0TME_R(crate::FieldReader::new(bits))
     }

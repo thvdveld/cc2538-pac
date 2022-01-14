@@ -38,6 +38,7 @@ impl From<crate::W<SRCEXTPENDEN2_SPEC>> for W {
 bits are don't care."]
 pub struct SRCEXTPENDEN2_R(crate::FieldReader<u8, u8>);
 impl SRCEXTPENDEN2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SRCEXTPENDEN2_R(crate::FieldReader::new(bits))
     }

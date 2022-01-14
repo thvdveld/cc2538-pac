@@ -37,6 +37,7 @@ impl From<crate::W<STCC_SPEC>> for W {
 #[doc = "Field `PORT` reader - Port select Valid settings are 0-3, all others inhibit any capture from occurring 000: Port A selected 001: Port B selected 010: Port C selected 011: Port D selected"]
 pub struct PORT_R(crate::FieldReader<u8, u8>);
 impl PORT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PORT_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> PORT_W<'a> {
 #[doc = "Field `PIN` reader - Pin select Valid settings are 1-7 when either port A, B, C, or D is selected."]
 pub struct PIN_R(crate::FieldReader<u8, u8>);
 impl PIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PIN_R(crate::FieldReader::new(bits))
     }

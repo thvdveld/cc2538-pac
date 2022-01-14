@@ -37,6 +37,7 @@ impl From<crate::W<RFST_SPEC>> for W {
 #[doc = "Field `INSTR` reader - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
 pub struct INSTR_R(crate::FieldReader<u8, u8>);
 impl INSTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         INSTR_R(crate::FieldReader::new(bits))
     }

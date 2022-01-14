@@ -37,6 +37,7 @@ impl From<crate::W<MDMTEST1_SPEC>> for W {
 #[doc = "Field `USEMIRROR_IF` reader - 0: Use the normal IF frequency (MDMTEST0.TX_TONE) for automatic IF compensation of channel frequency on TX. 1: Use mirror IF frequency for automatic compensation of channel frequency on TX."]
 pub struct USEMIRROR_IF_R(crate::FieldReader<bool, bool>);
 impl USEMIRROR_IF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USEMIRROR_IF_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> USEMIRROR_IF_W<'a> {
 #[doc = "Field `MOD_IF` reader - 0: Modulation is performed at an IF set by MDMTEST0.TX_TONE. The tone set by MDMTEST0.TX_TONE is superimposed on the data. 1: Modulate a tone set by MDMTEST0.TX_TONE. A tone is transmitted with frequency set by MDMTEST0.TX_TONE."]
 pub struct MOD_IF_R(crate::FieldReader<bool, bool>);
 impl MOD_IF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MOD_IF_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> MOD_IF_W<'a> {
 #[doc = "Field `RAMP_AMP` reader - 1: Enable ramping of DAC output amplitude during startup and finish. 0: Disable ramping of DAC output amplitude."]
 pub struct RAMP_AMP_R(crate::FieldReader<bool, bool>);
 impl RAMP_AMP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAMP_AMP_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> RAMP_AMP_W<'a> {
 #[doc = "Field `RFC_SNIFF_EN` reader - 0: Packet sniffer module disabled 1: Packet sniffer module enabled. The received and transmitted data can be observed on GPIO pins."]
 pub struct RFC_SNIFF_EN_R(crate::FieldReader<bool, bool>);
 impl RFC_SNIFF_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFC_SNIFF_EN_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> RFC_SNIFF_EN_W<'a> {
 #[doc = "Field `LOOPBACK_EN` reader - Enables loopback of modulated data into the receiver chain 0: An STXCAL instruction calibrates for TX. Use STXON to continue to active TX. 1: An STXCAL instruction enables the loopback mode."]
 pub struct LOOPBACK_EN_R(crate::FieldReader<bool, bool>);
 impl LOOPBACK_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LOOPBACK_EN_R(crate::FieldReader::new(bits))
     }

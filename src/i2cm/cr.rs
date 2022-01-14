@@ -37,6 +37,7 @@ impl From<crate::W<CR_SPEC>> for W {
 #[doc = "Field `SFE` reader - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
 pub struct SFE_R(crate::FieldReader<bool, bool>);
 impl SFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SFE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SFE_W<'a> {
 #[doc = "Field `MFE` reader - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
 pub struct MFE_R(crate::FieldReader<bool, bool>);
 impl MFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MFE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> MFE_W<'a> {
 #[doc = "Field `LPBK` reader - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
 pub struct LPBK_R(crate::FieldReader<bool, bool>);
 impl LPBK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LPBK_R(crate::FieldReader::new(bits))
     }

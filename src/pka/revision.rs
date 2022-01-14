@@ -16,6 +16,7 @@ impl From<crate::R<REVISION_SPEC>> for R {
 #[doc = "Field `MAJOR_HW_REVISION` reader - 4-bit binary encoding of the major hardware revision number"]
 pub struct MAJOR_HW_REVISION_R(crate::FieldReader<u8, u8>);
 impl MAJOR_HW_REVISION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MAJOR_HW_REVISION_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for MAJOR_HW_REVISION_R {
 #[doc = "Field `MINOR_HW_REVISION` reader - 4-bit binary encoding of the minor hardware revision number"]
 pub struct MINOR_HW_REVISION_R(crate::FieldReader<u8, u8>);
 impl MINOR_HW_REVISION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MINOR_HW_REVISION_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for MINOR_HW_REVISION_R {
 #[doc = "Field `HW_PATCH_LEVEL` reader - 4-bit binary encoding of the hardware patch level, initial release will carry value zero Patches are used to remove bugs without changing the functionality or interface of a module."]
 pub struct HW_PATCH_LEVEL_R(crate::FieldReader<u8, u8>);
 impl HW_PATCH_LEVEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         HW_PATCH_LEVEL_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for HW_PATCH_LEVEL_R {
 #[doc = "Field `COMPLEMENT_OF_BASIC_EIP_NUMBER` reader - Bit-by-bit logic complement of bits \\[7:0\\], EIP-28 gives 0xE3"]
 pub struct COMPLEMENT_OF_BASIC_EIP_NUMBER_R(crate::FieldReader<u8, u8>);
 impl COMPLEMENT_OF_BASIC_EIP_NUMBER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         COMPLEMENT_OF_BASIC_EIP_NUMBER_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for COMPLEMENT_OF_BASIC_EIP_NUMBER_R {
 #[doc = "Field `BASIC_EIP_NUMBER` reader - 8-bit binary encoding of the EIP number, EIP-28 gives 0x1C"]
 pub struct BASIC_EIP_NUMBER_R(crate::FieldReader<u8, u8>);
 impl BASIC_EIP_NUMBER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BASIC_EIP_NUMBER_R(crate::FieldReader::new(bits))
     }

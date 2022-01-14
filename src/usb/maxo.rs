@@ -37,6 +37,7 @@ impl From<crate::W<MAXO_SPEC>> for W {
 #[doc = "Field `USBMAXO` reader - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
 pub struct USBMAXO_R(crate::FieldReader<u8, u8>);
 impl USBMAXO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         USBMAXO_R(crate::FieldReader::new(bits))
     }

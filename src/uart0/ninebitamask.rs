@@ -37,6 +37,7 @@ impl From<crate::W<NINEBITAMASK_SPEC>> for W {
 #[doc = "Field `RANGE` reader - Self address range for 9-bit mode Writing to the RANGE field does not have any effect; reading it reflects the ANDed output of the ADDR field in the UART9BITADDR register and the MASK field."]
 pub struct RANGE_R(crate::FieldReader<u8, u8>);
 impl RANGE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RANGE_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for RANGE_R {
 #[doc = "Field `MASK` reader - Self Address Mask for 9-Bit Mode This field contains the address mask that creates a range of addresses that should be matched."]
 pub struct MASK_R(crate::FieldReader<u8, u8>);
 impl MASK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MASK_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<AES_CTRL_SPEC>> for W {
 #[doc = "Field `context_ready` reader - If 1, this read-only status bit indicates that the context data registers can be overwritten and the host is permitted to write the next context."]
 pub struct CONTEXT_READY_R(crate::FieldReader<bool, bool>);
 impl CONTEXT_READY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CONTEXT_READY_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for CONTEXT_READY_R {
 #[doc = "Field `saved_context_ready` reader - If 1, this status bit indicates that an AES authentication TAG and/or IV block(s) is/are available for the host to retrieve. This bit is only asserted if the save_context bit is set to 1. The bit is mutual exclusive with the context_ready bit. Writing one clears the bit to 0, indicating the AES core can start its next operation. This bit is also cleared when the 4th word of the output TAG and/or IV is read. Note: All other mode bit writes are ignored when this mode bit is written with 1. Note: This bit is controlled automatically by the EIP-120t for TAG read DMA operations."]
 pub struct SAVED_CONTEXT_READY_R(crate::FieldReader<bool, bool>);
 impl SAVED_CONTEXT_READY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SAVED_CONTEXT_READY_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +89,7 @@ impl<'a> SAVED_CONTEXT_READY_W<'a> {
 #[doc = "Field `save_context` reader - This bit indicates that an authentication TAG or result IV needs to be stored as a result context. Typically this bit must be set for authentication modes returning a TAG (CBC-MAC, GCM and CCM), or for basic encryption modes that require future continuation with the current result IV. If this bit is set, the engine retains its full context until the TAG and/or IV registers are read. The TAG or IV must be read before the AES engine can start a new operation."]
 pub struct SAVE_CONTEXT_R(crate::FieldReader<bool, bool>);
 impl SAVE_CONTEXT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SAVE_CONTEXT_R(crate::FieldReader::new(bits))
     }
@@ -123,6 +126,7 @@ impl<'a> SAVE_CONTEXT_W<'a> {
 #[doc = "Field `CCM_M` reader - Defines M, which indicates the length of the authentication field for CCM operations; the authentication field length equals two times (the value of CCM-M plus one). Note: The EIP-120t always returns a 128-bit authentication field, of which the M least significant bytes are valid. All values are supported."]
 pub struct CCM_M_R(crate::FieldReader<u8, u8>);
 impl CCM_M_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CCM_M_R(crate::FieldReader::new(bits))
     }
@@ -149,6 +153,7 @@ impl<'a> CCM_M_W<'a> {
 #[doc = "Field `CCM_L` reader - Defines L, which indicates the width of the length field for CCM operations; the length field in bytes equals the value of CMM-L plus one. All values are supported."]
 pub struct CCM_L_R(crate::FieldReader<u8, u8>);
 impl CCM_L_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CCM_L_R(crate::FieldReader::new(bits))
     }
@@ -175,6 +180,7 @@ impl<'a> CCM_L_W<'a> {
 #[doc = "Field `CCM` reader - If set to 1, AES-CCM is selected AES-CCM is a combined mode, using AES for authentication and encryption. Note: Selecting AES-CCM mode requires writing of the AAD length register after all other registers. Note: The CTR mode bit in this register must also be set to 1 to enable AES-CTR; selecting other AES modes than CTR mode is invalid."]
 pub struct CCM_R(crate::FieldReader<bool, bool>);
 impl CCM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CCM_R(crate::FieldReader::new(bits))
     }
@@ -211,6 +217,7 @@ impl<'a> CCM_W<'a> {
 #[doc = "Field `GCM` reader - Set these bits to 11 to select AES-GCM mode. AES-GCM is a combined mode, using the Galois field multiplier GF(2 to the power of 128) for authentication and AES-CTR mode for encryption. Note: The CTR mode bit in this register must also be set to 1 to enable AES-CTR Bit combination description: 00 = No GCM mode 01 = Reserved, do not select 10 = Reserved, do not select 11 = Autonomous GHASH (both H- and Y0-encrypted calculated internally) Note: The EIP-120t-1 configuration only supports mode 11 (autonomous GHASH), other GCM modes are not allowed."]
 pub struct GCM_R(crate::FieldReader<u8, u8>);
 impl GCM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         GCM_R(crate::FieldReader::new(bits))
     }
@@ -237,6 +244,7 @@ impl<'a> GCM_W<'a> {
 #[doc = "Field `CBC_MAC` reader - Set to 1 to select AES-CBC MAC mode. The direction bit must be set to 1 for this mode. Selecting this mode requires writing the length register after all other registers."]
 pub struct CBC_MAC_R(crate::FieldReader<bool, bool>);
 impl CBC_MAC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CBC_MAC_R(crate::FieldReader::new(bits))
     }
@@ -273,6 +281,7 @@ impl<'a> CBC_MAC_W<'a> {
 #[doc = "Field `ctr_width` reader - Specifies the counter width for AES-CTR mode 00 = 32-bit counter 01 = 64-bit counter 10 = 96-bit counter 11 = 128-bit counter"]
 pub struct CTR_WIDTH_R(crate::FieldReader<u8, u8>);
 impl CTR_WIDTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CTR_WIDTH_R(crate::FieldReader::new(bits))
     }
@@ -299,6 +308,7 @@ impl<'a> CTR_WIDTH_W<'a> {
 #[doc = "Field `CTR` reader - If set to 1, AES counter mode (CTR) is selected. Note: This bit must also be set for GCM and CCM, when encryption/decryption is required."]
 pub struct CTR_R(crate::FieldReader<bool, bool>);
 impl CTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTR_R(crate::FieldReader::new(bits))
     }
@@ -335,6 +345,7 @@ impl<'a> CTR_W<'a> {
 #[doc = "Field `CBC` reader - If set to 1, cipher-block-chaining (CBC) mode is selected."]
 pub struct CBC_R(crate::FieldReader<bool, bool>);
 impl CBC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CBC_R(crate::FieldReader::new(bits))
     }
@@ -371,6 +382,7 @@ impl<'a> CBC_W<'a> {
 #[doc = "Field `key_size` reader - This read-only field specifies the key size. The key size is automatically configured when a new key is loaded through the key store module. 00 = N/A - Reserved 01 = 128-bit 10 = 192-bit 11 = 256-bit"]
 pub struct KEY_SIZE_R(crate::FieldReader<u8, u8>);
 impl KEY_SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         KEY_SIZE_R(crate::FieldReader::new(bits))
     }
@@ -385,6 +397,7 @@ impl core::ops::Deref for KEY_SIZE_R {
 #[doc = "Field `direction` reader - If set to 1 an encrypt operation is performed. If set to 0 a decrypt operation is performed. This bit must be written with a 1 when CBC-MAC is selected."]
 pub struct DIRECTION_R(crate::FieldReader<bool, bool>);
 impl DIRECTION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DIRECTION_R(crate::FieldReader::new(bits))
     }
@@ -421,6 +434,7 @@ impl<'a> DIRECTION_W<'a> {
 #[doc = "Field `input_ready` reader - If 1, this status bit indicates that the 16-byte AES input buffer is empty. The host is permitted to write the next block of data. Writing 0 clears the bit to 0 and indicates that the AES core can use the provided input data block. Writing 1 to this bit is ignored. Note: For DMA operations, this bit is automatically controlled by the EIP-120t. After reset, this bit is 0. After writing a context, this bit becomes 1."]
 pub struct INPUT_READY_R(crate::FieldReader<bool, bool>);
 impl INPUT_READY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INPUT_READY_R(crate::FieldReader::new(bits))
     }
@@ -457,6 +471,7 @@ impl<'a> INPUT_READY_W<'a> {
 #[doc = "Field `output_ready` reader - If 1, this status bit indicates that an AES output block is available to be retrieved by the host. Writing 0 clears the bit to 0 and indicates that output data is read by the host. The AES core can provide a next output data block. Writing 1 to this bit is ignored. Note: For DMA operations, this bit is automatically controlled by the EIP-120t."]
 pub struct OUTPUT_READY_R(crate::FieldReader<bool, bool>);
 impl OUTPUT_READY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTPUT_READY_R(crate::FieldReader::new(bits))
     }

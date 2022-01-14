@@ -16,6 +16,7 @@ impl From<crate::R<FRML_SPEC>> for R {
 #[doc = "Field `FRAMEL` reader - Bits 7:0 of the 11-bit frame number The frame number is only updated upon successful reception of SOF tokens"]
 pub struct FRAMEL_R(crate::FieldReader<u8, u8>);
 impl FRAMEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FRAMEL_R(crate::FieldReader::new(bits))
     }

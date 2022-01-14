@@ -37,6 +37,7 @@ impl From<crate::W<AGCCTRL3_SPEC>> for W {
 #[doc = "Field `AGC_SETTLE_WAIT` reader - Timing for AGC to wait for analog gain to settle after a gain change. During this period, the energy measurement in the AGC is paused. 00: 15 periods 01: 20 periods 10: 25 periods 11: 30 periods"]
 pub struct AGC_SETTLE_WAIT_R(crate::FieldReader<u8, u8>);
 impl AGC_SETTLE_WAIT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AGC_SETTLE_WAIT_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> AGC_SETTLE_WAIT_W<'a> {
 #[doc = "Field `AGC_WIN_SIZE` reader - Window size for the accumulate-and-dump function in the AGC. 00: 16 samples 01: 32 samples 10: 64 samples 11: 128 samples"]
 pub struct AGC_WIN_SIZE_R(crate::FieldReader<u8, u8>);
 impl AGC_WIN_SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AGC_WIN_SIZE_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> AGC_WIN_SIZE_W<'a> {
 #[doc = "Field `AAF_RP` reader - Overrides the control signals of the AGC to AAF when AAF_RP_OE = 1. When read, it returns the applied signal to the AAF. 00: 9-dB attenuation in AAF 01: 6-dB attenuation in AAF 10: 3-dB attenuation in AAF 11: 0-dB attenuation in AAF (reference level)"]
 pub struct AAF_RP_R(crate::FieldReader<u8, u8>);
 impl AAF_RP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AAF_RP_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> AAF_RP_W<'a> {
 #[doc = "Field `AAF_RP_OE` reader - Override the AAF control signals of the AGC with the values stored in AAF_RP."]
 pub struct AAF_RP_OE_R(crate::FieldReader<bool, bool>);
 impl AAF_RP_OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AAF_RP_OE_R(crate::FieldReader::new(bits))
     }

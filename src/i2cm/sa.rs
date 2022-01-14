@@ -37,6 +37,7 @@ impl From<crate::W<SA_SPEC>> for W {
 #[doc = "Field `SA` reader - I2C slave address"]
 pub struct SA_R(crate::FieldReader<u8, u8>);
 impl SA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SA_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> SA_W<'a> {
 #[doc = "Field `RS` reader - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
 pub struct RS_R(crate::FieldReader<bool, bool>);
 impl RS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RS_R(crate::FieldReader::new(bits))
     }

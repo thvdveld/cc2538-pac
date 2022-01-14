@@ -37,6 +37,7 @@ impl From<crate::W<CCACTRL0_SPEC>> for W {
 #[doc = "Field `CCA_THR` reader - Clear-channel-assessment threshold value, signed 2's-complement number for comparison with the RSSI. The unit is 1 dB, offset is 73dB The CCA signal goes high when the received signal is below this value. The CCA signal is available on the CCA pin and in the FSMSTAT1 register. The value must never be set lower than CCA_HYST - 128 to avoid erroneous behavior of the CCA signal. Note: The reset value translates to an input level of approximately -32 - 73 = -105 dBm, which is well below the sensitivity limit. This means that the CCA signal never indicates a clear channel. This register should be updated to 0xF8, which translates to an input level of about -8 - 73 = -81 dBm."]
 pub struct CCA_THR_R(crate::FieldReader<u8, u8>);
 impl CCA_THR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CCA_THR_R(crate::FieldReader::new(bits))
     }

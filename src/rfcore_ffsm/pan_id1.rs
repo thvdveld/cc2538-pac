@@ -38,6 +38,7 @@ impl From<crate::W<PAN_ID1_SPEC>> for W {
 The PAN ID used during destination address filtering"]
 pub struct PAN_ID1_R(crate::FieldReader<u8, u8>);
 impl PAN_ID1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PAN_ID1_R(crate::FieldReader::new(bits))
     }

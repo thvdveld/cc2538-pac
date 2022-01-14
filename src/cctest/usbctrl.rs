@@ -37,6 +37,7 @@ impl From<crate::W<USBCTRL_SPEC>> for W {
 #[doc = "Field `USB_STB` reader - USB PHY stand-by override bit When this bit is cleared to 0 (default state) the USB module cannot change the stand-by mode of the PHY (USB pads) and the PHY is forced out of stand-by mode. This bit must be 1 as well as the stand-by control from the USB controller, before the mode of the PHY is stand-by."]
 pub struct USB_STB_R(crate::FieldReader<bool, bool>);
 impl USB_STB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USB_STB_R(crate::FieldReader::new(bits))
     }

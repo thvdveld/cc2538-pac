@@ -37,6 +37,7 @@ impl From<crate::W<CTRL_INT_CFG_SPEC>> for W {
 #[doc = "Field `LEVEL` reader - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
 pub struct LEVEL_R(crate::FieldReader<bool, bool>);
 impl LEVEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LEVEL_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<CTLBASE_SPEC>> for W {
 #[doc = "Field `ADDR` reader - Channel control base address This field contains the pointer to the base address of the channel control table. The base address must be 1024-byte alligned."]
 pub struct ADDR_R(crate::FieldReader<u32, u32>);
 impl ADDR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         ADDR_R(crate::FieldReader::new(bits))
     }

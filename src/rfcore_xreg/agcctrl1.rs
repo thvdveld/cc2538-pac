@@ -37,6 +37,7 @@ impl From<crate::W<AGCCTRL1_SPEC>> for W {
 #[doc = "Field `AGC_REF` reader - Target value for the AGC control loop, given in 1-dB steps"]
 pub struct AGC_REF_R(crate::FieldReader<u8, u8>);
 impl AGC_REF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AGC_REF_R(crate::FieldReader::new(bits))
     }

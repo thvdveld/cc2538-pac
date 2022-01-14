@@ -37,6 +37,7 @@ impl From<crate::W<TXPOWER_SPEC>> for W {
 #[doc = "Field `PA_POWER` reader - PA power control"]
 pub struct PA_POWER_R(crate::FieldReader<u8, u8>);
 impl PA_POWER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PA_POWER_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> PA_POWER_W<'a> {
 #[doc = "Field `PA_BIAS` reader - PA bias control"]
 pub struct PA_BIAS_R(crate::FieldReader<u8, u8>);
 impl PA_BIAS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PA_BIAS_R(crate::FieldReader::new(bits))
     }

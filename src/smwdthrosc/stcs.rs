@@ -37,6 +37,7 @@ impl From<crate::W<STCS_SPEC>> for W {
 #[doc = "Field `VALID` reader - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
 pub struct VALID_R(crate::FieldReader<bool, bool>);
 impl VALID_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VALID_R(crate::FieldReader::new(bits))
     }

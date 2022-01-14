@@ -16,6 +16,7 @@ impl From<crate::R<CTRL_OPTIONS_SPEC>> for R {
 #[doc = "Field `TYPE` reader - This field is 0x01 for the TYPE1 device."]
 pub struct TYPE_R(crate::FieldReader<u8, u8>);
 impl TYPE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TYPE_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for TYPE_R {
 #[doc = "Field `AHBINTERFACE` reader - AHB interface is available If this bit is 0, the EIP-120t has a TCM interface."]
 pub struct AHBINTERFACE_R(crate::FieldReader<bool, bool>);
 impl AHBINTERFACE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AHBINTERFACE_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for AHBINTERFACE_R {
 #[doc = "Field `SHA_256` reader - The HASH core supports SHA-256."]
 pub struct SHA_256_R(crate::FieldReader<bool, bool>);
 impl SHA_256_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SHA_256_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for SHA_256_R {
 #[doc = "Field `AES_CCM` reader - AES-CCM is available as a single operation."]
 pub struct AES_CCM_R(crate::FieldReader<bool, bool>);
 impl AES_CCM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AES_CCM_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for AES_CCM_R {
 #[doc = "Field `AES_GCM` reader - AES-GCM is available as a single operation."]
 pub struct AES_GCM_R(crate::FieldReader<bool, bool>);
 impl AES_GCM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AES_GCM_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for AES_GCM_R {
 #[doc = "Field `AES_256` reader - AES core supports 256-bit keys Note: If both AES-128 and AES-256 are set to one, the AES core supports 192-bit keys as well."]
 pub struct AES_256_R(crate::FieldReader<bool, bool>);
 impl AES_256_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AES_256_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for AES_256_R {
 #[doc = "Field `AES_128` reader - AES core supports 128-bit keys."]
 pub struct AES_128_R(crate::FieldReader<bool, bool>);
 impl AES_128_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AES_128_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for AES_128_R {
 #[doc = "Field `HASH` reader - HASH Core is available."]
 pub struct HASH_R(crate::FieldReader<bool, bool>);
 impl HASH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HASH_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for HASH_R {
 #[doc = "Field `AES` reader - AES core is available."]
 pub struct AES_R(crate::FieldReader<bool, bool>);
 impl AES_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AES_R(crate::FieldReader::new(bits))
     }
@@ -142,6 +151,7 @@ impl core::ops::Deref for AES_R {
 #[doc = "Field `KEYSTORE` reader - KEY STORE is available."]
 pub struct KEYSTORE_R(crate::FieldReader<bool, bool>);
 impl KEYSTORE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         KEYSTORE_R(crate::FieldReader::new(bits))
     }

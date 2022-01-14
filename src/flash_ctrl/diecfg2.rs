@@ -16,6 +16,7 @@ impl From<crate::R<DIECFG2_SPEC>> for R {
 #[doc = "Field `DIE_MAJOR_REVISION` reader - Indicates the major revision (all layer change) number for the cc2538 0x0 - PG1.0 0x2 - PG2.0"]
 pub struct DIE_MAJOR_REVISION_R(crate::FieldReader<u8, u8>);
 impl DIE_MAJOR_REVISION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DIE_MAJOR_REVISION_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for DIE_MAJOR_REVISION_R {
 #[doc = "Field `DIE_MINOR_REVISION` reader - Indicates the minor revision (metla layer only) number for the cc2538 0x0 - PG1.0 or PG2.0"]
 pub struct DIE_MINOR_REVISION_R(crate::FieldReader<u8, u8>);
 impl DIE_MINOR_REVISION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DIE_MINOR_REVISION_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for DIE_MINOR_REVISION_R {
 #[doc = "Field `RF_CORE_EN` reader - 1: RF_CORE is enabled. 0: RF_CORE is permanently disabled."]
 pub struct RF_CORE_EN_R(crate::FieldReader<bool, bool>);
 impl RF_CORE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RF_CORE_EN_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for RF_CORE_EN_R {
 #[doc = "Field `AES_EN` reader - 1: AES is enabled. 0: AES is permanently disabled."]
 pub struct AES_EN_R(crate::FieldReader<bool, bool>);
 impl AES_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AES_EN_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for AES_EN_R {
 #[doc = "Field `PKA_EN` reader - 1: PKA is enabled. 0: PKA is permanently disabled."]
 pub struct PKA_EN_R(crate::FieldReader<bool, bool>);
 impl PKA_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PKA_EN_R(crate::FieldReader::new(bits))
     }

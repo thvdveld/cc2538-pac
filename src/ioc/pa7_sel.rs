@@ -37,6 +37,7 @@ impl From<crate::W<PA7_SEL_SPEC>> for W {
 #[doc = "Field `PA7_sel` reader - Select one peripheral signal output for PA7."]
 pub struct PA7_SEL_R(crate::FieldReader<u8, u8>);
 impl PA7_SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PA7_SEL_R(crate::FieldReader::new(bits))
     }

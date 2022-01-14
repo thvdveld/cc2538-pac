@@ -37,6 +37,7 @@ impl From<crate::W<USB_IRQ_ACK_SPEC>> for W {
 #[doc = "Field `USBACK` reader - USB masked interrupt status: 1: Detected 0: Not detected"]
 pub struct USBACK_R(crate::FieldReader<bool, bool>);
 impl USBACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USBACK_R(crate::FieldReader::new(bits))
     }

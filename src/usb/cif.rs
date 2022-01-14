@@ -16,6 +16,7 @@ impl From<crate::R<CIF_SPEC>> for R {
 #[doc = "Field `SOFIF` reader - Start-of-frame interrupt flag Cleared by hardware when read"]
 pub struct SOFIF_R(crate::FieldReader<bool, bool>);
 impl SOFIF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOFIF_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for SOFIF_R {
 #[doc = "Field `RSTIF` reader - Reset interrupt flag Cleared by hardware when read"]
 pub struct RSTIF_R(crate::FieldReader<bool, bool>);
 impl RSTIF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RSTIF_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for RSTIF_R {
 #[doc = "Field `RESUMEIF` reader - Resume interrupt flag Cleared by hardware when read"]
 pub struct RESUMEIF_R(crate::FieldReader<bool, bool>);
 impl RESUMEIF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESUMEIF_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for RESUMEIF_R {
 #[doc = "Field `SUSPENDIF` reader - Suspend interrupt flag Cleared by hardware when read"]
 pub struct SUSPENDIF_R(crate::FieldReader<bool, bool>);
 impl SUSPENDIF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SUSPENDIF_R(crate::FieldReader::new(bits))
     }

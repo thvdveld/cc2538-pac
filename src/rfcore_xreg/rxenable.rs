@@ -16,6 +16,7 @@ impl From<crate::R<RXENABLE_SPEC>> for R {
 #[doc = "Field `RXENMASK` reader - RXENABLE enables the receiver. A nonzero value in this register causes FFCTRL to enable the receiver when in idle, after transmission and after acknowledgement transmission. The following strobes can modify RXENMASK: SRXON: Set bit 7 in RXENMASK. STXON: Set bit 6 in RXENMASK if SET_RXENMASK_ON_TX = 1. SRFOFF: Clears all bits in RXENMASK. SRXMASKBITSET: Set bit 5 in RXENMASK. SRXMASKBITCLR: Clear bit 5 in RXENMASK. There could be conflicts between the CSP and xreg_bus write operations if both operations try to modify RXENMASK simultaneously. To handle the case of simultaneous access to RXENMASK the following rules apply: - If the two sources agree (they modify different parts of the register) both of their requests to modify RXENMASK are processed. - If both operations try to modify the mask simultaneously, bus write operations to RXMASKSET and RXMASKCLR have priority over the CSP. This situation must be avoided."]
 pub struct RXENMASK_R(crate::FieldReader<u8, u8>);
 impl RXENMASK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXENMASK_R(crate::FieldReader::new(bits))
     }

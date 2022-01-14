@@ -16,6 +16,7 @@ impl From<crate::R<CTRL_VERSION_SPEC>> for R {
 #[doc = "Field `MAJOR_VERSION` reader - Major version number"]
 pub struct MAJOR_VERSION_R(crate::FieldReader<u8, u8>);
 impl MAJOR_VERSION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MAJOR_VERSION_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for MAJOR_VERSION_R {
 #[doc = "Field `MINOR_VERSION` reader - Minor version number"]
 pub struct MINOR_VERSION_R(crate::FieldReader<u8, u8>);
 impl MINOR_VERSION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MINOR_VERSION_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for MINOR_VERSION_R {
 #[doc = "Field `PATCH_LEVEL` reader - Patch level Starts at 0 at first delivery of this version"]
 pub struct PATCH_LEVEL_R(crate::FieldReader<u8, u8>);
 impl PATCH_LEVEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PATCH_LEVEL_R(crate::FieldReader::new(bits))
     }
@@ -59,6 +62,7 @@ impl core::ops::Deref for PATCH_LEVEL_R {
 (0x87), used by a driver to ascertain that the EIP-120t register is indeed read."]
 pub struct EIP_NUMBER_COMPL_R(crate::FieldReader<u8, u8>);
 impl EIP_NUMBER_COMPL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         EIP_NUMBER_COMPL_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +77,7 @@ impl core::ops::Deref for EIP_NUMBER_COMPL_R {
 #[doc = "Field `EIP_NUMBER` reader - These bits encode the EIP number for the EIP-120t, this field contains the value 120 (decimal) or 0x78."]
 pub struct EIP_NUMBER_R(crate::FieldReader<u8, u8>);
 impl EIP_NUMBER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         EIP_NUMBER_R(crate::FieldReader::new(bits))
     }

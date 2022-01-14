@@ -37,6 +37,7 @@ impl From<crate::W<FSCAL3_SPEC>> for W {
 #[doc = "Field `VCO_DAC_EN_OV` reader - Enables the VCO DAC when 1"]
 pub struct VCO_DAC_EN_OV_R(crate::FieldReader<bool, bool>);
 impl VCO_DAC_EN_OV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VCO_DAC_EN_OV_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> VCO_DAC_EN_OV_W<'a> {
 #[doc = "Field `VCO_VC_DAC` reader - Bit vector for programming varactor control voltage from VC DAC"]
 pub struct VCO_VC_DAC_R(crate::FieldReader<u8, u8>);
 impl VCO_VC_DAC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         VCO_VC_DAC_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> VCO_VC_DAC_W<'a> {
 #[doc = "Field `VCO_CAPARR_CAL_CTRL` reader - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
 pub struct VCO_CAPARR_CAL_CTRL_R(crate::FieldReader<u8, u8>);
 impl VCO_CAPARR_CAL_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         VCO_CAPARR_CAL_CTRL_R(crate::FieldReader::new(bits))
     }

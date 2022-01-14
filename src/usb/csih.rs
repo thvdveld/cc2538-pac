@@ -37,6 +37,7 @@ impl From<crate::W<CSIH_SPEC>> for W {
 #[doc = "Field `AUTISET` reader - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
 pub struct AUTISET_R(crate::FieldReader<bool, bool>);
 impl AUTISET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AUTISET_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> AUTISET_W<'a> {
 #[doc = "Field `ISO` reader - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
 pub struct ISO_R(crate::FieldReader<bool, bool>);
 impl ISO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ISO_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> ISO_W<'a> {
 #[doc = "Field `FORCEDATATOG` reader - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
 pub struct FORCEDATATOG_R(crate::FieldReader<bool, bool>);
 impl FORCEDATATOG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FORCEDATATOG_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> FORCEDATATOG_W<'a> {
 #[doc = "Field `INDBLBUF` reader - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
 pub struct INDBLBUF_R(crate::FieldReader<bool, bool>);
 impl INDBLBUF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INDBLBUF_R(crate::FieldReader::new(bits))
     }

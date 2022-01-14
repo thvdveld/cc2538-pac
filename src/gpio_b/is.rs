@@ -37,6 +37,7 @@ impl From<crate::W<IS_SPEC>> for W {
 #[doc = "Field `IS` reader - Bits set: Level on corresponding pin is detected Bits cleared: Edge on corresponding pin is detected"]
 pub struct IS_R(crate::FieldReader<u8, u8>);
 impl IS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IS_R(crate::FieldReader::new(bits))
     }

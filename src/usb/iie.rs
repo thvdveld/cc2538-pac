@@ -37,6 +37,7 @@ impl From<crate::W<IIE_SPEC>> for W {
 #[doc = "Field `INEP5IE` reader - Interrupt enable for IN endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct INEP5IE_R(crate::FieldReader<bool, bool>);
 impl INEP5IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INEP5IE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> INEP5IE_W<'a> {
 #[doc = "Field `INEP4IE` reader - Interrupt enable for IN endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct INEP4IE_R(crate::FieldReader<bool, bool>);
 impl INEP4IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INEP4IE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> INEP4IE_W<'a> {
 #[doc = "Field `INEP3IE` reader - Interrupt enable for IN endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct INEP3IE_R(crate::FieldReader<bool, bool>);
 impl INEP3IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INEP3IE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> INEP3IE_W<'a> {
 #[doc = "Field `INEP2IE` reader - Interrupt enable for IN endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct INEP2IE_R(crate::FieldReader<bool, bool>);
 impl INEP2IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INEP2IE_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> INEP2IE_W<'a> {
 #[doc = "Field `INEP1IE` reader - Interrupt enable for IN endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct INEP1IE_R(crate::FieldReader<bool, bool>);
 impl INEP1IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INEP1IE_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> INEP1IE_W<'a> {
 #[doc = "Field `EP0IE` reader - Interrupt enable for endpoint 0 0: Interrupt disabled 1: Interrupt enabled"]
 pub struct EP0IE_R(crate::FieldReader<bool, bool>);
 impl EP0IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0IE_R(crate::FieldReader::new(bits))
     }

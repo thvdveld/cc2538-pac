@@ -37,6 +37,7 @@ impl From<crate::W<SRGPT_SPEC>> for W {
 #[doc = "Field `GPT3` reader - 0: GPT3 module is not reset 1: GPT3 module is reset"]
 pub struct GPT3_R(crate::FieldReader<bool, bool>);
 impl GPT3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPT3_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> GPT3_W<'a> {
 #[doc = "Field `GPT2` reader - 0: GPT2 module is not reset 1: GPT2 module is reset"]
 pub struct GPT2_R(crate::FieldReader<bool, bool>);
 impl GPT2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPT2_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> GPT2_W<'a> {
 #[doc = "Field `GPT1` reader - 0: GPT1 module is not reset 1: GPT1 module is reset"]
 pub struct GPT1_R(crate::FieldReader<bool, bool>);
 impl GPT1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPT1_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> GPT1_W<'a> {
 #[doc = "Field `GPT0` reader - 0: GPT0 module is not reset 1: GPT0 module is reset"]
 pub struct GPT0_R(crate::FieldReader<bool, bool>);
 impl GPT0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPT0_R(crate::FieldReader::new(bits))
     }

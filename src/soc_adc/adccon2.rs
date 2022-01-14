@@ -37,6 +37,7 @@ impl From<crate::W<ADCCON2_SPEC>> for W {
 #[doc = "Field `SREF` reader - Selects reference voltage used for the sequence of conversions 00: Internal reference 01: External reference on AIN7 pin 10: AVDD5 pin 11: External reference on AIN6-AIN7 differential input"]
 pub struct SREF_R(crate::FieldReader<u8, u8>);
 impl SREF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SREF_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> SREF_W<'a> {
 #[doc = "Field `SDIV` reader - Sets the decimation rate for channels included in the sequence of conversions. The decimation rate also determines the resolution and time required to complete a conversion. 00: 64 decimation rate (7 bits ENOB setting) 01: 128 decimation rate (9 bits ENOB setting) 10: 256 decimation rate (10 bits ENOB setting) 11: 512 decimation rate (12 bits ENOB setting)"]
 pub struct SDIV_R(crate::FieldReader<u8, u8>);
 impl SDIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SDIV_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> SDIV_W<'a> {
 #[doc = "Field `SCH` reader - Sequence channel select Selects the end of the sequence A sequence can either be from AIN0 to AIN7 (SCH <= 7) or from differential input AIN0-AIN1 to AIN6-AIN7 (8 <= SCH <= 11). For other settings, only one conversions is performed. When read, these bits indicate the channel number on which a conversion is ongoing: 0000: AIN0 0001: AIN1 0010: AIN2 0011: AIN3 0100: AIN4 0101: AIN5 0110: AIN6 0111: AIN7 1000: AIN0-AIN1 1001: AIN2-AIN3 1010: AIN4-AIN5 1011: AIN6-AIN7 1100: GND 1101: Reserved 1110: Temperature sensor 1111: VDD/3"]
 pub struct SCH_R(crate::FieldReader<u8, u8>);
 impl SCH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SCH_R(crate::FieldReader::new(bits))
     }

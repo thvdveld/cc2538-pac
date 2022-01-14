@@ -16,6 +16,7 @@ impl From<crate::R<TBR_SPEC>> for R {
 #[doc = "Field `TBR` reader - GPTM Timer B register"]
 pub struct TBR_R(crate::FieldReader<u16, u16>);
 impl TBR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         TBR_R(crate::FieldReader::new(bits))
     }

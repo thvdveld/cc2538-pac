@@ -37,6 +37,7 @@ impl From<crate::W<ILPR_SPEC>> for W {
 #[doc = "Field `ILPDVSR` reader - IrDA low-power divisor This field contains the 8-bit low-power divisor value."]
 pub struct ILPDVSR_R(crate::FieldReader<u8, u8>);
 impl ILPDVSR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ILPDVSR_R(crate::FieldReader::new(bits))
     }

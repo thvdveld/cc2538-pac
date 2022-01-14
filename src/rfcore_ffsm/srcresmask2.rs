@@ -37,6 +37,7 @@ impl From<crate::W<SRCRESMASK2_SPEC>> for W {
 #[doc = "Field `SRCRESMASK2` reader - 24-bit mask that indicates source address match for each individual entry in the source address table"]
 pub struct SRCRESMASK2_R(crate::FieldReader<u8, u8>);
 impl SRCRESMASK2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SRCRESMASK2_R(crate::FieldReader::new(bits))
     }

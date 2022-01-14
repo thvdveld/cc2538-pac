@@ -37,6 +37,7 @@ impl From<crate::W<DACTEST1_SPEC>> for W {
 #[doc = "Field `DAC_I_O` reader - I-branch DAC override value when DAC_SRC = 001 If DAC_SRC is set to be ADC data, CORDIC magnitude, channel filtered data, or DC filtered data, then DAC_I_O controls the part of the word in question that is actually multiplexed to the DAC as described below. 000111: Bits 7:0 001000: Bits 8:1 001001: Bits 9:2 ... If an invalid setting is chosen, then the DAC outputs only zeros (minimum value)."]
 pub struct DAC_I_O_R(crate::FieldReader<u8, u8>);
 impl DAC_I_O_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAC_I_O_R(crate::FieldReader::new(bits))
     }

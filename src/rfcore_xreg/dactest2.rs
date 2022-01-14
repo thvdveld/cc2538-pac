@@ -37,6 +37,7 @@ impl From<crate::W<DACTEST2_SPEC>> for W {
 #[doc = "Field `DAC_DEM_EN` reader - Enable and disable dynamic element matching Drives RFR_DAC_DEM_EN"]
 pub struct DAC_DEM_EN_R(crate::FieldReader<bool, bool>);
 impl DAC_DEM_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DAC_DEM_EN_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> DAC_DEM_EN_W<'a> {
 #[doc = "Field `DAC_CASC_CTRL` reader - Adjustment of output stage Drives RFR_DAC_CASC_CTRL"]
 pub struct DAC_CASC_CTRL_R(crate::FieldReader<u8, u8>);
 impl DAC_CASC_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAC_CASC_CTRL_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> DAC_CASC_CTRL_W<'a> {
 #[doc = "Field `DAC_SRC` reader - The TX DACs data source is selected by DAC_SRC according to: 000: Normal operation (from modulator) 001: The DAC_I_O and DAC_Q_O override values 010: ADC data after decimation, magnitude controlled by DAC_I_O and DAC_Q_O 011: I/Q after decimation, channel and DC filtering, magnitude controlled by DAC_I_O and DAC_Q_O 100: CORDIC magnitude output and front-end gain is output, magnitude controlled by DAC_I_O and DAC_Q_O 101: RSSI I output on the I DAC 111: Reserved"]
 pub struct DAC_SRC_R(crate::FieldReader<u8, u8>);
 impl DAC_SRC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAC_SRC_R(crate::FieldReader::new(bits))
     }

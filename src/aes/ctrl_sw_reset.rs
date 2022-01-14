@@ -37,6 +37,7 @@ impl From<crate::W<CTRL_SW_RESET_SPEC>> for W {
 #[doc = "Field `SW_RESET` reader - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
 pub struct SW_RESET_R(crate::FieldReader<bool, bool>);
 impl SW_RESET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SW_RESET_R(crate::FieldReader::new(bits))
     }

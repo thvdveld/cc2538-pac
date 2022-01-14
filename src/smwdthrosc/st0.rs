@@ -39,6 +39,7 @@ of the Sleep Timer count. When writing this register sets the low bits \\[7:0\\]
 of the compare value."]
 pub struct ST0_R(crate::FieldReader<u8, u8>);
 impl ST0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ST0_R(crate::FieldReader::new(bits))
     }

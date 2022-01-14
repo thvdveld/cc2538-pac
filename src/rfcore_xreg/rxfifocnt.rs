@@ -16,6 +16,7 @@ impl From<crate::R<RXFIFOCNT_SPEC>> for R {
 #[doc = "Field `RXFIFOCNT` reader - Number of bytes in the RX FIFO (unsigned integer)"]
 pub struct RXFIFOCNT_R(crate::FieldReader<u8, u8>);
 impl RXFIFOCNT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXFIFOCNT_R(crate::FieldReader::new(bits))
     }

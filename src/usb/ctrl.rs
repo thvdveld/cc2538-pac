@@ -37,6 +37,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
 #[doc = "Field `PLLLOCKED` reader - PLL lock status. The PLL is locked when USB_CTRL.PLLLOCKED is 1."]
 pub struct PLLLOCKED_R(crate::FieldReader<bool, bool>);
 impl PLLLOCKED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PLLLOCKED_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for PLLLOCKED_R {
 #[doc = "Field `PLLEN` reader - 48 MHz USB PLL enable When this bit is set, the 48 MHz PLL is started. Software must avoid access to other USB registers before the PLL has locked; that is, USB_CTRL.PLLLOCKED is 1. This bit can be set only when USB_CTRL.USBEN is 1. The PLL must be disabled before entering PM1 when suspended, and must be re-enabled when resuming operation."]
 pub struct PLLEN_R(crate::FieldReader<bool, bool>);
 impl PLLEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PLLEN_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +89,7 @@ impl<'a> PLLEN_W<'a> {
 #[doc = "Field `USBEN` reader - USB enable The USB controller is reset when this bit is cleared"]
 pub struct USBEN_R(crate::FieldReader<bool, bool>);
 impl USBEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USBEN_R(crate::FieldReader::new(bits))
     }

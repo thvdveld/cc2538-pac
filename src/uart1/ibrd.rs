@@ -37,6 +37,7 @@ impl From<crate::W<IBRD_SPEC>> for W {
 #[doc = "Field `DIVINT` reader - Integer baud-rate divisor"]
 pub struct DIVINT_R(crate::FieldReader<u16, u16>);
 impl DIVINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DIVINT_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<RNDH_SPEC>> for W {
 #[doc = "Field `RNDH` reader - Random value or CRC result/input data, high byte When written, a CRC16 calculation is triggered, and the data value written is processed starting with the MSB. The value returned when reading from this register is the 8 MSBs of the LFSR. When used for random-number generation, reading this register returns the 8 MSBs of the random number. When used for CRC calculations, reading this register returns the 8 MSBs of the CRC result."]
 pub struct RNDH_R(crate::FieldReader<u8, u8>);
 impl RNDH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RNDH_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<RXMASKCLR_SPEC>> for W {
 #[doc = "Field `RXENMASKCLR` reader - When written, the written data is inverted and ANDed with the RXENMASK and stored in RXENMASK. For example, if 1 is written to one or more bit positions in this register, the corresponding bits are cleared in RXENMASK."]
 pub struct RXENMASKCLR_R(crate::FieldReader<u8, u8>);
 impl RXENMASKCLR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXENMASKCLR_R(crate::FieldReader::new(bits))
     }

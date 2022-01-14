@@ -37,6 +37,7 @@ impl From<crate::W<CTL_SPEC>> for W {
 #[doc = "Field `CTSEN` reader - U1CTS Hardware Flow control enable 1: When U1CTS input is asserted, UART1 can transmit data. 0: U1CTS does not control UART1 data transmission. Note: Only used for UART1. This bit is reserved RO for UART0."]
 pub struct CTSEN_R(crate::FieldReader<bool, bool>);
 impl CTSEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTSEN_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CTSEN_W<'a> {
 #[doc = "Field `RTSEN` reader - U1RTS Hardware Flow control enable 1: U1RTS indicates the state of UART1 receive FIFO. U1RTS remains asserted until the preprogrammed watermark level is reached, indicating that the UART1 RXFIFO has no space to store additional characters. 0: U1RTS does not indicate state of UART1 RX FIFO. Note: Only used for UART1. This bit is reserved RO for UART0."]
 pub struct RTSEN_R(crate::FieldReader<bool, bool>);
 impl RTSEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTSEN_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RTSEN_W<'a> {
 #[doc = "Field `RXE` reader - UART receive enable 1: The receive section of the UART is enabled. 0: The receive section of the UART is disabled. If the UART is disabled in the middle of a receive, it completes the current character before stopping. Note: To enable reception, the UARTEN bit must also be set."]
 pub struct RXE_R(crate::FieldReader<bool, bool>);
 impl RXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> RXE_W<'a> {
 #[doc = "Field `TXE` reader - UART transmit enable 1: The transmit section of the UART is enabled. 0: The transmit section of the UART is disabled. If the UART is disabled in the middle of a transmission, it completes the current character before stopping. Note: To enable transmission, the UARTEN bit must also be set."]
 pub struct TXE_R(crate::FieldReader<bool, bool>);
 impl TXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXE_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> TXE_W<'a> {
 #[doc = "Field `LBE` reader - UART loop back enable 1: The UnTx path is fed through the UnRx path. 0: Normal operation"]
 pub struct LBE_R(crate::FieldReader<bool, bool>);
 impl LBE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LBE_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> LBE_W<'a> {
 #[doc = "Field `LIN` reader - LIN mode enable 1: The UART operates in LIN mode. 0: Normal operation"]
 pub struct LIN_R(crate::FieldReader<bool, bool>);
 impl LIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LIN_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> LIN_W<'a> {
 #[doc = "Field `HSE` reader - High-speed enable 0: The UART is clocked using the system clock divided by 16. 1: The UART is clocked using the system clock divided by 8. Note: System clock used is also dependent on the baud-rate divisor configuration (See Universal Asynchronous Receivers/Transmitters - Baud-Rate Generation)."]
 pub struct HSE_R(crate::FieldReader<bool, bool>);
 impl HSE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HSE_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> HSE_W<'a> {
 #[doc = "Field `EOT` reader - End of transmission This bit determines the behavior of the TXRIS bit in the UARTRIS register. 1: The TXRIS bit is set only after all transmitted data, including stop bits, have cleared the serializer. 0: The TXRIS bit is set when the transmit FIFO condition specified in UARTIFLS is met."]
 pub struct EOT_R(crate::FieldReader<bool, bool>);
 impl EOT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EOT_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> EOT_W<'a> {
 #[doc = "Field `SIRLP` reader - UART SIR low-power mode This bit selects the IrDA encoding mode. 1: The UART operates in SIR Low-Power mode. Low-level bits are transmitted with a pulse width which is 3 times the period of the IrLPBaud16 input signal, regardless of the selected bit rate. 0: Low-level bits are transmitted as an active high pulse with a width of 3/16th of the bit period. Setting this bit uses less power, but might reduce transmission distances."]
 pub struct SIRLP_R(crate::FieldReader<bool, bool>);
 impl SIRLP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIRLP_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> SIRLP_W<'a> {
 #[doc = "Field `SIREN` reader - UART SIR enable 1: The IrDA SIR block is enabled, and the UART transmits and receives data using SIR protocol. 0: Normal operation."]
 pub struct SIREN_R(crate::FieldReader<bool, bool>);
 impl SIREN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIREN_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> SIREN_W<'a> {
 #[doc = "Field `UARTEN` reader - UART enable 1: The UART is enabled. 0: The UART is disabled. If the UART is disabled in the middle of transmission or reception, it completes the current character before stopping."]
 pub struct UARTEN_R(crate::FieldReader<bool, bool>);
 impl UARTEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UARTEN_R(crate::FieldReader::new(bits))
     }

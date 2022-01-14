@@ -37,6 +37,7 @@ impl From<crate::W<DR_SPEC>> for W {
 #[doc = "Field `DATA` reader - Data transferred Data transferred during transaction"]
 pub struct DATA_R(crate::FieldReader<u8, u8>);
 impl DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DATA_R(crate::FieldReader::new(bits))
     }

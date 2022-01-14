@@ -37,6 +37,7 @@ impl From<crate::W<IWE_SPEC>> for W {
 #[doc = "Field `SM_TIMER_IWE` reader - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
 pub struct SM_TIMER_IWE_R(crate::FieldReader<bool, bool>);
 impl SM_TIMER_IWE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM_TIMER_IWE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SM_TIMER_IWE_W<'a> {
 #[doc = "Field `USB_IWE` reader - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
 pub struct USB_IWE_R(crate::FieldReader<bool, bool>);
 impl USB_IWE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USB_IWE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> USB_IWE_W<'a> {
 #[doc = "Field `PORT_D_IWE` reader - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
 pub struct PORT_D_IWE_R(crate::FieldReader<bool, bool>);
 impl PORT_D_IWE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PORT_D_IWE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PORT_D_IWE_W<'a> {
 #[doc = "Field `PORT_C_IWE` reader - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
 pub struct PORT_C_IWE_R(crate::FieldReader<bool, bool>);
 impl PORT_C_IWE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PORT_C_IWE_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> PORT_C_IWE_W<'a> {
 #[doc = "Field `PORT_B_IWE` reader - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
 pub struct PORT_B_IWE_R(crate::FieldReader<bool, bool>);
 impl PORT_B_IWE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PORT_B_IWE_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> PORT_B_IWE_W<'a> {
 #[doc = "Field `PORT_A_IWE` reader - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
 pub struct PORT_A_IWE_R(crate::FieldReader<bool, bool>);
 impl PORT_A_IWE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PORT_A_IWE_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<INDEX_SPEC>> for W {
 #[doc = "Field `USBINDEX` reader - Index of the currently selected endpoint The index is set to 0 to enable access to endpoint 0 control and status registers The index is set to 1, 2, 3, 4 or 5 to enable access to IN/OUT endpoint 1, 2, 3, 4 or 5 control and status registers, respectively"]
 pub struct USBINDEX_R(crate::FieldReader<u8, u8>);
 impl USBINDEX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         USBINDEX_R(crate::FieldReader::new(bits))
     }

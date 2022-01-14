@@ -37,6 +37,7 @@ impl From<crate::W<WDCTL_SPEC>> for W {
 #[doc = "Field `CLR` reader - Clear timer When 0xA followed by 0x5 is written to these bits, the timer is loaded with 0x0000. Note that 0x5 must be written within one watchdog clock period Twdt after 0xA was written for the clearing to take effect (ensured). If 0x5 is written between Twdt and 2Twdt after 0xA was written, the clearing may take effect, but there is no guarantee. If 0x5 is written > 2Twdt after 0xA was written, the timer will not be cleared. If a value other than 0x5 is written after 0xA has been written, the clear sequence is aborted. If 0xA is written, this starts a new clear sequence. Writing to these bits when EN = 0 has no effect."]
 pub struct CLR_R(crate::FieldReader<u8, u8>);
 impl CLR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CLR_R(crate::FieldReader::new(bits))
     }
@@ -64,6 +65,7 @@ impl<'a> CLR_W<'a> {
 is used. Writing 0 to this bit have no effect."]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }
@@ -101,6 +103,7 @@ impl<'a> EN_W<'a> {
 #[doc = "Field `INT` reader - Timer interval select These bits select the timer interval as follows: 00: Twdt x 32768 01: Twdt x 8192 10: Twdt x 512 11: Twdt x 64 Writing these bits when EN = 1 has no effect."]
 pub struct INT_R(crate::FieldReader<u8, u8>);
 impl INT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         INT_R(crate::FieldReader::new(bits))
     }

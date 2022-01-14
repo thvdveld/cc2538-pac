@@ -16,6 +16,7 @@ impl From<crate::R<RIS_SPEC>> for R {
 #[doc = "Field `RIS` reader - Reflects the status of interrupts trigger conditions detected on pins (raw, before masking) Bits set: Requirements met by corresponding pins Bits clear: Requirements not met"]
 pub struct RIS_R(crate::FieldReader<u8, u8>);
 impl RIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RIS_R(crate::FieldReader::new(bits))
     }

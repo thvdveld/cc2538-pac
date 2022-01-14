@@ -16,6 +16,7 @@ impl From<crate::R<TXLAST_PTR_SPEC>> for R {
 #[doc = "Field `TXLAST_PTR` reader - RAM address offset of the last byte + 1 byte of the TX FIFO"]
 pub struct TXLAST_PTR_R(crate::FieldReader<u8, u8>);
 impl TXLAST_PTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXLAST_PTR_R(crate::FieldReader::new(bits))
     }

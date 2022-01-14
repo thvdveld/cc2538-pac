@@ -37,6 +37,7 @@ impl From<crate::W<PWRDBG_SPEC>> for W {
 #[doc = "Field `FORCE_WARM_RESET` reader - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
 pub struct FORCE_WARM_RESET_R(crate::FieldReader<bool, bool>);
 impl FORCE_WARM_RESET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FORCE_WARM_RESET_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<FSMSTAT0_SPEC>> for R {
 #[doc = "Field `CAL_DONE` reader - Frequency synthesis calibration has been performed since the last time the FS was turned on."]
 pub struct CAL_DONE_R(crate::FieldReader<bool, bool>);
 impl CAL_DONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAL_DONE_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for CAL_DONE_R {
 #[doc = "Field `CAL_RUNNING` reader - Frequency synthesis calibration status 0: Calibration is complete or not started. 1: Calibration is in progress."]
 pub struct CAL_RUNNING_R(crate::FieldReader<bool, bool>);
 impl CAL_RUNNING_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAL_RUNNING_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for CAL_RUNNING_R {
 #[doc = "Field `FSM_FFCTRL_STATE` reader - Gives the current state of the FIFO and frame control (FFCTRL) finite state-machine."]
 pub struct FSM_FFCTRL_STATE_R(crate::FieldReader<u8, u8>);
 impl FSM_FFCTRL_STATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FSM_FFCTRL_STATE_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<LPBKGPT_SPEC>> for W {
 #[doc = "Field `LPBK32GPT3` reader - GPTimer3 32-bit RTC loopback modes 00: Normal operation 01: GPT0 GPTimerA PWM connected to GPT3 capture 10: GPT0 capture connected to GPT3 PWM GPTimer A 11: Reserved, defaults to normal operation"]
 pub struct LPBK32GPT3_R(crate::FieldReader<u8, u8>);
 impl LPBK32GPT3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LPBK32GPT3_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> LPBK32GPT3_W<'a> {
 #[doc = "Field `LPBK32GPT2` reader - GPTimer2 32-bit RTC loopback modes 00: Normal operation 01: GPT0 Timer A PWM connected to GPT2 capture 10: GPT0 capture connected to GPT2 PWM Timer A 11: Reserved, defaults to normal operation"]
 pub struct LPBK32GPT2_R(crate::FieldReader<u8, u8>);
 impl LPBK32GPT2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LPBK32GPT2_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> LPBK32GPT2_W<'a> {
 #[doc = "Field `LPBK32GPT1` reader - GPTimer1 32-bit RTC loopback modes 00: Normal operation 01: GPT0 timerA PWM connected to GPT1 capture 10: GPT0 capture connected to GPT1 PWM Timer A 11: Reserved, defaults to normal operation"]
 pub struct LPBK32GPT1_R(crate::FieldReader<u8, u8>);
 impl LPBK32GPT1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LPBK32GPT1_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> LPBK32GPT1_W<'a> {
 #[doc = "Field `LPBK16GPT3` reader - GPTimer3 16-bit loopback modes 00: Normal operation 01: Timer A PWM connected to Timer B capture 10: Timer A capture connected to Timer B PWM 11: Reserved, defaults to normal operation"]
 pub struct LPBK16GPT3_R(crate::FieldReader<u8, u8>);
 impl LPBK16GPT3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LPBK16GPT3_R(crate::FieldReader::new(bits))
     }
@@ -141,6 +145,7 @@ impl<'a> LPBK16GPT3_W<'a> {
 #[doc = "Field `LPBK16GPT2` reader - GPTimer2 16-bit loopback modes 00: Normal operation 01: Timer A PWM connected to Timer B capture 10: Timer A capture connected to Timer B PWM 11: Reserved, defaults to normal operation"]
 pub struct LPBK16GPT2_R(crate::FieldReader<u8, u8>);
 impl LPBK16GPT2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LPBK16GPT2_R(crate::FieldReader::new(bits))
     }
@@ -167,6 +172,7 @@ impl<'a> LPBK16GPT2_W<'a> {
 #[doc = "Field `LPBK16GPT1` reader - GPTimer1 16-bit loopback modes 00: Normal operation 01: Timer A PWM connected to Timer B capture 10: Timer A capture connected to Timer B PWM 11: Reserved, defaults to normal operation"]
 pub struct LPBK16GPT1_R(crate::FieldReader<u8, u8>);
 impl LPBK16GPT1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LPBK16GPT1_R(crate::FieldReader::new(bits))
     }
@@ -193,6 +199,7 @@ impl<'a> LPBK16GPT1_W<'a> {
 #[doc = "Field `LPBK16GPT0` reader - GPTimer0 16-bit loopback modes 00: Normal operation 01: Timer A PWM connected to Timer B capture 10: Timer A capture connected to Timer B PWM 11: Reserved, defaults to normal operation"]
 pub struct LPBK16GPT0_R(crate::FieldReader<u8, u8>);
 impl LPBK16GPT0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LPBK16GPT0_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<MIS_SPEC>> for R {
 #[doc = "Field `LME5MIS` reader - LIN mode edge 5 masked interrupt status 1: An unmasked interrupt was signaled due to the 5th falling edge of the LIN sync field. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the LME5IC bit in the UARTICR register."]
 pub struct LME5MIS_R(crate::FieldReader<bool, bool>);
 impl LME5MIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LME5MIS_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for LME5MIS_R {
 #[doc = "Field `LME1MIS` reader - LIN mode edge 1 masked interrupt status 1: An unmasked interrupt was signaled due to the 1st falling edge of the LIN sync field. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the LME1IC bit in the UARTICR register."]
 pub struct LME1MIS_R(crate::FieldReader<bool, bool>);
 impl LME1MIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LME1MIS_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for LME1MIS_R {
 #[doc = "Field `LMSBMIS` reader - LIN mode sync break masked interrupt status 1: An unmasked interrupt was signaled due to the receipt of a LIN sync break. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the LMSBIC bit in the UARTICR register."]
 pub struct LMSBMIS_R(crate::FieldReader<bool, bool>);
 impl LMSBMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LMSBMIS_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for LMSBMIS_R {
 #[doc = "Field `NINEBITMIS` reader - 9-bit mode masked interrupt status 1: An unmasked interrupt was signaled due to a receive address match. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the 9BITIC bit in the UARTICR register."]
 pub struct NINEBITMIS_R(crate::FieldReader<bool, bool>);
 impl NINEBITMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NINEBITMIS_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for NINEBITMIS_R {
 #[doc = "Field `OEMIS` reader - UART overrun error masked interrupt status 1: An unmasked interrupt was signaled due to an overrun error. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the OEIC bit in the UARTICR register."]
 pub struct OEMIS_R(crate::FieldReader<bool, bool>);
 impl OEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OEMIS_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for OEMIS_R {
 #[doc = "Field `BEMIS` reader - UART break error masked interrupt status 1: An unmasked interrupt was signaled due to a break error. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the BEIC bit in the UARTICR register."]
 pub struct BEMIS_R(crate::FieldReader<bool, bool>);
 impl BEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BEMIS_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for BEMIS_R {
 #[doc = "Field `PEMIS` reader - UART parity error masked interrupt status 1: An unmasked interrupt was signaled due to a parity error. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the PEIC bit in the UARTICR register."]
 pub struct PEMIS_R(crate::FieldReader<bool, bool>);
 impl PEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEMIS_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for PEMIS_R {
 #[doc = "Field `FEMIS` reader - UART framing error masked interrupt status 1: An unmasked interrupt was signaled due to a framing error. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the FEIC bit in the UARTICR register."]
 pub struct FEMIS_R(crate::FieldReader<bool, bool>);
 impl FEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FEMIS_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for FEMIS_R {
 #[doc = "Field `RTMIS` reader - UART receive time-out masked interrupt status 1: An unmasked interrupt was signaled due to a receive time out. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the RTIC bit in the UARTICR register."]
 pub struct RTMIS_R(crate::FieldReader<bool, bool>);
 impl RTMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTMIS_R(crate::FieldReader::new(bits))
     }
@@ -142,6 +151,7 @@ impl core::ops::Deref for RTMIS_R {
 #[doc = "Field `TXMIS` reader - UART transmit masked interrupt status 1: An unmasked interrupt was signaled due to passing through the specified transmit FIFO level (if the EOT bit is clear) or due to the transmission of the last data bit (if the EOT bit is set). 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the TXIC bit in the UARTICR register."]
 pub struct TXMIS_R(crate::FieldReader<bool, bool>);
 impl TXMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXMIS_R(crate::FieldReader::new(bits))
     }
@@ -156,6 +166,7 @@ impl core::ops::Deref for TXMIS_R {
 #[doc = "Field `RXMIS` reader - UART receive masked interrupt status 1: An unmasked interrupt was signaled due to passing through the specified receive FIFO level. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the RXIC bit in the UARTICR register."]
 pub struct RXMIS_R(crate::FieldReader<bool, bool>);
 impl RXMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXMIS_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<FCTL_SPEC>> for W {
 #[doc = "Field `UPPER_PAGE_ACCESS` reader - Lock bit for lock bit page 0: Neither write nor erase not allowed 1: Both write and erase allowed"]
 pub struct UPPER_PAGE_ACCESS_R(crate::FieldReader<bool, bool>);
 impl UPPER_PAGE_ACCESS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UPPER_PAGE_ACCESS_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> UPPER_PAGE_ACCESS_W<'a> {
 #[doc = "Field `SEL_INFO_PAGE` reader - Flash erase or write operation on APB bus must assert this when accessing the information page"]
 pub struct SEL_INFO_PAGE_R(crate::FieldReader<bool, bool>);
 impl SEL_INFO_PAGE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SEL_INFO_PAGE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> SEL_INFO_PAGE_W<'a> {
 #[doc = "Field `BUSY` reader - Set when the WRITE or ERASE bit is set; that is, when the flash controller is busy"]
 pub struct BUSY_R(crate::FieldReader<bool, bool>);
 impl BUSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUSY_R(crate::FieldReader::new(bits))
     }
@@ -123,6 +126,7 @@ impl core::ops::Deref for BUSY_R {
 #[doc = "Field `FULL` reader - Write buffer full The CPU can write to FWDATA when this bit is 0 and WRITE is 1. This bit is cleared when BUSY is cleared."]
 pub struct FULL_R(crate::FieldReader<bool, bool>);
 impl FULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FULL_R(crate::FieldReader::new(bits))
     }
@@ -137,6 +141,7 @@ impl core::ops::Deref for FULL_R {
 #[doc = "Field `ABORT` reader - Abort status This bit is set to 1 when a write sequence or page erase is aborted. An operation is aborted when the accessed page is locked. Cleared when a write or page erase is started. If a write operation times out (because the FWDATA register is not written fast enough), the ABORT bit is not set even if the page is locked. If a page erase and a write operation are started simultaneously, the ABORT bit reflects the status of the last write operation. For example, if the page is locked and the write times out, the ABORT bit is not set because only the write operation times out."]
 pub struct ABORT_R(crate::FieldReader<bool, bool>);
 impl ABORT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABORT_R(crate::FieldReader::new(bits))
     }
@@ -151,6 +156,7 @@ impl core::ops::Deref for ABORT_R {
 #[doc = "Field `CM` reader - Cache Mode Disabling the cache increases the power consumption and reduces performance. Prefetching improves performance at the expense of a potential increase in power consumption. Real-time mode provides predictable flash read access time, the execution time is equal to cache disabled mode, but the power consumption is lower. 00: Cache disabled 01: Cache enabled 10: Cache enabled, with prefetch 11: Real-time mode Note: The read value always represents the current cache mode. Writing a new cache mode starts a cache mode change request that does not take effect until the controller is ready. Writes to this register are ignored if there is a current cache change request in progress."]
 pub struct CM_R(crate::FieldReader<u8, u8>);
 impl CM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CM_R(crate::FieldReader::new(bits))
     }
@@ -177,6 +183,7 @@ impl<'a> CM_W<'a> {
 #[doc = "Field `WRITE` reader - Write bit Start a write sequence by setting this bit to 1. Cleared by hardware when the operation completes. Writes to this bit are ignored when FCTL.BUSY is 1. If FCTL.ERASE is set simultaneously with this bit, the erase operation is started first, then the write is started."]
 pub struct WRITE_R(crate::FieldReader<bool, bool>);
 impl WRITE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         WRITE_R(crate::FieldReader::new(bits))
     }
@@ -213,6 +220,7 @@ impl<'a> WRITE_W<'a> {
 #[doc = "Field `ERASE` reader - Erase bit Start an erase operation by setting this bit to 1. Cleared by hardware when the operation completes. Writes to this bit are ignored when FCTL.BUSY is 1. If FCTL.WRITE is set simultaneously with this bit, the erase operation is started first, then the write is started."]
 pub struct ERASE_R(crate::FieldReader<bool, bool>);
 impl ERASE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERASE_R(crate::FieldReader::new(bits))
     }

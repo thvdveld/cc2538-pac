@@ -37,6 +37,7 @@ impl From<crate::W<FSCAL2_SPEC>> for W {
 #[doc = "Field `VCO_CAPARR_OE` reader - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
 pub struct VCO_CAPARR_OE_R(crate::FieldReader<bool, bool>);
 impl VCO_CAPARR_OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VCO_CAPARR_OE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> VCO_CAPARR_OE_W<'a> {
 #[doc = "Field `VCO_CAPARR` reader - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
 pub struct VCO_CAPARR_R(crate::FieldReader<u8, u8>);
 impl VCO_CAPARR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         VCO_CAPARR_R(crate::FieldReader::new(bits))
     }

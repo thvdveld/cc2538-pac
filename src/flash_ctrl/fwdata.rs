@@ -37,6 +37,7 @@ impl From<crate::W<FWDATA_SPEC>> for W {
 #[doc = "Field `FWDATA` reader - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
 pub struct FWDATA_R(crate::FieldReader<u32, u32>);
 impl FWDATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         FWDATA_R(crate::FieldReader::new(bits))
     }
@@ -56,7 +57,7 @@ impl<'a> FWDATA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits |= value as u32;
+        self.w.bits = value as u32;
         self.w
     }
 }

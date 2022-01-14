@@ -37,6 +37,7 @@ impl From<crate::W<DCGCGPT_SPEC>> for W {
 #[doc = "Field `GPT3` reader - 0: Clock for GPT3 is gated. 1: Clock for GPT3 is enabled."]
 pub struct GPT3_R(crate::FieldReader<bool, bool>);
 impl GPT3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPT3_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> GPT3_W<'a> {
 #[doc = "Field `GPT2` reader - 0: Clock for GPT2 is gated. 1: Clock for GPT2 is enabled."]
 pub struct GPT2_R(crate::FieldReader<bool, bool>);
 impl GPT2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPT2_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> GPT2_W<'a> {
 #[doc = "Field `GPT1` reader - 0: Clock for GPT1 is gated. 1: Clock for GPT1 is enabled."]
 pub struct GPT1_R(crate::FieldReader<bool, bool>);
 impl GPT1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPT1_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> GPT1_W<'a> {
 #[doc = "Field `GPT0` reader - 0: Clock for GPT0 is gated. 1: Clock for GPT0 is enabled."]
 pub struct GPT0_R(crate::FieldReader<bool, bool>);
 impl GPT0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPT0_R(crate::FieldReader::new(bits))
     }

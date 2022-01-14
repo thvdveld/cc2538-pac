@@ -38,6 +38,7 @@ impl From<crate::W<MTM1_SPEC>> for W {
 of an internal register, depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000, the timer (MTtim) value is latched. Reading this register with MTMSEL.MTMSEL set to 000 returns the latched value of MTtim\\[15:8\\]."]
 pub struct MTM1_R(crate::FieldReader<u8, u8>);
 impl MTM1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MTM1_R(crate::FieldReader::new(bits))
     }

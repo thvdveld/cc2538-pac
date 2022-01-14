@@ -37,6 +37,7 @@ impl From<crate::W<TBPR_SPEC>> for W {
 #[doc = "Field `TBPSR` reader - GPTM Timer B prescale"]
 pub struct TBPSR_R(crate::FieldReader<u8, u8>);
 impl TBPSR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TBPSR_R(crate::FieldReader::new(bits))
     }

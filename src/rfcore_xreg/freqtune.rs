@@ -37,6 +37,7 @@ impl From<crate::W<FREQTUNE_SPEC>> for W {
 #[doc = "Field `XOSC32M_TUNE` reader - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
 pub struct XOSC32M_TUNE_R(crate::FieldReader<u8, u8>);
 impl XOSC32M_TUNE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         XOSC32M_TUNE_R(crate::FieldReader::new(bits))
     }

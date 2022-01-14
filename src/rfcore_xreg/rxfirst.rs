@@ -16,6 +16,7 @@ impl From<crate::R<RXFIRST_SPEC>> for R {
 #[doc = "Field `DATA` reader - First byte of the RX FIFO Note: Reading this register does not modify the contents of the FIFO."]
 pub struct DATA_R(crate::FieldReader<u8, u8>);
 impl DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DATA_R(crate::FieldReader::new(bits))
     }

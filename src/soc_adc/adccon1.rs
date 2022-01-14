@@ -37,6 +37,7 @@ impl From<crate::W<ADCCON1_SPEC>> for W {
 #[doc = "Field `EOC` reader - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
 pub struct EOC_R(crate::FieldReader<bool, bool>);
 impl EOC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EOC_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> EOC_W<'a> {
 #[doc = "Field `ST` reader - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
 pub struct ST_R(crate::FieldReader<bool, bool>);
 impl ST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ST_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> ST_W<'a> {
 #[doc = "Field `STSEL` reader - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
 pub struct STSEL_R(crate::FieldReader<u8, u8>);
 impl STSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         STSEL_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> STSEL_W<'a> {
 #[doc = "Field `RCTRL` reader - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
 pub struct RCTRL_R(crate::FieldReader<u8, u8>);
 impl RCTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RCTRL_R(crate::FieldReader::new(bits))
     }

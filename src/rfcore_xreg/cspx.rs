@@ -16,6 +16,7 @@ impl From<crate::R<CSPX_SPEC>> for R {
 #[doc = "Field `CSPX` reader - Used by CSP instructions WAITX, RANDXY, INCX, DECX, and conditional instructions."]
 pub struct CSPX_R(crate::FieldReader<u8, u8>);
 impl CSPX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CSPX_R(crate::FieldReader::new(bits))
     }

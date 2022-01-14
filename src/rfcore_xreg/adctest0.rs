@@ -37,6 +37,7 @@ impl From<crate::W<ADCTEST0_SPEC>> for W {
 #[doc = "Field `ADC_VREF_ADJ` reader - Quantizer threshold control for test and debug"]
 pub struct ADC_VREF_ADJ_R(crate::FieldReader<u8, u8>);
 impl ADC_VREF_ADJ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_VREF_ADJ_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> ADC_VREF_ADJ_W<'a> {
 #[doc = "Field `ADC_QUANT_ADJ` reader - Quantizer threshold control for test and debug"]
 pub struct ADC_QUANT_ADJ_R(crate::FieldReader<u8, u8>);
 impl ADC_QUANT_ADJ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_QUANT_ADJ_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> ADC_QUANT_ADJ_W<'a> {
 #[doc = "Field `ADC_GM_ADJ` reader - Gm-control for test and debug"]
 pub struct ADC_GM_ADJ_R(crate::FieldReader<u8, u8>);
 impl ADC_GM_ADJ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADC_GM_ADJ_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> ADC_GM_ADJ_W<'a> {
 #[doc = "Field `ADC_DAC2_EN` reader - Enables DAC2 for enhanced ADC stability"]
 pub struct ADC_DAC2_EN_R(crate::FieldReader<bool, bool>);
 impl ADC_DAC2_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADC_DAC2_EN_R(crate::FieldReader::new(bits))
     }

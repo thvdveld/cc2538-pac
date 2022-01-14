@@ -37,6 +37,7 @@ impl From<crate::W<DMACTL_SPEC>> for W {
 #[doc = "Field `DMAERR` reader - DMA on error 1: uDMA receive requests are automatically disabled when a receive error occurs. 0: uDMA receive requests are unaffected when a receive error occurs."]
 pub struct DMAERR_R(crate::FieldReader<bool, bool>);
 impl DMAERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DMAERR_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> DMAERR_W<'a> {
 #[doc = "Field `TXDMAE` reader - Transmit DMA enable 1: uDMA for the transmit FIFO is enabled. 0: uDMA for the transmit FIFO is disabled."]
 pub struct TXDMAE_R(crate::FieldReader<bool, bool>);
 impl TXDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXDMAE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> TXDMAE_W<'a> {
 #[doc = "Field `RXDMAE` reader - Receive DMA enable 1: uDMA for the receive FIFO is enabled. 0: uDMA for the receive FIFO is disabled."]
 pub struct RXDMAE_R(crate::FieldReader<bool, bool>);
 impl RXDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXDMAE_R(crate::FieldReader::new(bits))
     }

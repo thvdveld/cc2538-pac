@@ -38,6 +38,7 @@ impl From<crate::W<PTEST1_SPEC>> for W {
 depenancy."]
 pub struct PD_OVERRIDE_R(crate::FieldReader<bool, bool>);
 impl PD_OVERRIDE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PD_OVERRIDE_R(crate::FieldReader::new(bits))
     }
@@ -75,6 +76,7 @@ impl<'a> PD_OVERRIDE_W<'a> {
 #[doc = "Field `PA_PD` reader - Power amplifier power-down signal When PD_OVERRIDE = 1"]
 pub struct PA_PD_R(crate::FieldReader<bool, bool>);
 impl PA_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PA_PD_R(crate::FieldReader::new(bits))
     }
@@ -111,6 +113,7 @@ impl<'a> PA_PD_W<'a> {
 #[doc = "Field `VCO_PD` reader - VCO power-down signal When PD_OVERRIDE = 1"]
 pub struct VCO_PD_R(crate::FieldReader<bool, bool>);
 impl VCO_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VCO_PD_R(crate::FieldReader::new(bits))
     }
@@ -147,6 +150,7 @@ impl<'a> VCO_PD_W<'a> {
 #[doc = "Field `LODIV_PD` reader - LO power-down signal When PD_OVERRIDE = 1"]
 pub struct LODIV_PD_R(crate::FieldReader<bool, bool>);
 impl LODIV_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LODIV_PD_R(crate::FieldReader::new(bits))
     }

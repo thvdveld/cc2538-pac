@@ -37,6 +37,7 @@ impl From<crate::W<SRCRESINDEX_SPEC>> for W {
 #[doc = "Field `SRCRESINDEX` reader - The bit index of the least-significant entry (0-23 for short addresses or 0-11 for extended addresses) in SRCRESMASK, or 0x3F when there is no source match On a match, bit 5 is 0 when the match is on a short address and 1 when it is on an extended address. On a match, bit 6 is 1 when the conditions for automatic pending bit in acknowledgment have been met (see the description of SRCMATCH.AUTOPEND). The bit does not indicate if the acknowledgment is actually transmitted, and does not consider the PENDING_OR register bit and the SACK/SACKPEND/SNACK strobes."]
 pub struct SRCRESINDEX_R(crate::FieldReader<u8, u8>);
 impl SRCRESINDEX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SRCRESINDEX_R(crate::FieldReader::new(bits))
     }

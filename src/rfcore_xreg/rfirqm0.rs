@@ -37,6 +37,7 @@ impl From<crate::W<RFIRQM0_SPEC>> for W {
 #[doc = "Field `RFIRQM` reader - Bit mask is masking out interrupt sources. Bit position: 7: RXMASKZERO 6: RXPKTDONE 5: FRAME_ACCEPTED 4: SRC_MATCH_FOUND 3: SRC_MATCH_DONE 2: FIFOP 1: SFD 0: ACT_UNUSED"]
 pub struct RFIRQM_R(crate::FieldReader<u8, u8>);
 impl RFIRQM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RFIRQM_R(crate::FieldReader::new(bits))
     }

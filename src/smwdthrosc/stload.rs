@@ -16,6 +16,7 @@ impl From<crate::R<STLOAD_SPEC>> for R {
 #[doc = "Field `STLOAD` reader - Status signal for when STx registers have been uploaded to 32-kHz counter. 1: Load is complete 0: Load is busy and STx regs are blocked for writing"]
 pub struct STLOAD_R(crate::FieldReader<bool, bool>);
 impl STLOAD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STLOAD_R(crate::FieldReader::new(bits))
     }

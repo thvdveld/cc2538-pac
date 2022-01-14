@@ -37,6 +37,7 @@ impl From<crate::W<FSMCTRL_SPEC>> for W {
 #[doc = "Field `SLOTTED_ACK` reader - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
 pub struct SLOTTED_ACK_R(crate::FieldReader<bool, bool>);
 impl SLOTTED_ACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SLOTTED_ACK_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SLOTTED_ACK_W<'a> {
 #[doc = "Field `RX2RX_TIME_OFF` reader - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
 pub struct RX2RX_TIME_OFF_R(crate::FieldReader<bool, bool>);
 impl RX2RX_TIME_OFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX2RX_TIME_OFF_R(crate::FieldReader::new(bits))
     }

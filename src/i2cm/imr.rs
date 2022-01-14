@@ -37,6 +37,7 @@ impl From<crate::W<IMR_SPEC>> for W {
 #[doc = "Field `IM` reader - Interrupt mask 1: The master interrupt is sent to the interrupt controller when the RIS bit in the I2CMRIS register is set. 0: The RIS interrupt is suppressed and not sent to the interrupt controller."]
 pub struct IM_R(crate::FieldReader<bool, bool>);
 impl IM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IM_R(crate::FieldReader::new(bits))
     }

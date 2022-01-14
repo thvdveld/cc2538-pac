@@ -37,6 +37,7 @@ impl From<crate::W<RFDATA_SPEC>> for W {
 #[doc = "Field `RFD` reader - Data written to the register is written to the TX FIFO. When reading this register, data from the RX FIFO is read."]
 pub struct RFD_R(crate::FieldReader<u8, u8>);
 impl RFD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RFD_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<IMR_SPEC>> for W {
 #[doc = "Field `TBMIM` reader - GPTM Timer B match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
 pub struct TBMIM_R(crate::FieldReader<bool, bool>);
 impl TBMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBMIM_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TBMIM_W<'a> {
 #[doc = "Field `CBEIM` reader - GPTM Timer B capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
 pub struct CBEIM_R(crate::FieldReader<bool, bool>);
 impl CBEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CBEIM_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> CBEIM_W<'a> {
 #[doc = "Field `CBMIM` reader - GPTM Timer B capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
 pub struct CBMIM_R(crate::FieldReader<bool, bool>);
 impl CBMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CBMIM_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> CBMIM_W<'a> {
 #[doc = "Field `TBTOIM` reader - GPTM Timer B time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
 pub struct TBTOIM_R(crate::FieldReader<bool, bool>);
 impl TBTOIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBTOIM_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> TBTOIM_W<'a> {
 #[doc = "Field `TAMIM` reader - GPTM Timer A match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
 pub struct TAMIM_R(crate::FieldReader<bool, bool>);
 impl TAMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAMIM_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> TAMIM_W<'a> {
 #[doc = "Field `CAEIM` reader - GPTM Timer A capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
 pub struct CAEIM_R(crate::FieldReader<bool, bool>);
 impl CAEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAEIM_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> CAEIM_W<'a> {
 #[doc = "Field `CAMIM` reader - GPTM Timer A capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
 pub struct CAMIM_R(crate::FieldReader<bool, bool>);
 impl CAMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAMIM_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> CAMIM_W<'a> {
 #[doc = "Field `TATOIM` reader - GPTM Timer A time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
 pub struct TATOIM_R(crate::FieldReader<bool, bool>);
 impl TATOIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TATOIM_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<CSOL_SPEC>> for W {
 #[doc = "Field `CLRDATATOG` reader - Software sets this bit to reset the endpoint data toggle to 0."]
 pub struct CLRDATATOG_R(crate::FieldReader<bool, bool>);
 impl CLRDATATOG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLRDATATOG_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CLRDATATOG_W<'a> {
 #[doc = "Field `SENTSTALL` reader - This bit is set when a STALL handshake is transmitted. An interrupt is generated when this bit is set. Software should clear this bit."]
 pub struct SENTSTALL_R(crate::FieldReader<bool, bool>);
 impl SENTSTALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SENTSTALL_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> SENTSTALL_W<'a> {
 #[doc = "Field `SENDSTALL` reader - For bulk/interrupt mode OUT endpoints: Software sets this bit to issue a STALL handshake. Software clears this bit to terminate the stall condition."]
 pub struct SENDSTALL_R(crate::FieldReader<bool, bool>);
 impl SENDSTALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SENDSTALL_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> SENDSTALL_W<'a> {
 #[doc = "Field `FLUSHPACKET` reader - Software sets this bit to flush the next packet to be read from the endpoint OUT FIFO. Note: If the FIFO contains two packets, USB_CSOL.FLUSHPACKET will need to be set twice to completely clear the FIFO."]
 pub struct FLUSHPACKET_R(crate::FieldReader<bool, bool>);
 impl FLUSHPACKET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FLUSHPACKET_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> FLUSHPACKET_W<'a> {
 #[doc = "Field `DATAERROR` reader - For isochronous mode OUT endpoints: This bit is set when USB_CSOL.OUTPKTRDY is set if the data packet has a CRC or bit-stuff error. It is cleared automatically when USB_CSOL.OUTPKTRDY is cleared."]
 pub struct DATAERROR_R(crate::FieldReader<bool, bool>);
 impl DATAERROR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DATAERROR_R(crate::FieldReader::new(bits))
     }
@@ -195,6 +200,7 @@ impl core::ops::Deref for DATAERROR_R {
 #[doc = "Field `OVERRUN` reader - For isochronous mode OUT endpoints: This bit is set when an OUT packet cannot be loaded into the OUT endpoint FIFO. Firmware should clear this bit."]
 pub struct OVERRUN_R(crate::FieldReader<bool, bool>);
 impl OVERRUN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OVERRUN_R(crate::FieldReader::new(bits))
     }
@@ -231,6 +237,7 @@ impl<'a> OVERRUN_W<'a> {
 #[doc = "Field `FIFOFULL` reader - This bit is set when no more packets can be loaded into the OUT endpoint FIFO."]
 pub struct FIFOFULL_R(crate::FieldReader<bool, bool>);
 impl FIFOFULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FIFOFULL_R(crate::FieldReader::new(bits))
     }
@@ -245,6 +252,7 @@ impl core::ops::Deref for FIFOFULL_R {
 #[doc = "Field `OUTPKTRDY` reader - This bit is set when a data packet has been received. Software should clear this bit when the packet has been unloaded from the OUT endpoint FIFO. An interrupt is generated when the bit is set."]
 pub struct OUTPKTRDY_R(crate::FieldReader<bool, bool>);
 impl OUTPKTRDY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTPKTRDY_R(crate::FieldReader::new(bits))
     }

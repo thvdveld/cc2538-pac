@@ -37,6 +37,7 @@ impl From<crate::W<FSCAL0_SPEC>> for W {
 #[doc = "Field `VCO_CURR_COMP_EN_OV` reader - Force on the current comparator in the VCO. This signal is ORed with the signal coming from the calibration module."]
 pub struct VCO_CURR_COMP_EN_OV_R(crate::FieldReader<bool, bool>);
 impl VCO_CURR_COMP_EN_OV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VCO_CURR_COMP_EN_OV_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> VCO_CURR_COMP_EN_OV_W<'a> {
 #[doc = "Field `CHP_DISABLE` reader - Set this bit to manually disable charge pump by masking the up and down pulses from the phase detector."]
 pub struct CHP_DISABLE_R(crate::FieldReader<bool, bool>);
 impl CHP_DISABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CHP_DISABLE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> CHP_DISABLE_W<'a> {
 #[doc = "Field `CHP_CURRENT` reader - Digital bit vector defining the charge-pump output current on an exponential scale If FFC_BW_BOOST = 0, the read value is the value stored in CHP_CURRENT. If FFC_BW_BOOST = 1, the read value is CHP_CURRENT + 4. If the addition causes overflow, the signal is saturated."]
 pub struct CHP_CURRENT_R(crate::FieldReader<u8, u8>);
 impl CHP_CURRENT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CHP_CURRENT_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> CHP_CURRENT_W<'a> {
 #[doc = "Field `BW_BOOST_MODE` reader - Control signal Defines the synthesizer boost mode 00: No BW_BOOST 01: BW_BOOST is high during calibration and approximately 30 us into the settling. 10: BW_BOOST is always on (or high). 11: Reserved"]
 pub struct BW_BOOST_MODE_R(crate::FieldReader<u8, u8>);
 impl BW_BOOST_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BW_BOOST_MODE_R(crate::FieldReader::new(bits))
     }

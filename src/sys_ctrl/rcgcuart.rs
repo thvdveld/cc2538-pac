@@ -37,6 +37,7 @@ impl From<crate::W<RCGCUART_SPEC>> for W {
 #[doc = "Field `UART1` reader - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
 pub struct UART1_R(crate::FieldReader<bool, bool>);
 impl UART1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART1_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> UART1_W<'a> {
 #[doc = "Field `UART0` reader - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
 pub struct UART0_R(crate::FieldReader<bool, bool>);
 impl UART0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART0_R(crate::FieldReader::new(bits))
     }

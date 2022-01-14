@@ -37,6 +37,7 @@ impl From<crate::W<LPBKI2C_SPEC>> for W {
 #[doc = "Field `LPBKI2C` reader - I2C0 Master/slave loopback mode 0: Normal mode"]
 pub struct LPBKI2C_R(crate::FieldReader<bool, bool>);
 impl LPBKI2C_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LPBKI2C_R(crate::FieldReader::new(bits))
     }

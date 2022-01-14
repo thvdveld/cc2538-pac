@@ -37,6 +37,7 @@ impl From<crate::W<LCTL_SPEC>> for W {
 #[doc = "Field `BLEN` reader - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
 pub struct BLEN_R(crate::FieldReader<u8, u8>);
 impl BLEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BLEN_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> BLEN_W<'a> {
 #[doc = "Field `MASTER` reader - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
 pub struct MASTER_R(crate::FieldReader<bool, bool>);
 impl MASTER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MASTER_R(crate::FieldReader::new(bits))
     }

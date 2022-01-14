@@ -16,6 +16,7 @@ impl From<crate::R<MIS_SPEC>> for R {
 #[doc = "Field `TBMMIS` reader - GPTM Timer B match masked interrupt"]
 pub struct TBMMIS_R(crate::FieldReader<bool, bool>);
 impl TBMMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBMMIS_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for TBMMIS_R {
 #[doc = "Field `CBEMIS` reader - GPTM Timer B capture event masked interrupt"]
 pub struct CBEMIS_R(crate::FieldReader<bool, bool>);
 impl CBEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CBEMIS_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for CBEMIS_R {
 #[doc = "Field `CBMMIS` reader - GPTM Timer B capture match masked interrupt"]
 pub struct CBMMIS_R(crate::FieldReader<bool, bool>);
 impl CBMMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CBMMIS_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for CBMMIS_R {
 #[doc = "Field `TBTOMIS` reader - GPTM Timer B time-out masked interrupt"]
 pub struct TBTOMIS_R(crate::FieldReader<bool, bool>);
 impl TBTOMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBTOMIS_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for TBTOMIS_R {
 #[doc = "Field `TAMRIS` reader - GPTM Timer A match raw interrupt"]
 pub struct TAMRIS_R(crate::FieldReader<bool, bool>);
 impl TAMRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAMRIS_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for TAMRIS_R {
 #[doc = "Field `CAEMIS` reader - GPTM Timer A capture event raw interrupt"]
 pub struct CAEMIS_R(crate::FieldReader<bool, bool>);
 impl CAEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAEMIS_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for CAEMIS_R {
 #[doc = "Field `CAMMIS` reader - GPTM Timer A capture match raw interrupt"]
 pub struct CAMMIS_R(crate::FieldReader<bool, bool>);
 impl CAMMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAMMIS_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for CAMMIS_R {
 #[doc = "Field `TATOMIS` reader - GPTM Timer A time-out raw interrupt"]
 pub struct TATOMIS_R(crate::FieldReader<bool, bool>);
 impl TATOMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TATOMIS_R(crate::FieldReader::new(bits))
     }

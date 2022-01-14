@@ -37,6 +37,7 @@ impl From<crate::W<F5_SPEC>> for W {
 #[doc = "Field `USBF5` reader - Endpoint 5 FIFO register Reading this register unloads one byte from the EP5 OUT FIFO. Writing to this register loads one byte into the EP5 IN FIFO."]
 pub struct USBF5_R(crate::FieldReader<u8, u8>);
 impl USBF5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         USBF5_R(crate::FieldReader::new(bits))
     }

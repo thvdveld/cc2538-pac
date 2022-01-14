@@ -37,6 +37,7 @@ impl From<crate::W<DR_SPEC>> for W {
 #[doc = "Field `DATA` reader - SSI receive/transmit data register (R/W) Reset value: 0xXXXX A read operation reads the receive FIFO. A write operation writes the transmit FIFO. Software must right-justify data when the SSI is programmed for a data size that is less than 16 bits. Unused bits at the top are ignored by the transmit logic. The receive logic automatically right-justified the data."]
 pub struct DATA_R(crate::FieldReader<u16, u16>);
 impl DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DATA_R(crate::FieldReader::new(bits))
     }

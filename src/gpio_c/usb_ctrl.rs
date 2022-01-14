@@ -37,6 +37,7 @@ impl From<crate::W<USB_CTRL_SPEC>> for W {
 #[doc = "Field `USB_EDGE_CTL` reader - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
 pub struct USB_EDGE_CTL_R(crate::FieldReader<bool, bool>);
 impl USB_EDGE_CTL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USB_EDGE_CTL_R(crate::FieldReader::new(bits))
     }

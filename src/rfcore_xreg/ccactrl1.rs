@@ -37,6 +37,7 @@ impl From<crate::W<CCACTRL1_SPEC>> for W {
 #[doc = "Field `CCA_MODE` reader - 00: CCA always set to 1 01: CCA = 1 when RSSI < CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI < CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
 pub struct CCA_MODE_R(crate::FieldReader<u8, u8>);
 impl CCA_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CCA_MODE_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> CCA_MODE_W<'a> {
 #[doc = "Field `CCA_HYST` reader - Sets the level of CCA hysteresis. Unsigned values given in dB"]
 pub struct CCA_HYST_R(crate::FieldReader<u8, u8>);
 impl CCA_HYST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CCA_HYST_R(crate::FieldReader::new(bits))
     }

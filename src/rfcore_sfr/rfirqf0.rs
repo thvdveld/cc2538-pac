@@ -37,6 +37,7 @@ impl From<crate::W<RFIRQF0_SPEC>> for W {
 #[doc = "Field `RXMASKZERO` reader - The RXENABLE register has gone from a nonzero state to an all-zero state. 0: No interrupt pending 1: Interrupt pending"]
 pub struct RXMASKZERO_R(crate::FieldReader<bool, bool>);
 impl RXMASKZERO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXMASKZERO_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> RXMASKZERO_W<'a> {
 #[doc = "Field `RXPKTDONE` reader - A complete frame has been received. 0: No interrupt pending 1: Interrupt pending"]
 pub struct RXPKTDONE_R(crate::FieldReader<bool, bool>);
 impl RXPKTDONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXPKTDONE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RXPKTDONE_W<'a> {
 #[doc = "Field `FRAME_ACCEPTED` reader - Frame has passed frame filtering. 0: No interrupt pending 1: Interrupt pending"]
 pub struct FRAME_ACCEPTED_R(crate::FieldReader<bool, bool>);
 impl FRAME_ACCEPTED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FRAME_ACCEPTED_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> FRAME_ACCEPTED_W<'a> {
 #[doc = "Field `SRC_MATCH_FOUND` reader - Source match is found. 0: No interrupt pending 1: Interrupt pending"]
 pub struct SRC_MATCH_FOUND_R(crate::FieldReader<bool, bool>);
 impl SRC_MATCH_FOUND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRC_MATCH_FOUND_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> SRC_MATCH_FOUND_W<'a> {
 #[doc = "Field `SRC_MATCH_DONE` reader - Source matching is complete. 0: No interrupt pending 1: Interrupt pending"]
 pub struct SRC_MATCH_DONE_R(crate::FieldReader<bool, bool>);
 impl SRC_MATCH_DONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRC_MATCH_DONE_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> SRC_MATCH_DONE_W<'a> {
 #[doc = "Field `FIFOP` reader - The number of bytes in the RX FIFO is greater than the threshold. Also raised when a complete frame is received, and when a packet is read out completely and more complete packets are available. 0: No interrupt pending 1: Interrupt pending"]
 pub struct FIFOP_R(crate::FieldReader<bool, bool>);
 impl FIFOP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FIFOP_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> FIFOP_W<'a> {
 #[doc = "Field `SFD` reader - SFD has been received or transmitted. 0: No interrupt pending 1: Interrupt pending"]
 pub struct SFD_R(crate::FieldReader<bool, bool>);
 impl SFD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SFD_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> SFD_W<'a> {
 #[doc = "Field `ACT_UNUSED` reader - Reserved 0: No interrupt pending 1: Interrupt pending"]
 pub struct ACT_UNUSED_R(crate::FieldReader<bool, bool>);
 impl ACT_UNUSED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ACT_UNUSED_R(crate::FieldReader::new(bits))
     }

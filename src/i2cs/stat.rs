@@ -16,6 +16,7 @@ impl From<crate::R<STAT_SPEC>> for R {
 #[doc = "Field `FBR` reader - First byte received 1: The first byte following the slave's own address has been received. 0: The first byte has not been received. This bit is only valid when the RREQ bit is set and is automatically cleared when data has been read from the I2CSDR register. Note: This bit is not used for slave transmit operations."]
 pub struct FBR_R(crate::FieldReader<bool, bool>);
 impl FBR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FBR_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for FBR_R {
 #[doc = "Field `TREQ` reader - Transmit request 1: The I2C controller has been addressed as a slave transmitter and is using clock stretching to delay the master until data has been written to the I2CSDR register. 0: No outstanding transmit request."]
 pub struct TREQ_R(crate::FieldReader<bool, bool>);
 impl TREQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TREQ_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for TREQ_R {
 #[doc = "Field `RREQ` reader - Receive request 1: The I2C controller has outstanding receive data from the I2C master and is using clock stretching to delay the master until data has been read from the I2CSDR register. 0: No outstanding receive data"]
 pub struct RREQ_R(crate::FieldReader<bool, bool>);
 impl RREQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RREQ_R(crate::FieldReader::new(bits))
     }

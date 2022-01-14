@@ -37,6 +37,7 @@ impl From<crate::W<FRMCTRL0_SPEC>> for W {
 #[doc = "Field `APPEND_DATA_MODE` reader - When AUTOCRC = 0: Don't care When AUTOCRC = 1: 0: RSSI + The CRC_OK bit and the 7-bit correlation value are appended at the end of each received frame 1: RSSI + The CRC_OK bit and the 7-bit SRCRESINDEX are appended at the end of each received frame."]
 pub struct APPEND_DATA_MODE_R(crate::FieldReader<bool, bool>);
 impl APPEND_DATA_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         APPEND_DATA_MODE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> APPEND_DATA_MODE_W<'a> {
 #[doc = "Field `AUTOCRC` reader - In TX 1: A CRC-16 (ITU-T) is generated in hardware and appended to the transmitted frame. There is no need to write the last 2 bytes to TXBUF. 0: No CRC-16 is appended to the frame. The last 2 bytes of the frame must be generated manually and written to TXBUF (if not, TX_UNDERFLOW occurs). In RX 1: The CRC-16 is checked in hardware, and replaced in the RXFIFO by a 16-bit status word which contains a CRC OK bit. The status word is controllable through APPEND_DATA_MODE. 0: The last 2 bytes of the frame (CRC-16 field) are stored in the RX FIFO. The CRC (if any) must be done manually. This setting does not influence acknowledgment transmission (including AUTOACK)."]
 pub struct AUTOCRC_R(crate::FieldReader<bool, bool>);
 impl AUTOCRC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AUTOCRC_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> AUTOCRC_W<'a> {
 #[doc = "Field `AUTOACK` reader - Defines whether the radio automatically transmits acknowledge frames or not. When autoack is enabled, all frames that are accepted by address filtering, have the acknowledge request flag set, and have a valid CRC are automatically acknowledged 12 symbol periods after being received. 0: Autoack disabled 1: Autoack enabled"]
 pub struct AUTOACK_R(crate::FieldReader<bool, bool>);
 impl AUTOACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AUTOACK_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> AUTOACK_W<'a> {
 #[doc = "Field `ENERGY_SCAN` reader - Defines whether the RSSI register contains the most-recent signal strength or the peak signal strength since the energy scan was enabled. 0: Most-recent signal strength 1: Peak signal strength"]
 pub struct ENERGY_SCAN_R(crate::FieldReader<bool, bool>);
 impl ENERGY_SCAN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENERGY_SCAN_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> ENERGY_SCAN_W<'a> {
 #[doc = "Field `RX_MODE` reader - Set RX modes. 00: Normal operation, use RX FIFO 01: Receive serial mode, output received data on to IOC; infinite RX 10: RX FIFO looping ignore overflow in RX FIFO; infinite reception 11: Same as normal operation except that symbol search is disabled. Can be used for RSSI or CCA measurements when finding symbol is not desired."]
 pub struct RX_MODE_R(crate::FieldReader<u8, u8>);
 impl RX_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RX_MODE_R(crate::FieldReader::new(bits))
     }
@@ -207,6 +212,7 @@ impl<'a> RX_MODE_W<'a> {
 #[doc = "Field `TX_MODE` reader - Set test modes for TX. 00: Normal operation, transmit TX FIFO 01: Reserved, should not be used 10: TX FIFO looping ignore underflow in TX FIFO and read cyclic; infinite transmission 11: Send random data from CRC; infinite transmission"]
 pub struct TX_MODE_R(crate::FieldReader<u8, u8>);
 impl TX_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TX_MODE_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<FSCAL1_SPEC>> for W {
 #[doc = "Field `VCO_CURR_CAL_OE` reader - Override current calibration"]
 pub struct VCO_CURR_CAL_OE_R(crate::FieldReader<bool, bool>);
 impl VCO_CURR_CAL_OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VCO_CURR_CAL_OE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> VCO_CURR_CAL_OE_W<'a> {
 #[doc = "Field `VCO_CURR_CAL` reader - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
 pub struct VCO_CURR_CAL_R(crate::FieldReader<u8, u8>);
 impl VCO_CURR_CAL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         VCO_CURR_CAL_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> VCO_CURR_CAL_W<'a> {
 #[doc = "Field `VCO_CURR` reader - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
 pub struct VCO_CURR_R(crate::FieldReader<u8, u8>);
 impl VCO_CURR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         VCO_CURR_R(crate::FieldReader::new(bits))
     }

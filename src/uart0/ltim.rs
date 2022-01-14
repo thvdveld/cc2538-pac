@@ -16,6 +16,7 @@ impl From<crate::R<LTIM_SPEC>> for R {
 #[doc = "Field `TIMER` reader - Timer value This field contains the value of the free-running timer."]
 pub struct TIMER_R(crate::FieldReader<u16, u16>);
 impl TIMER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         TIMER_R(crate::FieldReader::new(bits))
     }

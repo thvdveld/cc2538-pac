@@ -37,6 +37,7 @@ impl From<crate::W<TXFILTCFG_SPEC>> for W {
 #[doc = "Field `FC` reader - Drives signal rfr_txfilt_fc"]
 pub struct FC_R(crate::FieldReader<u8, u8>);
 impl FC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FC_R(crate::FieldReader::new(bits))
     }

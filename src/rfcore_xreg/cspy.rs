@@ -16,6 +16,7 @@ impl From<crate::R<CSPY_SPEC>> for R {
 #[doc = "Field `CSPY` reader - Used by CSP instructions RANDXY, INCY, DECY, and conditional instructions."]
 pub struct CSPY_R(crate::FieldReader<u8, u8>);
 impl CSPY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CSPY_R(crate::FieldReader::new(bits))
     }

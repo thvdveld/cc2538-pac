@@ -37,6 +37,7 @@ impl From<crate::W<GPT_SPEC>> for W {
 #[doc = "Field `GPTIDOE` reader - GPTimer increment/decrement override enable"]
 pub struct GPTIDOE_R(crate::FieldReader<bool, bool>);
 impl GPTIDOE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         GPTIDOE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> GPTIDOE_W<'a> {
 #[doc = "Field `GPTIDOV` reader - GPTimer increment/decrement override value"]
 pub struct GPTIDOV_R(crate::FieldReader<u8, u8>);
 impl GPTIDOV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         GPTIDOV_R(crate::FieldReader::new(bits))
     }

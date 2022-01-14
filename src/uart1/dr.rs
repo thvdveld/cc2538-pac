@@ -37,6 +37,7 @@ impl From<crate::W<DR_SPEC>> for W {
 #[doc = "Field `OE` reader - UART overrun error 1: New data was received when the FIFO was full, resulting in data loss. 0: No data has been lost due to a FIFO overrun."]
 pub struct OE_R(crate::FieldReader<bool, bool>);
 impl OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OE_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for OE_R {
 #[doc = "Field `BE` reader - UART break error 1: A break condition has been detected, indicating that the receive data input was held low for longer than a full-word transmission time (defined as start, data, parity, and stop bits). 0: No break condition has occurred. In FIFO mode, this error is associated with the character at the top of the FIFO. When a break occurs, only the one 0 character is loaded into the FIFO. The next character is only enabled after the received data input goes to a 1 (marking state), and the next valid start bit is received."]
 pub struct BE_R(crate::FieldReader<bool, bool>);
 impl BE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BE_R(crate::FieldReader::new(bits))
     }
@@ -65,6 +67,7 @@ impl core::ops::Deref for BE_R {
 #[doc = "Field `PE` reader - UART parity error 1: The parity of the received data character does not match the parity defined by bits 2 and 7 of the UARTLCRH register 0: No parity error has occurred. In FIFO mode, this error is associated with the character at the top of the FIFO."]
 pub struct PE_R(crate::FieldReader<bool, bool>);
 impl PE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PE_R(crate::FieldReader::new(bits))
     }
@@ -79,6 +82,7 @@ impl core::ops::Deref for PE_R {
 #[doc = "Field `FE` reader - UART framing error 1: The received character does not have a valid stop bit (a valid stop bit is 1). 0: No framing error has occurred."]
 pub struct FE_R(crate::FieldReader<bool, bool>);
 impl FE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FE_R(crate::FieldReader::new(bits))
     }
@@ -93,6 +97,7 @@ impl core::ops::Deref for FE_R {
 #[doc = "Field `DATA` reader - Data transmitted or received Data that is to be transmitted via the UART is written to this field. When read, this field contains the data that was received by the UART."]
 pub struct DATA_R(crate::FieldReader<u8, u8>);
 impl DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DATA_R(crate::FieldReader::new(bits))
     }

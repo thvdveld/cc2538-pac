@@ -37,6 +37,7 @@ impl From<crate::W<ICR_SPEC>> for W {
 #[doc = "Field `WUECINT` reader - GPTM write update error interrupt clear"]
 pub struct WUECINT_R(crate::FieldReader<bool, bool>);
 impl WUECINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         WUECINT_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> WUECINT_W<'a> {
 #[doc = "Field `TBMCINT` reader - GPTM Timer B match interrupt clear"]
 pub struct TBMCINT_R(crate::FieldReader<bool, bool>);
 impl TBMCINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBMCINT_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> TBMCINT_W<'a> {
 #[doc = "Field `CBECINT` reader - GPTM Timer B capture event Interrupt clear"]
 pub struct CBECINT_R(crate::FieldReader<bool, bool>);
 impl CBECINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CBECINT_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> CBECINT_W<'a> {
 #[doc = "Field `CBMCINT` reader - GPTM Timer B capture match interrupt clear"]
 pub struct CBMCINT_R(crate::FieldReader<bool, bool>);
 impl CBMCINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CBMCINT_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> CBMCINT_W<'a> {
 #[doc = "Field `TBTOCINT` reader - GPTM Timer B time-out interrupt clear"]
 pub struct TBTOCINT_R(crate::FieldReader<bool, bool>);
 impl TBTOCINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBTOCINT_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> TBTOCINT_W<'a> {
 #[doc = "Field `TAMCINT` reader - GPTM Timer A match interrupt clear"]
 pub struct TAMCINT_R(crate::FieldReader<bool, bool>);
 impl TAMCINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TAMCINT_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> TAMCINT_W<'a> {
 #[doc = "Field `CAECINT` reader - GPTM Timer A capture event Interrupt clear"]
 pub struct CAECINT_R(crate::FieldReader<bool, bool>);
 impl CAECINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAECINT_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> CAECINT_W<'a> {
 #[doc = "Field `CAMCINT` reader - GPTM Timer A capture match interrupt clear"]
 pub struct CAMCINT_R(crate::FieldReader<bool, bool>);
 impl CAMCINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CAMCINT_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> CAMCINT_W<'a> {
 #[doc = "Field `TATOCINT` reader - GPTM Timer A time-out interrupt clear"]
 pub struct TATOCINT_R(crate::FieldReader<bool, bool>);
 impl TATOCINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TATOCINT_R(crate::FieldReader::new(bits))
     }

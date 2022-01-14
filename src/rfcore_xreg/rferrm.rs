@@ -37,6 +37,7 @@ impl From<crate::W<RFERRM_SPEC>> for W {
 #[doc = "Field `RFERRM` reader - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
 pub struct RFERRM_R(crate::FieldReader<u8, u8>);
 impl RFERRM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RFERRM_R(crate::FieldReader::new(bits))
     }

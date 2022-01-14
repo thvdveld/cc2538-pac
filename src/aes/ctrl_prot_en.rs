@@ -39,6 +39,7 @@ on the AHB mater interface always remains 0. If this bit is set to one, the m_h_
 signal on the master AHB bus is asserted to 1 if an AHB read operation is performed, using DMA, with the key store module as destination."]
 pub struct PROT_EN_R(crate::FieldReader<bool, bool>);
 impl PROT_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROT_EN_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<SRCSHORTEN0_SPEC>> for W {
 #[doc = "Field `SHORT_ADDR_EN` reader - 7:0 part of the 24-bit word SHORT_ADDR_EN that enables or disables source address matching for each of the 24 short address table entries Optional safety feature: To ensure that an entry in the source matching table is not used while it is being updated, set the corresponding SHORT_ADDR_EN bit to 0 while updating."]
 pub struct SHORT_ADDR_EN_R(crate::FieldReader<u8, u8>);
 impl SHORT_ADDR_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SHORT_ADDR_EN_R(crate::FieldReader::new(bits))
     }

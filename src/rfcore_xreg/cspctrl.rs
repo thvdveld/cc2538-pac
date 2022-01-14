@@ -37,6 +37,7 @@ impl From<crate::W<CSPCTRL_SPEC>> for W {
 #[doc = "Field `MCU_CTRL` reader - CSP MCU control input"]
 pub struct MCU_CTRL_R(crate::FieldReader<bool, bool>);
 impl MCU_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MCU_CTRL_R(crate::FieldReader::new(bits))
     }

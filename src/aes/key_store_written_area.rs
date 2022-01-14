@@ -37,6 +37,7 @@ impl From<crate::W<KEY_STORE_WRITTEN_AREA_SPEC>> for W {
 #[doc = "Field `RAM_AREA_WRITTEN7` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
 pub struct RAM_AREA_WRITTEN7_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA_WRITTEN7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA_WRITTEN7_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> RAM_AREA_WRITTEN7_W<'a> {
 #[doc = "Field `RAM_AREA_WRITTEN6` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
 pub struct RAM_AREA_WRITTEN6_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA_WRITTEN6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA_WRITTEN6_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RAM_AREA_WRITTEN6_W<'a> {
 #[doc = "Field `RAM_AREA_WRITTEN5` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
 pub struct RAM_AREA_WRITTEN5_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA_WRITTEN5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA_WRITTEN5_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> RAM_AREA_WRITTEN5_W<'a> {
 #[doc = "Field `RAM_AREA_WRITTEN4` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
 pub struct RAM_AREA_WRITTEN4_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA_WRITTEN4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA_WRITTEN4_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> RAM_AREA_WRITTEN4_W<'a> {
 #[doc = "Field `RAM_AREA_WRITTEN3` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
 pub struct RAM_AREA_WRITTEN3_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA_WRITTEN3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA_WRITTEN3_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> RAM_AREA_WRITTEN3_W<'a> {
 #[doc = "Field `RAM_AREA_WRITTEN2` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
 pub struct RAM_AREA_WRITTEN2_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA_WRITTEN2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA_WRITTEN2_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> RAM_AREA_WRITTEN2_W<'a> {
 #[doc = "Field `RAM_AREA_WRITTEN1` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
 pub struct RAM_AREA_WRITTEN1_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA_WRITTEN1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA_WRITTEN1_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> RAM_AREA_WRITTEN1_W<'a> {
 #[doc = "Field `RAM_AREA_WRITTEN0` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
 pub struct RAM_AREA_WRITTEN0_R(crate::FieldReader<bool, bool>);
 impl RAM_AREA_WRITTEN0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RAM_AREA_WRITTEN0_R(crate::FieldReader::new(bits))
     }

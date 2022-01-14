@@ -37,6 +37,7 @@ impl From<crate::W<LPBKUART_SPEC>> for W {
 #[doc = "Field `LPBKUART` reader - UART0/1 loopback mode 0: Normal operation 1: UART0 TX (RX) connected to UART1 RX (TX)"]
 pub struct LPBKUART_R(crate::FieldReader<bool, bool>);
 impl LPBKUART_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LPBKUART_R(crate::FieldReader::new(bits))
     }

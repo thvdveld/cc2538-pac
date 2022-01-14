@@ -37,6 +37,7 @@ impl From<crate::W<DMAC_MST_RUNPARAMS_SPEC>> for W {
 #[doc = "Field `AHB_MST1_BURST_SIZE` reader - Maximum burst size that can be performed on the AHB bus 0010b = 4 bytes (default) 0011b = 8 bytes 0100b = 16 bytes 0101b = 32 bytes 0110b = 64 bytes Others = Reserved"]
 pub struct AHB_MST1_BURST_SIZE_R(crate::FieldReader<u8, u8>);
 impl AHB_MST1_BURST_SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AHB_MST1_BURST_SIZE_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> AHB_MST1_BURST_SIZE_W<'a> {
 #[doc = "Field `AHB_MST1_IDLE_EN` reader - Idle insertion between consecutive burst transfers on AHB 0: No Idle insertion 1: Idle insertion"]
 pub struct AHB_MST1_IDLE_EN_R(crate::FieldReader<bool, bool>);
 impl AHB_MST1_IDLE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AHB_MST1_IDLE_EN_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> AHB_MST1_IDLE_EN_W<'a> {
 #[doc = "Field `AHB_MST1_INCR_EN` reader - Burst length type of AHB transfer 0: Unspecified length burst transfers 1: Fixed length burst or single transfers"]
 pub struct AHB_MST1_INCR_EN_R(crate::FieldReader<bool, bool>);
 impl AHB_MST1_INCR_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AHB_MST1_INCR_EN_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> AHB_MST1_INCR_EN_W<'a> {
 #[doc = "Field `AHB_MST1_LOCK_EN` reader - Locked transform on AHB 0: Transfers are not locked 1: Transfers are locked"]
 pub struct AHB_MST1_LOCK_EN_R(crate::FieldReader<bool, bool>);
 impl AHB_MST1_LOCK_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AHB_MST1_LOCK_EN_R(crate::FieldReader::new(bits))
     }
@@ -171,6 +175,7 @@ impl<'a> AHB_MST1_LOCK_EN_W<'a> {
 #[doc = "Field `AHB_MST1_BIGEND` reader - Endianess for the AHB master 0: Little endian 1: Big endian"]
 pub struct AHB_MST1_BIGEND_R(crate::FieldReader<bool, bool>);
 impl AHB_MST1_BIGEND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AHB_MST1_BIGEND_R(crate::FieldReader::new(bits))
     }

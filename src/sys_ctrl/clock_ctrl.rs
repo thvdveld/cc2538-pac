@@ -37,6 +37,7 @@ impl From<crate::W<CLOCK_CTRL_SPEC>> for W {
 #[doc = "Field `OSC32K_CALDIS` reader - Disable calibration 32-kHz RC oscillator. 0: Enable calibration 1: Disable calibration"]
 pub struct OSC32K_CALDIS_R(crate::FieldReader<bool, bool>);
 impl OSC32K_CALDIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSC32K_CALDIS_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> OSC32K_CALDIS_W<'a> {
 #[doc = "Field `OSC32K` reader - 32-kHz clock oscillator selection 0: 32-kHz crystal oscillator 1: 32-kHz RC oscillator"]
 pub struct OSC32K_R(crate::FieldReader<bool, bool>);
 impl OSC32K_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSC32K_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> OSC32K_W<'a> {
 #[doc = "Field `AMP_DET` reader - Amplitude detector of XOSC during power up 0: No action 1: Delay qualification of XOSC until amplitude is greater than the threshold."]
 pub struct AMP_DET_R(crate::FieldReader<bool, bool>);
 impl AMP_DET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AMP_DET_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> AMP_DET_W<'a> {
 #[doc = "Field `OSC_PD` reader - 0: Power up both oscillators 1: Power down oscillator not selected by OSC bit (hardware-controlled when selected)."]
 pub struct OSC_PD_R(crate::FieldReader<bool, bool>);
 impl OSC_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSC_PD_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> OSC_PD_W<'a> {
 #[doc = "Field `OSC` reader - System clock oscillator selection 0: 32-MHz crystal oscillator 1: 16-MHz HF-RC oscillator"]
 pub struct OSC_R(crate::FieldReader<bool, bool>);
 impl OSC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSC_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> OSC_W<'a> {
 #[doc = "Field `IO_DIV` reader - I/O clock rate setting Cannot be higher than OSC setting 000: 32 MHz 001: 16 MHz 010: 8 MHz 011: 4 MHz 100: 2 MHz 101: 1 MHz 110: 0.5 MHz 111: 0.25 MHz"]
 pub struct IO_DIV_R(crate::FieldReader<u8, u8>);
 impl IO_DIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IO_DIV_R(crate::FieldReader::new(bits))
     }
@@ -243,6 +249,7 @@ impl<'a> IO_DIV_W<'a> {
 #[doc = "Field `SYS_DIV` reader - System clock rate setting Cannot be higher than OSC setting 000: 32 MHz 001: 16 MHz 010: 8 MHz 011: 4 MHz 100: 2 MHz 101: 1 MHz 110: 0.5 MHz 111: 0.25 MHz"]
 pub struct SYS_DIV_R(crate::FieldReader<u8, u8>);
 impl SYS_DIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SYS_DIV_R(crate::FieldReader::new(bits))
     }

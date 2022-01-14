@@ -37,6 +37,7 @@ impl From<crate::W<ATEST_SPEC>> for W {
 #[doc = "Field `ATEST_CTRL` reader - Controls the analog test mode: 00 0000: Disabled 00 0001: Enables the temperature sensor (see also the CCTEST_TR0 register description). Other values reserved."]
 pub struct ATEST_CTRL_R(crate::FieldReader<u8, u8>);
 impl ATEST_CTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ATEST_CTRL_R(crate::FieldReader::new(bits))
     }
