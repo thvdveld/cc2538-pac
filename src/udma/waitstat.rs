@@ -34,7 +34,7 @@ impl R {
 wait status These bits provide the tchannel wait-on-request status. Bit 0 corresponds to channel 0. 1: The corresponding channel is waiting on a request. 0: The corresponding channel is not waiting on a request."]
     #[inline(always)]
     pub fn waitreq(&self) -> WAITREQ_R {
-        WAITREQ_R::new(self.bits as u32)
+        WAITREQ_R::new(self.bits)
     }
 }
 #[doc = "DMA channel wait-on-request status This read-only register indicates that the uDMA channel is waiting on a request. A peripheral can hold off the uDMA from performing a single request until the peripheral is ready for a burst request to enhance the uDMA performance. The use of this feature is dependent on the design of the peripheral and is not controllable by software in any way. This register cannot be read when the uDMA controller is in the reset state.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [waitstat](index.html) module"]

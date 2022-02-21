@@ -57,7 +57,7 @@ impl<'a> FWDATA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = value;
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:31 - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
     #[inline(always)]
     pub fn fwdata(&self) -> FWDATA_R {
-        FWDATA_R::new(self.bits as u32)
+        FWDATA_R::new(self.bits)
     }
 }
 impl W {

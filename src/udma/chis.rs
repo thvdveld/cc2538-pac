@@ -59,7 +59,7 @@ impl<'a> CHIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = value;
         self.w
     }
 }
@@ -68,7 +68,7 @@ impl R {
 interrupt status 0: The corresponding uDMA channel has not caused an interrupt. 1: The corresponding uDMA channel has caused an interrupt. This bit is cleared by writing 1 to it."]
     #[inline(always)]
     pub fn chis(&self) -> CHIS_R {
-        CHIS_R::new(self.bits as u32)
+        CHIS_R::new(self.bits)
     }
 }
 impl W {

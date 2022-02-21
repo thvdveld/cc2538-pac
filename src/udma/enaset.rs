@@ -65,7 +65,7 @@ impl<'a> SET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = value;
         self.w
     }
 }
@@ -77,7 +77,7 @@ is enabled Bit 0 corresponds to channel 0. A bit can only be cleared by setting 
 bit in the DMAENACLR register."]
     #[inline(always)]
     pub fn set(&self) -> SET_R {
-        SET_R::new(self.bits as u32)
+        SET_R::new(self.bits)
     }
 }
 impl W {

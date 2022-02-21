@@ -59,7 +59,7 @@ impl<'a> CHASGN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = value;
         self.w
     }
 }
@@ -68,7 +68,7 @@ impl R {
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
     #[inline(always)]
     pub fn chasgn(&self) -> CHASGN_R {
-        CHASGN_R::new(self.bits as u32)
+        CHASGN_R::new(self.bits)
     }
 }
 impl W {

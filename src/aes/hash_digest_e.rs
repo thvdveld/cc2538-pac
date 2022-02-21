@@ -59,7 +59,7 @@ impl<'a> HASH_DIGEST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = value;
         self.w
     }
 }
@@ -68,7 +68,7 @@ impl R {
 Hash digest registers Write operation: Continued hash: These registers should be written with the context data, before the start of a resumed hash session (the new_hash bit in the HASH_MODE register is 0 when starting a hash session). New hash: When initiating a new hash session (the new_hash bit in the HASH_MODE register is high), the internal digest registers are automatically set to the SHA-256 algorithm constant and these register should not be written. Reading from these registers provides the intermediate hash result (non-final hash operation) or the final hash result (final hash operation) after data processing."]
     #[inline(always)]
     pub fn hash_digest(&self) -> HASH_DIGEST_R {
-        HASH_DIGEST_R::new(self.bits as u32)
+        HASH_DIGEST_R::new(self.bits)
     }
 }
 impl W {

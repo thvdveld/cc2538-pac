@@ -1,3 +1,18 @@
+#[doc = "Register `AES_C_LENGTH_0` reader"]
+pub struct R(crate::R<AES_C_LENGTH_0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<AES_C_LENGTH_0_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<AES_C_LENGTH_0_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<AES_C_LENGTH_0_SPEC>) -> Self {
+        R(reader)
+    }
+}
 #[doc = "Register `AES_C_LENGTH_0` writer"]
 pub struct W(crate::W<AES_C_LENGTH_0_SPEC>);
 impl core::ops::Deref for W {
@@ -29,7 +44,7 @@ impl<'a> C_LENGTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = value;
         self.w
     }
 }
@@ -48,10 +63,14 @@ of the crypto length registers (LSW and MSW) store the cryptographic data length
         self
     }
 }
-#[doc = "AES crypto length registers (LSW) These registers are used to write the Length values to the EIP-120t. While processing, the length values decrement to 0. If both lengths are 0, the data stream is finished and a new context is requested. For basic AES modes (ECB, CBC, and CTR), a crypto length of 0 can be written if multiple streams need to be processed with the same key. Writing 0 length results in continued data requests until a new context is written. For the other modes (CBC-MAC, GCM, and CCM) no (new) data requests are done if the length decrements to or equals 0. It is advised to write a new length per packet. If the length registers decrement to 0, no new data is processed until a new context or length value is written. When writing a new mode without writing the length registers, the length register values from the previous context is reused.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [aes_c_length_0](index.html) module"]
+#[doc = "AES crypto length registers (LSW) These registers are used to write the Length values to the EIP-120t. While processing, the length values decrement to 0. If both lengths are 0, the data stream is finished and a new context is requested. For basic AES modes (ECB, CBC, and CTR), a crypto length of 0 can be written if multiple streams need to be processed with the same key. Writing 0 length results in continued data requests until a new context is written. For the other modes (CBC-MAC, GCM, and CCM) no (new) data requests are done if the length decrements to or equals 0. It is advised to write a new length per packet. If the length registers decrement to 0, no new data is processed until a new context or length value is written. When writing a new mode without writing the length registers, the length register values from the previous context is reused.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [aes_c_length_0](index.html) module"]
 pub struct AES_C_LENGTH_0_SPEC;
 impl crate::RegisterSpec for AES_C_LENGTH_0_SPEC {
     type Ux = u32;
+}
+#[doc = "`read()` method returns [aes_c_length_0::R](R) reader structure"]
+impl crate::Readable for AES_C_LENGTH_0_SPEC {
+    type Reader = R;
 }
 #[doc = "`write(|w| ..)` method takes [aes_c_length_0::W](W) writer structure"]
 impl crate::Writable for AES_C_LENGTH_0_SPEC {

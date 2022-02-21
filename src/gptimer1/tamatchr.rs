@@ -57,7 +57,7 @@ impl<'a> TAMR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value as u32;
+        self.w.bits = value;
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:31 - GPTM Timer A match register"]
     #[inline(always)]
     pub fn tamr(&self) -> TAMR_R {
-        TAMR_R::new(self.bits as u32)
+        TAMR_R::new(self.bits)
     }
 }
 impl W {

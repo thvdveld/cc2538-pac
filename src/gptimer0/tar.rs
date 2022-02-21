@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:31 - GPTM Timer A register"]
     #[inline(always)]
     pub fn tar(&self) -> TAR_R {
-        TAR_R::new(self.bits as u32)
+        TAR_R::new(self.bits)
     }
 }
 #[doc = "GPTM Timer A This register shows the current value of the Timer A counter. When a GPTM is configured to one of the 32-bit modes, TAR appears as a 32-bit register (the upper 16-bits correspond to the contents of the GPTM Timer B (TBR) register). In the16-bit Input edge count, input edge time, and PWM modes, bits \\[15:0\\]
