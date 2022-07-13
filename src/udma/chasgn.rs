@@ -36,33 +36,10 @@ impl From<crate::W<CHASGN_SPEC>> for W {
 }
 #[doc = "Field `CHASGN` reader - Channel \\[n\\]
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
-pub struct CHASGN_R(crate::FieldReader<u32, u32>);
-impl CHASGN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CHASGN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CHASGN_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CHASGN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CHASGN` writer - Channel \\[n\\]
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
-pub struct CHASGN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHASGN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CHASGN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHASGN_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
@@ -75,8 +52,8 @@ impl W {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
     #[inline(always)]
-    pub fn chasgn(&mut self) -> CHASGN_W {
-        CHASGN_W { w: self }
+    pub fn chasgn(&mut self) -> CHASGN_W<0> {
+        CHASGN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

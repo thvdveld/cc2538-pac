@@ -35,101 +35,35 @@ impl From<crate::W<DCGCSSI_SPEC>> for W {
     }
 }
 #[doc = "Field `SSI1` reader - 0: Clock for SSI1 is gated. 1: Clock for SSI1 is enabled."]
-pub struct SSI1_R(crate::FieldReader<bool, bool>);
-impl SSI1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SSI1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SSI1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SSI1_R = crate::BitReader<bool>;
 #[doc = "Field `SSI1` writer - 0: Clock for SSI1 is gated. 1: Clock for SSI1 is enabled."]
-pub struct SSI1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SSI1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type SSI1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCGCSSI_SPEC, bool, O>;
 #[doc = "Field `SSI0` reader - 0: Clock for SSI0 is gated. 1: Clock for SSI0 is enabled."]
-pub struct SSI0_R(crate::FieldReader<bool, bool>);
-impl SSI0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SSI0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SSI0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SSI0_R = crate::BitReader<bool>;
 #[doc = "Field `SSI0` writer - 0: Clock for SSI0 is gated. 1: Clock for SSI0 is enabled."]
-pub struct SSI0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SSI0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SSI0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCGCSSI_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 1 - 0: Clock for SSI1 is gated. 1: Clock for SSI1 is enabled."]
     #[inline(always)]
     pub fn ssi1(&self) -> SSI1_R {
-        SSI1_R::new(((self.bits >> 1) & 0x01) != 0)
+        SSI1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - 0: Clock for SSI0 is gated. 1: Clock for SSI0 is enabled."]
     #[inline(always)]
     pub fn ssi0(&self) -> SSI0_R {
-        SSI0_R::new((self.bits & 0x01) != 0)
+        SSI0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1 - 0: Clock for SSI1 is gated. 1: Clock for SSI1 is enabled."]
     #[inline(always)]
-    pub fn ssi1(&mut self) -> SSI1_W {
-        SSI1_W { w: self }
+    pub fn ssi1(&mut self) -> SSI1_W<1> {
+        SSI1_W::new(self)
     }
     #[doc = "Bit 0 - 0: Clock for SSI0 is gated. 1: Clock for SSI0 is enabled."]
     #[inline(always)]
-    pub fn ssi0(&mut self) -> SSI0_W {
-        SSI0_W { w: self }
+    pub fn ssi0(&mut self) -> SSI0_W<0> {
+        SSI0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

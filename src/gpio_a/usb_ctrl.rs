@@ -35,54 +35,21 @@ impl From<crate::W<USB_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `USB_EDGE_CTL` reader - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
-pub struct USB_EDGE_CTL_R(crate::FieldReader<bool, bool>);
-impl USB_EDGE_CTL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_EDGE_CTL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_EDGE_CTL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_EDGE_CTL_R = crate::BitReader<bool>;
 #[doc = "Field `USB_EDGE_CTL` writer - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
-pub struct USB_EDGE_CTL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_EDGE_CTL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type USB_EDGE_CTL_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
     #[inline(always)]
     pub fn usb_edge_ctl(&self) -> USB_EDGE_CTL_R {
-        USB_EDGE_CTL_R::new((self.bits & 0x01) != 0)
+        USB_EDGE_CTL_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
     #[inline(always)]
-    pub fn usb_edge_ctl(&mut self) -> USB_EDGE_CTL_W {
-        USB_EDGE_CTL_W { w: self }
+    pub fn usb_edge_ctl(&mut self) -> USB_EDGE_CTL_W<0> {
+        USB_EDGE_CTL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

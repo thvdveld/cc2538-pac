@@ -20,32 +20,12 @@ impl From<crate::W<DMAC_SWRES_SPEC>> for W {
     }
 }
 #[doc = "Field `SWRES` writer - Software reset enable 0 = Disabled 1 = Enabled (self-cleared to 0) Completion of the software reset must be checked through the DMAC_STATUS register."]
-pub struct SWRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWRES_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SWRES_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMAC_SWRES_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Software reset enable 0 = Disabled 1 = Enabled (self-cleared to 0) Completion of the software reset must be checked through the DMAC_STATUS register."]
     #[inline(always)]
-    pub fn swres(&mut self) -> SWRES_W {
-        SWRES_W { w: self }
+    pub fn swres(&mut self) -> SWRES_W<0> {
+        SWRES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

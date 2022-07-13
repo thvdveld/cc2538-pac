@@ -14,85 +14,33 @@ impl From<crate::R<CIF_SPEC>> for R {
     }
 }
 #[doc = "Field `SOFIF` reader - Start-of-frame interrupt flag Cleared by hardware when read"]
-pub struct SOFIF_R(crate::FieldReader<bool, bool>);
-impl SOFIF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SOFIF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SOFIF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SOFIF_R = crate::BitReader<bool>;
 #[doc = "Field `RSTIF` reader - Reset interrupt flag Cleared by hardware when read"]
-pub struct RSTIF_R(crate::FieldReader<bool, bool>);
-impl RSTIF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RSTIF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RSTIF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RSTIF_R = crate::BitReader<bool>;
 #[doc = "Field `RESUMEIF` reader - Resume interrupt flag Cleared by hardware when read"]
-pub struct RESUMEIF_R(crate::FieldReader<bool, bool>);
-impl RESUMEIF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESUMEIF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESUMEIF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESUMEIF_R = crate::BitReader<bool>;
 #[doc = "Field `SUSPENDIF` reader - Suspend interrupt flag Cleared by hardware when read"]
-pub struct SUSPENDIF_R(crate::FieldReader<bool, bool>);
-impl SUSPENDIF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SUSPENDIF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SUSPENDIF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SUSPENDIF_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 3 - Start-of-frame interrupt flag Cleared by hardware when read"]
     #[inline(always)]
     pub fn sofif(&self) -> SOFIF_R {
-        SOFIF_R::new(((self.bits >> 3) & 0x01) != 0)
+        SOFIF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Reset interrupt flag Cleared by hardware when read"]
     #[inline(always)]
     pub fn rstif(&self) -> RSTIF_R {
-        RSTIF_R::new(((self.bits >> 2) & 0x01) != 0)
+        RSTIF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Resume interrupt flag Cleared by hardware when read"]
     #[inline(always)]
     pub fn resumeif(&self) -> RESUMEIF_R {
-        RESUMEIF_R::new(((self.bits >> 1) & 0x01) != 0)
+        RESUMEIF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Suspend interrupt flag Cleared by hardware when read"]
     #[inline(always)]
     pub fn suspendif(&self) -> SUSPENDIF_R {
-        SUSPENDIF_R::new((self.bits & 0x01) != 0)
+        SUSPENDIF_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Common USB interrupt flags\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cif](index.html) module"]

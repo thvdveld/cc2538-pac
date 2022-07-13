@@ -14,25 +14,12 @@ impl From<crate::R<RSSISTAT_SPEC>> for R {
     }
 }
 #[doc = "Field `RSSI_VALID` reader - RSSI value is valid. Occurs eight symbol periods after entering RX."]
-pub struct RSSI_VALID_R(crate::FieldReader<bool, bool>);
-impl RSSI_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RSSI_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RSSI_VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RSSI_VALID_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - RSSI value is valid. Occurs eight symbol periods after entering RX."]
     #[inline(always)]
     pub fn rssi_valid(&self) -> RSSI_VALID_R {
-        RSSI_VALID_R::new((self.bits & 0x01) != 0)
+        RSSI_VALID_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "RSSI valid status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rssistat](index.html) module"]

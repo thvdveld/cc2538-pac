@@ -35,32 +35,9 @@ impl From<crate::W<F1_SPEC>> for W {
     }
 }
 #[doc = "Field `USBF1` reader - Endpoint 1 FIFO register Reading this register unloads one byte from the EP1 OUT FIFO. Writing to this register loads one byte into the EP1 IN FIFO."]
-pub struct USBF1_R(crate::FieldReader<u8, u8>);
-impl USBF1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        USBF1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBF1_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBF1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `USBF1` writer - Endpoint 1 FIFO register Reading this register unloads one byte from the EP1 OUT FIFO. Writing to this register loads one byte into the EP1 IN FIFO."]
-pub struct USBF1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBF1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type USBF1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, F1_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Endpoint 1 FIFO register Reading this register unloads one byte from the EP1 OUT FIFO. Writing to this register loads one byte into the EP1 IN FIFO."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Endpoint 1 FIFO register Reading this register unloads one byte from the EP1 OUT FIFO. Writing to this register loads one byte into the EP1 IN FIFO."]
     #[inline(always)]
-    pub fn usbf1(&mut self) -> USBF1_W {
-        USBF1_W { w: self }
+    pub fn usbf1(&mut self) -> USBF1_W<0> {
+        USBF1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

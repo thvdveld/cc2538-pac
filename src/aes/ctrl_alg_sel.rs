@@ -35,195 +35,63 @@ impl From<crate::W<CTRL_ALG_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `TAG` reader - If this bit is cleared to 0, the DMA operation involves only data. If this bit is set, the DMA operation includes a TAG (Authentication Result / Digest). For SHA-256 operation, a DMA must be set up for both input data and TAG. For any other selected module, setting this bit only allows a DMA that reads the TAG. No data allowed to be transferred to or from the selected module via the DMA."]
-pub struct TAG_R(crate::FieldReader<bool, bool>);
-impl TAG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TAG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TAG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TAG_R = crate::BitReader<bool>;
 #[doc = "Field `TAG` writer - If this bit is cleared to 0, the DMA operation involves only data. If this bit is set, the DMA operation includes a TAG (Authentication Result / Digest). For SHA-256 operation, a DMA must be set up for both input data and TAG. For any other selected module, setting this bit only allows a DMA that reads the TAG. No data allowed to be transferred to or from the selected module via the DMA."]
-pub struct TAG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
+pub type TAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_ALG_SEL_SPEC, bool, O>;
 #[doc = "Field `HASH` reader - If set to one, selects the hash engine as destination for the DMA The maximum transfer size to DMA engine is set to 64 bytes for reading and 32 bytes for writing (the latter is only applicable if the hash result is written out through the DMA)."]
-pub struct HASH_R(crate::FieldReader<bool, bool>);
-impl HASH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HASH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HASH_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HASH_R = crate::BitReader<bool>;
 #[doc = "Field `HASH` writer - If set to one, selects the hash engine as destination for the DMA The maximum transfer size to DMA engine is set to 64 bytes for reading and 32 bytes for writing (the latter is only applicable if the hash result is written out through the DMA)."]
-pub struct HASH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HASH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type HASH_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_ALG_SEL_SPEC, bool, O>;
 #[doc = "Field `AES` reader - If set to one, selects the AES engine as source/destination for the DMA The read and write maximum transfer size to the DMA engine is set to 16 bytes."]
-pub struct AES_R(crate::FieldReader<bool, bool>);
-impl AES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AES_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AES_R = crate::BitReader<bool>;
 #[doc = "Field `AES` writer - If set to one, selects the AES engine as source/destination for the DMA The read and write maximum transfer size to the DMA engine is set to 16 bytes."]
-pub struct AES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AES_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type AES_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_ALG_SEL_SPEC, bool, O>;
 #[doc = "Field `KEYSTORE` reader - If set to one, selects the Key Store as destination for the DMA The maximum transfer size to DMA engine is set to 32 bytes (however transfers of 16, 24 and 32 bytes are allowed)"]
-pub struct KEYSTORE_R(crate::FieldReader<bool, bool>);
-impl KEYSTORE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        KEYSTORE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEYSTORE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEYSTORE_R = crate::BitReader<bool>;
 #[doc = "Field `KEYSTORE` writer - If set to one, selects the Key Store as destination for the DMA The maximum transfer size to DMA engine is set to 32 bytes (however transfers of 16, 24 and 32 bytes are allowed)"]
-pub struct KEYSTORE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KEYSTORE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type KEYSTORE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_ALG_SEL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 31 - If this bit is cleared to 0, the DMA operation involves only data. If this bit is set, the DMA operation includes a TAG (Authentication Result / Digest). For SHA-256 operation, a DMA must be set up for both input data and TAG. For any other selected module, setting this bit only allows a DMA that reads the TAG. No data allowed to be transferred to or from the selected module via the DMA."]
     #[inline(always)]
     pub fn tag(&self) -> TAG_R {
-        TAG_R::new(((self.bits >> 31) & 0x01) != 0)
+        TAG_R::new(((self.bits >> 31) & 1) != 0)
     }
     #[doc = "Bit 2 - If set to one, selects the hash engine as destination for the DMA The maximum transfer size to DMA engine is set to 64 bytes for reading and 32 bytes for writing (the latter is only applicable if the hash result is written out through the DMA)."]
     #[inline(always)]
     pub fn hash(&self) -> HASH_R {
-        HASH_R::new(((self.bits >> 2) & 0x01) != 0)
+        HASH_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - If set to one, selects the AES engine as source/destination for the DMA The read and write maximum transfer size to the DMA engine is set to 16 bytes."]
     #[inline(always)]
     pub fn aes(&self) -> AES_R {
-        AES_R::new(((self.bits >> 1) & 0x01) != 0)
+        AES_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - If set to one, selects the Key Store as destination for the DMA The maximum transfer size to DMA engine is set to 32 bytes (however transfers of 16, 24 and 32 bytes are allowed)"]
     #[inline(always)]
     pub fn keystore(&self) -> KEYSTORE_R {
-        KEYSTORE_R::new((self.bits & 0x01) != 0)
+        KEYSTORE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 31 - If this bit is cleared to 0, the DMA operation involves only data. If this bit is set, the DMA operation includes a TAG (Authentication Result / Digest). For SHA-256 operation, a DMA must be set up for both input data and TAG. For any other selected module, setting this bit only allows a DMA that reads the TAG. No data allowed to be transferred to or from the selected module via the DMA."]
     #[inline(always)]
-    pub fn tag(&mut self) -> TAG_W {
-        TAG_W { w: self }
+    pub fn tag(&mut self) -> TAG_W<31> {
+        TAG_W::new(self)
     }
     #[doc = "Bit 2 - If set to one, selects the hash engine as destination for the DMA The maximum transfer size to DMA engine is set to 64 bytes for reading and 32 bytes for writing (the latter is only applicable if the hash result is written out through the DMA)."]
     #[inline(always)]
-    pub fn hash(&mut self) -> HASH_W {
-        HASH_W { w: self }
+    pub fn hash(&mut self) -> HASH_W<2> {
+        HASH_W::new(self)
     }
     #[doc = "Bit 1 - If set to one, selects the AES engine as source/destination for the DMA The read and write maximum transfer size to the DMA engine is set to 16 bytes."]
     #[inline(always)]
-    pub fn aes(&mut self) -> AES_W {
-        AES_W { w: self }
+    pub fn aes(&mut self) -> AES_W<1> {
+        AES_W::new(self)
     }
     #[doc = "Bit 0 - If set to one, selects the Key Store as destination for the DMA The maximum transfer size to DMA engine is set to 32 bytes (however transfers of 16, 24 and 32 bytes are allowed)"]
     #[inline(always)]
-    pub fn keystore(&mut self) -> KEYSTORE_W {
-        KEYSTORE_W { w: self }
+    pub fn keystore(&mut self) -> KEYSTORE_W<0> {
+        KEYSTORE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

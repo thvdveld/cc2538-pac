@@ -35,54 +35,21 @@ impl From<crate::W<USBCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `USB_STB` reader - USB PHY stand-by override bit When this bit is cleared to 0 (default state) the USB module cannot change the stand-by mode of the PHY (USB pads) and the PHY is forced out of stand-by mode. This bit must be 1 as well as the stand-by control from the USB controller, before the mode of the PHY is stand-by."]
-pub struct USB_STB_R(crate::FieldReader<bool, bool>);
-impl USB_STB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_STB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_STB_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_STB_R = crate::BitReader<bool>;
 #[doc = "Field `USB_STB` writer - USB PHY stand-by override bit When this bit is cleared to 0 (default state) the USB module cannot change the stand-by mode of the PHY (USB pads) and the PHY is forced out of stand-by mode. This bit must be 1 as well as the stand-by control from the USB controller, before the mode of the PHY is stand-by."]
-pub struct USB_STB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_STB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type USB_STB_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - USB PHY stand-by override bit When this bit is cleared to 0 (default state) the USB module cannot change the stand-by mode of the PHY (USB pads) and the PHY is forced out of stand-by mode. This bit must be 1 as well as the stand-by control from the USB controller, before the mode of the PHY is stand-by."]
     #[inline(always)]
     pub fn usb_stb(&self) -> USB_STB_R {
-        USB_STB_R::new((self.bits & 0x01) != 0)
+        USB_STB_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - USB PHY stand-by override bit When this bit is cleared to 0 (default state) the USB module cannot change the stand-by mode of the PHY (USB pads) and the PHY is forced out of stand-by mode. This bit must be 1 as well as the stand-by control from the USB controller, before the mode of the PHY is stand-by."]
     #[inline(always)]
-    pub fn usb_stb(&mut self) -> USB_STB_W {
-        USB_STB_W { w: self }
+    pub fn usb_stb(&mut self) -> USB_STB_W<0> {
+        USB_STB_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

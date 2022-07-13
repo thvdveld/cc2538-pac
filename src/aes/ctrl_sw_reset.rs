@@ -35,54 +35,21 @@ impl From<crate::W<CTRL_SW_RESET_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_RESET` reader - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
-pub struct SW_RESET_R(crate::FieldReader<bool, bool>);
-impl SW_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SW_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `SW_RESET` writer - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
-pub struct SW_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SW_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SW_RESET_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
     #[inline(always)]
     pub fn sw_reset(&self) -> SW_RESET_R {
-        SW_RESET_R::new((self.bits & 0x01) != 0)
+        SW_RESET_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
     #[inline(always)]
-    pub fn sw_reset(&mut self) -> SW_RESET_W {
-        SW_RESET_W { w: self }
+    pub fn sw_reset(&mut self) -> SW_RESET_W<0> {
+        SW_RESET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

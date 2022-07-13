@@ -35,32 +35,9 @@ impl From<crate::W<TXFILTCFG_SPEC>> for W {
     }
 }
 #[doc = "Field `FC` reader - Drives signal rfr_txfilt_fc"]
-pub struct FC_R(crate::FieldReader<u8, u8>);
-impl FC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FC_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FC` writer - Drives signal rfr_txfilt_fc"]
-pub struct FC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type FC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXFILTCFG_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Drives signal rfr_txfilt_fc"]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Drives signal rfr_txfilt_fc"]
     #[inline(always)]
-    pub fn fc(&mut self) -> FC_W {
-        FC_W { w: self }
+    pub fn fc(&mut self) -> FC_W<0> {
+        FC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

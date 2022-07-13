@@ -35,92 +35,24 @@ impl From<crate::W<SEQ_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET` reader - Option program ROM: Reset value = 0. Read/Write, reset value 0b (ZERO). Writing 1b resets the sequencer, write to 0b to restart operations again. As the reset value is 0b, the sequencer will automatically start operations executing from program ROM. This bit should always be written with zero and ignored when reading this register. Option Program RAM: Reset value =1. Read/Write, reset value 1b (ONE). When 1b, the sequencer is held in a reset state and the PKA_PROGRAM area is accessible for loading the sequencer program (while the PKA_DATA_RAM is inaccessible), write to 0b to (re)start sequencer operations and disable PKA_PROGRAM area accessibility (also enables the PKA_DATA_RAM accesses). Resetting the sequencer (in order to load other firmware) should only be done when the PKA Engine is not performing any operations (i.e. the run bit in the PKA_FUNCTION register should be zero)."]
-pub struct RESET_R(crate::FieldReader<bool, bool>);
-impl RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESET_R = crate::BitReader<bool>;
 #[doc = "Field `RESET` writer - Option program ROM: Reset value = 0. Read/Write, reset value 0b (ZERO). Writing 1b resets the sequencer, write to 0b to restart operations again. As the reset value is 0b, the sequencer will automatically start operations executing from program ROM. This bit should always be written with zero and ignored when reading this register. Option Program RAM: Reset value =1. Read/Write, reset value 1b (ONE). When 1b, the sequencer is held in a reset state and the PKA_PROGRAM area is accessible for loading the sequencer program (while the PKA_DATA_RAM is inaccessible), write to 0b to (re)start sequencer operations and disable PKA_PROGRAM area accessibility (also enables the PKA_DATA_RAM accesses). Resetting the sequencer (in order to load other firmware) should only be done when the PKA Engine is not performing any operations (i.e. the run bit in the PKA_FUNCTION register should be zero)."]
-pub struct RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
+pub type RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SEQ_CTRL_SPEC, bool, O>;
 #[doc = "Field `SEQUENCER_STATUS` reader - These read-only bits can be used by the sequencer to communicate status to the outside world. Bit \\[8\\]
 is also used as sequencer interrupt, with the complement of this bit ORed into the run bit in PKA_FUNCTION. This field should always be written with zeroes and ignored when reading this register."]
-pub struct SEQUENCER_STATUS_R(crate::FieldReader<u8, u8>);
-impl SEQUENCER_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEQUENCER_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEQUENCER_STATUS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEQUENCER_STATUS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SW_CONTROL_STATUS` reader - These bits can be used by software to trigger sequencer operations. External logic can set these bits by writing 1b, cannot reset them by writing 0b. The sequencer can reset these bits by writing 0b, cannot set them by writing 1b. Setting the run bit in PKA_FUNCTION together with a nonzero sequencer operations field automatically sets bit \\[0\\]
 here. This field should always be written with zeroes and ignored when reading this register."]
-pub struct SW_CONTROL_STATUS_R(crate::FieldReader<u8, u8>);
-impl SW_CONTROL_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SW_CONTROL_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_CONTROL_STATUS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_CONTROL_STATUS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SW_CONTROL_STATUS` writer - These bits can be used by software to trigger sequencer operations. External logic can set these bits by writing 1b, cannot reset them by writing 0b. The sequencer can reset these bits by writing 0b, cannot set them by writing 1b. Setting the run bit in PKA_FUNCTION together with a nonzero sequencer operations field automatically sets bit \\[0\\]
 here. This field should always be written with zeroes and ignored when reading this register."]
-pub struct SW_CONTROL_STATUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_CONTROL_STATUS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SW_CONTROL_STATUS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SEQ_CTRL_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bit 31 - Option program ROM: Reset value = 0. Read/Write, reset value 0b (ZERO). Writing 1b resets the sequencer, write to 0b to restart operations again. As the reset value is 0b, the sequencer will automatically start operations executing from program ROM. This bit should always be written with zero and ignored when reading this register. Option Program RAM: Reset value =1. Read/Write, reset value 1b (ONE). When 1b, the sequencer is held in a reset state and the PKA_PROGRAM area is accessible for loading the sequencer program (while the PKA_DATA_RAM is inaccessible), write to 0b to (re)start sequencer operations and disable PKA_PROGRAM area accessibility (also enables the PKA_DATA_RAM accesses). Resetting the sequencer (in order to load other firmware) should only be done when the PKA Engine is not performing any operations (i.e. the run bit in the PKA_FUNCTION register should be zero)."]
     #[inline(always)]
     pub fn reset(&self) -> RESET_R {
-        RESET_R::new(((self.bits >> 31) & 0x01) != 0)
+        RESET_R::new(((self.bits >> 31) & 1) != 0)
     }
     #[doc = "Bits 8:15 - These read-only bits can be used by the sequencer to communicate status to the outside world. Bit \\[8\\]
 is also used as sequencer interrupt, with the complement of this bit ORed into the run bit in PKA_FUNCTION. This field should always be written with zeroes and ignored when reading this register."]
@@ -138,14 +70,14 @@ here. This field should always be written with zeroes and ignored when reading t
 impl W {
     #[doc = "Bit 31 - Option program ROM: Reset value = 0. Read/Write, reset value 0b (ZERO). Writing 1b resets the sequencer, write to 0b to restart operations again. As the reset value is 0b, the sequencer will automatically start operations executing from program ROM. This bit should always be written with zero and ignored when reading this register. Option Program RAM: Reset value =1. Read/Write, reset value 1b (ONE). When 1b, the sequencer is held in a reset state and the PKA_PROGRAM area is accessible for loading the sequencer program (while the PKA_DATA_RAM is inaccessible), write to 0b to (re)start sequencer operations and disable PKA_PROGRAM area accessibility (also enables the PKA_DATA_RAM accesses). Resetting the sequencer (in order to load other firmware) should only be done when the PKA Engine is not performing any operations (i.e. the run bit in the PKA_FUNCTION register should be zero)."]
     #[inline(always)]
-    pub fn reset(&mut self) -> RESET_W {
-        RESET_W { w: self }
+    pub fn reset(&mut self) -> RESET_W<31> {
+        RESET_W::new(self)
     }
     #[doc = "Bits 0:7 - These bits can be used by software to trigger sequencer operations. External logic can set these bits by writing 1b, cannot reset them by writing 0b. The sequencer can reset these bits by writing 0b, cannot set them by writing 1b. Setting the run bit in PKA_FUNCTION together with a nonzero sequencer operations field automatically sets bit \\[0\\]
 here. This field should always be written with zeroes and ignored when reading this register."]
     #[inline(always)]
-    pub fn sw_control_status(&mut self) -> SW_CONTROL_STATUS_W {
-        SW_CONTROL_STATUS_W { w: self }
+    pub fn sw_control_status(&mut self) -> SW_CONTROL_STATUS_W<0> {
+        SW_CONTROL_STATUS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

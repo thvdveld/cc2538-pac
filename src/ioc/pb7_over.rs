@@ -35,32 +35,9 @@ impl From<crate::W<PB7_OVER_SPEC>> for W {
     }
 }
 #[doc = "Field `PB7_over` reader - 0x8: oe - output enable 0x4: pue - pullup enable 0x2: pde - pulldown enable 0x1: ana - analog enable"]
-pub struct PB7_OVER_R(crate::FieldReader<u8, u8>);
-impl PB7_OVER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PB7_OVER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PB7_OVER_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PB7_OVER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PB7_over` writer - 0x8: oe - output enable 0x4: pue - pullup enable 0x2: pde - pulldown enable 0x1: ana - analog enable"]
-pub struct PB7_OVER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PB7_OVER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type PB7_OVER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PB7_OVER_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - 0x8: oe - output enable 0x4: pue - pullup enable 0x2: pde - pulldown enable 0x1: ana - analog enable"]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - 0x8: oe - output enable 0x4: pue - pullup enable 0x2: pde - pulldown enable 0x1: ana - analog enable"]
     #[inline(always)]
-    pub fn pb7_over(&mut self) -> PB7_OVER_W {
-        PB7_OVER_W { w: self }
+    pub fn pb7_over(&mut self) -> PB7_OVER_W<0> {
+        PB7_OVER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

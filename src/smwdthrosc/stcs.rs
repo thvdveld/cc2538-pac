@@ -35,54 +35,21 @@ impl From<crate::W<STCS_SPEC>> for W {
     }
 }
 #[doc = "Field `VALID` reader - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
-pub struct VALID_R(crate::FieldReader<bool, bool>);
-impl VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VALID_R = crate::BitReader<bool>;
 #[doc = "Field `VALID` writer - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
-pub struct VALID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VALID_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type VALID_W<'a, const O: u8> = crate::BitWriter<'a, u32, STCS_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
     #[inline(always)]
     pub fn valid(&self) -> VALID_R {
-        VALID_R::new((self.bits & 0x01) != 0)
+        VALID_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
     #[inline(always)]
-    pub fn valid(&mut self) -> VALID_W {
-        VALID_W { w: self }
+    pub fn valid(&mut self) -> VALID_W<0> {
+        VALID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

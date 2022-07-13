@@ -36,33 +36,11 @@ impl From<crate::W<HASH_DIGEST_F_SPEC>> for W {
 }
 #[doc = "Field `HASH_DIGEST` reader - HASH_DIGEST\\[191:160\\]
 Hash digest registers Write operation: Continued hash: These registers should be written with the context data, before the start of a resumed hash session (the new_hash bit in the HASH_MODE register is 0 when starting a hash session). New hash: When initiating a new hash session (the new_hash bit in the HASH_MODE register is high), the internal digest registers are automatically set to the SHA-256 algorithm constant and these register should not be written. Reading from these registers provides the intermediate hash result (non-final hash operation) or the final hash result (final hash operation) after data processing."]
-pub struct HASH_DIGEST_R(crate::FieldReader<u32, u32>);
-impl HASH_DIGEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        HASH_DIGEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HASH_DIGEST_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HASH_DIGEST_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HASH_DIGEST` writer - HASH_DIGEST\\[191:160\\]
 Hash digest registers Write operation: Continued hash: These registers should be written with the context data, before the start of a resumed hash session (the new_hash bit in the HASH_MODE register is 0 when starting a hash session). New hash: When initiating a new hash session (the new_hash bit in the HASH_MODE register is high), the internal digest registers are automatically set to the SHA-256 algorithm constant and these register should not be written. Reading from these registers provides the intermediate hash result (non-final hash operation) or the final hash result (final hash operation) after data processing."]
-pub struct HASH_DIGEST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HASH_DIGEST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type HASH_DIGEST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, HASH_DIGEST_F_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - HASH_DIGEST\\[191:160\\]
 Hash digest registers Write operation: Continued hash: These registers should be written with the context data, before the start of a resumed hash session (the new_hash bit in the HASH_MODE register is 0 when starting a hash session). New hash: When initiating a new hash session (the new_hash bit in the HASH_MODE register is high), the internal digest registers are automatically set to the SHA-256 algorithm constant and these register should not be written. Reading from these registers provides the intermediate hash result (non-final hash operation) or the final hash result (final hash operation) after data processing."]
@@ -75,8 +53,8 @@ impl W {
     #[doc = "Bits 0:31 - HASH_DIGEST\\[191:160\\]
 Hash digest registers Write operation: Continued hash: These registers should be written with the context data, before the start of a resumed hash session (the new_hash bit in the HASH_MODE register is 0 when starting a hash session). New hash: When initiating a new hash session (the new_hash bit in the HASH_MODE register is high), the internal digest registers are automatically set to the SHA-256 algorithm constant and these register should not be written. Reading from these registers provides the intermediate hash result (non-final hash operation) or the final hash result (final hash operation) after data processing."]
     #[inline(always)]
-    pub fn hash_digest(&mut self) -> HASH_DIGEST_W {
-        HASH_DIGEST_W { w: self }
+    pub fn hash_digest(&mut self) -> HASH_DIGEST_W<0> {
+        HASH_DIGEST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

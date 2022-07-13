@@ -35,74 +35,18 @@ impl From<crate::W<FSCAL2_SPEC>> for W {
     }
 }
 #[doc = "Field `VCO_CAPARR_OE` reader - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
-pub struct VCO_CAPARR_OE_R(crate::FieldReader<bool, bool>);
-impl VCO_CAPARR_OE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VCO_CAPARR_OE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VCO_CAPARR_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VCO_CAPARR_OE_R = crate::BitReader<bool>;
 #[doc = "Field `VCO_CAPARR_OE` writer - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
-pub struct VCO_CAPARR_OE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VCO_CAPARR_OE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type VCO_CAPARR_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSCAL2_SPEC, bool, O>;
 #[doc = "Field `VCO_CAPARR` reader - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
-pub struct VCO_CAPARR_R(crate::FieldReader<u8, u8>);
-impl VCO_CAPARR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VCO_CAPARR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VCO_CAPARR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VCO_CAPARR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VCO_CAPARR` writer - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
-pub struct VCO_CAPARR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VCO_CAPARR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type VCO_CAPARR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCAL2_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bit 6 - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
     #[inline(always)]
     pub fn vco_caparr_oe(&self) -> VCO_CAPARR_OE_R {
-        VCO_CAPARR_OE_R::new(((self.bits >> 6) & 0x01) != 0)
+        VCO_CAPARR_OE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 0:5 - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
     #[inline(always)]
@@ -113,13 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 6 - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
     #[inline(always)]
-    pub fn vco_caparr_oe(&mut self) -> VCO_CAPARR_OE_W {
-        VCO_CAPARR_OE_W { w: self }
+    pub fn vco_caparr_oe(&mut self) -> VCO_CAPARR_OE_W<6> {
+        VCO_CAPARR_OE_W::new(self)
     }
     #[doc = "Bits 0:5 - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
     #[inline(always)]
-    pub fn vco_caparr(&mut self) -> VCO_CAPARR_W {
-        VCO_CAPARR_W { w: self }
+    pub fn vco_caparr(&mut self) -> VCO_CAPARR_W<0> {
+        VCO_CAPARR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

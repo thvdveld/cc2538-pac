@@ -14,65 +14,26 @@ impl From<crate::R<DMAC_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `PORT_ERR` reader - Reflects possible transfer errors on the AHB port."]
-pub struct PORT_ERR_R(crate::FieldReader<bool, bool>);
-impl PORT_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PORT_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PORT_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PORT_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `CH1_ACT` reader - A value of 1 indicates that channel 1 is active (DMA transfer on-going)."]
-pub struct CH1_ACT_R(crate::FieldReader<bool, bool>);
-impl CH1_ACT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH1_ACT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH1_ACT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH1_ACT_R = crate::BitReader<bool>;
 #[doc = "Field `CH0_ACT` reader - A value of 1 indicates that channel 0 is active (DMA transfer on-going)."]
-pub struct CH0_ACT_R(crate::FieldReader<bool, bool>);
-impl CH0_ACT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH0_ACT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH0_ACT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH0_ACT_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 17 - Reflects possible transfer errors on the AHB port."]
     #[inline(always)]
     pub fn port_err(&self) -> PORT_ERR_R {
-        PORT_ERR_R::new(((self.bits >> 17) & 0x01) != 0)
+        PORT_ERR_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 1 - A value of 1 indicates that channel 1 is active (DMA transfer on-going)."]
     #[inline(always)]
     pub fn ch1_act(&self) -> CH1_ACT_R {
-        CH1_ACT_R::new(((self.bits >> 1) & 0x01) != 0)
+        CH1_ACT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - A value of 1 indicates that channel 0 is active (DMA transfer on-going)."]
     #[inline(always)]
     pub fn ch0_act(&self) -> CH0_ACT_R {
-        CH0_ACT_R::new((self.bits & 0x01) != 0)
+        CH0_ACT_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "DMAC status This register provides the actual state of each DMA channel. It also reports port errors in case these were received by the master interface module during the data transfer.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmac_status](index.html) module"]

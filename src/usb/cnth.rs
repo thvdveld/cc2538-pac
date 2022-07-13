@@ -14,25 +14,12 @@ impl From<crate::R<CNTH_SPEC>> for R {
     }
 }
 #[doc = "Field `FIFOCNTH` reader - Bits 10:8 of the of the number of bytes received in the packet in the OUT endpoint {1-5} FIFO Valid only when USB_CSOL.OUTPKTRDY is set"]
-pub struct FIFOCNTH_R(crate::FieldReader<u8, u8>);
-impl FIFOCNTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FIFOCNTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFOCNTH_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFOCNTH_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:2 - Bits 10:8 of the of the number of bytes received in the packet in the OUT endpoint {1-5} FIFO Valid only when USB_CSOL.OUTPKTRDY is set"]
     #[inline(always)]
     pub fn fifocnth(&self) -> FIFOCNTH_R {
-        FIFOCNTH_R::new((self.bits & 0x07) as u8)
+        FIFOCNTH_R::new((self.bits & 7) as u8)
     }
 }
 #[doc = "Indexed register: For USB_INDEX = 1-5: Number of received in the OUT endpoint {1-5} FIFO (high byte)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnth](index.html) module"]

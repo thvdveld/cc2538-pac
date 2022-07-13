@@ -37,126 +37,38 @@ impl From<crate::W<FRMFILT0_SPEC>> for W {
 #[doc = "Field `MAX_FRAME_VERSION` reader - Used for filtering on the frame version field of the frame control field (FCF) If FCF\\[13:12\\]
 (the frame version subfield) is higher than MAX_FRAME_VERSION\\[1:0\\]
 and frame filtering is enabled, the frame is rejected."]
-pub struct MAX_FRAME_VERSION_R(crate::FieldReader<u8, u8>);
-impl MAX_FRAME_VERSION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MAX_FRAME_VERSION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAX_FRAME_VERSION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAX_FRAME_VERSION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MAX_FRAME_VERSION` writer - Used for filtering on the frame version field of the frame control field (FCF) If FCF\\[13:12\\]
 (the frame version subfield) is higher than MAX_FRAME_VERSION\\[1:0\\]
 and frame filtering is enabled, the frame is rejected."]
-pub struct MAX_FRAME_VERSION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAX_FRAME_VERSION_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
-        self.w
-    }
-}
+pub type MAX_FRAME_VERSION_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FRMFILT0_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PAN_COORDINATOR` reader - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
-pub struct PAN_COORDINATOR_R(crate::FieldReader<bool, bool>);
-impl PAN_COORDINATOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAN_COORDINATOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAN_COORDINATOR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAN_COORDINATOR_R = crate::BitReader<bool>;
 #[doc = "Field `PAN_COORDINATOR` writer - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
-pub struct PAN_COORDINATOR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAN_COORDINATOR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type PAN_COORDINATOR_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRMFILT0_SPEC, bool, O>;
 #[doc = "Field `FRAME_FILTER_EN` reader - Enables frame filtering When this bit is set, the radio performs frame filtering as specified in section 7.5.6.2 of IEEE 802.15.4(b), third filtering level. FRMFILT0\\[6:1\\]
 and FRMFILT1\\[7:1\\], together with the local address information, define the behavior of the filtering algorithm. 0: Frame filtering off. (FRMFILT0\\[6:1\\], FRMFILT1\\[7:1\\]
 and SRCMATCH\\[2:0\\]
 are don't care.) 1: Frame filtering on."]
-pub struct FRAME_FILTER_EN_R(crate::FieldReader<bool, bool>);
-impl FRAME_FILTER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FRAME_FILTER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAME_FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRAME_FILTER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `FRAME_FILTER_EN` writer - Enables frame filtering When this bit is set, the radio performs frame filtering as specified in section 7.5.6.2 of IEEE 802.15.4(b), third filtering level. FRMFILT0\\[6:1\\]
 and FRMFILT1\\[7:1\\], together with the local address information, define the behavior of the filtering algorithm. 0: Frame filtering off. (FRMFILT0\\[6:1\\], FRMFILT1\\[7:1\\]
 and SRCMATCH\\[2:0\\]
 are don't care.) 1: Frame filtering on."]
-pub struct FRAME_FILTER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAME_FILTER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type FRAME_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRMFILT0_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 2:3 - Used for filtering on the frame version field of the frame control field (FCF) If FCF\\[13:12\\]
 (the frame version subfield) is higher than MAX_FRAME_VERSION\\[1:0\\]
 and frame filtering is enabled, the frame is rejected."]
     #[inline(always)]
     pub fn max_frame_version(&self) -> MAX_FRAME_VERSION_R {
-        MAX_FRAME_VERSION_R::new(((self.bits >> 2) & 0x03) as u8)
+        MAX_FRAME_VERSION_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 1 - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
     #[inline(always)]
     pub fn pan_coordinator(&self) -> PAN_COORDINATOR_R {
-        PAN_COORDINATOR_R::new(((self.bits >> 1) & 0x01) != 0)
+        PAN_COORDINATOR_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Enables frame filtering When this bit is set, the radio performs frame filtering as specified in section 7.5.6.2 of IEEE 802.15.4(b), third filtering level. FRMFILT0\\[6:1\\]
 and FRMFILT1\\[7:1\\], together with the local address information, define the behavior of the filtering algorithm. 0: Frame filtering off. (FRMFILT0\\[6:1\\], FRMFILT1\\[7:1\\]
@@ -164,7 +76,7 @@ and SRCMATCH\\[2:0\\]
 are don't care.) 1: Frame filtering on."]
     #[inline(always)]
     pub fn frame_filter_en(&self) -> FRAME_FILTER_EN_R {
-        FRAME_FILTER_EN_R::new((self.bits & 0x01) != 0)
+        FRAME_FILTER_EN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
@@ -172,21 +84,21 @@ impl W {
 (the frame version subfield) is higher than MAX_FRAME_VERSION\\[1:0\\]
 and frame filtering is enabled, the frame is rejected."]
     #[inline(always)]
-    pub fn max_frame_version(&mut self) -> MAX_FRAME_VERSION_W {
-        MAX_FRAME_VERSION_W { w: self }
+    pub fn max_frame_version(&mut self) -> MAX_FRAME_VERSION_W<2> {
+        MAX_FRAME_VERSION_W::new(self)
     }
     #[doc = "Bit 1 - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
     #[inline(always)]
-    pub fn pan_coordinator(&mut self) -> PAN_COORDINATOR_W {
-        PAN_COORDINATOR_W { w: self }
+    pub fn pan_coordinator(&mut self) -> PAN_COORDINATOR_W<1> {
+        PAN_COORDINATOR_W::new(self)
     }
     #[doc = "Bit 0 - Enables frame filtering When this bit is set, the radio performs frame filtering as specified in section 7.5.6.2 of IEEE 802.15.4(b), third filtering level. FRMFILT0\\[6:1\\]
 and FRMFILT1\\[7:1\\], together with the local address information, define the behavior of the filtering algorithm. 0: Frame filtering off. (FRMFILT0\\[6:1\\], FRMFILT1\\[7:1\\]
 and SRCMATCH\\[2:0\\]
 are don't care.) 1: Frame filtering on."]
     #[inline(always)]
-    pub fn frame_filter_en(&mut self) -> FRAME_FILTER_EN_W {
-        FRAME_FILTER_EN_W { w: self }
+    pub fn frame_filter_en(&mut self) -> FRAME_FILTER_EN_W<0> {
+        FRAME_FILTER_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

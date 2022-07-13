@@ -14,20 +14,7 @@ impl From<crate::R<LSS_SPEC>> for R {
     }
 }
 #[doc = "Field `TSS` reader - Timer snap shot This field contains the value of the free-running timer when either the sync edge 5 or the sync edge 1 was detected."]
-pub struct TSS_R(crate::FieldReader<u16, u16>);
-impl TSS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TSS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSS_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TSS_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Timer snap shot This field contains the value of the free-running timer when either the sync edge 5 or the sync edge 1 was detected."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<OAR_SPEC>> for W {
     }
 }
 #[doc = "Field `OAR` reader - I2C slave own address This field specifies bits A6 through A0 of the slave address."]
-pub struct OAR_R(crate::FieldReader<u8, u8>);
-impl OAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OAR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OAR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OAR` writer - I2C slave own address This field specifies bits A6 through A0 of the slave address."]
-pub struct OAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OAR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type OAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OAR_SPEC, u8, u8, 7, O>;
 impl R {
     #[doc = "Bits 0:6 - I2C slave own address This field specifies bits A6 through A0 of the slave address."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - I2C slave own address This field specifies bits A6 through A0 of the slave address."]
     #[inline(always)]
-    pub fn oar(&mut self) -> OAR_W {
-        OAR_W { w: self }
+    pub fn oar(&mut self) -> OAR_W<0> {
+        OAR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

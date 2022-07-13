@@ -35,188 +35,63 @@ impl From<crate::W<POW_SPEC>> for W {
     }
 }
 #[doc = "Field `ISOWAITSOF` reader - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
-pub struct ISOWAITSOF_R(crate::FieldReader<bool, bool>);
-impl ISOWAITSOF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ISOWAITSOF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ISOWAITSOF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ISOWAITSOF_R = crate::BitReader<bool>;
 #[doc = "Field `ISOWAITSOF` writer - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
-pub struct ISOWAITSOF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ISOWAITSOF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type ISOWAITSOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, POW_SPEC, bool, O>;
 #[doc = "Field `RST` reader - Indicates that reset signaling is present on the bus"]
-pub struct RST_R(crate::FieldReader<bool, bool>);
-impl RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RST_R = crate::BitReader<bool>;
 #[doc = "Field `RESUME` reader - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
-pub struct RESUME_R(crate::FieldReader<bool, bool>);
-impl RESUME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESUME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESUME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESUME_R = crate::BitReader<bool>;
 #[doc = "Field `RESUME` writer - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
-pub struct RESUME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESUME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type RESUME_W<'a, const O: u8> = crate::BitWriter<'a, u32, POW_SPEC, bool, O>;
 #[doc = "Field `SUSPEND` reader - Indicates entry into suspend mode Suspend mode must be enabled by setting USB_POW.SUSPENDEN Software clears this bit by reading the USB_CIF register or by asserting USB_POW.RESUME"]
-pub struct SUSPEND_R(crate::FieldReader<bool, bool>);
-impl SUSPEND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SUSPEND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SUSPEND_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SUSPEND_R = crate::BitReader<bool>;
 #[doc = "Field `SUSPENDEN` reader - Enables detection of and entry into suspend mode."]
-pub struct SUSPENDEN_R(crate::FieldReader<bool, bool>);
-impl SUSPENDEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SUSPENDEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SUSPENDEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SUSPENDEN_R = crate::BitReader<bool>;
 #[doc = "Field `SUSPENDEN` writer - Enables detection of and entry into suspend mode."]
-pub struct SUSPENDEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SUSPENDEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SUSPENDEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, POW_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 7 - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
     #[inline(always)]
     pub fn isowaitsof(&self) -> ISOWAITSOF_R {
-        ISOWAITSOF_R::new(((self.bits >> 7) & 0x01) != 0)
+        ISOWAITSOF_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 3 - Indicates that reset signaling is present on the bus"]
     #[inline(always)]
     pub fn rst(&self) -> RST_R {
-        RST_R::new(((self.bits >> 3) & 0x01) != 0)
+        RST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
     #[inline(always)]
     pub fn resume(&self) -> RESUME_R {
-        RESUME_R::new(((self.bits >> 2) & 0x01) != 0)
+        RESUME_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Indicates entry into suspend mode Suspend mode must be enabled by setting USB_POW.SUSPENDEN Software clears this bit by reading the USB_CIF register or by asserting USB_POW.RESUME"]
     #[inline(always)]
     pub fn suspend(&self) -> SUSPEND_R {
-        SUSPEND_R::new(((self.bits >> 1) & 0x01) != 0)
+        SUSPEND_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Enables detection of and entry into suspend mode."]
     #[inline(always)]
     pub fn suspenden(&self) -> SUSPENDEN_R {
-        SUSPENDEN_R::new((self.bits & 0x01) != 0)
+        SUSPENDEN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 7 - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
     #[inline(always)]
-    pub fn isowaitsof(&mut self) -> ISOWAITSOF_W {
-        ISOWAITSOF_W { w: self }
+    pub fn isowaitsof(&mut self) -> ISOWAITSOF_W<7> {
+        ISOWAITSOF_W::new(self)
     }
     #[doc = "Bit 2 - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
     #[inline(always)]
-    pub fn resume(&mut self) -> RESUME_W {
-        RESUME_W { w: self }
+    pub fn resume(&mut self) -> RESUME_W<2> {
+        RESUME_W::new(self)
     }
     #[doc = "Bit 0 - Enables detection of and entry into suspend mode."]
     #[inline(always)]
-    pub fn suspenden(&mut self) -> SUSPENDEN_W {
-        SUSPENDEN_W { w: self }
+    pub fn suspenden(&mut self) -> SUSPENDEN_W<0> {
+        SUSPENDEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

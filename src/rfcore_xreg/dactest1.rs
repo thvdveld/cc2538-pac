@@ -35,32 +35,9 @@ impl From<crate::W<DACTEST1_SPEC>> for W {
     }
 }
 #[doc = "Field `DAC_I_O` reader - I-branch DAC override value when DAC_SRC = 001 If DAC_SRC is set to be ADC data, CORDIC magnitude, channel filtered data, or DC filtered data, then DAC_I_O controls the part of the word in question that is actually multiplexed to the DAC as described below. 000111: Bits 7:0 001000: Bits 8:1 001001: Bits 9:2 ... If an invalid setting is chosen, then the DAC outputs only zeros (minimum value)."]
-pub struct DAC_I_O_R(crate::FieldReader<u8, u8>);
-impl DAC_I_O_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DAC_I_O_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DAC_I_O_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DAC_I_O_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DAC_I_O` writer - I-branch DAC override value when DAC_SRC = 001 If DAC_SRC is set to be ADC data, CORDIC magnitude, channel filtered data, or DC filtered data, then DAC_I_O controls the part of the word in question that is actually multiplexed to the DAC as described below. 000111: Bits 7:0 001000: Bits 8:1 001001: Bits 9:2 ... If an invalid setting is chosen, then the DAC outputs only zeros (minimum value)."]
-pub struct DAC_I_O_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DAC_I_O_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type DAC_I_O_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DACTEST1_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - I-branch DAC override value when DAC_SRC = 001 If DAC_SRC is set to be ADC data, CORDIC magnitude, channel filtered data, or DC filtered data, then DAC_I_O controls the part of the word in question that is actually multiplexed to the DAC as described below. 000111: Bits 7:0 001000: Bits 8:1 001001: Bits 9:2 ... If an invalid setting is chosen, then the DAC outputs only zeros (minimum value)."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - I-branch DAC override value when DAC_SRC = 001 If DAC_SRC is set to be ADC data, CORDIC magnitude, channel filtered data, or DC filtered data, then DAC_I_O controls the part of the word in question that is actually multiplexed to the DAC as described below. 000111: Bits 7:0 001000: Bits 8:1 001001: Bits 9:2 ... If an invalid setting is chosen, then the DAC outputs only zeros (minimum value)."]
     #[inline(always)]
-    pub fn dac_i_o(&mut self) -> DAC_I_O_W {
-        DAC_I_O_W { w: self }
+    pub fn dac_i_o(&mut self) -> DAC_I_O_W<0> {
+        DAC_I_O_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

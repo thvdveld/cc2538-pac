@@ -14,20 +14,7 @@ impl From<crate::R<RSSI_SPEC>> for R {
     }
 }
 #[doc = "Field `RSSI_VAL` reader - RSSI estimate on a logarithmic scale, signed number on 2's complement Unit is 1 dB, offset is 73dB. The RSSI value is averaged over eight symbol periods. The RSSI_VALID status bit should be checked before reading RSSI_VAL for the first time. The reset value of -128 also indicates that the RSSI value is invalid."]
-pub struct RSSI_VAL_R(crate::FieldReader<u8, u8>);
-impl RSSI_VAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RSSI_VAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RSSI_VAL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RSSI_VAL_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - RSSI estimate on a logarithmic scale, signed number on 2's complement Unit is 1 dB, offset is 73dB. The RSSI value is averaged over eight symbol periods. The RSSI_VALID status bit should be checked before reading RSSI_VAL for the first time. The reset value of -128 also indicates that the RSSI value is invalid."]
     #[inline(always)]

@@ -35,54 +35,21 @@ impl From<crate::W<LPBKUART_SPEC>> for W {
     }
 }
 #[doc = "Field `LPBKUART` reader - UART0/1 loopback mode 0: Normal operation 1: UART0 TX (RX) connected to UART1 RX (TX)"]
-pub struct LPBKUART_R(crate::FieldReader<bool, bool>);
-impl LPBKUART_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LPBKUART_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LPBKUART_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LPBKUART_R = crate::BitReader<bool>;
 #[doc = "Field `LPBKUART` writer - UART0/1 loopback mode 0: Normal operation 1: UART0 TX (RX) connected to UART1 RX (TX)"]
-pub struct LPBKUART_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LPBKUART_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type LPBKUART_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPBKUART_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - UART0/1 loopback mode 0: Normal operation 1: UART0 TX (RX) connected to UART1 RX (TX)"]
     #[inline(always)]
     pub fn lpbkuart(&self) -> LPBKUART_R {
-        LPBKUART_R::new((self.bits & 0x01) != 0)
+        LPBKUART_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - UART0/1 loopback mode 0: Normal operation 1: UART0 TX (RX) connected to UART1 RX (TX)"]
     #[inline(always)]
-    pub fn lpbkuart(&mut self) -> LPBKUART_W {
-        LPBKUART_W { w: self }
+    pub fn lpbkuart(&mut self) -> LPBKUART_W<0> {
+        LPBKUART_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,44 +35,21 @@ impl From<crate::W<CC_SPEC>> for W {
     }
 }
 #[doc = "Field `CS` reader - SSI baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the SSI. bit0 (PIOSC): 1: The SSI baud clock is determined by the IO DIV setting in the system controller. 0: The SSI baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The SSI system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The SSI system clock is determined by the SYS DIV setting in the system controller."]
-pub struct CS_R(crate::FieldReader<u8, u8>);
-impl CS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CS` writer - SSI baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the SSI. bit0 (PIOSC): 1: The SSI baud clock is determined by the IO DIV setting in the system controller. 0: The SSI baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The SSI system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The SSI system clock is determined by the SYS DIV setting in the system controller."]
-pub struct CS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
-        self.w
-    }
-}
+pub type CS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CC_SPEC, u8, u8, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - SSI baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the SSI. bit0 (PIOSC): 1: The SSI baud clock is determined by the IO DIV setting in the system controller. 0: The SSI baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The SSI system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The SSI system clock is determined by the SYS DIV setting in the system controller."]
     #[inline(always)]
     pub fn cs(&self) -> CS_R {
-        CS_R::new((self.bits & 0x07) as u8)
+        CS_R::new((self.bits & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - SSI baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the SSI. bit0 (PIOSC): 1: The SSI baud clock is determined by the IO DIV setting in the system controller. 0: The SSI baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The SSI system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The SSI system clock is determined by the SYS DIV setting in the system controller."]
     #[inline(always)]
-    pub fn cs(&mut self) -> CS_W {
-        CS_W { w: self }
+    pub fn cs(&mut self) -> CS_W<0> {
+        CS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -36,33 +36,10 @@ impl From<crate::W<CHIS_SPEC>> for W {
 }
 #[doc = "Field `CHIS` reader - Channel \\[n\\]
 interrupt status 0: The corresponding uDMA channel has not caused an interrupt. 1: The corresponding uDMA channel has caused an interrupt. This bit is cleared by writing 1 to it."]
-pub struct CHIS_R(crate::FieldReader<u32, u32>);
-impl CHIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CHIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CHIS_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CHIS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CHIS` writer - Channel \\[n\\]
 interrupt status 0: The corresponding uDMA channel has not caused an interrupt. 1: The corresponding uDMA channel has caused an interrupt. This bit is cleared by writing 1 to it."]
-pub struct CHIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHIS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CHIS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHIS_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 interrupt status 0: The corresponding uDMA channel has not caused an interrupt. 1: The corresponding uDMA channel has caused an interrupt. This bit is cleared by writing 1 to it."]
@@ -75,8 +52,8 @@ impl W {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 interrupt status 0: The corresponding uDMA channel has not caused an interrupt. 1: The corresponding uDMA channel has caused an interrupt. This bit is cleared by writing 1 to it."]
     #[inline(always)]
-    pub fn chis(&mut self) -> CHIS_W {
-        CHIS_W { w: self }
+    pub fn chis(&mut self) -> CHIS_W<0> {
+        CHIS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

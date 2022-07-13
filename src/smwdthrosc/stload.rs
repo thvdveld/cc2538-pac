@@ -14,25 +14,12 @@ impl From<crate::R<STLOAD_SPEC>> for R {
     }
 }
 #[doc = "Field `STLOAD` reader - Status signal for when STx registers have been uploaded to 32-kHz counter. 1: Load is complete 0: Load is busy and STx regs are blocked for writing"]
-pub struct STLOAD_R(crate::FieldReader<bool, bool>);
-impl STLOAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STLOAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STLOAD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STLOAD_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Status signal for when STx registers have been uploaded to 32-kHz counter. 1: Load is complete 0: Load is busy and STx regs are blocked for writing"]
     #[inline(always)]
     pub fn stload(&self) -> STLOAD_R {
-        STLOAD_R::new((self.bits & 0x01) != 0)
+        STLOAD_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Sleep Timer load status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [stload](index.html) module"]

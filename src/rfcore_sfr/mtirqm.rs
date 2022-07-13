@@ -35,289 +35,93 @@ impl From<crate::W<MTIRQM_SPEC>> for W {
     }
 }
 #[doc = "Field `MACTIMER_OVF_COMPARE2M` reader - Enables the MACTIMER_OVF_COMPARE2 interrupt"]
-pub struct MACTIMER_OVF_COMPARE2M_R(crate::FieldReader<bool, bool>);
-impl MACTIMER_OVF_COMPARE2M_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MACTIMER_OVF_COMPARE2M_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MACTIMER_OVF_COMPARE2M_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MACTIMER_OVF_COMPARE2M_R = crate::BitReader<bool>;
 #[doc = "Field `MACTIMER_OVF_COMPARE2M` writer - Enables the MACTIMER_OVF_COMPARE2 interrupt"]
-pub struct MACTIMER_OVF_COMPARE2M_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MACTIMER_OVF_COMPARE2M_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type MACTIMER_OVF_COMPARE2M_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, MTIRQM_SPEC, bool, O>;
 #[doc = "Field `MACTIMER_OVF_COMPARE1M` reader - Enables the MACTIMER_OVF_COMPARE1 interrupt"]
-pub struct MACTIMER_OVF_COMPARE1M_R(crate::FieldReader<bool, bool>);
-impl MACTIMER_OVF_COMPARE1M_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MACTIMER_OVF_COMPARE1M_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MACTIMER_OVF_COMPARE1M_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MACTIMER_OVF_COMPARE1M_R = crate::BitReader<bool>;
 #[doc = "Field `MACTIMER_OVF_COMPARE1M` writer - Enables the MACTIMER_OVF_COMPARE1 interrupt"]
-pub struct MACTIMER_OVF_COMPARE1M_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MACTIMER_OVF_COMPARE1M_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type MACTIMER_OVF_COMPARE1M_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, MTIRQM_SPEC, bool, O>;
 #[doc = "Field `MACTIMER_OVF_PERM` reader - Enables the MACTIMER_OVF_PER interrupt"]
-pub struct MACTIMER_OVF_PERM_R(crate::FieldReader<bool, bool>);
-impl MACTIMER_OVF_PERM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MACTIMER_OVF_PERM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MACTIMER_OVF_PERM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MACTIMER_OVF_PERM_R = crate::BitReader<bool>;
 #[doc = "Field `MACTIMER_OVF_PERM` writer - Enables the MACTIMER_OVF_PER interrupt"]
-pub struct MACTIMER_OVF_PERM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MACTIMER_OVF_PERM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type MACTIMER_OVF_PERM_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQM_SPEC, bool, O>;
 #[doc = "Field `MACTIMER_COMPARE2M` reader - Enables the MACTIMER_COMPARE2 interrupt"]
-pub struct MACTIMER_COMPARE2M_R(crate::FieldReader<bool, bool>);
-impl MACTIMER_COMPARE2M_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MACTIMER_COMPARE2M_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MACTIMER_COMPARE2M_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MACTIMER_COMPARE2M_R = crate::BitReader<bool>;
 #[doc = "Field `MACTIMER_COMPARE2M` writer - Enables the MACTIMER_COMPARE2 interrupt"]
-pub struct MACTIMER_COMPARE2M_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MACTIMER_COMPARE2M_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type MACTIMER_COMPARE2M_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQM_SPEC, bool, O>;
 #[doc = "Field `MACTIMER_COMPARE1M` reader - Enables the MACTIMER_COMPARE1 interrupt"]
-pub struct MACTIMER_COMPARE1M_R(crate::FieldReader<bool, bool>);
-impl MACTIMER_COMPARE1M_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MACTIMER_COMPARE1M_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MACTIMER_COMPARE1M_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MACTIMER_COMPARE1M_R = crate::BitReader<bool>;
 #[doc = "Field `MACTIMER_COMPARE1M` writer - Enables the MACTIMER_COMPARE1 interrupt"]
-pub struct MACTIMER_COMPARE1M_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MACTIMER_COMPARE1M_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type MACTIMER_COMPARE1M_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQM_SPEC, bool, O>;
 #[doc = "Field `MACTIMER_PERM` reader - Enables the MACTIMER_PER interrupt"]
-pub struct MACTIMER_PERM_R(crate::FieldReader<bool, bool>);
-impl MACTIMER_PERM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MACTIMER_PERM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MACTIMER_PERM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MACTIMER_PERM_R = crate::BitReader<bool>;
 #[doc = "Field `MACTIMER_PERM` writer - Enables the MACTIMER_PER interrupt"]
-pub struct MACTIMER_PERM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MACTIMER_PERM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type MACTIMER_PERM_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQM_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 5 - Enables the MACTIMER_OVF_COMPARE2 interrupt"]
     #[inline(always)]
     pub fn mactimer_ovf_compare2m(&self) -> MACTIMER_OVF_COMPARE2M_R {
-        MACTIMER_OVF_COMPARE2M_R::new(((self.bits >> 5) & 0x01) != 0)
+        MACTIMER_OVF_COMPARE2M_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - Enables the MACTIMER_OVF_COMPARE1 interrupt"]
     #[inline(always)]
     pub fn mactimer_ovf_compare1m(&self) -> MACTIMER_OVF_COMPARE1M_R {
-        MACTIMER_OVF_COMPARE1M_R::new(((self.bits >> 4) & 0x01) != 0)
+        MACTIMER_OVF_COMPARE1M_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - Enables the MACTIMER_OVF_PER interrupt"]
     #[inline(always)]
     pub fn mactimer_ovf_perm(&self) -> MACTIMER_OVF_PERM_R {
-        MACTIMER_OVF_PERM_R::new(((self.bits >> 3) & 0x01) != 0)
+        MACTIMER_OVF_PERM_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Enables the MACTIMER_COMPARE2 interrupt"]
     #[inline(always)]
     pub fn mactimer_compare2m(&self) -> MACTIMER_COMPARE2M_R {
-        MACTIMER_COMPARE2M_R::new(((self.bits >> 2) & 0x01) != 0)
+        MACTIMER_COMPARE2M_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Enables the MACTIMER_COMPARE1 interrupt"]
     #[inline(always)]
     pub fn mactimer_compare1m(&self) -> MACTIMER_COMPARE1M_R {
-        MACTIMER_COMPARE1M_R::new(((self.bits >> 1) & 0x01) != 0)
+        MACTIMER_COMPARE1M_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Enables the MACTIMER_PER interrupt"]
     #[inline(always)]
     pub fn mactimer_perm(&self) -> MACTIMER_PERM_R {
-        MACTIMER_PERM_R::new((self.bits & 0x01) != 0)
+        MACTIMER_PERM_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 5 - Enables the MACTIMER_OVF_COMPARE2 interrupt"]
     #[inline(always)]
-    pub fn mactimer_ovf_compare2m(&mut self) -> MACTIMER_OVF_COMPARE2M_W {
-        MACTIMER_OVF_COMPARE2M_W { w: self }
+    pub fn mactimer_ovf_compare2m(&mut self) -> MACTIMER_OVF_COMPARE2M_W<5> {
+        MACTIMER_OVF_COMPARE2M_W::new(self)
     }
     #[doc = "Bit 4 - Enables the MACTIMER_OVF_COMPARE1 interrupt"]
     #[inline(always)]
-    pub fn mactimer_ovf_compare1m(&mut self) -> MACTIMER_OVF_COMPARE1M_W {
-        MACTIMER_OVF_COMPARE1M_W { w: self }
+    pub fn mactimer_ovf_compare1m(&mut self) -> MACTIMER_OVF_COMPARE1M_W<4> {
+        MACTIMER_OVF_COMPARE1M_W::new(self)
     }
     #[doc = "Bit 3 - Enables the MACTIMER_OVF_PER interrupt"]
     #[inline(always)]
-    pub fn mactimer_ovf_perm(&mut self) -> MACTIMER_OVF_PERM_W {
-        MACTIMER_OVF_PERM_W { w: self }
+    pub fn mactimer_ovf_perm(&mut self) -> MACTIMER_OVF_PERM_W<3> {
+        MACTIMER_OVF_PERM_W::new(self)
     }
     #[doc = "Bit 2 - Enables the MACTIMER_COMPARE2 interrupt"]
     #[inline(always)]
-    pub fn mactimer_compare2m(&mut self) -> MACTIMER_COMPARE2M_W {
-        MACTIMER_COMPARE2M_W { w: self }
+    pub fn mactimer_compare2m(&mut self) -> MACTIMER_COMPARE2M_W<2> {
+        MACTIMER_COMPARE2M_W::new(self)
     }
     #[doc = "Bit 1 - Enables the MACTIMER_COMPARE1 interrupt"]
     #[inline(always)]
-    pub fn mactimer_compare1m(&mut self) -> MACTIMER_COMPARE1M_W {
-        MACTIMER_COMPARE1M_W { w: self }
+    pub fn mactimer_compare1m(&mut self) -> MACTIMER_COMPARE1M_W<1> {
+        MACTIMER_COMPARE1M_W::new(self)
     }
     #[doc = "Bit 0 - Enables the MACTIMER_PER interrupt"]
     #[inline(always)]
-    pub fn mactimer_perm(&mut self) -> MACTIMER_PERM_W {
-        MACTIMER_PERM_W { w: self }
+    pub fn mactimer_perm(&mut self) -> MACTIMER_PERM_W<0> {
+        MACTIMER_PERM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

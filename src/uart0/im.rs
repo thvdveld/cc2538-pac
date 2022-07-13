@@ -35,524 +35,161 @@ impl From<crate::W<IM_SPEC>> for W {
     }
 }
 #[doc = "Field `LME5IM` reader - LIN mode edge 5 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME5RIS bit in the UARTRIS register is set. 0: The LME5RIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct LME5IM_R(crate::FieldReader<bool, bool>);
-impl LME5IM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LME5IM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LME5IM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LME5IM_R = crate::BitReader<bool>;
 #[doc = "Field `LME5IM` writer - LIN mode edge 5 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME5RIS bit in the UARTRIS register is set. 0: The LME5RIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct LME5IM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LME5IM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
-        self.w
-    }
-}
+pub type LME5IM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `LME1IM` reader - LIN mode edge 1 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME1RIS bit in the UARTRIS register is set. 0: The LME1RIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct LME1IM_R(crate::FieldReader<bool, bool>);
-impl LME1IM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LME1IM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LME1IM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LME1IM_R = crate::BitReader<bool>;
 #[doc = "Field `LME1IM` writer - LIN mode edge 1 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME1RIS bit in the UARTRIS register is set. 0: The LME1RIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct LME1IM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LME1IM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
-        self.w
-    }
-}
+pub type LME1IM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `LMSBIM` reader - LIN mode sync break interrupt mask 1: An interrupt is sent to the interrupt controller when the LMSBRIS bit in the UARTRIS register is set. 0: The LMSBRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct LMSBIM_R(crate::FieldReader<bool, bool>);
-impl LMSBIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LMSBIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LMSBIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LMSBIM_R = crate::BitReader<bool>;
 #[doc = "Field `LMSBIM` writer - LIN mode sync break interrupt mask 1: An interrupt is sent to the interrupt controller when the LMSBRIS bit in the UARTRIS register is set. 0: The LMSBRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct LMSBIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LMSBIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
-        self.w
-    }
-}
+pub type LMSBIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `NINEBITIM` reader - 9-bit mode interrupt mask 1: An interrupt is sent to the interrupt controller when the 9BITRIS bit in the UARTRIS register is set. 0: The 9BITRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct NINEBITIM_R(crate::FieldReader<bool, bool>);
-impl NINEBITIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NINEBITIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NINEBITIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NINEBITIM_R = crate::BitReader<bool>;
 #[doc = "Field `NINEBITIM` writer - 9-bit mode interrupt mask 1: An interrupt is sent to the interrupt controller when the 9BITRIS bit in the UARTRIS register is set. 0: The 9BITRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct NINEBITIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NINEBITIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
+pub type NINEBITIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `OEIM` reader - UART overrun error interrupt mask 1: An interrupt is sent to the interrupt controller when the OERIS bit in the UARTRIS register is set. 0: The OERIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct OEIM_R(crate::FieldReader<bool, bool>);
-impl OEIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OEIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OEIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OEIM_R = crate::BitReader<bool>;
 #[doc = "Field `OEIM` writer - UART overrun error interrupt mask 1: An interrupt is sent to the interrupt controller when the OERIS bit in the UARTRIS register is set. 0: The OERIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct OEIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OEIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
-        self.w
-    }
-}
+pub type OEIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `BEIM` reader - UART break error interrupt mask 1: An interrupt is sent to the interrupt controller when the BERIS bit in the UARTRIS register is set. 0: The BERIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct BEIM_R(crate::FieldReader<bool, bool>);
-impl BEIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BEIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BEIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BEIM_R = crate::BitReader<bool>;
 #[doc = "Field `BEIM` writer - UART break error interrupt mask 1: An interrupt is sent to the interrupt controller when the BERIS bit in the UARTRIS register is set. 0: The BERIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct BEIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BEIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
-        self.w
-    }
-}
+pub type BEIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `PEIM` reader - UART parity error interrupt mask 1: An interrupt is sent to the interrupt controller when the PERIS bit in the UARTRIS register is set. 0: The PERIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct PEIM_R(crate::FieldReader<bool, bool>);
-impl PEIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PEIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PEIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PEIM_R = crate::BitReader<bool>;
 #[doc = "Field `PEIM` writer - UART parity error interrupt mask 1: An interrupt is sent to the interrupt controller when the PERIS bit in the UARTRIS register is set. 0: The PERIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct PEIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PEIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type PEIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `FEIM` reader - UART framing error interrupt mask 1: An interrupt is sent to the interrupt controller when the FERIS bit in the UARTRIS register is set. 0: The FERIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct FEIM_R(crate::FieldReader<bool, bool>);
-impl FEIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FEIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FEIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FEIM_R = crate::BitReader<bool>;
 #[doc = "Field `FEIM` writer - UART framing error interrupt mask 1: An interrupt is sent to the interrupt controller when the FERIS bit in the UARTRIS register is set. 0: The FERIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct FEIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FEIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type FEIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `RTIM` reader - UART receive time-out interrupt mask 1: An interrupt is sent to the interrupt controller when the RTRIS bit in the UARTRIS register is set. 0: The RTRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct RTIM_R(crate::FieldReader<bool, bool>);
-impl RTIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTIM_R = crate::BitReader<bool>;
 #[doc = "Field `RTIM` writer - UART receive time-out interrupt mask 1: An interrupt is sent to the interrupt controller when the RTRIS bit in the UARTRIS register is set. 0: The RTRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct RTIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type RTIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `TXIM` reader - UART transmit interrupt mask 1: An interrupt is sent to the interrupt controller when the TXRIS bit in the UARTRIS register is set. 0: The TXRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct TXIM_R(crate::FieldReader<bool, bool>);
-impl TXIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXIM_R = crate::BitReader<bool>;
 #[doc = "Field `TXIM` writer - UART transmit interrupt mask 1: An interrupt is sent to the interrupt controller when the TXRIS bit in the UARTRIS register is set. 0: The TXRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct TXIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type TXIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 #[doc = "Field `RXIM` reader - UART receive interrupt mask 1: An interrupt is sent to the interrupt controller when the RXRIS bit in the UARTRIS register is set. 0: The RXRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct RXIM_R(crate::FieldReader<bool, bool>);
-impl RXIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXIM_R = crate::BitReader<bool>;
 #[doc = "Field `RXIM` writer - UART receive interrupt mask 1: An interrupt is sent to the interrupt controller when the RXRIS bit in the UARTRIS register is set. 0: The RXRIS interrupt is suppressed and not sent to the interrupt controller."]
-pub struct RXIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type RXIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 15 - LIN mode edge 5 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME5RIS bit in the UARTRIS register is set. 0: The LME5RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn lme5im(&self) -> LME5IM_R {
-        LME5IM_R::new(((self.bits >> 15) & 0x01) != 0)
+        LME5IM_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 14 - LIN mode edge 1 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME1RIS bit in the UARTRIS register is set. 0: The LME1RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn lme1im(&self) -> LME1IM_R {
-        LME1IM_R::new(((self.bits >> 14) & 0x01) != 0)
+        LME1IM_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 13 - LIN mode sync break interrupt mask 1: An interrupt is sent to the interrupt controller when the LMSBRIS bit in the UARTRIS register is set. 0: The LMSBRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn lmsbim(&self) -> LMSBIM_R {
-        LMSBIM_R::new(((self.bits >> 13) & 0x01) != 0)
+        LMSBIM_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 12 - 9-bit mode interrupt mask 1: An interrupt is sent to the interrupt controller when the 9BITRIS bit in the UARTRIS register is set. 0: The 9BITRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn ninebitim(&self) -> NINEBITIM_R {
-        NINEBITIM_R::new(((self.bits >> 12) & 0x01) != 0)
+        NINEBITIM_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 10 - UART overrun error interrupt mask 1: An interrupt is sent to the interrupt controller when the OERIS bit in the UARTRIS register is set. 0: The OERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn oeim(&self) -> OEIM_R {
-        OEIM_R::new(((self.bits >> 10) & 0x01) != 0)
+        OEIM_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - UART break error interrupt mask 1: An interrupt is sent to the interrupt controller when the BERIS bit in the UARTRIS register is set. 0: The BERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn beim(&self) -> BEIM_R {
-        BEIM_R::new(((self.bits >> 9) & 0x01) != 0)
+        BEIM_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - UART parity error interrupt mask 1: An interrupt is sent to the interrupt controller when the PERIS bit in the UARTRIS register is set. 0: The PERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn peim(&self) -> PEIM_R {
-        PEIM_R::new(((self.bits >> 8) & 0x01) != 0)
+        PEIM_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 7 - UART framing error interrupt mask 1: An interrupt is sent to the interrupt controller when the FERIS bit in the UARTRIS register is set. 0: The FERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn feim(&self) -> FEIM_R {
-        FEIM_R::new(((self.bits >> 7) & 0x01) != 0)
+        FEIM_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - UART receive time-out interrupt mask 1: An interrupt is sent to the interrupt controller when the RTRIS bit in the UARTRIS register is set. 0: The RTRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn rtim(&self) -> RTIM_R {
-        RTIM_R::new(((self.bits >> 6) & 0x01) != 0)
+        RTIM_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - UART transmit interrupt mask 1: An interrupt is sent to the interrupt controller when the TXRIS bit in the UARTRIS register is set. 0: The TXRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn txim(&self) -> TXIM_R {
-        TXIM_R::new(((self.bits >> 5) & 0x01) != 0)
+        TXIM_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - UART receive interrupt mask 1: An interrupt is sent to the interrupt controller when the RXRIS bit in the UARTRIS register is set. 0: The RXRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn rxim(&self) -> RXIM_R {
-        RXIM_R::new(((self.bits >> 4) & 0x01) != 0)
+        RXIM_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 15 - LIN mode edge 5 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME5RIS bit in the UARTRIS register is set. 0: The LME5RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn lme5im(&mut self) -> LME5IM_W {
-        LME5IM_W { w: self }
+    pub fn lme5im(&mut self) -> LME5IM_W<15> {
+        LME5IM_W::new(self)
     }
     #[doc = "Bit 14 - LIN mode edge 1 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME1RIS bit in the UARTRIS register is set. 0: The LME1RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn lme1im(&mut self) -> LME1IM_W {
-        LME1IM_W { w: self }
+    pub fn lme1im(&mut self) -> LME1IM_W<14> {
+        LME1IM_W::new(self)
     }
     #[doc = "Bit 13 - LIN mode sync break interrupt mask 1: An interrupt is sent to the interrupt controller when the LMSBRIS bit in the UARTRIS register is set. 0: The LMSBRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn lmsbim(&mut self) -> LMSBIM_W {
-        LMSBIM_W { w: self }
+    pub fn lmsbim(&mut self) -> LMSBIM_W<13> {
+        LMSBIM_W::new(self)
     }
     #[doc = "Bit 12 - 9-bit mode interrupt mask 1: An interrupt is sent to the interrupt controller when the 9BITRIS bit in the UARTRIS register is set. 0: The 9BITRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn ninebitim(&mut self) -> NINEBITIM_W {
-        NINEBITIM_W { w: self }
+    pub fn ninebitim(&mut self) -> NINEBITIM_W<12> {
+        NINEBITIM_W::new(self)
     }
     #[doc = "Bit 10 - UART overrun error interrupt mask 1: An interrupt is sent to the interrupt controller when the OERIS bit in the UARTRIS register is set. 0: The OERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn oeim(&mut self) -> OEIM_W {
-        OEIM_W { w: self }
+    pub fn oeim(&mut self) -> OEIM_W<10> {
+        OEIM_W::new(self)
     }
     #[doc = "Bit 9 - UART break error interrupt mask 1: An interrupt is sent to the interrupt controller when the BERIS bit in the UARTRIS register is set. 0: The BERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn beim(&mut self) -> BEIM_W {
-        BEIM_W { w: self }
+    pub fn beim(&mut self) -> BEIM_W<9> {
+        BEIM_W::new(self)
     }
     #[doc = "Bit 8 - UART parity error interrupt mask 1: An interrupt is sent to the interrupt controller when the PERIS bit in the UARTRIS register is set. 0: The PERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn peim(&mut self) -> PEIM_W {
-        PEIM_W { w: self }
+    pub fn peim(&mut self) -> PEIM_W<8> {
+        PEIM_W::new(self)
     }
     #[doc = "Bit 7 - UART framing error interrupt mask 1: An interrupt is sent to the interrupt controller when the FERIS bit in the UARTRIS register is set. 0: The FERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn feim(&mut self) -> FEIM_W {
-        FEIM_W { w: self }
+    pub fn feim(&mut self) -> FEIM_W<7> {
+        FEIM_W::new(self)
     }
     #[doc = "Bit 6 - UART receive time-out interrupt mask 1: An interrupt is sent to the interrupt controller when the RTRIS bit in the UARTRIS register is set. 0: The RTRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn rtim(&mut self) -> RTIM_W {
-        RTIM_W { w: self }
+    pub fn rtim(&mut self) -> RTIM_W<6> {
+        RTIM_W::new(self)
     }
     #[doc = "Bit 5 - UART transmit interrupt mask 1: An interrupt is sent to the interrupt controller when the TXRIS bit in the UARTRIS register is set. 0: The TXRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn txim(&mut self) -> TXIM_W {
-        TXIM_W { w: self }
+    pub fn txim(&mut self) -> TXIM_W<5> {
+        TXIM_W::new(self)
     }
     #[doc = "Bit 4 - UART receive interrupt mask 1: An interrupt is sent to the interrupt controller when the RXRIS bit in the UARTRIS register is set. 0: The RXRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn rxim(&mut self) -> RXIM_W {
-        RXIM_W { w: self }
+    pub fn rxim(&mut self) -> RXIM_W<4> {
+        RXIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

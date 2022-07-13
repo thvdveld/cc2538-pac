@@ -14,20 +14,7 @@ impl From<crate::R<TXFIRST_PTR_SPEC>> for R {
     }
 }
 #[doc = "Field `TXFIRST_PTR` reader - RAM address offset of the next byte to be transmitted from the TX FIFO"]
-pub struct TXFIRST_PTR_R(crate::FieldReader<u8, u8>);
-impl TXFIRST_PTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TXFIRST_PTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIRST_PTR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIRST_PTR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - RAM address offset of the next byte to be transmitted from the TX FIFO"]
     #[inline(always)]

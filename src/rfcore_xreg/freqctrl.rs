@@ -40,37 +40,14 @@ is an offset value from 2394 (fRF = FREQ\\[6 0\\]
 are 11 to 86 (11 + 2394 = 2405 and 86 + 2394 = 2480). The device supports the frequency range from 2394 to 2507 MHz. Consequently, the usable settings for FREQ\\[6:0\\]
 are 0 to 113. Settings outside of the usable range (114 to 127) give a frequency of 2507 MHz. IEEE 802.15.4-2006 specifies a frequency range from 2405 MHz to 2480 MHz with 16 channels 5 MHz apart. The channels are numbered 11 through 26. For an IEEE 802.15.4-2006 compliant system, the only valid settings are thus FREQ\\[6:0\\]
 = 11 + 5 (channel number - 11)."]
-pub struct FREQ_R(crate::FieldReader<u8, u8>);
-impl FREQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FREQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FREQ_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FREQ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FREQ` writer - Frequency control word The frequency word in FREQ\\[6:0\\]
 is an offset value from 2394 (fRF = FREQ\\[6 0\\]
 + 2394). The RF-frequency is specified from 2405 to 2480 MHz in 1-MHz steps; hence, the only valid settings for FREQ\\[6:0\\]
 are 11 to 86 (11 + 2394 = 2405 and 86 + 2394 = 2480). The device supports the frequency range from 2394 to 2507 MHz. Consequently, the usable settings for FREQ\\[6:0\\]
 are 0 to 113. Settings outside of the usable range (114 to 127) give a frequency of 2507 MHz. IEEE 802.15.4-2006 specifies a frequency range from 2405 MHz to 2480 MHz with 16 channels 5 MHz apart. The channels are numbered 11 through 26. For an IEEE 802.15.4-2006 compliant system, the only valid settings are thus FREQ\\[6:0\\]
 = 11 + 5 (channel number - 11)."]
-pub struct FREQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FREQ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type FREQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQCTRL_SPEC, u8, u8, 7, O>;
 impl R {
     #[doc = "Bits 0:6 - Frequency control word The frequency word in FREQ\\[6:0\\]
 is an offset value from 2394 (fRF = FREQ\\[6 0\\]
@@ -91,8 +68,8 @@ are 11 to 86 (11 + 2394 = 2405 and 86 + 2394 = 2480). The device supports the fr
 are 0 to 113. Settings outside of the usable range (114 to 127) give a frequency of 2507 MHz. IEEE 802.15.4-2006 specifies a frequency range from 2405 MHz to 2480 MHz with 16 channels 5 MHz apart. The channels are numbered 11 through 26. For an IEEE 802.15.4-2006 compliant system, the only valid settings are thus FREQ\\[6:0\\]
 = 11 + 5 (channel number - 11)."]
     #[inline(always)]
-    pub fn freq(&mut self) -> FREQ_W {
-        FREQ_W { w: self }
+    pub fn freq(&mut self) -> FREQ_W<0> {
+        FREQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

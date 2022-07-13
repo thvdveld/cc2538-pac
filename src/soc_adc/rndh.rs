@@ -35,32 +35,9 @@ impl From<crate::W<RNDH_SPEC>> for W {
     }
 }
 #[doc = "Field `RNDH` reader - Random value or CRC result/input data, high byte When written, a CRC16 calculation is triggered, and the data value written is processed starting with the MSB. The value returned when reading from this register is the 8 MSBs of the LFSR. When used for random-number generation, reading this register returns the 8 MSBs of the random number. When used for CRC calculations, reading this register returns the 8 MSBs of the CRC result."]
-pub struct RNDH_R(crate::FieldReader<u8, u8>);
-impl RNDH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RNDH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RNDH_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RNDH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RNDH` writer - Random value or CRC result/input data, high byte When written, a CRC16 calculation is triggered, and the data value written is processed starting with the MSB. The value returned when reading from this register is the 8 MSBs of the LFSR. When used for random-number generation, reading this register returns the 8 MSBs of the random number. When used for CRC calculations, reading this register returns the 8 MSBs of the CRC result."]
-pub struct RNDH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RNDH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type RNDH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RNDH_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Random value or CRC result/input data, high byte When written, a CRC16 calculation is triggered, and the data value written is processed starting with the MSB. The value returned when reading from this register is the 8 MSBs of the LFSR. When used for random-number generation, reading this register returns the 8 MSBs of the random number. When used for CRC calculations, reading this register returns the 8 MSBs of the CRC result."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Random value or CRC result/input data, high byte When written, a CRC16 calculation is triggered, and the data value written is processed starting with the MSB. The value returned when reading from this register is the 8 MSBs of the LFSR. When used for random-number generation, reading this register returns the 8 MSBs of the random number. When used for CRC calculations, reading this register returns the 8 MSBs of the CRC result."]
     #[inline(always)]
-    pub fn rndh(&mut self) -> RNDH_W {
-        RNDH_W { w: self }
+    pub fn rndh(&mut self) -> RNDH_W<0> {
+        RNDH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,101 +35,35 @@ impl From<crate::W<CTRL_INT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_IN_DONE` reader - If this bit is set to 0, the DMA input done (irq_dma_in_done) interrupt output is disabled and remains 0. If this bit is set to 1, the DMA input done interrupt output is enabled."]
-pub struct DMA_IN_DONE_R(crate::FieldReader<bool, bool>);
-impl DMA_IN_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_IN_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_IN_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_IN_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_IN_DONE` writer - If this bit is set to 0, the DMA input done (irq_dma_in_done) interrupt output is disabled and remains 0. If this bit is set to 1, the DMA input done interrupt output is enabled."]
-pub struct DMA_IN_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_IN_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type DMA_IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_EN_SPEC, bool, O>;
 #[doc = "Field `RESULT_AV` reader - If this bit is set to 0, the result available (irq_result_av) interrupt output is disabled and remains 0. If this bit is set to 1, the result available interrupt output is enabled."]
-pub struct RESULT_AV_R(crate::FieldReader<bool, bool>);
-impl RESULT_AV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESULT_AV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESULT_AV_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESULT_AV_R = crate::BitReader<bool>;
 #[doc = "Field `RESULT_AV` writer - If this bit is set to 0, the result available (irq_result_av) interrupt output is disabled and remains 0. If this bit is set to 1, the result available interrupt output is enabled."]
-pub struct RESULT_AV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESULT_AV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RESULT_AV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_EN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 1 - If this bit is set to 0, the DMA input done (irq_dma_in_done) interrupt output is disabled and remains 0. If this bit is set to 1, the DMA input done interrupt output is enabled."]
     #[inline(always)]
     pub fn dma_in_done(&self) -> DMA_IN_DONE_R {
-        DMA_IN_DONE_R::new(((self.bits >> 1) & 0x01) != 0)
+        DMA_IN_DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - If this bit is set to 0, the result available (irq_result_av) interrupt output is disabled and remains 0. If this bit is set to 1, the result available interrupt output is enabled."]
     #[inline(always)]
     pub fn result_av(&self) -> RESULT_AV_R {
-        RESULT_AV_R::new((self.bits & 0x01) != 0)
+        RESULT_AV_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1 - If this bit is set to 0, the DMA input done (irq_dma_in_done) interrupt output is disabled and remains 0. If this bit is set to 1, the DMA input done interrupt output is enabled."]
     #[inline(always)]
-    pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W {
-        DMA_IN_DONE_W { w: self }
+    pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<1> {
+        DMA_IN_DONE_W::new(self)
     }
     #[doc = "Bit 0 - If this bit is set to 0, the result available (irq_result_av) interrupt output is disabled and remains 0. If this bit is set to 1, the result available interrupt output is enabled."]
     #[inline(always)]
-    pub fn result_av(&mut self) -> RESULT_AV_W {
-        RESULT_AV_W { w: self }
+    pub fn result_av(&mut self) -> RESULT_AV_W<0> {
+        RESULT_AV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

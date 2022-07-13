@@ -35,32 +35,9 @@ impl From<crate::W<ATEST_SPEC>> for W {
     }
 }
 #[doc = "Field `ATEST_CTRL` reader - Controls the analog test mode: 00 0000: Disabled 00 0001: Enables the temperature sensor (see also the CCTEST_TR0 register description). Other values reserved."]
-pub struct ATEST_CTRL_R(crate::FieldReader<u8, u8>);
-impl ATEST_CTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ATEST_CTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ATEST_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ATEST_CTRL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ATEST_CTRL` writer - Controls the analog test mode: 00 0000: Disabled 00 0001: Enables the temperature sensor (see also the CCTEST_TR0 register description). Other values reserved."]
-pub struct ATEST_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ATEST_CTRL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type ATEST_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ATEST_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - Controls the analog test mode: 00 0000: Disabled 00 0001: Enables the temperature sensor (see also the CCTEST_TR0 register description). Other values reserved."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Controls the analog test mode: 00 0000: Disabled 00 0001: Enables the temperature sensor (see also the CCTEST_TR0 register description). Other values reserved."]
     #[inline(always)]
-    pub fn atest_ctrl(&mut self) -> ATEST_CTRL_W {
-        ATEST_CTRL_W { w: self }
+    pub fn atest_ctrl(&mut self) -> ATEST_CTRL_W<0> {
+        ATEST_CTRL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

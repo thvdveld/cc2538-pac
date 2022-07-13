@@ -35,195 +35,63 @@ impl From<crate::W<CIE_SPEC>> for W {
     }
 }
 #[doc = "Field `SOFIE` reader - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub struct SOFIE_R(crate::FieldReader<bool, bool>);
-impl SOFIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SOFIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SOFIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SOFIE_R = crate::BitReader<bool>;
 #[doc = "Field `SOFIE` writer - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub struct SOFIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SOFIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type SOFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CIE_SPEC, bool, O>;
 #[doc = "Field `RSTIE` reader - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub struct RSTIE_R(crate::FieldReader<bool, bool>);
-impl RSTIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RSTIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RSTIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RSTIE_R = crate::BitReader<bool>;
 #[doc = "Field `RSTIE` writer - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub struct RSTIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSTIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type RSTIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CIE_SPEC, bool, O>;
 #[doc = "Field `RESUMEIE` reader - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub struct RESUMEIE_R(crate::FieldReader<bool, bool>);
-impl RESUMEIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESUMEIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESUMEIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESUMEIE_R = crate::BitReader<bool>;
 #[doc = "Field `RESUMEIE` writer - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub struct RESUMEIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESUMEIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type RESUMEIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CIE_SPEC, bool, O>;
 #[doc = "Field `SUSPENDIE` reader - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub struct SUSPENDIE_R(crate::FieldReader<bool, bool>);
-impl SUSPENDIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SUSPENDIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SUSPENDIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SUSPENDIE_R = crate::BitReader<bool>;
 #[doc = "Field `SUSPENDIE` writer - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub struct SUSPENDIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SUSPENDIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SUSPENDIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CIE_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 3 - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     pub fn sofie(&self) -> SOFIE_R {
-        SOFIE_R::new(((self.bits >> 3) & 0x01) != 0)
+        SOFIE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     pub fn rstie(&self) -> RSTIE_R {
-        RSTIE_R::new(((self.bits >> 2) & 0x01) != 0)
+        RSTIE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     pub fn resumeie(&self) -> RESUMEIE_R {
-        RESUMEIE_R::new(((self.bits >> 1) & 0x01) != 0)
+        RESUMEIE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     pub fn suspendie(&self) -> SUSPENDIE_R {
-        SUSPENDIE_R::new((self.bits & 0x01) != 0)
+        SUSPENDIE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 3 - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    pub fn sofie(&mut self) -> SOFIE_W {
-        SOFIE_W { w: self }
+    pub fn sofie(&mut self) -> SOFIE_W<3> {
+        SOFIE_W::new(self)
     }
     #[doc = "Bit 2 - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    pub fn rstie(&mut self) -> RSTIE_W {
-        RSTIE_W { w: self }
+    pub fn rstie(&mut self) -> RSTIE_W<2> {
+        RSTIE_W::new(self)
     }
     #[doc = "Bit 1 - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    pub fn resumeie(&mut self) -> RESUMEIE_W {
-        RESUMEIE_W { w: self }
+    pub fn resumeie(&mut self) -> RESUMEIE_W<1> {
+        RESUMEIE_W::new(self)
     }
     #[doc = "Bit 0 - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    pub fn suspendie(&mut self) -> SUSPENDIE_W {
-        SUSPENDIE_W { w: self }
+    pub fn suspendie(&mut self) -> SUSPENDIE_W<0> {
+        SUSPENDIE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

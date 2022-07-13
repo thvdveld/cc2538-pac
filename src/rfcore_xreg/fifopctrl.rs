@@ -35,32 +35,9 @@ impl From<crate::W<FIFOPCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `FIFOP_THR` reader - Threshold used when generating FIFOP signal"]
-pub struct FIFOP_THR_R(crate::FieldReader<u8, u8>);
-impl FIFOP_THR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FIFOP_THR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFOP_THR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFOP_THR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FIFOP_THR` writer - Threshold used when generating FIFOP signal"]
-pub struct FIFOP_THR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FIFOP_THR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type FIFOP_THR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFOPCTRL_SPEC, u8, u8, 7, O>;
 impl R {
     #[doc = "Bits 0:6 - Threshold used when generating FIFOP signal"]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Threshold used when generating FIFOP signal"]
     #[inline(always)]
-    pub fn fifop_thr(&mut self) -> FIFOP_THR_W {
-        FIFOP_THR_W { w: self }
+    pub fn fifop_thr(&mut self) -> FIFOP_THR_W<0> {
+        FIFOP_THR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

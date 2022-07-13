@@ -35,32 +35,10 @@ impl From<crate::W<SRCSHORTEN2_SPEC>> for W {
     }
 }
 #[doc = "Field `SHORT_ADDR_EN` reader - 23:16 part of the 24-bit word SHORT_ADDR_EN See description of SRCSHORTEN0.SHORT_ADDR_EN."]
-pub struct SHORT_ADDR_EN_R(crate::FieldReader<u8, u8>);
-impl SHORT_ADDR_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SHORT_ADDR_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHORT_ADDR_EN_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHORT_ADDR_EN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SHORT_ADDR_EN` writer - 23:16 part of the 24-bit word SHORT_ADDR_EN See description of SRCSHORTEN0.SHORT_ADDR_EN."]
-pub struct SHORT_ADDR_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SHORT_ADDR_EN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SHORT_ADDR_EN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SRCSHORTEN2_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - 23:16 part of the 24-bit word SHORT_ADDR_EN See description of SRCSHORTEN0.SHORT_ADDR_EN."]
     #[inline(always)]
@@ -71,8 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - 23:16 part of the 24-bit word SHORT_ADDR_EN See description of SRCSHORTEN0.SHORT_ADDR_EN."]
     #[inline(always)]
-    pub fn short_addr_en(&mut self) -> SHORT_ADDR_EN_W {
-        SHORT_ADDR_EN_W { w: self }
+    pub fn short_addr_en(&mut self) -> SHORT_ADDR_EN_W<0> {
+        SHORT_ADDR_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

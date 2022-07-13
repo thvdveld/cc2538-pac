@@ -14,45 +14,19 @@ impl From<crate::R<DMAC_PERSR_SPEC>> for R {
     }
 }
 #[doc = "Field `PORT1_AHB_ERROR` reader - A value of 1 indicates that the EIP-101 has detected an AHB bus error"]
-pub struct PORT1_AHB_ERROR_R(crate::FieldReader<bool, bool>);
-impl PORT1_AHB_ERROR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PORT1_AHB_ERROR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PORT1_AHB_ERROR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PORT1_AHB_ERROR_R = crate::BitReader<bool>;
 #[doc = "Field `PORT1_CHANNEL` reader - Indicates which channel has serviced last (channel 0 or channel 1) by AHB master port."]
-pub struct PORT1_CHANNEL_R(crate::FieldReader<bool, bool>);
-impl PORT1_CHANNEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PORT1_CHANNEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PORT1_CHANNEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PORT1_CHANNEL_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 12 - A value of 1 indicates that the EIP-101 has detected an AHB bus error"]
     #[inline(always)]
     pub fn port1_ahb_error(&self) -> PORT1_AHB_ERROR_R {
-        PORT1_AHB_ERROR_R::new(((self.bits >> 12) & 0x01) != 0)
+        PORT1_AHB_ERROR_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 9 - Indicates which channel has serviced last (channel 0 or channel 1) by AHB master port."]
     #[inline(always)]
     pub fn port1_channel(&self) -> PORT1_CHANNEL_R {
-        PORT1_CHANNEL_R::new(((self.bits >> 9) & 0x01) != 0)
+        PORT1_CHANNEL_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 #[doc = "DMAC port error raw status register This register provides the actual status of individual port errors. It also indicates which channel is serviced by an external AHB port (which is frozen by a port error). A port error aborts operations on all serviced channels (channel enable bit is forced to 0) and prevents further transfers via that port until the error is cleared by writing to the DMAC_SWRES register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmac_persr](index.html) module"]

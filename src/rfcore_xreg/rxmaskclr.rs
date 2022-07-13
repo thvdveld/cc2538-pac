@@ -35,32 +35,9 @@ impl From<crate::W<RXMASKCLR_SPEC>> for W {
     }
 }
 #[doc = "Field `RXENMASKCLR` reader - When written, the written data is inverted and ANDed with the RXENMASK and stored in RXENMASK. For example, if 1 is written to one or more bit positions in this register, the corresponding bits are cleared in RXENMASK."]
-pub struct RXENMASKCLR_R(crate::FieldReader<u8, u8>);
-impl RXENMASKCLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RXENMASKCLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXENMASKCLR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXENMASKCLR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RXENMASKCLR` writer - When written, the written data is inverted and ANDed with the RXENMASK and stored in RXENMASK. For example, if 1 is written to one or more bit positions in this register, the corresponding bits are cleared in RXENMASK."]
-pub struct RXENMASKCLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXENMASKCLR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type RXENMASKCLR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RXMASKCLR_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - When written, the written data is inverted and ANDed with the RXENMASK and stored in RXENMASK. For example, if 1 is written to one or more bit positions in this register, the corresponding bits are cleared in RXENMASK."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - When written, the written data is inverted and ANDed with the RXENMASK and stored in RXENMASK. For example, if 1 is written to one or more bit positions in this register, the corresponding bits are cleared in RXENMASK."]
     #[inline(always)]
-    pub fn rxenmaskclr(&mut self) -> RXENMASKCLR_W {
-        RXENMASKCLR_W { w: self }
+    pub fn rxenmaskclr(&mut self) -> RXENMASKCLR_W<0> {
+        RXENMASKCLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

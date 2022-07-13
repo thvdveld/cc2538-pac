@@ -35,101 +35,35 @@ impl From<crate::W<FSMCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SLOTTED_ACK` reader - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
-pub struct SLOTTED_ACK_R(crate::FieldReader<bool, bool>);
-impl SLOTTED_ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLOTTED_ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLOTTED_ACK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLOTTED_ACK_R = crate::BitReader<bool>;
 #[doc = "Field `SLOTTED_ACK` writer - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
-pub struct SLOTTED_ACK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLOTTED_ACK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type SLOTTED_ACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSMCTRL_SPEC, bool, O>;
 #[doc = "Field `RX2RX_TIME_OFF` reader - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
-pub struct RX2RX_TIME_OFF_R(crate::FieldReader<bool, bool>);
-impl RX2RX_TIME_OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX2RX_TIME_OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX2RX_TIME_OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX2RX_TIME_OFF_R = crate::BitReader<bool>;
 #[doc = "Field `RX2RX_TIME_OFF` writer - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
-pub struct RX2RX_TIME_OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX2RX_TIME_OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RX2RX_TIME_OFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSMCTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 1 - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
     #[inline(always)]
     pub fn slotted_ack(&self) -> SLOTTED_ACK_R {
-        SLOTTED_ACK_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLOTTED_ACK_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
     #[inline(always)]
     pub fn rx2rx_time_off(&self) -> RX2RX_TIME_OFF_R {
-        RX2RX_TIME_OFF_R::new((self.bits & 0x01) != 0)
+        RX2RX_TIME_OFF_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1 - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
     #[inline(always)]
-    pub fn slotted_ack(&mut self) -> SLOTTED_ACK_W {
-        SLOTTED_ACK_W { w: self }
+    pub fn slotted_ack(&mut self) -> SLOTTED_ACK_W<1> {
+        SLOTTED_ACK_W::new(self)
     }
     #[doc = "Bit 0 - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
     #[inline(always)]
-    pub fn rx2rx_time_off(&mut self) -> RX2RX_TIME_OFF_W {
-        RX2RX_TIME_OFF_W { w: self }
+    pub fn rx2rx_time_off(&mut self) -> RX2RX_TIME_OFF_W<0> {
+        RX2RX_TIME_OFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

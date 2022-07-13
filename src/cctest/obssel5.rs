@@ -35,76 +35,20 @@ impl From<crate::W<OBSSEL5_SPEC>> for W {
     }
 }
 #[doc = "Field `EN` reader - Observation output 5 enable control for PC5 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC5."]
-pub struct EN_R(crate::FieldReader<bool, bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - Observation output 5 enable control for PC5 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC5."]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, OBSSEL5_SPEC, bool, O>;
 #[doc = "Field `SEL` reader - n - obs_sigs\\[n\\]
 output on output 5: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
-pub struct SEL_R(crate::FieldReader<u8, u8>);
-impl SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SEL` writer - n - obs_sigs\\[n\\]
 output on output 5: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
-pub struct SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OBSSEL5_SPEC, u8, u8, 7, O>;
 impl R {
     #[doc = "Bit 7 - Observation output 5 enable control for PC5 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC5."]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
-        EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        EN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 0:6 - n - obs_sigs\\[n\\]
 output on output 5: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
@@ -116,14 +60,14 @@ output on output 5: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Rese
 impl W {
     #[doc = "Bit 7 - Observation output 5 enable control for PC5 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC5."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    pub fn en(&mut self) -> EN_W<7> {
+        EN_W::new(self)
     }
     #[doc = "Bits 0:6 - n - obs_sigs\\[n\\]
 output on output 5: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
     #[inline(always)]
-    pub fn sel(&mut self) -> SEL_W {
-        SEL_W { w: self }
+    pub fn sel(&mut self) -> SEL_W<0> {
+        SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

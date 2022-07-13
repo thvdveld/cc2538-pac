@@ -35,148 +35,49 @@ impl From<crate::W<CSOH_SPEC>> for W {
     }
 }
 #[doc = "Field `AUTOCLEAR` reader - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
-pub struct AUTOCLEAR_R(crate::FieldReader<bool, bool>);
-impl AUTOCLEAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AUTOCLEAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTOCLEAR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTOCLEAR_R = crate::BitReader<bool>;
 #[doc = "Field `AUTOCLEAR` writer - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
-pub struct AUTOCLEAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTOCLEAR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type AUTOCLEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSOH_SPEC, bool, O>;
 #[doc = "Field `ISO` reader - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
-pub struct ISO_R(crate::FieldReader<bool, bool>);
-impl ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ISO_R = crate::BitReader<bool>;
 #[doc = "Field `ISO` writer - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
-pub struct ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSOH_SPEC, bool, O>;
 #[doc = "Field `OUTDBLBUF` reader - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
-pub struct OUTDBLBUF_R(crate::FieldReader<bool, bool>);
-impl OUTDBLBUF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTDBLBUF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTDBLBUF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTDBLBUF_R = crate::BitReader<bool>;
 #[doc = "Field `OUTDBLBUF` writer - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
-pub struct OUTDBLBUF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTDBLBUF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type OUTDBLBUF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSOH_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
     #[inline(always)]
     pub fn autoclear(&self) -> AUTOCLEAR_R {
-        AUTOCLEAR_R::new(((self.bits >> 7) & 0x01) != 0)
+        AUTOCLEAR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
     pub fn iso(&self) -> ISO_R {
-        ISO_R::new(((self.bits >> 6) & 0x01) != 0)
+        ISO_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
     pub fn outdblbuf(&self) -> OUTDBLBUF_R {
-        OUTDBLBUF_R::new((self.bits & 0x01) != 0)
+        OUTDBLBUF_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
     #[inline(always)]
-    pub fn autoclear(&mut self) -> AUTOCLEAR_W {
-        AUTOCLEAR_W { w: self }
+    pub fn autoclear(&mut self) -> AUTOCLEAR_W<7> {
+        AUTOCLEAR_W::new(self)
     }
     #[doc = "Bit 6 - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
-    pub fn iso(&mut self) -> ISO_W {
-        ISO_W { w: self }
+    pub fn iso(&mut self) -> ISO_W<6> {
+        ISO_W::new(self)
     }
     #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
-    pub fn outdblbuf(&mut self) -> OUTDBLBUF_W {
-        OUTDBLBUF_W { w: self }
+    pub fn outdblbuf(&mut self) -> OUTDBLBUF_W<0> {
+        OUTDBLBUF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

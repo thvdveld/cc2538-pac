@@ -35,74 +35,19 @@ impl From<crate::W<RFC_OBS_CTRL0_SPEC>> for W {
     }
 }
 #[doc = "Field `RFC_OBS_POL0` reader - The signal chosen by RFC_OBS_MUX0 is XORed with this bit."]
-pub struct RFC_OBS_POL0_R(crate::FieldReader<bool, bool>);
-impl RFC_OBS_POL0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RFC_OBS_POL0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RFC_OBS_POL0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RFC_OBS_POL0_R = crate::BitReader<bool>;
 #[doc = "Field `RFC_OBS_POL0` writer - The signal chosen by RFC_OBS_MUX0 is XORed with this bit."]
-pub struct RFC_OBS_POL0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFC_OBS_POL0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type RFC_OBS_POL0_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFC_OBS_CTRL0_SPEC, bool, O>;
 #[doc = "Field `RFC_OBS_MUX0` reader - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[0\\]. 00 0000: 0 - Constant value 00 0001: 1 - Constant value 00 1000: rfc_sniff_data - Data from packet sniffer. Sample data on rising edges of sniff_clk. 00 1001: rfc_sniff_clk - 250kHz clock for packet sniffer data. 00 1100: rssi_valid - Pin is high when the RSSI value has been updated at least once since RX was started. Cleared when leaving RX. 00 1101: demod_cca - Clear channel assessment. See FSMSTAT1 register for details on how to configure the behavior of this signal. 00 1110: sampled_cca - A sampled version of the CCA bit from demodulator. The value is updated whenever a SSAMPLECCA or STXONCCA strobe is issued. 00 1111: sfd_sync - Pin is high when a SFD has been received or transmitted. Cleared when leaving RX/TX respectively. Not to be confused with the SFD exception. 01 0000: tx_active - Indicates that FFCTRL is in one of the TX states. Active-high. Note: This signal might have glitches, because it has no output flip-flop and is based on the current state register of the FFCTRL FSM. 01 0001: rx_active - Indicates that FFCTRL is in one of the RX states. Active-high. Note: This signal might have glitches, because it has no output flip-flop and is based on the current state register of the FFCTRL FSM. 01 0010: ffctrl_fifo - Pin is high when one or more bytes are in the RXFIFO. Low during RXFIFO overflow. 01 0011: ffctrl_fifop - Pin is high when the number of bytes in the RXFIFO exceeds the programmable threshold or at least one complete frame is in the RXFIFO. Also high during RXFIFO overflow. Not to be confused with the FIFOP exception. 01 0100: packet_done - A complete frame has been received. I.e., the number of bytes set by the frame-length field has been received. 01 0110: rfc_xor_rand_i_q - XOR between I and Q random outputs. Updated at 8 MHz. 01 0111: rfc_rand_q - Random data output from the Q channel of the receiver. Updated at 8 MHz. 01 1000: rfc_rand_i - Random data output from the I channel of the receiver. Updated at 8 MHz 01 1001: lock_status - 1 when PLL is in lock, otherwise 0 10 1000: pa_pd - Power amplifier power-down signal 10 1010: lna_pd - LNA power-down signal Others: Reserved"]
-pub struct RFC_OBS_MUX0_R(crate::FieldReader<u8, u8>);
-impl RFC_OBS_MUX0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RFC_OBS_MUX0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RFC_OBS_MUX0_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RFC_OBS_MUX0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RFC_OBS_MUX0` writer - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[0\\]. 00 0000: 0 - Constant value 00 0001: 1 - Constant value 00 1000: rfc_sniff_data - Data from packet sniffer. Sample data on rising edges of sniff_clk. 00 1001: rfc_sniff_clk - 250kHz clock for packet sniffer data. 00 1100: rssi_valid - Pin is high when the RSSI value has been updated at least once since RX was started. Cleared when leaving RX. 00 1101: demod_cca - Clear channel assessment. See FSMSTAT1 register for details on how to configure the behavior of this signal. 00 1110: sampled_cca - A sampled version of the CCA bit from demodulator. The value is updated whenever a SSAMPLECCA or STXONCCA strobe is issued. 00 1111: sfd_sync - Pin is high when a SFD has been received or transmitted. Cleared when leaving RX/TX respectively. Not to be confused with the SFD exception. 01 0000: tx_active - Indicates that FFCTRL is in one of the TX states. Active-high. Note: This signal might have glitches, because it has no output flip-flop and is based on the current state register of the FFCTRL FSM. 01 0001: rx_active - Indicates that FFCTRL is in one of the RX states. Active-high. Note: This signal might have glitches, because it has no output flip-flop and is based on the current state register of the FFCTRL FSM. 01 0010: ffctrl_fifo - Pin is high when one or more bytes are in the RXFIFO. Low during RXFIFO overflow. 01 0011: ffctrl_fifop - Pin is high when the number of bytes in the RXFIFO exceeds the programmable threshold or at least one complete frame is in the RXFIFO. Also high during RXFIFO overflow. Not to be confused with the FIFOP exception. 01 0100: packet_done - A complete frame has been received. I.e., the number of bytes set by the frame-length field has been received. 01 0110: rfc_xor_rand_i_q - XOR between I and Q random outputs. Updated at 8 MHz. 01 0111: rfc_rand_q - Random data output from the Q channel of the receiver. Updated at 8 MHz. 01 1000: rfc_rand_i - Random data output from the I channel of the receiver. Updated at 8 MHz 01 1001: lock_status - 1 when PLL is in lock, otherwise 0 10 1000: pa_pd - Power amplifier power-down signal 10 1010: lna_pd - LNA power-down signal Others: Reserved"]
-pub struct RFC_OBS_MUX0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFC_OBS_MUX0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type RFC_OBS_MUX0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, RFC_OBS_CTRL0_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bit 6 - The signal chosen by RFC_OBS_MUX0 is XORed with this bit."]
     #[inline(always)]
     pub fn rfc_obs_pol0(&self) -> RFC_OBS_POL0_R {
-        RFC_OBS_POL0_R::new(((self.bits >> 6) & 0x01) != 0)
+        RFC_OBS_POL0_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 0:5 - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[0\\]. 00 0000: 0 - Constant value 00 0001: 1 - Constant value 00 1000: rfc_sniff_data - Data from packet sniffer. Sample data on rising edges of sniff_clk. 00 1001: rfc_sniff_clk - 250kHz clock for packet sniffer data. 00 1100: rssi_valid - Pin is high when the RSSI value has been updated at least once since RX was started. Cleared when leaving RX. 00 1101: demod_cca - Clear channel assessment. See FSMSTAT1 register for details on how to configure the behavior of this signal. 00 1110: sampled_cca - A sampled version of the CCA bit from demodulator. The value is updated whenever a SSAMPLECCA or STXONCCA strobe is issued. 00 1111: sfd_sync - Pin is high when a SFD has been received or transmitted. Cleared when leaving RX/TX respectively. Not to be confused with the SFD exception. 01 0000: tx_active - Indicates that FFCTRL is in one of the TX states. Active-high. Note: This signal might have glitches, because it has no output flip-flop and is based on the current state register of the FFCTRL FSM. 01 0001: rx_active - Indicates that FFCTRL is in one of the RX states. Active-high. Note: This signal might have glitches, because it has no output flip-flop and is based on the current state register of the FFCTRL FSM. 01 0010: ffctrl_fifo - Pin is high when one or more bytes are in the RXFIFO. Low during RXFIFO overflow. 01 0011: ffctrl_fifop - Pin is high when the number of bytes in the RXFIFO exceeds the programmable threshold or at least one complete frame is in the RXFIFO. Also high during RXFIFO overflow. Not to be confused with the FIFOP exception. 01 0100: packet_done - A complete frame has been received. I.e., the number of bytes set by the frame-length field has been received. 01 0110: rfc_xor_rand_i_q - XOR between I and Q random outputs. Updated at 8 MHz. 01 0111: rfc_rand_q - Random data output from the Q channel of the receiver. Updated at 8 MHz. 01 1000: rfc_rand_i - Random data output from the I channel of the receiver. Updated at 8 MHz 01 1001: lock_status - 1 when PLL is in lock, otherwise 0 10 1000: pa_pd - Power amplifier power-down signal 10 1010: lna_pd - LNA power-down signal Others: Reserved"]
     #[inline(always)]
@@ -113,13 +58,13 @@ impl R {
 impl W {
     #[doc = "Bit 6 - The signal chosen by RFC_OBS_MUX0 is XORed with this bit."]
     #[inline(always)]
-    pub fn rfc_obs_pol0(&mut self) -> RFC_OBS_POL0_W {
-        RFC_OBS_POL0_W { w: self }
+    pub fn rfc_obs_pol0(&mut self) -> RFC_OBS_POL0_W<6> {
+        RFC_OBS_POL0_W::new(self)
     }
     #[doc = "Bits 0:5 - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[0\\]. 00 0000: 0 - Constant value 00 0001: 1 - Constant value 00 1000: rfc_sniff_data - Data from packet sniffer. Sample data on rising edges of sniff_clk. 00 1001: rfc_sniff_clk - 250kHz clock for packet sniffer data. 00 1100: rssi_valid - Pin is high when the RSSI value has been updated at least once since RX was started. Cleared when leaving RX. 00 1101: demod_cca - Clear channel assessment. See FSMSTAT1 register for details on how to configure the behavior of this signal. 00 1110: sampled_cca - A sampled version of the CCA bit from demodulator. The value is updated whenever a SSAMPLECCA or STXONCCA strobe is issued. 00 1111: sfd_sync - Pin is high when a SFD has been received or transmitted. Cleared when leaving RX/TX respectively. Not to be confused with the SFD exception. 01 0000: tx_active - Indicates that FFCTRL is in one of the TX states. Active-high. Note: This signal might have glitches, because it has no output flip-flop and is based on the current state register of the FFCTRL FSM. 01 0001: rx_active - Indicates that FFCTRL is in one of the RX states. Active-high. Note: This signal might have glitches, because it has no output flip-flop and is based on the current state register of the FFCTRL FSM. 01 0010: ffctrl_fifo - Pin is high when one or more bytes are in the RXFIFO. Low during RXFIFO overflow. 01 0011: ffctrl_fifop - Pin is high when the number of bytes in the RXFIFO exceeds the programmable threshold or at least one complete frame is in the RXFIFO. Also high during RXFIFO overflow. Not to be confused with the FIFOP exception. 01 0100: packet_done - A complete frame has been received. I.e., the number of bytes set by the frame-length field has been received. 01 0110: rfc_xor_rand_i_q - XOR between I and Q random outputs. Updated at 8 MHz. 01 0111: rfc_rand_q - Random data output from the Q channel of the receiver. Updated at 8 MHz. 01 1000: rfc_rand_i - Random data output from the I channel of the receiver. Updated at 8 MHz 01 1001: lock_status - 1 when PLL is in lock, otherwise 0 10 1000: pa_pd - Power amplifier power-down signal 10 1010: lna_pd - LNA power-down signal Others: Reserved"]
     #[inline(always)]
-    pub fn rfc_obs_mux0(&mut self) -> RFC_OBS_MUX0_W {
-        RFC_OBS_MUX0_W { w: self }
+    pub fn rfc_obs_mux0(&mut self) -> RFC_OBS_MUX0_W<0> {
+        RFC_OBS_MUX0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

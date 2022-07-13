@@ -20,32 +20,12 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DA` writer - Device active 0: Disables the I2C slave operation 1: Enables the I2C slave operation"]
-pub struct DA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type DA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Device active 0: Disables the I2C slave operation 1: Enables the I2C slave operation"]
     #[inline(always)]
-    pub fn da(&mut self) -> DA_W {
-        DA_W { w: self }
+    pub fn da(&mut self) -> DA_W<0> {
+        DA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

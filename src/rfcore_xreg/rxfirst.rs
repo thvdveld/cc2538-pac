@@ -14,20 +14,7 @@ impl From<crate::R<RXFIRST_SPEC>> for R {
     }
 }
 #[doc = "Field `DATA` reader - First byte of the RX FIFO Note: Reading this register does not modify the contents of the FIFO."]
-pub struct DATA_R(crate::FieldReader<u8, u8>);
-impl DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - First byte of the RX FIFO Note: Reading this register does not modify the contents of the FIFO."]
     #[inline(always)]

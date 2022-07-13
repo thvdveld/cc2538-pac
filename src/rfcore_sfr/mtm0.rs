@@ -36,33 +36,10 @@ impl From<crate::W<MTM0_SPEC>> for W {
 }
 #[doc = "Field `MTM0` reader - Indirectly returns and modifies bits \\[7:0\\]
 of an internal register depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the timer (MTtim) value is latched. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the timer (MTtim) and overflow counter (MTovf) values are latched."]
-pub struct MTM0_R(crate::FieldReader<u8, u8>);
-impl MTM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MTM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MTM0_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MTM0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MTM0` writer - Indirectly returns and modifies bits \\[7:0\\]
 of an internal register depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the timer (MTtim) value is latched. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the timer (MTtim) and overflow counter (MTovf) values are latched."]
-pub struct MTM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTM0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type MTM0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MTM0_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[7:0\\]
 of an internal register depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the timer (MTtim) value is latched. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the timer (MTtim) and overflow counter (MTovf) values are latched."]
@@ -75,8 +52,8 @@ impl W {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[7:0\\]
 of an internal register depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the timer (MTtim) value is latched. When reading the MTM0 register with MTMSEL.MTMSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the timer (MTtim) and overflow counter (MTovf) values are latched."]
     #[inline(always)]
-    pub fn mtm0(&mut self) -> MTM0_W {
-        MTM0_W { w: self }
+    pub fn mtm0(&mut self) -> MTM0_W<0> {
+        MTM0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

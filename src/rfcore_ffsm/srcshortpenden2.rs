@@ -35,32 +35,10 @@ impl From<crate::W<SRCSHORTPENDEN2_SPEC>> for W {
     }
 }
 #[doc = "Field `SRCSHORTPENDEN2` reader - 8 MSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
-pub struct SRCSHORTPENDEN2_R(crate::FieldReader<u8, u8>);
-impl SRCSHORTPENDEN2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SRCSHORTPENDEN2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRCSHORTPENDEN2_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRCSHORTPENDEN2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SRCSHORTPENDEN2` writer - 8 MSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
-pub struct SRCSHORTPENDEN2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRCSHORTPENDEN2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SRCSHORTPENDEN2_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SRCSHORTPENDEN2_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - 8 MSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
     #[inline(always)]
@@ -71,8 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - 8 MSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
     #[inline(always)]
-    pub fn srcshortpenden2(&mut self) -> SRCSHORTPENDEN2_W {
-        SRCSHORTPENDEN2_W { w: self }
+    pub fn srcshortpenden2(&mut self) -> SRCSHORTPENDEN2_W<0> {
+        SRCSHORTPENDEN2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

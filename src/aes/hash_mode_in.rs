@@ -20,59 +20,19 @@ impl From<crate::W<HASH_MODE_IN_SPEC>> for W {
     }
 }
 #[doc = "Field `SHA256_MODE` writer - The host must write this bit with 1 before processing a hash session."]
-pub struct SHA256_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SHA256_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type SHA256_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HASH_MODE_IN_SPEC, bool, O>;
 #[doc = "Field `NEW_HASH` writer - When set to 1, it indicates that the hash engine must start processing a new hash session. The HASH_DIGEST_n registers will automatically be loaded with the initial hash algorithm constants of the selected hash algorithm. When this bit is 0 while the hash processing is started, the initial hash algorithm constants are not loaded in the HASH_DIGEST_n registers. The hash engine will start processing with the digest that is currently in its internal HASH_DIGEST_n registers. This bit is automatically cleared when hash processing is started."]
-pub struct NEW_HASH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NEW_HASH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type NEW_HASH_W<'a, const O: u8> = crate::BitWriter<'a, u32, HASH_MODE_IN_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 3 - The host must write this bit with 1 before processing a hash session."]
     #[inline(always)]
-    pub fn sha256_mode(&mut self) -> SHA256_MODE_W {
-        SHA256_MODE_W { w: self }
+    pub fn sha256_mode(&mut self) -> SHA256_MODE_W<3> {
+        SHA256_MODE_W::new(self)
     }
     #[doc = "Bit 0 - When set to 1, it indicates that the hash engine must start processing a new hash session. The HASH_DIGEST_n registers will automatically be loaded with the initial hash algorithm constants of the selected hash algorithm. When this bit is 0 while the hash processing is started, the initial hash algorithm constants are not loaded in the HASH_DIGEST_n registers. The hash engine will start processing with the digest that is currently in its internal HASH_DIGEST_n registers. This bit is automatically cleared when hash processing is started."]
     #[inline(always)]
-    pub fn new_hash(&mut self) -> NEW_HASH_W {
-        NEW_HASH_W { w: self }
+    pub fn new_hash(&mut self) -> NEW_HASH_W<0> {
+        NEW_HASH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

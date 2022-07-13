@@ -35,54 +35,21 @@ impl From<crate::W<DCGCRFC_SPEC>> for W {
     }
 }
 #[doc = "Field `RFC0` reader - 0: Clock for RF CORE is gated. 1: Clock for RF CORE is enabled."]
-pub struct RFC0_R(crate::FieldReader<bool, bool>);
-impl RFC0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RFC0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RFC0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RFC0_R = crate::BitReader<bool>;
 #[doc = "Field `RFC0` writer - 0: Clock for RF CORE is gated. 1: Clock for RF CORE is enabled."]
-pub struct RFC0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFC0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RFC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCGCRFC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - 0: Clock for RF CORE is gated. 1: Clock for RF CORE is enabled."]
     #[inline(always)]
     pub fn rfc0(&self) -> RFC0_R {
-        RFC0_R::new((self.bits & 0x01) != 0)
+        RFC0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - 0: Clock for RF CORE is gated. 1: Clock for RF CORE is enabled."]
     #[inline(always)]
-    pub fn rfc0(&mut self) -> RFC0_W {
-        RFC0_W { w: self }
+    pub fn rfc0(&mut self) -> RFC0_W<0> {
+        RFC0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

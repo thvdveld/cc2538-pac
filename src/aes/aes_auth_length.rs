@@ -21,23 +21,14 @@ impl From<crate::W<AES_AUTH_LENGTH_SPEC>> for W {
 }
 #[doc = "Field `AUTH_LENGTH` writer - Bits \\[31:0\\]
 of the authentication length register store the authentication data length in bytes for combined modes only (GCM or CCM). Supported AAD-lengths for CCM are from 0 to (2^16 - 2^8) bytes. For GCM any value up to (2^32 - 1) bytes can be used. Once processing with this context is started, this length decrements to 0. A write to this register triggers the engine to start using this context for GCM and CCM. For a host read operation, these registers return all-0s."]
-pub struct AUTH_LENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTH_LENGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type AUTH_LENGTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, AES_AUTH_LENGTH_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31 - Bits \\[31:0\\]
 of the authentication length register store the authentication data length in bytes for combined modes only (GCM or CCM). Supported AAD-lengths for CCM are from 0 to (2^16 - 2^8) bytes. For GCM any value up to (2^32 - 1) bytes can be used. Once processing with this context is started, this length decrements to 0. A write to this register triggers the engine to start using this context for GCM and CCM. For a host read operation, these registers return all-0s."]
     #[inline(always)]
-    pub fn auth_length(&mut self) -> AUTH_LENGTH_W {
-        AUTH_LENGTH_W { w: self }
+    pub fn auth_length(&mut self) -> AUTH_LENGTH_W<0> {
+        AUTH_LENGTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

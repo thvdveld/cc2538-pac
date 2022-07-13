@@ -35,32 +35,9 @@ impl From<crate::W<RFERRM_SPEC>> for W {
     }
 }
 #[doc = "Field `RFERRM` reader - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
-pub struct RFERRM_R(crate::FieldReader<u8, u8>);
-impl RFERRM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RFERRM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RFERRM_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RFERRM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RFERRM` writer - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
-pub struct RFERRM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFERRM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type RFERRM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RFERRM_SPEC, u8, u8, 7, O>;
 impl R {
     #[doc = "Bits 0:6 - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
     #[inline(always)]
-    pub fn rferrm(&mut self) -> RFERRM_W {
-        RFERRM_W { w: self }
+    pub fn rferrm(&mut self) -> RFERRM_W<0> {
+        RFERRM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

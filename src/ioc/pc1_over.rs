@@ -35,54 +35,21 @@ impl From<crate::W<PC1_OVER_SPEC>> for W {
     }
 }
 #[doc = "Field `PC1_over` reader - 0: output disable 1: oe - output enable"]
-pub struct PC1_OVER_R(crate::FieldReader<bool, bool>);
-impl PC1_OVER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PC1_OVER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PC1_OVER_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PC1_OVER_R = crate::BitReader<bool>;
 #[doc = "Field `PC1_over` writer - 0: output disable 1: oe - output enable"]
-pub struct PC1_OVER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PC1_OVER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type PC1_OVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PC1_OVER_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 3 - 0: output disable 1: oe - output enable"]
     #[inline(always)]
     pub fn pc1_over(&self) -> PC1_OVER_R {
-        PC1_OVER_R::new(((self.bits >> 3) & 0x01) != 0)
+        PC1_OVER_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 3 - 0: output disable 1: oe - output enable"]
     #[inline(always)]
-    pub fn pc1_over(&mut self) -> PC1_OVER_W {
-        PC1_OVER_W { w: self }
+    pub fn pc1_over(&mut self) -> PC1_OVER_W<3> {
+        PC1_OVER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

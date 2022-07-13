@@ -35,32 +35,10 @@ impl From<crate::W<DMAC_CH1_DMALENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `DMALEN` reader - Channel DMA length in bytes. During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
-pub struct DMALEN_R(crate::FieldReader<u16, u16>);
-impl DMALEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DMALEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMALEN_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMALEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DMALEN` writer - Channel DMA length in bytes. During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
-pub struct DMALEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMALEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type DMALEN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DMAC_CH1_DMALENGTH_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - Channel DMA length in bytes. During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
     #[inline(always)]
@@ -71,8 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Channel DMA length in bytes. During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
     #[inline(always)]
-    pub fn dmalen(&mut self) -> DMALEN_W {
-        DMALEN_W { w: self }
+    pub fn dmalen(&mut self) -> DMALEN_W<0> {
+        DMALEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

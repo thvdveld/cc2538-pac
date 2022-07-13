@@ -35,32 +35,9 @@ impl From<crate::W<RFIRQM0_SPEC>> for W {
     }
 }
 #[doc = "Field `RFIRQM` reader - Bit mask is masking out interrupt sources. Bit position: 7: RXMASKZERO 6: RXPKTDONE 5: FRAME_ACCEPTED 4: SRC_MATCH_FOUND 3: SRC_MATCH_DONE 2: FIFOP 1: SFD 0: ACT_UNUSED"]
-pub struct RFIRQM_R(crate::FieldReader<u8, u8>);
-impl RFIRQM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RFIRQM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RFIRQM_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RFIRQM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RFIRQM` writer - Bit mask is masking out interrupt sources. Bit position: 7: RXMASKZERO 6: RXPKTDONE 5: FRAME_ACCEPTED 4: SRC_MATCH_FOUND 3: SRC_MATCH_DONE 2: FIFOP 1: SFD 0: ACT_UNUSED"]
-pub struct RFIRQM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFIRQM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type RFIRQM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RFIRQM0_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Bit mask is masking out interrupt sources. Bit position: 7: RXMASKZERO 6: RXPKTDONE 5: FRAME_ACCEPTED 4: SRC_MATCH_FOUND 3: SRC_MATCH_DONE 2: FIFOP 1: SFD 0: ACT_UNUSED"]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Bit mask is masking out interrupt sources. Bit position: 7: RXMASKZERO 6: RXPKTDONE 5: FRAME_ACCEPTED 4: SRC_MATCH_FOUND 3: SRC_MATCH_DONE 2: FIFOP 1: SFD 0: ACT_UNUSED"]
     #[inline(always)]
-    pub fn rfirqm(&mut self) -> RFIRQM_W {
-        RFIRQM_W { w: self }
+    pub fn rfirqm(&mut self) -> RFIRQM_W<0> {
+        RFIRQM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

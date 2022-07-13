@@ -20,140 +20,40 @@ impl From<crate::W<CTRL_INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_BUS_ERR` writer - If 1 is written to this bit, the DMA bus error status is cleared. Writing 0 has no effect."]
-pub struct DMA_BUS_ERR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_BUS_ERR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
+pub type DMA_BUS_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
 #[doc = "Field `KEY_ST_WR_ERR` writer - If 1 is written to this bit, the key store write error status is cleared. Writing 0 has no effect."]
-pub struct KEY_ST_WR_ERR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KEY_ST_WR_ERR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
-        self.w
-    }
-}
+pub type KEY_ST_WR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
 #[doc = "Field `KEY_ST_RD_ERR` writer - If 1 is written to this bit, the key store read error status is cleared. Writing 0 has no effect."]
-pub struct KEY_ST_RD_ERR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KEY_ST_RD_ERR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
-        self.w
-    }
-}
+pub type KEY_ST_RD_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
 #[doc = "Field `DMA_IN_DONE` writer - If 1 is written to this bit, the DMA in done (irq_dma_in_done) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
-pub struct DMA_IN_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_IN_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type DMA_IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
 #[doc = "Field `RESULT_AV` writer - If 1 is written to this bit, the result available (irq_result_av) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
-pub struct RESULT_AV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESULT_AV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RESULT_AV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 31 - If 1 is written to this bit, the DMA bus error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
-    pub fn dma_bus_err(&mut self) -> DMA_BUS_ERR_W {
-        DMA_BUS_ERR_W { w: self }
+    pub fn dma_bus_err(&mut self) -> DMA_BUS_ERR_W<31> {
+        DMA_BUS_ERR_W::new(self)
     }
     #[doc = "Bit 30 - If 1 is written to this bit, the key store write error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
-    pub fn key_st_wr_err(&mut self) -> KEY_ST_WR_ERR_W {
-        KEY_ST_WR_ERR_W { w: self }
+    pub fn key_st_wr_err(&mut self) -> KEY_ST_WR_ERR_W<30> {
+        KEY_ST_WR_ERR_W::new(self)
     }
     #[doc = "Bit 29 - If 1 is written to this bit, the key store read error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
-    pub fn key_st_rd_err(&mut self) -> KEY_ST_RD_ERR_W {
-        KEY_ST_RD_ERR_W { w: self }
+    pub fn key_st_rd_err(&mut self) -> KEY_ST_RD_ERR_W<29> {
+        KEY_ST_RD_ERR_W::new(self)
     }
     #[doc = "Bit 1 - If 1 is written to this bit, the DMA in done (irq_dma_in_done) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
     #[inline(always)]
-    pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W {
-        DMA_IN_DONE_W { w: self }
+    pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<1> {
+        DMA_IN_DONE_W::new(self)
     }
     #[doc = "Bit 0 - If 1 is written to this bit, the result available (irq_result_av) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
     #[inline(always)]
-    pub fn result_av(&mut self) -> RESULT_AV_W {
-        RESULT_AV_W { w: self }
+    pub fn result_av(&mut self) -> RESULT_AV_W<0> {
+        RESULT_AV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

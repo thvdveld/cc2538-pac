@@ -14,20 +14,7 @@ impl From<crate::R<RIS_SPEC>> for R {
     }
 }
 #[doc = "Field `RIS` reader - Reflects the status of interrupts trigger conditions detected on pins (raw, before masking) Bits set: Requirements met by corresponding pins Bits clear: Requirements not met"]
-pub struct RIS_R(crate::FieldReader<u8, u8>);
-impl RIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RIS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RIS_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - Reflects the status of interrupts trigger conditions detected on pins (raw, before masking) Bits set: Requirements met by corresponding pins Bits clear: Requirements not met"]
     #[inline(always)]

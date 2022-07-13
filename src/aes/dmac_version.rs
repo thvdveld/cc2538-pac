@@ -14,80 +14,15 @@ impl From<crate::R<DMAC_VERSION_SPEC>> for R {
     }
 }
 #[doc = "Field `HW_MAJOR_VERSION` reader - Major version number"]
-pub struct HW_MAJOR_VERSION_R(crate::FieldReader<u8, u8>);
-impl HW_MAJOR_VERSION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HW_MAJOR_VERSION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HW_MAJOR_VERSION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HW_MAJOR_VERSION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `HW_MINOR_VERSION` reader - Minor version number"]
-pub struct HW_MINOR_VERSION_R(crate::FieldReader<u8, u8>);
-impl HW_MINOR_VERSION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HW_MINOR_VERSION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HW_MINOR_VERSION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HW_MINOR_VERSION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `HW_PATCH_LEVEL` reader - Patch level Starts at 0 at first delivery of this version"]
-pub struct HW_PATCH_LEVEL_R(crate::FieldReader<u8, u8>);
-impl HW_PATCH_LEVEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HW_PATCH_LEVEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HW_PATCH_LEVEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HW_PATCH_LEVEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `EIP_NUMBER_COMPL` reader - Bit-by-bit complement of the EIP_NUMBER field bits."]
-pub struct EIP_NUMBER_COMPL_R(crate::FieldReader<u8, u8>);
-impl EIP_NUMBER_COMPL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EIP_NUMBER_COMPL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EIP_NUMBER_COMPL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EIP_NUMBER_COMPL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `EIP_NUMBER` reader - Binary encoding of the EIP-number of this DMA controller (209)"]
-pub struct EIP_NUMBER_R(crate::FieldReader<u8, u8>);
-impl EIP_NUMBER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EIP_NUMBER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EIP_NUMBER_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EIP_NUMBER_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 24:27 - Major version number"]
     #[inline(always)]

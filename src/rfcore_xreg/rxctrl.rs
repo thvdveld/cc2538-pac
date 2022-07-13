@@ -35,118 +35,49 @@ impl From<crate::W<RXCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `GBIAS_LNA2_REF` reader - Adjusts front-end LNA2/mixer PTAT current output (from M = 3 to M = 6), default: M = 5"]
-pub struct GBIAS_LNA2_REF_R(crate::FieldReader<u8, u8>);
-impl GBIAS_LNA2_REF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GBIAS_LNA2_REF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GBIAS_LNA2_REF_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GBIAS_LNA2_REF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GBIAS_LNA2_REF` writer - Adjusts front-end LNA2/mixer PTAT current output (from M = 3 to M = 6), default: M = 5"]
-pub struct GBIAS_LNA2_REF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GBIAS_LNA2_REF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
-}
+pub type GBIAS_LNA2_REF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RXCTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `GBIAS_LNA_REF` reader - Adjusts front-end LNA PTAT current output (from M = 3 to M = 6), default: M = 5"]
-pub struct GBIAS_LNA_REF_R(crate::FieldReader<u8, u8>);
-impl GBIAS_LNA_REF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GBIAS_LNA_REF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GBIAS_LNA_REF_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GBIAS_LNA_REF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GBIAS_LNA_REF` writer - Adjusts front-end LNA PTAT current output (from M = 3 to M = 6), default: M = 5"]
-pub struct GBIAS_LNA_REF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GBIAS_LNA_REF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
-        self.w
-    }
-}
+pub type GBIAS_LNA_REF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RXCTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `MIX_CURRENT` reader - Control of the output current from the receiver mixers The current increases with increasing setting set."]
-pub struct MIX_CURRENT_R(crate::FieldReader<u8, u8>);
-impl MIX_CURRENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MIX_CURRENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIX_CURRENT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MIX_CURRENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MIX_CURRENT` writer - Control of the output current from the receiver mixers The current increases with increasing setting set."]
-pub struct MIX_CURRENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MIX_CURRENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type MIX_CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RXCTRL_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 4:5 - Adjusts front-end LNA2/mixer PTAT current output (from M = 3 to M = 6), default: M = 5"]
     #[inline(always)]
     pub fn gbias_lna2_ref(&self) -> GBIAS_LNA2_REF_R {
-        GBIAS_LNA2_REF_R::new(((self.bits >> 4) & 0x03) as u8)
+        GBIAS_LNA2_REF_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 2:3 - Adjusts front-end LNA PTAT current output (from M = 3 to M = 6), default: M = 5"]
     #[inline(always)]
     pub fn gbias_lna_ref(&self) -> GBIAS_LNA_REF_R {
-        GBIAS_LNA_REF_R::new(((self.bits >> 2) & 0x03) as u8)
+        GBIAS_LNA_REF_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 0:1 - Control of the output current from the receiver mixers The current increases with increasing setting set."]
     #[inline(always)]
     pub fn mix_current(&self) -> MIX_CURRENT_R {
-        MIX_CURRENT_R::new((self.bits & 0x03) as u8)
+        MIX_CURRENT_R::new((self.bits & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 4:5 - Adjusts front-end LNA2/mixer PTAT current output (from M = 3 to M = 6), default: M = 5"]
     #[inline(always)]
-    pub fn gbias_lna2_ref(&mut self) -> GBIAS_LNA2_REF_W {
-        GBIAS_LNA2_REF_W { w: self }
+    pub fn gbias_lna2_ref(&mut self) -> GBIAS_LNA2_REF_W<4> {
+        GBIAS_LNA2_REF_W::new(self)
     }
     #[doc = "Bits 2:3 - Adjusts front-end LNA PTAT current output (from M = 3 to M = 6), default: M = 5"]
     #[inline(always)]
-    pub fn gbias_lna_ref(&mut self) -> GBIAS_LNA_REF_W {
-        GBIAS_LNA_REF_W { w: self }
+    pub fn gbias_lna_ref(&mut self) -> GBIAS_LNA_REF_W<2> {
+        GBIAS_LNA_REF_W::new(self)
     }
     #[doc = "Bits 0:1 - Control of the output current from the receiver mixers The current increases with increasing setting set."]
     #[inline(always)]
-    pub fn mix_current(&mut self) -> MIX_CURRENT_W {
-        MIX_CURRENT_W { w: self }
+    pub fn mix_current(&mut self) -> MIX_CURRENT_W<0> {
+        MIX_CURRENT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

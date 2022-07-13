@@ -36,33 +36,10 @@ impl From<crate::W<MTMOVF1_SPEC>> for W {
 }
 #[doc = "Field `MTMOVF1` reader - Indirectly returns and modifies bits \\[15:8\\]
 of an internal register, depending on the value of MTMSEL.MTMSEL. Reading this register with MTMSEL.MTMOVFSEL set to 000 returns the latched value of MTovf\\[15:8\\]."]
-pub struct MTMOVF1_R(crate::FieldReader<u8, u8>);
-impl MTMOVF1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MTMOVF1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MTMOVF1_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MTMOVF1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MTMOVF1` writer - Indirectly returns and modifies bits \\[15:8\\]
 of an internal register, depending on the value of MTMSEL.MTMSEL. Reading this register with MTMSEL.MTMOVFSEL set to 000 returns the latched value of MTovf\\[15:8\\]."]
-pub struct MTMOVF1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTMOVF1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type MTMOVF1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MTMOVF1_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[15:8\\]
 of an internal register, depending on the value of MTMSEL.MTMSEL. Reading this register with MTMSEL.MTMOVFSEL set to 000 returns the latched value of MTovf\\[15:8\\]."]
@@ -75,8 +52,8 @@ impl W {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[15:8\\]
 of an internal register, depending on the value of MTMSEL.MTMSEL. Reading this register with MTMSEL.MTMOVFSEL set to 000 returns the latched value of MTovf\\[15:8\\]."]
     #[inline(always)]
-    pub fn mtmovf1(&mut self) -> MTMOVF1_W {
-        MTMOVF1_W { w: self }
+    pub fn mtmovf1(&mut self) -> MTMOVF1_W<0> {
+        MTMOVF1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

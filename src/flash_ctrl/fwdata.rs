@@ -35,32 +35,9 @@ impl From<crate::W<FWDATA_SPEC>> for W {
     }
 }
 #[doc = "Field `FWDATA` reader - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
-pub struct FWDATA_R(crate::FieldReader<u32, u32>);
-impl FWDATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        FWDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FWDATA_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FWDATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `FWDATA` writer - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
-pub struct FWDATA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FWDATA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type FWDATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FWDATA_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
     #[inline(always)]
-    pub fn fwdata(&mut self) -> FWDATA_W {
-        FWDATA_W { w: self }
+    pub fn fwdata(&mut self) -> FWDATA_W<0> {
+        FWDATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

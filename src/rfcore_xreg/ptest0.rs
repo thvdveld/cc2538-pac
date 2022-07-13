@@ -35,299 +35,98 @@ impl From<crate::W<PTEST0_SPEC>> for W {
     }
 }
 #[doc = "Field `PRE_PD` reader - Prescaler power-down signal When PD_OVERRIDE = 1"]
-pub struct PRE_PD_R(crate::FieldReader<bool, bool>);
-impl PRE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `CHP_PD` reader - Charge pump power-down signal When PD_OVERRIDE = 1"]
-pub struct CHP_PD_R(crate::FieldReader<bool, bool>);
-impl CHP_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CHP_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CHP_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CHP_PD_R = crate::BitReader<bool>;
 #[doc = "Field `CHP_PD` writer - Charge pump power-down signal When PD_OVERRIDE = 1"]
-pub struct CHP_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHP_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type CHP_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
 #[doc = "Field `ADC_PD` reader - ADC power-down signal When PD_OVERRIDE = 1"]
-pub struct ADC_PD_R(crate::FieldReader<bool, bool>);
-impl ADC_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_PD_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_PD` writer - ADC power-down signal When PD_OVERRIDE = 1"]
-pub struct ADC_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type ADC_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
 #[doc = "Field `DAC_PD` reader - DAC power-down signal When PD_OVERRIDE = 1"]
-pub struct DAC_PD_R(crate::FieldReader<bool, bool>);
-impl DAC_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DAC_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DAC_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DAC_PD_R = crate::BitReader<bool>;
 #[doc = "Field `DAC_PD` writer - DAC power-down signal When PD_OVERRIDE = 1"]
-pub struct DAC_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DAC_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type DAC_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
 #[doc = "Field `LNA_PD` reader - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
-pub struct LNA_PD_R(crate::FieldReader<u8, u8>);
-impl LNA_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LNA_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LNA_PD_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LNA_PD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LNA_PD` writer - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
-pub struct LNA_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LNA_PD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
-        self.w
-    }
-}
+pub type LNA_PD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PTEST0_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TXMIX_PD` reader - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
-pub struct TXMIX_PD_R(crate::FieldReader<bool, bool>);
-impl TXMIX_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXMIX_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXMIX_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXMIX_PD_R = crate::BitReader<bool>;
 #[doc = "Field `TXMIX_PD` writer - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
-pub struct TXMIX_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXMIX_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type TXMIX_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
 #[doc = "Field `AAF_PD` reader - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
-pub struct AAF_PD_R(crate::FieldReader<bool, bool>);
-impl AAF_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AAF_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AAF_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AAF_PD_R = crate::BitReader<bool>;
 #[doc = "Field `AAF_PD` writer - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
-pub struct AAF_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AAF_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type AAF_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 7 - Prescaler power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn pre_pd(&self) -> PRE_PD_R {
-        PRE_PD_R::new(((self.bits >> 7) & 0x01) != 0)
+        PRE_PD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Charge pump power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn chp_pd(&self) -> CHP_PD_R {
-        CHP_PD_R::new(((self.bits >> 6) & 0x01) != 0)
+        CHP_PD_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - ADC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn adc_pd(&self) -> ADC_PD_R {
-        ADC_PD_R::new(((self.bits >> 5) & 0x01) != 0)
+        ADC_PD_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - DAC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn dac_pd(&self) -> DAC_PD_R {
-        DAC_PD_R::new(((self.bits >> 4) & 0x01) != 0)
+        DAC_PD_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 2:3 - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn lna_pd(&self) -> LNA_PD_R {
-        LNA_PD_R::new(((self.bits >> 2) & 0x03) as u8)
+        LNA_PD_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 1 - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn txmix_pd(&self) -> TXMIX_PD_R {
-        TXMIX_PD_R::new(((self.bits >> 1) & 0x01) != 0)
+        TXMIX_PD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn aaf_pd(&self) -> AAF_PD_R {
-        AAF_PD_R::new((self.bits & 0x01) != 0)
+        AAF_PD_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 6 - Charge pump power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn chp_pd(&mut self) -> CHP_PD_W {
-        CHP_PD_W { w: self }
+    pub fn chp_pd(&mut self) -> CHP_PD_W<6> {
+        CHP_PD_W::new(self)
     }
     #[doc = "Bit 5 - ADC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn adc_pd(&mut self) -> ADC_PD_W {
-        ADC_PD_W { w: self }
+    pub fn adc_pd(&mut self) -> ADC_PD_W<5> {
+        ADC_PD_W::new(self)
     }
     #[doc = "Bit 4 - DAC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn dac_pd(&mut self) -> DAC_PD_W {
-        DAC_PD_W { w: self }
+    pub fn dac_pd(&mut self) -> DAC_PD_W<4> {
+        DAC_PD_W::new(self)
     }
     #[doc = "Bits 2:3 - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn lna_pd(&mut self) -> LNA_PD_W {
-        LNA_PD_W { w: self }
+    pub fn lna_pd(&mut self) -> LNA_PD_W<2> {
+        LNA_PD_W::new(self)
     }
     #[doc = "Bit 1 - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn txmix_pd(&mut self) -> TXMIX_PD_W {
-        TXMIX_PD_W { w: self }
+    pub fn txmix_pd(&mut self) -> TXMIX_PD_W<1> {
+        TXMIX_PD_W::new(self)
     }
     #[doc = "Bit 0 - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn aaf_pd(&mut self) -> AAF_PD_W {
-        AAF_PD_W { w: self }
+    pub fn aaf_pd(&mut self) -> AAF_PD_W<0> {
+        AAF_PD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

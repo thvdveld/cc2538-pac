@@ -35,242 +35,77 @@ impl From<crate::W<MDMTEST1_SPEC>> for W {
     }
 }
 #[doc = "Field `USEMIRROR_IF` reader - 0: Use the normal IF frequency (MDMTEST0.TX_TONE) for automatic IF compensation of channel frequency on TX. 1: Use mirror IF frequency for automatic compensation of channel frequency on TX."]
-pub struct USEMIRROR_IF_R(crate::FieldReader<bool, bool>);
-impl USEMIRROR_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USEMIRROR_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USEMIRROR_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USEMIRROR_IF_R = crate::BitReader<bool>;
 #[doc = "Field `USEMIRROR_IF` writer - 0: Use the normal IF frequency (MDMTEST0.TX_TONE) for automatic IF compensation of channel frequency on TX. 1: Use mirror IF frequency for automatic compensation of channel frequency on TX."]
-pub struct USEMIRROR_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USEMIRROR_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type USEMIRROR_IF_W<'a, const O: u8> = crate::BitWriter<'a, u32, MDMTEST1_SPEC, bool, O>;
 #[doc = "Field `MOD_IF` reader - 0: Modulation is performed at an IF set by MDMTEST0.TX_TONE. The tone set by MDMTEST0.TX_TONE is superimposed on the data. 1: Modulate a tone set by MDMTEST0.TX_TONE. A tone is transmitted with frequency set by MDMTEST0.TX_TONE."]
-pub struct MOD_IF_R(crate::FieldReader<bool, bool>);
-impl MOD_IF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MOD_IF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MOD_IF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MOD_IF_R = crate::BitReader<bool>;
 #[doc = "Field `MOD_IF` writer - 0: Modulation is performed at an IF set by MDMTEST0.TX_TONE. The tone set by MDMTEST0.TX_TONE is superimposed on the data. 1: Modulate a tone set by MDMTEST0.TX_TONE. A tone is transmitted with frequency set by MDMTEST0.TX_TONE."]
-pub struct MOD_IF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MOD_IF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type MOD_IF_W<'a, const O: u8> = crate::BitWriter<'a, u32, MDMTEST1_SPEC, bool, O>;
 #[doc = "Field `RAMP_AMP` reader - 1: Enable ramping of DAC output amplitude during startup and finish. 0: Disable ramping of DAC output amplitude."]
-pub struct RAMP_AMP_R(crate::FieldReader<bool, bool>);
-impl RAMP_AMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAMP_AMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAMP_AMP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAMP_AMP_R = crate::BitReader<bool>;
 #[doc = "Field `RAMP_AMP` writer - 1: Enable ramping of DAC output amplitude during startup and finish. 0: Disable ramping of DAC output amplitude."]
-pub struct RAMP_AMP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAMP_AMP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type RAMP_AMP_W<'a, const O: u8> = crate::BitWriter<'a, u32, MDMTEST1_SPEC, bool, O>;
 #[doc = "Field `RFC_SNIFF_EN` reader - 0: Packet sniffer module disabled 1: Packet sniffer module enabled. The received and transmitted data can be observed on GPIO pins."]
-pub struct RFC_SNIFF_EN_R(crate::FieldReader<bool, bool>);
-impl RFC_SNIFF_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RFC_SNIFF_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RFC_SNIFF_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RFC_SNIFF_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RFC_SNIFF_EN` writer - 0: Packet sniffer module disabled 1: Packet sniffer module enabled. The received and transmitted data can be observed on GPIO pins."]
-pub struct RFC_SNIFF_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFC_SNIFF_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type RFC_SNIFF_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MDMTEST1_SPEC, bool, O>;
 #[doc = "Field `LOOPBACK_EN` reader - Enables loopback of modulated data into the receiver chain 0: An STXCAL instruction calibrates for TX. Use STXON to continue to active TX. 1: An STXCAL instruction enables the loopback mode."]
-pub struct LOOPBACK_EN_R(crate::FieldReader<bool, bool>);
-impl LOOPBACK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LOOPBACK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOOPBACK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOOPBACK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LOOPBACK_EN` writer - Enables loopback of modulated data into the receiver chain 0: An STXCAL instruction calibrates for TX. Use STXON to continue to active TX. 1: An STXCAL instruction enables the loopback mode."]
-pub struct LOOPBACK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOOPBACK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type LOOPBACK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MDMTEST1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 5 - 0: Use the normal IF frequency (MDMTEST0.TX_TONE) for automatic IF compensation of channel frequency on TX. 1: Use mirror IF frequency for automatic compensation of channel frequency on TX."]
     #[inline(always)]
     pub fn usemirror_if(&self) -> USEMIRROR_IF_R {
-        USEMIRROR_IF_R::new(((self.bits >> 5) & 0x01) != 0)
+        USEMIRROR_IF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - 0: Modulation is performed at an IF set by MDMTEST0.TX_TONE. The tone set by MDMTEST0.TX_TONE is superimposed on the data. 1: Modulate a tone set by MDMTEST0.TX_TONE. A tone is transmitted with frequency set by MDMTEST0.TX_TONE."]
     #[inline(always)]
     pub fn mod_if(&self) -> MOD_IF_R {
-        MOD_IF_R::new(((self.bits >> 4) & 0x01) != 0)
+        MOD_IF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: Enable ramping of DAC output amplitude during startup and finish. 0: Disable ramping of DAC output amplitude."]
     #[inline(always)]
     pub fn ramp_amp(&self) -> RAMP_AMP_R {
-        RAMP_AMP_R::new(((self.bits >> 3) & 0x01) != 0)
+        RAMP_AMP_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - 0: Packet sniffer module disabled 1: Packet sniffer module enabled. The received and transmitted data can be observed on GPIO pins."]
     #[inline(always)]
     pub fn rfc_sniff_en(&self) -> RFC_SNIFF_EN_R {
-        RFC_SNIFF_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        RFC_SNIFF_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 0 - Enables loopback of modulated data into the receiver chain 0: An STXCAL instruction calibrates for TX. Use STXON to continue to active TX. 1: An STXCAL instruction enables the loopback mode."]
     #[inline(always)]
     pub fn loopback_en(&self) -> LOOPBACK_EN_R {
-        LOOPBACK_EN_R::new((self.bits & 0x01) != 0)
+        LOOPBACK_EN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 5 - 0: Use the normal IF frequency (MDMTEST0.TX_TONE) for automatic IF compensation of channel frequency on TX. 1: Use mirror IF frequency for automatic compensation of channel frequency on TX."]
     #[inline(always)]
-    pub fn usemirror_if(&mut self) -> USEMIRROR_IF_W {
-        USEMIRROR_IF_W { w: self }
+    pub fn usemirror_if(&mut self) -> USEMIRROR_IF_W<5> {
+        USEMIRROR_IF_W::new(self)
     }
     #[doc = "Bit 4 - 0: Modulation is performed at an IF set by MDMTEST0.TX_TONE. The tone set by MDMTEST0.TX_TONE is superimposed on the data. 1: Modulate a tone set by MDMTEST0.TX_TONE. A tone is transmitted with frequency set by MDMTEST0.TX_TONE."]
     #[inline(always)]
-    pub fn mod_if(&mut self) -> MOD_IF_W {
-        MOD_IF_W { w: self }
+    pub fn mod_if(&mut self) -> MOD_IF_W<4> {
+        MOD_IF_W::new(self)
     }
     #[doc = "Bit 3 - 1: Enable ramping of DAC output amplitude during startup and finish. 0: Disable ramping of DAC output amplitude."]
     #[inline(always)]
-    pub fn ramp_amp(&mut self) -> RAMP_AMP_W {
-        RAMP_AMP_W { w: self }
+    pub fn ramp_amp(&mut self) -> RAMP_AMP_W<3> {
+        RAMP_AMP_W::new(self)
     }
     #[doc = "Bit 2 - 0: Packet sniffer module disabled 1: Packet sniffer module enabled. The received and transmitted data can be observed on GPIO pins."]
     #[inline(always)]
-    pub fn rfc_sniff_en(&mut self) -> RFC_SNIFF_EN_W {
-        RFC_SNIFF_EN_W { w: self }
+    pub fn rfc_sniff_en(&mut self) -> RFC_SNIFF_EN_W<2> {
+        RFC_SNIFF_EN_W::new(self)
     }
     #[doc = "Bit 0 - Enables loopback of modulated data into the receiver chain 0: An STXCAL instruction calibrates for TX. Use STXON to continue to active TX. 1: An STXCAL instruction enables the loopback mode."]
     #[inline(always)]
-    pub fn loopback_en(&mut self) -> LOOPBACK_EN_W {
-        LOOPBACK_EN_W { w: self }
+    pub fn loopback_en(&mut self) -> LOOPBACK_EN_W<0> {
+        LOOPBACK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

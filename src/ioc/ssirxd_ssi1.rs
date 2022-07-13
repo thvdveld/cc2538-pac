@@ -35,32 +35,9 @@ impl From<crate::W<SSIRXD_SSI1_SPEC>> for W {
     }
 }
 #[doc = "Field `INPUT_SEL` reader - 0: PA0 selected as SSI1 RX 1: PA1 selected as SSI1 RX ... 31: PD7 selected as SSI1 RX"]
-pub struct INPUT_SEL_R(crate::FieldReader<u8, u8>);
-impl INPUT_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INPUT_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INPUT_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INPUT_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INPUT_SEL` writer - 0: PA0 selected as SSI1 RX 1: PA1 selected as SSI1 RX ... 31: PD7 selected as SSI1 RX"]
-pub struct INPUT_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INPUT_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type INPUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSIRXD_SSI1_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - 0: PA0 selected as SSI1 RX 1: PA1 selected as SSI1 RX ... 31: PD7 selected as SSI1 RX"]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - 0: PA0 selected as SSI1 RX 1: PA1 selected as SSI1 RX ... 31: PD7 selected as SSI1 RX"]
     #[inline(always)]
-    pub fn input_sel(&mut self) -> INPUT_SEL_W {
-        INPUT_SEL_W { w: self }
+    pub fn input_sel(&mut self) -> INPUT_SEL_W<0> {
+        INPUT_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

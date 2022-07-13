@@ -15,20 +15,7 @@ impl From<crate::R<WAITSTAT_SPEC>> for R {
 }
 #[doc = "Field `WAITREQ` reader - Channel \\[n\\]
 wait status These bits provide the tchannel wait-on-request status. Bit 0 corresponds to channel 0. 1: The corresponding channel is waiting on a request. 0: The corresponding channel is not waiting on a request."]
-pub struct WAITREQ_R(crate::FieldReader<u32, u32>);
-impl WAITREQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        WAITREQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WAITREQ_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WAITREQ_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 wait status These bits provide the tchannel wait-on-request status. Bit 0 corresponds to channel 0. 1: The corresponding channel is waiting on a request. 0: The corresponding channel is not waiting on a request."]

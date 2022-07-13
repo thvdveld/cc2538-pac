@@ -35,383 +35,127 @@ impl From<crate::W<KEY_STORE_WRITTEN_AREA_SPEC>> for W {
     }
 }
 #[doc = "Field `RAM_AREA_WRITTEN7` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN7_R(crate::FieldReader<bool, bool>);
-impl RAM_AREA_WRITTEN7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_AREA_WRITTEN7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_WRITTEN7_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_WRITTEN7_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA_WRITTEN7` writer - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_WRITTEN7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type RAM_AREA_WRITTEN7_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, KEY_STORE_WRITTEN_AREA_SPEC, bool, O>;
 #[doc = "Field `RAM_AREA_WRITTEN6` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN6_R(crate::FieldReader<bool, bool>);
-impl RAM_AREA_WRITTEN6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_AREA_WRITTEN6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_WRITTEN6_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_WRITTEN6_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA_WRITTEN6` writer - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_WRITTEN6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type RAM_AREA_WRITTEN6_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, KEY_STORE_WRITTEN_AREA_SPEC, bool, O>;
 #[doc = "Field `RAM_AREA_WRITTEN5` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN5_R(crate::FieldReader<bool, bool>);
-impl RAM_AREA_WRITTEN5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_AREA_WRITTEN5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_WRITTEN5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_WRITTEN5_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA_WRITTEN5` writer - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_WRITTEN5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type RAM_AREA_WRITTEN5_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, KEY_STORE_WRITTEN_AREA_SPEC, bool, O>;
 #[doc = "Field `RAM_AREA_WRITTEN4` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN4_R(crate::FieldReader<bool, bool>);
-impl RAM_AREA_WRITTEN4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_AREA_WRITTEN4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_WRITTEN4_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_WRITTEN4_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA_WRITTEN4` writer - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_WRITTEN4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type RAM_AREA_WRITTEN4_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, KEY_STORE_WRITTEN_AREA_SPEC, bool, O>;
 #[doc = "Field `RAM_AREA_WRITTEN3` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN3_R(crate::FieldReader<bool, bool>);
-impl RAM_AREA_WRITTEN3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_AREA_WRITTEN3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_WRITTEN3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_WRITTEN3_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA_WRITTEN3` writer - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_WRITTEN3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type RAM_AREA_WRITTEN3_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, KEY_STORE_WRITTEN_AREA_SPEC, bool, O>;
 #[doc = "Field `RAM_AREA_WRITTEN2` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN2_R(crate::FieldReader<bool, bool>);
-impl RAM_AREA_WRITTEN2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_AREA_WRITTEN2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_WRITTEN2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_WRITTEN2_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA_WRITTEN2` writer - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_WRITTEN2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type RAM_AREA_WRITTEN2_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, KEY_STORE_WRITTEN_AREA_SPEC, bool, O>;
 #[doc = "Field `RAM_AREA_WRITTEN1` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN1_R(crate::FieldReader<bool, bool>);
-impl RAM_AREA_WRITTEN1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_AREA_WRITTEN1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_WRITTEN1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_WRITTEN1_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA_WRITTEN1` writer - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_WRITTEN1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type RAM_AREA_WRITTEN1_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, KEY_STORE_WRITTEN_AREA_SPEC, bool, O>;
 #[doc = "Field `RAM_AREA_WRITTEN0` reader - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN0_R(crate::FieldReader<bool, bool>);
-impl RAM_AREA_WRITTEN0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_AREA_WRITTEN0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_WRITTEN0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_WRITTEN0_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA_WRITTEN0` writer - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
-pub struct RAM_AREA_WRITTEN0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_WRITTEN0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RAM_AREA_WRITTEN0_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, KEY_STORE_WRITTEN_AREA_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 7 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
     pub fn ram_area_written7(&self) -> RAM_AREA_WRITTEN7_R {
-        RAM_AREA_WRITTEN7_R::new(((self.bits >> 7) & 0x01) != 0)
+        RAM_AREA_WRITTEN7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
     pub fn ram_area_written6(&self) -> RAM_AREA_WRITTEN6_R {
-        RAM_AREA_WRITTEN6_R::new(((self.bits >> 6) & 0x01) != 0)
+        RAM_AREA_WRITTEN6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
     pub fn ram_area_written5(&self) -> RAM_AREA_WRITTEN5_R {
-        RAM_AREA_WRITTEN5_R::new(((self.bits >> 5) & 0x01) != 0)
+        RAM_AREA_WRITTEN5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
     pub fn ram_area_written4(&self) -> RAM_AREA_WRITTEN4_R {
-        RAM_AREA_WRITTEN4_R::new(((self.bits >> 4) & 0x01) != 0)
+        RAM_AREA_WRITTEN4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
     pub fn ram_area_written3(&self) -> RAM_AREA_WRITTEN3_R {
-        RAM_AREA_WRITTEN3_R::new(((self.bits >> 3) & 0x01) != 0)
+        RAM_AREA_WRITTEN3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
     pub fn ram_area_written2(&self) -> RAM_AREA_WRITTEN2_R {
-        RAM_AREA_WRITTEN2_R::new(((self.bits >> 2) & 0x01) != 0)
+        RAM_AREA_WRITTEN2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
     pub fn ram_area_written1(&self) -> RAM_AREA_WRITTEN1_R {
-        RAM_AREA_WRITTEN1_R::new(((self.bits >> 1) & 0x01) != 0)
+        RAM_AREA_WRITTEN1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
     pub fn ram_area_written0(&self) -> RAM_AREA_WRITTEN0_R {
-        RAM_AREA_WRITTEN0_R::new((self.bits & 0x01) != 0)
+        RAM_AREA_WRITTEN0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 7 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
-    pub fn ram_area_written7(&mut self) -> RAM_AREA_WRITTEN7_W {
-        RAM_AREA_WRITTEN7_W { w: self }
+    pub fn ram_area_written7(&mut self) -> RAM_AREA_WRITTEN7_W<7> {
+        RAM_AREA_WRITTEN7_W::new(self)
     }
     #[doc = "Bit 6 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
-    pub fn ram_area_written6(&mut self) -> RAM_AREA_WRITTEN6_W {
-        RAM_AREA_WRITTEN6_W { w: self }
+    pub fn ram_area_written6(&mut self) -> RAM_AREA_WRITTEN6_W<6> {
+        RAM_AREA_WRITTEN6_W::new(self)
     }
     #[doc = "Bit 5 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
-    pub fn ram_area_written5(&mut self) -> RAM_AREA_WRITTEN5_W {
-        RAM_AREA_WRITTEN5_W { w: self }
+    pub fn ram_area_written5(&mut self) -> RAM_AREA_WRITTEN5_W<5> {
+        RAM_AREA_WRITTEN5_W::new(self)
     }
     #[doc = "Bit 4 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
-    pub fn ram_area_written4(&mut self) -> RAM_AREA_WRITTEN4_W {
-        RAM_AREA_WRITTEN4_W { w: self }
+    pub fn ram_area_written4(&mut self) -> RAM_AREA_WRITTEN4_W<4> {
+        RAM_AREA_WRITTEN4_W::new(self)
     }
     #[doc = "Bit 3 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
-    pub fn ram_area_written3(&mut self) -> RAM_AREA_WRITTEN3_W {
-        RAM_AREA_WRITTEN3_W { w: self }
+    pub fn ram_area_written3(&mut self) -> RAM_AREA_WRITTEN3_W<3> {
+        RAM_AREA_WRITTEN3_W::new(self)
     }
     #[doc = "Bit 2 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
-    pub fn ram_area_written2(&mut self) -> RAM_AREA_WRITTEN2_W {
-        RAM_AREA_WRITTEN2_W { w: self }
+    pub fn ram_area_written2(&mut self) -> RAM_AREA_WRITTEN2_W<2> {
+        RAM_AREA_WRITTEN2_W::new(self)
     }
     #[doc = "Bit 1 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
-    pub fn ram_area_written1(&mut self) -> RAM_AREA_WRITTEN1_W {
-        RAM_AREA_WRITTEN1_W { w: self }
+    pub fn ram_area_written1(&mut self) -> RAM_AREA_WRITTEN1_W<1> {
+        RAM_AREA_WRITTEN1_W::new(self)
     }
     #[doc = "Bit 0 - Read operation: 0: This RAM area is not written with valid key information. 1: This RAM area is written with valid key information. Each individual ram_area_writtenx bit can be reset by writing 1. Note: This register is reset on a soft reset from the master control module. After a soft reset, all keys must be rewritten to the key store memory."]
     #[inline(always)]
-    pub fn ram_area_written0(&mut self) -> RAM_AREA_WRITTEN0_W {
-        RAM_AREA_WRITTEN0_W { w: self }
+    pub fn ram_area_written0(&mut self) -> RAM_AREA_WRITTEN0_W<0> {
+        RAM_AREA_WRITTEN0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

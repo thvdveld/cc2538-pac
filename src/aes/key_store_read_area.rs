@@ -35,52 +35,17 @@ impl From<crate::W<KEY_STORE_READ_AREA_SPEC>> for W {
     }
 }
 #[doc = "Field `BUSY` reader - Key store operation busy status flag (read only): 0: Operation is complete. 1: Operation is not completed and the key store is busy."]
-pub struct BUSY_R(crate::FieldReader<bool, bool>);
-impl BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUSY_R = crate::BitReader<bool>;
 #[doc = "Field `RAM_AREA` reader - Selects the area of the key store RAM from where the key needs to be read that will be writen to the AES engine RAM_AREA: 0000: RAM_AREA0 0001: RAM_AREA1 0010: RAM_AREA2 0011: RAM_AREA3 0100: RAM_AREA4 0101: RAM_AREA5 0110: RAM_AREA6 0111: RAM_AREA7 1000: no RAM area selected 1001-1111: Reserved RAM areas RAM_AREA0, RAM_AREA2, RAM_AREA4 and RAM_AREA6 are the only valid read areas for 192 and 256 bits key sizes. Only RAM areas that contain valid written keys can be selected."]
-pub struct RAM_AREA_R(crate::FieldReader<u8, u8>);
-impl RAM_AREA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RAM_AREA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_AREA_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_AREA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RAM_AREA` writer - Selects the area of the key store RAM from where the key needs to be read that will be writen to the AES engine RAM_AREA: 0000: RAM_AREA0 0001: RAM_AREA1 0010: RAM_AREA2 0011: RAM_AREA3 0100: RAM_AREA4 0101: RAM_AREA5 0110: RAM_AREA6 0111: RAM_AREA7 1000: no RAM area selected 1001-1111: Reserved RAM areas RAM_AREA0, RAM_AREA2, RAM_AREA4 and RAM_AREA6 are the only valid read areas for 192 and 256 bits key sizes. Only RAM areas that contain valid written keys can be selected."]
-pub struct RAM_AREA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RAM_AREA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type RAM_AREA_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, KEY_STORE_READ_AREA_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bit 31 - Key store operation busy status flag (read only): 0: Operation is complete. 1: Operation is not completed and the key store is busy."]
     #[inline(always)]
     pub fn busy(&self) -> BUSY_R {
-        BUSY_R::new(((self.bits >> 31) & 0x01) != 0)
+        BUSY_R::new(((self.bits >> 31) & 1) != 0)
     }
     #[doc = "Bits 0:3 - Selects the area of the key store RAM from where the key needs to be read that will be writen to the AES engine RAM_AREA: 0000: RAM_AREA0 0001: RAM_AREA1 0010: RAM_AREA2 0011: RAM_AREA3 0100: RAM_AREA4 0101: RAM_AREA5 0110: RAM_AREA6 0111: RAM_AREA7 1000: no RAM area selected 1001-1111: Reserved RAM areas RAM_AREA0, RAM_AREA2, RAM_AREA4 and RAM_AREA6 are the only valid read areas for 192 and 256 bits key sizes. Only RAM areas that contain valid written keys can be selected."]
     #[inline(always)]
@@ -91,8 +56,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Selects the area of the key store RAM from where the key needs to be read that will be writen to the AES engine RAM_AREA: 0000: RAM_AREA0 0001: RAM_AREA1 0010: RAM_AREA2 0011: RAM_AREA3 0100: RAM_AREA4 0101: RAM_AREA5 0110: RAM_AREA6 0111: RAM_AREA7 1000: no RAM area selected 1001-1111: Reserved RAM areas RAM_AREA0, RAM_AREA2, RAM_AREA4 and RAM_AREA6 are the only valid read areas for 192 and 256 bits key sizes. Only RAM areas that contain valid written keys can be selected."]
     #[inline(always)]
-    pub fn ram_area(&mut self) -> RAM_AREA_W {
-        RAM_AREA_W { w: self }
+    pub fn ram_area(&mut self) -> RAM_AREA_W<0> {
+        RAM_AREA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

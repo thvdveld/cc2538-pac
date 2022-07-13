@@ -35,32 +35,9 @@ impl From<crate::W<TBMATCHR_SPEC>> for W {
     }
 }
 #[doc = "Field `TBMR` reader - GPTM Timer B match register"]
-pub struct TBMR_R(crate::FieldReader<u16, u16>);
-impl TBMR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TBMR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBMR_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBMR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TBMR` writer - GPTM Timer B match register"]
-pub struct TBMR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBMR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type TBMR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TBMATCHR_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - GPTM Timer B match register"]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - GPTM Timer B match register"]
     #[inline(always)]
-    pub fn tbmr(&mut self) -> TBMR_W {
-        TBMR_W { w: self }
+    pub fn tbmr(&mut self) -> TBMR_W<0> {
+        TBMR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

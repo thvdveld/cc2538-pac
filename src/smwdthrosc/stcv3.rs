@@ -15,20 +15,7 @@ impl From<crate::R<STCV3_SPEC>> for R {
 }
 #[doc = "Field `STCV3` reader - Bits \\[32:24\\]
 of Sleep Timer capture value"]
-pub struct STCV3_R(crate::FieldReader<u8, u8>);
-impl STCV3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STCV3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STCV3_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STCV3_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - Bits \\[32:24\\]
 of Sleep Timer capture value"]

@@ -35,74 +35,19 @@ impl From<crate::W<AGCCTRL0_SPEC>> for W {
     }
 }
 #[doc = "Field `AGC_DR_XTND_EN` reader - 0: The AGC performs no adjustment of attenuation in the AAF. 1: The AGC adjusts the gain in the AAF to achieve extra dynamic range for the receiver."]
-pub struct AGC_DR_XTND_EN_R(crate::FieldReader<bool, bool>);
-impl AGC_DR_XTND_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AGC_DR_XTND_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AGC_DR_XTND_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AGC_DR_XTND_EN_R = crate::BitReader<bool>;
 #[doc = "Field `AGC_DR_XTND_EN` writer - 0: The AGC performs no adjustment of attenuation in the AAF. 1: The AGC adjusts the gain in the AAF to achieve extra dynamic range for the receiver."]
-pub struct AGC_DR_XTND_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AGC_DR_XTND_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type AGC_DR_XTND_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AGCCTRL0_SPEC, bool, O>;
 #[doc = "Field `AGC_DR_XTND_THR` reader - If the measured error between the AGC reference magnitude and the actual magnitude in dB is larger than this threshold, the extra attenuation is enabled in the front end. This threshold must be set higher than 0x0C. This feature is enabled by AGC_DR_XTND_EN."]
-pub struct AGC_DR_XTND_THR_R(crate::FieldReader<u8, u8>);
-impl AGC_DR_XTND_THR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        AGC_DR_XTND_THR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AGC_DR_XTND_THR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AGC_DR_XTND_THR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `AGC_DR_XTND_THR` writer - If the measured error between the AGC reference magnitude and the actual magnitude in dB is larger than this threshold, the extra attenuation is enabled in the front end. This threshold must be set higher than 0x0C. This feature is enabled by AGC_DR_XTND_EN."]
-pub struct AGC_DR_XTND_THR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AGC_DR_XTND_THR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type AGC_DR_XTND_THR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, AGCCTRL0_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bit 6 - 0: The AGC performs no adjustment of attenuation in the AAF. 1: The AGC adjusts the gain in the AAF to achieve extra dynamic range for the receiver."]
     #[inline(always)]
     pub fn agc_dr_xtnd_en(&self) -> AGC_DR_XTND_EN_R {
-        AGC_DR_XTND_EN_R::new(((self.bits >> 6) & 0x01) != 0)
+        AGC_DR_XTND_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 0:5 - If the measured error between the AGC reference magnitude and the actual magnitude in dB is larger than this threshold, the extra attenuation is enabled in the front end. This threshold must be set higher than 0x0C. This feature is enabled by AGC_DR_XTND_EN."]
     #[inline(always)]
@@ -113,13 +58,13 @@ impl R {
 impl W {
     #[doc = "Bit 6 - 0: The AGC performs no adjustment of attenuation in the AAF. 1: The AGC adjusts the gain in the AAF to achieve extra dynamic range for the receiver."]
     #[inline(always)]
-    pub fn agc_dr_xtnd_en(&mut self) -> AGC_DR_XTND_EN_W {
-        AGC_DR_XTND_EN_W { w: self }
+    pub fn agc_dr_xtnd_en(&mut self) -> AGC_DR_XTND_EN_W<6> {
+        AGC_DR_XTND_EN_W::new(self)
     }
     #[doc = "Bits 0:5 - If the measured error between the AGC reference magnitude and the actual magnitude in dB is larger than this threshold, the extra attenuation is enabled in the front end. This threshold must be set higher than 0x0C. This feature is enabled by AGC_DR_XTND_EN."]
     #[inline(always)]
-    pub fn agc_dr_xtnd_thr(&mut self) -> AGC_DR_XTND_THR_W {
-        AGC_DR_XTND_THR_W { w: self }
+    pub fn agc_dr_xtnd_thr(&mut self) -> AGC_DR_XTND_THR_W<0> {
+        AGC_DR_XTND_THR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

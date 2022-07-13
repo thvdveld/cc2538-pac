@@ -35,112 +35,37 @@ impl From<crate::W<DR_SPEC>> for W {
     }
 }
 #[doc = "Field `OE` reader - UART overrun error 1: New data was received when the FIFO was full, resulting in data loss. 0: No data has been lost due to a FIFO overrun."]
-pub struct OE_R(crate::FieldReader<bool, bool>);
-impl OE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OE_R = crate::BitReader<bool>;
 #[doc = "Field `BE` reader - UART break error 1: A break condition has been detected, indicating that the receive data input was held low for longer than a full-word transmission time (defined as start, data, parity, and stop bits). 0: No break condition has occurred. In FIFO mode, this error is associated with the character at the top of the FIFO. When a break occurs, only the one 0 character is loaded into the FIFO. The next character is only enabled after the received data input goes to a 1 (marking state), and the next valid start bit is received."]
-pub struct BE_R(crate::FieldReader<bool, bool>);
-impl BE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BE_R = crate::BitReader<bool>;
 #[doc = "Field `PE` reader - UART parity error 1: The parity of the received data character does not match the parity defined by bits 2 and 7 of the UARTLCRH register 0: No parity error has occurred. In FIFO mode, this error is associated with the character at the top of the FIFO."]
-pub struct PE_R(crate::FieldReader<bool, bool>);
-impl PE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PE_R = crate::BitReader<bool>;
 #[doc = "Field `FE` reader - UART framing error 1: The received character does not have a valid stop bit (a valid stop bit is 1). 0: No framing error has occurred."]
-pub struct FE_R(crate::FieldReader<bool, bool>);
-impl FE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FE_R = crate::BitReader<bool>;
 #[doc = "Field `DATA` reader - Data transmitted or received Data that is to be transmitted via the UART is written to this field. When read, this field contains the data that was received by the UART."]
-pub struct DATA_R(crate::FieldReader<u8, u8>);
-impl DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DATA` writer - Data transmitted or received Data that is to be transmitted via the UART is written to this field. When read, this field contains the data that was received by the UART."]
-pub struct DATA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DR_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bit 11 - UART overrun error 1: New data was received when the FIFO was full, resulting in data loss. 0: No data has been lost due to a FIFO overrun."]
     #[inline(always)]
     pub fn oe(&self) -> OE_R {
-        OE_R::new(((self.bits >> 11) & 0x01) != 0)
+        OE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - UART break error 1: A break condition has been detected, indicating that the receive data input was held low for longer than a full-word transmission time (defined as start, data, parity, and stop bits). 0: No break condition has occurred. In FIFO mode, this error is associated with the character at the top of the FIFO. When a break occurs, only the one 0 character is loaded into the FIFO. The next character is only enabled after the received data input goes to a 1 (marking state), and the next valid start bit is received."]
     #[inline(always)]
     pub fn be(&self) -> BE_R {
-        BE_R::new(((self.bits >> 10) & 0x01) != 0)
+        BE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - UART parity error 1: The parity of the received data character does not match the parity defined by bits 2 and 7 of the UARTLCRH register 0: No parity error has occurred. In FIFO mode, this error is associated with the character at the top of the FIFO."]
     #[inline(always)]
     pub fn pe(&self) -> PE_R {
-        PE_R::new(((self.bits >> 9) & 0x01) != 0)
+        PE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - UART framing error 1: The received character does not have a valid stop bit (a valid stop bit is 1). 0: No framing error has occurred."]
     #[inline(always)]
     pub fn fe(&self) -> FE_R {
-        FE_R::new(((self.bits >> 8) & 0x01) != 0)
+        FE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 0:7 - Data transmitted or received Data that is to be transmitted via the UART is written to this field. When read, this field contains the data that was received by the UART."]
     #[inline(always)]
@@ -151,8 +76,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Data transmitted or received Data that is to be transmitted via the UART is written to this field. When read, this field contains the data that was received by the UART."]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W {
-        DATA_W { w: self }
+    pub fn data(&mut self) -> DATA_W<0> {
+        DATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

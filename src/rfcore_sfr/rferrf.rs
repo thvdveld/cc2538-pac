@@ -35,336 +35,105 @@ impl From<crate::W<RFERRF_SPEC>> for W {
     }
 }
 #[doc = "Field `STROBEERR` reader - A command strobe was issued when it could not be processed. Triggered if trying to disable the radio when it is already disabled, or when trying to do a SACK, SACKPEND, or SNACK command when not in active RX. 0: No interrupt pending 1: Interrupt pending"]
-pub struct STROBEERR_R(crate::FieldReader<bool, bool>);
-impl STROBEERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STROBEERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STROBEERR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STROBEERR_R = crate::BitReader<bool>;
 #[doc = "Field `STROBEERR` writer - A command strobe was issued when it could not be processed. Triggered if trying to disable the radio when it is already disabled, or when trying to do a SACK, SACKPEND, or SNACK command when not in active RX. 0: No interrupt pending 1: Interrupt pending"]
-pub struct STROBEERR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STROBEERR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type STROBEERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFERRF_SPEC, bool, O>;
 #[doc = "Field `TXUNDERF` reader - TX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
-pub struct TXUNDERF_R(crate::FieldReader<bool, bool>);
-impl TXUNDERF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXUNDERF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXUNDERF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXUNDERF_R = crate::BitReader<bool>;
 #[doc = "Field `TXUNDERF` writer - TX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
-pub struct TXUNDERF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXUNDERF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type TXUNDERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFERRF_SPEC, bool, O>;
 #[doc = "Field `TXOVERF` reader - TX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
-pub struct TXOVERF_R(crate::FieldReader<bool, bool>);
-impl TXOVERF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXOVERF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXOVERF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXOVERF_R = crate::BitReader<bool>;
 #[doc = "Field `TXOVERF` writer - TX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
-pub struct TXOVERF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXOVERF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type TXOVERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFERRF_SPEC, bool, O>;
 #[doc = "Field `RXUNDERF` reader - RX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
-pub struct RXUNDERF_R(crate::FieldReader<bool, bool>);
-impl RXUNDERF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXUNDERF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXUNDERF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXUNDERF_R = crate::BitReader<bool>;
 #[doc = "Field `RXUNDERF` writer - RX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
-pub struct RXUNDERF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXUNDERF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type RXUNDERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFERRF_SPEC, bool, O>;
 #[doc = "Field `RXOVERF` reader - RX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
-pub struct RXOVERF_R(crate::FieldReader<bool, bool>);
-impl RXOVERF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXOVERF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXOVERF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXOVERF_R = crate::BitReader<bool>;
 #[doc = "Field `RXOVERF` writer - RX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
-pub struct RXOVERF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXOVERF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type RXOVERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFERRF_SPEC, bool, O>;
 #[doc = "Field `RXABO` reader - Reception of a frame was aborted. 0: No interrupt pending 1: Interrupt pending"]
-pub struct RXABO_R(crate::FieldReader<bool, bool>);
-impl RXABO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXABO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXABO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXABO_R = crate::BitReader<bool>;
 #[doc = "Field `RXABO` writer - Reception of a frame was aborted. 0: No interrupt pending 1: Interrupt pending"]
-pub struct RXABO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXABO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type RXABO_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFERRF_SPEC, bool, O>;
 #[doc = "Field `NLOCK` reader - The frequency synthesizer failed to achieve lock after time-out, or lock is lost during reception. The receiver must be restarted to clear this error situation. 0: No interrupt pending 1: Interrupt pending"]
-pub struct NLOCK_R(crate::FieldReader<bool, bool>);
-impl NLOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NLOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NLOCK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NLOCK_R = crate::BitReader<bool>;
 #[doc = "Field `NLOCK` writer - The frequency synthesizer failed to achieve lock after time-out, or lock is lost during reception. The receiver must be restarted to clear this error situation. 0: No interrupt pending 1: Interrupt pending"]
-pub struct NLOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NLOCK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type NLOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFERRF_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 6 - A command strobe was issued when it could not be processed. Triggered if trying to disable the radio when it is already disabled, or when trying to do a SACK, SACKPEND, or SNACK command when not in active RX. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     pub fn strobeerr(&self) -> STROBEERR_R {
-        STROBEERR_R::new(((self.bits >> 6) & 0x01) != 0)
+        STROBEERR_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - TX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     pub fn txunderf(&self) -> TXUNDERF_R {
-        TXUNDERF_R::new(((self.bits >> 5) & 0x01) != 0)
+        TXUNDERF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - TX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     pub fn txoverf(&self) -> TXOVERF_R {
-        TXOVERF_R::new(((self.bits >> 4) & 0x01) != 0)
+        TXOVERF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - RX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     pub fn rxunderf(&self) -> RXUNDERF_R {
-        RXUNDERF_R::new(((self.bits >> 3) & 0x01) != 0)
+        RXUNDERF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - RX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     pub fn rxoverf(&self) -> RXOVERF_R {
-        RXOVERF_R::new(((self.bits >> 2) & 0x01) != 0)
+        RXOVERF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Reception of a frame was aborted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     pub fn rxabo(&self) -> RXABO_R {
-        RXABO_R::new(((self.bits >> 1) & 0x01) != 0)
+        RXABO_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - The frequency synthesizer failed to achieve lock after time-out, or lock is lost during reception. The receiver must be restarted to clear this error situation. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     pub fn nlock(&self) -> NLOCK_R {
-        NLOCK_R::new((self.bits & 0x01) != 0)
+        NLOCK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 6 - A command strobe was issued when it could not be processed. Triggered if trying to disable the radio when it is already disabled, or when trying to do a SACK, SACKPEND, or SNACK command when not in active RX. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    pub fn strobeerr(&mut self) -> STROBEERR_W {
-        STROBEERR_W { w: self }
+    pub fn strobeerr(&mut self) -> STROBEERR_W<6> {
+        STROBEERR_W::new(self)
     }
     #[doc = "Bit 5 - TX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    pub fn txunderf(&mut self) -> TXUNDERF_W {
-        TXUNDERF_W { w: self }
+    pub fn txunderf(&mut self) -> TXUNDERF_W<5> {
+        TXUNDERF_W::new(self)
     }
     #[doc = "Bit 4 - TX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    pub fn txoverf(&mut self) -> TXOVERF_W {
-        TXOVERF_W { w: self }
+    pub fn txoverf(&mut self) -> TXOVERF_W<4> {
+        TXOVERF_W::new(self)
     }
     #[doc = "Bit 3 - RX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    pub fn rxunderf(&mut self) -> RXUNDERF_W {
-        RXUNDERF_W { w: self }
+    pub fn rxunderf(&mut self) -> RXUNDERF_W<3> {
+        RXUNDERF_W::new(self)
     }
     #[doc = "Bit 2 - RX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    pub fn rxoverf(&mut self) -> RXOVERF_W {
-        RXOVERF_W { w: self }
+    pub fn rxoverf(&mut self) -> RXOVERF_W<2> {
+        RXOVERF_W::new(self)
     }
     #[doc = "Bit 1 - Reception of a frame was aborted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    pub fn rxabo(&mut self) -> RXABO_W {
-        RXABO_W { w: self }
+    pub fn rxabo(&mut self) -> RXABO_W<1> {
+        RXABO_W::new(self)
     }
     #[doc = "Bit 0 - The frequency synthesizer failed to achieve lock after time-out, or lock is lost during reception. The receiver must be restarted to clear this error situation. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    pub fn nlock(&mut self) -> NLOCK_W {
-        NLOCK_W { w: self }
+    pub fn nlock(&mut self) -> NLOCK_W<0> {
+        NLOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

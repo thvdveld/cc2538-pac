@@ -35,32 +35,9 @@ impl From<crate::W<FREQTUNE_SPEC>> for W {
     }
 }
 #[doc = "Field `XOSC32M_TUNE` reader - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
-pub struct XOSC32M_TUNE_R(crate::FieldReader<u8, u8>);
-impl XOSC32M_TUNE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        XOSC32M_TUNE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XOSC32M_TUNE_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XOSC32M_TUNE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `XOSC32M_TUNE` writer - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
-pub struct XOSC32M_TUNE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XOSC32M_TUNE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type XOSC32M_TUNE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQTUNE_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
     #[inline(always)]
-    pub fn xosc32m_tune(&mut self) -> XOSC32M_TUNE_W {
-        XOSC32M_TUNE_W { w: self }
+    pub fn xosc32m_tune(&mut self) -> XOSC32M_TUNE_W<0> {
+        XOSC32M_TUNE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

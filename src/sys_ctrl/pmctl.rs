@@ -35,44 +35,21 @@ impl From<crate::W<PMCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `PM` reader - 00: No action 01: PM1 10: PM2 11: PM3"]
-pub struct PM_R(crate::FieldReader<u8, u8>);
-impl PM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PM_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PM` writer - 00: No action 01: PM1 10: PM2 11: PM3"]
-pub struct PM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type PM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PMCTL_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - 00: No action 01: PM1 10: PM2 11: PM3"]
     #[inline(always)]
     pub fn pm(&self) -> PM_R {
-        PM_R::new((self.bits & 0x03) as u8)
+        PM_R::new((self.bits & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - 00: No action 01: PM1 10: PM2 11: PM3"]
     #[inline(always)]
-    pub fn pm(&mut self) -> PM_W {
-        PM_W { w: self }
+    pub fn pm(&mut self) -> PM_W<0> {
+        PM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

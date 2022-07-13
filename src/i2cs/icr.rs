@@ -20,86 +20,26 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Field `STOPIC` writer - Stop condition interrupt clear Writing 1 to this bit clears the STOPRIS bit in the I2CSRIS register and the STOPMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
-pub struct STOPIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STOPIC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type STOPIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `STARTIC` writer - Start condition interrupt vlear Writing 1 to this bit clears the STARTRIS bit in the I2CSRIS register and the STARTMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
-pub struct STARTIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STARTIC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type STARTIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `DATAIC` writer - Data interrupt clear Writing 1 to this bit clears the DATARIS bit in the I2CSRIS register and the DATAMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
-pub struct DATAIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATAIC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type DATAIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 2 - Stop condition interrupt clear Writing 1 to this bit clears the STOPRIS bit in the I2CSRIS register and the STOPMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
     #[inline(always)]
-    pub fn stopic(&mut self) -> STOPIC_W {
-        STOPIC_W { w: self }
+    pub fn stopic(&mut self) -> STOPIC_W<2> {
+        STOPIC_W::new(self)
     }
     #[doc = "Bit 1 - Start condition interrupt vlear Writing 1 to this bit clears the STARTRIS bit in the I2CSRIS register and the STARTMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
     #[inline(always)]
-    pub fn startic(&mut self) -> STARTIC_W {
-        STARTIC_W { w: self }
+    pub fn startic(&mut self) -> STARTIC_W<1> {
+        STARTIC_W::new(self)
     }
     #[doc = "Bit 0 - Data interrupt clear Writing 1 to this bit clears the DATARIS bit in the I2CSRIS register and the DATAMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
     #[inline(always)]
-    pub fn dataic(&mut self) -> DATAIC_W {
-        DATAIC_W { w: self }
+    pub fn dataic(&mut self) -> DATAIC_W<0> {
+        DATAIC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

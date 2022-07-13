@@ -35,44 +35,22 @@ impl From<crate::W<KEY_STORE_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `KEY_SIZE` reader - Key size: 00: Reserved 01: 128 bits 10: 192 bits 11: 256 bits When writing this to this register, the KEY_STORE_WRITTEN_AREA register is reset."]
-pub struct KEY_SIZE_R(crate::FieldReader<u8, u8>);
-impl KEY_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `KEY_SIZE` writer - Key size: 00: Reserved 01: 128 bits 10: 192 bits 11: 256 bits When writing this to this register, the KEY_STORE_WRITTEN_AREA register is reset."]
-pub struct KEY_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KEY_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type KEY_SIZE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, KEY_STORE_SIZE_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - Key size: 00: Reserved 01: 128 bits 10: 192 bits 11: 256 bits When writing this to this register, the KEY_STORE_WRITTEN_AREA register is reset."]
     #[inline(always)]
     pub fn key_size(&self) -> KEY_SIZE_R {
-        KEY_SIZE_R::new((self.bits & 0x03) as u8)
+        KEY_SIZE_R::new((self.bits & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Key size: 00: Reserved 01: 128 bits 10: 192 bits 11: 256 bits When writing this to this register, the KEY_STORE_WRITTEN_AREA register is reset."]
     #[inline(always)]
-    pub fn key_size(&mut self) -> KEY_SIZE_W {
-        KEY_SIZE_W { w: self }
+    pub fn key_size(&mut self) -> KEY_SIZE_W<0> {
+        KEY_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

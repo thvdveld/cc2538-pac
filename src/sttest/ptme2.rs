@@ -35,242 +35,77 @@ impl From<crate::W<PTME2_SPEC>> for W {
     }
 }
 #[doc = "Field `T3TME` reader - Timer3 test mode enable"]
-pub struct T3TME_R(crate::FieldReader<bool, bool>);
-impl T3TME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T3TME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T3TME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T3TME_R = crate::BitReader<bool>;
 #[doc = "Field `T3TME` writer - Timer3 test mode enable"]
-pub struct T3TME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T3TME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
-        self.w
-    }
-}
+pub type T3TME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME2_SPEC, bool, O>;
 #[doc = "Field `MTTME` reader - MacTimer test mode enable"]
-pub struct MTTME_R(crate::FieldReader<bool, bool>);
-impl MTTME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MTTME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MTTME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MTTME_R = crate::BitReader<bool>;
 #[doc = "Field `MTTME` writer - MacTimer test mode enable"]
-pub struct MTTME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MTTME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
-        self.w
-    }
-}
+pub type MTTME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME2_SPEC, bool, O>;
 #[doc = "Field `T1TME` reader - Timer1 test mode enable"]
-pub struct T1TME_R(crate::FieldReader<bool, bool>);
-impl T1TME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T1TME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T1TME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T1TME_R = crate::BitReader<bool>;
 #[doc = "Field `T1TME` writer - Timer1 test mode enable"]
-pub struct T1TME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T1TME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
-        self.w
-    }
-}
+pub type T1TME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME2_SPEC, bool, O>;
 #[doc = "Field `T0TME` reader - Timer0 test mode enable"]
-pub struct T0TME_R(crate::FieldReader<bool, bool>);
-impl T0TME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0TME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0TME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0TME_R = crate::BitReader<bool>;
 #[doc = "Field `T0TME` writer - Timer0 test mode enable"]
-pub struct T0TME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0TME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
+pub type T0TME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME2_SPEC, bool, O>;
 #[doc = "Field `I2C0TME` reader - I2C 0 test mode enable"]
-pub struct I2C0TME_R(crate::FieldReader<bool, bool>);
-impl I2C0TME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2C0TME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C0TME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2C0TME_R = crate::BitReader<bool>;
 #[doc = "Field `I2C0TME` writer - I2C 0 test mode enable"]
-pub struct I2C0TME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C0TME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type I2C0TME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME2_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 19 - Timer3 test mode enable"]
     #[inline(always)]
     pub fn t3tme(&self) -> T3TME_R {
-        T3TME_R::new(((self.bits >> 19) & 0x01) != 0)
+        T3TME_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 18 - MacTimer test mode enable"]
     #[inline(always)]
     pub fn mttme(&self) -> MTTME_R {
-        MTTME_R::new(((self.bits >> 18) & 0x01) != 0)
+        MTTME_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 17 - Timer1 test mode enable"]
     #[inline(always)]
     pub fn t1tme(&self) -> T1TME_R {
-        T1TME_R::new(((self.bits >> 17) & 0x01) != 0)
+        T1TME_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 16 - Timer0 test mode enable"]
     #[inline(always)]
     pub fn t0tme(&self) -> T0TME_R {
-        T0TME_R::new(((self.bits >> 16) & 0x01) != 0)
+        T0TME_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 0 - I2C 0 test mode enable"]
     #[inline(always)]
     pub fn i2c0tme(&self) -> I2C0TME_R {
-        I2C0TME_R::new((self.bits & 0x01) != 0)
+        I2C0TME_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 19 - Timer3 test mode enable"]
     #[inline(always)]
-    pub fn t3tme(&mut self) -> T3TME_W {
-        T3TME_W { w: self }
+    pub fn t3tme(&mut self) -> T3TME_W<19> {
+        T3TME_W::new(self)
     }
     #[doc = "Bit 18 - MacTimer test mode enable"]
     #[inline(always)]
-    pub fn mttme(&mut self) -> MTTME_W {
-        MTTME_W { w: self }
+    pub fn mttme(&mut self) -> MTTME_W<18> {
+        MTTME_W::new(self)
     }
     #[doc = "Bit 17 - Timer1 test mode enable"]
     #[inline(always)]
-    pub fn t1tme(&mut self) -> T1TME_W {
-        T1TME_W { w: self }
+    pub fn t1tme(&mut self) -> T1TME_W<17> {
+        T1TME_W::new(self)
     }
     #[doc = "Bit 16 - Timer0 test mode enable"]
     #[inline(always)]
-    pub fn t0tme(&mut self) -> T0TME_W {
-        T0TME_W { w: self }
+    pub fn t0tme(&mut self) -> T0TME_W<16> {
+        T0TME_W::new(self)
     }
     #[doc = "Bit 0 - I2C 0 test mode enable"]
     #[inline(always)]
-    pub fn i2c0tme(&mut self) -> I2C0TME_W {
-        I2C0TME_W { w: self }
+    pub fn i2c0tme(&mut self) -> I2C0TME_W<0> {
+        I2C0TME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

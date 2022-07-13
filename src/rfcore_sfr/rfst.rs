@@ -35,32 +35,9 @@ impl From<crate::W<RFST_SPEC>> for W {
     }
 }
 #[doc = "Field `INSTR` reader - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
-pub struct INSTR_R(crate::FieldReader<u8, u8>);
-impl INSTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INSTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INSTR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INSTR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INSTR` writer - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
-pub struct INSTR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INSTR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type INSTR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RFST_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
     #[inline(always)]
-    pub fn instr(&mut self) -> INSTR_W {
-        INSTR_W { w: self }
+    pub fn instr(&mut self) -> INSTR_W<0> {
+        INSTR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

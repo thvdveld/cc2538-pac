@@ -35,54 +35,21 @@ impl From<crate::W<I_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `ALTMAP` reader - 1: Select alternate interrupt map. 0: Select regular interrupt map. (See the ASD document for details.)"]
-pub struct ALTMAP_R(crate::FieldReader<bool, bool>);
-impl ALTMAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ALTMAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALTMAP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALTMAP_R = crate::BitReader<bool>;
 #[doc = "Field `ALTMAP` writer - 1: Select alternate interrupt map. 0: Select regular interrupt map. (See the ASD document for details.)"]
-pub struct ALTMAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALTMAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type ALTMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, I_MAP_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - 1: Select alternate interrupt map. 0: Select regular interrupt map. (See the ASD document for details.)"]
     #[inline(always)]
     pub fn altmap(&self) -> ALTMAP_R {
-        ALTMAP_R::new((self.bits & 0x01) != 0)
+        ALTMAP_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - 1: Select alternate interrupt map. 0: Select regular interrupt map. (See the ASD document for details.)"]
     #[inline(always)]
-    pub fn altmap(&mut self) -> ALTMAP_W {
-        ALTMAP_W { w: self }
+    pub fn altmap(&mut self) -> ALTMAP_W<0> {
+        ALTMAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

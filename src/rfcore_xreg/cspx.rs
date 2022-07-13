@@ -14,20 +14,7 @@ impl From<crate::R<CSPX_SPEC>> for R {
     }
 }
 #[doc = "Field `CSPX` reader - Used by CSP instructions WAITX, RANDXY, INCX, DECX, and conditional instructions."]
-pub struct CSPX_R(crate::FieldReader<u8, u8>);
-impl CSPX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CSPX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CSPX_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CSPX_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - Used by CSP instructions WAITX, RANDXY, INCX, DECX, and conditional instructions."]
     #[inline(always)]

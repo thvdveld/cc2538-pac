@@ -14,40 +14,14 @@ impl From<crate::R<DIVMSW_SPEC>> for R {
     }
 }
 #[doc = "Field `RESULT_IS_ZERO` reader - The result vector is all zeroes, ignore the address returned in bits \\[10:0\\]"]
-pub struct RESULT_IS_ZERO_R(crate::FieldReader<bool, bool>);
-impl RESULT_IS_ZERO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESULT_IS_ZERO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESULT_IS_ZERO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESULT_IS_ZERO_R = crate::BitReader<bool>;
 #[doc = "Field `MSW_ADDRESS` reader - Address of the most significant nonzero 32-bit word of the remainder result vector in PKA RAM"]
-pub struct MSW_ADDRESS_R(crate::FieldReader<u16, u16>);
-impl MSW_ADDRESS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MSW_ADDRESS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MSW_ADDRESS_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MSW_ADDRESS_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bit 15 - The result vector is all zeroes, ignore the address returned in bits \\[10:0\\]"]
     #[inline(always)]
     pub fn result_is_zero(&self) -> RESULT_IS_ZERO_R {
-        RESULT_IS_ZERO_R::new(((self.bits >> 15) & 0x01) != 0)
+        RESULT_IS_ZERO_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 0:10 - Address of the most significant nonzero 32-bit word of the remainder result vector in PKA RAM"]
     #[inline(always)]

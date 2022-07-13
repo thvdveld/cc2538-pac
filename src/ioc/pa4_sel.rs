@@ -35,32 +35,9 @@ impl From<crate::W<PA4_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `PA4_sel` reader - Select one peripheral signal output for PA4."]
-pub struct PA4_SEL_R(crate::FieldReader<u8, u8>);
-impl PA4_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PA4_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA4_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PA4_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PA4_sel` writer - Select one peripheral signal output for PA4."]
-pub struct PA4_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA4_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type PA4_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PA4_SEL_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PA4."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PA4."]
     #[inline(always)]
-    pub fn pa4_sel(&mut self) -> PA4_SEL_W {
-        PA4_SEL_W { w: self }
+    pub fn pa4_sel(&mut self) -> PA4_SEL_W<0> {
+        PA4_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

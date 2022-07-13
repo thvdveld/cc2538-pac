@@ -35,101 +35,35 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Field `RTIC` reader - SSI receive time-out interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
-pub struct RTIC_R(crate::FieldReader<bool, bool>);
-impl RTIC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTIC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTIC_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTIC_R = crate::BitReader<bool>;
 #[doc = "Field `RTIC` writer - SSI receive time-out interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
-pub struct RTIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTIC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type RTIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `RORIC` reader - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
-pub struct RORIC_R(crate::FieldReader<bool, bool>);
-impl RORIC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RORIC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RORIC_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RORIC_R = crate::BitReader<bool>;
 #[doc = "Field `RORIC` writer - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
-pub struct RORIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RORIC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RORIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 1 - SSI receive time-out interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
     pub fn rtic(&self) -> RTIC_R {
-        RTIC_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTIC_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
     pub fn roric(&self) -> RORIC_R {
-        RORIC_R::new((self.bits & 0x01) != 0)
+        RORIC_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1 - SSI receive time-out interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
-    pub fn rtic(&mut self) -> RTIC_W {
-        RTIC_W { w: self }
+    pub fn rtic(&mut self) -> RTIC_W<1> {
+        RTIC_W::new(self)
     }
     #[doc = "Bit 0 - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
-    pub fn roric(&mut self) -> RORIC_W {
-        RORIC_W { w: self }
+    pub fn roric(&mut self) -> RORIC_W<0> {
+        RORIC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,175 +35,63 @@ impl From<crate::W<ADCCON1_SPEC>> for W {
     }
 }
 #[doc = "Field `EOC` reader - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
-pub struct EOC_R(crate::FieldReader<bool, bool>);
-impl EOC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EOC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EOC_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EOC_R = crate::BitReader<bool>;
 #[doc = "Field `EOC` writer - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
-pub struct EOC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EOC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type EOC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCCON1_SPEC, bool, O>;
 #[doc = "Field `ST` reader - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
-pub struct ST_R(crate::FieldReader<bool, bool>);
-impl ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ST_R = crate::BitReader<bool>;
 #[doc = "Field `ST` writer - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
-pub struct ST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type ST_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCCON1_SPEC, bool, O>;
 #[doc = "Field `STSEL` reader - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
-pub struct STSEL_R(crate::FieldReader<u8, u8>);
-impl STSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `STSEL` writer - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
-pub struct STSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STSEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
-}
+pub type STSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCCON1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `RCTRL` reader - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
-pub struct RCTRL_R(crate::FieldReader<u8, u8>);
-impl RCTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RCTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RCTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RCTRL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RCTRL` writer - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
-pub struct RCTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RCTRL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
-        self.w
-    }
-}
+pub type RCTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCCON1_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bit 7 - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
     #[inline(always)]
     pub fn eoc(&self) -> EOC_R {
-        EOC_R::new(((self.bits >> 7) & 0x01) != 0)
+        EOC_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
     #[inline(always)]
     pub fn st(&self) -> ST_R {
-        ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 4:5 - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
     #[inline(always)]
     pub fn stsel(&self) -> STSEL_R {
-        STSEL_R::new(((self.bits >> 4) & 0x03) as u8)
+        STSEL_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
     #[inline(always)]
     pub fn rctrl(&self) -> RCTRL_R {
-        RCTRL_R::new(((self.bits >> 2) & 0x03) as u8)
+        RCTRL_R::new(((self.bits >> 2) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 7 - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
     #[inline(always)]
-    pub fn eoc(&mut self) -> EOC_W {
-        EOC_W { w: self }
+    pub fn eoc(&mut self) -> EOC_W<7> {
+        EOC_W::new(self)
     }
     #[doc = "Bit 6 - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
     #[inline(always)]
-    pub fn st(&mut self) -> ST_W {
-        ST_W { w: self }
+    pub fn st(&mut self) -> ST_W<6> {
+        ST_W::new(self)
     }
     #[doc = "Bits 4:5 - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
     #[inline(always)]
-    pub fn stsel(&mut self) -> STSEL_W {
-        STSEL_W { w: self }
+    pub fn stsel(&mut self) -> STSEL_W<4> {
+        STSEL_W::new(self)
     }
     #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
     #[inline(always)]
-    pub fn rctrl(&mut self) -> RCTRL_W {
-        RCTRL_W { w: self }
+    pub fn rctrl(&mut self) -> RCTRL_W<2> {
+        RCTRL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,74 +35,18 @@ impl From<crate::W<GPT_SPEC>> for W {
     }
 }
 #[doc = "Field `GPTIDOE` reader - GPTimer increment/decrement override enable"]
-pub struct GPTIDOE_R(crate::FieldReader<bool, bool>);
-impl GPTIDOE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPTIDOE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPTIDOE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPTIDOE_R = crate::BitReader<bool>;
 #[doc = "Field `GPTIDOE` writer - GPTimer increment/decrement override enable"]
-pub struct GPTIDOE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPTIDOE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type GPTIDOE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPT_SPEC, bool, O>;
 #[doc = "Field `GPTIDOV` reader - GPTimer increment/decrement override value"]
-pub struct GPTIDOV_R(crate::FieldReader<u8, u8>);
-impl GPTIDOV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GPTIDOV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPTIDOV_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPTIDOV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GPTIDOV` writer - GPTimer increment/decrement override value"]
-pub struct GPTIDOV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPTIDOV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type GPTIDOV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPT_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bit 8 - GPTimer increment/decrement override enable"]
     #[inline(always)]
     pub fn gptidoe(&self) -> GPTIDOE_R {
-        GPTIDOE_R::new(((self.bits >> 8) & 0x01) != 0)
+        GPTIDOE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 0:4 - GPTimer increment/decrement override value"]
     #[inline(always)]
@@ -113,13 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 8 - GPTimer increment/decrement override enable"]
     #[inline(always)]
-    pub fn gptidoe(&mut self) -> GPTIDOE_W {
-        GPTIDOE_W { w: self }
+    pub fn gptidoe(&mut self) -> GPTIDOE_W<8> {
+        GPTIDOE_W::new(self)
     }
     #[doc = "Bits 0:4 - GPTimer increment/decrement override value"]
     #[inline(always)]
-    pub fn gptidov(&mut self) -> GPTIDOV_W {
-        GPTIDOV_W { w: self }
+    pub fn gptidov(&mut self) -> GPTIDOV_W<0> {
+        GPTIDOV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

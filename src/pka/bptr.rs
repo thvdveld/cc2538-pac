@@ -36,33 +36,10 @@ impl From<crate::W<BPTR_SPEC>> for W {
 }
 #[doc = "Field `BPTR` reader - This register specifies the location of vector B within the PKA RAM. Vectors are identified through the location of their least-significant 32-bit word. Note that bit \\[0\\]
 must be zero to ensure that the vector starts at an 8-byte boundary."]
-pub struct BPTR_R(crate::FieldReader<u16, u16>);
-impl BPTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        BPTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BPTR_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BPTR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BPTR` writer - This register specifies the location of vector B within the PKA RAM. Vectors are identified through the location of their least-significant 32-bit word. Note that bit \\[0\\]
 must be zero to ensure that the vector starts at an 8-byte boundary."]
-pub struct BPTR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BPTR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | (value as u32 & 0x07ff);
-        self.w
-    }
-}
+pub type BPTR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BPTR_SPEC, u16, u16, 11, O>;
 impl R {
     #[doc = "Bits 0:10 - This register specifies the location of vector B within the PKA RAM. Vectors are identified through the location of their least-significant 32-bit word. Note that bit \\[0\\]
 must be zero to ensure that the vector starts at an 8-byte boundary."]
@@ -75,8 +52,8 @@ impl W {
     #[doc = "Bits 0:10 - This register specifies the location of vector B within the PKA RAM. Vectors are identified through the location of their least-significant 32-bit word. Note that bit \\[0\\]
 must be zero to ensure that the vector starts at an 8-byte boundary."]
     #[inline(always)]
-    pub fn bptr(&mut self) -> BPTR_W {
-        BPTR_W { w: self }
+    pub fn bptr(&mut self) -> BPTR_W<0> {
+        BPTR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

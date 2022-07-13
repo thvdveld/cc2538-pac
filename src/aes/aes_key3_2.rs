@@ -25,17 +25,8 @@ For GCM: -\\[127:0\\]
 - This register is used to store intermediate values and is initialized with 0s when loading a new key. For CCM: -\\[255:0\\]
 - This register is used to store intermediate values. For CBC-MAC: -\\[255:0\\]
 - ZEROES - This register must remain 0."]
-pub struct AES_KEY3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AES_KEY3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type AES_KEY3_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, AES_KEY3_2_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31 - AES_KEY3\\[95:64\\]/AES_KEY2\\[223:192\\]
 For GCM: -\\[127:0\\]
@@ -44,8 +35,8 @@ For GCM: -\\[127:0\\]
 - This register is used to store intermediate values. For CBC-MAC: -\\[255:0\\]
 - ZEROES - This register must remain 0."]
     #[inline(always)]
-    pub fn aes_key3(&mut self) -> AES_KEY3_W {
-        AES_KEY3_W { w: self }
+    pub fn aes_key3(&mut self) -> AES_KEY3_W<0> {
+        AES_KEY3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

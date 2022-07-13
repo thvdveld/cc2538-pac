@@ -35,195 +35,63 @@ impl From<crate::W<CSIH_SPEC>> for W {
     }
 }
 #[doc = "Field `AUTISET` reader - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
-pub struct AUTISET_R(crate::FieldReader<bool, bool>);
-impl AUTISET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AUTISET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTISET_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTISET_R = crate::BitReader<bool>;
 #[doc = "Field `AUTISET` writer - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
-pub struct AUTISET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTISET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type AUTISET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSIH_SPEC, bool, O>;
 #[doc = "Field `ISO` reader - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
-pub struct ISO_R(crate::FieldReader<bool, bool>);
-impl ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ISO_R = crate::BitReader<bool>;
 #[doc = "Field `ISO` writer - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
-pub struct ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSIH_SPEC, bool, O>;
 #[doc = "Field `FORCEDATATOG` reader - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
-pub struct FORCEDATATOG_R(crate::FieldReader<bool, bool>);
-impl FORCEDATATOG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCEDATATOG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCEDATATOG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCEDATATOG_R = crate::BitReader<bool>;
 #[doc = "Field `FORCEDATATOG` writer - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
-pub struct FORCEDATATOG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCEDATATOG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type FORCEDATATOG_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSIH_SPEC, bool, O>;
 #[doc = "Field `INDBLBUF` reader - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
-pub struct INDBLBUF_R(crate::FieldReader<bool, bool>);
-impl INDBLBUF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INDBLBUF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INDBLBUF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INDBLBUF_R = crate::BitReader<bool>;
 #[doc = "Field `INDBLBUF` writer - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
-pub struct INDBLBUF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INDBLBUF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type INDBLBUF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSIH_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 7 - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
     #[inline(always)]
     pub fn autiset(&self) -> AUTISET_R {
-        AUTISET_R::new(((self.bits >> 7) & 0x01) != 0)
+        AUTISET_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
     pub fn iso(&self) -> ISO_R {
-        ISO_R::new(((self.bits >> 6) & 0x01) != 0)
+        ISO_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 3 - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
     #[inline(always)]
     pub fn forcedatatog(&self) -> FORCEDATATOG_R {
-        FORCEDATATOG_R::new(((self.bits >> 3) & 0x01) != 0)
+        FORCEDATATOG_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 0 - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
     pub fn indblbuf(&self) -> INDBLBUF_R {
-        INDBLBUF_R::new((self.bits & 0x01) != 0)
+        INDBLBUF_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 7 - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
     #[inline(always)]
-    pub fn autiset(&mut self) -> AUTISET_W {
-        AUTISET_W { w: self }
+    pub fn autiset(&mut self) -> AUTISET_W<7> {
+        AUTISET_W::new(self)
     }
     #[doc = "Bit 6 - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
-    pub fn iso(&mut self) -> ISO_W {
-        ISO_W { w: self }
+    pub fn iso(&mut self) -> ISO_W<6> {
+        ISO_W::new(self)
     }
     #[doc = "Bit 3 - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
     #[inline(always)]
-    pub fn forcedatatog(&mut self) -> FORCEDATATOG_W {
-        FORCEDATATOG_W { w: self }
+    pub fn forcedatatog(&mut self) -> FORCEDATATOG_W<3> {
+        FORCEDATATOG_W::new(self)
     }
     #[doc = "Bit 0 - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
-    pub fn indblbuf(&mut self) -> INDBLBUF_W {
-        INDBLBUF_W { w: self }
+    pub fn indblbuf(&mut self) -> INDBLBUF_W<0> {
+        INDBLBUF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

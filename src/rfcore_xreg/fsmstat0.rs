@@ -14,60 +14,21 @@ impl From<crate::R<FSMSTAT0_SPEC>> for R {
     }
 }
 #[doc = "Field `CAL_DONE` reader - Frequency synthesis calibration has been performed since the last time the FS was turned on."]
-pub struct CAL_DONE_R(crate::FieldReader<bool, bool>);
-impl CAL_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAL_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAL_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAL_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `CAL_RUNNING` reader - Frequency synthesis calibration status 0: Calibration is complete or not started. 1: Calibration is in progress."]
-pub struct CAL_RUNNING_R(crate::FieldReader<bool, bool>);
-impl CAL_RUNNING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAL_RUNNING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAL_RUNNING_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAL_RUNNING_R = crate::BitReader<bool>;
 #[doc = "Field `FSM_FFCTRL_STATE` reader - Gives the current state of the FIFO and frame control (FFCTRL) finite state-machine."]
-pub struct FSM_FFCTRL_STATE_R(crate::FieldReader<u8, u8>);
-impl FSM_FFCTRL_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FSM_FFCTRL_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FSM_FFCTRL_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FSM_FFCTRL_STATE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 7 - Frequency synthesis calibration has been performed since the last time the FS was turned on."]
     #[inline(always)]
     pub fn cal_done(&self) -> CAL_DONE_R {
-        CAL_DONE_R::new(((self.bits >> 7) & 0x01) != 0)
+        CAL_DONE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Frequency synthesis calibration status 0: Calibration is complete or not started. 1: Calibration is in progress."]
     #[inline(always)]
     pub fn cal_running(&self) -> CAL_RUNNING_R {
-        CAL_RUNNING_R::new(((self.bits >> 6) & 0x01) != 0)
+        CAL_RUNNING_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 0:5 - Gives the current state of the FIFO and frame control (FFCTRL) finite state-machine."]
     #[inline(always)]

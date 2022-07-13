@@ -23,25 +23,15 @@ impl From<crate::W<USEBURSTCLR_SPEC>> for W {
 useburst clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\]
 bit in the DMAUSEBURSTSET register meaning that uDMA channel \\[n\\]
 responds to single and burst requests."]
-pub struct CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CLR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USEBURSTCLR_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 useburst clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\]
 bit in the DMAUSEBURSTSET register meaning that uDMA channel \\[n\\]
 responds to single and burst requests."]
     #[inline(always)]
-    pub fn clr(&mut self) -> CLR_W {
-        CLR_W { w: self }
+    pub fn clr(&mut self) -> CLR_W<0> {
+        CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

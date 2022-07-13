@@ -21,23 +21,14 @@ impl From<crate::W<HASH_DATA_IN_5_SPEC>> for W {
 }
 #[doc = "Field `HASH_DATA_IN` writer - HASH_DATA_IN\\[191:160\\]
 These registers must be written with the 512-bit input data. The data lines are connected directly to the data input of the hash module and hence into the engine's internal data buffer. Writing to each of the registers triggers a corresponding 32-bit write enable to the internal buffer. Note: The host may only write the input data buffer when the rfd_in bit of the HASH_IO_BUF_CTRL register is high. If the rfd_in bit is 0, the engine is busy with processing. During processing, it is not allowed to write new input data. For message lengths larger than 64 bytes, multiple blocks of data are written to this input buffer using a handshake through flags of the HASH_IO_BUF_CTRL register. All blocks except the last are required to be 512 bits in size. If the last block is not 512 bits long, only the least significant bits of data must be written, but they must be padded with 0s to the next 32-bit boundary. Host read operations from these register addresses return 0s."]
-pub struct HASH_DATA_IN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HASH_DATA_IN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type HASH_DATA_IN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, HASH_DATA_IN_5_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31 - HASH_DATA_IN\\[191:160\\]
 These registers must be written with the 512-bit input data. The data lines are connected directly to the data input of the hash module and hence into the engine's internal data buffer. Writing to each of the registers triggers a corresponding 32-bit write enable to the internal buffer. Note: The host may only write the input data buffer when the rfd_in bit of the HASH_IO_BUF_CTRL register is high. If the rfd_in bit is 0, the engine is busy with processing. During processing, it is not allowed to write new input data. For message lengths larger than 64 bytes, multiple blocks of data are written to this input buffer using a handshake through flags of the HASH_IO_BUF_CTRL register. All blocks except the last are required to be 512 bits in size. If the last block is not 512 bits long, only the least significant bits of data must be written, but they must be padded with 0s to the next 32-bit boundary. Host read operations from these register addresses return 0s."]
     #[inline(always)]
-    pub fn hash_data_in(&mut self) -> HASH_DATA_IN_W {
-        HASH_DATA_IN_W { w: self }
+    pub fn hash_data_in(&mut self) -> HASH_DATA_IN_W<0> {
+        HASH_DATA_IN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

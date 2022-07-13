@@ -35,148 +35,49 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "Field `SFE` reader - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
-pub struct SFE_R(crate::FieldReader<bool, bool>);
-impl SFE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SFE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SFE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SFE_R = crate::BitReader<bool>;
 #[doc = "Field `SFE` writer - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
-pub struct SFE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SFE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type SFE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
 #[doc = "Field `MFE` reader - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
-pub struct MFE_R(crate::FieldReader<bool, bool>);
-impl MFE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MFE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MFE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MFE_R = crate::BitReader<bool>;
 #[doc = "Field `MFE` writer - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
-pub struct MFE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MFE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type MFE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
 #[doc = "Field `LPBK` reader - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
-pub struct LPBK_R(crate::FieldReader<bool, bool>);
-impl LPBK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LPBK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LPBK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LPBK_R = crate::BitReader<bool>;
 #[doc = "Field `LPBK` writer - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
-pub struct LPBK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LPBK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type LPBK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
     #[inline(always)]
     pub fn sfe(&self) -> SFE_R {
-        SFE_R::new(((self.bits >> 5) & 0x01) != 0)
+        SFE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
     #[inline(always)]
     pub fn mfe(&self) -> MFE_R {
-        MFE_R::new(((self.bits >> 4) & 0x01) != 0)
+        MFE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
     #[inline(always)]
     pub fn lpbk(&self) -> LPBK_R {
-        LPBK_R::new((self.bits & 0x01) != 0)
+        LPBK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
     #[inline(always)]
-    pub fn sfe(&mut self) -> SFE_W {
-        SFE_W { w: self }
+    pub fn sfe(&mut self) -> SFE_W<5> {
+        SFE_W::new(self)
     }
     #[doc = "Bit 4 - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
     #[inline(always)]
-    pub fn mfe(&mut self) -> MFE_W {
-        MFE_W { w: self }
+    pub fn mfe(&mut self) -> MFE_W<4> {
+        MFE_W::new(self)
     }
     #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
     #[inline(always)]
-    pub fn lpbk(&mut self) -> LPBK_W {
-        LPBK_W { w: self }
+    pub fn lpbk(&mut self) -> LPBK_W<0> {
+        LPBK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

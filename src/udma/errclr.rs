@@ -35,54 +35,21 @@ impl From<crate::W<ERRCLR_SPEC>> for W {
     }
 }
 #[doc = "Field `ERRCLR` reader - uDMA bus error status 0: No bus error is pending 1: A bus error is pending This bit is cleared by writing 1 to it."]
-pub struct ERRCLR_R(crate::FieldReader<bool, bool>);
-impl ERRCLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERRCLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERRCLR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERRCLR_R = crate::BitReader<bool>;
 #[doc = "Field `ERRCLR` writer - uDMA bus error status 0: No bus error is pending 1: A bus error is pending This bit is cleared by writing 1 to it."]
-pub struct ERRCLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERRCLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type ERRCLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, ERRCLR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - uDMA bus error status 0: No bus error is pending 1: A bus error is pending This bit is cleared by writing 1 to it."]
     #[inline(always)]
     pub fn errclr(&self) -> ERRCLR_R {
-        ERRCLR_R::new((self.bits & 0x01) != 0)
+        ERRCLR_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - uDMA bus error status 0: No bus error is pending 1: A bus error is pending This bit is cleared by writing 1 to it."]
     #[inline(always)]
-    pub fn errclr(&mut self) -> ERRCLR_W {
-        ERRCLR_W { w: self }
+    pub fn errclr(&mut self) -> ERRCLR_W<0> {
+        ERRCLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

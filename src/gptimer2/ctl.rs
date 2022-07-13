@@ -35,457 +35,147 @@ impl From<crate::W<CTL_SPEC>> for W {
     }
 }
 #[doc = "Field `TBPWML` reader - GPTM Timer B PWM output level 0: Output is unaffected. 1: Output is inverted."]
-pub struct TBPWML_R(crate::FieldReader<bool, bool>);
-impl TBPWML_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TBPWML_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBPWML_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBPWML_R = crate::BitReader<bool>;
 #[doc = "Field `TBPWML` writer - GPTM Timer B PWM output level 0: Output is unaffected. 1: Output is inverted."]
-pub struct TBPWML_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBPWML_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
-        self.w
-    }
-}
+pub type TBPWML_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 #[doc = "Field `TBOTE` reader - GPTM Timer B output trigger enable 0: The ADC trigger of output Timer B is disabled. 1: The ADC trigger of output Timer B is enabled."]
-pub struct TBOTE_R(crate::FieldReader<bool, bool>);
-impl TBOTE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TBOTE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBOTE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBOTE_R = crate::BitReader<bool>;
 #[doc = "Field `TBOTE` writer - GPTM Timer B output trigger enable 0: The ADC trigger of output Timer B is disabled. 1: The ADC trigger of output Timer B is enabled."]
-pub struct TBOTE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBOTE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
-        self.w
-    }
-}
+pub type TBOTE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 #[doc = "Field `TBEVENT` reader - GPTM Timer B event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
-pub struct TBEVENT_R(crate::FieldReader<u8, u8>);
-impl TBEVENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TBEVENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBEVENT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBEVENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TBEVENT` writer - GPTM Timer B event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
-pub struct TBEVENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBEVENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
-        self.w
-    }
-}
+pub type TBEVENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TBSTALL` reader - GPTM Timer B stall enable 0: Timer B continues counting while the processor is halted by the debugger. 1: Timer B freezes counting while the processor is halted by the debugger."]
-pub struct TBSTALL_R(crate::FieldReader<bool, bool>);
-impl TBSTALL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TBSTALL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBSTALL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBSTALL_R = crate::BitReader<bool>;
 #[doc = "Field `TBSTALL` writer - GPTM Timer B stall enable 0: Timer B continues counting while the processor is halted by the debugger. 1: Timer B freezes counting while the processor is halted by the debugger."]
-pub struct TBSTALL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBSTALL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
-        self.w
-    }
-}
+pub type TBSTALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 #[doc = "Field `TBEN` reader - GPTM Timer B enable 0: Timer B is disabled. 1: Timer B is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
-pub struct TBEN_R(crate::FieldReader<bool, bool>);
-impl TBEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TBEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBEN_R = crate::BitReader<bool>;
 #[doc = "Field `TBEN` writer - GPTM Timer B enable 0: Timer B is disabled. 1: Timer B is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
-pub struct TBEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type TBEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 #[doc = "Field `TAPWML` reader - GPTM Timer A PWM output level 0: Output is unaffected. 1: Output is inverted."]
-pub struct TAPWML_R(crate::FieldReader<bool, bool>);
-impl TAPWML_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TAPWML_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TAPWML_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TAPWML_R = crate::BitReader<bool>;
 #[doc = "Field `TAPWML` writer - GPTM Timer A PWM output level 0: Output is unaffected. 1: Output is inverted."]
-pub struct TAPWML_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAPWML_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+pub type TAPWML_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 #[doc = "Field `TAOTE` reader - GPTM Timer A output trigger enable 0: The ADC trigger of output Timer A is disabled. 1: The ADC trigger of output Timer A is enabled."]
-pub struct TAOTE_R(crate::FieldReader<bool, bool>);
-impl TAOTE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TAOTE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TAOTE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TAOTE_R = crate::BitReader<bool>;
 #[doc = "Field `TAOTE` writer - GPTM Timer A output trigger enable 0: The ADC trigger of output Timer A is disabled. 1: The ADC trigger of output Timer A is enabled."]
-pub struct TAOTE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAOTE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
+pub type TAOTE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 #[doc = "Field `TAEVENT` reader - GPTM Timer A event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
-pub struct TAEVENT_R(crate::FieldReader<u8, u8>);
-impl TAEVENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TAEVENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TAEVENT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TAEVENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TAEVENT` writer - GPTM Timer A event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
-pub struct TAEVENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAEVENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
-        self.w
-    }
-}
+pub type TAEVENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TASTALL` reader - GPTM Timer A stall enable 0: Timer A continues counting while the processor is halted by the debugger. 1: Timer A freezes counting while the processor is halted by the debugger."]
-pub struct TASTALL_R(crate::FieldReader<bool, bool>);
-impl TASTALL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TASTALL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TASTALL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TASTALL_R = crate::BitReader<bool>;
 #[doc = "Field `TASTALL` writer - GPTM Timer A stall enable 0: Timer A continues counting while the processor is halted by the debugger. 1: Timer A freezes counting while the processor is halted by the debugger."]
-pub struct TASTALL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TASTALL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type TASTALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 #[doc = "Field `TAEN` reader - GPTM Timer A enable 0: Timer A is disabled. 1: Timer A is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
-pub struct TAEN_R(crate::FieldReader<bool, bool>);
-impl TAEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TAEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TAEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TAEN_R = crate::BitReader<bool>;
 #[doc = "Field `TAEN` writer - GPTM Timer A enable 0: Timer A is disabled. 1: Timer A is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
-pub struct TAEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type TAEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 14 - GPTM Timer B PWM output level 0: Output is unaffected. 1: Output is inverted."]
     #[inline(always)]
     pub fn tbpwml(&self) -> TBPWML_R {
-        TBPWML_R::new(((self.bits >> 14) & 0x01) != 0)
+        TBPWML_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 13 - GPTM Timer B output trigger enable 0: The ADC trigger of output Timer B is disabled. 1: The ADC trigger of output Timer B is enabled."]
     #[inline(always)]
     pub fn tbote(&self) -> TBOTE_R {
-        TBOTE_R::new(((self.bits >> 13) & 0x01) != 0)
+        TBOTE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 10:11 - GPTM Timer B event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
     #[inline(always)]
     pub fn tbevent(&self) -> TBEVENT_R {
-        TBEVENT_R::new(((self.bits >> 10) & 0x03) as u8)
+        TBEVENT_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bit 9 - GPTM Timer B stall enable 0: Timer B continues counting while the processor is halted by the debugger. 1: Timer B freezes counting while the processor is halted by the debugger."]
     #[inline(always)]
     pub fn tbstall(&self) -> TBSTALL_R {
-        TBSTALL_R::new(((self.bits >> 9) & 0x01) != 0)
+        TBSTALL_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - GPTM Timer B enable 0: Timer B is disabled. 1: Timer B is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
     #[inline(always)]
     pub fn tben(&self) -> TBEN_R {
-        TBEN_R::new(((self.bits >> 8) & 0x01) != 0)
+        TBEN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 6 - GPTM Timer A PWM output level 0: Output is unaffected. 1: Output is inverted."]
     #[inline(always)]
     pub fn tapwml(&self) -> TAPWML_R {
-        TAPWML_R::new(((self.bits >> 6) & 0x01) != 0)
+        TAPWML_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - GPTM Timer A output trigger enable 0: The ADC trigger of output Timer A is disabled. 1: The ADC trigger of output Timer A is enabled."]
     #[inline(always)]
     pub fn taote(&self) -> TAOTE_R {
-        TAOTE_R::new(((self.bits >> 5) & 0x01) != 0)
+        TAOTE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 2:3 - GPTM Timer A event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
     #[inline(always)]
     pub fn taevent(&self) -> TAEVENT_R {
-        TAEVENT_R::new(((self.bits >> 2) & 0x03) as u8)
+        TAEVENT_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 1 - GPTM Timer A stall enable 0: Timer A continues counting while the processor is halted by the debugger. 1: Timer A freezes counting while the processor is halted by the debugger."]
     #[inline(always)]
     pub fn tastall(&self) -> TASTALL_R {
-        TASTALL_R::new(((self.bits >> 1) & 0x01) != 0)
+        TASTALL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - GPTM Timer A enable 0: Timer A is disabled. 1: Timer A is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
     #[inline(always)]
     pub fn taen(&self) -> TAEN_R {
-        TAEN_R::new((self.bits & 0x01) != 0)
+        TAEN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 14 - GPTM Timer B PWM output level 0: Output is unaffected. 1: Output is inverted."]
     #[inline(always)]
-    pub fn tbpwml(&mut self) -> TBPWML_W {
-        TBPWML_W { w: self }
+    pub fn tbpwml(&mut self) -> TBPWML_W<14> {
+        TBPWML_W::new(self)
     }
     #[doc = "Bit 13 - GPTM Timer B output trigger enable 0: The ADC trigger of output Timer B is disabled. 1: The ADC trigger of output Timer B is enabled."]
     #[inline(always)]
-    pub fn tbote(&mut self) -> TBOTE_W {
-        TBOTE_W { w: self }
+    pub fn tbote(&mut self) -> TBOTE_W<13> {
+        TBOTE_W::new(self)
     }
     #[doc = "Bits 10:11 - GPTM Timer B event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
     #[inline(always)]
-    pub fn tbevent(&mut self) -> TBEVENT_W {
-        TBEVENT_W { w: self }
+    pub fn tbevent(&mut self) -> TBEVENT_W<10> {
+        TBEVENT_W::new(self)
     }
     #[doc = "Bit 9 - GPTM Timer B stall enable 0: Timer B continues counting while the processor is halted by the debugger. 1: Timer B freezes counting while the processor is halted by the debugger."]
     #[inline(always)]
-    pub fn tbstall(&mut self) -> TBSTALL_W {
-        TBSTALL_W { w: self }
+    pub fn tbstall(&mut self) -> TBSTALL_W<9> {
+        TBSTALL_W::new(self)
     }
     #[doc = "Bit 8 - GPTM Timer B enable 0: Timer B is disabled. 1: Timer B is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
     #[inline(always)]
-    pub fn tben(&mut self) -> TBEN_W {
-        TBEN_W { w: self }
+    pub fn tben(&mut self) -> TBEN_W<8> {
+        TBEN_W::new(self)
     }
     #[doc = "Bit 6 - GPTM Timer A PWM output level 0: Output is unaffected. 1: Output is inverted."]
     #[inline(always)]
-    pub fn tapwml(&mut self) -> TAPWML_W {
-        TAPWML_W { w: self }
+    pub fn tapwml(&mut self) -> TAPWML_W<6> {
+        TAPWML_W::new(self)
     }
     #[doc = "Bit 5 - GPTM Timer A output trigger enable 0: The ADC trigger of output Timer A is disabled. 1: The ADC trigger of output Timer A is enabled."]
     #[inline(always)]
-    pub fn taote(&mut self) -> TAOTE_W {
-        TAOTE_W { w: self }
+    pub fn taote(&mut self) -> TAOTE_W<5> {
+        TAOTE_W::new(self)
     }
     #[doc = "Bits 2:3 - GPTM Timer A event mode 0x0: Positive edge 0x1: Negative edge 0x2: Reserved 0x3: Both edges"]
     #[inline(always)]
-    pub fn taevent(&mut self) -> TAEVENT_W {
-        TAEVENT_W { w: self }
+    pub fn taevent(&mut self) -> TAEVENT_W<2> {
+        TAEVENT_W::new(self)
     }
     #[doc = "Bit 1 - GPTM Timer A stall enable 0: Timer A continues counting while the processor is halted by the debugger. 1: Timer A freezes counting while the processor is halted by the debugger."]
     #[inline(always)]
-    pub fn tastall(&mut self) -> TASTALL_W {
-        TASTALL_W { w: self }
+    pub fn tastall(&mut self) -> TASTALL_W<1> {
+        TASTALL_W::new(self)
     }
     #[doc = "Bit 0 - GPTM Timer A enable 0: Timer A is disabled. 1: Timer A is enabled and begins counting or the capture logic is enabled based on the GPTMCFG register."]
     #[inline(always)]
-    pub fn taen(&mut self) -> TAEN_W {
-        TAEN_W { w: self }
+    pub fn taen(&mut self) -> TAEN_W<0> {
+        TAEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

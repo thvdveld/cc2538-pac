@@ -14,20 +14,7 @@ impl From<crate::R<CNT0_CNTL_SPEC>> for R {
     }
 }
 #[doc = "Field `FIFOCNT_or_FIFOCNTL` reader - USB_CS0.FIFOCNT (USBINDEX = 0) \\[RO\\]: Number of bytes received in the packet in the endpoint 0 FIFO Valid only when USB_CS0.OUTPKTRDY is set USB_CSIL.FIFOCNTL (USBINDEX = 1 to 5) \\[RW\\]: Bits 7:0 of the of the number of bytes received in the packet in the OUT endpoint {1-5} FIFO Valid only when USB_CSOL.OUTPKTRDY is set"]
-pub struct FIFOCNT_OR_FIFOCNTL_R(crate::FieldReader<u8, u8>);
-impl FIFOCNT_OR_FIFOCNTL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FIFOCNT_OR_FIFOCNTL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFOCNT_OR_FIFOCNTL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFOCNT_OR_FIFOCNTL_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - USB_CS0.FIFOCNT (USBINDEX = 0) \\[RO\\]: Number of bytes received in the packet in the endpoint 0 FIFO Valid only when USB_CS0.OUTPKTRDY is set USB_CSIL.FIFOCNTL (USBINDEX = 1 to 5) \\[RW\\]: Bits 7:0 of the of the number of bytes received in the packet in the OUT endpoint {1-5} FIFO Valid only when USB_CSOL.OUTPKTRDY is set"]
     #[inline(always)]

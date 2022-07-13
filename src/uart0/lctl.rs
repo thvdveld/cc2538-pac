@@ -35,91 +35,35 @@ impl From<crate::W<LCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `BLEN` reader - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
-pub struct BLEN_R(crate::FieldReader<u8, u8>);
-impl BLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BLEN_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BLEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BLEN` writer - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
-pub struct BLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
-}
+pub type BLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCTL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `MASTER` reader - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
-pub struct MASTER_R(crate::FieldReader<bool, bool>);
-impl MASTER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASTER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER` writer - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
-pub struct MASTER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type MASTER_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCTL_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 4:5 - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
     #[inline(always)]
     pub fn blen(&self) -> BLEN_R {
-        BLEN_R::new(((self.bits >> 4) & 0x03) as u8)
+        BLEN_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 0 - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
     #[inline(always)]
     pub fn master(&self) -> MASTER_R {
-        MASTER_R::new((self.bits & 0x01) != 0)
+        MASTER_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 4:5 - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
     #[inline(always)]
-    pub fn blen(&mut self) -> BLEN_W {
-        BLEN_W { w: self }
+    pub fn blen(&mut self) -> BLEN_W<4> {
+        BLEN_W::new(self)
     }
     #[doc = "Bit 0 - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
     #[inline(always)]
-    pub fn master(&mut self) -> MASTER_W {
-        MASTER_W { w: self }
+    pub fn master(&mut self) -> MASTER_W<0> {
+        MASTER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

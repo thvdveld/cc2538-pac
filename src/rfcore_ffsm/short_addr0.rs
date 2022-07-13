@@ -36,33 +36,11 @@ impl From<crate::W<SHORT_ADDR0_SPEC>> for W {
 }
 #[doc = "Field `SHORT_ADDR0` reader - SHORT_ADDR\\[7:0\\]
 The short address used during destination address filtering"]
-pub struct SHORT_ADDR0_R(crate::FieldReader<u8, u8>);
-impl SHORT_ADDR0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SHORT_ADDR0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHORT_ADDR0_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHORT_ADDR0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SHORT_ADDR0` writer - SHORT_ADDR\\[7:0\\]
 The short address used during destination address filtering"]
-pub struct SHORT_ADDR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SHORT_ADDR0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SHORT_ADDR0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SHORT_ADDR0_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - SHORT_ADDR\\[7:0\\]
 The short address used during destination address filtering"]
@@ -75,8 +53,8 @@ impl W {
     #[doc = "Bits 0:7 - SHORT_ADDR\\[7:0\\]
 The short address used during destination address filtering"]
     #[inline(always)]
-    pub fn short_addr0(&mut self) -> SHORT_ADDR0_W {
-        SHORT_ADDR0_W { w: self }
+    pub fn short_addr0(&mut self) -> SHORT_ADDR0_W<0> {
+        SHORT_ADDR0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

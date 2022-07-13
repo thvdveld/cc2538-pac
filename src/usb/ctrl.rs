@@ -35,121 +35,42 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PLLLOCKED` reader - PLL lock status. The PLL is locked when USB_CTRL.PLLLOCKED is 1."]
-pub struct PLLLOCKED_R(crate::FieldReader<bool, bool>);
-impl PLLLOCKED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLLLOCKED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLLLOCKED_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLLLOCKED_R = crate::BitReader<bool>;
 #[doc = "Field `PLLEN` reader - 48 MHz USB PLL enable When this bit is set, the 48 MHz PLL is started. Software must avoid access to other USB registers before the PLL has locked; that is, USB_CTRL.PLLLOCKED is 1. This bit can be set only when USB_CTRL.USBEN is 1. The PLL must be disabled before entering PM1 when suspended, and must be re-enabled when resuming operation."]
-pub struct PLLEN_R(crate::FieldReader<bool, bool>);
-impl PLLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLLEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLLEN_R = crate::BitReader<bool>;
 #[doc = "Field `PLLEN` writer - 48 MHz USB PLL enable When this bit is set, the 48 MHz PLL is started. Software must avoid access to other USB registers before the PLL has locked; that is, USB_CTRL.PLLLOCKED is 1. This bit can be set only when USB_CTRL.USBEN is 1. The PLL must be disabled before entering PM1 when suspended, and must be re-enabled when resuming operation."]
-pub struct PLLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLLEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type PLLEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `USBEN` reader - USB enable The USB controller is reset when this bit is cleared"]
-pub struct USBEN_R(crate::FieldReader<bool, bool>);
-impl USBEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USBEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBEN_R = crate::BitReader<bool>;
 #[doc = "Field `USBEN` writer - USB enable The USB controller is reset when this bit is cleared"]
-pub struct USBEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type USBEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 7 - PLL lock status. The PLL is locked when USB_CTRL.PLLLOCKED is 1."]
     #[inline(always)]
     pub fn plllocked(&self) -> PLLLOCKED_R {
-        PLLLOCKED_R::new(((self.bits >> 7) & 0x01) != 0)
+        PLLLOCKED_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 1 - 48 MHz USB PLL enable When this bit is set, the 48 MHz PLL is started. Software must avoid access to other USB registers before the PLL has locked; that is, USB_CTRL.PLLLOCKED is 1. This bit can be set only when USB_CTRL.USBEN is 1. The PLL must be disabled before entering PM1 when suspended, and must be re-enabled when resuming operation."]
     #[inline(always)]
     pub fn pllen(&self) -> PLLEN_R {
-        PLLEN_R::new(((self.bits >> 1) & 0x01) != 0)
+        PLLEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - USB enable The USB controller is reset when this bit is cleared"]
     #[inline(always)]
     pub fn usben(&self) -> USBEN_R {
-        USBEN_R::new((self.bits & 0x01) != 0)
+        USBEN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1 - 48 MHz USB PLL enable When this bit is set, the 48 MHz PLL is started. Software must avoid access to other USB registers before the PLL has locked; that is, USB_CTRL.PLLLOCKED is 1. This bit can be set only when USB_CTRL.USBEN is 1. The PLL must be disabled before entering PM1 when suspended, and must be re-enabled when resuming operation."]
     #[inline(always)]
-    pub fn pllen(&mut self) -> PLLEN_W {
-        PLLEN_W { w: self }
+    pub fn pllen(&mut self) -> PLLEN_W<1> {
+        PLLEN_W::new(self)
     }
     #[doc = "Bit 0 - USB enable The USB controller is reset when this bit is cleared"]
     #[inline(always)]
-    pub fn usben(&mut self) -> USBEN_W {
-        USBEN_W { w: self }
+    pub fn usben(&mut self) -> USBEN_W<0> {
+        USBEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

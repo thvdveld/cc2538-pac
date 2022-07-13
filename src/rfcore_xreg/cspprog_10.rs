@@ -14,20 +14,7 @@ impl From<crate::R<CSPPROG_10_SPEC>> for R {
     }
 }
 #[doc = "Field `CSP_INSTR` reader - Byte N of the CSP program memory"]
-pub struct CSP_INSTR_R(crate::FieldReader<u8, u8>);
-impl CSP_INSTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CSP_INSTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CSP_INSTR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CSP_INSTR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - Byte N of the CSP program memory"]
     #[inline(always)]

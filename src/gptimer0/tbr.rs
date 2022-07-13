@@ -14,20 +14,7 @@ impl From<crate::R<TBR_SPEC>> for R {
     }
 }
 #[doc = "Field `TBR` reader - GPTM Timer B register"]
-pub struct TBR_R(crate::FieldReader<u16, u16>);
-impl TBR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TBR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBR_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBR_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - GPTM Timer B register"]
     #[inline(always)]

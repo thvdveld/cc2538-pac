@@ -35,69 +35,13 @@ impl From<crate::W<SA_SPEC>> for W {
     }
 }
 #[doc = "Field `SA` reader - I2C slave address"]
-pub struct SA_R(crate::FieldReader<u8, u8>);
-impl SA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SA_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SA` writer - I2C slave address"]
-pub struct SA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7f << 1)) | ((value as u32 & 0x7f) << 1);
-        self.w
-    }
-}
+pub type SA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SA_SPEC, u8, u8, 7, O>;
 #[doc = "Field `RS` reader - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
-pub struct RS_R(crate::FieldReader<bool, bool>);
-impl RS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS_R = crate::BitReader<bool>;
 #[doc = "Field `RS` writer - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
-pub struct RS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SA_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 1:7 - I2C slave address"]
     #[inline(always)]
@@ -107,19 +51,19 @@ impl R {
     #[doc = "Bit 0 - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
     #[inline(always)]
     pub fn rs(&self) -> RS_R {
-        RS_R::new((self.bits & 0x01) != 0)
+        RS_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 1:7 - I2C slave address"]
     #[inline(always)]
-    pub fn sa(&mut self) -> SA_W {
-        SA_W { w: self }
+    pub fn sa(&mut self) -> SA_W<1> {
+        SA_W::new(self)
     }
     #[doc = "Bit 0 - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
     #[inline(always)]
-    pub fn rs(&mut self) -> RS_W {
-        RS_W { w: self }
+    pub fn rs(&mut self) -> RS_W<0> {
+        RS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

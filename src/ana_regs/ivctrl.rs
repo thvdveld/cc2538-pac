@@ -35,175 +35,63 @@ impl From<crate::W<IVCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DAC_CURR_CTRL` reader - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
-pub struct DAC_CURR_CTRL_R(crate::FieldReader<u8, u8>);
-impl DAC_CURR_CTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DAC_CURR_CTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DAC_CURR_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DAC_CURR_CTRL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DAC_CURR_CTRL` writer - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
-pub struct DAC_CURR_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DAC_CURR_CTRL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
-}
+pub type DAC_CURR_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IVCTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `LODIV_BIAS_CTRL` reader - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
-pub struct LODIV_BIAS_CTRL_R(crate::FieldReader<bool, bool>);
-impl LODIV_BIAS_CTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LODIV_BIAS_CTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LODIV_BIAS_CTRL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LODIV_BIAS_CTRL_R = crate::BitReader<bool>;
 #[doc = "Field `LODIV_BIAS_CTRL` writer - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
-pub struct LODIV_BIAS_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LODIV_BIAS_CTRL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type LODIV_BIAS_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IVCTRL_SPEC, bool, O>;
 #[doc = "Field `TXMIX_DC_CTRL` reader - Controls DC bias in TXMIX"]
-pub struct TXMIX_DC_CTRL_R(crate::FieldReader<bool, bool>);
-impl TXMIX_DC_CTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXMIX_DC_CTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXMIX_DC_CTRL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXMIX_DC_CTRL_R = crate::BitReader<bool>;
 #[doc = "Field `TXMIX_DC_CTRL` writer - Controls DC bias in TXMIX"]
-pub struct TXMIX_DC_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXMIX_DC_CTRL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type TXMIX_DC_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IVCTRL_SPEC, bool, O>;
 #[doc = "Field `PA_BIAS_CTRL` reader - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
-pub struct PA_BIAS_CTRL_R(crate::FieldReader<u8, u8>);
-impl PA_BIAS_CTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PA_BIAS_CTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_BIAS_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PA_BIAS_CTRL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PA_BIAS_CTRL` writer - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
-pub struct PA_BIAS_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_BIAS_CTRL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type PA_BIAS_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IVCTRL_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 4:5 - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
     #[inline(always)]
     pub fn dac_curr_ctrl(&self) -> DAC_CURR_CTRL_R {
-        DAC_CURR_CTRL_R::new(((self.bits >> 4) & 0x03) as u8)
+        DAC_CURR_CTRL_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 3 - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
     #[inline(always)]
     pub fn lodiv_bias_ctrl(&self) -> LODIV_BIAS_CTRL_R {
-        LODIV_BIAS_CTRL_R::new(((self.bits >> 3) & 0x01) != 0)
+        LODIV_BIAS_CTRL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Controls DC bias in TXMIX"]
     #[inline(always)]
     pub fn txmix_dc_ctrl(&self) -> TXMIX_DC_CTRL_R {
-        TXMIX_DC_CTRL_R::new(((self.bits >> 2) & 0x01) != 0)
+        TXMIX_DC_CTRL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 0:1 - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
     #[inline(always)]
     pub fn pa_bias_ctrl(&self) -> PA_BIAS_CTRL_R {
-        PA_BIAS_CTRL_R::new((self.bits & 0x03) as u8)
+        PA_BIAS_CTRL_R::new((self.bits & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 4:5 - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
     #[inline(always)]
-    pub fn dac_curr_ctrl(&mut self) -> DAC_CURR_CTRL_W {
-        DAC_CURR_CTRL_W { w: self }
+    pub fn dac_curr_ctrl(&mut self) -> DAC_CURR_CTRL_W<4> {
+        DAC_CURR_CTRL_W::new(self)
     }
     #[doc = "Bit 3 - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
     #[inline(always)]
-    pub fn lodiv_bias_ctrl(&mut self) -> LODIV_BIAS_CTRL_W {
-        LODIV_BIAS_CTRL_W { w: self }
+    pub fn lodiv_bias_ctrl(&mut self) -> LODIV_BIAS_CTRL_W<3> {
+        LODIV_BIAS_CTRL_W::new(self)
     }
     #[doc = "Bit 2 - Controls DC bias in TXMIX"]
     #[inline(always)]
-    pub fn txmix_dc_ctrl(&mut self) -> TXMIX_DC_CTRL_W {
-        TXMIX_DC_CTRL_W { w: self }
+    pub fn txmix_dc_ctrl(&mut self) -> TXMIX_DC_CTRL_W<2> {
+        TXMIX_DC_CTRL_W::new(self)
     }
     #[doc = "Bits 0:1 - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
     #[inline(always)]
-    pub fn pa_bias_ctrl(&mut self) -> PA_BIAS_CTRL_W {
-        PA_BIAS_CTRL_W { w: self }
+    pub fn pa_bias_ctrl(&mut self) -> PA_BIAS_CTRL_W<0> {
+        PA_BIAS_CTRL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

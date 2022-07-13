@@ -35,165 +35,63 @@ impl From<crate::W<AGCCTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `LNA1_CURRENT` reader - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
-pub struct LNA1_CURRENT_R(crate::FieldReader<u8, u8>);
-impl LNA1_CURRENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LNA1_CURRENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LNA1_CURRENT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LNA1_CURRENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LNA1_CURRENT` writer - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
-pub struct LNA1_CURRENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LNA1_CURRENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
-        self.w
-    }
-}
+pub type LNA1_CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, AGCCTRL2_SPEC, u8, u8, 2, O>;
 #[doc = "Field `LNA2_CURRENT` reader - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
-pub struct LNA2_CURRENT_R(crate::FieldReader<u8, u8>);
-impl LNA2_CURRENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LNA2_CURRENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LNA2_CURRENT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LNA2_CURRENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LNA2_CURRENT` writer - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
-pub struct LNA2_CURRENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LNA2_CURRENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
-        self.w
-    }
-}
+pub type LNA2_CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, AGCCTRL2_SPEC, u8, u8, 3, O>;
 #[doc = "Field `LNA3_CURRENT` reader - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
-pub struct LNA3_CURRENT_R(crate::FieldReader<u8, u8>);
-impl LNA3_CURRENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LNA3_CURRENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LNA3_CURRENT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LNA3_CURRENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LNA3_CURRENT` writer - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
-pub struct LNA3_CURRENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LNA3_CURRENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 1)) | ((value as u32 & 0x03) << 1);
-        self.w
-    }
-}
+pub type LNA3_CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, AGCCTRL2_SPEC, u8, u8, 2, O>;
 #[doc = "Field `LNA_CURRENT_OE` reader - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
-pub struct LNA_CURRENT_OE_R(crate::FieldReader<bool, bool>);
-impl LNA_CURRENT_OE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LNA_CURRENT_OE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LNA_CURRENT_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LNA_CURRENT_OE_R = crate::BitReader<bool>;
 #[doc = "Field `LNA_CURRENT_OE` writer - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
-pub struct LNA_CURRENT_OE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LNA_CURRENT_OE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type LNA_CURRENT_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, AGCCTRL2_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 6:7 - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
     #[inline(always)]
     pub fn lna1_current(&self) -> LNA1_CURRENT_R {
-        LNA1_CURRENT_R::new(((self.bits >> 6) & 0x03) as u8)
+        LNA1_CURRENT_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 3:5 - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
     #[inline(always)]
     pub fn lna2_current(&self) -> LNA2_CURRENT_R {
-        LNA2_CURRENT_R::new(((self.bits >> 3) & 0x07) as u8)
+        LNA2_CURRENT_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 1:2 - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
     #[inline(always)]
     pub fn lna3_current(&self) -> LNA3_CURRENT_R {
-        LNA3_CURRENT_R::new(((self.bits >> 1) & 0x03) as u8)
+        LNA3_CURRENT_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bit 0 - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
     #[inline(always)]
     pub fn lna_current_oe(&self) -> LNA_CURRENT_OE_R {
-        LNA_CURRENT_OE_R::new((self.bits & 0x01) != 0)
+        LNA_CURRENT_OE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 6:7 - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
     #[inline(always)]
-    pub fn lna1_current(&mut self) -> LNA1_CURRENT_W {
-        LNA1_CURRENT_W { w: self }
+    pub fn lna1_current(&mut self) -> LNA1_CURRENT_W<6> {
+        LNA1_CURRENT_W::new(self)
     }
     #[doc = "Bits 3:5 - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
     #[inline(always)]
-    pub fn lna2_current(&mut self) -> LNA2_CURRENT_W {
-        LNA2_CURRENT_W { w: self }
+    pub fn lna2_current(&mut self) -> LNA2_CURRENT_W<3> {
+        LNA2_CURRENT_W::new(self)
     }
     #[doc = "Bits 1:2 - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
     #[inline(always)]
-    pub fn lna3_current(&mut self) -> LNA3_CURRENT_W {
-        LNA3_CURRENT_W { w: self }
+    pub fn lna3_current(&mut self) -> LNA3_CURRENT_W<1> {
+        LNA3_CURRENT_W::new(self)
     }
     #[doc = "Bit 0 - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
     #[inline(always)]
-    pub fn lna_current_oe(&mut self) -> LNA_CURRENT_OE_W {
-        LNA_CURRENT_OE_W { w: self }
+    pub fn lna_current_oe(&mut self) -> LNA_CURRENT_OE_W<0> {
+        LNA_CURRENT_OE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

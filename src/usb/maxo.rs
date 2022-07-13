@@ -35,32 +35,9 @@ impl From<crate::W<MAXO_SPEC>> for W {
     }
 }
 #[doc = "Field `USBMAXO` reader - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
-pub struct USBMAXO_R(crate::FieldReader<u8, u8>);
-impl USBMAXO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        USBMAXO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBMAXO_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBMAXO_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `USBMAXO` writer - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
-pub struct USBMAXO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBMAXO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type USBMAXO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MAXO_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
     #[inline(always)]
-    pub fn usbmaxo(&mut self) -> USBMAXO_W {
-        USBMAXO_W { w: self }
+    pub fn usbmaxo(&mut self) -> USBMAXO_W<0> {
+        USBMAXO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

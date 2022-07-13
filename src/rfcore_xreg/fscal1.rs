@@ -35,101 +35,22 @@ impl From<crate::W<FSCAL1_SPEC>> for W {
     }
 }
 #[doc = "Field `VCO_CURR_CAL_OE` reader - Override current calibration"]
-pub struct VCO_CURR_CAL_OE_R(crate::FieldReader<bool, bool>);
-impl VCO_CURR_CAL_OE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VCO_CURR_CAL_OE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VCO_CURR_CAL_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VCO_CURR_CAL_OE_R = crate::BitReader<bool>;
 #[doc = "Field `VCO_CURR_CAL_OE` writer - Override current calibration"]
-pub struct VCO_CURR_CAL_OE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VCO_CURR_CAL_OE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
+pub type VCO_CURR_CAL_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSCAL1_SPEC, bool, O>;
 #[doc = "Field `VCO_CURR_CAL` reader - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
-pub struct VCO_CURR_CAL_R(crate::FieldReader<u8, u8>);
-impl VCO_CURR_CAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VCO_CURR_CAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VCO_CURR_CAL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VCO_CURR_CAL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VCO_CURR_CAL` writer - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
-pub struct VCO_CURR_CAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VCO_CURR_CAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 2)) | ((value as u32 & 0x1f) << 2);
-        self.w
-    }
-}
+pub type VCO_CURR_CAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCAL1_SPEC, u8, u8, 5, O>;
 #[doc = "Field `VCO_CURR` reader - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
-pub struct VCO_CURR_R(crate::FieldReader<u8, u8>);
-impl VCO_CURR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VCO_CURR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VCO_CURR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VCO_CURR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VCO_CURR` writer - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
-pub struct VCO_CURR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VCO_CURR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type VCO_CURR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCAL1_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bit 7 - Override current calibration"]
     #[inline(always)]
     pub fn vco_curr_cal_oe(&self) -> VCO_CURR_CAL_OE_R {
-        VCO_CURR_CAL_OE_R::new(((self.bits >> 7) & 0x01) != 0)
+        VCO_CURR_CAL_OE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 2:6 - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
     #[inline(always)]
@@ -139,24 +60,24 @@ impl R {
     #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
     #[inline(always)]
     pub fn vco_curr(&self) -> VCO_CURR_R {
-        VCO_CURR_R::new((self.bits & 0x03) as u8)
+        VCO_CURR_R::new((self.bits & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 7 - Override current calibration"]
     #[inline(always)]
-    pub fn vco_curr_cal_oe(&mut self) -> VCO_CURR_CAL_OE_W {
-        VCO_CURR_CAL_OE_W { w: self }
+    pub fn vco_curr_cal_oe(&mut self) -> VCO_CURR_CAL_OE_W<7> {
+        VCO_CURR_CAL_OE_W::new(self)
     }
     #[doc = "Bits 2:6 - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
     #[inline(always)]
-    pub fn vco_curr_cal(&mut self) -> VCO_CURR_CAL_W {
-        VCO_CURR_CAL_W { w: self }
+    pub fn vco_curr_cal(&mut self) -> VCO_CURR_CAL_W<2> {
+        VCO_CURR_CAL_W::new(self)
     }
     #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
     #[inline(always)]
-    pub fn vco_curr(&mut self) -> VCO_CURR_W {
-        VCO_CURR_W { w: self }
+    pub fn vco_curr(&mut self) -> VCO_CURR_W<0> {
+        VCO_CURR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

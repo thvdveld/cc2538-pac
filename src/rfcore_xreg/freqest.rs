@@ -14,20 +14,7 @@ impl From<crate::R<FREQEST_SPEC>> for R {
     }
 }
 #[doc = "Field `FREQEST` reader - Signed 2's-complement value. Contains an estimate of the frequency offset between carrier and the receiver LO. The offset frequency is FREQEST x 7800 Hz. DEM_AVG_MODE controls when this estimate is updated. If DEM_AVG_MODE = 0, it is updated until sync is found. Then the frequency offset estimate is frozen until the end of the received frame. If DEM_AVG_MODE = 1, it is updated as long as the demodulator is enabled. To calculate the correct value, one must use an offset (FREQEST_offset), which can be found in the device data sheet. Real FREQEST value = FREQEST - FREQEST_offset."]
-pub struct FREQEST_R(crate::FieldReader<u8, u8>);
-impl FREQEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FREQEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FREQEST_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FREQEST_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - Signed 2's-complement value. Contains an estimate of the frequency offset between carrier and the receiver LO. The offset frequency is FREQEST x 7800 Hz. DEM_AVG_MODE controls when this estimate is updated. If DEM_AVG_MODE = 0, it is updated until sync is found. Then the frequency offset estimate is frozen until the end of the received frame. If DEM_AVG_MODE = 1, it is updated as long as the demodulator is enabled. To calculate the correct value, one must use an offset (FREQEST_offset), which can be found in the device data sheet. Real FREQEST value = FREQEST - FREQEST_offset."]
     #[inline(always)]

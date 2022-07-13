@@ -35,155 +35,65 @@ impl From<crate::W<FSCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRE_CURRENT` reader - Prescaler current setting"]
-pub struct PRE_CURRENT_R(crate::FieldReader<u8, u8>);
-impl PRE_CURRENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PRE_CURRENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRE_CURRENT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRE_CURRENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PRE_CURRENT` writer - Prescaler current setting"]
-pub struct PRE_CURRENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRE_CURRENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
-        self.w
-    }
-}
+pub type PRE_CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `LODIV_BUF_CURRENT_TX` reader - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
-pub struct LODIV_BUF_CURRENT_TX_R(crate::FieldReader<u8, u8>);
-impl LODIV_BUF_CURRENT_TX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LODIV_BUF_CURRENT_TX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LODIV_BUF_CURRENT_TX_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LODIV_BUF_CURRENT_TX_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LODIV_BUF_CURRENT_TX` writer - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
-pub struct LODIV_BUF_CURRENT_TX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LODIV_BUF_CURRENT_TX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
-}
+pub type LODIV_BUF_CURRENT_TX_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FSCTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `LODIV_BUF_CURRENT_RX` reader - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
-pub struct LODIV_BUF_CURRENT_RX_R(crate::FieldReader<u8, u8>);
-impl LODIV_BUF_CURRENT_RX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LODIV_BUF_CURRENT_RX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LODIV_BUF_CURRENT_RX_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LODIV_BUF_CURRENT_RX_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LODIV_BUF_CURRENT_RX` writer - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
-pub struct LODIV_BUF_CURRENT_RX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LODIV_BUF_CURRENT_RX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
-        self.w
-    }
-}
+pub type LODIV_BUF_CURRENT_RX_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FSCTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `LODIV_CURRENT` reader - Adjusts divider currents, except mixer and PA buffers"]
-pub struct LODIV_CURRENT_R(crate::FieldReader<u8, u8>);
-impl LODIV_CURRENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LODIV_CURRENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LODIV_CURRENT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LODIV_CURRENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LODIV_CURRENT` writer - Adjusts divider currents, except mixer and PA buffers"]
-pub struct LODIV_CURRENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LODIV_CURRENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
-        self.w
-    }
-}
+pub type LODIV_CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCTRL_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 6:7 - Prescaler current setting"]
     #[inline(always)]
     pub fn pre_current(&self) -> PRE_CURRENT_R {
-        PRE_CURRENT_R::new(((self.bits >> 6) & 0x03) as u8)
+        PRE_CURRENT_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 4:5 - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
     #[inline(always)]
     pub fn lodiv_buf_current_tx(&self) -> LODIV_BUF_CURRENT_TX_R {
-        LODIV_BUF_CURRENT_TX_R::new(((self.bits >> 4) & 0x03) as u8)
+        LODIV_BUF_CURRENT_TX_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 2:3 - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
     #[inline(always)]
     pub fn lodiv_buf_current_rx(&self) -> LODIV_BUF_CURRENT_RX_R {
-        LODIV_BUF_CURRENT_RX_R::new(((self.bits >> 2) & 0x03) as u8)
+        LODIV_BUF_CURRENT_RX_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 0:1 - Adjusts divider currents, except mixer and PA buffers"]
     #[inline(always)]
     pub fn lodiv_current(&self) -> LODIV_CURRENT_R {
-        LODIV_CURRENT_R::new((self.bits & 0x03) as u8)
+        LODIV_CURRENT_R::new((self.bits & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 6:7 - Prescaler current setting"]
     #[inline(always)]
-    pub fn pre_current(&mut self) -> PRE_CURRENT_W {
-        PRE_CURRENT_W { w: self }
+    pub fn pre_current(&mut self) -> PRE_CURRENT_W<6> {
+        PRE_CURRENT_W::new(self)
     }
     #[doc = "Bits 4:5 - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
     #[inline(always)]
-    pub fn lodiv_buf_current_tx(&mut self) -> LODIV_BUF_CURRENT_TX_W {
-        LODIV_BUF_CURRENT_TX_W { w: self }
+    pub fn lodiv_buf_current_tx(&mut self) -> LODIV_BUF_CURRENT_TX_W<4> {
+        LODIV_BUF_CURRENT_TX_W::new(self)
     }
     #[doc = "Bits 2:3 - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
     #[inline(always)]
-    pub fn lodiv_buf_current_rx(&mut self) -> LODIV_BUF_CURRENT_RX_W {
-        LODIV_BUF_CURRENT_RX_W { w: self }
+    pub fn lodiv_buf_current_rx(&mut self) -> LODIV_BUF_CURRENT_RX_W<2> {
+        LODIV_BUF_CURRENT_RX_W::new(self)
     }
     #[doc = "Bits 0:1 - Adjusts divider currents, except mixer and PA buffers"]
     #[inline(always)]
-    pub fn lodiv_current(&mut self) -> LODIV_CURRENT_W {
-        LODIV_CURRENT_W { w: self }
+    pub fn lodiv_current(&mut self) -> LODIV_CURRENT_W<0> {
+        LODIV_CURRENT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

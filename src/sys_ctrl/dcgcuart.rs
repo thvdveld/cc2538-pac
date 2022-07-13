@@ -35,101 +35,35 @@ impl From<crate::W<DCGCUART_SPEC>> for W {
     }
 }
 #[doc = "Field `UART1` reader - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
-pub struct UART1_R(crate::FieldReader<bool, bool>);
-impl UART1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART1_R = crate::BitReader<bool>;
 #[doc = "Field `UART1` writer - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
-pub struct UART1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCGCUART_SPEC, bool, O>;
 #[doc = "Field `UART0` reader - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
-pub struct UART0_R(crate::FieldReader<bool, bool>);
-impl UART0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART0_R = crate::BitReader<bool>;
 #[doc = "Field `UART0` writer - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
-pub struct UART0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type UART0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCGCUART_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 1 - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
     #[inline(always)]
     pub fn uart1(&self) -> UART1_R {
-        UART1_R::new(((self.bits >> 1) & 0x01) != 0)
+        UART1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
     #[inline(always)]
     pub fn uart0(&self) -> UART0_R {
-        UART0_R::new((self.bits & 0x01) != 0)
+        UART0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1 - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
     #[inline(always)]
-    pub fn uart1(&mut self) -> UART1_W {
-        UART1_W { w: self }
+    pub fn uart1(&mut self) -> UART1_W<1> {
+        UART1_W::new(self)
     }
     #[doc = "Bit 0 - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
     #[inline(always)]
-    pub fn uart0(&mut self) -> UART0_W {
-        UART0_W { w: self }
+    pub fn uart0(&mut self) -> UART0_W<0> {
+        UART0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

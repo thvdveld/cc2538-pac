@@ -14,65 +14,13 @@ impl From<crate::R<SW_REV_SPEC>> for R {
     }
 }
 #[doc = "Field `FW_CAPABILITIES` reader - 4-bit binary encoding for the functionality implemented in the firmware. Value 0 indicates basic ModExp with/without CRT. Value 1 adds Modular Inversion, value 2 adds Modular Inversion and ECC operations. Values 3-15 are reserved."]
-pub struct FW_CAPABILITIES_R(crate::FieldReader<u8, u8>);
-impl FW_CAPABILITIES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FW_CAPABILITIES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FW_CAPABILITIES_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FW_CAPABILITIES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MAJOR_FW_REVISION` reader - 4-bit binary encoding of the major firmware revision number"]
-pub struct MAJOR_FW_REVISION_R(crate::FieldReader<u8, u8>);
-impl MAJOR_FW_REVISION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MAJOR_FW_REVISION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAJOR_FW_REVISION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAJOR_FW_REVISION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MINOR_FW_REVISION` reader - 4-bit binary encoding of the minor firmware revision number"]
-pub struct MINOR_FW_REVISION_R(crate::FieldReader<u8, u8>);
-impl MINOR_FW_REVISION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MINOR_FW_REVISION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MINOR_FW_REVISION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MINOR_FW_REVISION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FW_PATCH_LEVEL` reader - 4-bit binary encoding of the firmware patch level, initial release will carry value zero Patches are used to remove bugs without changing the functionality or interface of a module."]
-pub struct FW_PATCH_LEVEL_R(crate::FieldReader<u8, u8>);
-impl FW_PATCH_LEVEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FW_PATCH_LEVEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FW_PATCH_LEVEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FW_PATCH_LEVEL_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 28:31 - 4-bit binary encoding for the functionality implemented in the firmware. Value 0 indicates basic ModExp with/without CRT. Value 1 adds Modular Inversion, value 2 adds Modular Inversion and ECC operations. Values 3-15 are reserved."]
     #[inline(always)]

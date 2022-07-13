@@ -35,101 +35,35 @@ impl From<crate::W<PTME1_SPEC>> for W {
     }
 }
 #[doc = "Field `UART1TME` reader - UART1 test mode enable"]
-pub struct UART1TME_R(crate::FieldReader<bool, bool>);
-impl UART1TME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART1TME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART1TME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART1TME_R = crate::BitReader<bool>;
 #[doc = "Field `UART1TME` writer - UART1 test mode enable"]
-pub struct UART1TME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART1TME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
-        self.w
-    }
-}
+pub type UART1TME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME1_SPEC, bool, O>;
 #[doc = "Field `UART0TME` reader - UART0 test mode enable"]
-pub struct UART0TME_R(crate::FieldReader<bool, bool>);
-impl UART0TME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART0TME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART0TME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART0TME_R = crate::BitReader<bool>;
 #[doc = "Field `UART0TME` writer - UART0 test mode enable"]
-pub struct UART0TME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART0TME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type UART0TME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 9 - UART1 test mode enable"]
     #[inline(always)]
     pub fn uart1tme(&self) -> UART1TME_R {
-        UART1TME_R::new(((self.bits >> 9) & 0x01) != 0)
+        UART1TME_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - UART0 test mode enable"]
     #[inline(always)]
     pub fn uart0tme(&self) -> UART0TME_R {
-        UART0TME_R::new(((self.bits >> 8) & 0x01) != 0)
+        UART0TME_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 9 - UART1 test mode enable"]
     #[inline(always)]
-    pub fn uart1tme(&mut self) -> UART1TME_W {
-        UART1TME_W { w: self }
+    pub fn uart1tme(&mut self) -> UART1TME_W<9> {
+        UART1TME_W::new(self)
     }
     #[doc = "Bit 8 - UART0 test mode enable"]
     #[inline(always)]
-    pub fn uart0tme(&mut self) -> UART0TME_W {
-        UART0TME_W { w: self }
+    pub fn uart0tme(&mut self) -> UART0TME_W<8> {
+        UART0TME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

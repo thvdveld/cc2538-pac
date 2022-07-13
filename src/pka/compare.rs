@@ -14,65 +14,26 @@ impl From<crate::R<COMPARE_SPEC>> for R {
     }
 }
 #[doc = "Field `A_GREATER_THAN_B` reader - Vector_A is greater than Vector_B"]
-pub struct A_GREATER_THAN_B_R(crate::FieldReader<bool, bool>);
-impl A_GREATER_THAN_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        A_GREATER_THAN_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for A_GREATER_THAN_B_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type A_GREATER_THAN_B_R = crate::BitReader<bool>;
 #[doc = "Field `A_LESS_THAN_B` reader - Vector_A is less than Vector_B"]
-pub struct A_LESS_THAN_B_R(crate::FieldReader<bool, bool>);
-impl A_LESS_THAN_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        A_LESS_THAN_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for A_LESS_THAN_B_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type A_LESS_THAN_B_R = crate::BitReader<bool>;
 #[doc = "Field `A_EQUALS_B` reader - Vector_A is equal to Vector_B"]
-pub struct A_EQUALS_B_R(crate::FieldReader<bool, bool>);
-impl A_EQUALS_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        A_EQUALS_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for A_EQUALS_B_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type A_EQUALS_B_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 2 - Vector_A is greater than Vector_B"]
     #[inline(always)]
     pub fn a_greater_than_b(&self) -> A_GREATER_THAN_B_R {
-        A_GREATER_THAN_B_R::new(((self.bits >> 2) & 0x01) != 0)
+        A_GREATER_THAN_B_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Vector_A is less than Vector_B"]
     #[inline(always)]
     pub fn a_less_than_b(&self) -> A_LESS_THAN_B_R {
-        A_LESS_THAN_B_R::new(((self.bits >> 1) & 0x01) != 0)
+        A_LESS_THAN_B_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Vector_A is equal to Vector_B"]
     #[inline(always)]
     pub fn a_equals_b(&self) -> A_EQUALS_B_R {
-        A_EQUALS_B_R::new((self.bits & 0x01) != 0)
+        A_EQUALS_B_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "PKA compare result This register provides the result of a basic PKCP compare operation. It is updated when the run bit in the PKA_FUNCTION register is reset at the end of that operation. Status after a complex sequencer operation is unknown\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [compare](index.html) module"]

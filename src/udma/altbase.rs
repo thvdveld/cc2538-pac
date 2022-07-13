@@ -14,20 +14,7 @@ impl From<crate::R<ALTBASE_SPEC>> for R {
     }
 }
 #[doc = "Field `ADDR` reader - Alternate channel address pointer This field provides the base address of the alternate channel control structures."]
-pub struct ADDR_R(crate::FieldReader<u32, u32>);
-impl ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Alternate channel address pointer This field provides the base address of the alternate channel control structures."]
     #[inline(always)]

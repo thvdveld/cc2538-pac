@@ -36,47 +36,24 @@ impl From<crate::W<CFG_SPEC>> for W {
 }
 #[doc = "Field `GPTMCFG` reader - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
-pub struct GPTMCFG_R(crate::FieldReader<u8, u8>);
-impl GPTMCFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GPTMCFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPTMCFG_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPTMCFG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GPTMCFG` writer - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
-pub struct GPTMCFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPTMCFG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
-        self.w
-    }
-}
+pub type GPTMCFG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_SPEC, u8, u8, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
     #[inline(always)]
     pub fn gptmcfg(&self) -> GPTMCFG_R {
-        GPTMCFG_R::new((self.bits & 0x07) as u8)
+        GPTMCFG_R::new((self.bits & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
     #[inline(always)]
-    pub fn gptmcfg(&mut self) -> GPTMCFG_W {
-        GPTMCFG_W { w: self }
+    pub fn gptmcfg(&mut self) -> GPTMCFG_W<0> {
+        GPTMCFG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

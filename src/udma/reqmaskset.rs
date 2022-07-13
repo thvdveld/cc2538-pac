@@ -40,37 +40,14 @@ is enabled to request uDMA transfers 1: The peripheral associated with channel \
 is not able to request uDMA transfers. Channel \\[n\\]
 may be used for software-initiated transfers. Bit 0 corresponds to channel 0. A bit can only be cleared by setting the corresponding CLR\\[n\\]
 bit in the DMAREQMASKCLR register."]
-pub struct SET_R(crate::FieldReader<u32, u32>);
-impl SET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SET_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SET_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SET` writer - Channel \\[n\\]
 request mask set 0: The peripheral associated with channel \\[n\\]
 is enabled to request uDMA transfers 1: The peripheral associated with channel \\[n\\]
 is not able to request uDMA transfers. Channel \\[n\\]
 may be used for software-initiated transfers. Bit 0 corresponds to channel 0. A bit can only be cleared by setting the corresponding CLR\\[n\\]
 bit in the DMAREQMASKCLR register."]
-pub struct SET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SET_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SET_W<'a, const O: u8> = crate::FieldWriter<'a, u32, REQMASKSET_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 request mask set 0: The peripheral associated with channel \\[n\\]
@@ -91,8 +68,8 @@ is not able to request uDMA transfers. Channel \\[n\\]
 may be used for software-initiated transfers. Bit 0 corresponds to channel 0. A bit can only be cleared by setting the corresponding CLR\\[n\\]
 bit in the DMAREQMASKCLR register."]
     #[inline(always)]
-    pub fn set(&mut self) -> SET_W {
-        SET_W { w: self }
+    pub fn set(&mut self) -> SET_W<0> {
+        SET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,430 +35,133 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Field `WUECINT` reader - GPTM write update error interrupt clear"]
-pub struct WUECINT_R(crate::FieldReader<bool, bool>);
-impl WUECINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WUECINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WUECINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WUECINT_R = crate::BitReader<bool>;
 #[doc = "Field `WUECINT` writer - GPTM write update error interrupt clear"]
-pub struct WUECINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WUECINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
+pub type WUECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `TBMCINT` reader - GPTM Timer B match interrupt clear"]
-pub struct TBMCINT_R(crate::FieldReader<bool, bool>);
-impl TBMCINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TBMCINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBMCINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBMCINT_R = crate::BitReader<bool>;
 #[doc = "Field `TBMCINT` writer - GPTM Timer B match interrupt clear"]
-pub struct TBMCINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBMCINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
-        self.w
-    }
-}
+pub type TBMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `CBECINT` reader - GPTM Timer B capture event Interrupt clear"]
-pub struct CBECINT_R(crate::FieldReader<bool, bool>);
-impl CBECINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBECINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBECINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBECINT_R = crate::BitReader<bool>;
 #[doc = "Field `CBECINT` writer - GPTM Timer B capture event Interrupt clear"]
-pub struct CBECINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBECINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
-        self.w
-    }
-}
+pub type CBECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `CBMCINT` reader - GPTM Timer B capture match interrupt clear"]
-pub struct CBMCINT_R(crate::FieldReader<bool, bool>);
-impl CBMCINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBMCINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBMCINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBMCINT_R = crate::BitReader<bool>;
 #[doc = "Field `CBMCINT` writer - GPTM Timer B capture match interrupt clear"]
-pub struct CBMCINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBMCINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
-        self.w
-    }
-}
+pub type CBMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `TBTOCINT` reader - GPTM Timer B time-out interrupt clear"]
-pub struct TBTOCINT_R(crate::FieldReader<bool, bool>);
-impl TBTOCINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TBTOCINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBTOCINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBTOCINT_R = crate::BitReader<bool>;
 #[doc = "Field `TBTOCINT` writer - GPTM Timer B time-out interrupt clear"]
-pub struct TBTOCINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBTOCINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type TBTOCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `TAMCINT` reader - GPTM Timer A match interrupt clear"]
-pub struct TAMCINT_R(crate::FieldReader<bool, bool>);
-impl TAMCINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TAMCINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TAMCINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TAMCINT_R = crate::BitReader<bool>;
 #[doc = "Field `TAMCINT` writer - GPTM Timer A match interrupt clear"]
-pub struct TAMCINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAMCINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
+pub type TAMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `CAECINT` reader - GPTM Timer A capture event Interrupt clear"]
-pub struct CAECINT_R(crate::FieldReader<bool, bool>);
-impl CAECINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAECINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAECINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAECINT_R = crate::BitReader<bool>;
 #[doc = "Field `CAECINT` writer - GPTM Timer A capture event Interrupt clear"]
-pub struct CAECINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAECINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type CAECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `CAMCINT` reader - GPTM Timer A capture match interrupt clear"]
-pub struct CAMCINT_R(crate::FieldReader<bool, bool>);
-impl CAMCINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAMCINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAMCINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAMCINT_R = crate::BitReader<bool>;
 #[doc = "Field `CAMCINT` writer - GPTM Timer A capture match interrupt clear"]
-pub struct CAMCINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAMCINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type CAMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `TATOCINT` reader - GPTM Timer A time-out interrupt clear"]
-pub struct TATOCINT_R(crate::FieldReader<bool, bool>);
-impl TATOCINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TATOCINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TATOCINT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TATOCINT_R = crate::BitReader<bool>;
 #[doc = "Field `TATOCINT` writer - GPTM Timer A time-out interrupt clear"]
-pub struct TATOCINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TATOCINT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type TATOCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 16 - GPTM write update error interrupt clear"]
     #[inline(always)]
     pub fn wuecint(&self) -> WUECINT_R {
-        WUECINT_R::new(((self.bits >> 16) & 0x01) != 0)
+        WUECINT_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
     #[inline(always)]
     pub fn tbmcint(&self) -> TBMCINT_R {
-        TBMCINT_R::new(((self.bits >> 11) & 0x01) != 0)
+        TBMCINT_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
     #[inline(always)]
     pub fn cbecint(&self) -> CBECINT_R {
-        CBECINT_R::new(((self.bits >> 10) & 0x01) != 0)
+        CBECINT_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
     #[inline(always)]
     pub fn cbmcint(&self) -> CBMCINT_R {
-        CBMCINT_R::new(((self.bits >> 9) & 0x01) != 0)
+        CBMCINT_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
     #[inline(always)]
     pub fn tbtocint(&self) -> TBTOCINT_R {
-        TBTOCINT_R::new(((self.bits >> 8) & 0x01) != 0)
+        TBTOCINT_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 4 - GPTM Timer A match interrupt clear"]
     #[inline(always)]
     pub fn tamcint(&self) -> TAMCINT_R {
-        TAMCINT_R::new(((self.bits >> 4) & 0x01) != 0)
+        TAMCINT_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
     #[inline(always)]
     pub fn caecint(&self) -> CAECINT_R {
-        CAECINT_R::new(((self.bits >> 2) & 0x01) != 0)
+        CAECINT_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt clear"]
     #[inline(always)]
     pub fn camcint(&self) -> CAMCINT_R {
-        CAMCINT_R::new(((self.bits >> 1) & 0x01) != 0)
+        CAMCINT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
     #[inline(always)]
     pub fn tatocint(&self) -> TATOCINT_R {
-        TATOCINT_R::new((self.bits & 0x01) != 0)
+        TATOCINT_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 16 - GPTM write update error interrupt clear"]
     #[inline(always)]
-    pub fn wuecint(&mut self) -> WUECINT_W {
-        WUECINT_W { w: self }
+    pub fn wuecint(&mut self) -> WUECINT_W<16> {
+        WUECINT_W::new(self)
     }
     #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
     #[inline(always)]
-    pub fn tbmcint(&mut self) -> TBMCINT_W {
-        TBMCINT_W { w: self }
+    pub fn tbmcint(&mut self) -> TBMCINT_W<11> {
+        TBMCINT_W::new(self)
     }
     #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
     #[inline(always)]
-    pub fn cbecint(&mut self) -> CBECINT_W {
-        CBECINT_W { w: self }
+    pub fn cbecint(&mut self) -> CBECINT_W<10> {
+        CBECINT_W::new(self)
     }
     #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
     #[inline(always)]
-    pub fn cbmcint(&mut self) -> CBMCINT_W {
-        CBMCINT_W { w: self }
+    pub fn cbmcint(&mut self) -> CBMCINT_W<9> {
+        CBMCINT_W::new(self)
     }
     #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
     #[inline(always)]
-    pub fn tbtocint(&mut self) -> TBTOCINT_W {
-        TBTOCINT_W { w: self }
+    pub fn tbtocint(&mut self) -> TBTOCINT_W<8> {
+        TBTOCINT_W::new(self)
     }
     #[doc = "Bit 4 - GPTM Timer A match interrupt clear"]
     #[inline(always)]
-    pub fn tamcint(&mut self) -> TAMCINT_W {
-        TAMCINT_W { w: self }
+    pub fn tamcint(&mut self) -> TAMCINT_W<4> {
+        TAMCINT_W::new(self)
     }
     #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
     #[inline(always)]
-    pub fn caecint(&mut self) -> CAECINT_W {
-        CAECINT_W { w: self }
+    pub fn caecint(&mut self) -> CAECINT_W<2> {
+        CAECINT_W::new(self)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt clear"]
     #[inline(always)]
-    pub fn camcint(&mut self) -> CAMCINT_W {
-        CAMCINT_W { w: self }
+    pub fn camcint(&mut self) -> CAMCINT_W<1> {
+        CAMCINT_W::new(self)
     }
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
     #[inline(always)]
-    pub fn tatocint(&mut self) -> TATOCINT_W {
-        TATOCINT_W { w: self }
+    pub fn tatocint(&mut self) -> TATOCINT_W<0> {
+        TATOCINT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,165 +35,64 @@ impl From<crate::W<ADCTEST0_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC_VREF_ADJ` reader - Quantizer threshold control for test and debug"]
-pub struct ADC_VREF_ADJ_R(crate::FieldReader<u8, u8>);
-impl ADC_VREF_ADJ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC_VREF_ADJ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_VREF_ADJ_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_VREF_ADJ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_VREF_ADJ` writer - Quantizer threshold control for test and debug"]
-pub struct ADC_VREF_ADJ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_VREF_ADJ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
-        self.w
-    }
-}
+pub type ADC_VREF_ADJ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCTEST0_SPEC, u8, u8, 2, O>;
 #[doc = "Field `ADC_QUANT_ADJ` reader - Quantizer threshold control for test and debug"]
-pub struct ADC_QUANT_ADJ_R(crate::FieldReader<u8, u8>);
-impl ADC_QUANT_ADJ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC_QUANT_ADJ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_QUANT_ADJ_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_QUANT_ADJ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_QUANT_ADJ` writer - Quantizer threshold control for test and debug"]
-pub struct ADC_QUANT_ADJ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_QUANT_ADJ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
-}
+pub type ADC_QUANT_ADJ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, ADCTEST0_SPEC, u8, u8, 2, O>;
 #[doc = "Field `ADC_GM_ADJ` reader - Gm-control for test and debug"]
-pub struct ADC_GM_ADJ_R(crate::FieldReader<u8, u8>);
-impl ADC_GM_ADJ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC_GM_ADJ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_GM_ADJ_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_GM_ADJ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_GM_ADJ` writer - Gm-control for test and debug"]
-pub struct ADC_GM_ADJ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_GM_ADJ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 1)) | ((value as u32 & 0x07) << 1);
-        self.w
-    }
-}
+pub type ADC_GM_ADJ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCTEST0_SPEC, u8, u8, 3, O>;
 #[doc = "Field `ADC_DAC2_EN` reader - Enables DAC2 for enhanced ADC stability"]
-pub struct ADC_DAC2_EN_R(crate::FieldReader<bool, bool>);
-impl ADC_DAC2_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_DAC2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_DAC2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_DAC2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_DAC2_EN` writer - Enables DAC2 for enhanced ADC stability"]
-pub struct ADC_DAC2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_DAC2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type ADC_DAC2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCTEST0_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 6:7 - Quantizer threshold control for test and debug"]
     #[inline(always)]
     pub fn adc_vref_adj(&self) -> ADC_VREF_ADJ_R {
-        ADC_VREF_ADJ_R::new(((self.bits >> 6) & 0x03) as u8)
+        ADC_VREF_ADJ_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 4:5 - Quantizer threshold control for test and debug"]
     #[inline(always)]
     pub fn adc_quant_adj(&self) -> ADC_QUANT_ADJ_R {
-        ADC_QUANT_ADJ_R::new(((self.bits >> 4) & 0x03) as u8)
+        ADC_QUANT_ADJ_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 1:3 - Gm-control for test and debug"]
     #[inline(always)]
     pub fn adc_gm_adj(&self) -> ADC_GM_ADJ_R {
-        ADC_GM_ADJ_R::new(((self.bits >> 1) & 0x07) as u8)
+        ADC_GM_ADJ_R::new(((self.bits >> 1) & 7) as u8)
     }
     #[doc = "Bit 0 - Enables DAC2 for enhanced ADC stability"]
     #[inline(always)]
     pub fn adc_dac2_en(&self) -> ADC_DAC2_EN_R {
-        ADC_DAC2_EN_R::new((self.bits & 0x01) != 0)
+        ADC_DAC2_EN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 6:7 - Quantizer threshold control for test and debug"]
     #[inline(always)]
-    pub fn adc_vref_adj(&mut self) -> ADC_VREF_ADJ_W {
-        ADC_VREF_ADJ_W { w: self }
+    pub fn adc_vref_adj(&mut self) -> ADC_VREF_ADJ_W<6> {
+        ADC_VREF_ADJ_W::new(self)
     }
     #[doc = "Bits 4:5 - Quantizer threshold control for test and debug"]
     #[inline(always)]
-    pub fn adc_quant_adj(&mut self) -> ADC_QUANT_ADJ_W {
-        ADC_QUANT_ADJ_W { w: self }
+    pub fn adc_quant_adj(&mut self) -> ADC_QUANT_ADJ_W<4> {
+        ADC_QUANT_ADJ_W::new(self)
     }
     #[doc = "Bits 1:3 - Gm-control for test and debug"]
     #[inline(always)]
-    pub fn adc_gm_adj(&mut self) -> ADC_GM_ADJ_W {
-        ADC_GM_ADJ_W { w: self }
+    pub fn adc_gm_adj(&mut self) -> ADC_GM_ADJ_W<1> {
+        ADC_GM_ADJ_W::new(self)
     }
     #[doc = "Bit 0 - Enables DAC2 for enhanced ADC stability"]
     #[inline(always)]
-    pub fn adc_dac2_en(&mut self) -> ADC_DAC2_EN_W {
-        ADC_DAC2_EN_W { w: self }
+    pub fn adc_dac2_en(&mut self) -> ADC_DAC2_EN_W<0> {
+        ADC_DAC2_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

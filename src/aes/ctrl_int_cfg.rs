@@ -35,54 +35,21 @@ impl From<crate::W<CTRL_INT_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `LEVEL` reader - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
-pub struct LEVEL_R(crate::FieldReader<bool, bool>);
-impl LEVEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LEVEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LEVEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LEVEL_R = crate::BitReader<bool>;
 #[doc = "Field `LEVEL` writer - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
-pub struct LEVEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LEVEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type LEVEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CFG_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
     #[inline(always)]
     pub fn level(&self) -> LEVEL_R {
-        LEVEL_R::new((self.bits & 0x01) != 0)
+        LEVEL_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
     #[inline(always)]
-    pub fn level(&mut self) -> LEVEL_W {
-        LEVEL_W { w: self }
+    pub fn level(&mut self) -> LEVEL_W<0> {
+        LEVEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,25 +14,12 @@ impl From<crate::R<MIS_SPEC>> for R {
     }
 }
 #[doc = "Field `MIS` reader - Masked interrupt status 1: An unmasked master interrupt is pending. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the IC bit in the I2CMICR register."]
-pub struct MIS_R(crate::FieldReader<bool, bool>);
-impl MIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MIS_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Masked interrupt status 1: An unmasked master interrupt is pending. 0: An interrupt has not occurred or is masked. This bit is cleared by writing 1 to the IC bit in the I2CMICR register."]
     #[inline(always)]
     pub fn mis(&self) -> MIS_R {
-        MIS_R::new((self.bits & 0x01) != 0)
+        MIS_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "I2C master masked interrupt status This register specifies whether an interrupt was signaled.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mis](index.html) module"]

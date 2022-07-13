@@ -35,59 +35,13 @@ impl From<crate::W<TXPOWER_SPEC>> for W {
     }
 }
 #[doc = "Field `PA_POWER` reader - PA power control"]
-pub struct PA_POWER_R(crate::FieldReader<u8, u8>);
-impl PA_POWER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PA_POWER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_POWER_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PA_POWER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PA_POWER` writer - PA power control"]
-pub struct PA_POWER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_POWER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type PA_POWER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXPOWER_SPEC, u8, u8, 4, O>;
 #[doc = "Field `PA_BIAS` reader - PA bias control"]
-pub struct PA_BIAS_R(crate::FieldReader<u8, u8>);
-impl PA_BIAS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PA_BIAS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PA_BIAS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PA_BIAS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PA_BIAS` writer - PA bias control"]
-pub struct PA_BIAS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PA_BIAS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type PA_BIAS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXPOWER_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 4:7 - PA power control"]
     #[inline(always)]
@@ -103,13 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 4:7 - PA power control"]
     #[inline(always)]
-    pub fn pa_power(&mut self) -> PA_POWER_W {
-        PA_POWER_W { w: self }
+    pub fn pa_power(&mut self) -> PA_POWER_W<4> {
+        PA_POWER_W::new(self)
     }
     #[doc = "Bits 0:3 - PA bias control"]
     #[inline(always)]
-    pub fn pa_bias(&mut self) -> PA_BIAS_W {
-        PA_BIAS_W { w: self }
+    pub fn pa_bias(&mut self) -> PA_BIAS_W<0> {
+        PA_BIAS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

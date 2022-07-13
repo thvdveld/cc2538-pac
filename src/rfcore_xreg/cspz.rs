@@ -14,20 +14,7 @@ impl From<crate::R<CSPZ_SPEC>> for R {
     }
 }
 #[doc = "Field `CSPZ` reader - Used by CSP instructions INCZ, DECZ, and conditional instructions."]
-pub struct CSPZ_R(crate::FieldReader<u8, u8>);
-impl CSPZ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CSPZ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CSPZ_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CSPZ_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - Used by CSP instructions INCZ, DECZ, and conditional instructions."]
     #[inline(always)]

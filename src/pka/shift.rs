@@ -35,32 +35,10 @@ impl From<crate::W<SHIFT_SPEC>> for W {
     }
 }
 #[doc = "Field `NUM_BITS_TO_SHIFT` reader - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
-pub struct NUM_BITS_TO_SHIFT_R(crate::FieldReader<u8, u8>);
-impl NUM_BITS_TO_SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        NUM_BITS_TO_SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NUM_BITS_TO_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NUM_BITS_TO_SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NUM_BITS_TO_SHIFT` writer - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
-pub struct NUM_BITS_TO_SHIFT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NUM_BITS_TO_SHIFT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type NUM_BITS_TO_SHIFT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SHIFT_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
     #[inline(always)]
@@ -71,8 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
     #[inline(always)]
-    pub fn num_bits_to_shift(&mut self) -> NUM_BITS_TO_SHIFT_W {
-        NUM_BITS_TO_SHIFT_W { w: self }
+    pub fn num_bits_to_shift(&mut self) -> NUM_BITS_TO_SHIFT_W<0> {
+        NUM_BITS_TO_SHIFT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

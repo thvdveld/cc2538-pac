@@ -21,23 +21,13 @@ impl From<crate::W<SWREQ_SPEC>> for W {
 }
 #[doc = "Field `SWREQ` writer - Channel \\[n\\]
 software request These bits generate software requests. Bit 0 corresponds to channel 0. 1: Generate a software request for the corresponding channel 0: No request generated These bits are automatically cleared when the software request has been completed."]
-pub struct SWREQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWREQ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SWREQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SWREQ_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 software request These bits generate software requests. Bit 0 corresponds to channel 0. 1: Generate a software request for the corresponding channel 0: No request generated These bits are automatically cleared when the software request has been completed."]
     #[inline(always)]
-    pub fn swreq(&mut self) -> SWREQ_W {
-        SWREQ_W { w: self }
+    pub fn swreq(&mut self) -> SWREQ_W<0> {
+        SWREQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

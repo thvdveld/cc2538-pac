@@ -35,221 +35,37 @@ impl From<crate::W<CHMAP1_SPEC>> for W {
     }
 }
 #[doc = "Field `CH15SEL` reader - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH15SEL_R(crate::FieldReader<u8, u8>);
-impl CH15SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH15SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH15SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH15SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH15SEL` writer - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH15SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH15SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type CH15SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `CH14SEL` reader - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH14SEL_R(crate::FieldReader<u8, u8>);
-impl CH14SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH14SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH14SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH14SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH14SEL` writer - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH14SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH14SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
+pub type CH14SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `CH13SEL` reader - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH13SEL_R(crate::FieldReader<u8, u8>);
-impl CH13SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH13SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH13SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH13SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH13SEL` writer - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH13SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH13SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
+pub type CH13SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `CH12SEL` reader - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH12SEL_R(crate::FieldReader<u8, u8>);
-impl CH12SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH12SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH12SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH12SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH12SEL` writer - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH12SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH12SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
-        self.w
-    }
-}
+pub type CH12SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `CH11SEL` reader - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH11SEL_R(crate::FieldReader<u8, u8>);
-impl CH11SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH11SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH11SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH11SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH11SEL` writer - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH11SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH11SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
-        self.w
-    }
-}
+pub type CH11SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `CH10SEL` reader - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH10SEL_R(crate::FieldReader<u8, u8>);
-impl CH10SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH10SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH10SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH10SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH10SEL` writer - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH10SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH10SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
+pub type CH10SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `CH9SEL` reader - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH9SEL_R(crate::FieldReader<u8, u8>);
-impl CH9SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH9SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH9SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH9SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH9SEL` writer - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH9SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH9SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type CH9SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `CH8SEL` reader - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH8SEL_R(crate::FieldReader<u8, u8>);
-impl CH8SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH8SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH8SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH8SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH8SEL` writer - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub struct CH8SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH8SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type CH8SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 28:31 - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
@@ -295,43 +111,43 @@ impl R {
 impl W {
     #[doc = "Bits 28:31 - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch15sel(&mut self) -> CH15SEL_W {
-        CH15SEL_W { w: self }
+    pub fn ch15sel(&mut self) -> CH15SEL_W<28> {
+        CH15SEL_W::new(self)
     }
     #[doc = "Bits 24:27 - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch14sel(&mut self) -> CH14SEL_W {
-        CH14SEL_W { w: self }
+    pub fn ch14sel(&mut self) -> CH14SEL_W<24> {
+        CH14SEL_W::new(self)
     }
     #[doc = "Bits 20:23 - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch13sel(&mut self) -> CH13SEL_W {
-        CH13SEL_W { w: self }
+    pub fn ch13sel(&mut self) -> CH13SEL_W<20> {
+        CH13SEL_W::new(self)
     }
     #[doc = "Bits 16:19 - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch12sel(&mut self) -> CH12SEL_W {
-        CH12SEL_W { w: self }
+    pub fn ch12sel(&mut self) -> CH12SEL_W<16> {
+        CH12SEL_W::new(self)
     }
     #[doc = "Bits 12:15 - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch11sel(&mut self) -> CH11SEL_W {
-        CH11SEL_W { w: self }
+    pub fn ch11sel(&mut self) -> CH11SEL_W<12> {
+        CH11SEL_W::new(self)
     }
     #[doc = "Bits 8:11 - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch10sel(&mut self) -> CH10SEL_W {
-        CH10SEL_W { w: self }
+    pub fn ch10sel(&mut self) -> CH10SEL_W<8> {
+        CH10SEL_W::new(self)
     }
     #[doc = "Bits 4:7 - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch9sel(&mut self) -> CH9SEL_W {
-        CH9SEL_W { w: self }
+    pub fn ch9sel(&mut self) -> CH9SEL_W<4> {
+        CH9SEL_W::new(self)
     }
     #[doc = "Bits 0:3 - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch8sel(&mut self) -> CH8SEL_W {
-        CH8SEL_W { w: self }
+    pub fn ch8sel(&mut self) -> CH8SEL_W<0> {
+        CH8SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

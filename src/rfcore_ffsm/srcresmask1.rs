@@ -35,32 +35,10 @@ impl From<crate::W<SRCRESMASK1_SPEC>> for W {
     }
 }
 #[doc = "Field `SRCRESMASK1` reader - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
-pub struct SRCRESMASK1_R(crate::FieldReader<u8, u8>);
-impl SRCRESMASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SRCRESMASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRCRESMASK1_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRCRESMASK1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SRCRESMASK1` writer - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
-pub struct SRCRESMASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRCRESMASK1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SRCRESMASK1_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SRCRESMASK1_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
     #[inline(always)]
@@ -71,8 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
     #[inline(always)]
-    pub fn srcresmask1(&mut self) -> SRCRESMASK1_W {
-        SRCRESMASK1_W { w: self }
+    pub fn srcresmask1(&mut self) -> SRCRESMASK1_W<0> {
+        SRCRESMASK1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

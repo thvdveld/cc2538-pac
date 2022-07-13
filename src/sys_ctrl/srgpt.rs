@@ -35,195 +35,63 @@ impl From<crate::W<SRGPT_SPEC>> for W {
     }
 }
 #[doc = "Field `GPT3` reader - 0: GPT3 module is not reset 1: GPT3 module is reset"]
-pub struct GPT3_R(crate::FieldReader<bool, bool>);
-impl GPT3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPT3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPT3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPT3_R = crate::BitReader<bool>;
 #[doc = "Field `GPT3` writer - 0: GPT3 module is not reset 1: GPT3 module is reset"]
-pub struct GPT3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPT3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type GPT3_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
 #[doc = "Field `GPT2` reader - 0: GPT2 module is not reset 1: GPT2 module is reset"]
-pub struct GPT2_R(crate::FieldReader<bool, bool>);
-impl GPT2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPT2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPT2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPT2_R = crate::BitReader<bool>;
 #[doc = "Field `GPT2` writer - 0: GPT2 module is not reset 1: GPT2 module is reset"]
-pub struct GPT2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPT2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
+pub type GPT2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
 #[doc = "Field `GPT1` reader - 0: GPT1 module is not reset 1: GPT1 module is reset"]
-pub struct GPT1_R(crate::FieldReader<bool, bool>);
-impl GPT1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPT1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPT1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPT1_R = crate::BitReader<bool>;
 #[doc = "Field `GPT1` writer - 0: GPT1 module is not reset 1: GPT1 module is reset"]
-pub struct GPT1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPT1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type GPT1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
 #[doc = "Field `GPT0` reader - 0: GPT0 module is not reset 1: GPT0 module is reset"]
-pub struct GPT0_R(crate::FieldReader<bool, bool>);
-impl GPT0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPT0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPT0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPT0_R = crate::BitReader<bool>;
 #[doc = "Field `GPT0` writer - 0: GPT0 module is not reset 1: GPT0 module is reset"]
-pub struct GPT0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPT0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type GPT0_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 3 - 0: GPT3 module is not reset 1: GPT3 module is reset"]
     #[inline(always)]
     pub fn gpt3(&self) -> GPT3_R {
-        GPT3_R::new(((self.bits >> 3) & 0x01) != 0)
+        GPT3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - 0: GPT2 module is not reset 1: GPT2 module is reset"]
     #[inline(always)]
     pub fn gpt2(&self) -> GPT2_R {
-        GPT2_R::new(((self.bits >> 2) & 0x01) != 0)
+        GPT2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - 0: GPT1 module is not reset 1: GPT1 module is reset"]
     #[inline(always)]
     pub fn gpt1(&self) -> GPT1_R {
-        GPT1_R::new(((self.bits >> 1) & 0x01) != 0)
+        GPT1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - 0: GPT0 module is not reset 1: GPT0 module is reset"]
     #[inline(always)]
     pub fn gpt0(&self) -> GPT0_R {
-        GPT0_R::new((self.bits & 0x01) != 0)
+        GPT0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 3 - 0: GPT3 module is not reset 1: GPT3 module is reset"]
     #[inline(always)]
-    pub fn gpt3(&mut self) -> GPT3_W {
-        GPT3_W { w: self }
+    pub fn gpt3(&mut self) -> GPT3_W<3> {
+        GPT3_W::new(self)
     }
     #[doc = "Bit 2 - 0: GPT2 module is not reset 1: GPT2 module is reset"]
     #[inline(always)]
-    pub fn gpt2(&mut self) -> GPT2_W {
-        GPT2_W { w: self }
+    pub fn gpt2(&mut self) -> GPT2_W<2> {
+        GPT2_W::new(self)
     }
     #[doc = "Bit 1 - 0: GPT1 module is not reset 1: GPT1 module is reset"]
     #[inline(always)]
-    pub fn gpt1(&mut self) -> GPT1_W {
-        GPT1_W { w: self }
+    pub fn gpt1(&mut self) -> GPT1_W<1> {
+        GPT1_W::new(self)
     }
     #[doc = "Bit 0 - 0: GPT0 module is not reset 1: GPT0 module is reset"]
     #[inline(always)]
-    pub fn gpt0(&mut self) -> GPT0_W {
-        GPT0_W { w: self }
+    pub fn gpt0(&mut self) -> GPT0_W<0> {
+        GPT0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

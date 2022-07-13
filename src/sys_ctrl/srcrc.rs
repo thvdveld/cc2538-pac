@@ -35,101 +35,35 @@ impl From<crate::W<SRCRC_SPEC>> for W {
     }
 }
 #[doc = "Field `CRC_REN_USB` reader - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
-pub struct CRC_REN_USB_R(crate::FieldReader<bool, bool>);
-impl CRC_REN_USB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRC_REN_USB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRC_REN_USB_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRC_REN_USB_R = crate::BitReader<bool>;
 #[doc = "Field `CRC_REN_USB` writer - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
-pub struct CRC_REN_USB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRC_REN_USB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
+pub type CRC_REN_USB_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRCRC_SPEC, bool, O>;
 #[doc = "Field `CRC_REN_RF` reader - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
-pub struct CRC_REN_RF_R(crate::FieldReader<bool, bool>);
-impl CRC_REN_RF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRC_REN_RF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRC_REN_RF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRC_REN_RF_R = crate::BitReader<bool>;
 #[doc = "Field `CRC_REN_RF` writer - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
-pub struct CRC_REN_RF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRC_REN_RF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type CRC_REN_RF_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRCRC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 8 - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
     #[inline(always)]
     pub fn crc_ren_usb(&self) -> CRC_REN_USB_R {
-        CRC_REN_USB_R::new(((self.bits >> 8) & 0x01) != 0)
+        CRC_REN_USB_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 0 - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
     #[inline(always)]
     pub fn crc_ren_rf(&self) -> CRC_REN_RF_R {
-        CRC_REN_RF_R::new((self.bits & 0x01) != 0)
+        CRC_REN_RF_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 8 - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
     #[inline(always)]
-    pub fn crc_ren_usb(&mut self) -> CRC_REN_USB_W {
-        CRC_REN_USB_W { w: self }
+    pub fn crc_ren_usb(&mut self) -> CRC_REN_USB_W<8> {
+        CRC_REN_USB_W::new(self)
     }
     #[doc = "Bit 0 - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
     #[inline(always)]
-    pub fn crc_ren_rf(&mut self) -> CRC_REN_RF_W {
-        CRC_REN_RF_W { w: self }
+    pub fn crc_ren_rf(&mut self) -> CRC_REN_RF_W<0> {
+        CRC_REN_RF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

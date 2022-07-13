@@ -20,32 +20,12 @@ impl From<crate::W<CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `MASTEN` writer - Controller master enable 0: Disables the uDMA controller. 1: Enables the uDMA controller."]
-pub struct MASTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type MASTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Controller master enable 0: Disables the uDMA controller. 1: Enables the uDMA controller."]
     #[inline(always)]
-    pub fn masten(&mut self) -> MASTEN_W {
-        MASTEN_W { w: self }
+    pub fn masten(&mut self) -> MASTEN_W<0> {
+        MASTEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

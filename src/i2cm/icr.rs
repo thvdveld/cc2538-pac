@@ -20,32 +20,12 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Field `IC` writer - Interrupt clear Writing 1 to this bit clears the RIS bit in the I2CMRIS register and the MIS bit in the I2CMMIS register. Reading this register returns no meaningful data."]
-pub struct IC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type IC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Interrupt clear Writing 1 to this bit clears the RIS bit in the I2CMRIS register and the MIS bit in the I2CMMIS register. Reading this register returns no meaningful data."]
     #[inline(always)]
-    pub fn ic(&mut self) -> IC_W {
-        IC_W { w: self }
+    pub fn ic(&mut self) -> IC_W<0> {
+        IC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,54 +35,21 @@ impl From<crate::W<PWRDBG_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_WARM_RESET` reader - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
-pub struct FORCE_WARM_RESET_R(crate::FieldReader<bool, bool>);
-impl FORCE_WARM_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_WARM_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_WARM_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_WARM_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_WARM_RESET` writer - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
-pub struct FORCE_WARM_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_WARM_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
+pub type FORCE_WARM_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRDBG_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 3 - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
     #[inline(always)]
     pub fn force_warm_reset(&self) -> FORCE_WARM_RESET_R {
-        FORCE_WARM_RESET_R::new(((self.bits >> 3) & 0x01) != 0)
+        FORCE_WARM_RESET_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 3 - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
     #[inline(always)]
-    pub fn force_warm_reset(&mut self) -> FORCE_WARM_RESET_W {
-        FORCE_WARM_RESET_W { w: self }
+    pub fn force_warm_reset(&mut self) -> FORCE_WARM_RESET_W<3> {
+        FORCE_WARM_RESET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

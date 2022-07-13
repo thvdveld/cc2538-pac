@@ -35,32 +35,9 @@ impl From<crate::W<RFDATA_SPEC>> for W {
     }
 }
 #[doc = "Field `RFD` reader - Data written to the register is written to the TX FIFO. When reading this register, data from the RX FIFO is read."]
-pub struct RFD_R(crate::FieldReader<u8, u8>);
-impl RFD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RFD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RFD_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RFD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RFD` writer - Data written to the register is written to the TX FIFO. When reading this register, data from the RX FIFO is read."]
-pub struct RFD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type RFD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RFDATA_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Data written to the register is written to the TX FIFO. When reading this register, data from the RX FIFO is read."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Data written to the register is written to the TX FIFO. When reading this register, data from the RX FIFO is read."]
     #[inline(always)]
-    pub fn rfd(&mut self) -> RFD_W {
-        RFD_W { w: self }
+    pub fn rfd(&mut self) -> RFD_W<0> {
+        RFD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

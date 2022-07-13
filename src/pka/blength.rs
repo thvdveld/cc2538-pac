@@ -35,32 +35,9 @@ impl From<crate::W<BLENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `BLENGTH` reader - This register specifies the length (in 32-bit words) of Vector B."]
-pub struct BLENGTH_R(crate::FieldReader<u16, u16>);
-impl BLENGTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        BLENGTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BLENGTH_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BLENGTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BLENGTH` writer - This register specifies the length (in 32-bit words) of Vector B."]
-pub struct BLENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BLENGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff) | (value as u32 & 0x01ff);
-        self.w
-    }
-}
+pub type BLENGTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLENGTH_SPEC, u16, u16, 9, O>;
 impl R {
     #[doc = "Bits 0:8 - This register specifies the length (in 32-bit words) of Vector B."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - This register specifies the length (in 32-bit words) of Vector B."]
     #[inline(always)]
-    pub fn blength(&mut self) -> BLENGTH_W {
-        BLENGTH_W { w: self }
+    pub fn blength(&mut self) -> BLENGTH_W<0> {
+        BLENGTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
