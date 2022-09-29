@@ -34,64 +34,64 @@ impl From<crate::W<SRGPT_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `GPT3` reader - 0: GPT3 module is not reset 1: GPT3 module is reset"]
-pub type GPT3_R = crate::BitReader<bool>;
-#[doc = "Field `GPT3` writer - 0: GPT3 module is not reset 1: GPT3 module is reset"]
-pub type GPT3_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
-#[doc = "Field `GPT2` reader - 0: GPT2 module is not reset 1: GPT2 module is reset"]
-pub type GPT2_R = crate::BitReader<bool>;
-#[doc = "Field `GPT2` writer - 0: GPT2 module is not reset 1: GPT2 module is reset"]
-pub type GPT2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
-#[doc = "Field `GPT1` reader - 0: GPT1 module is not reset 1: GPT1 module is reset"]
-pub type GPT1_R = crate::BitReader<bool>;
-#[doc = "Field `GPT1` writer - 0: GPT1 module is not reset 1: GPT1 module is reset"]
-pub type GPT1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
 #[doc = "Field `GPT0` reader - 0: GPT0 module is not reset 1: GPT0 module is reset"]
 pub type GPT0_R = crate::BitReader<bool>;
 #[doc = "Field `GPT0` writer - 0: GPT0 module is not reset 1: GPT0 module is reset"]
 pub type GPT0_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
+#[doc = "Field `GPT1` reader - 0: GPT1 module is not reset 1: GPT1 module is reset"]
+pub type GPT1_R = crate::BitReader<bool>;
+#[doc = "Field `GPT1` writer - 0: GPT1 module is not reset 1: GPT1 module is reset"]
+pub type GPT1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
+#[doc = "Field `GPT2` reader - 0: GPT2 module is not reset 1: GPT2 module is reset"]
+pub type GPT2_R = crate::BitReader<bool>;
+#[doc = "Field `GPT2` writer - 0: GPT2 module is not reset 1: GPT2 module is reset"]
+pub type GPT2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
+#[doc = "Field `GPT3` reader - 0: GPT3 module is not reset 1: GPT3 module is reset"]
+pub type GPT3_R = crate::BitReader<bool>;
+#[doc = "Field `GPT3` writer - 0: GPT3 module is not reset 1: GPT3 module is reset"]
+pub type GPT3_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRGPT_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 3 - 0: GPT3 module is not reset 1: GPT3 module is reset"]
+    #[doc = "Bit 0 - 0: GPT0 module is not reset 1: GPT0 module is reset"]
     #[inline(always)]
-    pub fn gpt3(&self) -> GPT3_R {
-        GPT3_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 2 - 0: GPT2 module is not reset 1: GPT2 module is reset"]
-    #[inline(always)]
-    pub fn gpt2(&self) -> GPT2_R {
-        GPT2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn gpt0(&self) -> GPT0_R {
+        GPT0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 0: GPT1 module is not reset 1: GPT1 module is reset"]
     #[inline(always)]
     pub fn gpt1(&self) -> GPT1_R {
         GPT1_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - 0: GPT0 module is not reset 1: GPT0 module is reset"]
+    #[doc = "Bit 2 - 0: GPT2 module is not reset 1: GPT2 module is reset"]
     #[inline(always)]
-    pub fn gpt0(&self) -> GPT0_R {
-        GPT0_R::new((self.bits & 1) != 0)
+    pub fn gpt2(&self) -> GPT2_R {
+        GPT2_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - 0: GPT3 module is not reset 1: GPT3 module is reset"]
+    #[inline(always)]
+    pub fn gpt3(&self) -> GPT3_R {
+        GPT3_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 3 - 0: GPT3 module is not reset 1: GPT3 module is reset"]
+    #[doc = "Bit 0 - 0: GPT0 module is not reset 1: GPT0 module is reset"]
     #[inline(always)]
-    pub fn gpt3(&mut self) -> GPT3_W<3> {
-        GPT3_W::new(self)
-    }
-    #[doc = "Bit 2 - 0: GPT2 module is not reset 1: GPT2 module is reset"]
-    #[inline(always)]
-    pub fn gpt2(&mut self) -> GPT2_W<2> {
-        GPT2_W::new(self)
+    pub fn gpt0(&mut self) -> GPT0_W<0> {
+        GPT0_W::new(self)
     }
     #[doc = "Bit 1 - 0: GPT1 module is not reset 1: GPT1 module is reset"]
     #[inline(always)]
     pub fn gpt1(&mut self) -> GPT1_W<1> {
         GPT1_W::new(self)
     }
-    #[doc = "Bit 0 - 0: GPT0 module is not reset 1: GPT0 module is reset"]
+    #[doc = "Bit 2 - 0: GPT2 module is not reset 1: GPT2 module is reset"]
     #[inline(always)]
-    pub fn gpt0(&mut self) -> GPT0_W<0> {
-        GPT0_W::new(self)
+    pub fn gpt2(&mut self) -> GPT2_W<2> {
+        GPT2_W::new(self)
+    }
+    #[doc = "Bit 3 - 0: GPT3 module is not reset 1: GPT3 module is reset"]
+    #[inline(always)]
+    pub fn gpt3(&mut self) -> GPT3_W<3> {
+        GPT3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

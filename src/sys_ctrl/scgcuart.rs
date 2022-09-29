@@ -34,36 +34,36 @@ impl From<crate::W<SCGCUART_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `UART1` reader - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
-pub type UART1_R = crate::BitReader<bool>;
-#[doc = "Field `UART1` writer - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
-pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCGCUART_SPEC, bool, O>;
 #[doc = "Field `UART0` reader - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
 pub type UART0_R = crate::BitReader<bool>;
 #[doc = "Field `UART0` writer - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
 pub type UART0_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCGCUART_SPEC, bool, O>;
+#[doc = "Field `UART1` reader - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
+pub type UART1_R = crate::BitReader<bool>;
+#[doc = "Field `UART1` writer - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
+pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCGCUART_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1 - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
-    #[inline(always)]
-    pub fn uart1(&self) -> UART1_R {
-        UART1_R::new(((self.bits >> 1) & 1) != 0)
-    }
     #[doc = "Bit 0 - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
     #[inline(always)]
     pub fn uart0(&self) -> UART0_R {
         UART0_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
     #[doc = "Bit 1 - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
     #[inline(always)]
-    pub fn uart1(&mut self) -> UART1_W<1> {
-        UART1_W::new(self)
+    pub fn uart1(&self) -> UART1_R {
+        UART1_R::new(((self.bits >> 1) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bit 0 - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
     #[inline(always)]
     pub fn uart0(&mut self) -> UART0_W<0> {
         UART0_W::new(self)
+    }
+    #[doc = "Bit 1 - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
+    #[inline(always)]
+    pub fn uart1(&mut self) -> UART1_W<1> {
+        UART1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

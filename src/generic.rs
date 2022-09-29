@@ -89,6 +89,14 @@ impl<REG: Resettable + Writable> Reg<REG> {
     #[doc = "     .field3().variant(VARIANT)"]
     #[doc = " );"]
     #[doc = " ```"]
+    #[doc = " or an alternative way of saying the same:"]
+    #[doc = " ```ignore"]
+    #[doc = " periph.reg.write(|w| {"]
+    #[doc = "     w.field1().bits(newfield1bits);"]
+    #[doc = "     w.field2().set_bit();"]
+    #[doc = "     w.field3().variant(VARIANT)"]
+    #[doc = " });"]
+    #[doc = " ```"]
     #[doc = " In the latter case, other fields will be set to their reset value."]
     #[inline(always)]
     pub fn write<F>(&self, f: F)
@@ -141,6 +149,14 @@ impl<REG: Readable + Writable> Reg<REG> {
     #[doc = "     .field2().set_bit()"]
     #[doc = "     .field3().variant(VARIANT)"]
     #[doc = " );"]
+    #[doc = " ```"]
+    #[doc = " or an alternative way of saying the same:"]
+    #[doc = " ```ignore"]
+    #[doc = " periph.reg.modify(|_, w| {"]
+    #[doc = "     w.field1().bits(newfield1bits);"]
+    #[doc = "     w.field2().set_bit();"]
+    #[doc = "     w.field3().variant(VARIANT)"]
+    #[doc = " });"]
     #[doc = " ```"]
     #[doc = " Other fields will have the value they had before the call to `modify`."]
     #[inline(always)]
@@ -372,7 +388,7 @@ where
     pub const OFFSET: u8 = OF;
 }
 macro_rules! bit_proxy {
-    ( $ writer : ident , $ mwv : ident ) => {
+    ($ writer : ident , $ mwv : ident) => {
         #[doc(hidden)]
         pub struct $mwv;
         #[doc = " Bit-wise write field proxy"]
@@ -390,7 +406,7 @@ macro_rules! bit_proxy {
     };
 }
 macro_rules! impl_bit_proxy {
-    ( $ writer : ident , $ U : ty ) => {
+    ($ writer : ident , $ U : ty) => {
         impl<'a, REG, FI, const OF: u8> $writer<'a, $U, REG, FI, OF>
         where
             REG: Writable + RegisterSpec<Ux = $U>,
@@ -418,7 +434,7 @@ bit_proxy!(BitWriter0S, Bit0S);
 bit_proxy!(BitWriter1T, Bit1T);
 bit_proxy!(BitWriter0T, Bit0T);
 macro_rules! impl_proxy {
-    ( $ U : ty ) => {
+    ($ U : ty) => {
         impl<'a, REG, N, FI, const WI: u8, const OF: u8> FieldWriter<'a, $U, REG, N, FI, WI, OF>
         where
             REG: Writable + RegisterSpec<Ux = $U>,

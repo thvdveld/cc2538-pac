@@ -34,64 +34,64 @@ impl From<crate::W<POW_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ISOWAITSOF` reader - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
-pub type ISOWAITSOF_R = crate::BitReader<bool>;
-#[doc = "Field `ISOWAITSOF` writer - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
-pub type ISOWAITSOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, POW_SPEC, bool, O>;
-#[doc = "Field `RST` reader - Indicates that reset signaling is present on the bus"]
-pub type RST_R = crate::BitReader<bool>;
-#[doc = "Field `RESUME` reader - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
-pub type RESUME_R = crate::BitReader<bool>;
-#[doc = "Field `RESUME` writer - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
-pub type RESUME_W<'a, const O: u8> = crate::BitWriter<'a, u32, POW_SPEC, bool, O>;
-#[doc = "Field `SUSPEND` reader - Indicates entry into suspend mode Suspend mode must be enabled by setting USB_POW.SUSPENDEN Software clears this bit by reading the USB_CIF register or by asserting USB_POW.RESUME"]
-pub type SUSPEND_R = crate::BitReader<bool>;
 #[doc = "Field `SUSPENDEN` reader - Enables detection of and entry into suspend mode."]
 pub type SUSPENDEN_R = crate::BitReader<bool>;
 #[doc = "Field `SUSPENDEN` writer - Enables detection of and entry into suspend mode."]
 pub type SUSPENDEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, POW_SPEC, bool, O>;
+#[doc = "Field `SUSPEND` reader - Indicates entry into suspend mode Suspend mode must be enabled by setting USB_POW.SUSPENDEN Software clears this bit by reading the USB_CIF register or by asserting USB_POW.RESUME"]
+pub type SUSPEND_R = crate::BitReader<bool>;
+#[doc = "Field `RESUME` reader - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
+pub type RESUME_R = crate::BitReader<bool>;
+#[doc = "Field `RESUME` writer - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
+pub type RESUME_W<'a, const O: u8> = crate::BitWriter<'a, u32, POW_SPEC, bool, O>;
+#[doc = "Field `RST` reader - Indicates that reset signaling is present on the bus"]
+pub type RST_R = crate::BitReader<bool>;
+#[doc = "Field `ISOWAITSOF` reader - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
+pub type ISOWAITSOF_R = crate::BitReader<bool>;
+#[doc = "Field `ISOWAITSOF` writer - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
+pub type ISOWAITSOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, POW_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7 - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
+    #[doc = "Bit 0 - Enables detection of and entry into suspend mode."]
     #[inline(always)]
-    pub fn isowaitsof(&self) -> ISOWAITSOF_R {
-        ISOWAITSOF_R::new(((self.bits >> 7) & 1) != 0)
-    }
-    #[doc = "Bit 3 - Indicates that reset signaling is present on the bus"]
-    #[inline(always)]
-    pub fn rst(&self) -> RST_R {
-        RST_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 2 - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
-    #[inline(always)]
-    pub fn resume(&self) -> RESUME_R {
-        RESUME_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn suspenden(&self) -> SUSPENDEN_R {
+        SUSPENDEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Indicates entry into suspend mode Suspend mode must be enabled by setting USB_POW.SUSPENDEN Software clears this bit by reading the USB_CIF register or by asserting USB_POW.RESUME"]
     #[inline(always)]
     pub fn suspend(&self) -> SUSPEND_R {
         SUSPEND_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Enables detection of and entry into suspend mode."]
+    #[doc = "Bit 2 - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
     #[inline(always)]
-    pub fn suspenden(&self) -> SUSPENDEN_R {
-        SUSPENDEN_R::new((self.bits & 1) != 0)
+    pub fn resume(&self) -> RESUME_R {
+        RESUME_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Indicates that reset signaling is present on the bus"]
+    #[inline(always)]
+    pub fn rst(&self) -> RST_R {
+        RST_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 7 - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
+    #[inline(always)]
+    pub fn isowaitsof(&self) -> ISOWAITSOF_R {
+        ISOWAITSOF_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 7 - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
+    #[doc = "Bit 0 - Enables detection of and entry into suspend mode."]
     #[inline(always)]
-    pub fn isowaitsof(&mut self) -> ISOWAITSOF_W<7> {
-        ISOWAITSOF_W::new(self)
+    pub fn suspenden(&mut self) -> SUSPENDEN_W<0> {
+        SUSPENDEN_W::new(self)
     }
     #[doc = "Bit 2 - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
     #[inline(always)]
     pub fn resume(&mut self) -> RESUME_W<2> {
         RESUME_W::new(self)
     }
-    #[doc = "Bit 0 - Enables detection of and entry into suspend mode."]
+    #[doc = "Bit 7 - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
     #[inline(always)]
-    pub fn suspenden(&mut self) -> SUSPENDEN_W<0> {
-        SUSPENDEN_W::new(self)
+    pub fn isowaitsof(&mut self) -> ISOWAITSOF_W<7> {
+        ISOWAITSOF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

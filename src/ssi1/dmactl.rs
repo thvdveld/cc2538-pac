@@ -34,36 +34,36 @@ impl From<crate::W<DMACTL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TXDMAE` reader - Transmit DMA enable 0: uDMA for the transmit FIFO is disabled. 1: uDMA for the transmit FIFO is enabled."]
-pub type TXDMAE_R = crate::BitReader<bool>;
-#[doc = "Field `TXDMAE` writer - Transmit DMA enable 0: uDMA for the transmit FIFO is disabled. 1: uDMA for the transmit FIFO is enabled."]
-pub type TXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMACTL_SPEC, bool, O>;
 #[doc = "Field `RXDMAE` reader - Receive DMA enable 0: uDMA for the receive FIFO is disabled. 1: uDMA for the receive FIFO is enabled."]
 pub type RXDMAE_R = crate::BitReader<bool>;
 #[doc = "Field `RXDMAE` writer - Receive DMA enable 0: uDMA for the receive FIFO is disabled. 1: uDMA for the receive FIFO is enabled."]
 pub type RXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMACTL_SPEC, bool, O>;
+#[doc = "Field `TXDMAE` reader - Transmit DMA enable 0: uDMA for the transmit FIFO is disabled. 1: uDMA for the transmit FIFO is enabled."]
+pub type TXDMAE_R = crate::BitReader<bool>;
+#[doc = "Field `TXDMAE` writer - Transmit DMA enable 0: uDMA for the transmit FIFO is disabled. 1: uDMA for the transmit FIFO is enabled."]
+pub type TXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMACTL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1 - Transmit DMA enable 0: uDMA for the transmit FIFO is disabled. 1: uDMA for the transmit FIFO is enabled."]
-    #[inline(always)]
-    pub fn txdmae(&self) -> TXDMAE_R {
-        TXDMAE_R::new(((self.bits >> 1) & 1) != 0)
-    }
     #[doc = "Bit 0 - Receive DMA enable 0: uDMA for the receive FIFO is disabled. 1: uDMA for the receive FIFO is enabled."]
     #[inline(always)]
     pub fn rxdmae(&self) -> RXDMAE_R {
         RXDMAE_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
     #[doc = "Bit 1 - Transmit DMA enable 0: uDMA for the transmit FIFO is disabled. 1: uDMA for the transmit FIFO is enabled."]
     #[inline(always)]
-    pub fn txdmae(&mut self) -> TXDMAE_W<1> {
-        TXDMAE_W::new(self)
+    pub fn txdmae(&self) -> TXDMAE_R {
+        TXDMAE_R::new(((self.bits >> 1) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bit 0 - Receive DMA enable 0: uDMA for the receive FIFO is disabled. 1: uDMA for the receive FIFO is enabled."]
     #[inline(always)]
     pub fn rxdmae(&mut self) -> RXDMAE_W<0> {
         RXDMAE_W::new(self)
+    }
+    #[doc = "Bit 1 - Transmit DMA enable 0: uDMA for the transmit FIFO is disabled. 1: uDMA for the transmit FIFO is enabled."]
+    #[inline(always)]
+    pub fn txdmae(&mut self) -> TXDMAE_W<1> {
+        TXDMAE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

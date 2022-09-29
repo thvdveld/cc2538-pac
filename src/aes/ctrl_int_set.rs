@@ -19,20 +19,20 @@ impl From<crate::W<CTRL_INT_SET_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DMA_IN_DONE` writer - If 1 is written to this bit, the DMA data in done (irq_dma_in_done) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the DMA data in done (irq_dma_in_done) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
-pub type DMA_IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_SET_SPEC, bool, O>;
 #[doc = "Field `RESULT_AV` writer - If 1 is written to this bit, the result available (irq_result_av) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the result available (irq_result_av) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
 pub type RESULT_AV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_SET_SPEC, bool, O>;
+#[doc = "Field `DMA_IN_DONE` writer - If 1 is written to this bit, the DMA data in done (irq_dma_in_done) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the DMA data in done (irq_dma_in_done) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
+pub type DMA_IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_SET_SPEC, bool, O>;
 impl W {
-    #[doc = "Bit 1 - If 1 is written to this bit, the DMA data in done (irq_dma_in_done) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the DMA data in done (irq_dma_in_done) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
-    #[inline(always)]
-    pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<1> {
-        DMA_IN_DONE_W::new(self)
-    }
     #[doc = "Bit 0 - If 1 is written to this bit, the result available (irq_result_av) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the result available (irq_result_av) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
     #[inline(always)]
     pub fn result_av(&mut self) -> RESULT_AV_W<0> {
         RESULT_AV_W::new(self)
+    }
+    #[doc = "Bit 1 - If 1 is written to this bit, the DMA data in done (irq_dma_in_done) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the DMA data in done (irq_dma_in_done) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
+    #[inline(always)]
+    pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<1> {
+        DMA_IN_DONE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

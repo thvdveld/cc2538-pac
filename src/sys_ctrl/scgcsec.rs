@@ -34,36 +34,36 @@ impl From<crate::W<SCGCSEC_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `AES` reader - 0: Clock for AES is gated. 1: Clock for AES is enabled."]
-pub type AES_R = crate::BitReader<bool>;
-#[doc = "Field `AES` writer - 0: Clock for AES is gated. 1: Clock for AES is enabled."]
-pub type AES_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCGCSEC_SPEC, bool, O>;
 #[doc = "Field `PKA` reader - 0: Clock for PKA is gated. 1: Clock for PKA is enabled."]
 pub type PKA_R = crate::BitReader<bool>;
 #[doc = "Field `PKA` writer - 0: Clock for PKA is gated. 1: Clock for PKA is enabled."]
 pub type PKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCGCSEC_SPEC, bool, O>;
+#[doc = "Field `AES` reader - 0: Clock for AES is gated. 1: Clock for AES is enabled."]
+pub type AES_R = crate::BitReader<bool>;
+#[doc = "Field `AES` writer - 0: Clock for AES is gated. 1: Clock for AES is enabled."]
+pub type AES_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCGCSEC_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1 - 0: Clock for AES is gated. 1: Clock for AES is enabled."]
-    #[inline(always)]
-    pub fn aes(&self) -> AES_R {
-        AES_R::new(((self.bits >> 1) & 1) != 0)
-    }
     #[doc = "Bit 0 - 0: Clock for PKA is gated. 1: Clock for PKA is enabled."]
     #[inline(always)]
     pub fn pka(&self) -> PKA_R {
         PKA_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
     #[doc = "Bit 1 - 0: Clock for AES is gated. 1: Clock for AES is enabled."]
     #[inline(always)]
-    pub fn aes(&mut self) -> AES_W<1> {
-        AES_W::new(self)
+    pub fn aes(&self) -> AES_R {
+        AES_R::new(((self.bits >> 1) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bit 0 - 0: Clock for PKA is gated. 1: Clock for PKA is enabled."]
     #[inline(always)]
     pub fn pka(&mut self) -> PKA_W<0> {
         PKA_W::new(self)
+    }
+    #[doc = "Bit 1 - 0: Clock for AES is gated. 1: Clock for AES is enabled."]
+    #[inline(always)]
+    pub fn aes(&mut self) -> AES_W<1> {
+        AES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -13,20 +13,20 @@ impl From<crate::R<DIVMSW_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RESULT_IS_ZERO` reader - The result vector is all zeroes, ignore the address returned in bits \\[10:0\\]"]
-pub type RESULT_IS_ZERO_R = crate::BitReader<bool>;
 #[doc = "Field `MSW_ADDRESS` reader - Address of the most significant nonzero 32-bit word of the remainder result vector in PKA RAM"]
 pub type MSW_ADDRESS_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `RESULT_IS_ZERO` reader - The result vector is all zeroes, ignore the address returned in bits \\[10:0\\]"]
+pub type RESULT_IS_ZERO_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 15 - The result vector is all zeroes, ignore the address returned in bits \\[10:0\\]"]
-    #[inline(always)]
-    pub fn result_is_zero(&self) -> RESULT_IS_ZERO_R {
-        RESULT_IS_ZERO_R::new(((self.bits >> 15) & 1) != 0)
-    }
     #[doc = "Bits 0:10 - Address of the most significant nonzero 32-bit word of the remainder result vector in PKA RAM"]
     #[inline(always)]
     pub fn msw_address(&self) -> MSW_ADDRESS_R {
         MSW_ADDRESS_R::new((self.bits & 0x07ff) as u16)
+    }
+    #[doc = "Bit 15 - The result vector is all zeroes, ignore the address returned in bits \\[10:0\\]"]
+    #[inline(always)]
+    pub fn result_is_zero(&self) -> RESULT_IS_ZERO_R {
+        RESULT_IS_ZERO_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 #[doc = "PKA most-significant-word of divide remainder This register indicates the (32-bit word) address in the PKA RAM where the most significant nonzero 32-bit word of the remainder result for the basic divide and modulo operations is stored. Bits \\[4:0\\]

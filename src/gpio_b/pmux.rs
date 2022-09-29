@@ -34,30 +34,6 @@ impl From<crate::W<PMUX_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CKOEN` reader - Clock out enable When this bit is set, the 32-kHz clock is routed to either PA\\[0\\]
-or PB\\[7\\]
-pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
-pub type CKOEN_R = crate::BitReader<bool>;
-#[doc = "Field `CKOEN` writer - Clock out enable When this bit is set, the 32-kHz clock is routed to either PA\\[0\\]
-or PB\\[7\\]
-pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
-pub type CKOEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMUX_SPEC, bool, O>;
-#[doc = "Field `CKOPIN` reader - Decouple control pin select This control only has relevance when CKOEN is set. When 0, PA\\[0\\]
-becomes the 32-kHz clock output. When 1, PB\\[7\\]
-becomes the 32-kHz clock output."]
-pub type CKOPIN_R = crate::BitReader<bool>;
-#[doc = "Field `CKOPIN` writer - Decouple control pin select This control only has relevance when CKOEN is set. When 0, PA\\[0\\]
-becomes the 32-kHz clock output. When 1, PB\\[7\\]
-becomes the 32-kHz clock output."]
-pub type CKOPIN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMUX_SPEC, bool, O>;
-#[doc = "Field `DCEN` reader - Decouple control enable When this bit is set, the on-die digital regulator status is routed to either PB\\[1\\]
-or PB\\[0\\]
-pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
-pub type DCEN_R = crate::BitReader<bool>;
-#[doc = "Field `DCEN` writer - Decouple control enable When this bit is set, the on-die digital regulator status is routed to either PB\\[1\\]
-or PB\\[0\\]
-pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
-pub type DCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMUX_SPEC, bool, O>;
 #[doc = "Field `DCPIN` reader - Decouple control pin select This control has relevance only when DCEN is set. When 0, PB\\[1\\]
 becomes the on-die digital regulator status (1 indicates the on-die digital regulator is active); when 1, PB\\[0\\]
 becomes the on-die digital regulator status. NOTE: PB\\[1\\]
@@ -78,28 +54,31 @@ becomes the on-dir digital regulator status. In priority order for PB\\[0\\]: Wh
 becomes the power-on-reset indicator. When DCEN and DCPIN are set, PB\\[0\\]
 becomes the on-die digital regulator status."]
 pub type DCPIN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMUX_SPEC, bool, O>;
-impl R {
-    #[doc = "Bit 7 - Clock out enable When this bit is set, the 32-kHz clock is routed to either PA\\[0\\]
-or PB\\[7\\]
-pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
-    #[inline(always)]
-    pub fn ckoen(&self) -> CKOEN_R {
-        CKOEN_R::new(((self.bits >> 7) & 1) != 0)
-    }
-    #[doc = "Bit 4 - Decouple control pin select This control only has relevance when CKOEN is set. When 0, PA\\[0\\]
-becomes the 32-kHz clock output. When 1, PB\\[7\\]
-becomes the 32-kHz clock output."]
-    #[inline(always)]
-    pub fn ckopin(&self) -> CKOPIN_R {
-        CKOPIN_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 3 - Decouple control enable When this bit is set, the on-die digital regulator status is routed to either PB\\[1\\]
+#[doc = "Field `DCEN` reader - Decouple control enable When this bit is set, the on-die digital regulator status is routed to either PB\\[1\\]
 or PB\\[0\\]
 pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
-    #[inline(always)]
-    pub fn dcen(&self) -> DCEN_R {
-        DCEN_R::new(((self.bits >> 3) & 1) != 0)
-    }
+pub type DCEN_R = crate::BitReader<bool>;
+#[doc = "Field `DCEN` writer - Decouple control enable When this bit is set, the on-die digital regulator status is routed to either PB\\[1\\]
+or PB\\[0\\]
+pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
+pub type DCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMUX_SPEC, bool, O>;
+#[doc = "Field `CKOPIN` reader - Decouple control pin select This control only has relevance when CKOEN is set. When 0, PA\\[0\\]
+becomes the 32-kHz clock output. When 1, PB\\[7\\]
+becomes the 32-kHz clock output."]
+pub type CKOPIN_R = crate::BitReader<bool>;
+#[doc = "Field `CKOPIN` writer - Decouple control pin select This control only has relevance when CKOEN is set. When 0, PA\\[0\\]
+becomes the 32-kHz clock output. When 1, PB\\[7\\]
+becomes the 32-kHz clock output."]
+pub type CKOPIN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMUX_SPEC, bool, O>;
+#[doc = "Field `CKOEN` reader - Clock out enable When this bit is set, the 32-kHz clock is routed to either PA\\[0\\]
+or PB\\[7\\]
+pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
+pub type CKOEN_R = crate::BitReader<bool>;
+#[doc = "Field `CKOEN` writer - Clock out enable When this bit is set, the 32-kHz clock is routed to either PA\\[0\\]
+or PB\\[7\\]
+pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
+pub type CKOEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PMUX_SPEC, bool, O>;
+impl R {
     #[doc = "Bit 0 - Decouple control pin select This control has relevance only when DCEN is set. When 0, PB\\[1\\]
 becomes the on-die digital regulator status (1 indicates the on-die digital regulator is active); when 1, PB\\[0\\]
 becomes the on-die digital regulator status. NOTE: PB\\[1\\]
@@ -113,29 +92,29 @@ becomes the on-die digital regulator status."]
     pub fn dcpin(&self) -> DCPIN_R {
         DCPIN_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
-    #[doc = "Bit 7 - Clock out enable When this bit is set, the 32-kHz clock is routed to either PA\\[0\\]
-or PB\\[7\\]
-pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
+    #[doc = "Bit 3 - Decouple control enable When this bit is set, the on-die digital regulator status is routed to either PB\\[1\\]
+or PB\\[0\\]
+pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
     #[inline(always)]
-    pub fn ckoen(&mut self) -> CKOEN_W<7> {
-        CKOEN_W::new(self)
+    pub fn dcen(&self) -> DCEN_R {
+        DCEN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Decouple control pin select This control only has relevance when CKOEN is set. When 0, PA\\[0\\]
 becomes the 32-kHz clock output. When 1, PB\\[7\\]
 becomes the 32-kHz clock output."]
     #[inline(always)]
-    pub fn ckopin(&mut self) -> CKOPIN_W<4> {
-        CKOPIN_W::new(self)
+    pub fn ckopin(&self) -> CKOPIN_R {
+        CKOPIN_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 3 - Decouple control enable When this bit is set, the on-die digital regulator status is routed to either PB\\[1\\]
-or PB\\[0\\]
-pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
+    #[doc = "Bit 7 - Clock out enable When this bit is set, the 32-kHz clock is routed to either PA\\[0\\]
+or PB\\[7\\]
+pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
     #[inline(always)]
-    pub fn dcen(&mut self) -> DCEN_W<3> {
-        DCEN_W::new(self)
+    pub fn ckoen(&self) -> CKOEN_R {
+        CKOEN_R::new(((self.bits >> 7) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bit 0 - Decouple control pin select This control has relevance only when DCEN is set. When 0, PB\\[1\\]
 becomes the on-die digital regulator status (1 indicates the on-die digital regulator is active); when 1, PB\\[0\\]
 becomes the on-die digital regulator status. NOTE: PB\\[1\\]
@@ -148,6 +127,27 @@ becomes the on-die digital regulator status."]
     #[inline(always)]
     pub fn dcpin(&mut self) -> DCPIN_W<0> {
         DCPIN_W::new(self)
+    }
+    #[doc = "Bit 3 - Decouple control enable When this bit is set, the on-die digital regulator status is routed to either PB\\[1\\]
+or PB\\[0\\]
+pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
+    #[inline(always)]
+    pub fn dcen(&mut self) -> DCEN_W<3> {
+        DCEN_W::new(self)
+    }
+    #[doc = "Bit 4 - Decouple control pin select This control only has relevance when CKOEN is set. When 0, PA\\[0\\]
+becomes the 32-kHz clock output. When 1, PB\\[7\\]
+becomes the 32-kHz clock output."]
+    #[inline(always)]
+    pub fn ckopin(&mut self) -> CKOPIN_W<4> {
+        CKOPIN_W::new(self)
+    }
+    #[doc = "Bit 7 - Clock out enable When this bit is set, the 32-kHz clock is routed to either PA\\[0\\]
+or PB\\[7\\]
+pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
+    #[inline(always)]
+    pub fn ckoen(&mut self) -> CKOEN_W<7> {
+        CKOEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

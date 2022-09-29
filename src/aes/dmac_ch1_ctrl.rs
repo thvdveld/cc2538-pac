@@ -34,36 +34,36 @@ impl From<crate::W<DMAC_CH1_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PRIO` reader - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
-pub type PRIO_R = crate::BitReader<bool>;
-#[doc = "Field `PRIO` writer - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
-pub type PRIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMAC_CH1_CTRL_SPEC, bool, O>;
 #[doc = "Field `EN` reader - Channel enable 0: Disabled 1: Enable Note: Disabling an active channel interrupts the DMA operation. The ongoing block transfer completes, but no new transfers are requested."]
 pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - Channel enable 0: Disabled 1: Enable Note: Disabling an active channel interrupts the DMA operation. The ongoing block transfer completes, but no new transfers are requested."]
 pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMAC_CH1_CTRL_SPEC, bool, O>;
+#[doc = "Field `PRIO` reader - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
+pub type PRIO_R = crate::BitReader<bool>;
+#[doc = "Field `PRIO` writer - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
+pub type PRIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMAC_CH1_CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1 - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
-    #[inline(always)]
-    pub fn prio(&self) -> PRIO_R {
-        PRIO_R::new(((self.bits >> 1) & 1) != 0)
-    }
     #[doc = "Bit 0 - Channel enable 0: Disabled 1: Enable Note: Disabling an active channel interrupts the DMA operation. The ongoing block transfer completes, but no new transfers are requested."]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
     #[doc = "Bit 1 - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
     #[inline(always)]
-    pub fn prio(&mut self) -> PRIO_W<1> {
-        PRIO_W::new(self)
+    pub fn prio(&self) -> PRIO_R {
+        PRIO_R::new(((self.bits >> 1) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bit 0 - Channel enable 0: Disabled 1: Enable Note: Disabling an active channel interrupts the DMA operation. The ongoing block transfer completes, but no new transfers are requested."]
     #[inline(always)]
     pub fn en(&mut self) -> EN_W<0> {
         EN_W::new(self)
+    }
+    #[doc = "Bit 1 - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
+    #[inline(always)]
+    pub fn prio(&mut self) -> PRIO_W<1> {
+        PRIO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

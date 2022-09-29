@@ -34,51 +34,51 @@ impl From<crate::W<MDMTEST0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TX_TONE` reader - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
-pub type TX_TONE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `TX_TONE` writer - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
-pub type TX_TONE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MDMTEST0_SPEC, u8, u8, 4, O>;
-#[doc = "Field `DC_WIN_SIZE` reader - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
-pub type DC_WIN_SIZE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DC_WIN_SIZE` writer - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
-pub type DC_WIN_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MDMTEST0_SPEC, u8, u8, 2, O>;
 #[doc = "Field `DC_BLOCK_MODE` reader - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
 pub type DC_BLOCK_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DC_BLOCK_MODE` writer - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
 pub type DC_BLOCK_MODE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, MDMTEST0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `DC_WIN_SIZE` reader - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
+pub type DC_WIN_SIZE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DC_WIN_SIZE` writer - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
+pub type DC_WIN_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MDMTEST0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `TX_TONE` reader - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
+pub type TX_TONE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TX_TONE` writer - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
+pub type TX_TONE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MDMTEST0_SPEC, u8, u8, 4, O>;
 impl R {
-    #[doc = "Bits 4:7 - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
+    #[doc = "Bits 0:1 - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
     #[inline(always)]
-    pub fn tx_tone(&self) -> TX_TONE_R {
-        TX_TONE_R::new(((self.bits >> 4) & 0x0f) as u8)
+    pub fn dc_block_mode(&self) -> DC_BLOCK_MODE_R {
+        DC_BLOCK_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
     #[inline(always)]
     pub fn dc_win_size(&self) -> DC_WIN_SIZE_R {
         DC_WIN_SIZE_R::new(((self.bits >> 2) & 3) as u8)
     }
-    #[doc = "Bits 0:1 - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
+    #[doc = "Bits 4:7 - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
     #[inline(always)]
-    pub fn dc_block_mode(&self) -> DC_BLOCK_MODE_R {
-        DC_BLOCK_MODE_R::new((self.bits & 3) as u8)
+    pub fn tx_tone(&self) -> TX_TONE_R {
+        TX_TONE_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 4:7 - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
+    #[doc = "Bits 0:1 - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
     #[inline(always)]
-    pub fn tx_tone(&mut self) -> TX_TONE_W<4> {
-        TX_TONE_W::new(self)
+    pub fn dc_block_mode(&mut self) -> DC_BLOCK_MODE_W<0> {
+        DC_BLOCK_MODE_W::new(self)
     }
     #[doc = "Bits 2:3 - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
     #[inline(always)]
     pub fn dc_win_size(&mut self) -> DC_WIN_SIZE_W<2> {
         DC_WIN_SIZE_W::new(self)
     }
-    #[doc = "Bits 0:1 - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
+    #[doc = "Bits 4:7 - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
     #[inline(always)]
-    pub fn dc_block_mode(&mut self) -> DC_BLOCK_MODE_W<0> {
-        DC_BLOCK_MODE_W::new(self)
+    pub fn tx_tone(&mut self) -> TX_TONE_W<4> {
+        TX_TONE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

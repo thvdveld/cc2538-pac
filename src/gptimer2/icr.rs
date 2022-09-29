@@ -34,134 +34,134 @@ impl From<crate::W<ICR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WUECINT` reader - GPTM write update error interrupt clear"]
-pub type WUECINT_R = crate::BitReader<bool>;
-#[doc = "Field `WUECINT` writer - GPTM write update error interrupt clear"]
-pub type WUECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
-#[doc = "Field `TBMCINT` reader - GPTM Timer B match interrupt clear"]
-pub type TBMCINT_R = crate::BitReader<bool>;
-#[doc = "Field `TBMCINT` writer - GPTM Timer B match interrupt clear"]
-pub type TBMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
-#[doc = "Field `CBECINT` reader - GPTM Timer B capture event Interrupt clear"]
-pub type CBECINT_R = crate::BitReader<bool>;
-#[doc = "Field `CBECINT` writer - GPTM Timer B capture event Interrupt clear"]
-pub type CBECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
-#[doc = "Field `CBMCINT` reader - GPTM Timer B capture match interrupt clear"]
-pub type CBMCINT_R = crate::BitReader<bool>;
-#[doc = "Field `CBMCINT` writer - GPTM Timer B capture match interrupt clear"]
-pub type CBMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
-#[doc = "Field `TBTOCINT` reader - GPTM Timer B time-out interrupt clear"]
-pub type TBTOCINT_R = crate::BitReader<bool>;
-#[doc = "Field `TBTOCINT` writer - GPTM Timer B time-out interrupt clear"]
-pub type TBTOCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
-#[doc = "Field `TAMCINT` reader - GPTM Timer A match interrupt clear"]
-pub type TAMCINT_R = crate::BitReader<bool>;
-#[doc = "Field `TAMCINT` writer - GPTM Timer A match interrupt clear"]
-pub type TAMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
-#[doc = "Field `CAECINT` reader - GPTM Timer A capture event Interrupt clear"]
-pub type CAECINT_R = crate::BitReader<bool>;
-#[doc = "Field `CAECINT` writer - GPTM Timer A capture event Interrupt clear"]
-pub type CAECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
-#[doc = "Field `CAMCINT` reader - GPTM Timer A capture match interrupt clear"]
-pub type CAMCINT_R = crate::BitReader<bool>;
-#[doc = "Field `CAMCINT` writer - GPTM Timer A capture match interrupt clear"]
-pub type CAMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Field `TATOCINT` reader - GPTM Timer A time-out interrupt clear"]
 pub type TATOCINT_R = crate::BitReader<bool>;
 #[doc = "Field `TATOCINT` writer - GPTM Timer A time-out interrupt clear"]
 pub type TATOCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+#[doc = "Field `CAMCINT` reader - GPTM Timer A capture match interrupt clear"]
+pub type CAMCINT_R = crate::BitReader<bool>;
+#[doc = "Field `CAMCINT` writer - GPTM Timer A capture match interrupt clear"]
+pub type CAMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+#[doc = "Field `CAECINT` reader - GPTM Timer A capture event Interrupt clear"]
+pub type CAECINT_R = crate::BitReader<bool>;
+#[doc = "Field `CAECINT` writer - GPTM Timer A capture event Interrupt clear"]
+pub type CAECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+#[doc = "Field `TAMCINT` reader - GPTM Timer A match interrupt clear"]
+pub type TAMCINT_R = crate::BitReader<bool>;
+#[doc = "Field `TAMCINT` writer - GPTM Timer A match interrupt clear"]
+pub type TAMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+#[doc = "Field `TBTOCINT` reader - GPTM Timer B time-out interrupt clear"]
+pub type TBTOCINT_R = crate::BitReader<bool>;
+#[doc = "Field `TBTOCINT` writer - GPTM Timer B time-out interrupt clear"]
+pub type TBTOCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+#[doc = "Field `CBMCINT` reader - GPTM Timer B capture match interrupt clear"]
+pub type CBMCINT_R = crate::BitReader<bool>;
+#[doc = "Field `CBMCINT` writer - GPTM Timer B capture match interrupt clear"]
+pub type CBMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+#[doc = "Field `CBECINT` reader - GPTM Timer B capture event Interrupt clear"]
+pub type CBECINT_R = crate::BitReader<bool>;
+#[doc = "Field `CBECINT` writer - GPTM Timer B capture event Interrupt clear"]
+pub type CBECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+#[doc = "Field `TBMCINT` reader - GPTM Timer B match interrupt clear"]
+pub type TBMCINT_R = crate::BitReader<bool>;
+#[doc = "Field `TBMCINT` writer - GPTM Timer B match interrupt clear"]
+pub type TBMCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+#[doc = "Field `WUECINT` reader - GPTM write update error interrupt clear"]
+pub type WUECINT_R = crate::BitReader<bool>;
+#[doc = "Field `WUECINT` writer - GPTM write update error interrupt clear"]
+pub type WUECINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 16 - GPTM write update error interrupt clear"]
+    #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
     #[inline(always)]
-    pub fn wuecint(&self) -> WUECINT_R {
-        WUECINT_R::new(((self.bits >> 16) & 1) != 0)
-    }
-    #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
-    #[inline(always)]
-    pub fn tbmcint(&self) -> TBMCINT_R {
-        TBMCINT_R::new(((self.bits >> 11) & 1) != 0)
-    }
-    #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
-    #[inline(always)]
-    pub fn cbecint(&self) -> CBECINT_R {
-        CBECINT_R::new(((self.bits >> 10) & 1) != 0)
-    }
-    #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
-    #[inline(always)]
-    pub fn cbmcint(&self) -> CBMCINT_R {
-        CBMCINT_R::new(((self.bits >> 9) & 1) != 0)
-    }
-    #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
-    #[inline(always)]
-    pub fn tbtocint(&self) -> TBTOCINT_R {
-        TBTOCINT_R::new(((self.bits >> 8) & 1) != 0)
-    }
-    #[doc = "Bit 4 - GPTM Timer A match interrupt clear"]
-    #[inline(always)]
-    pub fn tamcint(&self) -> TAMCINT_R {
-        TAMCINT_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
-    #[inline(always)]
-    pub fn caecint(&self) -> CAECINT_R {
-        CAECINT_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn tatocint(&self) -> TATOCINT_R {
+        TATOCINT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt clear"]
     #[inline(always)]
     pub fn camcint(&self) -> CAMCINT_R {
         CAMCINT_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
+    #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
     #[inline(always)]
-    pub fn tatocint(&self) -> TATOCINT_R {
-        TATOCINT_R::new((self.bits & 1) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 16 - GPTM write update error interrupt clear"]
-    #[inline(always)]
-    pub fn wuecint(&mut self) -> WUECINT_W<16> {
-        WUECINT_W::new(self)
-    }
-    #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
-    #[inline(always)]
-    pub fn tbmcint(&mut self) -> TBMCINT_W<11> {
-        TBMCINT_W::new(self)
-    }
-    #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
-    #[inline(always)]
-    pub fn cbecint(&mut self) -> CBECINT_W<10> {
-        CBECINT_W::new(self)
-    }
-    #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
-    #[inline(always)]
-    pub fn cbmcint(&mut self) -> CBMCINT_W<9> {
-        CBMCINT_W::new(self)
-    }
-    #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
-    #[inline(always)]
-    pub fn tbtocint(&mut self) -> TBTOCINT_W<8> {
-        TBTOCINT_W::new(self)
+    pub fn caecint(&self) -> CAECINT_R {
+        CAECINT_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - GPTM Timer A match interrupt clear"]
     #[inline(always)]
-    pub fn tamcint(&mut self) -> TAMCINT_W<4> {
-        TAMCINT_W::new(self)
+    pub fn tamcint(&self) -> TAMCINT_R {
+        TAMCINT_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
+    #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
     #[inline(always)]
-    pub fn caecint(&mut self) -> CAECINT_W<2> {
-        CAECINT_W::new(self)
+    pub fn tbtocint(&self) -> TBTOCINT_R {
+        TBTOCINT_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
+    #[inline(always)]
+    pub fn cbmcint(&self) -> CBMCINT_R {
+        CBMCINT_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
+    #[inline(always)]
+    pub fn cbecint(&self) -> CBECINT_R {
+        CBECINT_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
+    #[inline(always)]
+    pub fn tbmcint(&self) -> TBMCINT_R {
+        TBMCINT_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 16 - GPTM write update error interrupt clear"]
+    #[inline(always)]
+    pub fn wuecint(&self) -> WUECINT_R {
+        WUECINT_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
+    #[inline(always)]
+    pub fn tatocint(&mut self) -> TATOCINT_W<0> {
+        TATOCINT_W::new(self)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt clear"]
     #[inline(always)]
     pub fn camcint(&mut self) -> CAMCINT_W<1> {
         CAMCINT_W::new(self)
     }
-    #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
+    #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
     #[inline(always)]
-    pub fn tatocint(&mut self) -> TATOCINT_W<0> {
-        TATOCINT_W::new(self)
+    pub fn caecint(&mut self) -> CAECINT_W<2> {
+        CAECINT_W::new(self)
+    }
+    #[doc = "Bit 4 - GPTM Timer A match interrupt clear"]
+    #[inline(always)]
+    pub fn tamcint(&mut self) -> TAMCINT_W<4> {
+        TAMCINT_W::new(self)
+    }
+    #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
+    #[inline(always)]
+    pub fn tbtocint(&mut self) -> TBTOCINT_W<8> {
+        TBTOCINT_W::new(self)
+    }
+    #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
+    #[inline(always)]
+    pub fn cbmcint(&mut self) -> CBMCINT_W<9> {
+        CBMCINT_W::new(self)
+    }
+    #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
+    #[inline(always)]
+    pub fn cbecint(&mut self) -> CBECINT_W<10> {
+        CBECINT_W::new(self)
+    }
+    #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
+    #[inline(always)]
+    pub fn tbmcint(&mut self) -> TBMCINT_W<11> {
+        TBMCINT_W::new(self)
+    }
+    #[doc = "Bit 16 - GPTM write update error interrupt clear"]
+    #[inline(always)]
+    pub fn wuecint(&mut self) -> WUECINT_W<16> {
+        WUECINT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

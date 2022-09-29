@@ -34,50 +34,50 @@ impl From<crate::W<CSOH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `AUTOCLEAR` reader - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
-pub type AUTOCLEAR_R = crate::BitReader<bool>;
-#[doc = "Field `AUTOCLEAR` writer - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
-pub type AUTOCLEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSOH_SPEC, bool, O>;
-#[doc = "Field `ISO` reader - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
-pub type ISO_R = crate::BitReader<bool>;
-#[doc = "Field `ISO` writer - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
-pub type ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSOH_SPEC, bool, O>;
 #[doc = "Field `OUTDBLBUF` reader - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
 pub type OUTDBLBUF_R = crate::BitReader<bool>;
 #[doc = "Field `OUTDBLBUF` writer - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
 pub type OUTDBLBUF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSOH_SPEC, bool, O>;
+#[doc = "Field `ISO` reader - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
+pub type ISO_R = crate::BitReader<bool>;
+#[doc = "Field `ISO` writer - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
+pub type ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSOH_SPEC, bool, O>;
+#[doc = "Field `AUTOCLEAR` reader - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
+pub type AUTOCLEAR_R = crate::BitReader<bool>;
+#[doc = "Field `AUTOCLEAR` writer - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
+pub type AUTOCLEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSOH_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
+    #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
-    pub fn autoclear(&self) -> AUTOCLEAR_R {
-        AUTOCLEAR_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn outdblbuf(&self) -> OUTDBLBUF_R {
+        OUTDBLBUF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 6 - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
     pub fn iso(&self) -> ISO_R {
         ISO_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
+    #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
     #[inline(always)]
-    pub fn outdblbuf(&self) -> OUTDBLBUF_R {
-        OUTDBLBUF_R::new((self.bits & 1) != 0)
+    pub fn autoclear(&self) -> AUTOCLEAR_R {
+        AUTOCLEAR_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
+    #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
-    pub fn autoclear(&mut self) -> AUTOCLEAR_W<7> {
-        AUTOCLEAR_W::new(self)
+    pub fn outdblbuf(&mut self) -> OUTDBLBUF_W<0> {
+        OUTDBLBUF_W::new(self)
     }
     #[doc = "Bit 6 - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
     pub fn iso(&mut self) -> ISO_W<6> {
         ISO_W::new(self)
     }
-    #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
+    #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
     #[inline(always)]
-    pub fn outdblbuf(&mut self) -> OUTDBLBUF_W<0> {
-        OUTDBLBUF_W::new(self)
+    pub fn autoclear(&mut self) -> AUTOCLEAR_W<7> {
+        AUTOCLEAR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

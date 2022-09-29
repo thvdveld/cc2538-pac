@@ -34,51 +34,51 @@ impl From<crate::W<FSCAL3_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `VCO_DAC_EN_OV` reader - Enables the VCO DAC when 1"]
-pub type VCO_DAC_EN_OV_R = crate::BitReader<bool>;
-#[doc = "Field `VCO_DAC_EN_OV` writer - Enables the VCO DAC when 1"]
-pub type VCO_DAC_EN_OV_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSCAL3_SPEC, bool, O>;
-#[doc = "Field `VCO_VC_DAC` reader - Bit vector for programming varactor control voltage from VC DAC"]
-pub type VCO_VC_DAC_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `VCO_VC_DAC` writer - Bit vector for programming varactor control voltage from VC DAC"]
-pub type VCO_VC_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCAL3_SPEC, u8, u8, 4, O>;
 #[doc = "Field `VCO_CAPARR_CAL_CTRL` reader - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
 pub type VCO_CAPARR_CAL_CTRL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VCO_CAPARR_CAL_CTRL` writer - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
 pub type VCO_CAPARR_CAL_CTRL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, FSCAL3_SPEC, u8, u8, 2, O>;
+#[doc = "Field `VCO_VC_DAC` reader - Bit vector for programming varactor control voltage from VC DAC"]
+pub type VCO_VC_DAC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `VCO_VC_DAC` writer - Bit vector for programming varactor control voltage from VC DAC"]
+pub type VCO_VC_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCAL3_SPEC, u8, u8, 4, O>;
+#[doc = "Field `VCO_DAC_EN_OV` reader - Enables the VCO DAC when 1"]
+pub type VCO_DAC_EN_OV_R = crate::BitReader<bool>;
+#[doc = "Field `VCO_DAC_EN_OV` writer - Enables the VCO DAC when 1"]
+pub type VCO_DAC_EN_OV_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSCAL3_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 6 - Enables the VCO DAC when 1"]
+    #[doc = "Bits 0:1 - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
     #[inline(always)]
-    pub fn vco_dac_en_ov(&self) -> VCO_DAC_EN_OV_R {
-        VCO_DAC_EN_OV_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn vco_caparr_cal_ctrl(&self) -> VCO_CAPARR_CAL_CTRL_R {
+        VCO_CAPARR_CAL_CTRL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:5 - Bit vector for programming varactor control voltage from VC DAC"]
     #[inline(always)]
     pub fn vco_vc_dac(&self) -> VCO_VC_DAC_R {
         VCO_VC_DAC_R::new(((self.bits >> 2) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:1 - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
+    #[doc = "Bit 6 - Enables the VCO DAC when 1"]
     #[inline(always)]
-    pub fn vco_caparr_cal_ctrl(&self) -> VCO_CAPARR_CAL_CTRL_R {
-        VCO_CAPARR_CAL_CTRL_R::new((self.bits & 3) as u8)
+    pub fn vco_dac_en_ov(&self) -> VCO_DAC_EN_OV_R {
+        VCO_DAC_EN_OV_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 6 - Enables the VCO DAC when 1"]
+    #[doc = "Bits 0:1 - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
     #[inline(always)]
-    pub fn vco_dac_en_ov(&mut self) -> VCO_DAC_EN_OV_W<6> {
-        VCO_DAC_EN_OV_W::new(self)
+    pub fn vco_caparr_cal_ctrl(&mut self) -> VCO_CAPARR_CAL_CTRL_W<0> {
+        VCO_CAPARR_CAL_CTRL_W::new(self)
     }
     #[doc = "Bits 2:5 - Bit vector for programming varactor control voltage from VC DAC"]
     #[inline(always)]
     pub fn vco_vc_dac(&mut self) -> VCO_VC_DAC_W<2> {
         VCO_VC_DAC_W::new(self)
     }
-    #[doc = "Bits 0:1 - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
+    #[doc = "Bit 6 - Enables the VCO DAC when 1"]
     #[inline(always)]
-    pub fn vco_caparr_cal_ctrl(&mut self) -> VCO_CAPARR_CAL_CTRL_W<0> {
-        VCO_CAPARR_CAL_CTRL_W::new(self)
+    pub fn vco_dac_en_ov(&mut self) -> VCO_DAC_EN_OV_W<6> {
+        VCO_DAC_EN_OV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

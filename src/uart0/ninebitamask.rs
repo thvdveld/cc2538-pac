@@ -34,22 +34,22 @@ impl From<crate::W<NINEBITAMASK_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RANGE` reader - Self address range for 9-bit mode Writing to the RANGE field does not have any effect; reading it reflects the ANDed output of the ADDR field in the UART9BITADDR register and the MASK field."]
-pub type RANGE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MASK` reader - Self Address Mask for 9-Bit Mode This field contains the address mask that creates a range of addresses that should be matched."]
 pub type MASK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MASK` writer - Self Address Mask for 9-Bit Mode This field contains the address mask that creates a range of addresses that should be matched."]
 pub type MASK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NINEBITAMASK_SPEC, u8, u8, 8, O>;
+#[doc = "Field `RANGE` reader - Self address range for 9-bit mode Writing to the RANGE field does not have any effect; reading it reflects the ANDed output of the ADDR field in the UART9BITADDR register and the MASK field."]
+pub type RANGE_R = crate::FieldReader<u8, u8>;
 impl R {
-    #[doc = "Bits 8:15 - Self address range for 9-bit mode Writing to the RANGE field does not have any effect; reading it reflects the ANDed output of the ADDR field in the UART9BITADDR register and the MASK field."]
-    #[inline(always)]
-    pub fn range(&self) -> RANGE_R {
-        RANGE_R::new(((self.bits >> 8) & 0xff) as u8)
-    }
     #[doc = "Bits 0:7 - Self Address Mask for 9-Bit Mode This field contains the address mask that creates a range of addresses that should be matched."]
     #[inline(always)]
     pub fn mask(&self) -> MASK_R {
         MASK_R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - Self address range for 9-bit mode Writing to the RANGE field does not have any effect; reading it reflects the ANDed output of the ADDR field in the UART9BITADDR register and the MASK field."]
+    #[inline(always)]
+    pub fn range(&self) -> RANGE_R {
+        RANGE_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
 impl W {

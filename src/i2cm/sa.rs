@@ -34,36 +34,36 @@ impl From<crate::W<SA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SA` reader - I2C slave address"]
-pub type SA_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SA` writer - I2C slave address"]
-pub type SA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SA_SPEC, u8, u8, 7, O>;
 #[doc = "Field `RS` reader - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
 pub type RS_R = crate::BitReader<bool>;
 #[doc = "Field `RS` writer - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
 pub type RS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SA_SPEC, bool, O>;
+#[doc = "Field `SA` reader - I2C slave address"]
+pub type SA_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SA` writer - I2C slave address"]
+pub type SA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SA_SPEC, u8, u8, 7, O>;
 impl R {
-    #[doc = "Bits 1:7 - I2C slave address"]
-    #[inline(always)]
-    pub fn sa(&self) -> SA_R {
-        SA_R::new(((self.bits >> 1) & 0x7f) as u8)
-    }
     #[doc = "Bit 0 - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
     #[inline(always)]
     pub fn rs(&self) -> RS_R {
         RS_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
     #[doc = "Bits 1:7 - I2C slave address"]
     #[inline(always)]
-    pub fn sa(&mut self) -> SA_W<1> {
-        SA_W::new(self)
+    pub fn sa(&self) -> SA_R {
+        SA_R::new(((self.bits >> 1) & 0x7f) as u8)
     }
+}
+impl W {
     #[doc = "Bit 0 - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
     #[inline(always)]
     pub fn rs(&mut self) -> RS_W<0> {
         RS_W::new(self)
+    }
+    #[doc = "Bits 1:7 - I2C slave address"]
+    #[inline(always)]
+    pub fn sa(&mut self) -> SA_W<1> {
+        SA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

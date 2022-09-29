@@ -34,50 +34,50 @@ impl From<crate::W<CR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SFE` reader - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
-pub type SFE_R = crate::BitReader<bool>;
-#[doc = "Field `SFE` writer - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
-pub type SFE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
-#[doc = "Field `MFE` reader - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
-pub type MFE_R = crate::BitReader<bool>;
-#[doc = "Field `MFE` writer - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
-pub type MFE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
 #[doc = "Field `LPBK` reader - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
 pub type LPBK_R = crate::BitReader<bool>;
 #[doc = "Field `LPBK` writer - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
 pub type LPBK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `MFE` reader - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
+pub type MFE_R = crate::BitReader<bool>;
+#[doc = "Field `MFE` writer - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
+pub type MFE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `SFE` reader - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
+pub type SFE_R = crate::BitReader<bool>;
+#[doc = "Field `SFE` writer - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
+pub type SFE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
+    #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
     #[inline(always)]
-    pub fn sfe(&self) -> SFE_R {
-        SFE_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn lpbk(&self) -> LPBK_R {
+        LPBK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4 - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
     #[inline(always)]
     pub fn mfe(&self) -> MFE_R {
         MFE_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
+    #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
     #[inline(always)]
-    pub fn lpbk(&self) -> LPBK_R {
-        LPBK_R::new((self.bits & 1) != 0)
+    pub fn sfe(&self) -> SFE_R {
+        SFE_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
+    #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
     #[inline(always)]
-    pub fn sfe(&mut self) -> SFE_W<5> {
-        SFE_W::new(self)
+    pub fn lpbk(&mut self) -> LPBK_W<0> {
+        LPBK_W::new(self)
     }
     #[doc = "Bit 4 - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
     #[inline(always)]
     pub fn mfe(&mut self) -> MFE_W<4> {
         MFE_W::new(self)
     }
-    #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
+    #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
     #[inline(always)]
-    pub fn lpbk(&mut self) -> LPBK_W<0> {
-        LPBK_W::new(self)
+    pub fn sfe(&mut self) -> SFE_W<5> {
+        SFE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

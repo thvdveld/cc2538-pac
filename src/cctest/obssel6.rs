@@ -34,40 +34,40 @@ impl From<crate::W<OBSSEL6_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `EN` reader - Observation output 6 enable control for PC6 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC6."]
-pub type EN_R = crate::BitReader<bool>;
-#[doc = "Field `EN` writer - Observation output 6 enable control for PC6 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC6."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, OBSSEL6_SPEC, bool, O>;
 #[doc = "Field `SEL` reader - n - obs_sigs\\[n\\]
 output on output 6: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
 pub type SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SEL` writer - n - obs_sigs\\[n\\]
 output on output 6: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
 pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OBSSEL6_SPEC, u8, u8, 7, O>;
+#[doc = "Field `EN` reader - Observation output 6 enable control for PC6 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC6."]
+pub type EN_R = crate::BitReader<bool>;
+#[doc = "Field `EN` writer - Observation output 6 enable control for PC6 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC6."]
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, OBSSEL6_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7 - Observation output 6 enable control for PC6 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC6."]
-    #[inline(always)]
-    pub fn en(&self) -> EN_R {
-        EN_R::new(((self.bits >> 7) & 1) != 0)
-    }
     #[doc = "Bits 0:6 - n - obs_sigs\\[n\\]
 output on output 6: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
         SEL_R::new((self.bits & 0x7f) as u8)
     }
-}
-impl W {
     #[doc = "Bit 7 - Observation output 6 enable control for PC6 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC6."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<7> {
-        EN_W::new(self)
+    pub fn en(&self) -> EN_R {
+        EN_R::new(((self.bits >> 7) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bits 0:6 - n - obs_sigs\\[n\\]
 output on output 6: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
     #[inline(always)]
     pub fn sel(&mut self) -> SEL_W<0> {
         SEL_W::new(self)
+    }
+    #[doc = "Bit 7 - Observation output 6 enable control for PC6 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC6."]
+    #[inline(always)]
+    pub fn en(&mut self) -> EN_W<7> {
+        EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

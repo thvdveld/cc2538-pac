@@ -34,38 +34,38 @@ impl From<crate::W<MTCSPCFG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `MACTIMER_EVENMT_CFG` reader - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
-pub type MACTIMER_EVENMT_CFG_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `MACTIMER_EVENMT_CFG` writer - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
-pub type MACTIMER_EVENMT_CFG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MTCSPCFG_SPEC, u8, u8, 3, O>;
 #[doc = "Field `MACTIMER_EVENT1_CFG` reader - Selects the event that triggers an MT_EVENT1 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
 pub type MACTIMER_EVENT1_CFG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MACTIMER_EVENT1_CFG` writer - Selects the event that triggers an MT_EVENT1 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
 pub type MACTIMER_EVENT1_CFG_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, MTCSPCFG_SPEC, u8, u8, 3, O>;
+#[doc = "Field `MACTIMER_EVENMT_CFG` reader - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
+pub type MACTIMER_EVENMT_CFG_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `MACTIMER_EVENMT_CFG` writer - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
+pub type MACTIMER_EVENMT_CFG_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, MTCSPCFG_SPEC, u8, u8, 3, O>;
 impl R {
-    #[doc = "Bits 4:6 - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
-    #[inline(always)]
-    pub fn mactimer_evenmt_cfg(&self) -> MACTIMER_EVENMT_CFG_R {
-        MACTIMER_EVENMT_CFG_R::new(((self.bits >> 4) & 7) as u8)
-    }
     #[doc = "Bits 0:2 - Selects the event that triggers an MT_EVENT1 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
     #[inline(always)]
     pub fn mactimer_event1_cfg(&self) -> MACTIMER_EVENT1_CFG_R {
         MACTIMER_EVENT1_CFG_R::new((self.bits & 7) as u8)
     }
-}
-impl W {
     #[doc = "Bits 4:6 - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
     #[inline(always)]
-    pub fn mactimer_evenmt_cfg(&mut self) -> MACTIMER_EVENMT_CFG_W<4> {
-        MACTIMER_EVENMT_CFG_W::new(self)
+    pub fn mactimer_evenmt_cfg(&self) -> MACTIMER_EVENMT_CFG_R {
+        MACTIMER_EVENMT_CFG_R::new(((self.bits >> 4) & 7) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:2 - Selects the event that triggers an MT_EVENT1 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
     #[inline(always)]
     pub fn mactimer_event1_cfg(&mut self) -> MACTIMER_EVENT1_CFG_W<0> {
         MACTIMER_EVENT1_CFG_W::new(self)
+    }
+    #[doc = "Bits 4:6 - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
+    #[inline(always)]
+    pub fn mactimer_evenmt_cfg(&mut self) -> MACTIMER_EVENMT_CFG_W<4> {
+        MACTIMER_EVENMT_CFG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

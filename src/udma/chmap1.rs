@@ -34,120 +34,120 @@ impl From<crate::W<CHMAP1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CH15SEL` reader - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH15SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CH15SEL` writer - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH15SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
-#[doc = "Field `CH14SEL` reader - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH14SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CH14SEL` writer - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH14SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
-#[doc = "Field `CH13SEL` reader - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH13SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CH13SEL` writer - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH13SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
-#[doc = "Field `CH12SEL` reader - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH12SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CH12SEL` writer - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH12SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
-#[doc = "Field `CH11SEL` reader - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH11SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CH11SEL` writer - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH11SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
-#[doc = "Field `CH10SEL` reader - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH10SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CH10SEL` writer - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH10SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
-#[doc = "Field `CH9SEL` reader - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH9SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CH9SEL` writer - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-pub type CH9SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 #[doc = "Field `CH8SEL` reader - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub type CH8SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH8SEL` writer - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
 pub type CH8SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CH9SEL` reader - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH9SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH9SEL` writer - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH9SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CH10SEL` reader - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH10SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH10SEL` writer - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH10SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CH11SEL` reader - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH11SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH11SEL` writer - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH11SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CH12SEL` reader - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH12SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH12SEL` writer - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH12SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CH13SEL` reader - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH13SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH13SEL` writer - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH13SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CH14SEL` reader - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH14SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH14SEL` writer - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH14SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CH15SEL` reader - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH15SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH15SEL` writer - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+pub type CH15SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHMAP1_SPEC, u8, u8, 4, O>;
 impl R {
-    #[doc = "Bits 28:31 - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[doc = "Bits 0:3 - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch15sel(&self) -> CH15SEL_R {
-        CH15SEL_R::new(((self.bits >> 28) & 0x0f) as u8)
-    }
-    #[doc = "Bits 24:27 - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch14sel(&self) -> CH14SEL_R {
-        CH14SEL_R::new(((self.bits >> 24) & 0x0f) as u8)
-    }
-    #[doc = "Bits 20:23 - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch13sel(&self) -> CH13SEL_R {
-        CH13SEL_R::new(((self.bits >> 20) & 0x0f) as u8)
-    }
-    #[doc = "Bits 16:19 - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch12sel(&self) -> CH12SEL_R {
-        CH12SEL_R::new(((self.bits >> 16) & 0x0f) as u8)
-    }
-    #[doc = "Bits 12:15 - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch11sel(&self) -> CH11SEL_R {
-        CH11SEL_R::new(((self.bits >> 12) & 0x0f) as u8)
-    }
-    #[doc = "Bits 8:11 - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch10sel(&self) -> CH10SEL_R {
-        CH10SEL_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn ch8sel(&self) -> CH8SEL_R {
+        CH8SEL_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:7 - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
     pub fn ch9sel(&self) -> CH9SEL_R {
         CH9SEL_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:3 - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[doc = "Bits 8:11 - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch8sel(&self) -> CH8SEL_R {
-        CH8SEL_R::new((self.bits & 0x0f) as u8)
-    }
-}
-impl W {
-    #[doc = "Bits 28:31 - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch15sel(&mut self) -> CH15SEL_W<28> {
-        CH15SEL_W::new(self)
-    }
-    #[doc = "Bits 24:27 - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch14sel(&mut self) -> CH14SEL_W<24> {
-        CH14SEL_W::new(self)
-    }
-    #[doc = "Bits 20:23 - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch13sel(&mut self) -> CH13SEL_W<20> {
-        CH13SEL_W::new(self)
-    }
-    #[doc = "Bits 16:19 - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
-    #[inline(always)]
-    pub fn ch12sel(&mut self) -> CH12SEL_W<16> {
-        CH12SEL_W::new(self)
+    pub fn ch10sel(&self) -> CH10SEL_R {
+        CH10SEL_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:15 - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch11sel(&mut self) -> CH11SEL_W<12> {
-        CH11SEL_W::new(self)
+    pub fn ch11sel(&self) -> CH11SEL_R {
+        CH11SEL_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
-    #[doc = "Bits 8:11 - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[doc = "Bits 16:19 - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch10sel(&mut self) -> CH10SEL_W<8> {
-        CH10SEL_W::new(self)
+    pub fn ch12sel(&self) -> CH12SEL_R {
+        CH12SEL_R::new(((self.bits >> 16) & 0x0f) as u8)
+    }
+    #[doc = "Bits 20:23 - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch13sel(&self) -> CH13SEL_R {
+        CH13SEL_R::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+    #[doc = "Bits 24:27 - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch14sel(&self) -> CH14SEL_R {
+        CH14SEL_R::new(((self.bits >> 24) & 0x0f) as u8)
+    }
+    #[doc = "Bits 28:31 - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch15sel(&self) -> CH15SEL_R {
+        CH15SEL_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch8sel(&mut self) -> CH8SEL_W<0> {
+        CH8SEL_W::new(self)
     }
     #[doc = "Bits 4:7 - uDMA channel 9 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
     pub fn ch9sel(&mut self) -> CH9SEL_W<4> {
         CH9SEL_W::new(self)
     }
-    #[doc = "Bits 0:3 - uDMA channel 8 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[doc = "Bits 8:11 - uDMA channel 10 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    pub fn ch8sel(&mut self) -> CH8SEL_W<0> {
-        CH8SEL_W::new(self)
+    pub fn ch10sel(&mut self) -> CH10SEL_W<8> {
+        CH10SEL_W::new(self)
+    }
+    #[doc = "Bits 12:15 - uDMA channel 11 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch11sel(&mut self) -> CH11SEL_W<12> {
+        CH11SEL_W::new(self)
+    }
+    #[doc = "Bits 16:19 - uDMA channel 12 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch12sel(&mut self) -> CH12SEL_W<16> {
+        CH12SEL_W::new(self)
+    }
+    #[doc = "Bits 20:23 - uDMA channel 13 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch13sel(&mut self) -> CH13SEL_W<20> {
+        CH13SEL_W::new(self)
+    }
+    #[doc = "Bits 24:27 - uDMA channel 14 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch14sel(&mut self) -> CH14SEL_W<24> {
+        CH14SEL_W::new(self)
+    }
+    #[doc = "Bits 28:31 - uDMA channel 15 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
+    #[inline(always)]
+    pub fn ch15sel(&mut self) -> CH15SEL_W<28> {
+        CH15SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -34,36 +34,36 @@ impl From<crate::W<NINEBITADDR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `NINEBITEN` reader - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
-pub type NINEBITEN_R = crate::BitReader<bool>;
-#[doc = "Field `NINEBITEN` writer - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
-pub type NINEBITEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, NINEBITADDR_SPEC, bool, O>;
 #[doc = "Field `ADDR` reader - Self address for 9-bit mode This field contains the address that should be matched when UART9BITAMASK is 0xFF."]
 pub type ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADDR` writer - Self address for 9-bit mode This field contains the address that should be matched when UART9BITAMASK is 0xFF."]
 pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NINEBITADDR_SPEC, u8, u8, 8, O>;
+#[doc = "Field `NINEBITEN` reader - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
+pub type NINEBITEN_R = crate::BitReader<bool>;
+#[doc = "Field `NINEBITEN` writer - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
+pub type NINEBITEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, NINEBITADDR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 15 - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
-    #[inline(always)]
-    pub fn ninebiten(&self) -> NINEBITEN_R {
-        NINEBITEN_R::new(((self.bits >> 15) & 1) != 0)
-    }
     #[doc = "Bits 0:7 - Self address for 9-bit mode This field contains the address that should be matched when UART9BITAMASK is 0xFF."]
     #[inline(always)]
     pub fn addr(&self) -> ADDR_R {
         ADDR_R::new((self.bits & 0xff) as u8)
     }
-}
-impl W {
     #[doc = "Bit 15 - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
     #[inline(always)]
-    pub fn ninebiten(&mut self) -> NINEBITEN_W<15> {
-        NINEBITEN_W::new(self)
+    pub fn ninebiten(&self) -> NINEBITEN_R {
+        NINEBITEN_R::new(((self.bits >> 15) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bits 0:7 - Self address for 9-bit mode This field contains the address that should be matched when UART9BITAMASK is 0xFF."]
     #[inline(always)]
     pub fn addr(&mut self) -> ADDR_W<0> {
         ADDR_W::new(self)
+    }
+    #[doc = "Bit 15 - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
+    #[inline(always)]
+    pub fn ninebiten(&mut self) -> NINEBITEN_W<15> {
+        NINEBITEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

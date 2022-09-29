@@ -34,50 +34,50 @@ impl From<crate::W<FSCAL1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `VCO_CURR_CAL_OE` reader - Override current calibration"]
-pub type VCO_CURR_CAL_OE_R = crate::BitReader<bool>;
-#[doc = "Field `VCO_CURR_CAL_OE` writer - Override current calibration"]
-pub type VCO_CURR_CAL_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSCAL1_SPEC, bool, O>;
-#[doc = "Field `VCO_CURR_CAL` reader - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
-pub type VCO_CURR_CAL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `VCO_CURR_CAL` writer - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
-pub type VCO_CURR_CAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCAL1_SPEC, u8, u8, 5, O>;
 #[doc = "Field `VCO_CURR` reader - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
 pub type VCO_CURR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VCO_CURR` writer - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
 pub type VCO_CURR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCAL1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `VCO_CURR_CAL` reader - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
+pub type VCO_CURR_CAL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `VCO_CURR_CAL` writer - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
+pub type VCO_CURR_CAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSCAL1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `VCO_CURR_CAL_OE` reader - Override current calibration"]
+pub type VCO_CURR_CAL_OE_R = crate::BitReader<bool>;
+#[doc = "Field `VCO_CURR_CAL_OE` writer - Override current calibration"]
+pub type VCO_CURR_CAL_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSCAL1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7 - Override current calibration"]
+    #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
     #[inline(always)]
-    pub fn vco_curr_cal_oe(&self) -> VCO_CURR_CAL_OE_R {
-        VCO_CURR_CAL_OE_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn vco_curr(&self) -> VCO_CURR_R {
+        VCO_CURR_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:6 - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
     #[inline(always)]
     pub fn vco_curr_cal(&self) -> VCO_CURR_CAL_R {
         VCO_CURR_CAL_R::new(((self.bits >> 2) & 0x1f) as u8)
     }
-    #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
+    #[doc = "Bit 7 - Override current calibration"]
     #[inline(always)]
-    pub fn vco_curr(&self) -> VCO_CURR_R {
-        VCO_CURR_R::new((self.bits & 3) as u8)
+    pub fn vco_curr_cal_oe(&self) -> VCO_CURR_CAL_OE_R {
+        VCO_CURR_CAL_OE_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 7 - Override current calibration"]
+    #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
     #[inline(always)]
-    pub fn vco_curr_cal_oe(&mut self) -> VCO_CURR_CAL_OE_W<7> {
-        VCO_CURR_CAL_OE_W::new(self)
+    pub fn vco_curr(&mut self) -> VCO_CURR_W<0> {
+        VCO_CURR_W::new(self)
     }
     #[doc = "Bits 2:6 - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
     #[inline(always)]
     pub fn vco_curr_cal(&mut self) -> VCO_CURR_CAL_W<2> {
         VCO_CURR_CAL_W::new(self)
     }
-    #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
+    #[doc = "Bit 7 - Override current calibration"]
     #[inline(always)]
-    pub fn vco_curr(&mut self) -> VCO_CURR_W<0> {
-        VCO_CURR_W::new(self)
+    pub fn vco_curr_cal_oe(&mut self) -> VCO_CURR_CAL_OE_W<7> {
+        VCO_CURR_CAL_OE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

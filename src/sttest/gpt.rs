@@ -34,36 +34,36 @@ impl From<crate::W<GPT_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `GPTIDOE` reader - GPTimer increment/decrement override enable"]
-pub type GPTIDOE_R = crate::BitReader<bool>;
-#[doc = "Field `GPTIDOE` writer - GPTimer increment/decrement override enable"]
-pub type GPTIDOE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPT_SPEC, bool, O>;
 #[doc = "Field `GPTIDOV` reader - GPTimer increment/decrement override value"]
 pub type GPTIDOV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GPTIDOV` writer - GPTimer increment/decrement override value"]
 pub type GPTIDOV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPT_SPEC, u8, u8, 5, O>;
+#[doc = "Field `GPTIDOE` reader - GPTimer increment/decrement override enable"]
+pub type GPTIDOE_R = crate::BitReader<bool>;
+#[doc = "Field `GPTIDOE` writer - GPTimer increment/decrement override enable"]
+pub type GPTIDOE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPT_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 8 - GPTimer increment/decrement override enable"]
-    #[inline(always)]
-    pub fn gptidoe(&self) -> GPTIDOE_R {
-        GPTIDOE_R::new(((self.bits >> 8) & 1) != 0)
-    }
     #[doc = "Bits 0:4 - GPTimer increment/decrement override value"]
     #[inline(always)]
     pub fn gptidov(&self) -> GPTIDOV_R {
         GPTIDOV_R::new((self.bits & 0x1f) as u8)
     }
-}
-impl W {
     #[doc = "Bit 8 - GPTimer increment/decrement override enable"]
     #[inline(always)]
-    pub fn gptidoe(&mut self) -> GPTIDOE_W<8> {
-        GPTIDOE_W::new(self)
+    pub fn gptidoe(&self) -> GPTIDOE_R {
+        GPTIDOE_R::new(((self.bits >> 8) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bits 0:4 - GPTimer increment/decrement override value"]
     #[inline(always)]
     pub fn gptidov(&mut self) -> GPTIDOV_W<0> {
         GPTIDOV_W::new(self)
+    }
+    #[doc = "Bit 8 - GPTimer increment/decrement override enable"]
+    #[inline(always)]
+    pub fn gptidoe(&mut self) -> GPTIDOE_W<8> {
+        GPTIDOE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

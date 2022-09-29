@@ -34,22 +34,22 @@ impl From<crate::W<TBV_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PRE` reader - GPTM Timer B prescale register (16-bit mode)"]
-pub type PRE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TBV` reader - GPTM Timer B register"]
 pub type TBV_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TBV` writer - GPTM Timer B register"]
 pub type TBV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TBV_SPEC, u16, u16, 16, O>;
+#[doc = "Field `PRE` reader - GPTM Timer B prescale register (16-bit mode)"]
+pub type PRE_R = crate::FieldReader<u8, u8>;
 impl R {
-    #[doc = "Bits 16:23 - GPTM Timer B prescale register (16-bit mode)"]
-    #[inline(always)]
-    pub fn pre(&self) -> PRE_R {
-        PRE_R::new(((self.bits >> 16) & 0xff) as u8)
-    }
     #[doc = "Bits 0:15 - GPTM Timer B register"]
     #[inline(always)]
     pub fn tbv(&self) -> TBV_R {
         TBV_R::new((self.bits & 0xffff) as u16)
+    }
+    #[doc = "Bits 16:23 - GPTM Timer B prescale register (16-bit mode)"]
+    #[inline(always)]
+    pub fn pre(&self) -> PRE_R {
+        PRE_R::new(((self.bits >> 16) & 0xff) as u8)
     }
 }
 impl W {

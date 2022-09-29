@@ -34,92 +34,92 @@ impl From<crate::W<IWE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SM_TIMER_IWE` reader - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
-pub type SM_TIMER_IWE_R = crate::BitReader<bool>;
-#[doc = "Field `SM_TIMER_IWE` writer - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
-pub type SM_TIMER_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
-#[doc = "Field `USB_IWE` reader - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
-pub type USB_IWE_R = crate::BitReader<bool>;
-#[doc = "Field `USB_IWE` writer - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
-pub type USB_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
-#[doc = "Field `PORT_D_IWE` reader - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
-pub type PORT_D_IWE_R = crate::BitReader<bool>;
-#[doc = "Field `PORT_D_IWE` writer - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
-pub type PORT_D_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
-#[doc = "Field `PORT_C_IWE` reader - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
-pub type PORT_C_IWE_R = crate::BitReader<bool>;
-#[doc = "Field `PORT_C_IWE` writer - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
-pub type PORT_C_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
-#[doc = "Field `PORT_B_IWE` reader - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
-pub type PORT_B_IWE_R = crate::BitReader<bool>;
-#[doc = "Field `PORT_B_IWE` writer - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
-pub type PORT_B_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
 #[doc = "Field `PORT_A_IWE` reader - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
 pub type PORT_A_IWE_R = crate::BitReader<bool>;
 #[doc = "Field `PORT_A_IWE` writer - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
 pub type PORT_A_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
+#[doc = "Field `PORT_B_IWE` reader - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
+pub type PORT_B_IWE_R = crate::BitReader<bool>;
+#[doc = "Field `PORT_B_IWE` writer - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
+pub type PORT_B_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
+#[doc = "Field `PORT_C_IWE` reader - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
+pub type PORT_C_IWE_R = crate::BitReader<bool>;
+#[doc = "Field `PORT_C_IWE` writer - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
+pub type PORT_C_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
+#[doc = "Field `PORT_D_IWE` reader - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
+pub type PORT_D_IWE_R = crate::BitReader<bool>;
+#[doc = "Field `PORT_D_IWE` writer - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
+pub type PORT_D_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
+#[doc = "Field `USB_IWE` reader - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
+pub type USB_IWE_R = crate::BitReader<bool>;
+#[doc = "Field `USB_IWE` writer - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
+pub type USB_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
+#[doc = "Field `SM_TIMER_IWE` reader - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
+pub type SM_TIMER_IWE_R = crate::BitReader<bool>;
+#[doc = "Field `SM_TIMER_IWE` writer - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
+pub type SM_TIMER_IWE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IWE_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 5 - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
+    #[doc = "Bit 0 - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
     #[inline(always)]
-    pub fn sm_timer_iwe(&self) -> SM_TIMER_IWE_R {
-        SM_TIMER_IWE_R::new(((self.bits >> 5) & 1) != 0)
-    }
-    #[doc = "Bit 4 - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
-    #[inline(always)]
-    pub fn usb_iwe(&self) -> USB_IWE_R {
-        USB_IWE_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 3 - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
-    #[inline(always)]
-    pub fn port_d_iwe(&self) -> PORT_D_IWE_R {
-        PORT_D_IWE_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 2 - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
-    #[inline(always)]
-    pub fn port_c_iwe(&self) -> PORT_C_IWE_R {
-        PORT_C_IWE_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn port_a_iwe(&self) -> PORT_A_IWE_R {
+        PORT_A_IWE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
     #[inline(always)]
     pub fn port_b_iwe(&self) -> PORT_B_IWE_R {
         PORT_B_IWE_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
+    #[doc = "Bit 2 - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
     #[inline(always)]
-    pub fn port_a_iwe(&self) -> PORT_A_IWE_R {
-        PORT_A_IWE_R::new((self.bits & 1) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 5 - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
-    #[inline(always)]
-    pub fn sm_timer_iwe(&mut self) -> SM_TIMER_IWE_W<5> {
-        SM_TIMER_IWE_W::new(self)
-    }
-    #[doc = "Bit 4 - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
-    #[inline(always)]
-    pub fn usb_iwe(&mut self) -> USB_IWE_W<4> {
-        USB_IWE_W::new(self)
+    pub fn port_c_iwe(&self) -> PORT_C_IWE_R {
+        PORT_C_IWE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
     #[inline(always)]
-    pub fn port_d_iwe(&mut self) -> PORT_D_IWE_W<3> {
-        PORT_D_IWE_W::new(self)
+    pub fn port_d_iwe(&self) -> PORT_D_IWE_R {
+        PORT_D_IWE_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 2 - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
+    #[doc = "Bit 4 - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
     #[inline(always)]
-    pub fn port_c_iwe(&mut self) -> PORT_C_IWE_W<2> {
-        PORT_C_IWE_W::new(self)
+    pub fn usb_iwe(&self) -> USB_IWE_R {
+        USB_IWE_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
+    #[inline(always)]
+    pub fn sm_timer_iwe(&self) -> SM_TIMER_IWE_R {
+        SM_TIMER_IWE_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
+    #[inline(always)]
+    pub fn port_a_iwe(&mut self) -> PORT_A_IWE_W<0> {
+        PORT_A_IWE_W::new(self)
     }
     #[doc = "Bit 1 - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
     #[inline(always)]
     pub fn port_b_iwe(&mut self) -> PORT_B_IWE_W<1> {
         PORT_B_IWE_W::new(self)
     }
-    #[doc = "Bit 0 - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
+    #[doc = "Bit 2 - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
     #[inline(always)]
-    pub fn port_a_iwe(&mut self) -> PORT_A_IWE_W<0> {
-        PORT_A_IWE_W::new(self)
+    pub fn port_c_iwe(&mut self) -> PORT_C_IWE_W<2> {
+        PORT_C_IWE_W::new(self)
+    }
+    #[doc = "Bit 3 - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
+    #[inline(always)]
+    pub fn port_d_iwe(&mut self) -> PORT_D_IWE_W<3> {
+        PORT_D_IWE_W::new(self)
+    }
+    #[doc = "Bit 4 - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
+    #[inline(always)]
+    pub fn usb_iwe(&mut self) -> USB_IWE_W<4> {
+        USB_IWE_W::new(self)
+    }
+    #[doc = "Bit 5 - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
+    #[inline(always)]
+    pub fn sm_timer_iwe(&mut self) -> SM_TIMER_IWE_W<5> {
+        SM_TIMER_IWE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

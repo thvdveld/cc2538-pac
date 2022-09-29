@@ -34,36 +34,36 @@ impl From<crate::W<IFLS_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RXIFLSEL` reader - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
-pub type RXIFLSEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RXIFLSEL` writer - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
-pub type RXIFLSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IFLS_SPEC, u8, u8, 3, O>;
 #[doc = "Field `TXIFLSEL` reader - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO <= 7/8 empty 0x1: TX FIFO <= 3/4 empty 0x2: TX FIFO <= 1/2 empty (default) 0x3: TX FIFO <= 1/4 empty 0x4: TX FIFO <= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
 pub type TXIFLSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TXIFLSEL` writer - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO <= 7/8 empty 0x1: TX FIFO <= 3/4 empty 0x2: TX FIFO <= 1/2 empty (default) 0x3: TX FIFO <= 1/4 empty 0x4: TX FIFO <= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
 pub type TXIFLSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IFLS_SPEC, u8, u8, 3, O>;
+#[doc = "Field `RXIFLSEL` reader - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
+pub type RXIFLSEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RXIFLSEL` writer - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
+pub type RXIFLSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IFLS_SPEC, u8, u8, 3, O>;
 impl R {
-    #[doc = "Bits 3:5 - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
-    #[inline(always)]
-    pub fn rxiflsel(&self) -> RXIFLSEL_R {
-        RXIFLSEL_R::new(((self.bits >> 3) & 7) as u8)
-    }
     #[doc = "Bits 0:2 - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO <= 7/8 empty 0x1: TX FIFO <= 3/4 empty 0x2: TX FIFO <= 1/2 empty (default) 0x3: TX FIFO <= 1/4 empty 0x4: TX FIFO <= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
     #[inline(always)]
     pub fn txiflsel(&self) -> TXIFLSEL_R {
         TXIFLSEL_R::new((self.bits & 7) as u8)
     }
-}
-impl W {
     #[doc = "Bits 3:5 - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
     #[inline(always)]
-    pub fn rxiflsel(&mut self) -> RXIFLSEL_W<3> {
-        RXIFLSEL_W::new(self)
+    pub fn rxiflsel(&self) -> RXIFLSEL_R {
+        RXIFLSEL_R::new(((self.bits >> 3) & 7) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:2 - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO <= 7/8 empty 0x1: TX FIFO <= 3/4 empty 0x2: TX FIFO <= 1/2 empty (default) 0x3: TX FIFO <= 1/4 empty 0x4: TX FIFO <= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
     #[inline(always)]
     pub fn txiflsel(&mut self) -> TXIFLSEL_W<0> {
         TXIFLSEL_W::new(self)
+    }
+    #[doc = "Bits 3:5 - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
+    #[inline(always)]
+    pub fn rxiflsel(&mut self) -> RXIFLSEL_W<3> {
+        RXIFLSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

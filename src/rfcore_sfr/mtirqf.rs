@@ -34,94 +34,94 @@ impl From<crate::W<MTIRQF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `MACTIMER_OVF_COMPARE2F` reader - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
-pub type MACTIMER_OVF_COMPARE2F_R = crate::BitReader<bool>;
-#[doc = "Field `MACTIMER_OVF_COMPARE2F` writer - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
-pub type MACTIMER_OVF_COMPARE2F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
+#[doc = "Field `MACTIMER_PERF` reader - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
+pub type MACTIMER_PERF_R = crate::BitReader<bool>;
+#[doc = "Field `MACTIMER_PERF` writer - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
+pub type MACTIMER_PERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
+#[doc = "Field `MACTIMER_COMPARE1F` reader - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
+pub type MACTIMER_COMPARE1F_R = crate::BitReader<bool>;
+#[doc = "Field `MACTIMER_COMPARE1F` writer - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
+pub type MACTIMER_COMPARE1F_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
+#[doc = "Field `MACTIMER_COMPARE2F` reader - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
+pub type MACTIMER_COMPARE2F_R = crate::BitReader<bool>;
+#[doc = "Field `MACTIMER_COMPARE2F` writer - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
+pub type MACTIMER_COMPARE2F_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
+#[doc = "Field `MACTIMER_OVF_PERF` reader - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
+pub type MACTIMER_OVF_PERF_R = crate::BitReader<bool>;
+#[doc = "Field `MACTIMER_OVF_PERF` writer - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
+pub type MACTIMER_OVF_PERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
 #[doc = "Field `MACTIMER_OVF_COMPARE1F` reader - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
 pub type MACTIMER_OVF_COMPARE1F_R = crate::BitReader<bool>;
 #[doc = "Field `MACTIMER_OVF_COMPARE1F` writer - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
 pub type MACTIMER_OVF_COMPARE1F_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
-#[doc = "Field `MACTIMER_OVF_PERF` reader - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
-pub type MACTIMER_OVF_PERF_R = crate::BitReader<bool>;
-#[doc = "Field `MACTIMER_OVF_PERF` writer - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
-pub type MACTIMER_OVF_PERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
-#[doc = "Field `MACTIMER_COMPARE2F` reader - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
-pub type MACTIMER_COMPARE2F_R = crate::BitReader<bool>;
-#[doc = "Field `MACTIMER_COMPARE2F` writer - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
-pub type MACTIMER_COMPARE2F_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
-#[doc = "Field `MACTIMER_COMPARE1F` reader - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
-pub type MACTIMER_COMPARE1F_R = crate::BitReader<bool>;
-#[doc = "Field `MACTIMER_COMPARE1F` writer - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
-pub type MACTIMER_COMPARE1F_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
-#[doc = "Field `MACTIMER_PERF` reader - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
-pub type MACTIMER_PERF_R = crate::BitReader<bool>;
-#[doc = "Field `MACTIMER_PERF` writer - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
-pub type MACTIMER_PERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
+#[doc = "Field `MACTIMER_OVF_COMPARE2F` reader - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
+pub type MACTIMER_OVF_COMPARE2F_R = crate::BitReader<bool>;
+#[doc = "Field `MACTIMER_OVF_COMPARE2F` writer - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
+pub type MACTIMER_OVF_COMPARE2F_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, MTIRQF_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 5 - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
+    #[doc = "Bit 0 - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
     #[inline(always)]
-    pub fn mactimer_ovf_compare2f(&self) -> MACTIMER_OVF_COMPARE2F_R {
-        MACTIMER_OVF_COMPARE2F_R::new(((self.bits >> 5) & 1) != 0)
-    }
-    #[doc = "Bit 4 - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
-    #[inline(always)]
-    pub fn mactimer_ovf_compare1f(&self) -> MACTIMER_OVF_COMPARE1F_R {
-        MACTIMER_OVF_COMPARE1F_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 3 - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
-    #[inline(always)]
-    pub fn mactimer_ovf_perf(&self) -> MACTIMER_OVF_PERF_R {
-        MACTIMER_OVF_PERF_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 2 - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
-    #[inline(always)]
-    pub fn mactimer_compare2f(&self) -> MACTIMER_COMPARE2F_R {
-        MACTIMER_COMPARE2F_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn mactimer_perf(&self) -> MACTIMER_PERF_R {
+        MACTIMER_PERF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
     #[inline(always)]
     pub fn mactimer_compare1f(&self) -> MACTIMER_COMPARE1F_R {
         MACTIMER_COMPARE1F_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
+    #[doc = "Bit 2 - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
     #[inline(always)]
-    pub fn mactimer_perf(&self) -> MACTIMER_PERF_R {
-        MACTIMER_PERF_R::new((self.bits & 1) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 5 - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
-    #[inline(always)]
-    pub fn mactimer_ovf_compare2f(&mut self) -> MACTIMER_OVF_COMPARE2F_W<5> {
-        MACTIMER_OVF_COMPARE2F_W::new(self)
-    }
-    #[doc = "Bit 4 - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
-    #[inline(always)]
-    pub fn mactimer_ovf_compare1f(&mut self) -> MACTIMER_OVF_COMPARE1F_W<4> {
-        MACTIMER_OVF_COMPARE1F_W::new(self)
+    pub fn mactimer_compare2f(&self) -> MACTIMER_COMPARE2F_R {
+        MACTIMER_COMPARE2F_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
     #[inline(always)]
-    pub fn mactimer_ovf_perf(&mut self) -> MACTIMER_OVF_PERF_W<3> {
-        MACTIMER_OVF_PERF_W::new(self)
+    pub fn mactimer_ovf_perf(&self) -> MACTIMER_OVF_PERF_R {
+        MACTIMER_OVF_PERF_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 2 - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
+    #[doc = "Bit 4 - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
     #[inline(always)]
-    pub fn mactimer_compare2f(&mut self) -> MACTIMER_COMPARE2F_W<2> {
-        MACTIMER_COMPARE2F_W::new(self)
+    pub fn mactimer_ovf_compare1f(&self) -> MACTIMER_OVF_COMPARE1F_R {
+        MACTIMER_OVF_COMPARE1F_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
+    #[inline(always)]
+    pub fn mactimer_ovf_compare2f(&self) -> MACTIMER_OVF_COMPARE2F_R {
+        MACTIMER_OVF_COMPARE2F_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
+    #[inline(always)]
+    pub fn mactimer_perf(&mut self) -> MACTIMER_PERF_W<0> {
+        MACTIMER_PERF_W::new(self)
     }
     #[doc = "Bit 1 - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
     #[inline(always)]
     pub fn mactimer_compare1f(&mut self) -> MACTIMER_COMPARE1F_W<1> {
         MACTIMER_COMPARE1F_W::new(self)
     }
-    #[doc = "Bit 0 - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
+    #[doc = "Bit 2 - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
     #[inline(always)]
-    pub fn mactimer_perf(&mut self) -> MACTIMER_PERF_W<0> {
-        MACTIMER_PERF_W::new(self)
+    pub fn mactimer_compare2f(&mut self) -> MACTIMER_COMPARE2F_W<2> {
+        MACTIMER_COMPARE2F_W::new(self)
+    }
+    #[doc = "Bit 3 - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
+    #[inline(always)]
+    pub fn mactimer_ovf_perf(&mut self) -> MACTIMER_OVF_PERF_W<3> {
+        MACTIMER_OVF_PERF_W::new(self)
+    }
+    #[doc = "Bit 4 - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
+    #[inline(always)]
+    pub fn mactimer_ovf_compare1f(&mut self) -> MACTIMER_OVF_COMPARE1F_W<4> {
+        MACTIMER_OVF_COMPARE1F_W::new(self)
+    }
+    #[doc = "Bit 5 - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
+    #[inline(always)]
+    pub fn mactimer_ovf_compare2f(&mut self) -> MACTIMER_OVF_COMPARE2F_W<5> {
+        MACTIMER_OVF_COMPARE2F_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

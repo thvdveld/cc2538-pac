@@ -34,29 +34,29 @@ impl From<crate::W<IMR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `STOPIM` reader - Stop condition interrupt mask 1: The STOP condition interrupt is sent to the interrupt controller when the STOPRIS bit in the I2CSRIS register is set. 0: The STOPRIS interrupt is supressed and not sent to the interrupt controller."]
-pub type STOPIM_R = crate::BitReader<bool>;
-#[doc = "Field `STARTIM` reader - Start condition interrupt mask 1: The START condition interrupt is sent to the interrupt controller when the STARTRIS bit in the I2CSRIS register is set. 0: The STARTRIS interrupt is supressed and not sent to the interrupt controller."]
-pub type STARTIM_R = crate::BitReader<bool>;
 #[doc = "Field `DATAIM` reader - Data interrupt mask 1: The data received or data requested interrupt is sent to the interrupt controller when the DATARIS bit in the I2CSRIS register is set. 0: The DATARIS interrupt is surpressed and not sent to the interrupt controller."]
 pub type DATAIM_R = crate::BitReader<bool>;
 #[doc = "Field `DATAIM` writer - Data interrupt mask 1: The data received or data requested interrupt is sent to the interrupt controller when the DATARIS bit in the I2CSRIS register is set. 0: The DATARIS interrupt is surpressed and not sent to the interrupt controller."]
 pub type DATAIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+#[doc = "Field `STARTIM` reader - Start condition interrupt mask 1: The START condition interrupt is sent to the interrupt controller when the STARTRIS bit in the I2CSRIS register is set. 0: The STARTRIS interrupt is supressed and not sent to the interrupt controller."]
+pub type STARTIM_R = crate::BitReader<bool>;
+#[doc = "Field `STOPIM` reader - Stop condition interrupt mask 1: The STOP condition interrupt is sent to the interrupt controller when the STOPRIS bit in the I2CSRIS register is set. 0: The STOPRIS interrupt is supressed and not sent to the interrupt controller."]
+pub type STOPIM_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 2 - Stop condition interrupt mask 1: The STOP condition interrupt is sent to the interrupt controller when the STOPRIS bit in the I2CSRIS register is set. 0: The STOPRIS interrupt is supressed and not sent to the interrupt controller."]
+    #[doc = "Bit 0 - Data interrupt mask 1: The data received or data requested interrupt is sent to the interrupt controller when the DATARIS bit in the I2CSRIS register is set. 0: The DATARIS interrupt is surpressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn stopim(&self) -> STOPIM_R {
-        STOPIM_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn dataim(&self) -> DATAIM_R {
+        DATAIM_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Start condition interrupt mask 1: The START condition interrupt is sent to the interrupt controller when the STARTRIS bit in the I2CSRIS register is set. 0: The STARTRIS interrupt is supressed and not sent to the interrupt controller."]
     #[inline(always)]
     pub fn startim(&self) -> STARTIM_R {
         STARTIM_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Data interrupt mask 1: The data received or data requested interrupt is sent to the interrupt controller when the DATARIS bit in the I2CSRIS register is set. 0: The DATARIS interrupt is surpressed and not sent to the interrupt controller."]
+    #[doc = "Bit 2 - Stop condition interrupt mask 1: The STOP condition interrupt is sent to the interrupt controller when the STOPRIS bit in the I2CSRIS register is set. 0: The STOPRIS interrupt is supressed and not sent to the interrupt controller."]
     #[inline(always)]
-    pub fn dataim(&self) -> DATAIM_R {
-        DATAIM_R::new((self.bits & 1) != 0)
+    pub fn stopim(&self) -> STOPIM_R {
+        STOPIM_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

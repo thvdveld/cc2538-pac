@@ -34,64 +34,64 @@ impl From<crate::W<ADCCON1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `EOC` reader - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
-pub type EOC_R = crate::BitReader<bool>;
-#[doc = "Field `EOC` writer - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
-pub type EOC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCCON1_SPEC, bool, O>;
-#[doc = "Field `ST` reader - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
-pub type ST_R = crate::BitReader<bool>;
-#[doc = "Field `ST` writer - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
-pub type ST_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCCON1_SPEC, bool, O>;
-#[doc = "Field `STSEL` reader - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
-pub type STSEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `STSEL` writer - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
-pub type STSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCCON1_SPEC, u8, u8, 2, O>;
 #[doc = "Field `RCTRL` reader - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
 pub type RCTRL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RCTRL` writer - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
 pub type RCTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCCON1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `STSEL` reader - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
+pub type STSEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `STSEL` writer - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
+pub type STSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCCON1_SPEC, u8, u8, 2, O>;
+#[doc = "Field `ST` reader - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
+pub type ST_R = crate::BitReader<bool>;
+#[doc = "Field `ST` writer - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
+pub type ST_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCCON1_SPEC, bool, O>;
+#[doc = "Field `EOC` reader - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
+pub type EOC_R = crate::BitReader<bool>;
+#[doc = "Field `EOC` writer - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
+pub type EOC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCCON1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7 - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
+    #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
     #[inline(always)]
-    pub fn eoc(&self) -> EOC_R {
-        EOC_R::new(((self.bits >> 7) & 1) != 0)
-    }
-    #[doc = "Bit 6 - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
-    #[inline(always)]
-    pub fn st(&self) -> ST_R {
-        ST_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn rctrl(&self) -> RCTRL_R {
+        RCTRL_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
     #[inline(always)]
     pub fn stsel(&self) -> STSEL_R {
         STSEL_R::new(((self.bits >> 4) & 3) as u8)
     }
-    #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
+    #[doc = "Bit 6 - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
     #[inline(always)]
-    pub fn rctrl(&self) -> RCTRL_R {
-        RCTRL_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn st(&self) -> ST_R {
+        ST_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
+    #[inline(always)]
+    pub fn eoc(&self) -> EOC_R {
+        EOC_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 7 - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
+    #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
     #[inline(always)]
-    pub fn eoc(&mut self) -> EOC_W<7> {
-        EOC_W::new(self)
-    }
-    #[doc = "Bit 6 - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
-    #[inline(always)]
-    pub fn st(&mut self) -> ST_W<6> {
-        ST_W::new(self)
+    pub fn rctrl(&mut self) -> RCTRL_W<2> {
+        RCTRL_W::new(self)
     }
     #[doc = "Bits 4:5 - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
     #[inline(always)]
     pub fn stsel(&mut self) -> STSEL_W<4> {
         STSEL_W::new(self)
     }
-    #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
+    #[doc = "Bit 6 - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
     #[inline(always)]
-    pub fn rctrl(&mut self) -> RCTRL_W<2> {
-        RCTRL_W::new(self)
+    pub fn st(&mut self) -> ST_W<6> {
+        ST_W::new(self)
+    }
+    #[doc = "Bit 7 - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
+    #[inline(always)]
+    pub fn eoc(&mut self) -> EOC_W<7> {
+        EOC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -34,22 +34,22 @@ impl From<crate::W<ADDR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `UPDATE` reader - This bit is set by hardware when writing to this register, and is cleared by hardware when the new address becomes effective."]
-pub type UPDATE_R = crate::BitReader<bool>;
 #[doc = "Field `USBADDR` reader - Device address. The address shall be updated upon successful completion of the status stage of the SET_ADDRESS request."]
 pub type USBADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `USBADDR` writer - Device address. The address shall be updated upon successful completion of the status stage of the SET_ADDRESS request."]
 pub type USBADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDR_SPEC, u8, u8, 7, O>;
+#[doc = "Field `UPDATE` reader - This bit is set by hardware when writing to this register, and is cleared by hardware when the new address becomes effective."]
+pub type UPDATE_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 7 - This bit is set by hardware when writing to this register, and is cleared by hardware when the new address becomes effective."]
-    #[inline(always)]
-    pub fn update(&self) -> UPDATE_R {
-        UPDATE_R::new(((self.bits >> 7) & 1) != 0)
-    }
     #[doc = "Bits 0:6 - Device address. The address shall be updated upon successful completion of the status stage of the SET_ADDRESS request."]
     #[inline(always)]
     pub fn usbaddr(&self) -> USBADDR_R {
         USBADDR_R::new((self.bits & 0x7f) as u8)
+    }
+    #[doc = "Bit 7 - This bit is set by hardware when writing to this register, and is cleared by hardware when the new address becomes effective."]
+    #[inline(always)]
+    pub fn update(&self) -> UPDATE_R {
+        UPDATE_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

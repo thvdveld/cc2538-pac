@@ -34,22 +34,22 @@ impl From<crate::W<CMPCTL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `OUTPUT` reader - Comparator output"]
+pub type OUTPUT_R = crate::BitReader<bool>;
 #[doc = "Field `EN` reader - Comparator enable"]
 pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - Comparator enable"]
 pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMPCTL_SPEC, bool, O>;
-#[doc = "Field `OUTPUT` reader - Comparator output"]
-pub type OUTPUT_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 1 - Comparator enable"]
-    #[inline(always)]
-    pub fn en(&self) -> EN_R {
-        EN_R::new(((self.bits >> 1) & 1) != 0)
-    }
     #[doc = "Bit 0 - Comparator output"]
     #[inline(always)]
     pub fn output(&self) -> OUTPUT_R {
         OUTPUT_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Comparator enable"]
+    #[inline(always)]
+    pub fn en(&self) -> EN_R {
+        EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

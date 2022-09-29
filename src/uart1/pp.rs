@@ -13,20 +13,20 @@ impl From<crate::R<PP_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `NB` reader - 9-bit support 1: The UART module provides support for the transmission of 9-bit data for RS-485 support. 0: The UART module does not provide support for the transmission of 9-bit data for RS-485 support."]
-pub type NB_R = crate::BitReader<bool>;
 #[doc = "Field `SC` reader - Smart card support 1: The UART module provides smart card support. 0: The UART module does not provide smart card support."]
 pub type SC_R = crate::BitReader<bool>;
+#[doc = "Field `NB` reader - 9-bit support 1: The UART module provides support for the transmission of 9-bit data for RS-485 support. 0: The UART module does not provide support for the transmission of 9-bit data for RS-485 support."]
+pub type NB_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 1 - 9-bit support 1: The UART module provides support for the transmission of 9-bit data for RS-485 support. 0: The UART module does not provide support for the transmission of 9-bit data for RS-485 support."]
-    #[inline(always)]
-    pub fn nb(&self) -> NB_R {
-        NB_R::new(((self.bits >> 1) & 1) != 0)
-    }
     #[doc = "Bit 0 - Smart card support 1: The UART module provides smart card support. 0: The UART module does not provide smart card support."]
     #[inline(always)]
     pub fn sc(&self) -> SC_R {
         SC_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - 9-bit support 1: The UART module provides support for the transmission of 9-bit data for RS-485 support. 0: The UART module does not provide support for the transmission of 9-bit data for RS-485 support."]
+    #[inline(always)]
+    pub fn nb(&self) -> NB_R {
+        NB_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "UART peripheral properties The PP register provides information regarding the properties of the UART module.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pp](index.html) module"]

@@ -34,68 +34,68 @@ impl From<crate::W<PTEST1_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `LODIV_PD` reader - LO power-down signal When PD_OVERRIDE = 1"]
+pub type LODIV_PD_R = crate::BitReader<bool>;
+#[doc = "Field `LODIV_PD` writer - LO power-down signal When PD_OVERRIDE = 1"]
+pub type LODIV_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
+#[doc = "Field `VCO_PD` reader - VCO power-down signal When PD_OVERRIDE = 1"]
+pub type VCO_PD_R = crate::BitReader<bool>;
+#[doc = "Field `VCO_PD` writer - VCO power-down signal When PD_OVERRIDE = 1"]
+pub type VCO_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
+#[doc = "Field `PA_PD` reader - Power amplifier power-down signal When PD_OVERRIDE = 1"]
+pub type PA_PD_R = crate::BitReader<bool>;
+#[doc = "Field `PA_PD` writer - Power amplifier power-down signal When PD_OVERRIDE = 1"]
+pub type PA_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
 #[doc = "Field `PD_OVERRIDE` reader - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
 depenancy."]
 pub type PD_OVERRIDE_R = crate::BitReader<bool>;
 #[doc = "Field `PD_OVERRIDE` writer - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
 depenancy."]
 pub type PD_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
-#[doc = "Field `PA_PD` reader - Power amplifier power-down signal When PD_OVERRIDE = 1"]
-pub type PA_PD_R = crate::BitReader<bool>;
-#[doc = "Field `PA_PD` writer - Power amplifier power-down signal When PD_OVERRIDE = 1"]
-pub type PA_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
-#[doc = "Field `VCO_PD` reader - VCO power-down signal When PD_OVERRIDE = 1"]
-pub type VCO_PD_R = crate::BitReader<bool>;
-#[doc = "Field `VCO_PD` writer - VCO power-down signal When PD_OVERRIDE = 1"]
-pub type VCO_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
-#[doc = "Field `LODIV_PD` reader - LO power-down signal When PD_OVERRIDE = 1"]
-pub type LODIV_PD_R = crate::BitReader<bool>;
-#[doc = "Field `LODIV_PD` writer - LO power-down signal When PD_OVERRIDE = 1"]
-pub type LODIV_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 3 - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
-depenancy."]
+    #[doc = "Bit 0 - LO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn pd_override(&self) -> PD_OVERRIDE_R {
-        PD_OVERRIDE_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 2 - Power amplifier power-down signal When PD_OVERRIDE = 1"]
-    #[inline(always)]
-    pub fn pa_pd(&self) -> PA_PD_R {
-        PA_PD_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn lodiv_pd(&self) -> LODIV_PD_R {
+        LODIV_PD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - VCO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn vco_pd(&self) -> VCO_PD_R {
         VCO_PD_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - LO power-down signal When PD_OVERRIDE = 1"]
+    #[doc = "Bit 2 - Power amplifier power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn lodiv_pd(&self) -> LODIV_PD_R {
-        LODIV_PD_R::new((self.bits & 1) != 0)
+    pub fn pa_pd(&self) -> PA_PD_R {
+        PA_PD_R::new(((self.bits >> 2) & 1) != 0)
     }
-}
-impl W {
     #[doc = "Bit 3 - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
 depenancy."]
     #[inline(always)]
-    pub fn pd_override(&mut self) -> PD_OVERRIDE_W<3> {
-        PD_OVERRIDE_W::new(self)
+    pub fn pd_override(&self) -> PD_OVERRIDE_R {
+        PD_OVERRIDE_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 2 - Power amplifier power-down signal When PD_OVERRIDE = 1"]
+}
+impl W {
+    #[doc = "Bit 0 - LO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn pa_pd(&mut self) -> PA_PD_W<2> {
-        PA_PD_W::new(self)
+    pub fn lodiv_pd(&mut self) -> LODIV_PD_W<0> {
+        LODIV_PD_W::new(self)
     }
     #[doc = "Bit 1 - VCO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     pub fn vco_pd(&mut self) -> VCO_PD_W<1> {
         VCO_PD_W::new(self)
     }
-    #[doc = "Bit 0 - LO power-down signal When PD_OVERRIDE = 1"]
+    #[doc = "Bit 2 - Power amplifier power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    pub fn lodiv_pd(&mut self) -> LODIV_PD_W<0> {
-        LODIV_PD_W::new(self)
+    pub fn pa_pd(&mut self) -> PA_PD_W<2> {
+        PA_PD_W::new(self)
+    }
+    #[doc = "Bit 3 - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
+depenancy."]
+    #[inline(always)]
+    pub fn pd_override(&mut self) -> PD_OVERRIDE_W<3> {
+        PD_OVERRIDE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

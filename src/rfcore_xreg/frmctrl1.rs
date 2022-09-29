@@ -34,50 +34,50 @@ impl From<crate::W<FRMCTRL1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PENDING_OR` reader - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
-pub type PENDING_OR_R = crate::BitReader<bool>;
-#[doc = "Field `PENDING_OR` writer - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
-pub type PENDING_OR_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRMCTRL1_SPEC, bool, O>;
-#[doc = "Field `IGNORE_TX_UNDERF` reader - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
-pub type IGNORE_TX_UNDERF_R = crate::BitReader<bool>;
-#[doc = "Field `IGNORE_TX_UNDERF` writer - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
-pub type IGNORE_TX_UNDERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRMCTRL1_SPEC, bool, O>;
 #[doc = "Field `SET_RXENMASK_ON_TX` reader - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
 pub type SET_RXENMASK_ON_TX_R = crate::BitReader<bool>;
 #[doc = "Field `SET_RXENMASK_ON_TX` writer - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
 pub type SET_RXENMASK_ON_TX_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRMCTRL1_SPEC, bool, O>;
+#[doc = "Field `IGNORE_TX_UNDERF` reader - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
+pub type IGNORE_TX_UNDERF_R = crate::BitReader<bool>;
+#[doc = "Field `IGNORE_TX_UNDERF` writer - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
+pub type IGNORE_TX_UNDERF_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRMCTRL1_SPEC, bool, O>;
+#[doc = "Field `PENDING_OR` reader - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
+pub type PENDING_OR_R = crate::BitReader<bool>;
+#[doc = "Field `PENDING_OR` writer - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
+pub type PENDING_OR_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRMCTRL1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 2 - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
+    #[doc = "Bit 0 - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
     #[inline(always)]
-    pub fn pending_or(&self) -> PENDING_OR_R {
-        PENDING_OR_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn set_rxenmask_on_tx(&self) -> SET_RXENMASK_ON_TX_R {
+        SET_RXENMASK_ON_TX_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
     #[inline(always)]
     pub fn ignore_tx_underf(&self) -> IGNORE_TX_UNDERF_R {
         IGNORE_TX_UNDERF_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
+    #[doc = "Bit 2 - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
     #[inline(always)]
-    pub fn set_rxenmask_on_tx(&self) -> SET_RXENMASK_ON_TX_R {
-        SET_RXENMASK_ON_TX_R::new((self.bits & 1) != 0)
+    pub fn pending_or(&self) -> PENDING_OR_R {
+        PENDING_OR_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 2 - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
+    #[doc = "Bit 0 - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
     #[inline(always)]
-    pub fn pending_or(&mut self) -> PENDING_OR_W<2> {
-        PENDING_OR_W::new(self)
+    pub fn set_rxenmask_on_tx(&mut self) -> SET_RXENMASK_ON_TX_W<0> {
+        SET_RXENMASK_ON_TX_W::new(self)
     }
     #[doc = "Bit 1 - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
     #[inline(always)]
     pub fn ignore_tx_underf(&mut self) -> IGNORE_TX_UNDERF_W<1> {
         IGNORE_TX_UNDERF_W::new(self)
     }
-    #[doc = "Bit 0 - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
+    #[doc = "Bit 2 - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
     #[inline(always)]
-    pub fn set_rxenmask_on_tx(&mut self) -> SET_RXENMASK_ON_TX_W<0> {
-        SET_RXENMASK_ON_TX_W::new(self)
+    pub fn pending_or(&mut self) -> PENDING_OR_W<2> {
+        PENDING_OR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

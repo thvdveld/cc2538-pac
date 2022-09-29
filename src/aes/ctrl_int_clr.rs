@@ -19,41 +19,41 @@ impl From<crate::W<CTRL_INT_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DMA_BUS_ERR` writer - If 1 is written to this bit, the DMA bus error status is cleared. Writing 0 has no effect."]
-pub type DMA_BUS_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
-#[doc = "Field `KEY_ST_WR_ERR` writer - If 1 is written to this bit, the key store write error status is cleared. Writing 0 has no effect."]
-pub type KEY_ST_WR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
-#[doc = "Field `KEY_ST_RD_ERR` writer - If 1 is written to this bit, the key store read error status is cleared. Writing 0 has no effect."]
-pub type KEY_ST_RD_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
-#[doc = "Field `DMA_IN_DONE` writer - If 1 is written to this bit, the DMA in done (irq_dma_in_done) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
-pub type DMA_IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
 #[doc = "Field `RESULT_AV` writer - If 1 is written to this bit, the result available (irq_result_av) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
 pub type RESULT_AV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
+#[doc = "Field `DMA_IN_DONE` writer - If 1 is written to this bit, the DMA in done (irq_dma_in_done) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
+pub type DMA_IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
+#[doc = "Field `KEY_ST_RD_ERR` writer - If 1 is written to this bit, the key store read error status is cleared. Writing 0 has no effect."]
+pub type KEY_ST_RD_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
+#[doc = "Field `KEY_ST_WR_ERR` writer - If 1 is written to this bit, the key store write error status is cleared. Writing 0 has no effect."]
+pub type KEY_ST_WR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
+#[doc = "Field `DMA_BUS_ERR` writer - If 1 is written to this bit, the DMA bus error status is cleared. Writing 0 has no effect."]
+pub type DMA_BUS_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR_SPEC, bool, O>;
 impl W {
-    #[doc = "Bit 31 - If 1 is written to this bit, the DMA bus error status is cleared. Writing 0 has no effect."]
+    #[doc = "Bit 0 - If 1 is written to this bit, the result available (irq_result_av) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
     #[inline(always)]
-    pub fn dma_bus_err(&mut self) -> DMA_BUS_ERR_W<31> {
-        DMA_BUS_ERR_W::new(self)
-    }
-    #[doc = "Bit 30 - If 1 is written to this bit, the key store write error status is cleared. Writing 0 has no effect."]
-    #[inline(always)]
-    pub fn key_st_wr_err(&mut self) -> KEY_ST_WR_ERR_W<30> {
-        KEY_ST_WR_ERR_W::new(self)
-    }
-    #[doc = "Bit 29 - If 1 is written to this bit, the key store read error status is cleared. Writing 0 has no effect."]
-    #[inline(always)]
-    pub fn key_st_rd_err(&mut self) -> KEY_ST_RD_ERR_W<29> {
-        KEY_ST_RD_ERR_W::new(self)
+    pub fn result_av(&mut self) -> RESULT_AV_W<0> {
+        RESULT_AV_W::new(self)
     }
     #[doc = "Bit 1 - If 1 is written to this bit, the DMA in done (irq_dma_in_done) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
     #[inline(always)]
     pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<1> {
         DMA_IN_DONE_W::new(self)
     }
-    #[doc = "Bit 0 - If 1 is written to this bit, the result available (irq_result_av) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
+    #[doc = "Bit 29 - If 1 is written to this bit, the key store read error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
-    pub fn result_av(&mut self) -> RESULT_AV_W<0> {
-        RESULT_AV_W::new(self)
+    pub fn key_st_rd_err(&mut self) -> KEY_ST_RD_ERR_W<29> {
+        KEY_ST_RD_ERR_W::new(self)
+    }
+    #[doc = "Bit 30 - If 1 is written to this bit, the key store write error status is cleared. Writing 0 has no effect."]
+    #[inline(always)]
+    pub fn key_st_wr_err(&mut self) -> KEY_ST_WR_ERR_W<30> {
+        KEY_ST_WR_ERR_W::new(self)
+    }
+    #[doc = "Bit 31 - If 1 is written to this bit, the DMA bus error status is cleared. Writing 0 has no effect."]
+    #[inline(always)]
+    pub fn dma_bus_err(&mut self) -> DMA_BUS_ERR_W<31> {
+        DMA_BUS_ERR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

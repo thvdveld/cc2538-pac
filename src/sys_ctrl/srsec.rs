@@ -34,36 +34,36 @@ impl From<crate::W<SRSEC_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `AES` reader - 0: AES module is not reset 1: AES module is reset"]
-pub type AES_R = crate::BitReader<bool>;
-#[doc = "Field `AES` writer - 0: AES module is not reset 1: AES module is reset"]
-pub type AES_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRSEC_SPEC, bool, O>;
 #[doc = "Field `PKA` reader - 0: PKA module is not reset 1: PKA module is reset"]
 pub type PKA_R = crate::BitReader<bool>;
 #[doc = "Field `PKA` writer - 0: PKA module is not reset 1: PKA module is reset"]
 pub type PKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRSEC_SPEC, bool, O>;
+#[doc = "Field `AES` reader - 0: AES module is not reset 1: AES module is reset"]
+pub type AES_R = crate::BitReader<bool>;
+#[doc = "Field `AES` writer - 0: AES module is not reset 1: AES module is reset"]
+pub type AES_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRSEC_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1 - 0: AES module is not reset 1: AES module is reset"]
-    #[inline(always)]
-    pub fn aes(&self) -> AES_R {
-        AES_R::new(((self.bits >> 1) & 1) != 0)
-    }
     #[doc = "Bit 0 - 0: PKA module is not reset 1: PKA module is reset"]
     #[inline(always)]
     pub fn pka(&self) -> PKA_R {
         PKA_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
     #[doc = "Bit 1 - 0: AES module is not reset 1: AES module is reset"]
     #[inline(always)]
-    pub fn aes(&mut self) -> AES_W<1> {
-        AES_W::new(self)
+    pub fn aes(&self) -> AES_R {
+        AES_R::new(((self.bits >> 1) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bit 0 - 0: PKA module is not reset 1: PKA module is reset"]
     #[inline(always)]
     pub fn pka(&mut self) -> PKA_W<0> {
         PKA_W::new(self)
+    }
+    #[doc = "Bit 1 - 0: AES module is not reset 1: AES module is reset"]
+    #[inline(always)]
+    pub fn aes(&mut self) -> AES_W<1> {
+        AES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

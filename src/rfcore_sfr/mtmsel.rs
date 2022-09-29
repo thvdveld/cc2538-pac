@@ -34,36 +34,36 @@ impl From<crate::W<MTMSEL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `MTMOVFSEL` reader - The value of this register selects the internal registers that are modified or read when accessing MTMOVF0, MTMOVF1, and MTMOVF2. 000: MTovf (overflow counter) 001: MTovf_cap (overflow capture) 010: MTovf_per (overflow period) 011: MTovf_cmp1 (overflow compare 1) 100: MTovf_cmp2 (overflow compare 2) 101 to 111: Reserved"]
-pub type MTMOVFSEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `MTMOVFSEL` writer - The value of this register selects the internal registers that are modified or read when accessing MTMOVF0, MTMOVF1, and MTMOVF2. 000: MTovf (overflow counter) 001: MTovf_cap (overflow capture) 010: MTovf_per (overflow period) 011: MTovf_cmp1 (overflow compare 1) 100: MTovf_cmp2 (overflow compare 2) 101 to 111: Reserved"]
-pub type MTMOVFSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MTMSEL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `MTMSEL` reader - The value of this register selects the internal registers that are modified or read when accessing MTM0 and MTM1. 000: MTtim (timer count value) 001: MT_cap (timer capture) 010: MT_per (timer period) 011: MT_cmp1 (timer compare 1) 100: MT_cmp2 (timer compare 2) 101 to 111: Reserved MTM0"]
 pub type MTMSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MTMSEL` writer - The value of this register selects the internal registers that are modified or read when accessing MTM0 and MTM1. 000: MTtim (timer count value) 001: MT_cap (timer capture) 010: MT_per (timer period) 011: MT_cmp1 (timer compare 1) 100: MT_cmp2 (timer compare 2) 101 to 111: Reserved MTM0"]
 pub type MTMSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MTMSEL_SPEC, u8, u8, 3, O>;
+#[doc = "Field `MTMOVFSEL` reader - The value of this register selects the internal registers that are modified or read when accessing MTMOVF0, MTMOVF1, and MTMOVF2. 000: MTovf (overflow counter) 001: MTovf_cap (overflow capture) 010: MTovf_per (overflow period) 011: MTovf_cmp1 (overflow compare 1) 100: MTovf_cmp2 (overflow compare 2) 101 to 111: Reserved"]
+pub type MTMOVFSEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `MTMOVFSEL` writer - The value of this register selects the internal registers that are modified or read when accessing MTMOVF0, MTMOVF1, and MTMOVF2. 000: MTovf (overflow counter) 001: MTovf_cap (overflow capture) 010: MTovf_per (overflow period) 011: MTovf_cmp1 (overflow compare 1) 100: MTovf_cmp2 (overflow compare 2) 101 to 111: Reserved"]
+pub type MTMOVFSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MTMSEL_SPEC, u8, u8, 3, O>;
 impl R {
-    #[doc = "Bits 4:6 - The value of this register selects the internal registers that are modified or read when accessing MTMOVF0, MTMOVF1, and MTMOVF2. 000: MTovf (overflow counter) 001: MTovf_cap (overflow capture) 010: MTovf_per (overflow period) 011: MTovf_cmp1 (overflow compare 1) 100: MTovf_cmp2 (overflow compare 2) 101 to 111: Reserved"]
-    #[inline(always)]
-    pub fn mtmovfsel(&self) -> MTMOVFSEL_R {
-        MTMOVFSEL_R::new(((self.bits >> 4) & 7) as u8)
-    }
     #[doc = "Bits 0:2 - The value of this register selects the internal registers that are modified or read when accessing MTM0 and MTM1. 000: MTtim (timer count value) 001: MT_cap (timer capture) 010: MT_per (timer period) 011: MT_cmp1 (timer compare 1) 100: MT_cmp2 (timer compare 2) 101 to 111: Reserved MTM0"]
     #[inline(always)]
     pub fn mtmsel(&self) -> MTMSEL_R {
         MTMSEL_R::new((self.bits & 7) as u8)
     }
-}
-impl W {
     #[doc = "Bits 4:6 - The value of this register selects the internal registers that are modified or read when accessing MTMOVF0, MTMOVF1, and MTMOVF2. 000: MTovf (overflow counter) 001: MTovf_cap (overflow capture) 010: MTovf_per (overflow period) 011: MTovf_cmp1 (overflow compare 1) 100: MTovf_cmp2 (overflow compare 2) 101 to 111: Reserved"]
     #[inline(always)]
-    pub fn mtmovfsel(&mut self) -> MTMOVFSEL_W<4> {
-        MTMOVFSEL_W::new(self)
+    pub fn mtmovfsel(&self) -> MTMOVFSEL_R {
+        MTMOVFSEL_R::new(((self.bits >> 4) & 7) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:2 - The value of this register selects the internal registers that are modified or read when accessing MTM0 and MTM1. 000: MTtim (timer count value) 001: MT_cap (timer capture) 010: MT_per (timer period) 011: MT_cmp1 (timer compare 1) 100: MT_cmp2 (timer compare 2) 101 to 111: Reserved MTM0"]
     #[inline(always)]
     pub fn mtmsel(&mut self) -> MTMSEL_W<0> {
         MTMSEL_W::new(self)
+    }
+    #[doc = "Bits 4:6 - The value of this register selects the internal registers that are modified or read when accessing MTMOVF0, MTMOVF1, and MTMOVF2. 000: MTovf (overflow counter) 001: MTovf_cap (overflow capture) 010: MTovf_per (overflow period) 011: MTovf_cmp1 (overflow compare 1) 100: MTovf_cmp2 (overflow compare 2) 101 to 111: Reserved"]
+    #[inline(always)]
+    pub fn mtmovfsel(&mut self) -> MTMOVFSEL_W<4> {
+        MTMOVFSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

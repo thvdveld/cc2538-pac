@@ -34,37 +34,37 @@ impl From<crate::W<RFC_OBS_CTRL1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RFC_OBS_POL1` reader - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
-pub type RFC_OBS_POL1_R = crate::BitReader<bool>;
-#[doc = "Field `RFC_OBS_POL1` writer - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
-pub type RFC_OBS_POL1_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFC_OBS_CTRL1_SPEC, bool, O>;
 #[doc = "Field `RFC_OBS_MUX1` reader - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
 pub type RFC_OBS_MUX1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RFC_OBS_MUX1` writer - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
 pub type RFC_OBS_MUX1_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, RFC_OBS_CTRL1_SPEC, u8, u8, 6, O>;
+#[doc = "Field `RFC_OBS_POL1` reader - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
+pub type RFC_OBS_POL1_R = crate::BitReader<bool>;
+#[doc = "Field `RFC_OBS_POL1` writer - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
+pub type RFC_OBS_POL1_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFC_OBS_CTRL1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 6 - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
-    #[inline(always)]
-    pub fn rfc_obs_pol1(&self) -> RFC_OBS_POL1_R {
-        RFC_OBS_POL1_R::new(((self.bits >> 6) & 1) != 0)
-    }
     #[doc = "Bits 0:5 - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
     #[inline(always)]
     pub fn rfc_obs_mux1(&self) -> RFC_OBS_MUX1_R {
         RFC_OBS_MUX1_R::new((self.bits & 0x3f) as u8)
     }
-}
-impl W {
     #[doc = "Bit 6 - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
     #[inline(always)]
-    pub fn rfc_obs_pol1(&mut self) -> RFC_OBS_POL1_W<6> {
-        RFC_OBS_POL1_W::new(self)
+    pub fn rfc_obs_pol1(&self) -> RFC_OBS_POL1_R {
+        RFC_OBS_POL1_R::new(((self.bits >> 6) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bits 0:5 - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
     #[inline(always)]
     pub fn rfc_obs_mux1(&mut self) -> RFC_OBS_MUX1_W<0> {
         RFC_OBS_MUX1_W::new(self)
+    }
+    #[doc = "Bit 6 - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
+    #[inline(always)]
+    pub fn rfc_obs_pol1(&mut self) -> RFC_OBS_POL1_W<6> {
+        RFC_OBS_POL1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

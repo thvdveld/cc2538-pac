@@ -34,22 +34,22 @@ impl From<crate::W<CLD_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `VALID` reader - 0: CLD status in always-on domain is not equal to status in the EN register. 1: CLD status in always-on domain and EN register are equal."]
-pub type VALID_R = crate::BitReader<bool>;
 #[doc = "Field `EN` reader - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
 pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
 pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLD_SPEC, bool, O>;
+#[doc = "Field `VALID` reader - 0: CLD status in always-on domain is not equal to status in the EN register. 1: CLD status in always-on domain and EN register are equal."]
+pub type VALID_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 8 - 0: CLD status in always-on domain is not equal to status in the EN register. 1: CLD status in always-on domain and EN register are equal."]
-    #[inline(always)]
-    pub fn valid(&self) -> VALID_R {
-        VALID_R::new(((self.bits >> 8) & 1) != 0)
-    }
     #[doc = "Bit 0 - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 8 - 0: CLD status in always-on domain is not equal to status in the EN register. 1: CLD status in always-on domain and EN register are equal."]
+    #[inline(always)]
+    pub fn valid(&self) -> VALID_R {
+        VALID_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

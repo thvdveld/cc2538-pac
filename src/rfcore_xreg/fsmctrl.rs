@@ -34,36 +34,36 @@ impl From<crate::W<FSMCTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SLOTTED_ACK` reader - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
-pub type SLOTTED_ACK_R = crate::BitReader<bool>;
-#[doc = "Field `SLOTTED_ACK` writer - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
-pub type SLOTTED_ACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSMCTRL_SPEC, bool, O>;
 #[doc = "Field `RX2RX_TIME_OFF` reader - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
 pub type RX2RX_TIME_OFF_R = crate::BitReader<bool>;
 #[doc = "Field `RX2RX_TIME_OFF` writer - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
 pub type RX2RX_TIME_OFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSMCTRL_SPEC, bool, O>;
+#[doc = "Field `SLOTTED_ACK` reader - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
+pub type SLOTTED_ACK_R = crate::BitReader<bool>;
+#[doc = "Field `SLOTTED_ACK` writer - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
+pub type SLOTTED_ACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, FSMCTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1 - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
-    #[inline(always)]
-    pub fn slotted_ack(&self) -> SLOTTED_ACK_R {
-        SLOTTED_ACK_R::new(((self.bits >> 1) & 1) != 0)
-    }
     #[doc = "Bit 0 - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
     #[inline(always)]
     pub fn rx2rx_time_off(&self) -> RX2RX_TIME_OFF_R {
         RX2RX_TIME_OFF_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
     #[doc = "Bit 1 - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
     #[inline(always)]
-    pub fn slotted_ack(&mut self) -> SLOTTED_ACK_W<1> {
-        SLOTTED_ACK_W::new(self)
+    pub fn slotted_ack(&self) -> SLOTTED_ACK_R {
+        SLOTTED_ACK_R::new(((self.bits >> 1) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bit 0 - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
     #[inline(always)]
     pub fn rx2rx_time_off(&mut self) -> RX2RX_TIME_OFF_W<0> {
         RX2RX_TIME_OFF_W::new(self)
+    }
+    #[doc = "Bit 1 - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
+    #[inline(always)]
+    pub fn slotted_ack(&mut self) -> SLOTTED_ACK_W<1> {
+        SLOTTED_ACK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

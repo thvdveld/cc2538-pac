@@ -34,50 +34,50 @@ impl From<crate::W<TXCTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DAC_CURR` reader - Change the current in the DAC."]
-pub type DAC_CURR_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DAC_CURR` writer - Change the current in the DAC."]
-pub type DAC_CURR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXCTRL_SPEC, u8, u8, 3, O>;
-#[doc = "Field `DAC_DC` reader - Adjusts the DC level to the TX mixer."]
-pub type DAC_DC_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DAC_DC` writer - Adjusts the DC level to the TX mixer."]
-pub type DAC_DC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXCTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TXMIX_CURRENT` reader - Transmit mixers core current Current increases with increasing setting."]
 pub type TXMIX_CURRENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TXMIX_CURRENT` writer - Transmit mixers core current Current increases with increasing setting."]
 pub type TXMIX_CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXCTRL_SPEC, u8, u8, 2, O>;
+#[doc = "Field `DAC_DC` reader - Adjusts the DC level to the TX mixer."]
+pub type DAC_DC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DAC_DC` writer - Adjusts the DC level to the TX mixer."]
+pub type DAC_DC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXCTRL_SPEC, u8, u8, 2, O>;
+#[doc = "Field `DAC_CURR` reader - Change the current in the DAC."]
+pub type DAC_CURR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DAC_CURR` writer - Change the current in the DAC."]
+pub type DAC_CURR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXCTRL_SPEC, u8, u8, 3, O>;
 impl R {
-    #[doc = "Bits 4:6 - Change the current in the DAC."]
+    #[doc = "Bits 0:1 - Transmit mixers core current Current increases with increasing setting."]
     #[inline(always)]
-    pub fn dac_curr(&self) -> DAC_CURR_R {
-        DAC_CURR_R::new(((self.bits >> 4) & 7) as u8)
+    pub fn txmix_current(&self) -> TXMIX_CURRENT_R {
+        TXMIX_CURRENT_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - Adjusts the DC level to the TX mixer."]
     #[inline(always)]
     pub fn dac_dc(&self) -> DAC_DC_R {
         DAC_DC_R::new(((self.bits >> 2) & 3) as u8)
     }
-    #[doc = "Bits 0:1 - Transmit mixers core current Current increases with increasing setting."]
+    #[doc = "Bits 4:6 - Change the current in the DAC."]
     #[inline(always)]
-    pub fn txmix_current(&self) -> TXMIX_CURRENT_R {
-        TXMIX_CURRENT_R::new((self.bits & 3) as u8)
+    pub fn dac_curr(&self) -> DAC_CURR_R {
+        DAC_CURR_R::new(((self.bits >> 4) & 7) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 4:6 - Change the current in the DAC."]
+    #[doc = "Bits 0:1 - Transmit mixers core current Current increases with increasing setting."]
     #[inline(always)]
-    pub fn dac_curr(&mut self) -> DAC_CURR_W<4> {
-        DAC_CURR_W::new(self)
+    pub fn txmix_current(&mut self) -> TXMIX_CURRENT_W<0> {
+        TXMIX_CURRENT_W::new(self)
     }
     #[doc = "Bits 2:3 - Adjusts the DC level to the TX mixer."]
     #[inline(always)]
     pub fn dac_dc(&mut self) -> DAC_DC_W<2> {
         DAC_DC_W::new(self)
     }
-    #[doc = "Bits 0:1 - Transmit mixers core current Current increases with increasing setting."]
+    #[doc = "Bits 4:6 - Change the current in the DAC."]
     #[inline(always)]
-    pub fn txmix_current(&mut self) -> TXMIX_CURRENT_W<0> {
-        TXMIX_CURRENT_W::new(self)
+    pub fn dac_curr(&mut self) -> DAC_CURR_W<4> {
+        DAC_CURR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
