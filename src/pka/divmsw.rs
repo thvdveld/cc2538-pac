@@ -42,8 +42,5 @@ impl crate::Readable for DIVMSW_SPEC {
 }
 #[doc = "`reset()` method sets DIVMSW to value 0"]
 impl crate::Resettable for DIVMSW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

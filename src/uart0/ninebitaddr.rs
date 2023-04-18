@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Self address for 9-bit mode This field contains the address that should be matched when UART9BITAMASK is 0xFF."]
     #[inline(always)]
+    #[must_use]
     pub fn addr(&mut self) -> ADDR_W<0> {
         ADDR_W::new(self)
     }
     #[doc = "Bit 15 - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn ninebiten(&mut self) -> NINEBITEN_W<15> {
         NINEBITEN_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for NINEBITADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ninebitaddr::W](W) writer structure"]
 impl crate::Writable for NINEBITADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NINEBITADDR to value 0"]
 impl crate::Resettable for NINEBITADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

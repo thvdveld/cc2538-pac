@@ -33,8 +33,5 @@ impl crate::Readable for TXLAST_PTR_SPEC {
 }
 #[doc = "`reset()` method sets TXLAST_PTR to value 0"]
 impl crate::Resettable for TXLAST_PTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

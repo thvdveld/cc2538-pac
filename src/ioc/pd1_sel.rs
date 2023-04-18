@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PD1."]
     #[inline(always)]
+    #[must_use]
     pub fn pd1_sel(&mut self) -> PD1_SEL_W<0> {
         PD1_SEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PD1_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pd1_sel::W](W) writer structure"]
 impl crate::Writable for PD1_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PD1_SEL to value 0"]
 impl crate::Resettable for PD1_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

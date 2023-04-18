@@ -56,6 +56,7 @@ impl W {
 of the Sleep Timer count. When writing this register sets the high bits \\[23:16\\]
 of the compare value. The value read is latched at the time of reading register ST0. The value written is latched when ST0 is written."]
     #[inline(always)]
+    #[must_use]
     pub fn st2(&mut self) -> ST2_W<0> {
         ST2_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for ST2_SPEC {
 #[doc = "`write(|w| ..)` method takes [st2::W](W) writer structure"]
 impl crate::Writable for ST2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ST2 to value 0"]
 impl crate::Resettable for ST2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

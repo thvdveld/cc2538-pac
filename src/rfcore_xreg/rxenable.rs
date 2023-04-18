@@ -33,8 +33,5 @@ impl crate::Readable for RXENABLE_SPEC {
 }
 #[doc = "`reset()` method sets RXENABLE to value 0"]
 impl crate::Resettable for RXENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
     #[inline(always)]
+    #[must_use]
     pub fn usbmaxo(&mut self) -> USBMAXO_W<0> {
         USBMAXO_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for MAXO_SPEC {
 #[doc = "`write(|w| ..)` method takes [maxo::W](W) writer structure"]
 impl crate::Writable for MAXO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MAXO to value 0"]
 impl crate::Resettable for MAXO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

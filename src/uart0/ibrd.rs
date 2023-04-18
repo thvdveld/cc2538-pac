@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Integer baud-rate divisor"]
     #[inline(always)]
+    #[must_use]
     pub fn divint(&mut self) -> DIVINT_W<0> {
         DIVINT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for IBRD_SPEC {
 #[doc = "`write(|w| ..)` method takes [ibrd::W](W) writer structure"]
 impl crate::Writable for IBRD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IBRD to value 0"]
 impl crate::Resettable for IBRD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

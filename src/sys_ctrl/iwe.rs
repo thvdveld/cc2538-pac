@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn port_a_iwe(&mut self) -> PORT_A_IWE_W<0> {
         PORT_A_IWE_W::new(self)
     }
     #[doc = "Bit 1 - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn port_b_iwe(&mut self) -> PORT_B_IWE_W<1> {
         PORT_B_IWE_W::new(self)
     }
     #[doc = "Bit 2 - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn port_c_iwe(&mut self) -> PORT_C_IWE_W<2> {
         PORT_C_IWE_W::new(self)
     }
     #[doc = "Bit 3 - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn port_d_iwe(&mut self) -> PORT_D_IWE_W<3> {
         PORT_D_IWE_W::new(self)
     }
     #[doc = "Bit 4 - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn usb_iwe(&mut self) -> USB_IWE_W<4> {
         USB_IWE_W::new(self)
     }
     #[doc = "Bit 5 - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn sm_timer_iwe(&mut self) -> SM_TIMER_IWE_W<5> {
         SM_TIMER_IWE_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for IWE_SPEC {
 #[doc = "`write(|w| ..)` method takes [iwe::W](W) writer structure"]
 impl crate::Writable for IWE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IWE to value 0"]
 impl crate::Resettable for IWE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

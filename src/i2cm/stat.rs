@@ -75,8 +75,5 @@ impl crate::Readable for STAT_SPEC {
 }
 #[doc = "`reset()` method sets STAT to value 0"]
 impl crate::Resettable for STAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - 0: PA0 selected as UART0 RX 1: PA1 selected as UART0 RX ... 31: PD7 selected as UART0 RX"]
     #[inline(always)]
+    #[must_use]
     pub fn input_sel(&mut self) -> INPUT_SEL_W<0> {
         INPUT_SEL_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for UARTRXD_UART0_SPEC {
 #[doc = "`write(|w| ..)` method takes [uartrxd_uart0::W](W) writer structure"]
 impl crate::Writable for UARTRXD_UART0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UARTRXD_UART0 to value 0x04"]
 impl crate::Resettable for UARTRXD_UART0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

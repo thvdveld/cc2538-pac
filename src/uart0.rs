@@ -52,13 +52,13 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x04 - UART receive status and error clear The RSR/ECR register is the receive status register/error clear register. A write of any value to the ECR register clears the framing, parity, break, and overrun errors. All the bits are cleared on reset. Write-only error clear register"]
     #[inline(always)]
-    pub fn ecr(&self) -> &ECR {
-        unsafe { &*(((self as *const Self) as *const u8).add(4usize) as *const ECR) }
+    pub const fn ecr(&self) -> &ECR {
+        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
     }
     #[doc = "0x04 - UART receive status and error clear The RSR/ECR register is the receive status register and error clear register. In addition to the DR register, receive status can also be read from the RSR register. If the status is read from this register, then the status information corresponds to the entry read from DR before reading RSR. The status information for overrun is set immediately when an overrun condition occurs. The RSR register cannot be written. Read-only status register"]
     #[inline(always)]
-    pub fn rsr(&self) -> &RSR {
-        unsafe { &*(((self as *const Self) as *const u8).add(4usize) as *const RSR) }
+    pub const fn rsr(&self) -> &RSR {
+        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
     }
 }
 #[doc = "DR (rw) register accessor: an alias for `Reg<DR_SPEC>`"]

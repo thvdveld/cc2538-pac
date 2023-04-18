@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: Clock for I2C0 is gated. 1: Clock for I2C0 is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn i2c0(&mut self) -> I2C0_W<0> {
         I2C0_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for DCGCI2C_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcgci2c::W](W) writer structure"]
 impl crate::Writable for DCGCI2C_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCGCI2C to value 0"]
 impl crate::Resettable for DCGCI2C_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

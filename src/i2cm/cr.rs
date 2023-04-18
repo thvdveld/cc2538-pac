@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
     #[inline(always)]
+    #[must_use]
     pub fn lpbk(&mut self) -> LPBK_W<0> {
         LPBK_W::new(self)
     }
     #[doc = "Bit 4 - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn mfe(&mut self) -> MFE_W<4> {
         MFE_W::new(self)
     }
     #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn sfe(&mut self) -> SFE_W<5> {
         SFE_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for CR_SPEC {
 #[doc = "`write(|w| ..)` method takes [cr::W](W) writer structure"]
 impl crate::Writable for CR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
 impl crate::Resettable for CR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

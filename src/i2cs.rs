@@ -18,13 +18,13 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x04 - I2C slave control and status This register functions as a control register when written, and a status register when read."]
     #[inline(always)]
-    pub fn ctrl(&self) -> &CTRL {
-        unsafe { &*(((self as *const Self) as *const u8).add(4usize) as *const CTRL) }
+    pub const fn ctrl(&self) -> &CTRL {
+        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
     }
     #[doc = "0x04 - I2C slave control and status This register functions as a control register when written, and a status register when read."]
     #[inline(always)]
-    pub fn stat(&self) -> &STAT {
-        unsafe { &*(((self as *const Self) as *const u8).add(4usize) as *const STAT) }
+    pub const fn stat(&self) -> &STAT {
+        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
     }
 }
 #[doc = "OAR (rw) register accessor: an alias for `Reg<OAR_SPEC>`"]

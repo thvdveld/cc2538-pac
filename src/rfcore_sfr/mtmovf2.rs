@@ -52,6 +52,7 @@ impl W {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[23:16\\]
 of an internal register, depending on the value of MTMSEL.MTMOVFSEL. Reading this register with MTMSEL.MTMOVFSEL set to 000 returns the latched value of MTovf\\[23:16\\]."]
     #[inline(always)]
+    #[must_use]
     pub fn mtmovf2(&mut self) -> MTMOVF2_W<0> {
         MTMOVF2_W::new(self)
     }
@@ -74,11 +75,10 @@ impl crate::Readable for MTMOVF2_SPEC {
 #[doc = "`write(|w| ..)` method takes [mtmovf2::W](W) writer structure"]
 impl crate::Writable for MTMOVF2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MTMOVF2 to value 0"]
 impl crate::Resettable for MTMOVF2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

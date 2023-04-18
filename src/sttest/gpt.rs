@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - GPTimer increment/decrement override value"]
     #[inline(always)]
+    #[must_use]
     pub fn gptidov(&mut self) -> GPTIDOV_W<0> {
         GPTIDOV_W::new(self)
     }
     #[doc = "Bit 8 - GPTimer increment/decrement override enable"]
     #[inline(always)]
+    #[must_use]
     pub fn gptidoe(&mut self) -> GPTIDOE_W<8> {
         GPTIDOE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for GPT_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpt::W](W) writer structure"]
 impl crate::Writable for GPT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPT to value 0"]
 impl crate::Resettable for GPT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

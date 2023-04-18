@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
     #[inline(always)]
+    #[must_use]
     pub fn num_bits_to_shift(&mut self) -> NUM_BITS_TO_SHIFT_W<0> {
         NUM_BITS_TO_SHIFT_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SHIFT_SPEC {
 #[doc = "`write(|w| ..)` method takes [shift::W](W) writer structure"]
 impl crate::Writable for SHIFT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SHIFT to value 0"]
 impl crate::Resettable for SHIFT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

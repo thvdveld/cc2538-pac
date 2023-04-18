@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - PA bias control"]
     #[inline(always)]
+    #[must_use]
     pub fn pa_bias(&mut self) -> PA_BIAS_W<0> {
         PA_BIAS_W::new(self)
     }
     #[doc = "Bits 4:7 - PA power control"]
     #[inline(always)]
+    #[must_use]
     pub fn pa_power(&mut self) -> PA_POWER_W<4> {
         PA_POWER_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for TXPOWER_SPEC {
 #[doc = "`write(|w| ..)` method takes [txpower::W](W) writer structure"]
 impl crate::Writable for TXPOWER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TXPOWER to value 0"]
 impl crate::Resettable for TXPOWER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

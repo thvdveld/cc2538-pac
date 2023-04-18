@@ -33,8 +33,5 @@ impl crate::Readable for CSPPROG_22_SPEC {
 }
 #[doc = "`reset()` method sets CSPPROG_22 to value 0"]
 impl crate::Resettable for CSPPROG_22_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

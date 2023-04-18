@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - uDMA channel 0 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch0sel(&mut self) -> CH0SEL_W<0> {
         CH0SEL_W::new(self)
     }
     #[doc = "Bits 4:7 - uDMA channel 1 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch1sel(&mut self) -> CH1SEL_W<4> {
         CH1SEL_W::new(self)
     }
     #[doc = "Bits 8:11 - uDMA channel 2 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch2sel(&mut self) -> CH2SEL_W<8> {
         CH2SEL_W::new(self)
     }
     #[doc = "Bits 12:15 - uDMA channel 3 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch3sel(&mut self) -> CH3SEL_W<12> {
         CH3SEL_W::new(self)
     }
     #[doc = "Bits 16:19 - uDMA channel 4 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch4sel(&mut self) -> CH4SEL_W<16> {
         CH4SEL_W::new(self)
     }
     #[doc = "Bits 20:23 - uDMA channel 5 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch5sel(&mut self) -> CH5SEL_W<20> {
         CH5SEL_W::new(self)
     }
     #[doc = "Bits 24:27 - uDMA channel 6 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch6sel(&mut self) -> CH6SEL_W<24> {
         CH6SEL_W::new(self)
     }
     #[doc = "Bits 28:31 - uDMA channel 7 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch7sel(&mut self) -> CH7SEL_W<28> {
         CH7SEL_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for CHMAP0_SPEC {
 #[doc = "`write(|w| ..)` method takes [chmap0::W](W) writer structure"]
 impl crate::Writable for CHMAP0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CHMAP0 to value 0"]
 impl crate::Resettable for CHMAP0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

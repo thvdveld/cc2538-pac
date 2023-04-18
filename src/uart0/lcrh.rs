@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - UART send break 1: A low level is continually output on the UnTx signal, after completing transmission of the current character. For the proper execution of the break command, software must set this bit for at least two frames (character periods). 0: Normal use"]
     #[inline(always)]
+    #[must_use]
     pub fn brk(&mut self) -> BRK_W<0> {
         BRK_W::new(self)
     }
     #[doc = "Bit 1 - UART parity enable 1: Parity checking and generation is enabled. 0: Parity is disabled and no parity bit is added to the data frame."]
     #[inline(always)]
+    #[must_use]
     pub fn pen(&mut self) -> PEN_W<1> {
         PEN_W::new(self)
     }
     #[doc = "Bit 2 - UART even parity select 1: Even parity generation and checking is performed during transmission and reception, which checks for an even number of 1s in data and parity bits. 0: Odd parity is performed, which checks for an odd number of 1s. This bit has no effect when parity is disabled by the PEN bit."]
     #[inline(always)]
+    #[must_use]
     pub fn eps(&mut self) -> EPS_W<2> {
         EPS_W::new(self)
     }
     #[doc = "Bit 3 - UART two stop bits select 1: Two stop bits are transmitted at the end of a frame. The receive logic does not check for two stop bits being received. 0: One stop bit is transmitted at the end of a frame."]
     #[inline(always)]
+    #[must_use]
     pub fn stp2(&mut self) -> STP2_W<3> {
         STP2_W::new(self)
     }
     #[doc = "Bit 4 - UART enable FIFOs 1: The transmit and receive FIFObuffers are enabled (FIFOmode). 0: The FIFOs are disabled (Character mode). The FIFOs become 1-byte-deep holding registers."]
     #[inline(always)]
+    #[must_use]
     pub fn fen(&mut self) -> FEN_W<4> {
         FEN_W::new(self)
     }
     #[doc = "Bits 5:6 - UART word length The bits indicate the number of data bits transmitted or received in a frame as follows: 0x0: 5 bits (default) 0x1: 6 bits 0x2: 7 bits 0x3: 8 bits"]
     #[inline(always)]
+    #[must_use]
     pub fn wlen(&mut self) -> WLEN_W<5> {
         WLEN_W::new(self)
     }
     #[doc = "Bit 7 - UART stick parity select When bits 1, 2, and 7 of UARTLCRH are set, the parity bit is transmitted and checked as a 0. When bits 1 and 7 are set and 2 is cleared, the parity bit is transmitted and checked as a 1. When this bit is cleared, stick parity is disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn sps(&mut self) -> SPS_W<7> {
         SPS_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for LCRH_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcrh::W](W) writer structure"]
 impl crate::Writable for LCRH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCRH to value 0"]
 impl crate::Resettable for LCRH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

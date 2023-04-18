@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn vco_caparr(&mut self) -> VCO_CAPARR_W<0> {
         VCO_CAPARR_W::new(self)
     }
     #[doc = "Bit 6 - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
     #[inline(always)]
+    #[must_use]
     pub fn vco_caparr_oe(&mut self) -> VCO_CAPARR_OE_W<6> {
         VCO_CAPARR_OE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for FSCAL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [fscal2::W](W) writer structure"]
 impl crate::Writable for FSCAL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSCAL2 to value 0"]
 impl crate::Resettable for FSCAL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

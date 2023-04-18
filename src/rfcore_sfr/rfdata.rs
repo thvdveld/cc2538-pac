@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Data written to the register is written to the TX FIFO. When reading this register, data from the RX FIFO is read."]
     #[inline(always)]
+    #[must_use]
     pub fn rfd(&mut self) -> RFD_W<0> {
         RFD_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for RFDATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [rfdata::W](W) writer structure"]
 impl crate::Writable for RFDATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RFDATA to value 0"]
 impl crate::Resettable for RFDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

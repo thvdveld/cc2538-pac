@@ -37,8 +37,5 @@ impl crate::Readable for TBR_SPEC {
 }
 #[doc = "`reset()` method sets TBR to value 0"]
 impl crate::Resettable for TBR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

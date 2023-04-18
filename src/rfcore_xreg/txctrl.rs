@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Transmit mixers core current Current increases with increasing setting."]
     #[inline(always)]
+    #[must_use]
     pub fn txmix_current(&mut self) -> TXMIX_CURRENT_W<0> {
         TXMIX_CURRENT_W::new(self)
     }
     #[doc = "Bits 2:3 - Adjusts the DC level to the TX mixer."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_dc(&mut self) -> DAC_DC_W<2> {
         DAC_DC_W::new(self)
     }
     #[doc = "Bits 4:6 - Change the current in the DAC."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_curr(&mut self) -> DAC_CURR_W<4> {
         DAC_CURR_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for TXCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [txctrl::W](W) writer structure"]
 impl crate::Writable for TXCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TXCTRL to value 0"]
 impl crate::Resettable for TXCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

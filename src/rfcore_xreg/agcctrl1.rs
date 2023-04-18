@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Target value for the AGC control loop, given in 1-dB steps"]
     #[inline(always)]
+    #[must_use]
     pub fn agc_ref(&mut self) -> AGC_REF_W<0> {
         AGC_REF_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for AGCCTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [agcctrl1::W](W) writer structure"]
 impl crate::Writable for AGCCTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AGCCTRL1 to value 0"]
 impl crate::Resettable for AGCCTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

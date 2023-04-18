@@ -77,21 +77,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Adjusts divider currents, except mixer and PA buffers"]
     #[inline(always)]
+    #[must_use]
     pub fn lodiv_current(&mut self) -> LODIV_CURRENT_W<0> {
         LODIV_CURRENT_W::new(self)
     }
     #[doc = "Bits 2:3 - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
     #[inline(always)]
+    #[must_use]
     pub fn lodiv_buf_current_rx(&mut self) -> LODIV_BUF_CURRENT_RX_W<2> {
         LODIV_BUF_CURRENT_RX_W::new(self)
     }
     #[doc = "Bits 4:5 - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn lodiv_buf_current_tx(&mut self) -> LODIV_BUF_CURRENT_TX_W<4> {
         LODIV_BUF_CURRENT_TX_W::new(self)
     }
     #[doc = "Bits 6:7 - Prescaler current setting"]
     #[inline(always)]
+    #[must_use]
     pub fn pre_current(&mut self) -> PRE_CURRENT_W<6> {
         PRE_CURRENT_W::new(self)
     }
@@ -114,11 +118,10 @@ impl crate::Readable for FSCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [fsctrl::W](W) writer structure"]
 impl crate::Writable for FSCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSCTRL to value 0"]
 impl crate::Resettable for FSCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

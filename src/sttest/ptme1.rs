@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 8 - UART0 test mode enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uart0tme(&mut self) -> UART0TME_W<8> {
         UART0TME_W::new(self)
     }
     #[doc = "Bit 9 - UART1 test mode enable"]
     #[inline(always)]
+    #[must_use]
     pub fn uart1tme(&mut self) -> UART1TME_W<9> {
         UART1TME_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for PTME1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ptme1::W](W) writer structure"]
 impl crate::Writable for PTME1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PTME1 to value 0"]
 impl crate::Resettable for PTME1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

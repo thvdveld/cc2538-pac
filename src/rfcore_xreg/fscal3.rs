@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
     #[inline(always)]
+    #[must_use]
     pub fn vco_caparr_cal_ctrl(&mut self) -> VCO_CAPARR_CAL_CTRL_W<0> {
         VCO_CAPARR_CAL_CTRL_W::new(self)
     }
     #[doc = "Bits 2:5 - Bit vector for programming varactor control voltage from VC DAC"]
     #[inline(always)]
+    #[must_use]
     pub fn vco_vc_dac(&mut self) -> VCO_VC_DAC_W<2> {
         VCO_VC_DAC_W::new(self)
     }
     #[doc = "Bit 6 - Enables the VCO DAC when 1"]
     #[inline(always)]
+    #[must_use]
     pub fn vco_dac_en_ov(&mut self) -> VCO_DAC_EN_OV_W<6> {
         VCO_DAC_EN_OV_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for FSCAL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [fscal3::W](W) writer structure"]
 impl crate::Writable for FSCAL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSCAL3 to value 0"]
 impl crate::Resettable for FSCAL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

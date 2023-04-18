@@ -61,8 +61,5 @@ impl crate::Readable for DIECFG2_SPEC {
 }
 #[doc = "`reset()` method sets DIECFG2 to value 0"]
 impl crate::Resettable for DIECFG2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

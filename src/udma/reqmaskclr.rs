@@ -30,6 +30,7 @@ request mask clear 0: No effect 1: Setting a bit clears the corresponding SET\\[
 bit in the DMAREQMASKSET register meaning that the peripheral associated with channel \\[n\\]
 is enabled to request uDMA transfers."]
     #[inline(always)]
+    #[must_use]
     pub fn clr(&mut self) -> CLR_W<0> {
         CLR_W::new(self)
     }
@@ -49,11 +50,10 @@ impl crate::RegisterSpec for REQMASKCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [reqmaskclr::W](W) writer structure"]
 impl crate::Writable for REQMASKCLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REQMASKCLR to value 0"]
 impl crate::Resettable for REQMASKCLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

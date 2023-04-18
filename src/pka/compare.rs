@@ -47,8 +47,5 @@ impl crate::Readable for COMPARE_SPEC {
 }
 #[doc = "`reset()` method sets COMPARE to value 0"]
 impl crate::Resettable for COMPARE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

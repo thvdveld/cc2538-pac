@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: Clock for GPT0 is gated. 1: Clock for GPT0 is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn gpt0(&mut self) -> GPT0_W<0> {
         GPT0_W::new(self)
     }
     #[doc = "Bit 1 - 0: Clock for GPT1 is gated. 1: Clock for GPT1 is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn gpt1(&mut self) -> GPT1_W<1> {
         GPT1_W::new(self)
     }
     #[doc = "Bit 2 - 0: Clock for GPT2 is gated. 1: Clock for GPT2 is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn gpt2(&mut self) -> GPT2_W<2> {
         GPT2_W::new(self)
     }
     #[doc = "Bit 3 - 0: Clock for GPT3 is gated. 1: Clock for GPT3 is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn gpt3(&mut self) -> GPT3_W<3> {
         GPT3_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for DCGCGPT_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcgcgpt::W](W) writer structure"]
 impl crate::Writable for DCGCGPT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCGCGPT to value 0"]
 impl crate::Resettable for DCGCGPT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

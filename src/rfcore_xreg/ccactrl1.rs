@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Sets the level of CCA hysteresis. Unsigned values given in dB"]
     #[inline(always)]
+    #[must_use]
     pub fn cca_hyst(&mut self) -> CCA_HYST_W<0> {
         CCA_HYST_W::new(self)
     }
     #[doc = "Bits 3:4 - 00: CCA always set to 1 01: CCA = 1 when RSSI < CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI < CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
     #[inline(always)]
+    #[must_use]
     pub fn cca_mode(&mut self) -> CCA_MODE_W<3> {
         CCA_MODE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for CCACTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ccactrl1::W](W) writer structure"]
 impl crate::Writable for CCACTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CCACTRL1 to value 0"]
 impl crate::Resettable for CCACTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

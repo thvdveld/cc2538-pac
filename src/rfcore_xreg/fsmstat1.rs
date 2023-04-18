@@ -82,8 +82,5 @@ impl crate::Readable for FSMSTAT1_SPEC {
 }
 #[doc = "`reset()` method sets FSMSTAT1 to value 0"]
 impl crate::Resettable for FSMSTAT1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

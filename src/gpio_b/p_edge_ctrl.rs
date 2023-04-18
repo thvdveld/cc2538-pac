@@ -327,161 +327,193 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Port A bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pairc0(&mut self) -> PAIRC0_W<0> {
         PAIRC0_W::new(self)
     }
     #[doc = "Bit 1 - Port A bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pairc1(&mut self) -> PAIRC1_W<1> {
         PAIRC1_W::new(self)
     }
     #[doc = "Bit 2 - Port A bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pairc2(&mut self) -> PAIRC2_W<2> {
         PAIRC2_W::new(self)
     }
     #[doc = "Bit 3 - Port A bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pairc3(&mut self) -> PAIRC3_W<3> {
         PAIRC3_W::new(self)
     }
     #[doc = "Bit 4 - Port A bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pairc4(&mut self) -> PAIRC4_W<4> {
         PAIRC4_W::new(self)
     }
     #[doc = "Bit 5 - Port A bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pairc5(&mut self) -> PAIRC5_W<5> {
         PAIRC5_W::new(self)
     }
     #[doc = "Bit 6 - Port A bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pairc6(&mut self) -> PAIRC6_W<6> {
         PAIRC6_W::new(self)
     }
     #[doc = "Bit 7 - Port A bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pairc7(&mut self) -> PAIRC7_W<7> {
         PAIRC7_W::new(self)
     }
     #[doc = "Bit 8 - Port B bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pbirc0(&mut self) -> PBIRC0_W<8> {
         PBIRC0_W::new(self)
     }
     #[doc = "Bit 9 - Port B bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pbirc1(&mut self) -> PBIRC1_W<9> {
         PBIRC1_W::new(self)
     }
     #[doc = "Bit 10 - Port B bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pbirc2(&mut self) -> PBIRC2_W<10> {
         PBIRC2_W::new(self)
     }
     #[doc = "Bit 11 - Port B bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pbirc3(&mut self) -> PBIRC3_W<11> {
         PBIRC3_W::new(self)
     }
     #[doc = "Bit 12 - Port B bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pbirc4(&mut self) -> PBIRC4_W<12> {
         PBIRC4_W::new(self)
     }
     #[doc = "Bit 13 - Port B bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pbirc5(&mut self) -> PBIRC5_W<13> {
         PBIRC5_W::new(self)
     }
     #[doc = "Bit 14 - Port B bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pbirc6(&mut self) -> PBIRC6_W<14> {
         PBIRC6_W::new(self)
     }
     #[doc = "Bit 15 - Port B bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pbirc7(&mut self) -> PBIRC7_W<15> {
         PBIRC7_W::new(self)
     }
     #[doc = "Bit 16 - Port C bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pcirc0(&mut self) -> PCIRC0_W<16> {
         PCIRC0_W::new(self)
     }
     #[doc = "Bit 17 - Port C bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pcirc1(&mut self) -> PCIRC1_W<17> {
         PCIRC1_W::new(self)
     }
     #[doc = "Bit 18 - Port C bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pcirc2(&mut self) -> PCIRC2_W<18> {
         PCIRC2_W::new(self)
     }
     #[doc = "Bit 19 - Port C bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pcirc3(&mut self) -> PCIRC3_W<19> {
         PCIRC3_W::new(self)
     }
     #[doc = "Bit 20 - Port C bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pcirc4(&mut self) -> PCIRC4_W<20> {
         PCIRC4_W::new(self)
     }
     #[doc = "Bit 21 - Port C bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pcirc5(&mut self) -> PCIRC5_W<21> {
         PCIRC5_W::new(self)
     }
     #[doc = "Bit 22 - Port C bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pcirc6(&mut self) -> PCIRC6_W<22> {
         PCIRC6_W::new(self)
     }
     #[doc = "Bit 23 - Port C bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pcirc7(&mut self) -> PCIRC7_W<23> {
         PCIRC7_W::new(self)
     }
     #[doc = "Bit 24 - Port D bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pdirc0(&mut self) -> PDIRC0_W<24> {
         PDIRC0_W::new(self)
     }
     #[doc = "Bit 25 - Port D bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pdirc1(&mut self) -> PDIRC1_W<25> {
         PDIRC1_W::new(self)
     }
     #[doc = "Bit 26 - Port D bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pdirc2(&mut self) -> PDIRC2_W<26> {
         PDIRC2_W::new(self)
     }
     #[doc = "Bit 27 - Port D bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pdirc3(&mut self) -> PDIRC3_W<27> {
         PDIRC3_W::new(self)
     }
     #[doc = "Bit 28 - Port D bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pdirc4(&mut self) -> PDIRC4_W<28> {
         PDIRC4_W::new(self)
     }
     #[doc = "Bit 29 - Port D bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pdirc5(&mut self) -> PDIRC5_W<29> {
         PDIRC5_W::new(self)
     }
     #[doc = "Bit 30 - Port D bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pdirc6(&mut self) -> PDIRC6_W<30> {
         PDIRC6_W::new(self)
     }
     #[doc = "Bit 31 - Port D bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
+    #[must_use]
     pub fn pdirc7(&mut self) -> PDIRC7_W<31> {
         PDIRC7_W::new(self)
     }
@@ -504,11 +536,10 @@ impl crate::Readable for P_EDGE_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [p_edge_ctrl::W](W) writer structure"]
 impl crate::Writable for P_EDGE_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets P_EDGE_CTRL to value 0"]
 impl crate::Resettable for P_EDGE_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

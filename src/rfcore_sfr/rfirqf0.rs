@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reserved 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn act_unused(&mut self) -> ACT_UNUSED_W<0> {
         ACT_UNUSED_W::new(self)
     }
     #[doc = "Bit 1 - SFD has been received or transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn sfd(&mut self) -> SFD_W<1> {
         SFD_W::new(self)
     }
     #[doc = "Bit 2 - The number of bytes in the RX FIFO is greater than the threshold. Also raised when a complete frame is received, and when a packet is read out completely and more complete packets are available. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn fifop(&mut self) -> FIFOP_W<2> {
         FIFOP_W::new(self)
     }
     #[doc = "Bit 3 - Source matching is complete. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn src_match_done(&mut self) -> SRC_MATCH_DONE_W<3> {
         SRC_MATCH_DONE_W::new(self)
     }
     #[doc = "Bit 4 - Source match is found. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn src_match_found(&mut self) -> SRC_MATCH_FOUND_W<4> {
         SRC_MATCH_FOUND_W::new(self)
     }
     #[doc = "Bit 5 - Frame has passed frame filtering. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn frame_accepted(&mut self) -> FRAME_ACCEPTED_W<5> {
         FRAME_ACCEPTED_W::new(self)
     }
     #[doc = "Bit 6 - A complete frame has been received. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn rxpktdone(&mut self) -> RXPKTDONE_W<6> {
         RXPKTDONE_W::new(self)
     }
     #[doc = "Bit 7 - The RXENABLE register has gone from a nonzero state to an all-zero state. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn rxmaskzero(&mut self) -> RXMASKZERO_W<7> {
         RXMASKZERO_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for RFIRQF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [rfirqf0::W](W) writer structure"]
 impl crate::Writable for RFIRQF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RFIRQF0 to value 0"]
 impl crate::Resettable for RFIRQF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

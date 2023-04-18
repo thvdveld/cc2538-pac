@@ -68,6 +68,7 @@ is not able to request uDMA transfers. Channel \\[n\\]
 may be used for software-initiated transfers. Bit 0 corresponds to channel 0. A bit can only be cleared by setting the corresponding CLR\\[n\\]
 bit in the DMAREQMASKCLR register."]
     #[inline(always)]
+    #[must_use]
     pub fn set(&mut self) -> SET_W<0> {
         SET_W::new(self)
     }
@@ -90,11 +91,10 @@ impl crate::Readable for REQMASKSET_SPEC {
 #[doc = "`write(|w| ..)` method takes [reqmaskset::W](W) writer structure"]
 impl crate::Writable for REQMASKSET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REQMASKSET to value 0"]
 impl crate::Resettable for REQMASKSET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

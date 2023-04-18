@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - If this bit is set to 0, the result available (irq_result_av) interrupt output is disabled and remains 0. If this bit is set to 1, the result available interrupt output is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn result_av(&mut self) -> RESULT_AV_W<0> {
         RESULT_AV_W::new(self)
     }
     #[doc = "Bit 1 - If this bit is set to 0, the DMA input done (irq_dma_in_done) interrupt output is disabled and remains 0. If this bit is set to 1, the DMA input done interrupt output is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<1> {
         DMA_IN_DONE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for CTRL_INT_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl_int_en::W](W) writer structure"]
 impl crate::Writable for CTRL_INT_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL_INT_EN to value 0"]
 impl crate::Resettable for CTRL_INT_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

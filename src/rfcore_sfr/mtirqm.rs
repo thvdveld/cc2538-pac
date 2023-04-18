@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables the MACTIMER_PER interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_perm(&mut self) -> MACTIMER_PERM_W<0> {
         MACTIMER_PERM_W::new(self)
     }
     #[doc = "Bit 1 - Enables the MACTIMER_COMPARE1 interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_compare1m(&mut self) -> MACTIMER_COMPARE1M_W<1> {
         MACTIMER_COMPARE1M_W::new(self)
     }
     #[doc = "Bit 2 - Enables the MACTIMER_COMPARE2 interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_compare2m(&mut self) -> MACTIMER_COMPARE2M_W<2> {
         MACTIMER_COMPARE2M_W::new(self)
     }
     #[doc = "Bit 3 - Enables the MACTIMER_OVF_PER interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_ovf_perm(&mut self) -> MACTIMER_OVF_PERM_W<3> {
         MACTIMER_OVF_PERM_W::new(self)
     }
     #[doc = "Bit 4 - Enables the MACTIMER_OVF_COMPARE1 interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_ovf_compare1m(&mut self) -> MACTIMER_OVF_COMPARE1M_W<4> {
         MACTIMER_OVF_COMPARE1M_W::new(self)
     }
     #[doc = "Bit 5 - Enables the MACTIMER_OVF_COMPARE2 interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_ovf_compare2m(&mut self) -> MACTIMER_OVF_COMPARE2M_W<5> {
         MACTIMER_OVF_COMPARE2M_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for MTIRQM_SPEC {
 #[doc = "`write(|w| ..)` method takes [mtirqm::W](W) writer structure"]
 impl crate::Writable for MTIRQM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MTIRQM to value 0"]
 impl crate::Resettable for MTIRQM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

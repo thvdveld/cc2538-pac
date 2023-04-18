@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 3 - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
     #[inline(always)]
+    #[must_use]
     pub fn force_warm_reset(&mut self) -> FORCE_WARM_RESET_W<3> {
         FORCE_WARM_RESET_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PWRDBG_SPEC {
 #[doc = "`write(|w| ..)` method takes [pwrdbg::W](W) writer structure"]
 impl crate::Writable for PWRDBG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PWRDBG to value 0"]
 impl crate::Resettable for PWRDBG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

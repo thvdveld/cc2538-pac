@@ -105,26 +105,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Erase bit Start an erase operation by setting this bit to 1. Cleared by hardware when the operation completes. Writes to this bit are ignored when FCTL.BUSY is 1. If FCTL.WRITE is set simultaneously with this bit, the erase operation is started first, then the write is started."]
     #[inline(always)]
+    #[must_use]
     pub fn erase(&mut self) -> ERASE_W<0> {
         ERASE_W::new(self)
     }
     #[doc = "Bit 1 - Write bit Start a write sequence by setting this bit to 1. Cleared by hardware when the operation completes. Writes to this bit are ignored when FCTL.BUSY is 1. If FCTL.ERASE is set simultaneously with this bit, the erase operation is started first, then the write is started."]
     #[inline(always)]
+    #[must_use]
     pub fn write(&mut self) -> WRITE_W<1> {
         WRITE_W::new(self)
     }
     #[doc = "Bits 2:3 - Cache Mode Disabling the cache increases the power consumption and reduces performance. Prefetching improves performance at the expense of a potential increase in power consumption. Real-time mode provides predictable flash read access time, the execution time is equal to cache disabled mode, but the power consumption is lower. 00: Cache disabled 01: Cache enabled 10: Cache enabled, with prefetch 11: Real-time mode Note: The read value always represents the current cache mode. Writing a new cache mode starts a cache mode change request that does not take effect until the controller is ready. Writes to this register are ignored if there is a current cache change request in progress."]
     #[inline(always)]
+    #[must_use]
     pub fn cm(&mut self) -> CM_W<2> {
         CM_W::new(self)
     }
     #[doc = "Bit 8 - Flash erase or write operation on APB bus must assert this when accessing the information page"]
     #[inline(always)]
+    #[must_use]
     pub fn sel_info_page(&mut self) -> SEL_INFO_PAGE_W<8> {
         SEL_INFO_PAGE_W::new(self)
     }
     #[doc = "Bit 9 - Lock bit for lock bit page 0: Neither write nor erase not allowed 1: Both write and erase allowed"]
     #[inline(always)]
+    #[must_use]
     pub fn upper_page_access(&mut self) -> UPPER_PAGE_ACCESS_W<9> {
         UPPER_PAGE_ACCESS_W::new(self)
     }
@@ -147,11 +152,10 @@ impl crate::Readable for FCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [fctl::W](W) writer structure"]
 impl crate::Writable for FCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FCTL to value 0"]
 impl crate::Resettable for FCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

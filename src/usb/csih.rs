@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn indblbuf(&mut self) -> INDBLBUF_W<0> {
         INDBLBUF_W::new(self)
     }
     #[doc = "Bit 3 - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
     #[inline(always)]
+    #[must_use]
     pub fn forcedatatog(&mut self) -> FORCEDATATOG_W<3> {
         FORCEDATATOG_W::new(self)
     }
     #[doc = "Bit 6 - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
+    #[must_use]
     pub fn iso(&mut self) -> ISO_W<6> {
         ISO_W::new(self)
     }
     #[doc = "Bit 7 - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
     #[inline(always)]
+    #[must_use]
     pub fn autiset(&mut self) -> AUTISET_W<7> {
         AUTISET_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for CSIH_SPEC {
 #[doc = "`write(|w| ..)` method takes [csih::W](W) writer structure"]
 impl crate::Writable for CSIH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CSIH to value 0"]
 impl crate::Resettable for CSIH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

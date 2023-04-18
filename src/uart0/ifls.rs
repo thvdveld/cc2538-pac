@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO <= 7/8 empty 0x1: TX FIFO <= 3/4 empty 0x2: TX FIFO <= 1/2 empty (default) 0x3: TX FIFO <= 1/4 empty 0x4: TX FIFO <= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
     #[inline(always)]
+    #[must_use]
     pub fn txiflsel(&mut self) -> TXIFLSEL_W<0> {
         TXIFLSEL_W::new(self)
     }
     #[doc = "Bits 3:5 - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn rxiflsel(&mut self) -> RXIFLSEL_W<3> {
         RXIFLSEL_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for IFLS_SPEC {
 #[doc = "`write(|w| ..)` method takes [ifls::W](W) writer structure"]
 impl crate::Writable for IFLS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IFLS to value 0"]
 impl crate::Resettable for IFLS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -170,66 +170,79 @@ impl R {
 impl W {
     #[doc = "Bit 0 - If 1, this status bit indicates that an AES output block is available to be retrieved by the host. Writing 0 clears the bit to 0 and indicates that output data is read by the host. The AES core can provide a next output data block. Writing 1 to this bit is ignored. Note: For DMA operations, this bit is automatically controlled by the EIP-120t."]
     #[inline(always)]
+    #[must_use]
     pub fn output_ready(&mut self) -> OUTPUT_READY_W<0> {
         OUTPUT_READY_W::new(self)
     }
     #[doc = "Bit 1 - If 1, this status bit indicates that the 16-byte AES input buffer is empty. The host is permitted to write the next block of data. Writing 0 clears the bit to 0 and indicates that the AES core can use the provided input data block. Writing 1 to this bit is ignored. Note: For DMA operations, this bit is automatically controlled by the EIP-120t. After reset, this bit is 0. After writing a context, this bit becomes 1."]
     #[inline(always)]
+    #[must_use]
     pub fn input_ready(&mut self) -> INPUT_READY_W<1> {
         INPUT_READY_W::new(self)
     }
     #[doc = "Bit 2 - If set to 1 an encrypt operation is performed. If set to 0 a decrypt operation is performed. This bit must be written with a 1 when CBC-MAC is selected."]
     #[inline(always)]
+    #[must_use]
     pub fn direction(&mut self) -> DIRECTION_W<2> {
         DIRECTION_W::new(self)
     }
     #[doc = "Bit 5 - If set to 1, cipher-block-chaining (CBC) mode is selected."]
     #[inline(always)]
+    #[must_use]
     pub fn cbc(&mut self) -> CBC_W<5> {
         CBC_W::new(self)
     }
     #[doc = "Bit 6 - If set to 1, AES counter mode (CTR) is selected. Note: This bit must also be set for GCM and CCM, when encryption/decryption is required."]
     #[inline(always)]
+    #[must_use]
     pub fn ctr(&mut self) -> CTR_W<6> {
         CTR_W::new(self)
     }
     #[doc = "Bits 7:8 - Specifies the counter width for AES-CTR mode 00 = 32-bit counter 01 = 64-bit counter 10 = 96-bit counter 11 = 128-bit counter"]
     #[inline(always)]
+    #[must_use]
     pub fn ctr_width(&mut self) -> CTR_WIDTH_W<7> {
         CTR_WIDTH_W::new(self)
     }
     #[doc = "Bit 15 - Set to 1 to select AES-CBC MAC mode. The direction bit must be set to 1 for this mode. Selecting this mode requires writing the length register after all other registers."]
     #[inline(always)]
+    #[must_use]
     pub fn cbc_mac(&mut self) -> CBC_MAC_W<15> {
         CBC_MAC_W::new(self)
     }
     #[doc = "Bits 16:17 - Set these bits to 11 to select AES-GCM mode. AES-GCM is a combined mode, using the Galois field multiplier GF(2 to the power of 128) for authentication and AES-CTR mode for encryption. Note: The CTR mode bit in this register must also be set to 1 to enable AES-CTR Bit combination description: 00 = No GCM mode 01 = Reserved, do not select 10 = Reserved, do not select 11 = Autonomous GHASH (both H- and Y0-encrypted calculated internally) Note: The EIP-120t-1 configuration only supports mode 11 (autonomous GHASH), other GCM modes are not allowed."]
     #[inline(always)]
+    #[must_use]
     pub fn gcm(&mut self) -> GCM_W<16> {
         GCM_W::new(self)
     }
     #[doc = "Bit 18 - If set to 1, AES-CCM is selected AES-CCM is a combined mode, using AES for authentication and encryption. Note: Selecting AES-CCM mode requires writing of the AAD length register after all other registers. Note: The CTR mode bit in this register must also be set to 1 to enable AES-CTR; selecting other AES modes than CTR mode is invalid."]
     #[inline(always)]
+    #[must_use]
     pub fn ccm(&mut self) -> CCM_W<18> {
         CCM_W::new(self)
     }
     #[doc = "Bits 19:21 - Defines L, which indicates the width of the length field for CCM operations; the length field in bytes equals the value of CMM-L plus one. All values are supported."]
     #[inline(always)]
+    #[must_use]
     pub fn ccm_l(&mut self) -> CCM_L_W<19> {
         CCM_L_W::new(self)
     }
     #[doc = "Bits 22:24 - Defines M, which indicates the length of the authentication field for CCM operations; the authentication field length equals two times (the value of CCM-M plus one). Note: The EIP-120t always returns a 128-bit authentication field, of which the M least significant bytes are valid. All values are supported."]
     #[inline(always)]
+    #[must_use]
     pub fn ccm_m(&mut self) -> CCM_M_W<22> {
         CCM_M_W::new(self)
     }
     #[doc = "Bit 29 - This bit indicates that an authentication TAG or result IV needs to be stored as a result context. Typically this bit must be set for authentication modes returning a TAG (CBC-MAC, GCM and CCM), or for basic encryption modes that require future continuation with the current result IV. If this bit is set, the engine retains its full context until the TAG and/or IV registers are read. The TAG or IV must be read before the AES engine can start a new operation."]
     #[inline(always)]
+    #[must_use]
     pub fn save_context(&mut self) -> SAVE_CONTEXT_W<29> {
         SAVE_CONTEXT_W::new(self)
     }
     #[doc = "Bit 30 - If 1, this status bit indicates that an AES authentication TAG and/or IV block(s) is/are available for the host to retrieve. This bit is only asserted if the save_context bit is set to 1. The bit is mutual exclusive with the context_ready bit. Writing one clears the bit to 0, indicating the AES core can start its next operation. This bit is also cleared when the 4th word of the output TAG and/or IV is read. Note: All other mode bit writes are ignored when this mode bit is written with 1. Note: This bit is controlled automatically by the EIP-120t for TAG read DMA operations."]
     #[inline(always)]
+    #[must_use]
     pub fn saved_context_ready(&mut self) -> SAVED_CONTEXT_READY_W<30> {
         SAVED_CONTEXT_READY_W::new(self)
     }
@@ -253,11 +266,10 @@ impl crate::Readable for AES_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [aes_ctrl::W](W) writer structure"]
 impl crate::Writable for AES_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AES_CTRL to value 0"]
 impl crate::Resettable for AES_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

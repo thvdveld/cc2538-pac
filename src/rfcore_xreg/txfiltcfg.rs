@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Drives signal rfr_txfilt_fc"]
     #[inline(always)]
+    #[must_use]
     pub fn fc(&mut self) -> FC_W<0> {
         FC_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TXFILTCFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [txfiltcfg::W](W) writer structure"]
 impl crate::Writable for TXFILTCFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TXFILTCFG to value 0"]
 impl crate::Resettable for TXFILTCFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

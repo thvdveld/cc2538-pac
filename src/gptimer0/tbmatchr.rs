@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - GPTM Timer B match register"]
     #[inline(always)]
+    #[must_use]
     pub fn tbmr(&mut self) -> TBMR_W<0> {
         TBMR_W::new(self)
     }
@@ -73,11 +74,10 @@ impl crate::Readable for TBMATCHR_SPEC {
 #[doc = "`write(|w| ..)` method takes [tbmatchr::W](W) writer structure"]
 impl crate::Writable for TBMATCHR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TBMATCHR to value 0"]
 impl crate::Resettable for TBMATCHR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -56,6 +56,7 @@ impl W {
 bits are read only. Read access: Extended address enable for table entry n (0 to 11) is mapped to EXT_ADDR_EN\\[2n\\]
 and EXT_ADDR_EN\\[2n + 1\\]. Optional safety feature: To ensure that an entry in the source matching table is not used while it is being updated, set the corresponding EXT_ADDR_EN bit to 0 while updating."]
     #[inline(always)]
+    #[must_use]
     pub fn ext_addr_en(&mut self) -> EXT_ADDR_EN_W<0> {
         EXT_ADDR_EN_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for SRCEXTEN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcexten0::W](W) writer structure"]
 impl crate::Writable for SRCEXTEN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCEXTEN0 to value 0"]
 impl crate::Resettable for SRCEXTEN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

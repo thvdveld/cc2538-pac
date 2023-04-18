@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Threshold used when generating FIFOP signal"]
     #[inline(always)]
+    #[must_use]
     pub fn fifop_thr(&mut self) -> FIFOP_THR_W<0> {
         FIFOP_THR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for FIFOPCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifopctrl::W](W) writer structure"]
 impl crate::Writable for FIFOPCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFOPCTRL to value 0"]
 impl crate::Resettable for FIFOPCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

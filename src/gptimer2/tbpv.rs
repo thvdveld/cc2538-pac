@@ -33,8 +33,5 @@ impl crate::Readable for TBPV_SPEC {
 }
 #[doc = "`reset()` method sets TBPV to value 0"]
 impl crate::Resettable for TBPV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

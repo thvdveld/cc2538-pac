@@ -35,8 +35,5 @@ impl crate::Readable for STCV1_SPEC {
 }
 #[doc = "`reset()` method sets STCV1 to value 0"]
 impl crate::Resettable for STCV1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

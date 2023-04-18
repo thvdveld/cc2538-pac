@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - When written, the written data is inverted and ANDed with the RXENMASK and stored in RXENMASK. For example, if 1 is written to one or more bit positions in this register, the corresponding bits are cleared in RXENMASK."]
     #[inline(always)]
+    #[must_use]
     pub fn rxenmaskclr(&mut self) -> RXENMASKCLR_W<0> {
         RXENMASKCLR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for RXMASKCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [rxmaskclr::W](W) writer structure"]
 impl crate::Writable for RXMASKCLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RXMASKCLR to value 0"]
 impl crate::Resettable for RXMASKCLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

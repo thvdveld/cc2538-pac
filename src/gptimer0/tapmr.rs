@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - GPTM Timer A prescale match"]
     #[inline(always)]
+    #[must_use]
     pub fn tapsr(&mut self) -> TAPSR_W<0> {
         TAPSR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TAPMR_SPEC {
 #[doc = "`write(|w| ..)` method takes [tapmr::W](W) writer structure"]
 impl crate::Writable for TAPMR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TAPMR to value 0"]
 impl crate::Resettable for TAPMR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

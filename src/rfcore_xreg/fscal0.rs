@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Control signal Defines the synthesizer boost mode 00: No BW_BOOST 01: BW_BOOST is high during calibration and approximately 30 us into the settling. 10: BW_BOOST is always on (or high). 11: Reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn bw_boost_mode(&mut self) -> BW_BOOST_MODE_W<0> {
         BW_BOOST_MODE_W::new(self)
     }
     #[doc = "Bits 2:5 - Digital bit vector defining the charge-pump output current on an exponential scale If FFC_BW_BOOST = 0, the read value is the value stored in CHP_CURRENT. If FFC_BW_BOOST = 1, the read value is CHP_CURRENT + 4. If the addition causes overflow, the signal is saturated."]
     #[inline(always)]
+    #[must_use]
     pub fn chp_current(&mut self) -> CHP_CURRENT_W<2> {
         CHP_CURRENT_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to manually disable charge pump by masking the up and down pulses from the phase detector."]
     #[inline(always)]
+    #[must_use]
     pub fn chp_disable(&mut self) -> CHP_DISABLE_W<6> {
         CHP_DISABLE_W::new(self)
     }
     #[doc = "Bit 7 - Force on the current comparator in the VCO. This signal is ORed with the signal coming from the calibration module."]
     #[inline(always)]
+    #[must_use]
     pub fn vco_curr_comp_en_ov(&mut self) -> VCO_CURR_COMP_EN_OV_W<7> {
         VCO_CURR_COMP_EN_OV_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for FSCAL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [fscal0::W](W) writer structure"]
 impl crate::Writable for FSCAL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSCAL0 to value 0"]
 impl crate::Resettable for FSCAL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

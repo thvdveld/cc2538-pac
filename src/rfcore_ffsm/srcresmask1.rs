@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
     #[inline(always)]
+    #[must_use]
     pub fn srcresmask1(&mut self) -> SRCRESMASK1_W<0> {
         SRCRESMASK1_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SRCRESMASK1_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcresmask1::W](W) writer structure"]
 impl crate::Writable for SRCRESMASK1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCRESMASK1 to value 0"]
 impl crate::Resettable for SRCRESMASK1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

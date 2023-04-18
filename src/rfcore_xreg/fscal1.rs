@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
     #[inline(always)]
+    #[must_use]
     pub fn vco_curr(&mut self) -> VCO_CURR_W<0> {
         VCO_CURR_W::new(self)
     }
     #[doc = "Bits 2:6 - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn vco_curr_cal(&mut self) -> VCO_CURR_CAL_W<2> {
         VCO_CURR_CAL_W::new(self)
     }
     #[doc = "Bit 7 - Override current calibration"]
     #[inline(always)]
+    #[must_use]
     pub fn vco_curr_cal_oe(&mut self) -> VCO_CURR_CAL_OE_W<7> {
         VCO_CURR_CAL_OE_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for FSCAL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [fscal1::W](W) writer structure"]
 impl crate::Writable for FSCAL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSCAL1 to value 0"]
 impl crate::Resettable for FSCAL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

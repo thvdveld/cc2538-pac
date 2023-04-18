@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Interrupt enable for OUT endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn outep1ie(&mut self) -> OUTEP1IE_W<1> {
         OUTEP1IE_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt enable for OUT endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn outep2ie(&mut self) -> OUTEP2IE_W<2> {
         OUTEP2IE_W::new(self)
     }
     #[doc = "Bit 3 - Interrupt enable for OUT endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn outep3ie(&mut self) -> OUTEP3IE_W<3> {
         OUTEP3IE_W::new(self)
     }
     #[doc = "Bit 4 - Interrupt enable for OUT endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn outep4ie(&mut self) -> OUTEP4IE_W<4> {
         OUTEP4IE_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt enable for OUT endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn outep5ie(&mut self) -> OUTEP5IE_W<5> {
         OUTEP5IE_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for OIE_SPEC {
 #[doc = "`write(|w| ..)` method takes [oie::W](W) writer structure"]
 impl crate::Writable for OIE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OIE to value 0"]
 impl crate::Resettable for OIE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

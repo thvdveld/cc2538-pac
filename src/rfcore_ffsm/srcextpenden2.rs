@@ -53,6 +53,7 @@ impl W {
     #[doc = "Bits 0:7 - 8 MSBs of the 24-bit mask that enables or disables automatic pending for each of the 12 extended addresses Entry n is mapped to SRCEXTPENDEN\\[2n\\]. All SRCEXTPENDEN\\[2n + 1\\]
 bits are don't care."]
     #[inline(always)]
+    #[must_use]
     pub fn srcextpenden2(&mut self) -> SRCEXTPENDEN2_W<0> {
         SRCEXTPENDEN2_W::new(self)
     }
@@ -75,11 +76,10 @@ impl crate::Readable for SRCEXTPENDEN2_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcextpenden2::W](W) writer structure"]
 impl crate::Writable for SRCEXTPENDEN2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCEXTPENDEN2 to value 0"]
 impl crate::Resettable for SRCEXTPENDEN2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

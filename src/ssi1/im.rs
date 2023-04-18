@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
     #[inline(always)]
+    #[must_use]
     pub fn rorim(&mut self) -> RORIM_W<0> {
         RORIM_W::new(self)
     }
     #[doc = "Bit 1 - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
     #[inline(always)]
+    #[must_use]
     pub fn rtim(&mut self) -> RTIM_W<1> {
         RTIM_W::new(self)
     }
     #[doc = "Bit 2 - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
     #[inline(always)]
+    #[must_use]
     pub fn rxim(&mut self) -> RXIM_W<2> {
         RXIM_W::new(self)
     }
     #[doc = "Bit 3 - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
     #[inline(always)]
+    #[must_use]
     pub fn txim(&mut self) -> TXIM_W<3> {
         TXIM_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for IM_SPEC {
 #[doc = "`write(|w| ..)` method takes [im::W](W) writer structure"]
 impl crate::Writable for IM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IM to value 0"]
 impl crate::Resettable for IM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

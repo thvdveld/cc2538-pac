@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - 00: No action 01: PM1 10: PM2 11: PM3"]
     #[inline(always)]
+    #[must_use]
     pub fn pm(&mut self) -> PM_W<0> {
         PM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PMCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pmctl::W](W) writer structure"]
 impl crate::Writable for PMCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PMCTL to value 0"]
 impl crate::Resettable for PMCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

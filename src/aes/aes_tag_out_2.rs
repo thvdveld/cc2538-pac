@@ -35,8 +35,5 @@ impl crate::Readable for AES_TAG_OUT_2_SPEC {
 }
 #[doc = "`reset()` method sets AES_TAG_OUT_2 to value 0"]
 impl crate::Resettable for AES_TAG_OUT_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

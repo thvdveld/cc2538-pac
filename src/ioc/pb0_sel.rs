@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PB0."]
     #[inline(always)]
+    #[must_use]
     pub fn pb0_sel(&mut self) -> PB0_SEL_W<0> {
         PB0_SEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PB0_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pb0_sel::W](W) writer structure"]
 impl crate::Writable for PB0_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PB0_SEL to value 0"]
 impl crate::Resettable for PB0_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

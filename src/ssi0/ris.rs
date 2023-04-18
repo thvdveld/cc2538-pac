@@ -54,8 +54,5 @@ impl crate::Readable for RIS_SPEC {
 }
 #[doc = "`reset()` method sets RIS to value 0"]
 impl crate::Resettable for RIS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

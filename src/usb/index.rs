@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Index of the currently selected endpoint The index is set to 0 to enable access to endpoint 0 control and status registers The index is set to 1, 2, 3, 4 or 5 to enable access to IN/OUT endpoint 1, 2, 3, 4 or 5 control and status registers, respectively"]
     #[inline(always)]
+    #[must_use]
     pub fn usbindex(&mut self) -> USBINDEX_W<0> {
         USBINDEX_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for INDEX_SPEC {
 #[doc = "`write(|w| ..)` method takes [index::W](W) writer structure"]
 impl crate::Writable for INDEX_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INDEX to value 0"]
 impl crate::Resettable for INDEX_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

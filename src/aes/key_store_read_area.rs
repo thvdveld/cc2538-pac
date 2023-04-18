@@ -56,6 +56,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Selects the area of the key store RAM from where the key needs to be read that will be writen to the AES engine RAM_AREA: 0000: RAM_AREA0 0001: RAM_AREA1 0010: RAM_AREA2 0011: RAM_AREA3 0100: RAM_AREA4 0101: RAM_AREA5 0110: RAM_AREA6 0111: RAM_AREA7 1000: no RAM area selected 1001-1111: Reserved RAM areas RAM_AREA0, RAM_AREA2, RAM_AREA4 and RAM_AREA6 are the only valid read areas for 192 and 256 bits key sizes. Only RAM areas that contain valid written keys can be selected."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area(&mut self) -> RAM_AREA_W<0> {
         RAM_AREA_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for KEY_STORE_READ_AREA_SPEC {
 #[doc = "`write(|w| ..)` method takes [key_store_read_area::W](W) writer structure"]
 impl crate::Writable for KEY_STORE_READ_AREA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets KEY_STORE_READ_AREA to value 0"]
 impl crate::Resettable for KEY_STORE_READ_AREA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

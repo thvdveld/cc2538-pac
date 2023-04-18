@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
     #[inline(always)]
+    #[must_use]
     pub fn set_rxenmask_on_tx(&mut self) -> SET_RXENMASK_ON_TX_W<0> {
         SET_RXENMASK_ON_TX_W::new(self)
     }
     #[doc = "Bit 1 - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
     #[inline(always)]
+    #[must_use]
     pub fn ignore_tx_underf(&mut self) -> IGNORE_TX_UNDERF_W<1> {
         IGNORE_TX_UNDERF_W::new(self)
     }
     #[doc = "Bit 2 - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
     #[inline(always)]
+    #[must_use]
     pub fn pending_or(&mut self) -> PENDING_OR_W<2> {
         PENDING_OR_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for FRMCTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [frmctrl1::W](W) writer structure"]
 impl crate::Writable for FRMCTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRMCTRL1 to value 0"]
 impl crate::Resettable for FRMCTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

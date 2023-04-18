@@ -64,6 +64,7 @@ is using the primary control structure 1: uDMA channel \\[n\\]
 is using the alternate control structure Bit 0 corresponds to channel 0. A bit can only be cleared by setting the corresponding CLR\\[n\\]
 bit in the DMAALTCLR register. Note: For Ping-Pong and Scatter-Gather cycle types, the uDMA controller automatically sets these bits to select the alternate channel control data structure."]
     #[inline(always)]
+    #[must_use]
     pub fn set(&mut self) -> SET_W<0> {
         SET_W::new(self)
     }
@@ -86,11 +87,10 @@ impl crate::Readable for ALTSET_SPEC {
 #[doc = "`write(|w| ..)` method takes [altset::W](W) writer structure"]
 impl crate::Writable for ALTSET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ALTSET to value 0"]
 impl crate::Resettable for ALTSET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - OUT endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn outdblbuf(&mut self) -> OUTDBLBUF_W<0> {
         OUTDBLBUF_W::new(self)
     }
     #[doc = "Bit 6 - Selects OUT endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
+    #[must_use]
     pub fn iso(&mut self) -> ISO_W<6> {
         ISO_W::new(self)
     }
     #[doc = "Bit 7 - If software sets this bit, the USB_CSOL.OUTPKTRDY bit will be automatically cleared when a packet of maximum size (specified by USB_MAXO) has been unloaded from the OUT FIFO. When packets of less than the maximum packet size are unloaded, USB_CSOL.OUTPKTRDY will have to be cleared manually."]
     #[inline(always)]
+    #[must_use]
     pub fn autoclear(&mut self) -> AUTOCLEAR_W<7> {
         AUTOCLEAR_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for CSOH_SPEC {
 #[doc = "`write(|w| ..)` method takes [csoh::W](W) writer structure"]
 impl crate::Writable for CSOH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CSOH to value 0"]
 impl crate::Resettable for CSOH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

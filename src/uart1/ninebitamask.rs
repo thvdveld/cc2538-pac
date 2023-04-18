@@ -55,6 +55,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Self Address Mask for 9-Bit Mode This field contains the address mask that creates a range of addresses that should be matched."]
     #[inline(always)]
+    #[must_use]
     pub fn mask(&mut self) -> MASK_W<0> {
         MASK_W::new(self)
     }
@@ -77,11 +78,10 @@ impl crate::Readable for NINEBITAMASK_SPEC {
 #[doc = "`write(|w| ..)` method takes [ninebitamask::W](W) writer structure"]
 impl crate::Writable for NINEBITAMASK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NINEBITAMASK to value 0"]
 impl crate::Resettable for NINEBITAMASK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

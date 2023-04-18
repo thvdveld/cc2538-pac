@@ -119,41 +119,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA0 is not selected to be written. 1: RAM_AREA0 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area0(&mut self) -> RAM_AREA0_W<0> {
         RAM_AREA0_W::new(self)
     }
     #[doc = "Bit 1 - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA1 is not selected to be written. 1: RAM_AREA1 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area1(&mut self) -> RAM_AREA1_W<1> {
         RAM_AREA1_W::new(self)
     }
     #[doc = "Bit 2 - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA2 is not selected to be written. 1: RAM_AREA2 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area2(&mut self) -> RAM_AREA2_W<2> {
         RAM_AREA2_W::new(self)
     }
     #[doc = "Bit 3 - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA3 is not selected to be written. 1: RAM_AREA3 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area3(&mut self) -> RAM_AREA3_W<3> {
         RAM_AREA3_W::new(self)
     }
     #[doc = "Bit 4 - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA4 is not selected to be written. 1: RAM_AREA4 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area4(&mut self) -> RAM_AREA4_W<4> {
         RAM_AREA4_W::new(self)
     }
     #[doc = "Bit 5 - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA5 is not selected to be written. 1: RAM_AREA5 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area5(&mut self) -> RAM_AREA5_W<5> {
         RAM_AREA5_W::new(self)
     }
     #[doc = "Bit 6 - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA6 is not selected to be written. 1: RAM_AREA6 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area6(&mut self) -> RAM_AREA6_W<6> {
         RAM_AREA6_W::new(self)
     }
     #[doc = "Bit 7 - Each RAM_AREAx represents an area of 128 bits. Select the key store RAM area(s) where the key(s) needs to be written 0: RAM_AREA7 is not selected to be written. 1: RAM_AREA7 is selected to be written. Writing to multiple RAM locations is possible only when the selected RAM areas are sequential. Keys that require more than one RAM locations (key size is 192 or 256 bits), must start at one of the following areas: RAM_AREA0, RAM_AREA2, RAM_AREA4, or RAM_AREA6."]
     #[inline(always)]
+    #[must_use]
     pub fn ram_area7(&mut self) -> RAM_AREA7_W<7> {
         RAM_AREA7_W::new(self)
     }
@@ -176,11 +184,10 @@ impl crate::Readable for KEY_STORE_WRITE_AREA_SPEC {
 #[doc = "`write(|w| ..)` method takes [key_store_write_area::W](W) writer structure"]
 impl crate::Writable for KEY_STORE_WRITE_AREA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets KEY_STORE_WRITE_AREA to value 0"]
 impl crate::Resettable for KEY_STORE_WRITE_AREA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

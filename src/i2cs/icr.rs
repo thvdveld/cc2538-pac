@@ -28,16 +28,19 @@ pub type STOPIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O
 impl W {
     #[doc = "Bit 0 - Data interrupt clear Writing 1 to this bit clears the DATARIS bit in the I2CSRIS register and the DATAMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
     #[inline(always)]
+    #[must_use]
     pub fn dataic(&mut self) -> DATAIC_W<0> {
         DATAIC_W::new(self)
     }
     #[doc = "Bit 1 - Start condition interrupt vlear Writing 1 to this bit clears the STARTRIS bit in the I2CSRIS register and the STARTMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
     #[inline(always)]
+    #[must_use]
     pub fn startic(&mut self) -> STARTIC_W<1> {
         STARTIC_W::new(self)
     }
     #[doc = "Bit 2 - Stop condition interrupt clear Writing 1 to this bit clears the STOPRIS bit in the I2CSRIS register and the STOPMIS bit in the I2CSMIS register. A read of this register returns no meaningful data."]
     #[inline(always)]
+    #[must_use]
     pub fn stopic(&mut self) -> STOPIC_W<2> {
         STOPIC_W::new(self)
     }
@@ -56,11 +59,10 @@ impl crate::RegisterSpec for ICR_SPEC {
 #[doc = "`write(|w| ..)` method takes [icr::W](W) writer structure"]
 impl crate::Writable for ICR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICR to value 0"]
 impl crate::Resettable for ICR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

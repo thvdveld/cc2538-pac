@@ -26,6 +26,7 @@ impl W {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 software request These bits generate software requests. Bit 0 corresponds to channel 0. 1: Generate a software request for the corresponding channel 0: No request generated These bits are automatically cleared when the software request has been completed."]
     #[inline(always)]
+    #[must_use]
     pub fn swreq(&mut self) -> SWREQ_W<0> {
         SWREQ_W::new(self)
     }
@@ -44,11 +45,10 @@ impl crate::RegisterSpec for SWREQ_SPEC {
 #[doc = "`write(|w| ..)` method takes [swreq::W](W) writer structure"]
 impl crate::Writable for SWREQ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SWREQ to value 0"]
 impl crate::Resettable for SWREQ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

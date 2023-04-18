@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - 15:8 part of the 24-bit word EXT_ADDR_EN See description of SRCEXTEN0.EXT_ADDR_EN."]
     #[inline(always)]
+    #[must_use]
     pub fn ext_addr_en(&mut self) -> EXT_ADDR_EN_W<0> {
         EXT_ADDR_EN_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SRCEXTEN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcexten1::W](W) writer structure"]
 impl crate::Writable for SRCEXTEN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCEXTEN1 to value 0"]
 impl crate::Resettable for SRCEXTEN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

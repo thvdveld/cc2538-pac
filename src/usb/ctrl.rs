@@ -64,11 +64,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - USB enable The USB controller is reset when this bit is cleared"]
     #[inline(always)]
+    #[must_use]
     pub fn usben(&mut self) -> USBEN_W<0> {
         USBEN_W::new(self)
     }
     #[doc = "Bit 1 - 48 MHz USB PLL enable When this bit is set, the 48 MHz PLL is started. Software must avoid access to other USB registers before the PLL has locked; that is, USB_CTRL.PLLLOCKED is 1. This bit can be set only when USB_CTRL.USBEN is 1. The PLL must be disabled before entering PM1 when suspended, and must be re-enabled when resuming operation."]
     #[inline(always)]
+    #[must_use]
     pub fn pllen(&mut self) -> PLLEN_W<1> {
         PLLEN_W::new(self)
     }
@@ -91,11 +93,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

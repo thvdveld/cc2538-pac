@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - 0x8: oe - output enable 0x4: pue - pullup enable 0x2: pde - pulldown enable 0x1: ana - analog enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pd7_over(&mut self) -> PD7_OVER_W<0> {
         PD7_OVER_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PD7_OVER_SPEC {
 #[doc = "`write(|w| ..)` method takes [pd7_over::W](W) writer structure"]
 impl crate::Writable for PD7_OVER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PD7_OVER to value 0x04"]
 impl crate::Resettable for PD7_OVER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

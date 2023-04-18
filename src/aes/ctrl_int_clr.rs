@@ -32,26 +32,31 @@ pub type DMA_BUS_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_INT_CLR
 impl W {
     #[doc = "Bit 0 - If 1 is written to this bit, the result available (irq_result_av) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
     #[inline(always)]
+    #[must_use]
     pub fn result_av(&mut self) -> RESULT_AV_W<0> {
         RESULT_AV_W::new(self)
     }
     #[doc = "Bit 1 - If 1 is written to this bit, the DMA in done (irq_dma_in_done) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<1> {
         DMA_IN_DONE_W::new(self)
     }
     #[doc = "Bit 29 - If 1 is written to this bit, the key store read error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
+    #[must_use]
     pub fn key_st_rd_err(&mut self) -> KEY_ST_RD_ERR_W<29> {
         KEY_ST_RD_ERR_W::new(self)
     }
     #[doc = "Bit 30 - If 1 is written to this bit, the key store write error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
+    #[must_use]
     pub fn key_st_wr_err(&mut self) -> KEY_ST_WR_ERR_W<30> {
         KEY_ST_WR_ERR_W::new(self)
     }
     #[doc = "Bit 31 - If 1 is written to this bit, the DMA bus error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_bus_err(&mut self) -> DMA_BUS_ERR_W<31> {
         DMA_BUS_ERR_W::new(self)
     }
@@ -70,11 +75,10 @@ impl crate::RegisterSpec for CTRL_INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl_int_clr::W](W) writer structure"]
 impl crate::Writable for CTRL_INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL_INT_CLR to value 0"]
 impl crate::Resettable for CTRL_INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

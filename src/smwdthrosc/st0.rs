@@ -56,6 +56,7 @@ impl W {
 of the Sleep Timer count. When writing this register sets the low bits \\[7:0\\]
 of the compare value."]
     #[inline(always)]
+    #[must_use]
     pub fn st0(&mut self) -> ST0_W<0> {
         ST0_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for ST0_SPEC {
 #[doc = "`write(|w| ..)` method takes [st0::W](W) writer structure"]
 impl crate::Writable for ST0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ST0 to value 0"]
 impl crate::Resettable for ST0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

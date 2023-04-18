@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Bit mask is masking out interrupt sources. Bit position: 7: RXMASKZERO 6: RXPKTDONE 5: FRAME_ACCEPTED 4: SRC_MATCH_FOUND 3: SRC_MATCH_DONE 2: FIFOP 1: SFD 0: ACT_UNUSED"]
     #[inline(always)]
+    #[must_use]
     pub fn rfirqm(&mut self) -> RFIRQM_W<0> {
         RFIRQM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for RFIRQM0_SPEC {
 #[doc = "`write(|w| ..)` method takes [rfirqm0::W](W) writer structure"]
 impl crate::Writable for RFIRQM0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RFIRQM0 to value 0"]
 impl crate::Resettable for RFIRQM0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

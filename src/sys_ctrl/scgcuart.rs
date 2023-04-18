@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: Clock for UART0 is gated. 1: Clock for UART0 is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn uart0(&mut self) -> UART0_W<0> {
         UART0_W::new(self)
     }
     #[doc = "Bit 1 - 0: Clock for UART1 is gated. 1: Clock for UART1 is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn uart1(&mut self) -> UART1_W<1> {
         UART1_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SCGCUART_SPEC {
 #[doc = "`write(|w| ..)` method takes [scgcuart::W](W) writer structure"]
 impl crate::Writable for SCGCUART_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCGCUART to value 0"]
 impl crate::Resettable for SCGCUART_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

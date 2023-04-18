@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
     #[inline(always)]
+    #[must_use]
     pub fn crc_ren_rf(&mut self) -> CRC_REN_RF_W<0> {
         CRC_REN_RF_W::new(self)
     }
     #[doc = "Bit 8 - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
     #[inline(always)]
+    #[must_use]
     pub fn crc_ren_usb(&mut self) -> CRC_REN_USB_W<8> {
         CRC_REN_USB_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for SRCRC_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcrc::W](W) writer structure"]
 impl crate::Writable for SRCRC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCRC to value 0"]
 impl crate::Resettable for SRCRC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -138,56 +138,67 @@ impl R {
 impl W {
     #[doc = "Bit 4 - UART receive interrupt mask 1: An interrupt is sent to the interrupt controller when the RXRIS bit in the UARTRIS register is set. 0: The RXRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn rxim(&mut self) -> RXIM_W<4> {
         RXIM_W::new(self)
     }
     #[doc = "Bit 5 - UART transmit interrupt mask 1: An interrupt is sent to the interrupt controller when the TXRIS bit in the UARTRIS register is set. 0: The TXRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn txim(&mut self) -> TXIM_W<5> {
         TXIM_W::new(self)
     }
     #[doc = "Bit 6 - UART receive time-out interrupt mask 1: An interrupt is sent to the interrupt controller when the RTRIS bit in the UARTRIS register is set. 0: The RTRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn rtim(&mut self) -> RTIM_W<6> {
         RTIM_W::new(self)
     }
     #[doc = "Bit 7 - UART framing error interrupt mask 1: An interrupt is sent to the interrupt controller when the FERIS bit in the UARTRIS register is set. 0: The FERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn feim(&mut self) -> FEIM_W<7> {
         FEIM_W::new(self)
     }
     #[doc = "Bit 8 - UART parity error interrupt mask 1: An interrupt is sent to the interrupt controller when the PERIS bit in the UARTRIS register is set. 0: The PERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn peim(&mut self) -> PEIM_W<8> {
         PEIM_W::new(self)
     }
     #[doc = "Bit 9 - UART break error interrupt mask 1: An interrupt is sent to the interrupt controller when the BERIS bit in the UARTRIS register is set. 0: The BERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn beim(&mut self) -> BEIM_W<9> {
         BEIM_W::new(self)
     }
     #[doc = "Bit 10 - UART overrun error interrupt mask 1: An interrupt is sent to the interrupt controller when the OERIS bit in the UARTRIS register is set. 0: The OERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn oeim(&mut self) -> OEIM_W<10> {
         OEIM_W::new(self)
     }
     #[doc = "Bit 12 - 9-bit mode interrupt mask 1: An interrupt is sent to the interrupt controller when the 9BITRIS bit in the UARTRIS register is set. 0: The 9BITRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn ninebitim(&mut self) -> NINEBITIM_W<12> {
         NINEBITIM_W::new(self)
     }
     #[doc = "Bit 13 - LIN mode sync break interrupt mask 1: An interrupt is sent to the interrupt controller when the LMSBRIS bit in the UARTRIS register is set. 0: The LMSBRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn lmsbim(&mut self) -> LMSBIM_W<13> {
         LMSBIM_W::new(self)
     }
     #[doc = "Bit 14 - LIN mode edge 1 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME1RIS bit in the UARTRIS register is set. 0: The LME1RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn lme1im(&mut self) -> LME1IM_W<14> {
         LME1IM_W::new(self)
     }
     #[doc = "Bit 15 - LIN mode edge 5 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME5RIS bit in the UARTRIS register is set. 0: The LME5RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn lme5im(&mut self) -> LME5IM_W<15> {
         LME5IM_W::new(self)
     }
@@ -210,11 +221,10 @@ impl crate::Readable for IM_SPEC {
 #[doc = "`write(|w| ..)` method takes [im::W](W) writer structure"]
 impl crate::Writable for IM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IM to value 0"]
 impl crate::Resettable for IM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

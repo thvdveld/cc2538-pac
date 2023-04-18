@@ -40,8 +40,5 @@ impl crate::Readable for DMAC_OPTIONS_SPEC {
 }
 #[doc = "`reset()` method sets DMAC_OPTIONS to value 0"]
 impl crate::Resettable for DMAC_OPTIONS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -52,6 +52,7 @@ impl W {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[15:8\\]
 of an internal register, depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000, the timer (MTtim) value is latched. Reading this register with MTMSEL.MTMSEL set to 000 returns the latched value of MTtim\\[15:8\\]."]
     #[inline(always)]
+    #[must_use]
     pub fn mtm1(&mut self) -> MTM1_W<0> {
         MTM1_W::new(self)
     }
@@ -74,11 +75,10 @@ impl crate::Readable for MTM1_SPEC {
 #[doc = "`write(|w| ..)` method takes [mtm1::W](W) writer structure"]
 impl crate::Writable for MTM1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MTM1 to value 0"]
 impl crate::Resettable for MTM1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

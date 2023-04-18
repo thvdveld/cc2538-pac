@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Interrupt mask 1: The master interrupt is sent to the interrupt controller when the RIS bit in the I2CMRIS register is set. 0: The RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
+    #[must_use]
     pub fn im(&mut self) -> IM_W<0> {
         IM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for IMR_SPEC {
 #[doc = "`write(|w| ..)` method takes [imr::W](W) writer structure"]
 impl crate::Writable for IMR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IMR to value 0"]
 impl crate::Resettable for IMR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

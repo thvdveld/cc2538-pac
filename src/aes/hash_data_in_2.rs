@@ -27,6 +27,7 @@ impl W {
     #[doc = "Bits 0:31 - HASH_DATA_IN\\[95:64\\]
 These registers must be written with the 512-bit input data. The data lines are connected directly to the data input of the hash module and hence into the engine's internal data buffer. Writing to each of the registers triggers a corresponding 32-bit write enable to the internal buffer. Note: The host may only write the input data buffer when the rfd_in bit of the HASH_IO_BUF_CTRL register is high. If the rfd_in bit is 0, the engine is busy with processing. During processing, it is not allowed to write new input data. For message lengths larger than 64 bytes, multiple blocks of data are written to this input buffer using a handshake through flags of the HASH_IO_BUF_CTRL register. All blocks except the last are required to be 512 bits in size. If the last block is not 512 bits long, only the least significant bits of data must be written, but they must be padded with 0s to the next 32-bit boundary. Host read operations from these register addresses return 0s."]
     #[inline(always)]
+    #[must_use]
     pub fn hash_data_in(&mut self) -> HASH_DATA_IN_W<0> {
         HASH_DATA_IN_W::new(self)
     }
@@ -45,11 +46,10 @@ impl crate::RegisterSpec for HASH_DATA_IN_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [hash_data_in_2::W](W) writer structure"]
 impl crate::Writable for HASH_DATA_IN_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HASH_DATA_IN_2 to value 0"]
 impl crate::Resettable for HASH_DATA_IN_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

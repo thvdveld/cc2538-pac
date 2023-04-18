@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
     #[inline(always)]
+    #[must_use]
     pub fn instr(&mut self) -> INSTR_W<0> {
         INSTR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for RFST_SPEC {
 #[doc = "`write(|w| ..)` method takes [rfst::W](W) writer structure"]
 impl crate::Writable for RFST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RFST to value 0"]
 impl crate::Resettable for RFST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - 23:16 part of the 24-bit word SHORT_ADDR_EN See description of SRCSHORTEN0.SHORT_ADDR_EN."]
     #[inline(always)]
+    #[must_use]
     pub fn short_addr_en(&mut self) -> SHORT_ADDR_EN_W<0> {
         SHORT_ADDR_EN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SRCSHORTEN2_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcshorten2::W](W) writer structure"]
 impl crate::Writable for SRCSHORTEN2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCSHORTEN2 to value 0"]
 impl crate::Resettable for SRCSHORTEN2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

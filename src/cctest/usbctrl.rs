@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - USB PHY stand-by override bit When this bit is cleared to 0 (default state) the USB module cannot change the stand-by mode of the PHY (USB pads) and the PHY is forced out of stand-by mode. This bit must be 1 as well as the stand-by control from the USB controller, before the mode of the PHY is stand-by."]
     #[inline(always)]
+    #[must_use]
     pub fn usb_stb(&mut self) -> USB_STB_W<0> {
         USB_STB_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for USBCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [usbctrl::W](W) writer structure"]
 impl crate::Writable for USBCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USBCTRL to value 0"]
 impl crate::Resettable for USBCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

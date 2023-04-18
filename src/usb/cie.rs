@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn suspendie(&mut self) -> SUSPENDIE_W<0> {
         SUSPENDIE_W::new(self)
     }
     #[doc = "Bit 1 - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn resumeie(&mut self) -> RESUMEIE_W<1> {
         RESUMEIE_W::new(self)
     }
     #[doc = "Bit 2 - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn rstie(&mut self) -> RSTIE_W<2> {
         RSTIE_W::new(self)
     }
     #[doc = "Bit 3 - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn sofie(&mut self) -> SOFIE_W<3> {
         SOFIE_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for CIE_SPEC {
 #[doc = "`write(|w| ..)` method takes [cie::W](W) writer structure"]
 impl crate::Writable for CIE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CIE to value 0"]
 impl crate::Resettable for CIE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

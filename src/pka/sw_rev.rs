@@ -54,8 +54,5 @@ impl crate::Readable for SW_REV_SPEC {
 }
 #[doc = "`reset()` method sets SW_REV to value 0"]
 impl crate::Resettable for SW_REV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

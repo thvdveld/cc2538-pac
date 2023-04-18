@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: SSI0 module is not reset 1: SSI0 module is reset"]
     #[inline(always)]
+    #[must_use]
     pub fn ssi0(&mut self) -> SSI0_W<0> {
         SSI0_W::new(self)
     }
     #[doc = "Bit 1 - 0: SSI1 module is not reset 1: SSI1 module is reset"]
     #[inline(always)]
+    #[must_use]
     pub fn ssi1(&mut self) -> SSI1_W<1> {
         SSI1_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for SRSSI_SPEC {
 #[doc = "`write(|w| ..)` method takes [srssi::W](W) writer structure"]
 impl crate::Writable for SRSSI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRSSI to value 0"]
 impl crate::Resettable for SRSSI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -68,6 +68,7 @@ are 11 to 86 (11 + 2394 = 2405 and 86 + 2394 = 2480). The device supports the fr
 are 0 to 113. Settings outside of the usable range (114 to 127) give a frequency of 2507 MHz. IEEE 802.15.4-2006 specifies a frequency range from 2405 MHz to 2480 MHz with 16 channels 5 MHz apart. The channels are numbered 11 through 26. For an IEEE 802.15.4-2006 compliant system, the only valid settings are thus FREQ\\[6:0\\]
 = 11 + 5 (channel number - 11)."]
     #[inline(always)]
+    #[must_use]
     pub fn freq(&mut self) -> FREQ_W<0> {
         FREQ_W::new(self)
     }
@@ -90,11 +91,10 @@ impl crate::Readable for FREQCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [freqctrl::W](W) writer structure"]
 impl crate::Writable for FREQCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FREQCTRL to value 0"]
 impl crate::Resettable for FREQCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

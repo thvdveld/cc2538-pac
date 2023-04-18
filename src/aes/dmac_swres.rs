@@ -24,6 +24,7 @@ pub type SWRES_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMAC_SWRES_SPEC, b
 impl W {
     #[doc = "Bit 0 - Software reset enable 0 = Disabled 1 = Enabled (self-cleared to 0) Completion of the software reset must be checked through the DMAC_STATUS register."]
     #[inline(always)]
+    #[must_use]
     pub fn swres(&mut self) -> SWRES_W<0> {
         SWRES_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for DMAC_SWRES_SPEC {
 #[doc = "`write(|w| ..)` method takes [dmac_swres::W](W) writer structure"]
 impl crate::Writable for DMAC_SWRES_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMAC_SWRES to value 0"]
 impl crate::Resettable for DMAC_SWRES_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

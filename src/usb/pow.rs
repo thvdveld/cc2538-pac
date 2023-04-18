@@ -80,16 +80,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables detection of and entry into suspend mode."]
     #[inline(always)]
+    #[must_use]
     pub fn suspenden(&mut self) -> SUSPENDEN_W<0> {
         SUSPENDEN_W::new(self)
     }
     #[doc = "Bit 2 - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
     #[inline(always)]
+    #[must_use]
     pub fn resume(&mut self) -> RESUME_W<2> {
         RESUME_W::new(self)
     }
     #[doc = "Bit 7 - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
     #[inline(always)]
+    #[must_use]
     pub fn isowaitsof(&mut self) -> ISOWAITSOF_W<7> {
         ISOWAITSOF_W::new(self)
     }
@@ -112,11 +115,10 @@ impl crate::Readable for POW_SPEC {
 #[doc = "`write(|w| ..)` method takes [pow::W](W) writer structure"]
 impl crate::Writable for POW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets POW to value 0"]
 impl crate::Resettable for POW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

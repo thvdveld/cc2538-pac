@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Used to adjust capacitor values in ADC"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_c3_adj(&mut self) -> ADC_C3_ADJ_W<0> {
         ADC_C3_ADJ_W::new(self)
     }
     #[doc = "Bits 2:3 - Used to adjust capacitor values in ADC"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_c2_adj(&mut self) -> ADC_C2_ADJ_W<2> {
         ADC_C2_ADJ_W::new(self)
     }
     #[doc = "Bits 4:7 - ADC test mode selector"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_test_ctrl(&mut self) -> ADC_TEST_CTRL_W<4> {
         ADC_TEST_CTRL_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for ADCTEST1_SPEC {
 #[doc = "`write(|w| ..)` method takes [adctest1::W](W) writer structure"]
 impl crate::Writable for ADCTEST1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADCTEST1 to value 0"]
 impl crate::Resettable for ADCTEST1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

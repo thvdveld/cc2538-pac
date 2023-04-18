@@ -138,56 +138,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - UART enable 1: The UART is enabled. 0: The UART is disabled. If the UART is disabled in the middle of transmission or reception, it completes the current character before stopping."]
     #[inline(always)]
+    #[must_use]
     pub fn uarten(&mut self) -> UARTEN_W<0> {
         UARTEN_W::new(self)
     }
     #[doc = "Bit 1 - UART SIR enable 1: The IrDA SIR block is enabled, and the UART transmits and receives data using SIR protocol. 0: Normal operation."]
     #[inline(always)]
+    #[must_use]
     pub fn siren(&mut self) -> SIREN_W<1> {
         SIREN_W::new(self)
     }
     #[doc = "Bit 2 - UART SIR low-power mode This bit selects the IrDA encoding mode. 1: The UART operates in SIR Low-Power mode. Low-level bits are transmitted with a pulse width which is 3 times the period of the IrLPBaud16 input signal, regardless of the selected bit rate. 0: Low-level bits are transmitted as an active high pulse with a width of 3/16th of the bit period. Setting this bit uses less power, but might reduce transmission distances."]
     #[inline(always)]
+    #[must_use]
     pub fn sirlp(&mut self) -> SIRLP_W<2> {
         SIRLP_W::new(self)
     }
     #[doc = "Bit 4 - End of transmission This bit determines the behavior of the TXRIS bit in the UARTRIS register. 1: The TXRIS bit is set only after all transmitted data, including stop bits, have cleared the serializer. 0: The TXRIS bit is set when the transmit FIFO condition specified in UARTIFLS is met."]
     #[inline(always)]
+    #[must_use]
     pub fn eot(&mut self) -> EOT_W<4> {
         EOT_W::new(self)
     }
     #[doc = "Bit 5 - High-speed enable 0: The UART is clocked using the system clock divided by 16. 1: The UART is clocked using the system clock divided by 8. Note: System clock used is also dependent on the baud-rate divisor configuration (See Universal Asynchronous Receivers/Transmitters - Baud-Rate Generation)."]
     #[inline(always)]
+    #[must_use]
     pub fn hse(&mut self) -> HSE_W<5> {
         HSE_W::new(self)
     }
     #[doc = "Bit 6 - LIN mode enable 1: The UART operates in LIN mode. 0: Normal operation"]
     #[inline(always)]
+    #[must_use]
     pub fn lin(&mut self) -> LIN_W<6> {
         LIN_W::new(self)
     }
     #[doc = "Bit 7 - UART loop back enable 1: The UnTx path is fed through the UnRx path. 0: Normal operation"]
     #[inline(always)]
+    #[must_use]
     pub fn lbe(&mut self) -> LBE_W<7> {
         LBE_W::new(self)
     }
     #[doc = "Bit 8 - UART transmit enable 1: The transmit section of the UART is enabled. 0: The transmit section of the UART is disabled. If the UART is disabled in the middle of a transmission, it completes the current character before stopping. Note: To enable transmission, the UARTEN bit must also be set."]
     #[inline(always)]
+    #[must_use]
     pub fn txe(&mut self) -> TXE_W<8> {
         TXE_W::new(self)
     }
     #[doc = "Bit 9 - UART receive enable 1: The receive section of the UART is enabled. 0: The receive section of the UART is disabled. If the UART is disabled in the middle of a receive, it completes the current character before stopping. Note: To enable reception, the UARTEN bit must also be set."]
     #[inline(always)]
+    #[must_use]
     pub fn rxe(&mut self) -> RXE_W<9> {
         RXE_W::new(self)
     }
     #[doc = "Bit 14 - U1RTS Hardware Flow control enable 1: U1RTS indicates the state of UART1 receive FIFO. U1RTS remains asserted until the preprogrammed watermark level is reached, indicating that the UART1 RXFIFO has no space to store additional characters. 0: U1RTS does not indicate state of UART1 RX FIFO. Note: Only used for UART1. This bit is reserved RO for UART0."]
     #[inline(always)]
+    #[must_use]
     pub fn rtsen(&mut self) -> RTSEN_W<14> {
         RTSEN_W::new(self)
     }
     #[doc = "Bit 15 - U1CTS Hardware Flow control enable 1: When U1CTS input is asserted, UART1 can transmit data. 0: U1CTS does not control UART1 data transmission. Note: Only used for UART1. This bit is reserved RO for UART0."]
     #[inline(always)]
+    #[must_use]
     pub fn ctsen(&mut self) -> CTSEN_W<15> {
         CTSEN_W::new(self)
     }
@@ -210,11 +221,10 @@ impl crate::Readable for CTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctl::W](W) writer structure"]
 impl crate::Writable for CTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTL to value 0"]
 impl crate::Resettable for CTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

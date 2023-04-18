@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
     #[inline(always)]
+    #[must_use]
     pub fn pa_bias_ctrl(&mut self) -> PA_BIAS_CTRL_W<0> {
         PA_BIAS_CTRL_W::new(self)
     }
     #[doc = "Bit 2 - Controls DC bias in TXMIX"]
     #[inline(always)]
+    #[must_use]
     pub fn txmix_dc_ctrl(&mut self) -> TXMIX_DC_CTRL_W<2> {
         TXMIX_DC_CTRL_W::new(self)
     }
     #[doc = "Bit 3 - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
     #[inline(always)]
+    #[must_use]
     pub fn lodiv_bias_ctrl(&mut self) -> LODIV_BIAS_CTRL_W<3> {
         LODIV_BIAS_CTRL_W::new(self)
     }
     #[doc = "Bits 4:5 - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
     #[inline(always)]
+    #[must_use]
     pub fn dac_curr_ctrl(&mut self) -> DAC_CURR_CTRL_W<4> {
         DAC_CURR_CTRL_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for IVCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ivctrl::W](W) writer structure"]
 impl crate::Writable for IVCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IVCTRL to value 0"]
 impl crate::Resettable for IVCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,8 +35,5 @@ impl crate::Readable for WAITSTAT_SPEC {
 }
 #[doc = "`reset()` method sets WAITSTAT to value 0"]
 impl crate::Resettable for WAITSTAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

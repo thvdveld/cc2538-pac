@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 10:31 - Channel control base address This field contains the pointer to the base address of the channel control table. The base address must be 1024-byte alligned."]
     #[inline(always)]
     pub fn addr(&self) -> ADDR_R {
-        ADDR_R::new(((self.bits >> 10) & 0x003f_ffff) as u32)
+        ADDR_R::new((self.bits >> 10) & 0x003f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 10:31 - Channel control base address This field contains the pointer to the base address of the channel control table. The base address must be 1024-byte alligned."]
     #[inline(always)]
+    #[must_use]
     pub fn addr(&mut self) -> ADDR_W<10> {
         ADDR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CTLBASE_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctlbase::W](W) writer structure"]
 impl crate::Writable for CTLBASE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTLBASE to value 0"]
 impl crate::Resettable for CTLBASE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

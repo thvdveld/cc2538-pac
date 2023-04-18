@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Controls the analog test mode: 00 0000: Disabled 00 0001: Enables the temperature sensor (see also the CCTEST_TR0 register description). Other values reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn atest_ctrl(&mut self) -> ATEST_CTRL_W<0> {
         ATEST_CTRL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for ATEST_SPEC {
 #[doc = "`write(|w| ..)` method takes [atest::W](W) writer structure"]
 impl crate::Writable for ATEST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ATEST to value 0"]
 impl crate::Resettable for ATEST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

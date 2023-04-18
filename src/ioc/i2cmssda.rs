@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - 0: PA0 selected as I2C SDA 1: PA1 selected as I2C SDA ... 31: PD7 selected as I2C SDA"]
     #[inline(always)]
+    #[must_use]
     pub fn input_sel(&mut self) -> INPUT_SEL_W<0> {
         INPUT_SEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for I2CMSSDA_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2cmssda::W](W) writer structure"]
 impl crate::Writable for I2CMSSDA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2CMSSDA to value 0"]
 impl crate::Resettable for I2CMSSDA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -33,8 +33,5 @@ impl crate::Readable for RSSISTAT_SPEC {
 }
 #[doc = "`reset()` method sets RSSISTAT to value 0"]
 impl crate::Resettable for RSSISTAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

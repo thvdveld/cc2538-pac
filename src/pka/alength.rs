@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - This register specifies the length (in 32-bit words) of Vector A."]
     #[inline(always)]
+    #[must_use]
     pub fn alength(&mut self) -> ALENGTH_W<0> {
         ALENGTH_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for ALENGTH_SPEC {
 #[doc = "`write(|w| ..)` method takes [alength::W](W) writer structure"]
 impl crate::Writable for ALENGTH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ALENGTH to value 0"]
 impl crate::Resettable for ALENGTH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

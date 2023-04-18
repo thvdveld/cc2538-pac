@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Source address matching enable (requires that FRMFILT.FRAME_FILTER_EN = 1)"]
     #[inline(always)]
+    #[must_use]
     pub fn src_match_en(&mut self) -> SRC_MATCH_EN_W<0> {
         SRC_MATCH_EN_W::new(self)
     }
     #[doc = "Bit 1 - Automatic acknowledgment pending flag enable When a frame is received, the pending bit in the (possibly) returned acknowledgment is set automatically when the following conditions are met: - FRMFILT.FRAME_FILTER_EN is set. - SRCMATCH.SRC_MATCH_EN is set. - SRCMATCH.AUTOPEND is set. - The received frame matches the current SRCMATCH.PEND_DATAREQ_ONLY setting. - The received source address matches at least one source match table entry, which is enabled in SHORT_ADDR_EN and SHORT_PEND_EN or in EXT_ADDR_EN and EXT_PEND_EN."]
     #[inline(always)]
+    #[must_use]
     pub fn autopend(&mut self) -> AUTOPEND_W<1> {
         AUTOPEND_W::new(self)
     }
     #[doc = "Bit 2 - When this bit is set, the AUTOPEND function also requires that the received frame is a DATA REQUEST MAC command frame."]
     #[inline(always)]
+    #[must_use]
     pub fn pend_datareq_only(&mut self) -> PEND_DATAREQ_ONLY_W<2> {
         PEND_DATAREQ_ONLY_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for SRCMATCH_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcmatch::W](W) writer structure"]
 impl crate::Writable for SRCMATCH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCMATCH to value 0"]
 impl crate::Resettable for SRCMATCH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

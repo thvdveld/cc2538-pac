@@ -35,6 +35,7 @@ For GCM: -\\[127:0\\]
 - This register is used to store intermediate values. For CBC-MAC: -\\[255:0\\]
 - ZEROES - This register must remain 0."]
     #[inline(always)]
+    #[must_use]
     pub fn aes_key3(&mut self) -> AES_KEY3_W<0> {
         AES_KEY3_W::new(self)
     }
@@ -53,11 +54,10 @@ impl crate::RegisterSpec for AES_KEY3_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [aes_key3_2::W](W) writer structure"]
 impl crate::Writable for AES_KEY3_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AES_KEY3_2 to value 0"]
 impl crate::Resettable for AES_KEY3_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

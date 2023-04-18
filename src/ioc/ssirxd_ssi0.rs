@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - 0: PA0 selected as SSI0 RX 1: PA1 selected as SSI0 RX ... 31: PD7 selected as SSI0 RX"]
     #[inline(always)]
+    #[must_use]
     pub fn input_sel(&mut self) -> INPUT_SEL_W<0> {
         INPUT_SEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SSIRXD_SSI0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ssirxd_ssi0::W](W) writer structure"]
 impl crate::Writable for SSIRXD_SSI0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SSIRXD_SSI0 to value 0"]
 impl crate::Resettable for SSIRXD_SSI0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -33,8 +33,5 @@ impl crate::Readable for STLOAD_SPEC {
 }
 #[doc = "`reset()` method sets STLOAD to value 0"]
 impl crate::Resettable for STLOAD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

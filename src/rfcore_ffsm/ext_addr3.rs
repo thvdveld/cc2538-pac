@@ -52,6 +52,7 @@ impl W {
     #[doc = "Bits 0:7 - EXT_ADDR\\[31:24\\]
 The IEEE extended address used during destination address filtering"]
     #[inline(always)]
+    #[must_use]
     pub fn ext_addr3(&mut self) -> EXT_ADDR3_W<0> {
         EXT_ADDR3_W::new(self)
     }
@@ -74,11 +75,10 @@ impl crate::Readable for EXT_ADDR3_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext_addr3::W](W) writer structure"]
 impl crate::Writable for EXT_ADDR3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT_ADDR3 to value 0"]
 impl crate::Resettable for EXT_ADDR3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

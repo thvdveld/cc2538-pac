@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn roric(&mut self) -> RORIC_W<0> {
         RORIC_W::new(self)
     }
     #[doc = "Bit 1 - SSI receive time-out interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn rtic(&mut self) -> RTIC_W<1> {
         RTIC_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for ICR_SPEC {
 #[doc = "`write(|w| ..)` method takes [icr::W](W) writer structure"]
 impl crate::Writable for ICR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICR to value 0"]
 impl crate::Resettable for ICR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Demodulator correlator threshold value, required before SFD search. Threshold value adjusts how the receiver synchronizes to data from the radio. If the threshold is set too low, sync can more easily be found on noise. If set too high, the sensitivity is reduced, but sync is not likely to be found on noise. In combination with DEM_NUM_ZEROS, the system can be tuned so sensitivity is high with less sync found on noise."]
     #[inline(always)]
+    #[must_use]
     pub fn corr_thr(&mut self) -> CORR_THR_W<0> {
         CORR_THR_W::new(self)
     }
     #[doc = "Bit 5 - Defines requirements for SFD detection: 0: The correlation value of one of the zero symbols of the preamble must be above the correlation threshold. 1: The correlation value of one zero symbol of the preamble and both symbols in the SFD must be above the correlation threshold."]
     #[inline(always)]
+    #[must_use]
     pub fn corr_thr_sfd(&mut self) -> CORR_THR_SFD_W<5> {
         CORR_THR_SFD_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for MDMCTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [mdmctrl1::W](W) writer structure"]
 impl crate::Writable for MDMCTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MDMCTRL1 to value 0"]
 impl crate::Resettable for MDMCTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

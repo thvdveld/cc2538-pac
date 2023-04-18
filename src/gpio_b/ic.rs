@@ -24,6 +24,7 @@ pub type IC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IC_SPEC, u8, u8, 8,
 impl W {
     #[doc = "Bits 0:7 - Bit written as 1: Clears edge detection logic Bit written as 0: Has no effect"]
     #[inline(always)]
+    #[must_use]
     pub fn ic(&mut self) -> IC_W<0> {
         IC_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for IC_SPEC {
 #[doc = "`write(|w| ..)` method takes [ic::W](W) writer structure"]
 impl crate::Writable for IC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IC to value 0"]
 impl crate::Resettable for IC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

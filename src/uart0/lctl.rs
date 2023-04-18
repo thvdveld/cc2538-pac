@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
     #[inline(always)]
+    #[must_use]
     pub fn master(&mut self) -> MASTER_W<0> {
         MASTER_W::new(self)
     }
     #[doc = "Bits 4:5 - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
     #[inline(always)]
+    #[must_use]
     pub fn blen(&mut self) -> BLEN_W<4> {
         BLEN_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for LCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [lctl::W](W) writer structure"]
 impl crate::Writable for LCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCTL to value 0"]
 impl crate::Resettable for LCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

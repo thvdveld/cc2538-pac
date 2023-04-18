@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - An acknowledgement frame has been completely transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn txackdone(&mut self) -> TXACKDONE_W<0> {
         TXACKDONE_W::new(self)
     }
     #[doc = "Bit 1 - A complete frame has been transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn txdone(&mut self) -> TXDONE_W<1> {
         TXDONE_W::new(self)
     }
     #[doc = "Bit 2 - Radio state-machine has entered the IDLE state. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn rfidle(&mut self) -> RFIDLE_W<2> {
         RFIDLE_W::new(self)
     }
     #[doc = "Bit 3 - Manual interrupt generated from CSP 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn csp_manint(&mut self) -> CSP_MANINT_W<3> {
         CSP_MANINT_W::new(self)
     }
     #[doc = "Bit 4 - CSP has stopped program execution. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn csp_stop(&mut self) -> CSP_STOP_W<4> {
         CSP_STOP_W::new(self)
     }
     #[doc = "Bit 5 - Execution continued after a wait instruction in CSP. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn csp_wait(&mut self) -> CSP_WAIT_W<5> {
         CSP_WAIT_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for RFIRQF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [rfirqf1::W](W) writer structure"]
 impl crate::Writable for RFIRQF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RFIRQF1 to value 0"]
 impl crate::Resettable for RFIRQF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

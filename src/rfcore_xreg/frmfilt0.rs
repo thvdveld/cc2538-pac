@@ -85,11 +85,13 @@ and FRMFILT1\\[7:1\\], together with the local address information, define the b
 and SRCMATCH\\[2:0\\]
 are don't care.) 1: Frame filtering on."]
     #[inline(always)]
+    #[must_use]
     pub fn frame_filter_en(&mut self) -> FRAME_FILTER_EN_W<0> {
         FRAME_FILTER_EN_W::new(self)
     }
     #[doc = "Bit 1 - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
     #[inline(always)]
+    #[must_use]
     pub fn pan_coordinator(&mut self) -> PAN_COORDINATOR_W<1> {
         PAN_COORDINATOR_W::new(self)
     }
@@ -97,6 +99,7 @@ are don't care.) 1: Frame filtering on."]
 (the frame version subfield) is higher than MAX_FRAME_VERSION\\[1:0\\]
 and frame filtering is enabled, the frame is rejected."]
     #[inline(always)]
+    #[must_use]
     pub fn max_frame_version(&mut self) -> MAX_FRAME_VERSION_W<2> {
         MAX_FRAME_VERSION_W::new(self)
     }
@@ -119,11 +122,10 @@ impl crate::Readable for FRMFILT0_SPEC {
 #[doc = "`write(|w| ..)` method takes [frmfilt0::W](W) writer structure"]
 impl crate::Writable for FRMFILT0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRMFILT0 to value 0"]
 impl crate::Resettable for FRMFILT0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

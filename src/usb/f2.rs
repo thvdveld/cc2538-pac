@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Endpoint 2 FIFO register Reading this register unloads one byte from the EP2 OUT FIFO. Writing to this register loads one byte into the EP2 IN FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn usbf2(&mut self) -> USBF2_W<0> {
         USBF2_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for F2_SPEC {
 #[doc = "`write(|w| ..)` method takes [f2::W](W) writer structure"]
 impl crate::Writable for F2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets F2 to value 0"]
 impl crate::Resettable for F2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -63,8 +63,5 @@ impl crate::Readable for CTRL_VERSION_SPEC {
 }
 #[doc = "`reset()` method sets CTRL_VERSION to value 0"]
 impl crate::Resettable for CTRL_VERSION_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

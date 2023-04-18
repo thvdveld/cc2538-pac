@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Pin select Valid settings are 1-7 when either port A, B, C, or D is selected."]
     #[inline(always)]
+    #[must_use]
     pub fn pin(&mut self) -> PIN_W<0> {
         PIN_W::new(self)
     }
     #[doc = "Bits 3:5 - Port select Valid settings are 0-3, all others inhibit any capture from occurring 000: Port A selected 001: Port B selected 010: Port C selected 011: Port D selected"]
     #[inline(always)]
+    #[must_use]
     pub fn port(&mut self) -> PORT_W<3> {
         PORT_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for STCC_SPEC {
 #[doc = "`write(|w| ..)` method takes [stcc::W](W) writer structure"]
 impl crate::Writable for STCC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STCC to value 0"]
 impl crate::Resettable for STCC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - USB masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
+    #[must_use]
     pub fn usback(&mut self) -> USBACK_W<0> {
         USBACK_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for USB_IRQ_ACK_SPEC {
 #[doc = "`write(|w| ..)` method takes [usb_irq_ack::W](W) writer structure"]
 impl crate::Writable for USB_IRQ_ACK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USB_IRQ_ACK to value 0"]
 impl crate::Resettable for USB_IRQ_ACK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

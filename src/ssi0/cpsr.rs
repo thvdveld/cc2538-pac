@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - SSI clock prescale divisor (R/W) Reset value: 0x0 This value must be an even number from 2 to 254, depending on the frequency of SSICLK. The LSB always returns zero on reads."]
     #[inline(always)]
+    #[must_use]
     pub fn cpsdvsr(&mut self) -> CPSDVSR_W<0> {
         CPSDVSR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CPSR_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpsr::W](W) writer structure"]
 impl crate::Writable for CPSR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPSR to value 0"]
 impl crate::Resettable for CPSR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Set to 1 to connect the temperature sensor to the SOC_ADC. See also RFCORE_XREG_ATEST register description to enable the temperature sensor."]
     #[inline(always)]
+    #[must_use]
     pub fn adctm(&mut self) -> ADCTM_W<1> {
         ADCTM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TR0_SPEC {
 #[doc = "`write(|w| ..)` method takes [tr0::W](W) writer structure"]
 impl crate::Writable for TR0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TR0 to value 0"]
 impl crate::Resettable for TR0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

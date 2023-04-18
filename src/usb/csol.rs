@@ -107,31 +107,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This bit is set when a data packet has been received. Software should clear this bit when the packet has been unloaded from the OUT endpoint FIFO. An interrupt is generated when the bit is set."]
     #[inline(always)]
+    #[must_use]
     pub fn outpktrdy(&mut self) -> OUTPKTRDY_W<0> {
         OUTPKTRDY_W::new(self)
     }
     #[doc = "Bit 2 - For isochronous mode OUT endpoints: This bit is set when an OUT packet cannot be loaded into the OUT endpoint FIFO. Firmware should clear this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn overrun(&mut self) -> OVERRUN_W<2> {
         OVERRUN_W::new(self)
     }
     #[doc = "Bit 4 - Software sets this bit to flush the next packet to be read from the endpoint OUT FIFO. Note: If the FIFO contains two packets, USB_CSOL.FLUSHPACKET will need to be set twice to completely clear the FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn flushpacket(&mut self) -> FLUSHPACKET_W<4> {
         FLUSHPACKET_W::new(self)
     }
     #[doc = "Bit 5 - For bulk/interrupt mode OUT endpoints: Software sets this bit to issue a STALL handshake. Software clears this bit to terminate the stall condition."]
     #[inline(always)]
+    #[must_use]
     pub fn sendstall(&mut self) -> SENDSTALL_W<5> {
         SENDSTALL_W::new(self)
     }
     #[doc = "Bit 6 - This bit is set when a STALL handshake is transmitted. An interrupt is generated when this bit is set. Software should clear this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn sentstall(&mut self) -> SENTSTALL_W<6> {
         SENTSTALL_W::new(self)
     }
     #[doc = "Bit 7 - Software sets this bit to reset the endpoint data toggle to 0."]
     #[inline(always)]
+    #[must_use]
     pub fn clrdatatog(&mut self) -> CLRDATATOG_W<7> {
         CLRDATATOG_W::new(self)
     }
@@ -154,11 +160,10 @@ impl crate::Readable for CSOL_SPEC {
 #[doc = "`write(|w| ..)` method takes [csol::W](W) writer structure"]
 impl crate::Writable for CSOL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CSOL to value 0"]
 impl crate::Resettable for CSOL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

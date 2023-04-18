@@ -33,8 +33,5 @@ impl crate::Readable for ADCL_SPEC {
 }
 #[doc = "`reset()` method sets ADCL to value 0"]
 impl crate::Resettable for ADCL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

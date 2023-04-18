@@ -33,8 +33,5 @@ impl crate::Readable for CNT0_CNTL_SPEC {
 }
 #[doc = "`reset()` method sets CNT0_CNTL to value 0"]
 impl crate::Resettable for CNT0_CNTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

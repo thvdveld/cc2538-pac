@@ -169,72 +169,86 @@ of the PKA_DIVMSW register - can only be used with basic PKCP operations, except
 impl W {
     #[doc = "Bit 0 - Perform multiply operation"]
     #[inline(always)]
+    #[must_use]
     pub fn multiply(&mut self) -> MULTIPLY_W<0> {
         MULTIPLY_W::new(self)
     }
     #[doc = "Bit 1 - Perform combined add/subtract operation"]
     #[inline(always)]
+    #[must_use]
     pub fn addsub(&mut self) -> ADDSUB_W<1> {
         ADDSUB_W::new(self)
     }
     #[doc = "Bit 3 - Loads the location of the Most Significant one bit within the result word indicated in the PKA_MSW register into bits \\[4:0\\]
 of the PKA_DIVMSW register - can only be used with basic PKCP operations, except for Divide, Modulo and Compare."]
     #[inline(always)]
+    #[must_use]
     pub fn ms_one(&mut self) -> MS_ONE_W<3> {
         MS_ONE_W::new(self)
     }
     #[doc = "Bit 4 - Perform add operation"]
     #[inline(always)]
+    #[must_use]
     pub fn add(&mut self) -> ADD_W<4> {
         ADD_W::new(self)
     }
     #[doc = "Bit 5 - Perform subtract operation"]
     #[inline(always)]
+    #[must_use]
     pub fn subtract(&mut self) -> SUBTRACT_W<5> {
         SUBTRACT_W::new(self)
     }
     #[doc = "Bit 6 - Perform right shift operation"]
     #[inline(always)]
+    #[must_use]
     pub fn rshift(&mut self) -> RSHIFT_W<6> {
         RSHIFT_W::new(self)
     }
     #[doc = "Bit 7 - Perform left shift operation"]
     #[inline(always)]
+    #[must_use]
     pub fn lshift(&mut self) -> LSHIFT_W<7> {
         LSHIFT_W::new(self)
     }
     #[doc = "Bit 8 - Perform divide operation"]
     #[inline(always)]
+    #[must_use]
     pub fn divide(&mut self) -> DIVIDE_W<8> {
         DIVIDE_W::new(self)
     }
     #[doc = "Bit 9 - Perform modulo operation"]
     #[inline(always)]
+    #[must_use]
     pub fn modulo(&mut self) -> MODULO_W<9> {
         MODULO_W::new(self)
     }
     #[doc = "Bit 10 - Perform compare operation"]
     #[inline(always)]
+    #[must_use]
     pub fn compare(&mut self) -> COMPARE_W<10> {
         COMPARE_W::new(self)
     }
     #[doc = "Bit 11 - Perform copy operation"]
     #[inline(always)]
+    #[must_use]
     pub fn copy(&mut self) -> COPY_W<11> {
         COPY_W::new(self)
     }
     #[doc = "Bits 12:14 - These bits select the complex sequencer operation to perform: 000b: None 001b: ExpMod-CRT 010b: ExpMod-ACT4 (compatible with EIP2315) 011b: ECC-ADD (if available in firmware, otherwise reserved) 100b: ExpMod-ACT2 (compatible with EIP2316) 101b: ECC-MUL (if available in firmware, otherwise reserved) 110b: ExpMod-variable 111b: ModInv (if available in firmware, otherwise reserved) The encoding of these operations is determined by sequencer firmware."]
     #[inline(always)]
+    #[must_use]
     pub fn sequencer_operations(&mut self) -> SEQUENCER_OPERATIONS_W<12> {
         SEQUENCER_OPERATIONS_W::new(self)
     }
     #[doc = "Bit 15 - The host sets this bit to instruct the PKA module to begin processing the basic PKCP or complex sequencer operation. This bit is reset low automatically when the operation is complete. The complement of this bit is output as interrupts\\[1\\]. After a reset, the run bit is always set to 1b. Depending on the option, program ROM or program RAM, the following applies: Program ROM - The first sequencer instruction sets the bit to 0b. This is done immediately after the hardware reset is released. Program RAM - The sequencer must set the bit to 0b. As a valid firmware may not have been loaded, the sequencer is held in software reset after the hardware reset is released (the reset bit in PKA_SEQ_CRTL is set to 1b). After the FW image is loaded and the Reset bit is cleared, the sequencer starts to execute the FW. The first instruction clears the run bit. In both cases a few clock cycles are needed before the first instruction is executed and the run bit state has been propagated."]
     #[inline(always)]
+    #[must_use]
     pub fn run(&mut self) -> RUN_W<15> {
         RUN_W::new(self)
     }
     #[doc = "Bit 24 - When written with a 1b, updating of the PKA_COMPARE, PKA_MSW and PKA_DIVMSW registers, as well as resetting the run bit is stalled beyond the point that a running operation is actually finished. Use this to allow software enough time to read results from a previous operation when the newly started operation is known to take only a short amount of time. If a result is waiting, the result registers is updated and the run bit is reset in the clock cycle following writing the stall result bit back to 0b. The Stall result function may only be used for basic PKCP operations."]
     #[inline(always)]
+    #[must_use]
     pub fn stall_result(&mut self) -> STALL_RESULT_W<24> {
         STALL_RESULT_W::new(self)
     }
@@ -258,11 +272,10 @@ impl crate::Readable for FUNCTION_SPEC {
 #[doc = "`write(|w| ..)` method takes [function::W](W) writer structure"]
 impl crate::Writable for FUNCTION_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FUNCTION to value 0"]
 impl crate::Resettable for FUNCTION_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

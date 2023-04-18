@@ -53,6 +53,7 @@ impl W {
     #[doc = "Bits 0:31 - HASH_DIGEST\\[191:160\\]
 Hash digest registers Write operation: Continued hash: These registers should be written with the context data, before the start of a resumed hash session (the new_hash bit in the HASH_MODE register is 0 when starting a hash session). New hash: When initiating a new hash session (the new_hash bit in the HASH_MODE register is high), the internal digest registers are automatically set to the SHA-256 algorithm constant and these register should not be written. Reading from these registers provides the intermediate hash result (non-final hash operation) or the final hash result (final hash operation) after data processing."]
     #[inline(always)]
+    #[must_use]
     pub fn hash_digest(&mut self) -> HASH_DIGEST_W<0> {
         HASH_DIGEST_W::new(self)
     }
@@ -75,11 +76,10 @@ impl crate::Readable for HASH_DIGEST_F_SPEC {
 #[doc = "`write(|w| ..)` method takes [hash_digest_f::W](W) writer structure"]
 impl crate::Writable for HASH_DIGEST_F_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HASH_DIGEST_F to value 0"]
 impl crate::Resettable for HASH_DIGEST_F_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

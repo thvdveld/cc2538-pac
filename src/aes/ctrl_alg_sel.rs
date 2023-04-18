@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - If set to one, selects the Key Store as destination for the DMA The maximum transfer size to DMA engine is set to 32 bytes (however transfers of 16, 24 and 32 bytes are allowed)"]
     #[inline(always)]
+    #[must_use]
     pub fn keystore(&mut self) -> KEYSTORE_W<0> {
         KEYSTORE_W::new(self)
     }
     #[doc = "Bit 1 - If set to one, selects the AES engine as source/destination for the DMA The read and write maximum transfer size to the DMA engine is set to 16 bytes."]
     #[inline(always)]
+    #[must_use]
     pub fn aes(&mut self) -> AES_W<1> {
         AES_W::new(self)
     }
     #[doc = "Bit 2 - If set to one, selects the hash engine as destination for the DMA The maximum transfer size to DMA engine is set to 64 bytes for reading and 32 bytes for writing (the latter is only applicable if the hash result is written out through the DMA)."]
     #[inline(always)]
+    #[must_use]
     pub fn hash(&mut self) -> HASH_W<2> {
         HASH_W::new(self)
     }
     #[doc = "Bit 31 - If this bit is cleared to 0, the DMA operation involves only data. If this bit is set, the DMA operation includes a TAG (Authentication Result / Digest). For SHA-256 operation, a DMA must be set up for both input data and TAG. For any other selected module, setting this bit only allows a DMA that reads the TAG. No data allowed to be transferred to or from the selected module via the DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn tag(&mut self) -> TAG_W<31> {
         TAG_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for CTRL_ALG_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl_alg_sel::W](W) writer structure"]
 impl crate::Writable for CTRL_ALG_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL_ALG_SEL to value 0"]
 impl crate::Resettable for CTRL_ALG_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

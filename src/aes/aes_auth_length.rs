@@ -27,6 +27,7 @@ impl W {
     #[doc = "Bits 0:31 - Bits \\[31:0\\]
 of the authentication length register store the authentication data length in bytes for combined modes only (GCM or CCM). Supported AAD-lengths for CCM are from 0 to (2^16 - 2^8) bytes. For GCM any value up to (2^32 - 1) bytes can be used. Once processing with this context is started, this length decrements to 0. A write to this register triggers the engine to start using this context for GCM and CCM. For a host read operation, these registers return all-0s."]
     #[inline(always)]
+    #[must_use]
     pub fn auth_length(&mut self) -> AUTH_LENGTH_W<0> {
         AUTH_LENGTH_W::new(self)
     }
@@ -45,11 +46,10 @@ impl crate::RegisterSpec for AES_AUTH_LENGTH_SPEC {
 #[doc = "`write(|w| ..)` method takes [aes_auth_length::W](W) writer structure"]
 impl crate::Writable for AES_AUTH_LENGTH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AES_AUTH_LENGTH to value 0"]
 impl crate::Resettable for AES_AUTH_LENGTH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -30,6 +30,7 @@ priority clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\]
 bit in the DMAPRIOSET register meaning that channel \\[n\\]
 is using the default priority level."]
     #[inline(always)]
+    #[must_use]
     pub fn clr(&mut self) -> CLR_W<0> {
         CLR_W::new(self)
     }
@@ -49,11 +50,10 @@ impl crate::RegisterSpec for PRIOCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [prioclr::W](W) writer structure"]
 impl crate::Writable for PRIOCLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRIOCLR to value 0"]
 impl crate::Resettable for PRIOCLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

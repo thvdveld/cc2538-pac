@@ -71,11 +71,13 @@ impl W {
     #[doc = "Bits 0:7 - These bits can be used by software to trigger sequencer operations. External logic can set these bits by writing 1b, cannot reset them by writing 0b. The sequencer can reset these bits by writing 0b, cannot set them by writing 1b. Setting the run bit in PKA_FUNCTION together with a nonzero sequencer operations field automatically sets bit \\[0\\]
 here. This field should always be written with zeroes and ignored when reading this register."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_control_status(&mut self) -> SW_CONTROL_STATUS_W<0> {
         SW_CONTROL_STATUS_W::new(self)
     }
     #[doc = "Bit 31 - Option program ROM: Reset value = 0. Read/Write, reset value 0b (ZERO). Writing 1b resets the sequencer, write to 0b to restart operations again. As the reset value is 0b, the sequencer will automatically start operations executing from program ROM. This bit should always be written with zero and ignored when reading this register. Option Program RAM: Reset value =1. Read/Write, reset value 1b (ONE). When 1b, the sequencer is held in a reset state and the PKA_PROGRAM area is accessible for loading the sequencer program (while the PKA_DATA_RAM is inaccessible), write to 0b to (re)start sequencer operations and disable PKA_PROGRAM area accessibility (also enables the PKA_DATA_RAM accesses). Resetting the sequencer (in order to load other firmware) should only be done when the PKA Engine is not performing any operations (i.e. the run bit in the PKA_FUNCTION register should be zero)."]
     #[inline(always)]
+    #[must_use]
     pub fn reset(&mut self) -> RESET_W<31> {
         RESET_W::new(self)
     }
@@ -98,11 +100,10 @@ impl crate::Readable for SEQ_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [seq_ctrl::W](W) writer structure"]
 impl crate::Writable for SEQ_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SEQ_CTRL to value 0"]
 impl crate::Resettable for SEQ_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

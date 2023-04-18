@@ -85,26 +85,31 @@ impl R {
 impl W {
     #[doc = "Bits 1:2 - These bits are used to modify the frame type field of a received frame before frame type filtering is performed. The modification does not influence the frame that is written to the RX FIFO. 00: Leave the frame type as it is. 01: Invert MSB of the frame type. 10: Set MSB of the frame type to 0. 11: Set MSB of the frame type to 1."]
     #[inline(always)]
+    #[must_use]
     pub fn modify_ft_filter(&mut self) -> MODIFY_FT_FILTER_W<1> {
         MODIFY_FT_FILTER_W::new(self)
     }
     #[doc = "Bit 3 - Defines whether beacon frames are accepted or not. Beacon frames have frame type = 000. 0: Reject 1: Accept"]
     #[inline(always)]
+    #[must_use]
     pub fn accept_ft_0_beacon(&mut self) -> ACCEPT_FT_0_BEACON_W<3> {
         ACCEPT_FT_0_BEACON_W::new(self)
     }
     #[doc = "Bit 4 - Defines whether data frames are accepted or not. Data frames have frame type = 001. 0: Reject 1: Accept"]
     #[inline(always)]
+    #[must_use]
     pub fn accept_ft_1_data(&mut self) -> ACCEPT_FT_1_DATA_W<4> {
         ACCEPT_FT_1_DATA_W::new(self)
     }
     #[doc = "Bit 5 - Defines whether acknowledgment frames are accepted or not. Acknowledgement frames have frame type = 010. 0: Reject 1: Accept"]
     #[inline(always)]
+    #[must_use]
     pub fn accept_ft_2_ack(&mut self) -> ACCEPT_FT_2_ACK_W<5> {
         ACCEPT_FT_2_ACK_W::new(self)
     }
     #[doc = "Bit 6 - Defines whether MAC command frames are accepted or not. MAC command frames have frame type = 011. 0: Reject 1: Accept"]
     #[inline(always)]
+    #[must_use]
     pub fn accept_ft_3_mac_cmd(&mut self) -> ACCEPT_FT_3_MAC_CMD_W<6> {
         ACCEPT_FT_3_MAC_CMD_W::new(self)
     }
@@ -127,11 +132,10 @@ impl crate::Readable for FRMFILT1_SPEC {
 #[doc = "`write(|w| ..)` method takes [frmfilt1::W](W) writer structure"]
 impl crate::Writable for FRMFILT1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRMFILT1 to value 0"]
 impl crate::Resettable for FRMFILT1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

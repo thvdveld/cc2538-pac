@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - 7:0 part of the 24-bit word SHORT_ADDR_EN that enables or disables source address matching for each of the 24 short address table entries Optional safety feature: To ensure that an entry in the source matching table is not used while it is being updated, set the corresponding SHORT_ADDR_EN bit to 0 while updating."]
     #[inline(always)]
+    #[must_use]
     pub fn short_addr_en(&mut self) -> SHORT_ADDR_EN_W<0> {
         SHORT_ADDR_EN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SRCSHORTEN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcshorten0::W](W) writer structure"]
 impl crate::Writable for SRCSHORTEN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCSHORTEN0 to value 0"]
 impl crate::Resettable for SRCSHORTEN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

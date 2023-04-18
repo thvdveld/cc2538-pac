@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - On a bit-wise basis, any bit set allows the corresponding GPIOAFSEL bit to be set to its alternate function."]
     #[inline(always)]
+    #[must_use]
     pub fn cr(&mut self) -> CR_W<0> {
         CR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for GPIOCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpiocr::W](W) writer structure"]
 impl crate::Writable for GPIOCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIOCR to value 0"]
 impl crate::Resettable for GPIOCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

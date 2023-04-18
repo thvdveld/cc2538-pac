@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The frequency synthesizer failed to achieve lock after time-out, or lock is lost during reception. The receiver must be restarted to clear this error situation. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn nlock(&mut self) -> NLOCK_W<0> {
         NLOCK_W::new(self)
     }
     #[doc = "Bit 1 - Reception of a frame was aborted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn rxabo(&mut self) -> RXABO_W<1> {
         RXABO_W::new(self)
     }
     #[doc = "Bit 2 - RX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn rxoverf(&mut self) -> RXOVERF_W<2> {
         RXOVERF_W::new(self)
     }
     #[doc = "Bit 3 - RX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn rxunderf(&mut self) -> RXUNDERF_W<3> {
         RXUNDERF_W::new(self)
     }
     #[doc = "Bit 4 - TX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn txoverf(&mut self) -> TXOVERF_W<4> {
         TXOVERF_W::new(self)
     }
     #[doc = "Bit 5 - TX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn txunderf(&mut self) -> TXUNDERF_W<5> {
         TXUNDERF_W::new(self)
     }
     #[doc = "Bit 6 - A command strobe was issued when it could not be processed. Triggered if trying to disable the radio when it is already disabled, or when trying to do a SACK, SACKPEND, or SNACK command when not in active RX. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
+    #[must_use]
     pub fn strobeerr(&mut self) -> STROBEERR_W<6> {
         STROBEERR_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for RFERRF_SPEC {
 #[doc = "`write(|w| ..)` method takes [rferrf::W](W) writer structure"]
 impl crate::Writable for RFERRF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RFERRF to value 0"]
 impl crate::Resettable for RFERRF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

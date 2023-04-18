@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Channel DMA length in bytes During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
     #[inline(always)]
+    #[must_use]
     pub fn dmalen(&mut self) -> DMALEN_W<0> {
         DMALEN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DMAC_CH0_DMALENGTH_SPEC {
 #[doc = "`write(|w| ..)` method takes [dmac_ch0_dmalength::W](W) writer structure"]
 impl crate::Writable for DMAC_CH0_DMALENGTH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMAC_CH0_DMALENGTH to value 0"]
 impl crate::Resettable for DMAC_CH0_DMALENGTH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

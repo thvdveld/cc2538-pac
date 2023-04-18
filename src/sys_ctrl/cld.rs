@@ -55,6 +55,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<0> {
         EN_W::new(self)
     }
@@ -77,11 +78,10 @@ impl crate::Readable for CLD_SPEC {
 #[doc = "`write(|w| ..)` method takes [cld::W](W) writer structure"]
 impl crate::Writable for CLD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLD to value 0"]
 impl crate::Resettable for CLD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

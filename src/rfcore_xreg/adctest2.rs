@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Control of DAC DWA scheme 0 = DWA (scrambling) disabled 1 = DWA enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_dac_rot(&mut self) -> ADC_DAC_ROT_W<0> {
         ADC_DAC_ROT_W::new(self)
     }
     #[doc = "Bits 1:2 - Adjust feed forward"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_ff_adj(&mut self) -> ADC_FF_ADJ_W<1> {
         ADC_FF_ADJ_W::new(self)
     }
     #[doc = "Bits 3:4 - Controls series resistance of AAF"]
     #[inline(always)]
+    #[must_use]
     pub fn aaf_rs(&mut self) -> AAF_RS_W<3> {
         AAF_RS_W::new(self)
     }
     #[doc = "Bits 5:6 - Test mode to enable output of ADC data from demodulator. When enabled, raw ADC data is clocked out on the GPIO pins. 00: Test mode disabled 01: Data from the I and Q ADCs are output (data rate 76 MHz) 10: Data from the I ADC is output. Two and two ADC samples grouped (data rate 38 MHz) 11: Data from the Q ADC is output. Two and two ADC samples grouped (data rate 38 MHz)"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_test_mode(&mut self) -> ADC_TEST_MODE_W<5> {
         ADC_TEST_MODE_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for ADCTEST2_SPEC {
 #[doc = "`write(|w| ..)` method takes [adctest2::W](W) writer structure"]
 impl crate::Writable for ADCTEST2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADCTEST2 to value 0"]
 impl crate::Resettable for ADCTEST2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 3 - 0: output disable 1: oe - output enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pc2_over(&mut self) -> PC2_OVER_W<3> {
         PC2_OVER_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PC2_OVER_SPEC {
 #[doc = "`write(|w| ..)` method takes [pc2_over::W](W) writer structure"]
 impl crate::Writable for PC2_OVER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PC2_OVER to value 0x04"]
 impl crate::Resettable for PC2_OVER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

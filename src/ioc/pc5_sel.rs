@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PC5."]
     #[inline(always)]
+    #[must_use]
     pub fn pc5_sel(&mut self) -> PC5_SEL_W<0> {
         PC5_SEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PC5_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pc5_sel::W](W) writer structure"]
 impl crate::Writable for PC5_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PC5_SEL to value 0"]
 impl crate::Resettable for PC5_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

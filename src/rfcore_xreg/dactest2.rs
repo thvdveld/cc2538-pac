@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - The TX DACs data source is selected by DAC_SRC according to: 000: Normal operation (from modulator) 001: The DAC_I_O and DAC_Q_O override values 010: ADC data after decimation, magnitude controlled by DAC_I_O and DAC_Q_O 011: I/Q after decimation, channel and DC filtering, magnitude controlled by DAC_I_O and DAC_Q_O 100: CORDIC magnitude output and front-end gain is output, magnitude controlled by DAC_I_O and DAC_Q_O 101: RSSI I output on the I DAC 111: Reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn dac_src(&mut self) -> DAC_SRC_W<0> {
         DAC_SRC_W::new(self)
     }
     #[doc = "Bits 3:4 - Adjustment of output stage Drives RFR_DAC_CASC_CTRL"]
     #[inline(always)]
+    #[must_use]
     pub fn dac_casc_ctrl(&mut self) -> DAC_CASC_CTRL_W<3> {
         DAC_CASC_CTRL_W::new(self)
     }
     #[doc = "Bit 5 - Enable and disable dynamic element matching Drives RFR_DAC_DEM_EN"]
     #[inline(always)]
+    #[must_use]
     pub fn dac_dem_en(&mut self) -> DAC_DEM_EN_W<5> {
         DAC_DEM_EN_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for DACTEST2_SPEC {
 #[doc = "`write(|w| ..)` method takes [dactest2::W](W) writer structure"]
 impl crate::Writable for DACTEST2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DACTEST2 to value 0"]
 impl crate::Resettable for DACTEST2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I/O strength control bit Common to all digital output pads Should be set when unregulated voltage is below approximately 2.6 V."]
     #[inline(always)]
+    #[must_use]
     pub fn sc(&mut self) -> SC_W<0> {
         SC_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for IO_SPEC {
 #[doc = "`write(|w| ..)` method takes [io::W](W) writer structure"]
 impl crate::Writable for IO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IO to value 0"]
 impl crate::Resettable for IO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

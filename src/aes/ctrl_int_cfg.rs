@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
     #[inline(always)]
+    #[must_use]
     pub fn level(&mut self) -> LEVEL_W<0> {
         LEVEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CTRL_INT_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl_int_cfg::W](W) writer structure"]
 impl crate::Writable for CTRL_INT_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL_INT_CFG to value 0"]
 impl crate::Resettable for CTRL_INT_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

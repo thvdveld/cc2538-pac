@@ -69,17 +69,20 @@ is used. Writing 0 to this bit have no effect."]
 impl W {
     #[doc = "Bits 0:1 - Timer interval select These bits select the timer interval as follows: 00: Twdt x 32768 01: Twdt x 8192 10: Twdt x 512 11: Twdt x 64 Writing these bits when EN = 1 has no effect."]
     #[inline(always)]
+    #[must_use]
     pub fn int(&mut self) -> INT_W<0> {
         INT_W::new(self)
     }
     #[doc = "Bit 3 - Enable timer When 1 is written to this bit the timer is enabled and starts incrementing. The interval setting specified by INT\\[1:0\\]
 is used. Writing 0 to this bit have no effect."]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<3> {
         EN_W::new(self)
     }
     #[doc = "Bits 4:7 - Clear timer When 0xA followed by 0x5 is written to these bits, the timer is loaded with 0x0000. Note that 0x5 must be written within one watchdog clock period Twdt after 0xA was written for the clearing to take effect (ensured). If 0x5 is written between Twdt and 2Twdt after 0xA was written, the clearing may take effect, but there is no guarantee. If 0x5 is written > 2Twdt after 0xA was written, the timer will not be cleared. If a value other than 0x5 is written after 0xA has been written, the clear sequence is aborted. If 0xA is written, this starts a new clear sequence. Writing to these bits when EN = 0 has no effect."]
     #[inline(always)]
+    #[must_use]
     pub fn clr(&mut self) -> CLR_W<4> {
         CLR_W::new(self)
     }
@@ -102,11 +105,10 @@ impl crate::Readable for WDCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdctl::W](W) writer structure"]
 impl crate::Writable for WDCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDCTL to value 0"]
 impl crate::Resettable for WDCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -30,6 +30,7 @@ useburst clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\]
 bit in the DMAUSEBURSTSET register meaning that uDMA channel \\[n\\]
 responds to single and burst requests."]
     #[inline(always)]
+    #[must_use]
     pub fn clr(&mut self) -> CLR_W<0> {
         CLR_W::new(self)
     }
@@ -49,11 +50,10 @@ impl crate::RegisterSpec for USEBURSTCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [useburstclr::W](W) writer structure"]
 impl crate::Writable for USEBURSTCLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USEBURSTCLR to value 0"]
 impl crate::Resettable for USEBURSTCLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Key size: 00: Reserved 01: 128 bits 10: 192 bits 11: 256 bits When writing this to this register, the KEY_STORE_WRITTEN_AREA register is reset."]
     #[inline(always)]
+    #[must_use]
     pub fn key_size(&mut self) -> KEY_SIZE_W<0> {
         KEY_SIZE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for KEY_STORE_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [key_store_size::W](W) writer structure"]
 impl crate::Writable for KEY_STORE_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets KEY_STORE_SIZE to value 0"]
 impl crate::Resettable for KEY_STORE_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

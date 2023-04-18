@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Control of the output current from the receiver mixers The current increases with increasing setting set."]
     #[inline(always)]
+    #[must_use]
     pub fn mix_current(&mut self) -> MIX_CURRENT_W<0> {
         MIX_CURRENT_W::new(self)
     }
     #[doc = "Bits 2:3 - Adjusts front-end LNA PTAT current output (from M = 3 to M = 6), default: M = 5"]
     #[inline(always)]
+    #[must_use]
     pub fn gbias_lna_ref(&mut self) -> GBIAS_LNA_REF_W<2> {
         GBIAS_LNA_REF_W::new(self)
     }
     #[doc = "Bits 4:5 - Adjusts front-end LNA2/mixer PTAT current output (from M = 3 to M = 6), default: M = 5"]
     #[inline(always)]
+    #[must_use]
     pub fn gbias_lna2_ref(&mut self) -> GBIAS_LNA2_REF_W<4> {
         GBIAS_LNA2_REF_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for RXCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [rxctrl::W](W) writer structure"]
 impl crate::Writable for RXCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RXCTRL to value 0"]
 impl crate::Resettable for RXCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

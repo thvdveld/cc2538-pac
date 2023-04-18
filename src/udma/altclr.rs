@@ -30,6 +30,7 @@ alternate clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\
 bit in the DMAALTSET register meaning that channel \\[n\\]
 is using the primary control structure. Note: For Ping-Pong and Scatter-Gather cycle types, the uDMA controller automatically sets these bits to select the alternate channel control data structure."]
     #[inline(always)]
+    #[must_use]
     pub fn clr(&mut self) -> CLR_W<0> {
         CLR_W::new(self)
     }
@@ -49,11 +50,10 @@ impl crate::RegisterSpec for ALTCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [altclr::W](W) writer structure"]
 impl crate::Writable for ALTCLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ALTCLR to value 0"]
 impl crate::Resettable for ALTCLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

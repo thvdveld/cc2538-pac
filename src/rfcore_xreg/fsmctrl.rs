@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
     #[inline(always)]
+    #[must_use]
     pub fn rx2rx_time_off(&mut self) -> RX2RX_TIME_OFF_W<0> {
         RX2RX_TIME_OFF_W::new(self)
     }
     #[doc = "Bit 1 - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
     #[inline(always)]
+    #[must_use]
     pub fn slotted_ack(&mut self) -> SLOTTED_ACK_W<1> {
         SLOTTED_ACK_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for FSMCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [fsmctrl::W](W) writer structure"]
 impl crate::Writable for FSMCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSMCTRL to value 0"]
 impl crate::Resettable for FSMCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

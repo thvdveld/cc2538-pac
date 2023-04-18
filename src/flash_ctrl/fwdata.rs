@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
     #[inline(always)]
+    #[must_use]
     pub fn fwdata(&mut self) -> FWDATA_W<0> {
         FWDATA_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for FWDATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [fwdata::W](W) writer structure"]
 impl crate::Writable for FWDATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FWDATA to value 0"]
 impl crate::Resettable for FWDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

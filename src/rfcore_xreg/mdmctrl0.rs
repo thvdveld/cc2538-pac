@@ -77,21 +77,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Defines the kind of TX filter that is used. The normal TX filter is as defined by the IEEE 802.15.4 standard. Extra filtering may be applied to lower the out-of-band emissions. 0: Normal TX filtering 1: Enable extra filtering"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_filter(&mut self) -> TX_FILTER_W<0> {
         TX_FILTER_W::new(self)
     }
     #[doc = "Bits 1:4 - The number of preamble bytes (two zero-symbols) to be sent in TX mode before the SFD, encoded in steps of 2 symbols (1 byte). The reset value of 2 is compliant with IEEE 802.15.4. 0000: 2 leading-zero bytes 0001: 3 leading-zero bytes 0010: 4 leading-zero bytes ... 1111: 17 leading-zero bytes"]
     #[inline(always)]
+    #[must_use]
     pub fn preamble_length(&mut self) -> PREAMBLE_LENGTH_W<1> {
         PREAMBLE_LENGTH_W::new(self)
     }
     #[doc = "Bit 5 - Defines the behavior or the frequency offset averaging filter. 0: Lock average level after preamble match. Restart frequency offset calibration when searching for the next frame. 1: Continuously update average level."]
     #[inline(always)]
+    #[must_use]
     pub fn demod_avg_mode(&mut self) -> DEMOD_AVG_MODE_W<5> {
         DEMOD_AVG_MODE_W::new(self)
     }
     #[doc = "Bits 6:7 - Sets how many zero symbols must be detected before the sync word when searching for sync. Only one zero symbol is required to have a correlation value above the correlation threshold set in the MDMCTRL1 register. 00: Reserved 01: 1 zero symbol 10: 2 zero symbols 11: 3 zero symbols"]
     #[inline(always)]
+    #[must_use]
     pub fn dem_num_zeros(&mut self) -> DEM_NUM_ZEROS_W<6> {
         DEM_NUM_ZEROS_W::new(self)
     }
@@ -114,11 +118,10 @@ impl crate::Readable for MDMCTRL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [mdmctrl0::W](W) writer structure"]
 impl crate::Writable for MDMCTRL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MDMCTRL0 to value 0"]
 impl crate::Resettable for MDMCTRL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

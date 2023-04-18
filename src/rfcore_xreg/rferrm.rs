@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
     #[inline(always)]
+    #[must_use]
     pub fn rferrm(&mut self) -> RFERRM_W<0> {
         RFERRM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for RFERRM_SPEC {
 #[doc = "`write(|w| ..)` method takes [rferrm::W](W) writer structure"]
 impl crate::Writable for RFERRM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RFERRM to value 0"]
 impl crate::Resettable for RFERRM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - If the measured error between the AGC reference magnitude and the actual magnitude in dB is larger than this threshold, the extra attenuation is enabled in the front end. This threshold must be set higher than 0x0C. This feature is enabled by AGC_DR_XTND_EN."]
     #[inline(always)]
+    #[must_use]
     pub fn agc_dr_xtnd_thr(&mut self) -> AGC_DR_XTND_THR_W<0> {
         AGC_DR_XTND_THR_W::new(self)
     }
     #[doc = "Bit 6 - 0: The AGC performs no adjustment of attenuation in the AAF. 1: The AGC adjusts the gain in the AAF to achieve extra dynamic range for the receiver."]
     #[inline(always)]
+    #[must_use]
     pub fn agc_dr_xtnd_en(&mut self) -> AGC_DR_XTND_EN_W<6> {
         AGC_DR_XTND_EN_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for AGCCTRL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [agcctrl0::W](W) writer structure"]
 impl crate::Writable for AGCCTRL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AGCCTRL0 to value 0"]
 impl crate::Resettable for AGCCTRL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

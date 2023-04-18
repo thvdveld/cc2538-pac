@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
     #[inline(always)]
+    #[must_use]
     pub fn xosc32m_tune(&mut self) -> XOSC32M_TUNE_W<0> {
         XOSC32M_TUNE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for FREQTUNE_SPEC {
 #[doc = "`write(|w| ..)` method takes [freqtune::W](W) writer structure"]
 impl crate::Writable for FREQTUNE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FREQTUNE to value 0"]
 impl crate::Resettable for FREQTUNE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

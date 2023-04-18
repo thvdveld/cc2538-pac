@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - GPTM A interval load register"]
     #[inline(always)]
+    #[must_use]
     pub fn tailr(&mut self) -> TAILR_W<0> {
         TAILR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TAILR_SPEC {
 #[doc = "`write(|w| ..)` method takes [tailr::W](W) writer structure"]
 impl crate::Writable for TAILR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TAILR to value 0"]
 impl crate::Resettable for TAILR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

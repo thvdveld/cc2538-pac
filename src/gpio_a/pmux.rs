@@ -125,6 +125,7 @@ becomes the on-dir digital regulator status. In priority order for PB\\[0\\]: Wh
 becomes the power-on-reset indicator. When DCEN and DCPIN are set, PB\\[0\\]
 becomes the on-die digital regulator status."]
     #[inline(always)]
+    #[must_use]
     pub fn dcpin(&mut self) -> DCPIN_W<0> {
         DCPIN_W::new(self)
     }
@@ -132,6 +133,7 @@ becomes the on-die digital regulator status."]
 or PB\\[0\\]
 pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
     #[inline(always)]
+    #[must_use]
     pub fn dcen(&mut self) -> DCEN_W<3> {
         DCEN_W::new(self)
     }
@@ -139,6 +141,7 @@ pins. PMUX.DCPIN selects the pin to use. This overrides the current configuratio
 becomes the 32-kHz clock output. When 1, PB\\[7\\]
 becomes the 32-kHz clock output."]
     #[inline(always)]
+    #[must_use]
     pub fn ckopin(&mut self) -> CKOPIN_W<4> {
         CKOPIN_W::new(self)
     }
@@ -146,6 +149,7 @@ becomes the 32-kHz clock output."]
 or PB\\[7\\]
 pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
     #[inline(always)]
+    #[must_use]
     pub fn ckoen(&mut self) -> CKOEN_W<7> {
         CKOEN_W::new(self)
     }
@@ -168,11 +172,10 @@ impl crate::Readable for PMUX_SPEC {
 #[doc = "`write(|w| ..)` method takes [pmux::W](W) writer structure"]
 impl crate::Writable for PMUX_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PMUX to value 0"]
 impl crate::Resettable for PMUX_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_edge_ctl(&mut self) -> USB_EDGE_CTL_W<0> {
         USB_EDGE_CTL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for USB_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [usb_ctrl::W](W) writer structure"]
 impl crate::Writable for USB_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USB_CTRL to value 0"]
 impl crate::Resettable for USB_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

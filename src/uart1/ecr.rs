@@ -24,6 +24,7 @@ pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ECR_SPEC, u8, u8,
 impl W {
     #[doc = "Bits 0:7 - Error clear A write to this register of any data clears the framing, parity, break, and overrun flags."]
     #[inline(always)]
+    #[must_use]
     pub fn data(&mut self) -> DATA_W<0> {
         DATA_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for ECR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ecr::W](W) writer structure"]
 impl crate::Writable for ECR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ECR to value 0"]
 impl crate::Resettable for ECR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

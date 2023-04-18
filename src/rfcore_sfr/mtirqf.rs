@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_perf(&mut self) -> MACTIMER_PERF_W<0> {
         MACTIMER_PERF_W::new(self)
     }
     #[doc = "Bit 1 - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_compare1f(&mut self) -> MACTIMER_COMPARE1F_W<1> {
         MACTIMER_COMPARE1F_W::new(self)
     }
     #[doc = "Bit 2 - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_compare2f(&mut self) -> MACTIMER_COMPARE2F_W<2> {
         MACTIMER_COMPARE2F_W::new(self)
     }
     #[doc = "Bit 3 - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_ovf_perf(&mut self) -> MACTIMER_OVF_PERF_W<3> {
         MACTIMER_OVF_PERF_W::new(self)
     }
     #[doc = "Bit 4 - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_ovf_compare1f(&mut self) -> MACTIMER_OVF_COMPARE1F_W<4> {
         MACTIMER_OVF_COMPARE1F_W::new(self)
     }
     #[doc = "Bit 5 - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_ovf_compare2f(&mut self) -> MACTIMER_OVF_COMPARE2F_W<5> {
         MACTIMER_OVF_COMPARE2F_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for MTIRQF_SPEC {
 #[doc = "`write(|w| ..)` method takes [mtirqf::W](W) writer structure"]
 impl crate::Writable for MTIRQF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MTIRQF to value 0"]
 impl crate::Resettable for MTIRQF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

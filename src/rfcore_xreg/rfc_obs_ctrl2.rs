@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[2\\]. See description of RFC_OBS_CTRL0 for details."]
     #[inline(always)]
+    #[must_use]
     pub fn rfc_obs_mux2(&mut self) -> RFC_OBS_MUX2_W<0> {
         RFC_OBS_MUX2_W::new(self)
     }
     #[doc = "Bit 6 - The signal chosen by RFC_OBS_MUX2 is XORed with this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn rfc_obs_pol2(&mut self) -> RFC_OBS_POL2_W<6> {
         RFC_OBS_POL2_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for RFC_OBS_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [rfc_obs_ctrl2::W](W) writer structure"]
 impl crate::Writable for RFC_OBS_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RFC_OBS_CTRL2 to value 0"]
 impl crate::Resettable for RFC_OBS_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

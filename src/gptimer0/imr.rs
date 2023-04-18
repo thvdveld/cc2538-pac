@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn tatoim(&mut self) -> TATOIM_W<0> {
         TATOIM_W::new(self)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn camim(&mut self) -> CAMIM_W<1> {
         CAMIM_W::new(self)
     }
     #[doc = "Bit 2 - GPTM Timer A capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn caeim(&mut self) -> CAEIM_W<2> {
         CAEIM_W::new(self)
     }
     #[doc = "Bit 4 - GPTM Timer A match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn tamim(&mut self) -> TAMIM_W<4> {
         TAMIM_W::new(self)
     }
     #[doc = "Bit 8 - GPTM Timer B time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn tbtoim(&mut self) -> TBTOIM_W<8> {
         TBTOIM_W::new(self)
     }
     #[doc = "Bit 9 - GPTM Timer B capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cbmim(&mut self) -> CBMIM_W<9> {
         CBMIM_W::new(self)
     }
     #[doc = "Bit 10 - GPTM Timer B capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cbeim(&mut self) -> CBEIM_W<10> {
         CBEIM_W::new(self)
     }
     #[doc = "Bit 11 - GPTM Timer B match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn tbmim(&mut self) -> TBMIM_W<11> {
         TBMIM_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for IMR_SPEC {
 #[doc = "`write(|w| ..)` method takes [imr::W](W) writer structure"]
 impl crate::Writable for IMR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IMR to value 0"]
 impl crate::Resettable for IMR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

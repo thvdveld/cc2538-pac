@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - uDMA bus error status 0: No bus error is pending 1: A bus error is pending This bit is cleared by writing 1 to it."]
     #[inline(always)]
+    #[must_use]
     pub fn errclr(&mut self) -> ERRCLR_W<0> {
         ERRCLR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for ERRCLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [errclr::W](W) writer structure"]
 impl crate::Writable for ERRCLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ERRCLR to value 0"]
 impl crate::Resettable for ERRCLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

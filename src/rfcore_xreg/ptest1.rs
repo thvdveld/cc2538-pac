@@ -78,22 +78,26 @@ depenancy."]
 impl W {
     #[doc = "Bit 0 - LO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn lodiv_pd(&mut self) -> LODIV_PD_W<0> {
         LODIV_PD_W::new(self)
     }
     #[doc = "Bit 1 - VCO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn vco_pd(&mut self) -> VCO_PD_W<1> {
         VCO_PD_W::new(self)
     }
     #[doc = "Bit 2 - Power amplifier power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn pa_pd(&mut self) -> PA_PD_W<2> {
         PA_PD_W::new(self)
     }
     #[doc = "Bit 3 - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
 depenancy."]
     #[inline(always)]
+    #[must_use]
     pub fn pd_override(&mut self) -> PD_OVERRIDE_W<3> {
         PD_OVERRIDE_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for PTEST1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ptest1::W](W) writer structure"]
 impl crate::Writable for PTEST1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PTEST1 to value 0"]
 impl crate::Resettable for PTEST1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

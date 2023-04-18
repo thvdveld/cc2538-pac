@@ -110,8 +110,5 @@ impl crate::Readable for CLOCK_STA_SPEC {
 }
 #[doc = "`reset()` method sets CLOCK_STA to value 0"]
 impl crate::Resettable for CLOCK_STA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

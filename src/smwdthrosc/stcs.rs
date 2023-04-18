@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
     #[inline(always)]
+    #[must_use]
     pub fn valid(&mut self) -> VALID_W<0> {
         VALID_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for STCS_SPEC {
 #[doc = "`write(|w| ..)` method takes [stcs::W](W) writer structure"]
 impl crate::Writable for STCS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STCS to value 0"]
 impl crate::Resettable for STCS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

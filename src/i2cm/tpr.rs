@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - SCL clock period This field specifies the period of the SCL clock. SCL_PRD = 2 * (1+TPR)*(SCL_LP + SCL_HP)*CLK_PRD where: SCL_PRD is the SCL line period (I2C clock). TPR is the timer period register value (range of 1 to 127) SCL_LP is the SCL low period (fixed at 6). SCL_HP is the SCL high period (fixed at 4). CLK_PRD is the system clock period in ns."]
     #[inline(always)]
+    #[must_use]
     pub fn tpr(&mut self) -> TPR_W<0> {
         TPR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TPR_SPEC {
 #[doc = "`write(|w| ..)` method takes [tpr::W](W) writer structure"]
 impl crate::Writable for TPR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TPR to value 0"]
 impl crate::Resettable for TPR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Random value or CRC result/input data, high byte When written, a CRC16 calculation is triggered, and the data value written is processed starting with the MSB. The value returned when reading from this register is the 8 MSBs of the LFSR. When used for random-number generation, reading this register returns the 8 MSBs of the random number. When used for CRC calculations, reading this register returns the 8 MSBs of the CRC result."]
     #[inline(always)]
+    #[must_use]
     pub fn rndh(&mut self) -> RNDH_W<0> {
         RNDH_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for RNDH_SPEC {
 #[doc = "`write(|w| ..)` method takes [rndh::W](W) writer structure"]
 impl crate::Writable for RNDH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RNDH to value 0"]
 impl crate::Resettable for RNDH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -33,8 +33,5 @@ impl crate::Readable for TBPS_SPEC {
 }
 #[doc = "`reset()` method sets TBPS to value 0"]
 impl crate::Resettable for TBPS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: Select alternate interrupt map. 0: Select regular interrupt map. (See the ASD document for details.)"]
     #[inline(always)]
+    #[must_use]
     pub fn altmap(&mut self) -> ALTMAP_W<0> {
         ALTMAP_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for I_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [i_map::W](W) writer structure"]
 impl crate::Writable for I_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I_MAP to value 0"]
 impl crate::Resettable for I_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

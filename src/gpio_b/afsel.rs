@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Bit set: Enables hardware (peripheral) control mode Bit cleared: Enables software control mode"]
     #[inline(always)]
+    #[must_use]
     pub fn afsel(&mut self) -> AFSEL_W<0> {
         AFSEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for AFSEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [afsel::W](W) writer structure"]
 impl crate::Writable for AFSEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AFSEL to value 0"]
 impl crate::Resettable for AFSEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

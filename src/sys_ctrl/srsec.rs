@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: PKA module is not reset 1: PKA module is reset"]
     #[inline(always)]
+    #[must_use]
     pub fn pka(&mut self) -> PKA_W<0> {
         PKA_W::new(self)
     }
     #[doc = "Bit 1 - 0: AES module is not reset 1: AES module is reset"]
     #[inline(always)]
+    #[must_use]
     pub fn aes(&mut self) -> AES_W<1> {
         AES_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for SRSEC_SPEC {
 #[doc = "`write(|w| ..)` method takes [srsec::W](W) writer structure"]
 impl crate::Writable for SRSEC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRSEC to value 0"]
 impl crate::Resettable for SRSEC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

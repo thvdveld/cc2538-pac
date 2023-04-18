@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2C 0 test mode enable"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c0tme(&mut self) -> I2C0TME_W<0> {
         I2C0TME_W::new(self)
     }
     #[doc = "Bit 16 - Timer0 test mode enable"]
     #[inline(always)]
+    #[must_use]
     pub fn t0tme(&mut self) -> T0TME_W<16> {
         T0TME_W::new(self)
     }
     #[doc = "Bit 17 - Timer1 test mode enable"]
     #[inline(always)]
+    #[must_use]
     pub fn t1tme(&mut self) -> T1TME_W<17> {
         T1TME_W::new(self)
     }
     #[doc = "Bit 18 - MacTimer test mode enable"]
     #[inline(always)]
+    #[must_use]
     pub fn mttme(&mut self) -> MTTME_W<18> {
         MTTME_W::new(self)
     }
     #[doc = "Bit 19 - Timer3 test mode enable"]
     #[inline(always)]
+    #[must_use]
     pub fn t3tme(&mut self) -> T3TME_W<19> {
         T3TME_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for PTME2_SPEC {
 #[doc = "`write(|w| ..)` method takes [ptme2::W](W) writer structure"]
 impl crate::Writable for PTME2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PTME2 to value 0"]
 impl crate::Resettable for PTME2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

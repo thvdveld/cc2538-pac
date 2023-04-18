@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - 24-bit mask that indicates source address match for each individual entry in the source address table"]
     #[inline(always)]
+    #[must_use]
     pub fn srcresmask2(&mut self) -> SRCRESMASK2_W<0> {
         SRCRESMASK2_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SRCRESMASK2_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcresmask2::W](W) writer structure"]
 impl crate::Writable for SRCRESMASK2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCRESMASK2 to value 0"]
 impl crate::Resettable for SRCRESMASK2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Channel enable 0: Disabled 1: Enable Note: Disabling an active channel interrupts the DMA operation. The ongoing block transfer completes, but no new transfers are requested."]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<0> {
         EN_W::new(self)
     }
     #[doc = "Bit 1 - Channel priority 0: Low 1: High If both channels have the same priority, access of the channels to the external port is arbitrated using the round robin scheme. If one channel has a high priority and another one low, the channel with the high priority is served first, in case of simultaneous access requests."]
     #[inline(always)]
+    #[must_use]
     pub fn prio(&mut self) -> PRIO_W<1> {
         PRIO_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for DMAC_CH0_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [dmac_ch0_ctrl::W](W) writer structure"]
 impl crate::Writable for DMAC_CH0_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMAC_CH0_CTRL to value 0"]
 impl crate::Resettable for DMAC_CH0_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

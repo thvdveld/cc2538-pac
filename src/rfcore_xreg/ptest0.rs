@@ -100,31 +100,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn aaf_pd(&mut self) -> AAF_PD_W<0> {
         AAF_PD_W::new(self)
     }
     #[doc = "Bit 1 - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn txmix_pd(&mut self) -> TXMIX_PD_W<1> {
         TXMIX_PD_W::new(self)
     }
     #[doc = "Bits 2:3 - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn lna_pd(&mut self) -> LNA_PD_W<2> {
         LNA_PD_W::new(self)
     }
     #[doc = "Bit 4 - DAC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn dac_pd(&mut self) -> DAC_PD_W<4> {
         DAC_PD_W::new(self)
     }
     #[doc = "Bit 5 - ADC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_pd(&mut self) -> ADC_PD_W<5> {
         ADC_PD_W::new(self)
     }
     #[doc = "Bit 6 - Charge pump power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn chp_pd(&mut self) -> CHP_PD_W<6> {
         CHP_PD_W::new(self)
     }
@@ -147,11 +153,10 @@ impl crate::Readable for PTEST0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ptest0::W](W) writer structure"]
 impl crate::Writable for PTEST0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PTEST0 to value 0"]
 impl crate::Resettable for PTEST0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

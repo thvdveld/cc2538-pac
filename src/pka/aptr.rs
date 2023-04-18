@@ -52,6 +52,7 @@ impl W {
     #[doc = "Bits 0:10 - This register specifies the location of vector A within the PKA RAM. Vectors are identified through the location of their least-significant 32-bit word. Note that bit \\[0\\]
 must be zero to ensure that the vector starts at an 8-byte boundary."]
     #[inline(always)]
+    #[must_use]
     pub fn aptr(&mut self) -> APTR_W<0> {
         APTR_W::new(self)
     }
@@ -74,11 +75,10 @@ impl crate::Readable for APTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [aptr::W](W) writer structure"]
 impl crate::Writable for APTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APTR to value 0"]
 impl crate::Resettable for APTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

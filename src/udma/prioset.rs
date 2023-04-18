@@ -64,6 +64,7 @@ is using the default priority level 1: uDMA channel \\[n\\]
 is using a high priority level Bit 0 corresponds to channel 0. A bit can only be cleared by setting the corresponding CLR\\[n\\]
 bit in the DMAPRIOCLR register."]
     #[inline(always)]
+    #[must_use]
     pub fn set(&mut self) -> SET_W<0> {
         SET_W::new(self)
     }
@@ -86,11 +87,10 @@ impl crate::Readable for PRIOSET_SPEC {
 #[doc = "`write(|w| ..)` method takes [prioset::W](W) writer structure"]
 impl crate::Writable for PRIOSET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRIOSET to value 0"]
 impl crate::Resettable for PRIOSET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

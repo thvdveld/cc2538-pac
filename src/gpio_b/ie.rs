@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Bits set: Corresponding pin is not masked Bits cleared: Corresponding pin is masked"]
     #[inline(always)]
+    #[must_use]
     pub fn ie(&mut self) -> IE_W<0> {
         IE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for IE_SPEC {
 #[doc = "`write(|w| ..)` method takes [ie::W](W) writer structure"]
 impl crate::Writable for IE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IE to value 0"]
 impl crate::Resettable for IE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

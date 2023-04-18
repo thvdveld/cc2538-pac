@@ -117,41 +117,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ICEMelter 'WAKEUPEMU' power mode override bit. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
     #[inline(always)]
+    #[must_use]
     pub fn icemelter_wkup_pm(&mut self) -> ICEMELTER_WKUP_PM_W<0> {
         ICEMELTER_WKUP_PM_W::new(self)
     }
     #[doc = "Bit 1 - ICEPick 'Inhibit Sleep' power mode override bit. 'Inhibit Sleep' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
     #[inline(always)]
+    #[must_use]
     pub fn icepick_inhibit_sleep_pm(&mut self) -> ICEPICK_INHIBIT_SLEEP_PM_W<1> {
         ICEPICK_INHIBIT_SLEEP_PM_W::new(self)
     }
     #[doc = "Bit 2 - ICEPick 'Force Power' power mode override bit. 'Force Power' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
     #[inline(always)]
+    #[must_use]
     pub fn icepick_force_power_pm(&mut self) -> ICEPICK_FORCE_POWER_PM_W<2> {
         ICEPICK_FORCE_POWER_PM_W::new(self)
     }
     #[doc = "Bit 3 - ICEPick 'Force Active' power mode override bit. 'Force Active' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
     #[inline(always)]
+    #[must_use]
     pub fn icepick_force_clock_pm(&mut self) -> ICEPICK_FORCE_CLOCK_PM_W<3> {
         ICEPICK_FORCE_CLOCK_PM_W::new(self)
     }
     #[doc = "Bit 4 - ICEMelter 'WAKEUPEMU' clock gate override bit. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings"]
     #[inline(always)]
+    #[must_use]
     pub fn icemelter_wkup_cg(&mut self) -> ICEMELTER_WKUP_CG_W<4> {
         ICEMELTER_WKUP_CG_W::new(self)
     }
     #[doc = "Bit 5 - ICEPick 'Inhibit Sleep' clock gate override bit. 'Inhibit Sleep' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
     #[inline(always)]
+    #[must_use]
     pub fn icepick_inhibit_sleep_cg(&mut self) -> ICEPICK_INHIBIT_SLEEP_CG_W<5> {
         ICEPICK_INHIBIT_SLEEP_CG_W::new(self)
     }
     #[doc = "Bit 6 - ICEPick 'Force Power' clock gate override bit. 'Force Power' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
     #[inline(always)]
+    #[must_use]
     pub fn icepick_force_power_cg(&mut self) -> ICEPICK_FORCE_POWER_CG_W<6> {
         ICEPICK_FORCE_POWER_CG_W::new(self)
     }
     #[doc = "Bit 7 - ICEPick 'Force Active' clock gate override bit. 'Force Active' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
     #[inline(always)]
+    #[must_use]
     pub fn icepick_force_clock_cg(&mut self) -> ICEPICK_FORCE_CLOCK_CG_W<7> {
         ICEPICK_FORCE_CLOCK_CG_W::new(self)
     }
@@ -174,11 +182,10 @@ impl crate::Readable for EMUOVR_SPEC {
 #[doc = "`write(|w| ..)` method takes [emuovr::W](W) writer structure"]
 impl crate::Writable for EMUOVR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EMUOVR to value 0"]
 impl crate::Resettable for EMUOVR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2C0 Master/slave loopback mode 0: Normal mode"]
     #[inline(always)]
+    #[must_use]
     pub fn lpbki2c(&mut self) -> LPBKI2C_W<0> {
         LPBKI2C_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for LPBKI2C_SPEC {
 #[doc = "`write(|w| ..)` method takes [lpbki2c::W](W) writer structure"]
 impl crate::Writable for LPBKI2C_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LPBKI2C to value 0"]
 impl crate::Resettable for LPBKI2C_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

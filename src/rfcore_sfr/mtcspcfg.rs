@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Selects the event that triggers an MT_EVENT1 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_event1_cfg(&mut self) -> MACTIMER_EVENT1_CFG_W<0> {
         MACTIMER_EVENT1_CFG_W::new(self)
     }
     #[doc = "Bits 4:6 - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
     #[inline(always)]
+    #[must_use]
     pub fn mactimer_evenmt_cfg(&mut self) -> MACTIMER_EVENMT_CFG_W<4> {
         MACTIMER_EVENMT_CFG_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for MTCSPCFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [mtcspcfg::W](W) writer structure"]
 impl crate::Writable for MTCSPCFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MTCSPCFG to value 0"]
 impl crate::Resettable for MTCSPCFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - I-branch DAC override value when DAC_SRC = 001 If DAC_SRC is set to be ADC data, CORDIC magnitude, channel filtered data, or DC filtered data, then DAC_I_O controls the part of the word in question that is actually multiplexed to the DAC as described below. 000111: Bits 7:0 001000: Bits 8:1 001001: Bits 9:2 ... If an invalid setting is chosen, then the DAC outputs only zeros (minimum value)."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_i_o(&mut self) -> DAC_I_O_W<0> {
         DAC_I_O_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for DACTEST1_SPEC {
 #[doc = "`write(|w| ..)` method takes [dactest1::W](W) writer structure"]
 impl crate::Writable for DACTEST1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DACTEST1 to value 0"]
 impl crate::Resettable for DACTEST1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

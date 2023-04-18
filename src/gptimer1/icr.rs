@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn tatocint(&mut self) -> TATOCINT_W<0> {
         TATOCINT_W::new(self)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn camcint(&mut self) -> CAMCINT_W<1> {
         CAMCINT_W::new(self)
     }
     #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn caecint(&mut self) -> CAECINT_W<2> {
         CAECINT_W::new(self)
     }
     #[doc = "Bit 4 - GPTM Timer A match interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn tamcint(&mut self) -> TAMCINT_W<4> {
         TAMCINT_W::new(self)
     }
     #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn tbtocint(&mut self) -> TBTOCINT_W<8> {
         TBTOCINT_W::new(self)
     }
     #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn cbmcint(&mut self) -> CBMCINT_W<9> {
         CBMCINT_W::new(self)
     }
     #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn cbecint(&mut self) -> CBECINT_W<10> {
         CBECINT_W::new(self)
     }
     #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn tbmcint(&mut self) -> TBMCINT_W<11> {
         TBMCINT_W::new(self)
     }
     #[doc = "Bit 16 - GPTM write update error interrupt clear"]
     #[inline(always)]
+    #[must_use]
     pub fn wuecint(&mut self) -> WUECINT_W<16> {
         WUECINT_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for ICR_SPEC {
 #[doc = "`write(|w| ..)` method takes [icr::W](W) writer structure"]
 impl crate::Writable for ICR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICR to value 0"]
 impl crate::Resettable for ICR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

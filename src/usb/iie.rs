@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Interrupt enable for endpoint 0 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn ep0ie(&mut self) -> EP0IE_W<0> {
         EP0IE_W::new(self)
     }
     #[doc = "Bit 1 - Interrupt enable for IN endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn inep1ie(&mut self) -> INEP1IE_W<1> {
         INEP1IE_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt enable for IN endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn inep2ie(&mut self) -> INEP2IE_W<2> {
         INEP2IE_W::new(self)
     }
     #[doc = "Bit 3 - Interrupt enable for IN endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn inep3ie(&mut self) -> INEP3IE_W<3> {
         INEP3IE_W::new(self)
     }
     #[doc = "Bit 4 - Interrupt enable for IN endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn inep4ie(&mut self) -> INEP4IE_W<4> {
         INEP4IE_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt enable for IN endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn inep5ie(&mut self) -> INEP5IE_W<5> {
         INEP5IE_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for IIE_SPEC {
 #[doc = "`write(|w| ..)` method takes [iie::W](W) writer structure"]
 impl crate::Writable for IIE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IIE to value 0"]
 impl crate::Resettable for IIE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

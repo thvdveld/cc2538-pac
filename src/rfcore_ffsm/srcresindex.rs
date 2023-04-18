@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - The bit index of the least-significant entry (0-23 for short addresses or 0-11 for extended addresses) in SRCRESMASK, or 0x3F when there is no source match On a match, bit 5 is 0 when the match is on a short address and 1 when it is on an extended address. On a match, bit 6 is 1 when the conditions for automatic pending bit in acknowledgment have been met (see the description of SRCMATCH.AUTOPEND). The bit does not indicate if the acknowledgment is actually transmitted, and does not consider the PENDING_OR register bit and the SACK/SACKPEND/SNACK strobes."]
     #[inline(always)]
+    #[must_use]
     pub fn srcresindex(&mut self) -> SRCRESINDEX_W<0> {
         SRCRESINDEX_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SRCRESINDEX_SPEC {
 #[doc = "`write(|w| ..)` method takes [srcresindex::W](W) writer structure"]
 impl crate::Writable for SRCRESINDEX_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRCRESINDEX to value 0"]
 impl crate::Resettable for SRCRESINDEX_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

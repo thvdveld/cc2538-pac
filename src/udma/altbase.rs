@@ -33,8 +33,5 @@ impl crate::Readable for ALTBASE_SPEC {
 }
 #[doc = "`reset()` method sets ALTBASE to value 0"]
 impl crate::Resettable for ALTBASE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

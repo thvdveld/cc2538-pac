@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Override the AAF control signals of the AGC with the values stored in AAF_RP."]
     #[inline(always)]
+    #[must_use]
     pub fn aaf_rp_oe(&mut self) -> AAF_RP_OE_W<0> {
         AAF_RP_OE_W::new(self)
     }
     #[doc = "Bits 1:2 - Overrides the control signals of the AGC to AAF when AAF_RP_OE = 1. When read, it returns the applied signal to the AAF. 00: 9-dB attenuation in AAF 01: 6-dB attenuation in AAF 10: 3-dB attenuation in AAF 11: 0-dB attenuation in AAF (reference level)"]
     #[inline(always)]
+    #[must_use]
     pub fn aaf_rp(&mut self) -> AAF_RP_W<1> {
         AAF_RP_W::new(self)
     }
     #[doc = "Bits 3:4 - Window size for the accumulate-and-dump function in the AGC. 00: 16 samples 01: 32 samples 10: 64 samples 11: 128 samples"]
     #[inline(always)]
+    #[must_use]
     pub fn agc_win_size(&mut self) -> AGC_WIN_SIZE_W<3> {
         AGC_WIN_SIZE_W::new(self)
     }
     #[doc = "Bits 5:6 - Timing for AGC to wait for analog gain to settle after a gain change. During this period, the energy measurement in the AGC is paused. 00: 15 periods 01: 20 periods 10: 25 periods 11: 30 periods"]
     #[inline(always)]
+    #[must_use]
     pub fn agc_settle_wait(&mut self) -> AGC_SETTLE_WAIT_W<5> {
         AGC_SETTLE_WAIT_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for AGCCTRL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [agcctrl3::W](W) writer structure"]
 impl crate::Writable for AGCCTRL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AGCCTRL3 to value 0"]
 impl crate::Resettable for AGCCTRL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

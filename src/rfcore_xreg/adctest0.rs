@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables DAC2 for enhanced ADC stability"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_dac2_en(&mut self) -> ADC_DAC2_EN_W<0> {
         ADC_DAC2_EN_W::new(self)
     }
     #[doc = "Bits 1:3 - Gm-control for test and debug"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_gm_adj(&mut self) -> ADC_GM_ADJ_W<1> {
         ADC_GM_ADJ_W::new(self)
     }
     #[doc = "Bits 4:5 - Quantizer threshold control for test and debug"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_quant_adj(&mut self) -> ADC_QUANT_ADJ_W<4> {
         ADC_QUANT_ADJ_W::new(self)
     }
     #[doc = "Bits 6:7 - Quantizer threshold control for test and debug"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_vref_adj(&mut self) -> ADC_VREF_ADJ_W<6> {
         ADC_VREF_ADJ_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for ADCTEST0_SPEC {
 #[doc = "`write(|w| ..)` method takes [adctest0::W](W) writer structure"]
 impl crate::Writable for ADCTEST0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADCTEST0 to value 0"]
 impl crate::Resettable for ADCTEST0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -73,16 +73,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write 1 to start timer, write 0 to stop timer. When read, it returns the last written value."]
     #[inline(always)]
+    #[must_use]
     pub fn run(&mut self) -> RUN_W<0> {
         RUN_W::new(self)
     }
     #[doc = "Bit 1 - 0: Starting and stopping of timer is immediate; that is, synchronous with clk_rf_32m. 1: Starting and stopping of timer occurs at the first positive edge of the 32-kHz clock. For more details regarding timer start and stop, see Section 22.4."]
     #[inline(always)]
+    #[must_use]
     pub fn sync(&mut self) -> SYNC_W<1> {
         SYNC_W::new(self)
     }
     #[doc = "Bit 3 - 0: Reading MTM0 with MTMSEL.MTMSEL = 000 latches the high byte of the timer, making it ready to be read from MTM1. Reading MTMOVF0 with MTMSEL.MTMOVFSEL = 000 latches the two most-significant bytes of the overflow counter, making it possible to read these from MTMOVF1 and MTMOVF2. 1: Reading MTM0 with MTMSEL.MTMSEL = 000 latches the high byte of the timer and the entire overflow counter at once, making it possible to read the values from MTM1, MTMOVF0, MTMOVF1, and MTMOVF2."]
     #[inline(always)]
+    #[must_use]
     pub fn latch_mode(&mut self) -> LATCH_MODE_W<3> {
         LATCH_MODE_W::new(self)
     }
@@ -105,11 +108,10 @@ impl crate::Readable for MTCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [mtctrl::W](W) writer structure"]
 impl crate::Writable for MTCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MTCTRL to value 0"]
 impl crate::Resettable for MTCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

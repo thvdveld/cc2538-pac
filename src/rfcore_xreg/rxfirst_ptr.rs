@@ -33,8 +33,5 @@ impl crate::Readable for RXFIRST_PTR_SPEC {
 }
 #[doc = "`reset()` method sets RXFIRST_PTR to value 0"]
 impl crate::Resettable for RXFIRST_PTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
