@@ -1,57 +1,25 @@
 #[doc = "Register `PTEST1` reader"]
-pub struct R(crate::R<PTEST1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PTEST1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PTEST1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PTEST1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PTEST1_SPEC>;
 #[doc = "Register `PTEST1` writer"]
-pub struct W(crate::W<PTEST1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PTEST1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PTEST1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PTEST1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PTEST1_SPEC>;
 #[doc = "Field `LODIV_PD` reader - LO power-down signal When PD_OVERRIDE = 1"]
-pub type LODIV_PD_R = crate::BitReader<bool>;
+pub type LODIV_PD_R = crate::BitReader;
 #[doc = "Field `LODIV_PD` writer - LO power-down signal When PD_OVERRIDE = 1"]
-pub type LODIV_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
+pub type LODIV_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `VCO_PD` reader - VCO power-down signal When PD_OVERRIDE = 1"]
-pub type VCO_PD_R = crate::BitReader<bool>;
+pub type VCO_PD_R = crate::BitReader;
 #[doc = "Field `VCO_PD` writer - VCO power-down signal When PD_OVERRIDE = 1"]
-pub type VCO_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
+pub type VCO_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PA_PD` reader - Power amplifier power-down signal When PD_OVERRIDE = 1"]
-pub type PA_PD_R = crate::BitReader<bool>;
+pub type PA_PD_R = crate::BitReader;
 #[doc = "Field `PA_PD` writer - Power amplifier power-down signal When PD_OVERRIDE = 1"]
-pub type PA_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
+pub type PA_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD_OVERRIDE` reader - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
 depenancy."]
-pub type PD_OVERRIDE_R = crate::BitReader<bool>;
+pub type PD_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `PD_OVERRIDE` writer - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
 depenancy."]
-pub type PD_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST1_SPEC, bool, O>;
+pub type PD_OVERRIDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - LO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
@@ -79,47 +47,44 @@ impl W {
     #[doc = "Bit 0 - LO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn lodiv_pd(&mut self) -> LODIV_PD_W<0> {
+    pub fn lodiv_pd(&mut self) -> LODIV_PD_W<PTEST1_SPEC, 0> {
         LODIV_PD_W::new(self)
     }
     #[doc = "Bit 1 - VCO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn vco_pd(&mut self) -> VCO_PD_W<1> {
+    pub fn vco_pd(&mut self) -> VCO_PD_W<PTEST1_SPEC, 1> {
         VCO_PD_W::new(self)
     }
     #[doc = "Bit 2 - Power amplifier power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn pa_pd(&mut self) -> PA_PD_W<2> {
+    pub fn pa_pd(&mut self) -> PA_PD_W<PTEST1_SPEC, 2> {
         PA_PD_W::new(self)
     }
     #[doc = "Bit 3 - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
 depenancy."]
     #[inline(always)]
     #[must_use]
-    pub fn pd_override(&mut self) -> PD_OVERRIDE_W<3> {
+    pub fn pd_override(&mut self) -> PD_OVERRIDE_W<PTEST1_SPEC, 3> {
         PD_OVERRIDE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Override power-down register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ptest1](index.html) module"]
+#[doc = "Override power-down register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptest1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptest1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PTEST1_SPEC;
 impl crate::RegisterSpec for PTEST1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ptest1::R](R) reader structure"]
-impl crate::Readable for PTEST1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ptest1::W](W) writer structure"]
+#[doc = "`read()` method returns [`ptest1::R`](R) reader structure"]
+impl crate::Readable for PTEST1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ptest1::W`](W) writer structure"]
 impl crate::Writable for PTEST1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

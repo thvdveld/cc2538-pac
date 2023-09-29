@@ -1,65 +1,33 @@
 #[doc = "Register `PTEST0` reader"]
-pub struct R(crate::R<PTEST0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PTEST0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PTEST0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PTEST0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PTEST0_SPEC>;
 #[doc = "Register `PTEST0` writer"]
-pub struct W(crate::W<PTEST0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PTEST0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PTEST0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PTEST0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PTEST0_SPEC>;
 #[doc = "Field `AAF_PD` reader - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
-pub type AAF_PD_R = crate::BitReader<bool>;
+pub type AAF_PD_R = crate::BitReader;
 #[doc = "Field `AAF_PD` writer - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
-pub type AAF_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
+pub type AAF_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXMIX_PD` reader - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
-pub type TXMIX_PD_R = crate::BitReader<bool>;
+pub type TXMIX_PD_R = crate::BitReader;
 #[doc = "Field `TXMIX_PD` writer - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
-pub type TXMIX_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
+pub type TXMIX_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LNA_PD` reader - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
-pub type LNA_PD_R = crate::FieldReader<u8, u8>;
+pub type LNA_PD_R = crate::FieldReader;
 #[doc = "Field `LNA_PD` writer - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
-pub type LNA_PD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PTEST0_SPEC, u8, u8, 2, O>;
+pub type LNA_PD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `DAC_PD` reader - DAC power-down signal When PD_OVERRIDE = 1"]
-pub type DAC_PD_R = crate::BitReader<bool>;
+pub type DAC_PD_R = crate::BitReader;
 #[doc = "Field `DAC_PD` writer - DAC power-down signal When PD_OVERRIDE = 1"]
-pub type DAC_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
+pub type DAC_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADC_PD` reader - ADC power-down signal When PD_OVERRIDE = 1"]
-pub type ADC_PD_R = crate::BitReader<bool>;
+pub type ADC_PD_R = crate::BitReader;
 #[doc = "Field `ADC_PD` writer - ADC power-down signal When PD_OVERRIDE = 1"]
-pub type ADC_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
+pub type ADC_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CHP_PD` reader - Charge pump power-down signal When PD_OVERRIDE = 1"]
-pub type CHP_PD_R = crate::BitReader<bool>;
+pub type CHP_PD_R = crate::BitReader;
 #[doc = "Field `CHP_PD` writer - Charge pump power-down signal When PD_OVERRIDE = 1"]
-pub type CHP_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTEST0_SPEC, bool, O>;
+pub type CHP_PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRE_PD` reader - Prescaler power-down signal When PD_OVERRIDE = 1"]
-pub type PRE_PD_R = crate::BitReader<bool>;
+pub type PRE_PD_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
@@ -101,58 +69,55 @@ impl W {
     #[doc = "Bit 0 - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn aaf_pd(&mut self) -> AAF_PD_W<0> {
+    pub fn aaf_pd(&mut self) -> AAF_PD_W<PTEST0_SPEC, 0> {
         AAF_PD_W::new(self)
     }
     #[doc = "Bit 1 - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn txmix_pd(&mut self) -> TXMIX_PD_W<1> {
+    pub fn txmix_pd(&mut self) -> TXMIX_PD_W<PTEST0_SPEC, 1> {
         TXMIX_PD_W::new(self)
     }
     #[doc = "Bits 2:3 - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn lna_pd(&mut self) -> LNA_PD_W<2> {
+    pub fn lna_pd(&mut self) -> LNA_PD_W<PTEST0_SPEC, 2> {
         LNA_PD_W::new(self)
     }
     #[doc = "Bit 4 - DAC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_pd(&mut self) -> DAC_PD_W<4> {
+    pub fn dac_pd(&mut self) -> DAC_PD_W<PTEST0_SPEC, 4> {
         DAC_PD_W::new(self)
     }
     #[doc = "Bit 5 - ADC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_pd(&mut self) -> ADC_PD_W<5> {
+    pub fn adc_pd(&mut self) -> ADC_PD_W<PTEST0_SPEC, 5> {
         ADC_PD_W::new(self)
     }
     #[doc = "Bit 6 - Charge pump power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn chp_pd(&mut self) -> CHP_PD_W<6> {
+    pub fn chp_pd(&mut self) -> CHP_PD_W<PTEST0_SPEC, 6> {
         CHP_PD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Override power-down register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ptest0](index.html) module"]
+#[doc = "Override power-down register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptest0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptest0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PTEST0_SPEC;
 impl crate::RegisterSpec for PTEST0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ptest0::R](R) reader structure"]
-impl crate::Readable for PTEST0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ptest0::W](W) writer structure"]
+#[doc = "`read()` method returns [`ptest0::R`](R) reader structure"]
+impl crate::Readable for PTEST0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ptest0::W`](W) writer structure"]
 impl crate::Writable for PTEST0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

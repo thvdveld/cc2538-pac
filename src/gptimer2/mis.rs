@@ -1,34 +1,21 @@
 #[doc = "Register `MIS` reader"]
-pub struct R(crate::R<MIS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MIS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MIS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MIS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MIS_SPEC>;
 #[doc = "Field `TATOMIS` reader - GPTM Timer A time-out raw interrupt"]
-pub type TATOMIS_R = crate::BitReader<bool>;
+pub type TATOMIS_R = crate::BitReader;
 #[doc = "Field `CAMMIS` reader - GPTM Timer A capture match raw interrupt"]
-pub type CAMMIS_R = crate::BitReader<bool>;
+pub type CAMMIS_R = crate::BitReader;
 #[doc = "Field `CAEMIS` reader - GPTM Timer A capture event raw interrupt"]
-pub type CAEMIS_R = crate::BitReader<bool>;
+pub type CAEMIS_R = crate::BitReader;
 #[doc = "Field `TAMRIS` reader - GPTM Timer A match raw interrupt"]
-pub type TAMRIS_R = crate::BitReader<bool>;
+pub type TAMRIS_R = crate::BitReader;
 #[doc = "Field `TBTOMIS` reader - GPTM Timer B time-out masked interrupt"]
-pub type TBTOMIS_R = crate::BitReader<bool>;
+pub type TBTOMIS_R = crate::BitReader;
 #[doc = "Field `CBMMIS` reader - GPTM Timer B capture match masked interrupt"]
-pub type CBMMIS_R = crate::BitReader<bool>;
+pub type CBMMIS_R = crate::BitReader;
 #[doc = "Field `CBEMIS` reader - GPTM Timer B capture event masked interrupt"]
-pub type CBEMIS_R = crate::BitReader<bool>;
+pub type CBEMIS_R = crate::BitReader;
 #[doc = "Field `TBMMIS` reader - GPTM Timer B match masked interrupt"]
-pub type TBMMIS_R = crate::BitReader<bool>;
+pub type TBMMIS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - GPTM Timer A time-out raw interrupt"]
     #[inline(always)]
@@ -71,15 +58,13 @@ impl R {
         TBMMIS_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
-#[doc = "GPTM masked interrupt status This register shows the state of the GPTM controller-level interrupt. If an interrupt is unmasked in IMR, and there is an event that causes the interrupt to be asserted, the corresponding bit is set in this register. All bits are cleared by writing 1 to the corresponding bit in ICR.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mis](index.html) module"]
+#[doc = "GPTM masked interrupt status This register shows the state of the GPTM controller-level interrupt. If an interrupt is unmasked in IMR, and there is an event that causes the interrupt to be asserted, the corresponding bit is set in this register. All bits are cleared by writing 1 to the corresponding bit in ICR.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MIS_SPEC;
 impl crate::RegisterSpec for MIS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mis::R](R) reader structure"]
-impl crate::Readable for MIS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`mis::R`](R) reader structure"]
+impl crate::Readable for MIS_SPEC {}
 #[doc = "`reset()` method sets MIS to value 0"]
 impl crate::Resettable for MIS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

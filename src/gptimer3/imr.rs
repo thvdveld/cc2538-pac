@@ -1,71 +1,39 @@
 #[doc = "Register `IMR` reader"]
-pub struct R(crate::R<IMR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IMR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IMR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IMR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IMR_SPEC>;
 #[doc = "Register `IMR` writer"]
-pub struct W(crate::W<IMR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IMR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IMR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IMR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IMR_SPEC>;
 #[doc = "Field `TATOIM` reader - GPTM Timer A time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type TATOIM_R = crate::BitReader<bool>;
+pub type TATOIM_R = crate::BitReader;
 #[doc = "Field `TATOIM` writer - GPTM Timer A time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type TATOIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type TATOIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CAMIM` reader - GPTM Timer A capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type CAMIM_R = crate::BitReader<bool>;
+pub type CAMIM_R = crate::BitReader;
 #[doc = "Field `CAMIM` writer - GPTM Timer A capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type CAMIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type CAMIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CAEIM` reader - GPTM Timer A capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type CAEIM_R = crate::BitReader<bool>;
+pub type CAEIM_R = crate::BitReader;
 #[doc = "Field `CAEIM` writer - GPTM Timer A capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type CAEIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type CAEIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TAMIM` reader - GPTM Timer A match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type TAMIM_R = crate::BitReader<bool>;
+pub type TAMIM_R = crate::BitReader;
 #[doc = "Field `TAMIM` writer - GPTM Timer A match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type TAMIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type TAMIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TBTOIM` reader - GPTM Timer B time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type TBTOIM_R = crate::BitReader<bool>;
+pub type TBTOIM_R = crate::BitReader;
 #[doc = "Field `TBTOIM` writer - GPTM Timer B time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type TBTOIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type TBTOIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CBMIM` reader - GPTM Timer B capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type CBMIM_R = crate::BitReader<bool>;
+pub type CBMIM_R = crate::BitReader;
 #[doc = "Field `CBMIM` writer - GPTM Timer B capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type CBMIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type CBMIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CBEIM` reader - GPTM Timer B capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type CBEIM_R = crate::BitReader<bool>;
+pub type CBEIM_R = crate::BitReader;
 #[doc = "Field `CBEIM` writer - GPTM Timer B capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type CBEIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type CBEIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TBMIM` reader - GPTM Timer B match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type TBMIM_R = crate::BitReader<bool>;
+pub type TBMIM_R = crate::BitReader;
 #[doc = "Field `TBMIM` writer - GPTM Timer B match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
-pub type TBMIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type TBMIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
@@ -112,70 +80,67 @@ impl W {
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn tatoim(&mut self) -> TATOIM_W<0> {
+    pub fn tatoim(&mut self) -> TATOIM_W<IMR_SPEC, 0> {
         TATOIM_W::new(self)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn camim(&mut self) -> CAMIM_W<1> {
+    pub fn camim(&mut self) -> CAMIM_W<IMR_SPEC, 1> {
         CAMIM_W::new(self)
     }
     #[doc = "Bit 2 - GPTM Timer A capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn caeim(&mut self) -> CAEIM_W<2> {
+    pub fn caeim(&mut self) -> CAEIM_W<IMR_SPEC, 2> {
         CAEIM_W::new(self)
     }
     #[doc = "Bit 4 - GPTM Timer A match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn tamim(&mut self) -> TAMIM_W<4> {
+    pub fn tamim(&mut self) -> TAMIM_W<IMR_SPEC, 4> {
         TAMIM_W::new(self)
     }
     #[doc = "Bit 8 - GPTM Timer B time-out interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn tbtoim(&mut self) -> TBTOIM_W<8> {
+    pub fn tbtoim(&mut self) -> TBTOIM_W<IMR_SPEC, 8> {
         TBTOIM_W::new(self)
     }
     #[doc = "Bit 9 - GPTM Timer B capture match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn cbmim(&mut self) -> CBMIM_W<9> {
+    pub fn cbmim(&mut self) -> CBMIM_W<IMR_SPEC, 9> {
         CBMIM_W::new(self)
     }
     #[doc = "Bit 10 - GPTM Timer B capture event interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn cbeim(&mut self) -> CBEIM_W<10> {
+    pub fn cbeim(&mut self) -> CBEIM_W<IMR_SPEC, 10> {
         CBEIM_W::new(self)
     }
     #[doc = "Bit 11 - GPTM Timer B match interrupt mask 0: Interrupt is disabled. 1: Interrupt is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn tbmim(&mut self) -> TBMIM_W<11> {
+    pub fn tbmim(&mut self) -> TBMIM_W<IMR_SPEC, 11> {
         TBMIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "GPTM interrupt mask This register allows software to enable and disable GPTM controller-level interrupts. Setting a bit enables the corresponding interrupt, while clearing a bit disables it.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [imr](index.html) module"]
+#[doc = "GPTM interrupt mask This register allows software to enable and disable GPTM controller-level interrupts. Setting a bit enables the corresponding interrupt, while clearing a bit disables it.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`imr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`imr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IMR_SPEC;
 impl crate::RegisterSpec for IMR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [imr::R](R) reader structure"]
-impl crate::Readable for IMR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [imr::W](W) writer structure"]
+#[doc = "`read()` method returns [`imr::R`](R) reader structure"]
+impl crate::Readable for IMR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`imr::W`](W) writer structure"]
 impl crate::Writable for IMR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

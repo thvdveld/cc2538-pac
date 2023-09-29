@@ -1,26 +1,13 @@
 #[doc = "Register `PP` reader"]
-pub struct R(crate::R<PP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PP_SPEC>;
 #[doc = "Field `SIZE` reader - Timer size 0: Timer A and Timer B are 16 bits wide with 8-bit prescale. 1: Timer A and Timer B are 32 bits wide with 16-bit prescale."]
-pub type SIZE_R = crate::FieldReader<u8, u8>;
+pub type SIZE_R = crate::FieldReader;
 #[doc = "Field `CHAIN` reader - Chain with other timers 0: Timer is not capable of chaining with previously numbered Timers. 1: Timer is capable of chaining with previously numbered timers."]
-pub type CHAIN_R = crate::BitReader<bool>;
+pub type CHAIN_R = crate::BitReader;
 #[doc = "Field `SYNCNT` reader - Synchronized start 0: Timer is not capable of synchronizing the count value with other timers. 1: Timer is capable of synchronizing the count value with other timers."]
-pub type SYNCNT_R = crate::BitReader<bool>;
+pub type SYNCNT_R = crate::BitReader;
 #[doc = "Field `ALTCLK` reader - Alternate clock source 0: Timer is not capable of using an alternate clock. 1: Timer is capable of using an alternate clock."]
-pub type ALTCLK_R = crate::BitReader<bool>;
+pub type ALTCLK_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:3 - Timer size 0: Timer A and Timer B are 16 bits wide with 8-bit prescale. 1: Timer A and Timer B are 32 bits wide with 16-bit prescale."]
     #[inline(always)]
@@ -43,15 +30,13 @@ impl R {
         ALTCLK_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
-#[doc = "GPTM peripheral properties The PP register provides information regarding the properties of the general-purpose Timer module.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pp](index.html) module"]
+#[doc = "GPTM peripheral properties The PP register provides information regarding the properties of the general-purpose Timer module.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pp::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PP_SPEC;
 impl crate::RegisterSpec for PP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pp::R](R) reader structure"]
-impl crate::Readable for PP_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`pp::R`](R) reader structure"]
+impl crate::Readable for PP_SPEC {}
 #[doc = "`reset()` method sets PP to value 0"]
 impl crate::Resettable for PP_SPEC {
     const RESET_VALUE: Self::Ux = 0;

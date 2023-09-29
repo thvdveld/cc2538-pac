@@ -1,167 +1,135 @@
 #[doc = "Register `P_EDGE_CTRL` reader"]
-pub struct R(crate::R<P_EDGE_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<P_EDGE_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<P_EDGE_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<P_EDGE_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<P_EDGE_CTRL_SPEC>;
 #[doc = "Register `P_EDGE_CTRL` writer"]
-pub struct W(crate::W<P_EDGE_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<P_EDGE_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<P_EDGE_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<P_EDGE_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<P_EDGE_CTRL_SPEC>;
 #[doc = "Field `PAIRC0` reader - Port A bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC0_R = crate::BitReader<bool>;
+pub type PAIRC0_R = crate::BitReader;
 #[doc = "Field `PAIRC0` writer - Port A bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PAIRC0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIRC1` reader - Port A bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC1_R = crate::BitReader<bool>;
+pub type PAIRC1_R = crate::BitReader;
 #[doc = "Field `PAIRC1` writer - Port A bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC1_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PAIRC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIRC2` reader - Port A bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC2_R = crate::BitReader<bool>;
+pub type PAIRC2_R = crate::BitReader;
 #[doc = "Field `PAIRC2` writer - Port A bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC2_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PAIRC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIRC3` reader - Port A bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC3_R = crate::BitReader<bool>;
+pub type PAIRC3_R = crate::BitReader;
 #[doc = "Field `PAIRC3` writer - Port A bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC3_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PAIRC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIRC4` reader - Port A bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC4_R = crate::BitReader<bool>;
+pub type PAIRC4_R = crate::BitReader;
 #[doc = "Field `PAIRC4` writer - Port A bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC4_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PAIRC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIRC5` reader - Port A bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC5_R = crate::BitReader<bool>;
+pub type PAIRC5_R = crate::BitReader;
 #[doc = "Field `PAIRC5` writer - Port A bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC5_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PAIRC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIRC6` reader - Port A bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC6_R = crate::BitReader<bool>;
+pub type PAIRC6_R = crate::BitReader;
 #[doc = "Field `PAIRC6` writer - Port A bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC6_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PAIRC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIRC7` reader - Port A bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC7_R = crate::BitReader<bool>;
+pub type PAIRC7_R = crate::BitReader;
 #[doc = "Field `PAIRC7` writer - Port A bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PAIRC7_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PAIRC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIRC0` reader - Port B bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC0_R = crate::BitReader<bool>;
+pub type PBIRC0_R = crate::BitReader;
 #[doc = "Field `PBIRC0` writer - Port B bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PBIRC0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIRC1` reader - Port B bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC1_R = crate::BitReader<bool>;
+pub type PBIRC1_R = crate::BitReader;
 #[doc = "Field `PBIRC1` writer - Port B bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC1_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PBIRC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIRC2` reader - Port B bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC2_R = crate::BitReader<bool>;
+pub type PBIRC2_R = crate::BitReader;
 #[doc = "Field `PBIRC2` writer - Port B bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC2_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PBIRC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIRC3` reader - Port B bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC3_R = crate::BitReader<bool>;
+pub type PBIRC3_R = crate::BitReader;
 #[doc = "Field `PBIRC3` writer - Port B bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC3_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PBIRC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIRC4` reader - Port B bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC4_R = crate::BitReader<bool>;
+pub type PBIRC4_R = crate::BitReader;
 #[doc = "Field `PBIRC4` writer - Port B bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC4_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PBIRC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIRC5` reader - Port B bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC5_R = crate::BitReader<bool>;
+pub type PBIRC5_R = crate::BitReader;
 #[doc = "Field `PBIRC5` writer - Port B bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC5_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PBIRC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIRC6` reader - Port B bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC6_R = crate::BitReader<bool>;
+pub type PBIRC6_R = crate::BitReader;
 #[doc = "Field `PBIRC6` writer - Port B bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC6_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PBIRC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIRC7` reader - Port B bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC7_R = crate::BitReader<bool>;
+pub type PBIRC7_R = crate::BitReader;
 #[doc = "Field `PBIRC7` writer - Port B bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PBIRC7_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PBIRC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIRC0` reader - Port C bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC0_R = crate::BitReader<bool>;
+pub type PCIRC0_R = crate::BitReader;
 #[doc = "Field `PCIRC0` writer - Port C bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PCIRC0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIRC1` reader - Port C bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC1_R = crate::BitReader<bool>;
+pub type PCIRC1_R = crate::BitReader;
 #[doc = "Field `PCIRC1` writer - Port C bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC1_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PCIRC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIRC2` reader - Port C bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC2_R = crate::BitReader<bool>;
+pub type PCIRC2_R = crate::BitReader;
 #[doc = "Field `PCIRC2` writer - Port C bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC2_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PCIRC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIRC3` reader - Port C bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC3_R = crate::BitReader<bool>;
+pub type PCIRC3_R = crate::BitReader;
 #[doc = "Field `PCIRC3` writer - Port C bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC3_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PCIRC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIRC4` reader - Port C bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC4_R = crate::BitReader<bool>;
+pub type PCIRC4_R = crate::BitReader;
 #[doc = "Field `PCIRC4` writer - Port C bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC4_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PCIRC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIRC5` reader - Port C bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC5_R = crate::BitReader<bool>;
+pub type PCIRC5_R = crate::BitReader;
 #[doc = "Field `PCIRC5` writer - Port C bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC5_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PCIRC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIRC6` reader - Port C bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC6_R = crate::BitReader<bool>;
+pub type PCIRC6_R = crate::BitReader;
 #[doc = "Field `PCIRC6` writer - Port C bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC6_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PCIRC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIRC7` reader - Port C bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC7_R = crate::BitReader<bool>;
+pub type PCIRC7_R = crate::BitReader;
 #[doc = "Field `PCIRC7` writer - Port C bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PCIRC7_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PCIRC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIRC0` reader - Port D bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC0_R = crate::BitReader<bool>;
+pub type PDIRC0_R = crate::BitReader;
 #[doc = "Field `PDIRC0` writer - Port D bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PDIRC0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIRC1` reader - Port D bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC1_R = crate::BitReader<bool>;
+pub type PDIRC1_R = crate::BitReader;
 #[doc = "Field `PDIRC1` writer - Port D bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC1_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PDIRC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIRC2` reader - Port D bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC2_R = crate::BitReader<bool>;
+pub type PDIRC2_R = crate::BitReader;
 #[doc = "Field `PDIRC2` writer - Port D bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC2_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PDIRC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIRC3` reader - Port D bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC3_R = crate::BitReader<bool>;
+pub type PDIRC3_R = crate::BitReader;
 #[doc = "Field `PDIRC3` writer - Port D bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC3_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PDIRC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIRC4` reader - Port D bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC4_R = crate::BitReader<bool>;
+pub type PDIRC4_R = crate::BitReader;
 #[doc = "Field `PDIRC4` writer - Port D bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC4_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PDIRC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIRC5` reader - Port D bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC5_R = crate::BitReader<bool>;
+pub type PDIRC5_R = crate::BitReader;
 #[doc = "Field `PDIRC5` writer - Port D bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC5_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PDIRC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIRC6` reader - Port D bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC6_R = crate::BitReader<bool>;
+pub type PDIRC6_R = crate::BitReader;
 #[doc = "Field `PDIRC6` writer - Port D bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC6_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PDIRC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIRC7` reader - Port D bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC7_R = crate::BitReader<bool>;
+pub type PDIRC7_R = crate::BitReader;
 #[doc = "Field `PDIRC7` writer - Port D bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
-pub type PDIRC7_W<'a, const O: u8> = crate::BitWriter<'a, u32, P_EDGE_CTRL_SPEC, bool, O>;
+pub type PDIRC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Port A bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
@@ -328,214 +296,211 @@ impl W {
     #[doc = "Bit 0 - Port A bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pairc0(&mut self) -> PAIRC0_W<0> {
+    pub fn pairc0(&mut self) -> PAIRC0_W<P_EDGE_CTRL_SPEC, 0> {
         PAIRC0_W::new(self)
     }
     #[doc = "Bit 1 - Port A bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pairc1(&mut self) -> PAIRC1_W<1> {
+    pub fn pairc1(&mut self) -> PAIRC1_W<P_EDGE_CTRL_SPEC, 1> {
         PAIRC1_W::new(self)
     }
     #[doc = "Bit 2 - Port A bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pairc2(&mut self) -> PAIRC2_W<2> {
+    pub fn pairc2(&mut self) -> PAIRC2_W<P_EDGE_CTRL_SPEC, 2> {
         PAIRC2_W::new(self)
     }
     #[doc = "Bit 3 - Port A bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pairc3(&mut self) -> PAIRC3_W<3> {
+    pub fn pairc3(&mut self) -> PAIRC3_W<P_EDGE_CTRL_SPEC, 3> {
         PAIRC3_W::new(self)
     }
     #[doc = "Bit 4 - Port A bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pairc4(&mut self) -> PAIRC4_W<4> {
+    pub fn pairc4(&mut self) -> PAIRC4_W<P_EDGE_CTRL_SPEC, 4> {
         PAIRC4_W::new(self)
     }
     #[doc = "Bit 5 - Port A bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pairc5(&mut self) -> PAIRC5_W<5> {
+    pub fn pairc5(&mut self) -> PAIRC5_W<P_EDGE_CTRL_SPEC, 5> {
         PAIRC5_W::new(self)
     }
     #[doc = "Bit 6 - Port A bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pairc6(&mut self) -> PAIRC6_W<6> {
+    pub fn pairc6(&mut self) -> PAIRC6_W<P_EDGE_CTRL_SPEC, 6> {
         PAIRC6_W::new(self)
     }
     #[doc = "Bit 7 - Port A bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pairc7(&mut self) -> PAIRC7_W<7> {
+    pub fn pairc7(&mut self) -> PAIRC7_W<P_EDGE_CTRL_SPEC, 7> {
         PAIRC7_W::new(self)
     }
     #[doc = "Bit 8 - Port B bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pbirc0(&mut self) -> PBIRC0_W<8> {
+    pub fn pbirc0(&mut self) -> PBIRC0_W<P_EDGE_CTRL_SPEC, 8> {
         PBIRC0_W::new(self)
     }
     #[doc = "Bit 9 - Port B bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pbirc1(&mut self) -> PBIRC1_W<9> {
+    pub fn pbirc1(&mut self) -> PBIRC1_W<P_EDGE_CTRL_SPEC, 9> {
         PBIRC1_W::new(self)
     }
     #[doc = "Bit 10 - Port B bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pbirc2(&mut self) -> PBIRC2_W<10> {
+    pub fn pbirc2(&mut self) -> PBIRC2_W<P_EDGE_CTRL_SPEC, 10> {
         PBIRC2_W::new(self)
     }
     #[doc = "Bit 11 - Port B bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pbirc3(&mut self) -> PBIRC3_W<11> {
+    pub fn pbirc3(&mut self) -> PBIRC3_W<P_EDGE_CTRL_SPEC, 11> {
         PBIRC3_W::new(self)
     }
     #[doc = "Bit 12 - Port B bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pbirc4(&mut self) -> PBIRC4_W<12> {
+    pub fn pbirc4(&mut self) -> PBIRC4_W<P_EDGE_CTRL_SPEC, 12> {
         PBIRC4_W::new(self)
     }
     #[doc = "Bit 13 - Port B bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pbirc5(&mut self) -> PBIRC5_W<13> {
+    pub fn pbirc5(&mut self) -> PBIRC5_W<P_EDGE_CTRL_SPEC, 13> {
         PBIRC5_W::new(self)
     }
     #[doc = "Bit 14 - Port B bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pbirc6(&mut self) -> PBIRC6_W<14> {
+    pub fn pbirc6(&mut self) -> PBIRC6_W<P_EDGE_CTRL_SPEC, 14> {
         PBIRC6_W::new(self)
     }
     #[doc = "Bit 15 - Port B bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pbirc7(&mut self) -> PBIRC7_W<15> {
+    pub fn pbirc7(&mut self) -> PBIRC7_W<P_EDGE_CTRL_SPEC, 15> {
         PBIRC7_W::new(self)
     }
     #[doc = "Bit 16 - Port C bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pcirc0(&mut self) -> PCIRC0_W<16> {
+    pub fn pcirc0(&mut self) -> PCIRC0_W<P_EDGE_CTRL_SPEC, 16> {
         PCIRC0_W::new(self)
     }
     #[doc = "Bit 17 - Port C bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pcirc1(&mut self) -> PCIRC1_W<17> {
+    pub fn pcirc1(&mut self) -> PCIRC1_W<P_EDGE_CTRL_SPEC, 17> {
         PCIRC1_W::new(self)
     }
     #[doc = "Bit 18 - Port C bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pcirc2(&mut self) -> PCIRC2_W<18> {
+    pub fn pcirc2(&mut self) -> PCIRC2_W<P_EDGE_CTRL_SPEC, 18> {
         PCIRC2_W::new(self)
     }
     #[doc = "Bit 19 - Port C bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pcirc3(&mut self) -> PCIRC3_W<19> {
+    pub fn pcirc3(&mut self) -> PCIRC3_W<P_EDGE_CTRL_SPEC, 19> {
         PCIRC3_W::new(self)
     }
     #[doc = "Bit 20 - Port C bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pcirc4(&mut self) -> PCIRC4_W<20> {
+    pub fn pcirc4(&mut self) -> PCIRC4_W<P_EDGE_CTRL_SPEC, 20> {
         PCIRC4_W::new(self)
     }
     #[doc = "Bit 21 - Port C bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pcirc5(&mut self) -> PCIRC5_W<21> {
+    pub fn pcirc5(&mut self) -> PCIRC5_W<P_EDGE_CTRL_SPEC, 21> {
         PCIRC5_W::new(self)
     }
     #[doc = "Bit 22 - Port C bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pcirc6(&mut self) -> PCIRC6_W<22> {
+    pub fn pcirc6(&mut self) -> PCIRC6_W<P_EDGE_CTRL_SPEC, 22> {
         PCIRC6_W::new(self)
     }
     #[doc = "Bit 23 - Port C bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pcirc7(&mut self) -> PCIRC7_W<23> {
+    pub fn pcirc7(&mut self) -> PCIRC7_W<P_EDGE_CTRL_SPEC, 23> {
         PCIRC7_W::new(self)
     }
     #[doc = "Bit 24 - Port D bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pdirc0(&mut self) -> PDIRC0_W<24> {
+    pub fn pdirc0(&mut self) -> PDIRC0_W<P_EDGE_CTRL_SPEC, 24> {
         PDIRC0_W::new(self)
     }
     #[doc = "Bit 25 - Port D bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pdirc1(&mut self) -> PDIRC1_W<25> {
+    pub fn pdirc1(&mut self) -> PDIRC1_W<P_EDGE_CTRL_SPEC, 25> {
         PDIRC1_W::new(self)
     }
     #[doc = "Bit 26 - Port D bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pdirc2(&mut self) -> PDIRC2_W<26> {
+    pub fn pdirc2(&mut self) -> PDIRC2_W<P_EDGE_CTRL_SPEC, 26> {
         PDIRC2_W::new(self)
     }
     #[doc = "Bit 27 - Port D bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pdirc3(&mut self) -> PDIRC3_W<27> {
+    pub fn pdirc3(&mut self) -> PDIRC3_W<P_EDGE_CTRL_SPEC, 27> {
         PDIRC3_W::new(self)
     }
     #[doc = "Bit 28 - Port D bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pdirc4(&mut self) -> PDIRC4_W<28> {
+    pub fn pdirc4(&mut self) -> PDIRC4_W<P_EDGE_CTRL_SPEC, 28> {
         PDIRC4_W::new(self)
     }
     #[doc = "Bit 29 - Port D bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pdirc5(&mut self) -> PDIRC5_W<29> {
+    pub fn pdirc5(&mut self) -> PDIRC5_W<P_EDGE_CTRL_SPEC, 29> {
         PDIRC5_W::new(self)
     }
     #[doc = "Bit 30 - Port D bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pdirc6(&mut self) -> PDIRC6_W<30> {
+    pub fn pdirc6(&mut self) -> PDIRC6_W<P_EDGE_CTRL_SPEC, 30> {
         PDIRC6_W::new(self)
     }
     #[doc = "Bit 31 - Port D bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn pdirc7(&mut self) -> PDIRC7_W<31> {
+    pub fn pdirc7(&mut self) -> PDIRC7_W<P_EDGE_CTRL_SPEC, 31> {
         PDIRC7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "The port edge control register is used to control which edge of each port input causes that port to generate a power-up interrupt to the system.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [p_edge_ctrl](index.html) module"]
+#[doc = "The port edge control register is used to control which edge of each port input causes that port to generate a power-up interrupt to the system.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`p_edge_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`p_edge_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct P_EDGE_CTRL_SPEC;
 impl crate::RegisterSpec for P_EDGE_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [p_edge_ctrl::R](R) reader structure"]
-impl crate::Readable for P_EDGE_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [p_edge_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`p_edge_ctrl::R`](R) reader structure"]
+impl crate::Readable for P_EDGE_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`p_edge_ctrl::W`](W) writer structure"]
 impl crate::Writable for P_EDGE_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

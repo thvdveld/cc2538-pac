@@ -1,51 +1,19 @@
 #[doc = "Register `TXCTRL` reader"]
-pub struct R(crate::R<TXCTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TXCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TXCTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TXCTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TXCTRL_SPEC>;
 #[doc = "Register `TXCTRL` writer"]
-pub struct W(crate::W<TXCTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TXCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TXCTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TXCTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TXCTRL_SPEC>;
 #[doc = "Field `TXMIX_CURRENT` reader - Transmit mixers core current Current increases with increasing setting."]
-pub type TXMIX_CURRENT_R = crate::FieldReader<u8, u8>;
+pub type TXMIX_CURRENT_R = crate::FieldReader;
 #[doc = "Field `TXMIX_CURRENT` writer - Transmit mixers core current Current increases with increasing setting."]
-pub type TXMIX_CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXCTRL_SPEC, u8, u8, 2, O>;
+pub type TXMIX_CURRENT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `DAC_DC` reader - Adjusts the DC level to the TX mixer."]
-pub type DAC_DC_R = crate::FieldReader<u8, u8>;
+pub type DAC_DC_R = crate::FieldReader;
 #[doc = "Field `DAC_DC` writer - Adjusts the DC level to the TX mixer."]
-pub type DAC_DC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXCTRL_SPEC, u8, u8, 2, O>;
+pub type DAC_DC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `DAC_CURR` reader - Change the current in the DAC."]
-pub type DAC_CURR_R = crate::FieldReader<u8, u8>;
+pub type DAC_CURR_R = crate::FieldReader;
 #[doc = "Field `DAC_CURR` writer - Change the current in the DAC."]
-pub type DAC_CURR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXCTRL_SPEC, u8, u8, 3, O>;
+pub type DAC_CURR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 impl R {
     #[doc = "Bits 0:1 - Transmit mixers core current Current increases with increasing setting."]
     #[inline(always)]
@@ -67,40 +35,37 @@ impl W {
     #[doc = "Bits 0:1 - Transmit mixers core current Current increases with increasing setting."]
     #[inline(always)]
     #[must_use]
-    pub fn txmix_current(&mut self) -> TXMIX_CURRENT_W<0> {
+    pub fn txmix_current(&mut self) -> TXMIX_CURRENT_W<TXCTRL_SPEC, 0> {
         TXMIX_CURRENT_W::new(self)
     }
     #[doc = "Bits 2:3 - Adjusts the DC level to the TX mixer."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_dc(&mut self) -> DAC_DC_W<2> {
+    pub fn dac_dc(&mut self) -> DAC_DC_W<TXCTRL_SPEC, 2> {
         DAC_DC_W::new(self)
     }
     #[doc = "Bits 4:6 - Change the current in the DAC."]
     #[inline(always)]
     #[must_use]
-    pub fn dac_curr(&mut self) -> DAC_CURR_W<4> {
+    pub fn dac_curr(&mut self) -> DAC_CURR_W<TXCTRL_SPEC, 4> {
         DAC_CURR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Controls the TX settings\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [txctrl](index.html) module"]
+#[doc = "Controls the TX settings\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TXCTRL_SPEC;
 impl crate::RegisterSpec for TXCTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [txctrl::R](R) reader structure"]
-impl crate::Readable for TXCTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [txctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`txctrl::R`](R) reader structure"]
+impl crate::Readable for TXCTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`txctrl::W`](W) writer structure"]
 impl crate::Writable for TXCTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

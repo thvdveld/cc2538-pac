@@ -1,28 +1,15 @@
 #[doc = "Register `OIF` reader"]
-pub struct R(crate::R<OIF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OIF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OIF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OIF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OIF_SPEC>;
 #[doc = "Field `OUTEP1IF` reader - Interrupt flag for OUT endpoint 1 Cleared by hardware when read"]
-pub type OUTEP1IF_R = crate::BitReader<bool>;
+pub type OUTEP1IF_R = crate::BitReader;
 #[doc = "Field `OUTEP2IF` reader - Interrupt flag for OUT endpoint 2 Cleared by hardware when read"]
-pub type OUTEP2IF_R = crate::BitReader<bool>;
+pub type OUTEP2IF_R = crate::BitReader;
 #[doc = "Field `OUTEP3IF` reader - Interrupt flag for OUT endpoint 3 Cleared by hardware when read"]
-pub type OUTEP3IF_R = crate::BitReader<bool>;
+pub type OUTEP3IF_R = crate::BitReader;
 #[doc = "Field `OUTEP4IF` reader - Interrupt flag for OUT endpoint 4 Cleared by hardware when read"]
-pub type OUTEP4IF_R = crate::BitReader<bool>;
+pub type OUTEP4IF_R = crate::BitReader;
 #[doc = "Field `OUTEP5IF` reader - Interrupt flag for OUT endpoint 5 Cleared by hardware when read"]
-pub type OUTEP5IF_R = crate::BitReader<bool>;
+pub type OUTEP5IF_R = crate::BitReader;
 impl R {
     #[doc = "Bit 1 - Interrupt flag for OUT endpoint 1 Cleared by hardware when read"]
     #[inline(always)]
@@ -50,15 +37,13 @@ impl R {
         OUTEP5IF_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
-#[doc = "Interrupt flags for OUT endpoints 1-5\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [oif](index.html) module"]
+#[doc = "Interrupt flags for OUT endpoints 1-5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`oif::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OIF_SPEC;
 impl crate::RegisterSpec for OIF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [oif::R](R) reader structure"]
-impl crate::Readable for OIF_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`oif::R`](R) reader structure"]
+impl crate::Readable for OIF_SPEC {}
 #[doc = "`reset()` method sets OIF to value 0"]
 impl crate::Resettable for OIF_SPEC {
     const RESET_VALUE: Self::Ux = 0;

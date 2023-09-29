@@ -1,55 +1,23 @@
 #[doc = "Register `ADCCON1` reader"]
-pub struct R(crate::R<ADCCON1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ADCCON1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ADCCON1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ADCCON1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ADCCON1_SPEC>;
 #[doc = "Register `ADCCON1` writer"]
-pub struct W(crate::W<ADCCON1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ADCCON1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ADCCON1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ADCCON1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ADCCON1_SPEC>;
 #[doc = "Field `RCTRL` reader - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
-pub type RCTRL_R = crate::FieldReader<u8, u8>;
+pub type RCTRL_R = crate::FieldReader;
 #[doc = "Field `RCTRL` writer - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
-pub type RCTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCCON1_SPEC, u8, u8, 2, O>;
+pub type RCTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `STSEL` reader - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
-pub type STSEL_R = crate::FieldReader<u8, u8>;
+pub type STSEL_R = crate::FieldReader;
 #[doc = "Field `STSEL` writer - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
-pub type STSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADCCON1_SPEC, u8, u8, 2, O>;
+pub type STSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `ST` reader - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
-pub type ST_R = crate::BitReader<bool>;
+pub type ST_R = crate::BitReader;
 #[doc = "Field `ST` writer - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
-pub type ST_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCCON1_SPEC, bool, O>;
+pub type ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EOC` reader - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
-pub type EOC_R = crate::BitReader<bool>;
+pub type EOC_R = crate::BitReader;
 #[doc = "Field `EOC` writer - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
-pub type EOC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADCCON1_SPEC, bool, O>;
+pub type EOC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
     #[inline(always)]
@@ -76,46 +44,43 @@ impl W {
     #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
     #[inline(always)]
     #[must_use]
-    pub fn rctrl(&mut self) -> RCTRL_W<2> {
+    pub fn rctrl(&mut self) -> RCTRL_W<ADCCON1_SPEC, 2> {
         RCTRL_W::new(self)
     }
     #[doc = "Bits 4:5 - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn stsel(&mut self) -> STSEL_W<4> {
+    pub fn stsel(&mut self) -> STSEL_W<ADCCON1_SPEC, 4> {
         STSEL_W::new(self)
     }
     #[doc = "Bit 6 - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
     #[inline(always)]
     #[must_use]
-    pub fn st(&mut self) -> ST_W<6> {
+    pub fn st(&mut self) -> ST_W<ADCCON1_SPEC, 6> {
         ST_W::new(self)
     }
     #[doc = "Bit 7 - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
     #[inline(always)]
     #[must_use]
-    pub fn eoc(&mut self) -> EOC_W<7> {
+    pub fn eoc(&mut self) -> EOC_W<ADCCON1_SPEC, 7> {
         EOC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "This register controls the ADC.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [adccon1](index.html) module"]
+#[doc = "This register controls the ADC.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`adccon1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`adccon1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ADCCON1_SPEC;
 impl crate::RegisterSpec for ADCCON1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [adccon1::R](R) reader structure"]
-impl crate::Readable for ADCCON1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [adccon1::W](W) writer structure"]
+#[doc = "`read()` method returns [`adccon1::R`](R) reader structure"]
+impl crate::Readable for ADCCON1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`adccon1::W`](W) writer structure"]
 impl crate::Writable for ADCCON1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

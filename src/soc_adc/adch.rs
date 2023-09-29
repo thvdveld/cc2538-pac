@@ -1,20 +1,7 @@
 #[doc = "Register `ADCH` reader"]
-pub struct R(crate::R<ADCH_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ADCH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ADCH_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ADCH_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ADCH_SPEC>;
 #[doc = "Field `ADC` reader - Most-significant part of ADC conversion result"]
-pub type ADC_R = crate::FieldReader<u8, u8>;
+pub type ADC_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Most-significant part of ADC conversion result"]
     #[inline(always)]
@@ -22,15 +9,13 @@ impl R {
         ADC_R::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "This register contains the most-significant part of ADC conversion result.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [adch](index.html) module"]
+#[doc = "This register contains the most-significant part of ADC conversion result.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`adch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ADCH_SPEC;
 impl crate::RegisterSpec for ADCH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [adch::R](R) reader structure"]
-impl crate::Readable for ADCH_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`adch::R`](R) reader structure"]
+impl crate::Readable for ADCH_SPEC {}
 #[doc = "`reset()` method sets ADCH to value 0"]
 impl crate::Resettable for ADCH_SPEC {
     const RESET_VALUE: Self::Ux = 0;

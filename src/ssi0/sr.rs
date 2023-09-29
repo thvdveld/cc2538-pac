@@ -1,28 +1,15 @@
 #[doc = "Register `SR` reader"]
-pub struct R(crate::R<SR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SR_SPEC>;
 #[doc = "Field `TFE` reader - SSI transmit FIFO empty (RO) Reset value: 0x1 0: Transmit FIFO is not empty. 1: Transmit FIFO is empty."]
-pub type TFE_R = crate::BitReader<bool>;
+pub type TFE_R = crate::BitReader;
 #[doc = "Field `TNF` reader - SSI transmit FIFO not full (RO) Reset value: 0x1 0: Transmit FIFO is full. 1: Transmit FIFO is not full."]
-pub type TNF_R = crate::BitReader<bool>;
+pub type TNF_R = crate::BitReader;
 #[doc = "Field `RNE` reader - SSI receive FIFO not empty (RO) Reset value: 0x0 0: Receive FIFO is empty. 1: Receive FIFO is not empty."]
-pub type RNE_R = crate::BitReader<bool>;
+pub type RNE_R = crate::BitReader;
 #[doc = "Field `RFF` reader - SSI receive FIFO full (RO) Reset value: 0x0 0: Receive FIFO is not full. 1: Receive FIFO is full."]
-pub type RFF_R = crate::BitReader<bool>;
+pub type RFF_R = crate::BitReader;
 #[doc = "Field `BSY` reader - SSI busy bit (RO) Reset value: 0x0 0: SSI is idle. 1: SSI is currently transmitting and/or receiving a frame or the transmit FIFO is not empty."]
-pub type BSY_R = crate::BitReader<bool>;
+pub type BSY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - SSI transmit FIFO empty (RO) Reset value: 0x1 0: Transmit FIFO is not empty. 1: Transmit FIFO is empty."]
     #[inline(always)]
@@ -50,15 +37,13 @@ impl R {
         BSY_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
-#[doc = "The SR register contains bits that indicate the FIFO fill status and the SSI busy status.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sr](index.html) module"]
+#[doc = "The SR register contains bits that indicate the FIFO fill status and the SSI busy status.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SR_SPEC;
 impl crate::RegisterSpec for SR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sr::R](R) reader structure"]
-impl crate::Readable for SR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sr::R`](R) reader structure"]
+impl crate::Readable for SR_SPEC {}
 #[doc = "`reset()` method sets SR to value 0"]
 impl crate::Resettable for SR_SPEC {
     const RESET_VALUE: Self::Ux = 0;

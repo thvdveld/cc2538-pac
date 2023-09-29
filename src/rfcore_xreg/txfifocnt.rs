@@ -1,20 +1,7 @@
 #[doc = "Register `TXFIFOCNT` reader"]
-pub struct R(crate::R<TXFIFOCNT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TXFIFOCNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TXFIFOCNT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TXFIFOCNT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TXFIFOCNT_SPEC>;
 #[doc = "Field `TXFIFOCNT` reader - Number of bytes in the TX FIFO (unsigned integer)"]
-pub type TXFIFOCNT_R = crate::FieldReader<u8, u8>;
+pub type TXFIFOCNT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Number of bytes in the TX FIFO (unsigned integer)"]
     #[inline(always)]
@@ -22,15 +9,13 @@ impl R {
         TXFIFOCNT_R::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "Number of bytes in TX FIFO\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [txfifocnt](index.html) module"]
+#[doc = "Number of bytes in TX FIFO\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txfifocnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TXFIFOCNT_SPEC;
 impl crate::RegisterSpec for TXFIFOCNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [txfifocnt::R](R) reader structure"]
-impl crate::Readable for TXFIFOCNT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`txfifocnt::R`](R) reader structure"]
+impl crate::Readable for TXFIFOCNT_SPEC {}
 #[doc = "`reset()` method sets TXFIFOCNT to value 0"]
 impl crate::Resettable for TXFIFOCNT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

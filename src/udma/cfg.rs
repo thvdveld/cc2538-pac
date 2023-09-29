@@ -1,48 +1,28 @@
 #[doc = "Register `CFG` writer"]
-pub struct W(crate::W<CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CFG_SPEC>;
 #[doc = "Field `MASTEN` writer - Controller master enable 0: Disables the uDMA controller. 1: Enables the uDMA controller."]
-pub type MASTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_SPEC, bool, O>;
+pub type MASTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl W {
     #[doc = "Bit 0 - Controller master enable 0: Disables the uDMA controller. 1: Enables the uDMA controller."]
     #[inline(always)]
     #[must_use]
-    pub fn masten(&mut self) -> MASTEN_W<0> {
+    pub fn masten(&mut self) -> MASTEN_W<CFG_SPEC, 0> {
         MASTEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "DMA configuration The CFG register controls the configuration of the uDMA controller.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA configuration The CFG register controls the configuration of the uDMA controller.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG_SPEC;
 impl crate::RegisterSpec for CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [cfg::W](W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
 impl crate::Writable for CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

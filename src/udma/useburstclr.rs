@@ -1,29 +1,10 @@
 #[doc = "Register `USEBURSTCLR` writer"]
-pub struct W(crate::W<USEBURSTCLR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<USEBURSTCLR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<USEBURSTCLR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<USEBURSTCLR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<USEBURSTCLR_SPEC>;
 #[doc = "Field `CLR` writer - Channel \\[n\\]
 useburst clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\]
 bit in the DMAUSEBURSTSET register meaning that uDMA channel \\[n\\]
 responds to single and burst requests."]
-pub type CLR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USEBURSTCLR_SPEC, u32, u32, 32, O>;
+pub type CLR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
 impl W {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 useburst clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\]
@@ -31,25 +12,24 @@ bit in the DMAUSEBURSTSET register meaning that uDMA channel \\[n\\]
 responds to single and burst requests."]
     #[inline(always)]
     #[must_use]
-    pub fn clr(&mut self) -> CLR_W<0> {
+    pub fn clr(&mut self) -> CLR_W<USEBURSTCLR_SPEC, 0> {
         CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "DMA channel useburst clear Each bit of the USEBURSTCLR register represents the corresponding uDMA channel. Setting a bit clears the corresponding SET\\[n\\]
-bit in the USEBURSTSET register.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [useburstclr](index.html) module"]
+bit in the USEBURSTSET register.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`useburstclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct USEBURSTCLR_SPEC;
 impl crate::RegisterSpec for USEBURSTCLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [useburstclr::W](W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [`useburstclr::W`](W) writer structure"]
 impl crate::Writable for USEBURSTCLR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,43 +1,11 @@
 #[doc = "Register `PMCTL` reader"]
-pub struct R(crate::R<PMCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PMCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PMCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PMCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PMCTL_SPEC>;
 #[doc = "Register `PMCTL` writer"]
-pub struct W(crate::W<PMCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PMCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PMCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PMCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PMCTL_SPEC>;
 #[doc = "Field `PM` reader - 00: No action 01: PM1 10: PM2 11: PM3"]
-pub type PM_R = crate::FieldReader<u8, u8>;
+pub type PM_R = crate::FieldReader;
 #[doc = "Field `PM` writer - 00: No action 01: PM1 10: PM2 11: PM3"]
-pub type PM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PMCTL_SPEC, u8, u8, 2, O>;
+pub type PM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - 00: No action 01: PM1 10: PM2 11: PM3"]
     #[inline(always)]
@@ -49,28 +17,25 @@ impl W {
     #[doc = "Bits 0:1 - 00: No action 01: PM1 10: PM2 11: PM3"]
     #[inline(always)]
     #[must_use]
-    pub fn pm(&mut self) -> PM_W<0> {
+    pub fn pm(&mut self) -> PM_W<PMCTL_SPEC, 0> {
         PM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "This register controls the power mode. Note: The Corresponding PM is not entered before the WFI instruction is asserted. To enter PM1-3 the DEEPSLEEP bit in SYSCTRL must be 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pmctl](index.html) module"]
+#[doc = "This register controls the power mode. Note: The Corresponding PM is not entered before the WFI instruction is asserted. To enter PM1-3 the DEEPSLEEP bit in SYSCTRL must be 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pmctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pmctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PMCTL_SPEC;
 impl crate::RegisterSpec for PMCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pmctl::R](R) reader structure"]
-impl crate::Readable for PMCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pmctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`pmctl::R`](R) reader structure"]
+impl crate::Readable for PMCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pmctl::W`](W) writer structure"]
 impl crate::Writable for PMCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,43 +1,11 @@
 #[doc = "Register `IS` reader"]
-pub struct R(crate::R<IS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IS_SPEC>;
 #[doc = "Register `IS` writer"]
-pub struct W(crate::W<IS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IS_SPEC>;
 #[doc = "Field `IS` reader - Bits set: Level on corresponding pin is detected Bits cleared: Edge on corresponding pin is detected"]
-pub type IS_R = crate::FieldReader<u8, u8>;
+pub type IS_R = crate::FieldReader;
 #[doc = "Field `IS` writer - Bits set: Level on corresponding pin is detected Bits cleared: Edge on corresponding pin is detected"]
-pub type IS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IS_SPEC, u8, u8, 8, O>;
+pub type IS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Bits set: Level on corresponding pin is detected Bits cleared: Edge on corresponding pin is detected"]
     #[inline(always)]
@@ -49,28 +17,25 @@ impl W {
     #[doc = "Bits 0:7 - Bits set: Level on corresponding pin is detected Bits cleared: Edge on corresponding pin is detected"]
     #[inline(always)]
     #[must_use]
-    pub fn is(&mut self) -> IS_W<0> {
+    pub fn is(&mut self) -> IS_W<IS_SPEC, 0> {
         IS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "The IS register is the interrupt sense register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [is](index.html) module"]
+#[doc = "The IS register is the interrupt sense register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`is::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`is::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IS_SPEC;
 impl crate::RegisterSpec for IS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [is::R](R) reader structure"]
-impl crate::Readable for IS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [is::W](W) writer structure"]
+#[doc = "`read()` method returns [`is::R`](R) reader structure"]
+impl crate::Readable for IS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`is::W`](W) writer structure"]
 impl crate::Writable for IS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

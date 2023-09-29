@@ -1,43 +1,11 @@
 #[doc = "Register `MAXO` reader"]
-pub struct R(crate::R<MAXO_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MAXO_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MAXO_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MAXO_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MAXO_SPEC>;
 #[doc = "Register `MAXO` writer"]
-pub struct W(crate::W<MAXO_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MAXO_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MAXO_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MAXO_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MAXO_SPEC>;
 #[doc = "Field `USBMAXO` reader - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
-pub type USBMAXO_R = crate::FieldReader<u8, u8>;
+pub type USBMAXO_R = crate::FieldReader;
 #[doc = "Field `USBMAXO` writer - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
-pub type USBMAXO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MAXO_SPEC, u8, u8, 8, O>;
+pub type USBMAXO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
     #[inline(always)]
@@ -49,28 +17,25 @@ impl W {
     #[doc = "Bits 0:7 - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
     #[inline(always)]
     #[must_use]
-    pub fn usbmaxo(&mut self) -> USBMAXO_W<0> {
+    pub fn usbmaxo(&mut self) -> USBMAXO_W<MAXO_SPEC, 0> {
         USBMAXO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Indexed register: For USB_INDEX = 1-5: Maximum packet size for OUT endpoint {1-5}\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [maxo](index.html) module"]
+#[doc = "Indexed register: For USB_INDEX = 1-5: Maximum packet size for OUT endpoint {1-5}\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`maxo::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`maxo::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MAXO_SPEC;
 impl crate::RegisterSpec for MAXO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [maxo::R](R) reader structure"]
-impl crate::Readable for MAXO_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [maxo::W](W) writer structure"]
+#[doc = "`read()` method returns [`maxo::R`](R) reader structure"]
+impl crate::Readable for MAXO_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`maxo::W`](W) writer structure"]
 impl crate::Writable for MAXO_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

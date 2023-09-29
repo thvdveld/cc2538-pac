@@ -1,43 +1,11 @@
 #[doc = "Register `TAPMR` reader"]
-pub struct R(crate::R<TAPMR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TAPMR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TAPMR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TAPMR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TAPMR_SPEC>;
 #[doc = "Register `TAPMR` writer"]
-pub struct W(crate::W<TAPMR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TAPMR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TAPMR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TAPMR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TAPMR_SPEC>;
 #[doc = "Field `TAPSR` reader - GPTM Timer A prescale match"]
-pub type TAPSR_R = crate::FieldReader<u8, u8>;
+pub type TAPSR_R = crate::FieldReader;
 #[doc = "Field `TAPSR` writer - GPTM Timer A prescale match"]
-pub type TAPSR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TAPMR_SPEC, u8, u8, 8, O>;
+pub type TAPSR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - GPTM Timer A prescale match"]
     #[inline(always)]
@@ -49,28 +17,25 @@ impl W {
     #[doc = "Bits 0:7 - GPTM Timer A prescale match"]
     #[inline(always)]
     #[must_use]
-    pub fn tapsr(&mut self) -> TAPSR_W<0> {
+    pub fn tapsr(&mut self) -> TAPSR_W<TAPMR_SPEC, 0> {
         TAPSR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "GPTM Timer A prescale match This register effectively extends the range of TAMATCHR to 24 bits when operating in 16-bit, one-shot or periodic mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tapmr](index.html) module"]
+#[doc = "GPTM Timer A prescale match This register effectively extends the range of TAMATCHR to 24 bits when operating in 16-bit, one-shot or periodic mode.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tapmr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tapmr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TAPMR_SPEC;
 impl crate::RegisterSpec for TAPMR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tapmr::R](R) reader structure"]
-impl crate::Readable for TAPMR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tapmr::W](W) writer structure"]
+#[doc = "`read()` method returns [`tapmr::R`](R) reader structure"]
+impl crate::Readable for TAPMR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tapmr::W`](W) writer structure"]
 impl crate::Writable for TAPMR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,44 +1,11 @@
 #[doc = "Register `DMAC_CH1_DMALENGTH` reader"]
-pub struct R(crate::R<DMAC_CH1_DMALENGTH_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMAC_CH1_DMALENGTH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMAC_CH1_DMALENGTH_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMAC_CH1_DMALENGTH_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMAC_CH1_DMALENGTH_SPEC>;
 #[doc = "Register `DMAC_CH1_DMALENGTH` writer"]
-pub struct W(crate::W<DMAC_CH1_DMALENGTH_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMAC_CH1_DMALENGTH_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMAC_CH1_DMALENGTH_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMAC_CH1_DMALENGTH_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DMAC_CH1_DMALENGTH_SPEC>;
 #[doc = "Field `DMALEN` reader - Channel DMA length in bytes. During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
-pub type DMALEN_R = crate::FieldReader<u16, u16>;
+pub type DMALEN_R = crate::FieldReader<u16>;
 #[doc = "Field `DMALEN` writer - Channel DMA length in bytes. During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
-pub type DMALEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMAC_CH1_DMALENGTH_SPEC, u16, u16, 16, O>;
+pub type DMALEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Channel DMA length in bytes. During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
     #[inline(always)]
@@ -50,28 +17,25 @@ impl W {
     #[doc = "Bits 0:15 - Channel DMA length in bytes. During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
     #[inline(always)]
     #[must_use]
-    pub fn dmalen(&mut self) -> DMALEN_W<0> {
+    pub fn dmalen(&mut self) -> DMALEN_W<DMAC_CH1_DMALENGTH_SPEC, 0> {
         DMALEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Channel DMA length\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmac_ch1_dmalength](index.html) module"]
+#[doc = "Channel DMA length\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmac_ch1_dmalength::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmac_ch1_dmalength::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMAC_CH1_DMALENGTH_SPEC;
 impl crate::RegisterSpec for DMAC_CH1_DMALENGTH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dmac_ch1_dmalength::R](R) reader structure"]
-impl crate::Readable for DMAC_CH1_DMALENGTH_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dmac_ch1_dmalength::W](W) writer structure"]
+#[doc = "`read()` method returns [`dmac_ch1_dmalength::R`](R) reader structure"]
+impl crate::Readable for DMAC_CH1_DMALENGTH_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dmac_ch1_dmalength::W`](W) writer structure"]
 impl crate::Writable for DMAC_CH1_DMALENGTH_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

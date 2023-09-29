@@ -1,55 +1,23 @@
 #[doc = "Register `IVCTRL` reader"]
-pub struct R(crate::R<IVCTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IVCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IVCTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IVCTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IVCTRL_SPEC>;
 #[doc = "Register `IVCTRL` writer"]
-pub struct W(crate::W<IVCTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IVCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IVCTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IVCTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IVCTRL_SPEC>;
 #[doc = "Field `PA_BIAS_CTRL` reader - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
-pub type PA_BIAS_CTRL_R = crate::FieldReader<u8, u8>;
+pub type PA_BIAS_CTRL_R = crate::FieldReader;
 #[doc = "Field `PA_BIAS_CTRL` writer - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
-pub type PA_BIAS_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IVCTRL_SPEC, u8, u8, 2, O>;
+pub type PA_BIAS_CTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `TXMIX_DC_CTRL` reader - Controls DC bias in TXMIX"]
-pub type TXMIX_DC_CTRL_R = crate::BitReader<bool>;
+pub type TXMIX_DC_CTRL_R = crate::BitReader;
 #[doc = "Field `TXMIX_DC_CTRL` writer - Controls DC bias in TXMIX"]
-pub type TXMIX_DC_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IVCTRL_SPEC, bool, O>;
+pub type TXMIX_DC_CTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LODIV_BIAS_CTRL` reader - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
-pub type LODIV_BIAS_CTRL_R = crate::BitReader<bool>;
+pub type LODIV_BIAS_CTRL_R = crate::BitReader;
 #[doc = "Field `LODIV_BIAS_CTRL` writer - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
-pub type LODIV_BIAS_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IVCTRL_SPEC, bool, O>;
+pub type LODIV_BIAS_CTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DAC_CURR_CTRL` reader - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
-pub type DAC_CURR_CTRL_R = crate::FieldReader<u8, u8>;
+pub type DAC_CURR_CTRL_R = crate::FieldReader;
 #[doc = "Field `DAC_CURR_CTRL` writer - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
-pub type DAC_CURR_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IVCTRL_SPEC, u8, u8, 2, O>;
+pub type DAC_CURR_CTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
     #[inline(always)]
@@ -76,46 +44,43 @@ impl W {
     #[doc = "Bits 0:1 - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
     #[inline(always)]
     #[must_use]
-    pub fn pa_bias_ctrl(&mut self) -> PA_BIAS_CTRL_W<0> {
+    pub fn pa_bias_ctrl(&mut self) -> PA_BIAS_CTRL_W<IVCTRL_SPEC, 0> {
         PA_BIAS_CTRL_W::new(self)
     }
     #[doc = "Bit 2 - Controls DC bias in TXMIX"]
     #[inline(always)]
     #[must_use]
-    pub fn txmix_dc_ctrl(&mut self) -> TXMIX_DC_CTRL_W<2> {
+    pub fn txmix_dc_ctrl(&mut self) -> TXMIX_DC_CTRL_W<IVCTRL_SPEC, 2> {
         TXMIX_DC_CTRL_W::new(self)
     }
     #[doc = "Bit 3 - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
     #[inline(always)]
     #[must_use]
-    pub fn lodiv_bias_ctrl(&mut self) -> LODIV_BIAS_CTRL_W<3> {
+    pub fn lodiv_bias_ctrl(&mut self) -> LODIV_BIAS_CTRL_W<IVCTRL_SPEC, 3> {
         LODIV_BIAS_CTRL_W::new(self)
     }
     #[doc = "Bits 4:5 - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
     #[inline(always)]
     #[must_use]
-    pub fn dac_curr_ctrl(&mut self) -> DAC_CURR_CTRL_W<4> {
+    pub fn dac_curr_ctrl(&mut self) -> DAC_CURR_CTRL_W<IVCTRL_SPEC, 4> {
         DAC_CURR_CTRL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Analog control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ivctrl](index.html) module"]
+#[doc = "Analog control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ivctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ivctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IVCTRL_SPEC;
 impl crate::RegisterSpec for IVCTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ivctrl::R](R) reader structure"]
-impl crate::Readable for IVCTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ivctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`ivctrl::R`](R) reader structure"]
+impl crate::Readable for IVCTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ivctrl::W`](W) writer structure"]
 impl crate::Writable for IVCTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

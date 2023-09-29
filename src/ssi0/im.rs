@@ -1,55 +1,23 @@
 #[doc = "Register `IM` reader"]
-pub struct R(crate::R<IM_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IM_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IM_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IM_SPEC>;
 #[doc = "Register `IM` writer"]
-pub struct W(crate::W<IM_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IM_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IM_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IM_SPEC>;
 #[doc = "Field `RORIM` reader - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
-pub type RORIM_R = crate::BitReader<bool>;
+pub type RORIM_R = crate::BitReader;
 #[doc = "Field `RORIM` writer - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
-pub type RORIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
+pub type RORIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RTIM` reader - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
-pub type RTIM_R = crate::BitReader<bool>;
+pub type RTIM_R = crate::BitReader;
 #[doc = "Field `RTIM` writer - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
-pub type RTIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
+pub type RTIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXIM` reader - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
-pub type RXIM_R = crate::BitReader<bool>;
+pub type RXIM_R = crate::BitReader;
 #[doc = "Field `RXIM` writer - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
-pub type RXIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
+pub type RXIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXIM` reader - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
-pub type TXIM_R = crate::BitReader<bool>;
+pub type TXIM_R = crate::BitReader;
 #[doc = "Field `TXIM` writer - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
-pub type TXIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IM_SPEC, bool, O>;
+pub type TXIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
     #[inline(always)]
@@ -76,46 +44,43 @@ impl W {
     #[doc = "Bit 0 - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
     #[inline(always)]
     #[must_use]
-    pub fn rorim(&mut self) -> RORIM_W<0> {
+    pub fn rorim(&mut self) -> RORIM_W<IM_SPEC, 0> {
         RORIM_W::new(self)
     }
     #[doc = "Bit 1 - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
     #[inline(always)]
     #[must_use]
-    pub fn rtim(&mut self) -> RTIM_W<1> {
+    pub fn rtim(&mut self) -> RTIM_W<IM_SPEC, 1> {
         RTIM_W::new(self)
     }
     #[doc = "Bit 2 - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
     #[inline(always)]
     #[must_use]
-    pub fn rxim(&mut self) -> RXIM_W<2> {
+    pub fn rxim(&mut self) -> RXIM_W<IM_SPEC, 2> {
         RXIM_W::new(self)
     }
     #[doc = "Bit 3 - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
     #[inline(always)]
     #[must_use]
-    pub fn txim(&mut self) -> TXIM_W<3> {
+    pub fn txim(&mut self) -> TXIM_W<IM_SPEC, 3> {
         TXIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "The IM register is the interrupt mask set or clear register. It is a read/write register and all bits are cleared on reset. On a read, this register gives the current value of the mask on the corresponding interrupt. Setting a bit sets the mask, preventing the interrupt from being signaled to the interrupt controller. Clearing a bit clears the corresponding mask, enabling the interrupt to be sent to the interrupt controller.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [im](index.html) module"]
+#[doc = "The IM register is the interrupt mask set or clear register. It is a read/write register and all bits are cleared on reset. On a read, this register gives the current value of the mask on the corresponding interrupt. Setting a bit sets the mask, preventing the interrupt from being signaled to the interrupt controller. Clearing a bit clears the corresponding mask, enabling the interrupt to be sent to the interrupt controller.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`im::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`im::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IM_SPEC;
 impl crate::RegisterSpec for IM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [im::R](R) reader structure"]
-impl crate::Readable for IM_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [im::W](W) writer structure"]
+#[doc = "`read()` method returns [`im::R`](R) reader structure"]
+impl crate::Readable for IM_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`im::W`](W) writer structure"]
 impl crate::Writable for IM_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

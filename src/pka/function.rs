@@ -1,98 +1,65 @@
 #[doc = "Register `FUNCTION` reader"]
-pub struct R(crate::R<FUNCTION_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FUNCTION_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FUNCTION_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FUNCTION_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FUNCTION_SPEC>;
 #[doc = "Register `FUNCTION` writer"]
-pub struct W(crate::W<FUNCTION_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FUNCTION_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FUNCTION_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FUNCTION_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FUNCTION_SPEC>;
 #[doc = "Field `MULTIPLY` reader - Perform multiply operation"]
-pub type MULTIPLY_R = crate::BitReader<bool>;
+pub type MULTIPLY_R = crate::BitReader;
 #[doc = "Field `MULTIPLY` writer - Perform multiply operation"]
-pub type MULTIPLY_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type MULTIPLY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADDSUB` reader - Perform combined add/subtract operation"]
-pub type ADDSUB_R = crate::BitReader<bool>;
+pub type ADDSUB_R = crate::BitReader;
 #[doc = "Field `ADDSUB` writer - Perform combined add/subtract operation"]
-pub type ADDSUB_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type ADDSUB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MS_ONE` reader - Loads the location of the Most Significant one bit within the result word indicated in the PKA_MSW register into bits \\[4:0\\]
 of the PKA_DIVMSW register - can only be used with basic PKCP operations, except for Divide, Modulo and Compare."]
-pub type MS_ONE_R = crate::BitReader<bool>;
+pub type MS_ONE_R = crate::BitReader;
 #[doc = "Field `MS_ONE` writer - Loads the location of the Most Significant one bit within the result word indicated in the PKA_MSW register into bits \\[4:0\\]
 of the PKA_DIVMSW register - can only be used with basic PKCP operations, except for Divide, Modulo and Compare."]
-pub type MS_ONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type MS_ONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADD` reader - Perform add operation"]
-pub type ADD_R = crate::BitReader<bool>;
+pub type ADD_R = crate::BitReader;
 #[doc = "Field `ADD` writer - Perform add operation"]
-pub type ADD_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type ADD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SUBTRACT` reader - Perform subtract operation"]
-pub type SUBTRACT_R = crate::BitReader<bool>;
+pub type SUBTRACT_R = crate::BitReader;
 #[doc = "Field `SUBTRACT` writer - Perform subtract operation"]
-pub type SUBTRACT_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type SUBTRACT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RSHIFT` reader - Perform right shift operation"]
-pub type RSHIFT_R = crate::BitReader<bool>;
+pub type RSHIFT_R = crate::BitReader;
 #[doc = "Field `RSHIFT` writer - Perform right shift operation"]
-pub type RSHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type RSHIFT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LSHIFT` reader - Perform left shift operation"]
-pub type LSHIFT_R = crate::BitReader<bool>;
+pub type LSHIFT_R = crate::BitReader;
 #[doc = "Field `LSHIFT` writer - Perform left shift operation"]
-pub type LSHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type LSHIFT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DIVIDE` reader - Perform divide operation"]
-pub type DIVIDE_R = crate::BitReader<bool>;
+pub type DIVIDE_R = crate::BitReader;
 #[doc = "Field `DIVIDE` writer - Perform divide operation"]
-pub type DIVIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type DIVIDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MODULO` reader - Perform modulo operation"]
-pub type MODULO_R = crate::BitReader<bool>;
+pub type MODULO_R = crate::BitReader;
 #[doc = "Field `MODULO` writer - Perform modulo operation"]
-pub type MODULO_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type MODULO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `COMPARE` reader - Perform compare operation"]
-pub type COMPARE_R = crate::BitReader<bool>;
+pub type COMPARE_R = crate::BitReader;
 #[doc = "Field `COMPARE` writer - Perform compare operation"]
-pub type COMPARE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type COMPARE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `COPY` reader - Perform copy operation"]
-pub type COPY_R = crate::BitReader<bool>;
+pub type COPY_R = crate::BitReader;
 #[doc = "Field `COPY` writer - Perform copy operation"]
-pub type COPY_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type COPY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SEQUENCER_OPERATIONS` reader - These bits select the complex sequencer operation to perform: 000b: None 001b: ExpMod-CRT 010b: ExpMod-ACT4 (compatible with EIP2315) 011b: ECC-ADD (if available in firmware, otherwise reserved) 100b: ExpMod-ACT2 (compatible with EIP2316) 101b: ECC-MUL (if available in firmware, otherwise reserved) 110b: ExpMod-variable 111b: ModInv (if available in firmware, otherwise reserved) The encoding of these operations is determined by sequencer firmware."]
-pub type SEQUENCER_OPERATIONS_R = crate::FieldReader<u8, u8>;
+pub type SEQUENCER_OPERATIONS_R = crate::FieldReader;
 #[doc = "Field `SEQUENCER_OPERATIONS` writer - These bits select the complex sequencer operation to perform: 000b: None 001b: ExpMod-CRT 010b: ExpMod-ACT4 (compatible with EIP2315) 011b: ECC-ADD (if available in firmware, otherwise reserved) 100b: ExpMod-ACT2 (compatible with EIP2316) 101b: ECC-MUL (if available in firmware, otherwise reserved) 110b: ExpMod-variable 111b: ModInv (if available in firmware, otherwise reserved) The encoding of these operations is determined by sequencer firmware."]
-pub type SEQUENCER_OPERATIONS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FUNCTION_SPEC, u8, u8, 3, O>;
+pub type SEQUENCER_OPERATIONS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `RUN` reader - The host sets this bit to instruct the PKA module to begin processing the basic PKCP or complex sequencer operation. This bit is reset low automatically when the operation is complete. The complement of this bit is output as interrupts\\[1\\]. After a reset, the run bit is always set to 1b. Depending on the option, program ROM or program RAM, the following applies: Program ROM - The first sequencer instruction sets the bit to 0b. This is done immediately after the hardware reset is released. Program RAM - The sequencer must set the bit to 0b. As a valid firmware may not have been loaded, the sequencer is held in software reset after the hardware reset is released (the reset bit in PKA_SEQ_CRTL is set to 1b). After the FW image is loaded and the Reset bit is cleared, the sequencer starts to execute the FW. The first instruction clears the run bit. In both cases a few clock cycles are needed before the first instruction is executed and the run bit state has been propagated."]
-pub type RUN_R = crate::BitReader<bool>;
+pub type RUN_R = crate::BitReader;
 #[doc = "Field `RUN` writer - The host sets this bit to instruct the PKA module to begin processing the basic PKCP or complex sequencer operation. This bit is reset low automatically when the operation is complete. The complement of this bit is output as interrupts\\[1\\]. After a reset, the run bit is always set to 1b. Depending on the option, program ROM or program RAM, the following applies: Program ROM - The first sequencer instruction sets the bit to 0b. This is done immediately after the hardware reset is released. Program RAM - The sequencer must set the bit to 0b. As a valid firmware may not have been loaded, the sequencer is held in software reset after the hardware reset is released (the reset bit in PKA_SEQ_CRTL is set to 1b). After the FW image is loaded and the Reset bit is cleared, the sequencer starts to execute the FW. The first instruction clears the run bit. In both cases a few clock cycles are needed before the first instruction is executed and the run bit state has been propagated."]
-pub type RUN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type RUN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STALL_RESULT` reader - When written with a 1b, updating of the PKA_COMPARE, PKA_MSW and PKA_DIVMSW registers, as well as resetting the run bit is stalled beyond the point that a running operation is actually finished. Use this to allow software enough time to read results from a previous operation when the newly started operation is known to take only a short amount of time. If a result is waiting, the result registers is updated and the run bit is reset in the clock cycle following writing the stall result bit back to 0b. The Stall result function may only be used for basic PKCP operations."]
-pub type STALL_RESULT_R = crate::BitReader<bool>;
+pub type STALL_RESULT_R = crate::BitReader;
 #[doc = "Field `STALL_RESULT` writer - When written with a 1b, updating of the PKA_COMPARE, PKA_MSW and PKA_DIVMSW registers, as well as resetting the run bit is stalled beyond the point that a running operation is actually finished. Use this to allow software enough time to read results from a previous operation when the newly started operation is known to take only a short amount of time. If a result is waiting, the result registers is updated and the run bit is reset in the clock cycle following writing the stall result bit back to 0b. The Stall result function may only be used for basic PKCP operations."]
-pub type STALL_RESULT_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNCTION_SPEC, bool, O>;
+pub type STALL_RESULT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Perform multiply operation"]
     #[inline(always)]
@@ -170,108 +137,105 @@ impl W {
     #[doc = "Bit 0 - Perform multiply operation"]
     #[inline(always)]
     #[must_use]
-    pub fn multiply(&mut self) -> MULTIPLY_W<0> {
+    pub fn multiply(&mut self) -> MULTIPLY_W<FUNCTION_SPEC, 0> {
         MULTIPLY_W::new(self)
     }
     #[doc = "Bit 1 - Perform combined add/subtract operation"]
     #[inline(always)]
     #[must_use]
-    pub fn addsub(&mut self) -> ADDSUB_W<1> {
+    pub fn addsub(&mut self) -> ADDSUB_W<FUNCTION_SPEC, 1> {
         ADDSUB_W::new(self)
     }
     #[doc = "Bit 3 - Loads the location of the Most Significant one bit within the result word indicated in the PKA_MSW register into bits \\[4:0\\]
 of the PKA_DIVMSW register - can only be used with basic PKCP operations, except for Divide, Modulo and Compare."]
     #[inline(always)]
     #[must_use]
-    pub fn ms_one(&mut self) -> MS_ONE_W<3> {
+    pub fn ms_one(&mut self) -> MS_ONE_W<FUNCTION_SPEC, 3> {
         MS_ONE_W::new(self)
     }
     #[doc = "Bit 4 - Perform add operation"]
     #[inline(always)]
     #[must_use]
-    pub fn add(&mut self) -> ADD_W<4> {
+    pub fn add(&mut self) -> ADD_W<FUNCTION_SPEC, 4> {
         ADD_W::new(self)
     }
     #[doc = "Bit 5 - Perform subtract operation"]
     #[inline(always)]
     #[must_use]
-    pub fn subtract(&mut self) -> SUBTRACT_W<5> {
+    pub fn subtract(&mut self) -> SUBTRACT_W<FUNCTION_SPEC, 5> {
         SUBTRACT_W::new(self)
     }
     #[doc = "Bit 6 - Perform right shift operation"]
     #[inline(always)]
     #[must_use]
-    pub fn rshift(&mut self) -> RSHIFT_W<6> {
+    pub fn rshift(&mut self) -> RSHIFT_W<FUNCTION_SPEC, 6> {
         RSHIFT_W::new(self)
     }
     #[doc = "Bit 7 - Perform left shift operation"]
     #[inline(always)]
     #[must_use]
-    pub fn lshift(&mut self) -> LSHIFT_W<7> {
+    pub fn lshift(&mut self) -> LSHIFT_W<FUNCTION_SPEC, 7> {
         LSHIFT_W::new(self)
     }
     #[doc = "Bit 8 - Perform divide operation"]
     #[inline(always)]
     #[must_use]
-    pub fn divide(&mut self) -> DIVIDE_W<8> {
+    pub fn divide(&mut self) -> DIVIDE_W<FUNCTION_SPEC, 8> {
         DIVIDE_W::new(self)
     }
     #[doc = "Bit 9 - Perform modulo operation"]
     #[inline(always)]
     #[must_use]
-    pub fn modulo(&mut self) -> MODULO_W<9> {
+    pub fn modulo(&mut self) -> MODULO_W<FUNCTION_SPEC, 9> {
         MODULO_W::new(self)
     }
     #[doc = "Bit 10 - Perform compare operation"]
     #[inline(always)]
     #[must_use]
-    pub fn compare(&mut self) -> COMPARE_W<10> {
+    pub fn compare(&mut self) -> COMPARE_W<FUNCTION_SPEC, 10> {
         COMPARE_W::new(self)
     }
     #[doc = "Bit 11 - Perform copy operation"]
     #[inline(always)]
     #[must_use]
-    pub fn copy(&mut self) -> COPY_W<11> {
+    pub fn copy(&mut self) -> COPY_W<FUNCTION_SPEC, 11> {
         COPY_W::new(self)
     }
     #[doc = "Bits 12:14 - These bits select the complex sequencer operation to perform: 000b: None 001b: ExpMod-CRT 010b: ExpMod-ACT4 (compatible with EIP2315) 011b: ECC-ADD (if available in firmware, otherwise reserved) 100b: ExpMod-ACT2 (compatible with EIP2316) 101b: ECC-MUL (if available in firmware, otherwise reserved) 110b: ExpMod-variable 111b: ModInv (if available in firmware, otherwise reserved) The encoding of these operations is determined by sequencer firmware."]
     #[inline(always)]
     #[must_use]
-    pub fn sequencer_operations(&mut self) -> SEQUENCER_OPERATIONS_W<12> {
+    pub fn sequencer_operations(&mut self) -> SEQUENCER_OPERATIONS_W<FUNCTION_SPEC, 12> {
         SEQUENCER_OPERATIONS_W::new(self)
     }
     #[doc = "Bit 15 - The host sets this bit to instruct the PKA module to begin processing the basic PKCP or complex sequencer operation. This bit is reset low automatically when the operation is complete. The complement of this bit is output as interrupts\\[1\\]. After a reset, the run bit is always set to 1b. Depending on the option, program ROM or program RAM, the following applies: Program ROM - The first sequencer instruction sets the bit to 0b. This is done immediately after the hardware reset is released. Program RAM - The sequencer must set the bit to 0b. As a valid firmware may not have been loaded, the sequencer is held in software reset after the hardware reset is released (the reset bit in PKA_SEQ_CRTL is set to 1b). After the FW image is loaded and the Reset bit is cleared, the sequencer starts to execute the FW. The first instruction clears the run bit. In both cases a few clock cycles are needed before the first instruction is executed and the run bit state has been propagated."]
     #[inline(always)]
     #[must_use]
-    pub fn run(&mut self) -> RUN_W<15> {
+    pub fn run(&mut self) -> RUN_W<FUNCTION_SPEC, 15> {
         RUN_W::new(self)
     }
     #[doc = "Bit 24 - When written with a 1b, updating of the PKA_COMPARE, PKA_MSW and PKA_DIVMSW registers, as well as resetting the run bit is stalled beyond the point that a running operation is actually finished. Use this to allow software enough time to read results from a previous operation when the newly started operation is known to take only a short amount of time. If a result is waiting, the result registers is updated and the run bit is reset in the clock cycle following writing the stall result bit back to 0b. The Stall result function may only be used for basic PKCP operations."]
     #[inline(always)]
     #[must_use]
-    pub fn stall_result(&mut self) -> STALL_RESULT_W<24> {
+    pub fn stall_result(&mut self) -> STALL_RESULT_W<FUNCTION_SPEC, 24> {
         STALL_RESULT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "PKA function This register contains the control bits to start basic PKCP as well as complex sequencer operations. The run bit can be used to poll for the completion of the operation. Modifying bits \\[11:0\\]
-is made impossible during the execution of a basic PKCP operation. During the execution of sequencer-controlled complex operations, this register is modified; the run and stall result bits are set to zero at the conclusion, but other bits are undefined. Attention: Continuously reading this register to poll the run bit is not allowed when executing complex sequencer operations (the sequencer cannot access the PKCP when this is done). Leave at least one sysclk cycle between poll operations.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [function](index.html) module"]
+is made impossible during the execution of a basic PKCP operation. During the execution of sequencer-controlled complex operations, this register is modified; the run and stall result bits are set to zero at the conclusion, but other bits are undefined. Attention: Continuously reading this register to poll the run bit is not allowed when executing complex sequencer operations (the sequencer cannot access the PKCP when this is done). Leave at least one sysclk cycle between poll operations.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`function::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`function::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FUNCTION_SPEC;
 impl crate::RegisterSpec for FUNCTION_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [function::R](R) reader structure"]
-impl crate::Readable for FUNCTION_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [function::W](W) writer structure"]
+#[doc = "`read()` method returns [`function::R`](R) reader structure"]
+impl crate::Readable for FUNCTION_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`function::W`](W) writer structure"]
 impl crate::Writable for FUNCTION_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

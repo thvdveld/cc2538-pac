@@ -1,63 +1,31 @@
 #[doc = "Register `RFIRQF1` reader"]
-pub struct R(crate::R<RFIRQF1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RFIRQF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RFIRQF1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RFIRQF1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RFIRQF1_SPEC>;
 #[doc = "Register `RFIRQF1` writer"]
-pub struct W(crate::W<RFIRQF1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RFIRQF1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RFIRQF1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RFIRQF1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RFIRQF1_SPEC>;
 #[doc = "Field `TXACKDONE` reader - An acknowledgement frame has been completely transmitted. 0: No interrupt pending 1: Interrupt pending"]
-pub type TXACKDONE_R = crate::BitReader<bool>;
+pub type TXACKDONE_R = crate::BitReader;
 #[doc = "Field `TXACKDONE` writer - An acknowledgement frame has been completely transmitted. 0: No interrupt pending 1: Interrupt pending"]
-pub type TXACKDONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFIRQF1_SPEC, bool, O>;
+pub type TXACKDONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXDONE` reader - A complete frame has been transmitted. 0: No interrupt pending 1: Interrupt pending"]
-pub type TXDONE_R = crate::BitReader<bool>;
+pub type TXDONE_R = crate::BitReader;
 #[doc = "Field `TXDONE` writer - A complete frame has been transmitted. 0: No interrupt pending 1: Interrupt pending"]
-pub type TXDONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFIRQF1_SPEC, bool, O>;
+pub type TXDONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RFIDLE` reader - Radio state-machine has entered the IDLE state. 0: No interrupt pending 1: Interrupt pending"]
-pub type RFIDLE_R = crate::BitReader<bool>;
+pub type RFIDLE_R = crate::BitReader;
 #[doc = "Field `RFIDLE` writer - Radio state-machine has entered the IDLE state. 0: No interrupt pending 1: Interrupt pending"]
-pub type RFIDLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFIRQF1_SPEC, bool, O>;
+pub type RFIDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CSP_MANINT` reader - Manual interrupt generated from CSP 0: No interrupt pending 1: Interrupt pending"]
-pub type CSP_MANINT_R = crate::BitReader<bool>;
+pub type CSP_MANINT_R = crate::BitReader;
 #[doc = "Field `CSP_MANINT` writer - Manual interrupt generated from CSP 0: No interrupt pending 1: Interrupt pending"]
-pub type CSP_MANINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFIRQF1_SPEC, bool, O>;
+pub type CSP_MANINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CSP_STOP` reader - CSP has stopped program execution. 0: No interrupt pending 1: Interrupt pending"]
-pub type CSP_STOP_R = crate::BitReader<bool>;
+pub type CSP_STOP_R = crate::BitReader;
 #[doc = "Field `CSP_STOP` writer - CSP has stopped program execution. 0: No interrupt pending 1: Interrupt pending"]
-pub type CSP_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFIRQF1_SPEC, bool, O>;
+pub type CSP_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CSP_WAIT` reader - Execution continued after a wait instruction in CSP. 0: No interrupt pending 1: Interrupt pending"]
-pub type CSP_WAIT_R = crate::BitReader<bool>;
+pub type CSP_WAIT_R = crate::BitReader;
 #[doc = "Field `CSP_WAIT` writer - Execution continued after a wait instruction in CSP. 0: No interrupt pending 1: Interrupt pending"]
-pub type CSP_WAIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFIRQF1_SPEC, bool, O>;
+pub type CSP_WAIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - An acknowledgement frame has been completely transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
@@ -94,58 +62,55 @@ impl W {
     #[doc = "Bit 0 - An acknowledgement frame has been completely transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     #[must_use]
-    pub fn txackdone(&mut self) -> TXACKDONE_W<0> {
+    pub fn txackdone(&mut self) -> TXACKDONE_W<RFIRQF1_SPEC, 0> {
         TXACKDONE_W::new(self)
     }
     #[doc = "Bit 1 - A complete frame has been transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     #[must_use]
-    pub fn txdone(&mut self) -> TXDONE_W<1> {
+    pub fn txdone(&mut self) -> TXDONE_W<RFIRQF1_SPEC, 1> {
         TXDONE_W::new(self)
     }
     #[doc = "Bit 2 - Radio state-machine has entered the IDLE state. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     #[must_use]
-    pub fn rfidle(&mut self) -> RFIDLE_W<2> {
+    pub fn rfidle(&mut self) -> RFIDLE_W<RFIRQF1_SPEC, 2> {
         RFIDLE_W::new(self)
     }
     #[doc = "Bit 3 - Manual interrupt generated from CSP 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     #[must_use]
-    pub fn csp_manint(&mut self) -> CSP_MANINT_W<3> {
+    pub fn csp_manint(&mut self) -> CSP_MANINT_W<RFIRQF1_SPEC, 3> {
         CSP_MANINT_W::new(self)
     }
     #[doc = "Bit 4 - CSP has stopped program execution. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     #[must_use]
-    pub fn csp_stop(&mut self) -> CSP_STOP_W<4> {
+    pub fn csp_stop(&mut self) -> CSP_STOP_W<RFIRQF1_SPEC, 4> {
         CSP_STOP_W::new(self)
     }
     #[doc = "Bit 5 - Execution continued after a wait instruction in CSP. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
     #[must_use]
-    pub fn csp_wait(&mut self) -> CSP_WAIT_W<5> {
+    pub fn csp_wait(&mut self) -> CSP_WAIT_W<RFIRQF1_SPEC, 5> {
         CSP_WAIT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "RF interrupt flags\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rfirqf1](index.html) module"]
+#[doc = "RF interrupt flags\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfirqf1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rfirqf1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFIRQF1_SPEC;
 impl crate::RegisterSpec for RFIRQF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rfirqf1::R](R) reader structure"]
-impl crate::Readable for RFIRQF1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rfirqf1::W](W) writer structure"]
+#[doc = "`read()` method returns [`rfirqf1::R`](R) reader structure"]
+impl crate::Readable for RFIRQF1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rfirqf1::W`](W) writer structure"]
 impl crate::Writable for RFIRQF1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

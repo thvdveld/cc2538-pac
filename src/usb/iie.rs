@@ -1,63 +1,31 @@
 #[doc = "Register `IIE` reader"]
-pub struct R(crate::R<IIE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IIE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IIE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IIE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IIE_SPEC>;
 #[doc = "Register `IIE` writer"]
-pub struct W(crate::W<IIE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IIE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IIE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IIE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IIE_SPEC>;
 #[doc = "Field `EP0IE` reader - Interrupt enable for endpoint 0 0: Interrupt disabled 1: Interrupt enabled"]
-pub type EP0IE_R = crate::BitReader<bool>;
+pub type EP0IE_R = crate::BitReader;
 #[doc = "Field `EP0IE` writer - Interrupt enable for endpoint 0 0: Interrupt disabled 1: Interrupt enabled"]
-pub type EP0IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIE_SPEC, bool, O>;
+pub type EP0IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INEP1IE` reader - Interrupt enable for IN endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP1IE_R = crate::BitReader<bool>;
+pub type INEP1IE_R = crate::BitReader;
 #[doc = "Field `INEP1IE` writer - Interrupt enable for IN endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP1IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIE_SPEC, bool, O>;
+pub type INEP1IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INEP2IE` reader - Interrupt enable for IN endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP2IE_R = crate::BitReader<bool>;
+pub type INEP2IE_R = crate::BitReader;
 #[doc = "Field `INEP2IE` writer - Interrupt enable for IN endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP2IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIE_SPEC, bool, O>;
+pub type INEP2IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INEP3IE` reader - Interrupt enable for IN endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP3IE_R = crate::BitReader<bool>;
+pub type INEP3IE_R = crate::BitReader;
 #[doc = "Field `INEP3IE` writer - Interrupt enable for IN endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP3IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIE_SPEC, bool, O>;
+pub type INEP3IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INEP4IE` reader - Interrupt enable for IN endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP4IE_R = crate::BitReader<bool>;
+pub type INEP4IE_R = crate::BitReader;
 #[doc = "Field `INEP4IE` writer - Interrupt enable for IN endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP4IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIE_SPEC, bool, O>;
+pub type INEP4IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INEP5IE` reader - Interrupt enable for IN endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP5IE_R = crate::BitReader<bool>;
+pub type INEP5IE_R = crate::BitReader;
 #[doc = "Field `INEP5IE` writer - Interrupt enable for IN endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
-pub type INEP5IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIE_SPEC, bool, O>;
+pub type INEP5IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Interrupt enable for endpoint 0 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
@@ -94,58 +62,55 @@ impl W {
     #[doc = "Bit 0 - Interrupt enable for endpoint 0 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn ep0ie(&mut self) -> EP0IE_W<0> {
+    pub fn ep0ie(&mut self) -> EP0IE_W<IIE_SPEC, 0> {
         EP0IE_W::new(self)
     }
     #[doc = "Bit 1 - Interrupt enable for IN endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn inep1ie(&mut self) -> INEP1IE_W<1> {
+    pub fn inep1ie(&mut self) -> INEP1IE_W<IIE_SPEC, 1> {
         INEP1IE_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt enable for IN endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn inep2ie(&mut self) -> INEP2IE_W<2> {
+    pub fn inep2ie(&mut self) -> INEP2IE_W<IIE_SPEC, 2> {
         INEP2IE_W::new(self)
     }
     #[doc = "Bit 3 - Interrupt enable for IN endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn inep3ie(&mut self) -> INEP3IE_W<3> {
+    pub fn inep3ie(&mut self) -> INEP3IE_W<IIE_SPEC, 3> {
         INEP3IE_W::new(self)
     }
     #[doc = "Bit 4 - Interrupt enable for IN endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn inep4ie(&mut self) -> INEP4IE_W<4> {
+    pub fn inep4ie(&mut self) -> INEP4IE_W<IIE_SPEC, 4> {
         INEP4IE_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt enable for IN endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn inep5ie(&mut self) -> INEP5IE_W<5> {
+    pub fn inep5ie(&mut self) -> INEP5IE_W<IIE_SPEC, 5> {
         INEP5IE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable mask for IN endpoints 1-5 and endpoint 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [iie](index.html) module"]
+#[doc = "Interrupt enable mask for IN endpoints 1-5 and endpoint 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iie::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iie::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IIE_SPEC;
 impl crate::RegisterSpec for IIE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [iie::R](R) reader structure"]
-impl crate::Readable for IIE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [iie::W](W) writer structure"]
+#[doc = "`read()` method returns [`iie::R`](R) reader structure"]
+impl crate::Readable for IIE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`iie::W`](W) writer structure"]
 impl crate::Writable for IIE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,36 +1,23 @@
 #[doc = "Register `DIECFG1` reader"]
-pub struct R(crate::R<DIECFG1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIECFG1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIECFG1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIECFG1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIECFG1_SPEC>;
 #[doc = "Field `GPTM0_EN` reader - 1: GPTM0 is enabled. 0: GPTM0 is permanently disabled."]
-pub type GPTM0_EN_R = crate::BitReader<bool>;
+pub type GPTM0_EN_R = crate::BitReader;
 #[doc = "Field `GPTM1_EN` reader - 1: GPTM1 is enabled. 0: GPTM1 is permanently disabled."]
-pub type GPTM1_EN_R = crate::BitReader<bool>;
+pub type GPTM1_EN_R = crate::BitReader;
 #[doc = "Field `GPTM2_EN` reader - 1: GPTM2 is enabled. 0: GPTM2 is permanently disabled."]
-pub type GPTM2_EN_R = crate::BitReader<bool>;
+pub type GPTM2_EN_R = crate::BitReader;
 #[doc = "Field `GPTM3_EN` reader - 1: GPTM3 is enabled. 0: GPTM3 is permanently disabled."]
-pub type GPTM3_EN_R = crate::BitReader<bool>;
+pub type GPTM3_EN_R = crate::BitReader;
 #[doc = "Field `SSI0_EN` reader - 1: SSI0 is enabled. 0: SSI0 is permanently disabled."]
-pub type SSI0_EN_R = crate::BitReader<bool>;
+pub type SSI0_EN_R = crate::BitReader;
 #[doc = "Field `SSI1_EN` reader - 1: SSI1 is enabled. 0: SSI1 is permanently disabled."]
-pub type SSI1_EN_R = crate::BitReader<bool>;
+pub type SSI1_EN_R = crate::BitReader;
 #[doc = "Field `UART0_EN` reader - 1: UART0 is enabled. 0: UART0 is permanently disabled."]
-pub type UART0_EN_R = crate::BitReader<bool>;
+pub type UART0_EN_R = crate::BitReader;
 #[doc = "Field `UART1_EN` reader - 1: UART1 is enabled. 0: UART1 is permanently disabled."]
-pub type UART1_EN_R = crate::BitReader<bool>;
+pub type UART1_EN_R = crate::BitReader;
 #[doc = "Field `I2C_EN` reader - 1: I2C is enabled. 0: I2C is permanently disabled."]
-pub type I2C_EN_R = crate::BitReader<bool>;
+pub type I2C_EN_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - 1: GPTM0 is enabled. 0: GPTM0 is permanently disabled."]
     #[inline(always)]
@@ -78,15 +65,13 @@ impl R {
         I2C_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
-#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diecfg1](index.html) module"]
+#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diecfg1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIECFG1_SPEC;
 impl crate::RegisterSpec for DIECFG1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [diecfg1::R](R) reader structure"]
-impl crate::Readable for DIECFG1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`diecfg1::R`](R) reader structure"]
+impl crate::Readable for DIECFG1_SPEC {}
 #[doc = "`reset()` method sets DIECFG1 to value 0"]
 impl crate::Resettable for DIECFG1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,45 +1,13 @@
 #[doc = "Register `CMPCTL` reader"]
-pub struct R(crate::R<CMPCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CMPCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CMPCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CMPCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CMPCTL_SPEC>;
 #[doc = "Register `CMPCTL` writer"]
-pub struct W(crate::W<CMPCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CMPCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CMPCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CMPCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CMPCTL_SPEC>;
 #[doc = "Field `OUTPUT` reader - Comparator output"]
-pub type OUTPUT_R = crate::BitReader<bool>;
+pub type OUTPUT_R = crate::BitReader;
 #[doc = "Field `EN` reader - Comparator enable"]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Comparator enable"]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMPCTL_SPEC, bool, O>;
+pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Comparator output"]
     #[inline(always)]
@@ -56,28 +24,25 @@ impl W {
     #[doc = "Bit 1 - Comparator enable"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<1> {
+    pub fn en(&mut self) -> EN_W<CMPCTL_SPEC, 1> {
         EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Analog comparator control and status register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmpctl](index.html) module"]
+#[doc = "Analog comparator control and status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmpctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cmpctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CMPCTL_SPEC;
 impl crate::RegisterSpec for CMPCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmpctl::R](R) reader structure"]
-impl crate::Readable for CMPCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cmpctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`cmpctl::R`](R) reader structure"]
+impl crate::Readable for CMPCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cmpctl::W`](W) writer structure"]
 impl crate::Writable for CMPCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

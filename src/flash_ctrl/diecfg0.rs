@@ -1,34 +1,21 @@
 #[doc = "Register `DIECFG0` reader"]
-pub struct R(crate::R<DIECFG0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIECFG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIECFG0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIECFG0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIECFG0_SPEC>;
 #[doc = "Field `LOCK_IP_N` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
-pub type LOCK_IP_N_R = crate::BitReader<bool>;
+pub type LOCK_IP_N_R = crate::BitReader;
 #[doc = "Field `LOCK_FWT_N` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
-pub type LOCK_FWT_N_R = crate::BitReader<bool>;
+pub type LOCK_FWT_N_R = crate::BitReader;
 #[doc = "Field `MASS_ERASE_ENABLE` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
-pub type MASS_ERASE_ENABLE_R = crate::BitReader<bool>;
+pub type MASS_ERASE_ENABLE_R = crate::BitReader;
 #[doc = "Field `USB_ENABLE` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
-pub type USB_ENABLE_R = crate::BitReader<bool>;
+pub type USB_ENABLE_R = crate::BitReader;
 #[doc = "Field `FLASH_SIZE` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit field is equal to the field with the same name in the information page."]
-pub type FLASH_SIZE_R = crate::FieldReader<u8, u8>;
+pub type FLASH_SIZE_R = crate::FieldReader;
 #[doc = "Field `SRAM_SIZE` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit field is equal to the field with the same name in the information page."]
-pub type SRAM_SIZE_R = crate::FieldReader<u8, u8>;
+pub type SRAM_SIZE_R = crate::FieldReader;
 #[doc = "Field `CLK_SEL_GATE_EN_N` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
-pub type CLK_SEL_GATE_EN_N_R = crate::BitReader<bool>;
+pub type CLK_SEL_GATE_EN_N_R = crate::BitReader;
 #[doc = "Field `CHIPID` reader - Register copy of configuration bits Three clock cycles after reset is released, this bit field is equal to the field with the same name in the information page."]
-pub type CHIPID_R = crate::FieldReader<u16, u16>;
+pub type CHIPID_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bit 0 - Register copy of configuration bits Three clock cycles after reset is released, this bit is equal to the field with the same name in the information page."]
     #[inline(always)]
@@ -71,15 +58,13 @@ impl R {
         CHIPID_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
-#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diecfg0](index.html) module"]
+#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diecfg0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIECFG0_SPEC;
 impl crate::RegisterSpec for DIECFG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [diecfg0::R](R) reader structure"]
-impl crate::Readable for DIECFG0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`diecfg0::R`](R) reader structure"]
+impl crate::Readable for DIECFG0_SPEC {}
 #[doc = "`reset()` method sets DIECFG0 to value 0"]
 impl crate::Resettable for DIECFG0_SPEC {
     const RESET_VALUE: Self::Ux = 0;

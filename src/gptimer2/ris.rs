@@ -1,34 +1,21 @@
 #[doc = "Register `RIS` reader"]
-pub struct R(crate::R<RIS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RIS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RIS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RIS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RIS_SPEC>;
 #[doc = "Field `TATORIS` reader - GPTM Timer A time-out raw interrupt"]
-pub type TATORIS_R = crate::BitReader<bool>;
+pub type TATORIS_R = crate::BitReader;
 #[doc = "Field `CAMRIS` reader - GPTM Timer A capture match raw interrupt"]
-pub type CAMRIS_R = crate::BitReader<bool>;
+pub type CAMRIS_R = crate::BitReader;
 #[doc = "Field `CAERIS` reader - GPTM Timer A capture event raw interrupt"]
-pub type CAERIS_R = crate::BitReader<bool>;
+pub type CAERIS_R = crate::BitReader;
 #[doc = "Field `TAMRIS` reader - GPTM Timer A match raw interrupt"]
-pub type TAMRIS_R = crate::BitReader<bool>;
+pub type TAMRIS_R = crate::BitReader;
 #[doc = "Field `TBTORIS` reader - GPTM Timer B time-out raw interrupt"]
-pub type TBTORIS_R = crate::BitReader<bool>;
+pub type TBTORIS_R = crate::BitReader;
 #[doc = "Field `CBMRIS` reader - GPTM Timer B capture match raw interrupt"]
-pub type CBMRIS_R = crate::BitReader<bool>;
+pub type CBMRIS_R = crate::BitReader;
 #[doc = "Field `CBERIS` reader - GPTM Timer B capture event raw interrupt"]
-pub type CBERIS_R = crate::BitReader<bool>;
+pub type CBERIS_R = crate::BitReader;
 #[doc = "Field `TBMRIS` reader - GPTM Timer B match raw interrupt"]
-pub type TBMRIS_R = crate::BitReader<bool>;
+pub type TBMRIS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - GPTM Timer A time-out raw interrupt"]
     #[inline(always)]
@@ -71,15 +58,13 @@ impl R {
         TBMRIS_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
-#[doc = "GPTM raw interrupt status This register shows the state of the GPTM internal interrupt signal. These bits are set whether or not the interrupt is masked in the IMR register. Each bit can be cleared by writing 1 to its corresponding bit in ICR.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ris](index.html) module"]
+#[doc = "GPTM raw interrupt status This register shows the state of the GPTM internal interrupt signal. These bits are set whether or not the interrupt is masked in the IMR register. Each bit can be cleared by writing 1 to its corresponding bit in ICR.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ris::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RIS_SPEC;
 impl crate::RegisterSpec for RIS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ris::R](R) reader structure"]
-impl crate::Readable for RIS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ris::R`](R) reader structure"]
+impl crate::Readable for RIS_SPEC {}
 #[doc = "`reset()` method sets RIS to value 0"]
 impl crate::Resettable for RIS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

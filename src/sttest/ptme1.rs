@@ -1,47 +1,15 @@
 #[doc = "Register `PTME1` reader"]
-pub struct R(crate::R<PTME1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PTME1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PTME1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PTME1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PTME1_SPEC>;
 #[doc = "Register `PTME1` writer"]
-pub struct W(crate::W<PTME1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PTME1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PTME1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PTME1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PTME1_SPEC>;
 #[doc = "Field `UART0TME` reader - UART0 test mode enable"]
-pub type UART0TME_R = crate::BitReader<bool>;
+pub type UART0TME_R = crate::BitReader;
 #[doc = "Field `UART0TME` writer - UART0 test mode enable"]
-pub type UART0TME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME1_SPEC, bool, O>;
+pub type UART0TME_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UART1TME` reader - UART1 test mode enable"]
-pub type UART1TME_R = crate::BitReader<bool>;
+pub type UART1TME_R = crate::BitReader;
 #[doc = "Field `UART1TME` writer - UART1 test mode enable"]
-pub type UART1TME_W<'a, const O: u8> = crate::BitWriter<'a, u32, PTME1_SPEC, bool, O>;
+pub type UART1TME_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 8 - UART0 test mode enable"]
     #[inline(always)]
@@ -58,34 +26,31 @@ impl W {
     #[doc = "Bit 8 - UART0 test mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn uart0tme(&mut self) -> UART0TME_W<8> {
+    pub fn uart0tme(&mut self) -> UART0TME_W<PTME1_SPEC, 8> {
         UART0TME_W::new(self)
     }
     #[doc = "Bit 9 - UART1 test mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1tme(&mut self) -> UART1TME_W<9> {
+    pub fn uart1tme(&mut self) -> UART1TME_W<PTME1_SPEC, 9> {
         UART1TME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Peripheral test mode enable 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ptme1](index.html) module"]
+#[doc = "Peripheral test mode enable 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptme1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptme1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PTME1_SPEC;
 impl crate::RegisterSpec for PTME1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ptme1::R](R) reader structure"]
-impl crate::Readable for PTME1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ptme1::W](W) writer structure"]
+#[doc = "`read()` method returns [`ptme1::R`](R) reader structure"]
+impl crate::Readable for PTME1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ptme1::W`](W) writer structure"]
 impl crate::Writable for PTME1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

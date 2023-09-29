@@ -1,28 +1,15 @@
 #[doc = "Register `CTRL_INT_STAT` reader"]
-pub struct R(crate::R<CTRL_INT_STAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CTRL_INT_STAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CTRL_INT_STAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CTRL_INT_STAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CTRL_INT_STAT_SPEC>;
 #[doc = "Field `RESULT_AV` reader - This read only bit returns the actual result available (irq_result_av) interrupt status of the result available interrupt output pin (irq_result_av)."]
-pub type RESULT_AV_R = crate::BitReader<bool>;
+pub type RESULT_AV_R = crate::BitReader;
 #[doc = "Field `DMA_IN_DONE` reader - This read only bit returns the actual DMA data in done (irq_data_in_done) interrupt status of the DMA data in done interrupt output pin (irq_data_in_done)."]
-pub type DMA_IN_DONE_R = crate::BitReader<bool>;
+pub type DMA_IN_DONE_R = crate::BitReader;
 #[doc = "Field `KEY_ST_RD_ERR` reader - This bit is set when a read error is detected during the read of a key from the key store, while copying it to the AES core. The value of this register is held until it is cleared through the CTRL_INT_CLR register. Note: This error is asserted if a key location is selected in the key store that is not available."]
-pub type KEY_ST_RD_ERR_R = crate::BitReader<bool>;
+pub type KEY_ST_RD_ERR_R = crate::BitReader;
 #[doc = "Field `KEY_ST_WR_ERR` reader - This bit is set when a write error is detected during the DMA write operation to the key store memory. The value of this register is held until it is cleared through the CTRL_INT_CLR register. Note: This error is asserted if a DMA operation does not cover a full key area or more areas are written than expected."]
-pub type KEY_ST_WR_ERR_R = crate::BitReader<bool>;
+pub type KEY_ST_WR_ERR_R = crate::BitReader;
 #[doc = "Field `DMA_BUS_ERR` reader - This bit is set when a DMA bus error is detected during a DMA operation. The value of this register is held until it is cleared through the CTRL_INT_CLR register. Note: This error is asserted if an error is detected on the AHB master interface during a DMA operation."]
-pub type DMA_BUS_ERR_R = crate::BitReader<bool>;
+pub type DMA_BUS_ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This read only bit returns the actual result available (irq_result_av) interrupt status of the result available interrupt output pin (irq_result_av)."]
     #[inline(always)]
@@ -50,15 +37,13 @@ impl R {
         DMA_BUS_ERR_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "Interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl_int_stat](index.html) module"]
+#[doc = "Interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_int_stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_INT_STAT_SPEC;
 impl crate::RegisterSpec for CTRL_INT_STAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl_int_stat::R](R) reader structure"]
-impl crate::Readable for CTRL_INT_STAT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ctrl_int_stat::R`](R) reader structure"]
+impl crate::Readable for CTRL_INT_STAT_SPEC {}
 #[doc = "`reset()` method sets CTRL_INT_STAT to value 0"]
 impl crate::Resettable for CTRL_INT_STAT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

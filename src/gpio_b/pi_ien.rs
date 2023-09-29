@@ -1,167 +1,135 @@
 #[doc = "Register `PI_IEN` reader"]
-pub struct R(crate::R<PI_IEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PI_IEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PI_IEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PI_IEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PI_IEN_SPEC>;
 #[doc = "Register `PI_IEN` writer"]
-pub struct W(crate::W<PI_IEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PI_IEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PI_IEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PI_IEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PI_IEN_SPEC>;
 #[doc = "Field `PAIEN0` reader - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN0_R = crate::BitReader<bool>;
+pub type PAIEN0_R = crate::BitReader;
 #[doc = "Field `PAIEN0` writer - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PAIEN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIEN1` reader - Port A bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN1_R = crate::BitReader<bool>;
+pub type PAIEN1_R = crate::BitReader;
 #[doc = "Field `PAIEN1` writer - Port A bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PAIEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIEN2` reader - Port A bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN2_R = crate::BitReader<bool>;
+pub type PAIEN2_R = crate::BitReader;
 #[doc = "Field `PAIEN2` writer - Port A bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PAIEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIEN3` reader - Port A bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN3_R = crate::BitReader<bool>;
+pub type PAIEN3_R = crate::BitReader;
 #[doc = "Field `PAIEN3` writer - Port A bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN3_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PAIEN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIEN4` reader - Port A bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN4_R = crate::BitReader<bool>;
+pub type PAIEN4_R = crate::BitReader;
 #[doc = "Field `PAIEN4` writer - Port A bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN4_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PAIEN4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIEN5` reader - Port A bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN5_R = crate::BitReader<bool>;
+pub type PAIEN5_R = crate::BitReader;
 #[doc = "Field `PAIEN5` writer - Port A bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN5_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PAIEN5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIEN6` reader - Port A bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN6_R = crate::BitReader<bool>;
+pub type PAIEN6_R = crate::BitReader;
 #[doc = "Field `PAIEN6` writer - Port A bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN6_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PAIEN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PAIEN7` reader - Port A bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN7_R = crate::BitReader<bool>;
+pub type PAIEN7_R = crate::BitReader;
 #[doc = "Field `PAIEN7` writer - Port A bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN7_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PAIEN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIEN0` reader - Port B bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN0_R = crate::BitReader<bool>;
+pub type PBIEN0_R = crate::BitReader;
 #[doc = "Field `PBIEN0` writer - Port B bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PBIEN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIEN1` reader - Port B bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN1_R = crate::BitReader<bool>;
+pub type PBIEN1_R = crate::BitReader;
 #[doc = "Field `PBIEN1` writer - Port B bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PBIEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIEN2` reader - Port B bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN2_R = crate::BitReader<bool>;
+pub type PBIEN2_R = crate::BitReader;
 #[doc = "Field `PBIEN2` writer - Port B bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PBIEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIEN3` reader - Port B bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN3_R = crate::BitReader<bool>;
+pub type PBIEN3_R = crate::BitReader;
 #[doc = "Field `PBIEN3` writer - Port B bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN3_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PBIEN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIEN4` reader - Port B bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN4_R = crate::BitReader<bool>;
+pub type PBIEN4_R = crate::BitReader;
 #[doc = "Field `PBIEN4` writer - Port B bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN4_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PBIEN4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIEN5` reader - Port B bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN5_R = crate::BitReader<bool>;
+pub type PBIEN5_R = crate::BitReader;
 #[doc = "Field `PBIEN5` writer - Port B bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN5_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PBIEN5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIEN6` reader - Port B bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN6_R = crate::BitReader<bool>;
+pub type PBIEN6_R = crate::BitReader;
 #[doc = "Field `PBIEN6` writer - Port B bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN6_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PBIEN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PBIEN7` reader - Port B bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN7_R = crate::BitReader<bool>;
+pub type PBIEN7_R = crate::BitReader;
 #[doc = "Field `PBIEN7` writer - Port B bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN7_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PBIEN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIEN0` reader - Port C bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN0_R = crate::BitReader<bool>;
+pub type PCIEN0_R = crate::BitReader;
 #[doc = "Field `PCIEN0` writer - Port C bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PCIEN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIEN1` reader - Port C bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN1_R = crate::BitReader<bool>;
+pub type PCIEN1_R = crate::BitReader;
 #[doc = "Field `PCIEN1` writer - Port C bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PCIEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIEN2` reader - Port C bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN2_R = crate::BitReader<bool>;
+pub type PCIEN2_R = crate::BitReader;
 #[doc = "Field `PCIEN2` writer - Port C bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PCIEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIEN3` reader - Port C bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN3_R = crate::BitReader<bool>;
+pub type PCIEN3_R = crate::BitReader;
 #[doc = "Field `PCIEN3` writer - Port C bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN3_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PCIEN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIEN4` reader - Port C bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN4_R = crate::BitReader<bool>;
+pub type PCIEN4_R = crate::BitReader;
 #[doc = "Field `PCIEN4` writer - Port C bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN4_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PCIEN4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIEN5` reader - Port C bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN5_R = crate::BitReader<bool>;
+pub type PCIEN5_R = crate::BitReader;
 #[doc = "Field `PCIEN5` writer - Port C bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN5_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PCIEN5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIEN6` reader - Port C bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN6_R = crate::BitReader<bool>;
+pub type PCIEN6_R = crate::BitReader;
 #[doc = "Field `PCIEN6` writer - Port C bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN6_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PCIEN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCIEN7` reader - Port C bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN7_R = crate::BitReader<bool>;
+pub type PCIEN7_R = crate::BitReader;
 #[doc = "Field `PCIEN7` writer - Port C bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN7_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PCIEN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIEN0` reader - Port D bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN0_R = crate::BitReader<bool>;
+pub type PDIEN0_R = crate::BitReader;
 #[doc = "Field `PDIEN0` writer - Port D bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PDIEN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIEN1` reader - Port D bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN1_R = crate::BitReader<bool>;
+pub type PDIEN1_R = crate::BitReader;
 #[doc = "Field `PDIEN1` writer - Port D bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PDIEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIEN2` reader - Port D bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN2_R = crate::BitReader<bool>;
+pub type PDIEN2_R = crate::BitReader;
 #[doc = "Field `PDIEN2` writer - Port D bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PDIEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIEN3` reader - Port D bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN3_R = crate::BitReader<bool>;
+pub type PDIEN3_R = crate::BitReader;
 #[doc = "Field `PDIEN3` writer - Port D bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN3_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PDIEN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIEN4` reader - Port D bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN4_R = crate::BitReader<bool>;
+pub type PDIEN4_R = crate::BitReader;
 #[doc = "Field `PDIEN4` writer - Port D bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN4_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PDIEN4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIEN5` reader - Port D bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN5_R = crate::BitReader<bool>;
+pub type PDIEN5_R = crate::BitReader;
 #[doc = "Field `PDIEN5` writer - Port D bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN5_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PDIEN5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIEN6` reader - Port D bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN6_R = crate::BitReader<bool>;
+pub type PDIEN6_R = crate::BitReader;
 #[doc = "Field `PDIEN6` writer - Port D bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN6_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PDIEN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PDIEN7` reader - Port D bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN7_R = crate::BitReader<bool>;
+pub type PDIEN7_R = crate::BitReader;
 #[doc = "Field `PDIEN7` writer - Port D bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN7_W<'a, const O: u8> = crate::BitWriter<'a, u32, PI_IEN_SPEC, bool, O>;
+pub type PDIEN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
@@ -328,214 +296,211 @@ impl W {
     #[doc = "Bit 0 - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien0(&mut self) -> PAIEN0_W<0> {
+    pub fn paien0(&mut self) -> PAIEN0_W<PI_IEN_SPEC, 0> {
         PAIEN0_W::new(self)
     }
     #[doc = "Bit 1 - Port A bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien1(&mut self) -> PAIEN1_W<1> {
+    pub fn paien1(&mut self) -> PAIEN1_W<PI_IEN_SPEC, 1> {
         PAIEN1_W::new(self)
     }
     #[doc = "Bit 2 - Port A bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien2(&mut self) -> PAIEN2_W<2> {
+    pub fn paien2(&mut self) -> PAIEN2_W<PI_IEN_SPEC, 2> {
         PAIEN2_W::new(self)
     }
     #[doc = "Bit 3 - Port A bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien3(&mut self) -> PAIEN3_W<3> {
+    pub fn paien3(&mut self) -> PAIEN3_W<PI_IEN_SPEC, 3> {
         PAIEN3_W::new(self)
     }
     #[doc = "Bit 4 - Port A bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien4(&mut self) -> PAIEN4_W<4> {
+    pub fn paien4(&mut self) -> PAIEN4_W<PI_IEN_SPEC, 4> {
         PAIEN4_W::new(self)
     }
     #[doc = "Bit 5 - Port A bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien5(&mut self) -> PAIEN5_W<5> {
+    pub fn paien5(&mut self) -> PAIEN5_W<PI_IEN_SPEC, 5> {
         PAIEN5_W::new(self)
     }
     #[doc = "Bit 6 - Port A bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien6(&mut self) -> PAIEN6_W<6> {
+    pub fn paien6(&mut self) -> PAIEN6_W<PI_IEN_SPEC, 6> {
         PAIEN6_W::new(self)
     }
     #[doc = "Bit 7 - Port A bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien7(&mut self) -> PAIEN7_W<7> {
+    pub fn paien7(&mut self) -> PAIEN7_W<PI_IEN_SPEC, 7> {
         PAIEN7_W::new(self)
     }
     #[doc = "Bit 8 - Port B bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien0(&mut self) -> PBIEN0_W<8> {
+    pub fn pbien0(&mut self) -> PBIEN0_W<PI_IEN_SPEC, 8> {
         PBIEN0_W::new(self)
     }
     #[doc = "Bit 9 - Port B bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien1(&mut self) -> PBIEN1_W<9> {
+    pub fn pbien1(&mut self) -> PBIEN1_W<PI_IEN_SPEC, 9> {
         PBIEN1_W::new(self)
     }
     #[doc = "Bit 10 - Port B bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien2(&mut self) -> PBIEN2_W<10> {
+    pub fn pbien2(&mut self) -> PBIEN2_W<PI_IEN_SPEC, 10> {
         PBIEN2_W::new(self)
     }
     #[doc = "Bit 11 - Port B bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien3(&mut self) -> PBIEN3_W<11> {
+    pub fn pbien3(&mut self) -> PBIEN3_W<PI_IEN_SPEC, 11> {
         PBIEN3_W::new(self)
     }
     #[doc = "Bit 12 - Port B bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien4(&mut self) -> PBIEN4_W<12> {
+    pub fn pbien4(&mut self) -> PBIEN4_W<PI_IEN_SPEC, 12> {
         PBIEN4_W::new(self)
     }
     #[doc = "Bit 13 - Port B bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien5(&mut self) -> PBIEN5_W<13> {
+    pub fn pbien5(&mut self) -> PBIEN5_W<PI_IEN_SPEC, 13> {
         PBIEN5_W::new(self)
     }
     #[doc = "Bit 14 - Port B bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien6(&mut self) -> PBIEN6_W<14> {
+    pub fn pbien6(&mut self) -> PBIEN6_W<PI_IEN_SPEC, 14> {
         PBIEN6_W::new(self)
     }
     #[doc = "Bit 15 - Port B bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien7(&mut self) -> PBIEN7_W<15> {
+    pub fn pbien7(&mut self) -> PBIEN7_W<PI_IEN_SPEC, 15> {
         PBIEN7_W::new(self)
     }
     #[doc = "Bit 16 - Port C bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien0(&mut self) -> PCIEN0_W<16> {
+    pub fn pcien0(&mut self) -> PCIEN0_W<PI_IEN_SPEC, 16> {
         PCIEN0_W::new(self)
     }
     #[doc = "Bit 17 - Port C bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien1(&mut self) -> PCIEN1_W<17> {
+    pub fn pcien1(&mut self) -> PCIEN1_W<PI_IEN_SPEC, 17> {
         PCIEN1_W::new(self)
     }
     #[doc = "Bit 18 - Port C bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien2(&mut self) -> PCIEN2_W<18> {
+    pub fn pcien2(&mut self) -> PCIEN2_W<PI_IEN_SPEC, 18> {
         PCIEN2_W::new(self)
     }
     #[doc = "Bit 19 - Port C bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien3(&mut self) -> PCIEN3_W<19> {
+    pub fn pcien3(&mut self) -> PCIEN3_W<PI_IEN_SPEC, 19> {
         PCIEN3_W::new(self)
     }
     #[doc = "Bit 20 - Port C bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien4(&mut self) -> PCIEN4_W<20> {
+    pub fn pcien4(&mut self) -> PCIEN4_W<PI_IEN_SPEC, 20> {
         PCIEN4_W::new(self)
     }
     #[doc = "Bit 21 - Port C bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien5(&mut self) -> PCIEN5_W<21> {
+    pub fn pcien5(&mut self) -> PCIEN5_W<PI_IEN_SPEC, 21> {
         PCIEN5_W::new(self)
     }
     #[doc = "Bit 22 - Port C bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien6(&mut self) -> PCIEN6_W<22> {
+    pub fn pcien6(&mut self) -> PCIEN6_W<PI_IEN_SPEC, 22> {
         PCIEN6_W::new(self)
     }
     #[doc = "Bit 23 - Port C bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien7(&mut self) -> PCIEN7_W<23> {
+    pub fn pcien7(&mut self) -> PCIEN7_W<PI_IEN_SPEC, 23> {
         PCIEN7_W::new(self)
     }
     #[doc = "Bit 24 - Port D bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien0(&mut self) -> PDIEN0_W<24> {
+    pub fn pdien0(&mut self) -> PDIEN0_W<PI_IEN_SPEC, 24> {
         PDIEN0_W::new(self)
     }
     #[doc = "Bit 25 - Port D bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien1(&mut self) -> PDIEN1_W<25> {
+    pub fn pdien1(&mut self) -> PDIEN1_W<PI_IEN_SPEC, 25> {
         PDIEN1_W::new(self)
     }
     #[doc = "Bit 26 - Port D bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien2(&mut self) -> PDIEN2_W<26> {
+    pub fn pdien2(&mut self) -> PDIEN2_W<PI_IEN_SPEC, 26> {
         PDIEN2_W::new(self)
     }
     #[doc = "Bit 27 - Port D bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien3(&mut self) -> PDIEN3_W<27> {
+    pub fn pdien3(&mut self) -> PDIEN3_W<PI_IEN_SPEC, 27> {
         PDIEN3_W::new(self)
     }
     #[doc = "Bit 28 - Port D bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien4(&mut self) -> PDIEN4_W<28> {
+    pub fn pdien4(&mut self) -> PDIEN4_W<PI_IEN_SPEC, 28> {
         PDIEN4_W::new(self)
     }
     #[doc = "Bit 29 - Port D bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien5(&mut self) -> PDIEN5_W<29> {
+    pub fn pdien5(&mut self) -> PDIEN5_W<PI_IEN_SPEC, 29> {
         PDIEN5_W::new(self)
     }
     #[doc = "Bit 30 - Port D bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien6(&mut self) -> PDIEN6_W<30> {
+    pub fn pdien6(&mut self) -> PDIEN6_W<PI_IEN_SPEC, 30> {
         PDIEN6_W::new(self)
     }
     #[doc = "Bit 31 - Port D bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien7(&mut self) -> PDIEN7_W<31> {
+    pub fn pdien7(&mut self) -> PDIEN7_W<PI_IEN_SPEC, 31> {
         PDIEN7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "The power-up interrupt enable register selects, for its corresponding port A-D pin, whether interrupts are enabled or disabled.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pi_ien](index.html) module"]
+#[doc = "The power-up interrupt enable register selects, for its corresponding port A-D pin, whether interrupts are enabled or disabled.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pi_ien::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pi_ien::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PI_IEN_SPEC;
 impl crate::RegisterSpec for PI_IEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pi_ien::R](R) reader structure"]
-impl crate::Readable for PI_IEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pi_ien::W](W) writer structure"]
+#[doc = "`read()` method returns [`pi_ien::R`](R) reader structure"]
+impl crate::Readable for PI_IEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pi_ien::W`](W) writer structure"]
 impl crate::Writable for PI_IEN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

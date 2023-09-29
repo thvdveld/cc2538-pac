@@ -1,59 +1,27 @@
 #[doc = "Register `OIE` reader"]
-pub struct R(crate::R<OIE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<OIE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<OIE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<OIE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<OIE_SPEC>;
 #[doc = "Register `OIE` writer"]
-pub struct W(crate::W<OIE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<OIE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<OIE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<OIE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<OIE_SPEC>;
 #[doc = "Field `OUTEP1IE` reader - Interrupt enable for OUT endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP1IE_R = crate::BitReader<bool>;
+pub type OUTEP1IE_R = crate::BitReader;
 #[doc = "Field `OUTEP1IE` writer - Interrupt enable for OUT endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP1IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OIE_SPEC, bool, O>;
+pub type OUTEP1IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTEP2IE` reader - Interrupt enable for OUT endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP2IE_R = crate::BitReader<bool>;
+pub type OUTEP2IE_R = crate::BitReader;
 #[doc = "Field `OUTEP2IE` writer - Interrupt enable for OUT endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP2IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OIE_SPEC, bool, O>;
+pub type OUTEP2IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTEP3IE` reader - Interrupt enable for OUT endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP3IE_R = crate::BitReader<bool>;
+pub type OUTEP3IE_R = crate::BitReader;
 #[doc = "Field `OUTEP3IE` writer - Interrupt enable for OUT endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP3IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OIE_SPEC, bool, O>;
+pub type OUTEP3IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTEP4IE` reader - Interrupt enable for OUT endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP4IE_R = crate::BitReader<bool>;
+pub type OUTEP4IE_R = crate::BitReader;
 #[doc = "Field `OUTEP4IE` writer - Interrupt enable for OUT endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP4IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OIE_SPEC, bool, O>;
+pub type OUTEP4IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OUTEP5IE` reader - Interrupt enable for OUT endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP5IE_R = crate::BitReader<bool>;
+pub type OUTEP5IE_R = crate::BitReader;
 #[doc = "Field `OUTEP5IE` writer - Interrupt enable for OUT endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
-pub type OUTEP5IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OIE_SPEC, bool, O>;
+pub type OUTEP5IE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - Interrupt enable for OUT endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
@@ -85,52 +53,49 @@ impl W {
     #[doc = "Bit 1 - Interrupt enable for OUT endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn outep1ie(&mut self) -> OUTEP1IE_W<1> {
+    pub fn outep1ie(&mut self) -> OUTEP1IE_W<OIE_SPEC, 1> {
         OUTEP1IE_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt enable for OUT endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn outep2ie(&mut self) -> OUTEP2IE_W<2> {
+    pub fn outep2ie(&mut self) -> OUTEP2IE_W<OIE_SPEC, 2> {
         OUTEP2IE_W::new(self)
     }
     #[doc = "Bit 3 - Interrupt enable for OUT endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn outep3ie(&mut self) -> OUTEP3IE_W<3> {
+    pub fn outep3ie(&mut self) -> OUTEP3IE_W<OIE_SPEC, 3> {
         OUTEP3IE_W::new(self)
     }
     #[doc = "Bit 4 - Interrupt enable for OUT endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn outep4ie(&mut self) -> OUTEP4IE_W<4> {
+    pub fn outep4ie(&mut self) -> OUTEP4IE_W<OIE_SPEC, 4> {
         OUTEP4IE_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt enable for OUT endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn outep5ie(&mut self) -> OUTEP5IE_W<5> {
+    pub fn outep5ie(&mut self) -> OUTEP5IE_W<OIE_SPEC, 5> {
         OUTEP5IE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt enable mask for OUT endpoints 1-5\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [oie](index.html) module"]
+#[doc = "Interrupt enable mask for OUT endpoints 1-5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`oie::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`oie::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OIE_SPEC;
 impl crate::RegisterSpec for OIE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [oie::R](R) reader structure"]
-impl crate::Readable for OIE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [oie::W](W) writer structure"]
+#[doc = "`read()` method returns [`oie::R`](R) reader structure"]
+impl crate::Readable for OIE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`oie::W`](W) writer structure"]
 impl crate::Writable for OIE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
