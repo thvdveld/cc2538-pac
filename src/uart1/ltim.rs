@@ -18,5 +18,5 @@ impl crate::RegisterSpec for LTIM_SPEC {
 impl crate::Readable for LTIM_SPEC {}
 #[doc = "`reset()` method sets LTIM to value 0"]
 impl crate::Resettable for LTIM_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

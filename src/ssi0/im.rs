@@ -5,19 +5,19 @@ pub type W = crate::W<IM_SPEC>;
 #[doc = "Field `RORIM` reader - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
 pub type RORIM_R = crate::BitReader;
 #[doc = "Field `RORIM` writer - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
-pub type RORIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RORIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTIM` reader - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
 pub type RTIM_R = crate::BitReader;
 #[doc = "Field `RTIM` writer - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
-pub type RTIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXIM` reader - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
 pub type RXIM_R = crate::BitReader;
 #[doc = "Field `RXIM` writer - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
-pub type RXIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXIM` reader - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
 pub type TXIM_R = crate::BitReader;
 #[doc = "Field `TXIM` writer - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
-pub type TXIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bit 0 - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
     #[inline(always)]
     #[must_use]
-    pub fn rorim(&mut self) -> RORIM_W<IM_SPEC, 0> {
-        RORIM_W::new(self)
+    pub fn rorim(&mut self) -> RORIM_W<IM_SPEC> {
+        RORIM_W::new(self, 0)
     }
     #[doc = "Bit 1 - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
     #[inline(always)]
     #[must_use]
-    pub fn rtim(&mut self) -> RTIM_W<IM_SPEC, 1> {
-        RTIM_W::new(self)
+    pub fn rtim(&mut self) -> RTIM_W<IM_SPEC> {
+        RTIM_W::new(self, 1)
     }
     #[doc = "Bit 2 - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
     #[inline(always)]
     #[must_use]
-    pub fn rxim(&mut self) -> RXIM_W<IM_SPEC, 2> {
-        RXIM_W::new(self)
+    pub fn rxim(&mut self) -> RXIM_W<IM_SPEC> {
+        RXIM_W::new(self, 2)
     }
     #[doc = "Bit 3 - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
     #[inline(always)]
     #[must_use]
-    pub fn txim(&mut self) -> TXIM_W<IM_SPEC, 3> {
-        TXIM_W::new(self)
+    pub fn txim(&mut self) -> TXIM_W<IM_SPEC> {
+        TXIM_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -81,10 +85,10 @@ impl crate::RegisterSpec for IM_SPEC {
 impl crate::Readable for IM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`im::W`](W) writer structure"]
 impl crate::Writable for IM_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IM to value 0"]
 impl crate::Resettable for IM_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

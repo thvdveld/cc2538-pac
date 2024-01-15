@@ -5,11 +5,11 @@ pub type W = crate::W<FSMCTRL_SPEC>;
 #[doc = "Field `RX2RX_TIME_OFF` reader - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
 pub type RX2RX_TIME_OFF_R = crate::BitReader;
 #[doc = "Field `RX2RX_TIME_OFF` writer - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
-pub type RX2RX_TIME_OFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX2RX_TIME_OFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOTTED_ACK` reader - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
 pub type SLOTTED_ACK_R = crate::BitReader;
 #[doc = "Field `SLOTTED_ACK` writer - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
-pub type SLOTTED_ACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLOTTED_ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bit 0 - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
     #[inline(always)]
     #[must_use]
-    pub fn rx2rx_time_off(&mut self) -> RX2RX_TIME_OFF_W<FSMCTRL_SPEC, 0> {
-        RX2RX_TIME_OFF_W::new(self)
+    pub fn rx2rx_time_off(&mut self) -> RX2RX_TIME_OFF_W<FSMCTRL_SPEC> {
+        RX2RX_TIME_OFF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
     #[inline(always)]
     #[must_use]
-    pub fn slotted_ack(&mut self) -> SLOTTED_ACK_W<FSMCTRL_SPEC, 1> {
-        SLOTTED_ACK_W::new(self)
+    pub fn slotted_ack(&mut self) -> SLOTTED_ACK_W<FSMCTRL_SPEC> {
+        SLOTTED_ACK_W::new(self, 1)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for FSMCTRL_SPEC {
 impl crate::Readable for FSMCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fsmctrl::W`](W) writer structure"]
 impl crate::Writable for FSMCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FSMCTRL to value 0"]
 impl crate::Resettable for FSMCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

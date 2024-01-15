@@ -5,17 +5,17 @@ pub type W = crate::W<WDCTL_SPEC>;
 #[doc = "Field `INT` reader - Timer interval select These bits select the timer interval as follows: 00: Twdt x 32768 01: Twdt x 8192 10: Twdt x 512 11: Twdt x 64 Writing these bits when EN = 1 has no effect."]
 pub type INT_R = crate::FieldReader;
 #[doc = "Field `INT` writer - Timer interval select These bits select the timer interval as follows: 00: Twdt x 32768 01: Twdt x 8192 10: Twdt x 512 11: Twdt x 64 Writing these bits when EN = 1 has no effect."]
-pub type INT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type INT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `EN` reader - Enable timer When 1 is written to this bit the timer is enabled and starts incrementing. The interval setting specified by INT\\[1:0\\]
 is used. Writing 0 to this bit have no effect."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Enable timer When 1 is written to this bit the timer is enabled and starts incrementing. The interval setting specified by INT\\[1:0\\]
 is used. Writing 0 to this bit have no effect."]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLR` reader - Clear timer When 0xA followed by 0x5 is written to these bits, the timer is loaded with 0x0000. Note that 0x5 must be written within one watchdog clock period Twdt after 0xA was written for the clearing to take effect (ensured). If 0x5 is written between Twdt and 2Twdt after 0xA was written, the clearing may take effect, but there is no guarantee. If 0x5 is written > 2Twdt after 0xA was written, the timer will not be cleared. If a value other than 0x5 is written after 0xA has been written, the clear sequence is aborted. If 0xA is written, this starts a new clear sequence. Writing to these bits when EN = 0 has no effect."]
 pub type CLR_R = crate::FieldReader;
 #[doc = "Field `CLR` writer - Clear timer When 0xA followed by 0x5 is written to these bits, the timer is loaded with 0x0000. Note that 0x5 must be written within one watchdog clock period Twdt after 0xA was written for the clearing to take effect (ensured). If 0x5 is written between Twdt and 2Twdt after 0xA was written, the clearing may take effect, but there is no guarantee. If 0x5 is written > 2Twdt after 0xA was written, the timer will not be cleared. If a value other than 0x5 is written after 0xA has been written, the clear sequence is aborted. If 0xA is written, this starts a new clear sequence. Writing to these bits when EN = 0 has no effect."]
-pub type CLR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CLR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:1 - Timer interval select These bits select the timer interval as follows: 00: Twdt x 32768 01: Twdt x 8192 10: Twdt x 512 11: Twdt x 64 Writing these bits when EN = 1 has no effect."]
     #[inline(always)]
@@ -38,23 +38,27 @@ impl W {
     #[doc = "Bits 0:1 - Timer interval select These bits select the timer interval as follows: 00: Twdt x 32768 01: Twdt x 8192 10: Twdt x 512 11: Twdt x 64 Writing these bits when EN = 1 has no effect."]
     #[inline(always)]
     #[must_use]
-    pub fn int(&mut self) -> INT_W<WDCTL_SPEC, 0> {
-        INT_W::new(self)
+    pub fn int(&mut self) -> INT_W<WDCTL_SPEC> {
+        INT_W::new(self, 0)
     }
     #[doc = "Bit 3 - Enable timer When 1 is written to this bit the timer is enabled and starts incrementing. The interval setting specified by INT\\[1:0\\]
 is used. Writing 0 to this bit have no effect."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<WDCTL_SPEC, 3> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<WDCTL_SPEC> {
+        EN_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - Clear timer When 0xA followed by 0x5 is written to these bits, the timer is loaded with 0x0000. Note that 0x5 must be written within one watchdog clock period Twdt after 0xA was written for the clearing to take effect (ensured). If 0x5 is written between Twdt and 2Twdt after 0xA was written, the clearing may take effect, but there is no guarantee. If 0x5 is written > 2Twdt after 0xA was written, the timer will not be cleared. If a value other than 0x5 is written after 0xA has been written, the clear sequence is aborted. If 0xA is written, this starts a new clear sequence. Writing to these bits when EN = 0 has no effect."]
     #[inline(always)]
     #[must_use]
-    pub fn clr(&mut self) -> CLR_W<WDCTL_SPEC, 4> {
-        CLR_W::new(self)
+    pub fn clr(&mut self) -> CLR_W<WDCTL_SPEC> {
+        CLR_W::new(self, 4)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -70,10 +74,10 @@ impl crate::RegisterSpec for WDCTL_SPEC {
 impl crate::Readable for WDCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wdctl::W`](W) writer structure"]
 impl crate::Writable for WDCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WDCTL to value 0"]
 impl crate::Resettable for WDCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -18,5 +18,5 @@ impl crate::RegisterSpec for CNTH_SPEC {
 impl crate::Readable for CNTH_SPEC {}
 #[doc = "`reset()` method sets CNTH to value 0"]
 impl crate::Resettable for CNTH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

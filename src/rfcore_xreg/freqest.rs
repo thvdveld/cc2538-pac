@@ -18,5 +18,5 @@ impl crate::RegisterSpec for FREQEST_SPEC {
 impl crate::Readable for FREQEST_SPEC {}
 #[doc = "`reset()` method sets FREQEST to value 0"]
 impl crate::Resettable for FREQEST_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

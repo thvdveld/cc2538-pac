@@ -5,7 +5,7 @@ pub type W = crate::W<IO_SPEC>;
 #[doc = "Field `SC` reader - I/O strength control bit Common to all digital output pads Should be set when unregulated voltage is below approximately 2.6 V."]
 pub type SC_R = crate::BitReader;
 #[doc = "Field `SC` writer - I/O strength control bit Common to all digital output pads Should be set when unregulated voltage is below approximately 2.6 V."]
-pub type SC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - I/O strength control bit Common to all digital output pads Should be set when unregulated voltage is below approximately 2.6 V."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bit 0 - I/O strength control bit Common to all digital output pads Should be set when unregulated voltage is below approximately 2.6 V."]
     #[inline(always)]
     #[must_use]
-    pub fn sc(&mut self) -> SC_W<IO_SPEC, 0> {
-        SC_W::new(self)
+    pub fn sc(&mut self) -> SC_W<IO_SPEC> {
+        SC_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for IO_SPEC {
 impl crate::Readable for IO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`io::W`](W) writer structure"]
 impl crate::Writable for IO_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IO to value 0"]
 impl crate::Resettable for IO_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -5,7 +5,7 @@ pub type W = crate::W<PC2_OVER_SPEC>;
 #[doc = "Field `PC2_over` reader - 0: output disable 1: oe - output enable"]
 pub type PC2_OVER_R = crate::BitReader;
 #[doc = "Field `PC2_over` writer - 0: output disable 1: oe - output enable"]
-pub type PC2_OVER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PC2_OVER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - 0: output disable 1: oe - output enable"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bit 3 - 0: output disable 1: oe - output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pc2_over(&mut self) -> PC2_OVER_W<PC2_OVER_SPEC, 3> {
-        PC2_OVER_W::new(self)
+    pub fn pc2_over(&mut self) -> PC2_OVER_W<PC2_OVER_SPEC> {
+        PC2_OVER_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for PC2_OVER_SPEC {
 impl crate::Readable for PC2_OVER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pc2_over::W`](W) writer structure"]
 impl crate::Writable for PC2_OVER_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PC2_OVER to value 0x04"]
 impl crate::Resettable for PC2_OVER_SPEC {
-    const RESET_VALUE: Self::Ux = 0x04;
+    const RESET_VALUE: u32 = 0x04;
 }

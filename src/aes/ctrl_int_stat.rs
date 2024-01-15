@@ -46,5 +46,5 @@ impl crate::RegisterSpec for CTRL_INT_STAT_SPEC {
 impl crate::Readable for CTRL_INT_STAT_SPEC {}
 #[doc = "`reset()` method sets CTRL_INT_STAT to value 0"]
 impl crate::Resettable for CTRL_INT_STAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

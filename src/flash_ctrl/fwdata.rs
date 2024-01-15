@@ -5,7 +5,7 @@ pub type W = crate::W<FWDATA_SPEC>;
 #[doc = "Field `FWDATA` reader - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
 pub type FWDATA_R = crate::FieldReader<u32>;
 #[doc = "Field `FWDATA` writer - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
-pub type FWDATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type FWDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:31 - 32-bit flash write data Writes to this register are accepted only during a flash write sequence; that is, writes to this register after having written 1 to the FCTL.WRITE bit. New 32-bit data is written only if FCTL.FULL = 0."]
     #[inline(always)]
     #[must_use]
-    pub fn fwdata(&mut self) -> FWDATA_W<FWDATA_SPEC, 0> {
-        FWDATA_W::new(self)
+    pub fn fwdata(&mut self) -> FWDATA_W<FWDATA_SPEC> {
+        FWDATA_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for FWDATA_SPEC {
 impl crate::Readable for FWDATA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fwdata::W`](W) writer structure"]
 impl crate::Writable for FWDATA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FWDATA to value 0"]
 impl crate::Resettable for FWDATA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

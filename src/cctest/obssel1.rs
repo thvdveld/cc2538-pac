@@ -7,11 +7,11 @@ output on output 1: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Rese
 pub type SEL_R = crate::FieldReader;
 #[doc = "Field `SEL` writer - n - obs_sigs\\[n\\]
 output on output 1: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
-pub type SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `EN` reader - Observation output 1 enable control for PC1 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC1."]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Observation output 1 enable control for PC1 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC1."]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:6 - n - obs_sigs\\[n\\]
 output on output 1: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
@@ -30,16 +30,20 @@ impl W {
 output on output 1: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn sel(&mut self) -> SEL_W<OBSSEL1_SPEC, 0> {
-        SEL_W::new(self)
+    pub fn sel(&mut self) -> SEL_W<OBSSEL1_SPEC> {
+        SEL_W::new(self, 0)
     }
     #[doc = "Bit 7 - Observation output 1 enable control for PC1 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC1."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<OBSSEL1_SPEC, 7> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<OBSSEL1_SPEC> {
+        EN_W::new(self, 7)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -55,10 +59,10 @@ impl crate::RegisterSpec for OBSSEL1_SPEC {
 impl crate::Readable for OBSSEL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`obssel1::W`](W) writer structure"]
 impl crate::Writable for OBSSEL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OBSSEL1 to value 0"]
 impl crate::Resettable for OBSSEL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

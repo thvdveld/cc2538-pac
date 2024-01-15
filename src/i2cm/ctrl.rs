@@ -1,39 +1,43 @@
 #[doc = "Register `CTRL` writer"]
 pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `RUN` writer - I2C master enable 0: The master is disabled. 1: The master is enabled to transmit or receive data. When the BUSY bit is set, the other status bits are not valid."]
-pub type RUN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RUN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `START` writer - Generate START 0: The controller does not generate the START condition. 1: The controller generates the START condition."]
-pub type START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STOP` writer - Generate STOP 0: The controller does not generate the STOP condition. 1: The controller generates the STOP condition."]
-pub type STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACK` writer - Data acknowledge enable 0: The received data byte is not acknowledged automatically by the master. 1: The received data byte is acknowledged automatically by the master."]
-pub type ACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - I2C master enable 0: The master is disabled. 1: The master is enabled to transmit or receive data. When the BUSY bit is set, the other status bits are not valid."]
     #[inline(always)]
     #[must_use]
-    pub fn run(&mut self) -> RUN_W<CTRL_SPEC, 0> {
-        RUN_W::new(self)
+    pub fn run(&mut self) -> RUN_W<CTRL_SPEC> {
+        RUN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Generate START 0: The controller does not generate the START condition. 1: The controller generates the START condition."]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<CTRL_SPEC, 1> {
-        START_W::new(self)
+    pub fn start(&mut self) -> START_W<CTRL_SPEC> {
+        START_W::new(self, 1)
     }
     #[doc = "Bit 2 - Generate STOP 0: The controller does not generate the STOP condition. 1: The controller generates the STOP condition."]
     #[inline(always)]
     #[must_use]
-    pub fn stop(&mut self) -> STOP_W<CTRL_SPEC, 2> {
-        STOP_W::new(self)
+    pub fn stop(&mut self) -> STOP_W<CTRL_SPEC> {
+        STOP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Data acknowledge enable 0: The received data byte is not acknowledged automatically by the master. 1: The received data byte is acknowledged automatically by the master."]
     #[inline(always)]
     #[must_use]
-    pub fn ack(&mut self) -> ACK_W<CTRL_SPEC, 3> {
-        ACK_W::new(self)
+    pub fn ack(&mut self) -> ACK_W<CTRL_SPEC> {
+        ACK_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -47,10 +51,10 @@ impl crate::RegisterSpec for CTRL_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
 impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

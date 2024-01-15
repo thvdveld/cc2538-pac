@@ -18,5 +18,5 @@ impl crate::RegisterSpec for CSPPROG_5_SPEC {
 impl crate::Readable for CSPPROG_5_SPEC {}
 #[doc = "`reset()` method sets CSPPROG_5 to value 0"]
 impl crate::Resettable for CSPPROG_5_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

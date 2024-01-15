@@ -5,7 +5,7 @@ pub type W = crate::W<USB_CTRL_SPEC>;
 #[doc = "Field `USB_EDGE_CTL` reader - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
 pub type USB_EDGE_CTL_R = crate::BitReader;
 #[doc = "Field `USB_EDGE_CTL` writer - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
-pub type USB_EDGE_CTL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_EDGE_CTL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bit 0 - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
     #[inline(always)]
     #[must_use]
-    pub fn usb_edge_ctl(&mut self) -> USB_EDGE_CTL_W<USB_CTRL_SPEC, 0> {
-        USB_EDGE_CTL_W::new(self)
+    pub fn usb_edge_ctl(&mut self) -> USB_EDGE_CTL_W<USB_CTRL_SPEC> {
+        USB_EDGE_CTL_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for USB_CTRL_SPEC {
 impl crate::Readable for USB_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`usb_ctrl::W`](W) writer structure"]
 impl crate::Writable for USB_CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USB_CTRL to value 0"]
 impl crate::Resettable for USB_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

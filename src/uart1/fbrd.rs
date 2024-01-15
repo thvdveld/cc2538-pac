@@ -5,7 +5,7 @@ pub type W = crate::W<FBRD_SPEC>;
 #[doc = "Field `DIVFRAC` reader - Fractional baud-rate divisor"]
 pub type DIVFRAC_R = crate::FieldReader;
 #[doc = "Field `DIVFRAC` writer - Fractional baud-rate divisor"]
-pub type DIVFRAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type DIVFRAC_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - Fractional baud-rate divisor"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:5 - Fractional baud-rate divisor"]
     #[inline(always)]
     #[must_use]
-    pub fn divfrac(&mut self) -> DIVFRAC_W<FBRD_SPEC, 0> {
-        DIVFRAC_W::new(self)
+    pub fn divfrac(&mut self) -> DIVFRAC_W<FBRD_SPEC> {
+        DIVFRAC_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for FBRD_SPEC {
 impl crate::Readable for FBRD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fbrd::W`](W) writer structure"]
 impl crate::Writable for FBRD_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FBRD to value 0"]
 impl crate::Resettable for FBRD_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

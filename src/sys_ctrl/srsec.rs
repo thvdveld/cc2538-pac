@@ -5,11 +5,11 @@ pub type W = crate::W<SRSEC_SPEC>;
 #[doc = "Field `PKA` reader - 0: PKA module is not reset 1: PKA module is reset"]
 pub type PKA_R = crate::BitReader;
 #[doc = "Field `PKA` writer - 0: PKA module is not reset 1: PKA module is reset"]
-pub type PKA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PKA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AES` reader - 0: AES module is not reset 1: AES module is reset"]
 pub type AES_R = crate::BitReader;
 #[doc = "Field `AES` writer - 0: AES module is not reset 1: AES module is reset"]
-pub type AES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AES_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 0: PKA module is not reset 1: PKA module is reset"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bit 0 - 0: PKA module is not reset 1: PKA module is reset"]
     #[inline(always)]
     #[must_use]
-    pub fn pka(&mut self) -> PKA_W<SRSEC_SPEC, 0> {
-        PKA_W::new(self)
+    pub fn pka(&mut self) -> PKA_W<SRSEC_SPEC> {
+        PKA_W::new(self, 0)
     }
     #[doc = "Bit 1 - 0: AES module is not reset 1: AES module is reset"]
     #[inline(always)]
     #[must_use]
-    pub fn aes(&mut self) -> AES_W<SRSEC_SPEC, 1> {
-        AES_W::new(self)
+    pub fn aes(&mut self) -> AES_W<SRSEC_SPEC> {
+        AES_W::new(self, 1)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for SRSEC_SPEC {
 impl crate::Readable for SRSEC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`srsec::W`](W) writer structure"]
 impl crate::Writable for SRSEC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRSEC to value 0"]
 impl crate::Resettable for SRSEC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

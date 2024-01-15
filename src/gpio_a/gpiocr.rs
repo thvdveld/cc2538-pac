@@ -5,7 +5,7 @@ pub type W = crate::W<GPIOCR_SPEC>;
 #[doc = "Field `CR` reader - On a bit-wise basis, any bit set allows the corresponding GPIOAFSEL bit to be set to its alternate function."]
 pub type CR_R = crate::FieldReader;
 #[doc = "Field `CR` writer - On a bit-wise basis, any bit set allows the corresponding GPIOAFSEL bit to be set to its alternate function."]
-pub type CR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - On a bit-wise basis, any bit set allows the corresponding GPIOAFSEL bit to be set to its alternate function."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - On a bit-wise basis, any bit set allows the corresponding GPIOAFSEL bit to be set to its alternate function."]
     #[inline(always)]
     #[must_use]
-    pub fn cr(&mut self) -> CR_W<GPIOCR_SPEC, 0> {
-        CR_W::new(self)
+    pub fn cr(&mut self) -> CR_W<GPIOCR_SPEC> {
+        CR_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for GPIOCR_SPEC {
 impl crate::Readable for GPIOCR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpiocr::W`](W) writer structure"]
 impl crate::Writable for GPIOCR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPIOCR to value 0xff"]
 impl crate::Resettable for GPIOCR_SPEC {
-    const RESET_VALUE: Self::Ux = 0xff;
+    const RESET_VALUE: u32 = 0xff;
 }

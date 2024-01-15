@@ -5,19 +5,19 @@ pub type W = crate::W<ADCTEST2_SPEC>;
 #[doc = "Field `ADC_DAC_ROT` reader - Control of DAC DWA scheme 0 = DWA (scrambling) disabled 1 = DWA enabled"]
 pub type ADC_DAC_ROT_R = crate::BitReader;
 #[doc = "Field `ADC_DAC_ROT` writer - Control of DAC DWA scheme 0 = DWA (scrambling) disabled 1 = DWA enabled"]
-pub type ADC_DAC_ROT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC_DAC_ROT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC_FF_ADJ` reader - Adjust feed forward"]
 pub type ADC_FF_ADJ_R = crate::FieldReader;
 #[doc = "Field `ADC_FF_ADJ` writer - Adjust feed forward"]
-pub type ADC_FF_ADJ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ADC_FF_ADJ_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `AAF_RS` reader - Controls series resistance of AAF"]
 pub type AAF_RS_R = crate::FieldReader;
 #[doc = "Field `AAF_RS` writer - Controls series resistance of AAF"]
-pub type AAF_RS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AAF_RS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ADC_TEST_MODE` reader - Test mode to enable output of ADC data from demodulator. When enabled, raw ADC data is clocked out on the GPIO pins. 00: Test mode disabled 01: Data from the I and Q ADCs are output (data rate 76 MHz) 10: Data from the I ADC is output. Two and two ADC samples grouped (data rate 38 MHz) 11: Data from the Q ADC is output. Two and two ADC samples grouped (data rate 38 MHz)"]
 pub type ADC_TEST_MODE_R = crate::FieldReader;
 #[doc = "Field `ADC_TEST_MODE` writer - Test mode to enable output of ADC data from demodulator. When enabled, raw ADC data is clocked out on the GPIO pins. 00: Test mode disabled 01: Data from the I and Q ADCs are output (data rate 76 MHz) 10: Data from the I ADC is output. Two and two ADC samples grouped (data rate 38 MHz) 11: Data from the Q ADC is output. Two and two ADC samples grouped (data rate 38 MHz)"]
-pub type ADC_TEST_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ADC_TEST_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - Control of DAC DWA scheme 0 = DWA (scrambling) disabled 1 = DWA enabled"]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bit 0 - Control of DAC DWA scheme 0 = DWA (scrambling) disabled 1 = DWA enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_dac_rot(&mut self) -> ADC_DAC_ROT_W<ADCTEST2_SPEC, 0> {
-        ADC_DAC_ROT_W::new(self)
+    pub fn adc_dac_rot(&mut self) -> ADC_DAC_ROT_W<ADCTEST2_SPEC> {
+        ADC_DAC_ROT_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Adjust feed forward"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_ff_adj(&mut self) -> ADC_FF_ADJ_W<ADCTEST2_SPEC, 1> {
-        ADC_FF_ADJ_W::new(self)
+    pub fn adc_ff_adj(&mut self) -> ADC_FF_ADJ_W<ADCTEST2_SPEC> {
+        ADC_FF_ADJ_W::new(self, 1)
     }
     #[doc = "Bits 3:4 - Controls series resistance of AAF"]
     #[inline(always)]
     #[must_use]
-    pub fn aaf_rs(&mut self) -> AAF_RS_W<ADCTEST2_SPEC, 3> {
-        AAF_RS_W::new(self)
+    pub fn aaf_rs(&mut self) -> AAF_RS_W<ADCTEST2_SPEC> {
+        AAF_RS_W::new(self, 3)
     }
     #[doc = "Bits 5:6 - Test mode to enable output of ADC data from demodulator. When enabled, raw ADC data is clocked out on the GPIO pins. 00: Test mode disabled 01: Data from the I and Q ADCs are output (data rate 76 MHz) 10: Data from the I ADC is output. Two and two ADC samples grouped (data rate 38 MHz) 11: Data from the Q ADC is output. Two and two ADC samples grouped (data rate 38 MHz)"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_test_mode(&mut self) -> ADC_TEST_MODE_W<ADCTEST2_SPEC, 5> {
-        ADC_TEST_MODE_W::new(self)
+    pub fn adc_test_mode(&mut self) -> ADC_TEST_MODE_W<ADCTEST2_SPEC> {
+        ADC_TEST_MODE_W::new(self, 5)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -81,10 +85,10 @@ impl crate::RegisterSpec for ADCTEST2_SPEC {
 impl crate::Readable for ADCTEST2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`adctest2::W`](W) writer structure"]
 impl crate::Writable for ADCTEST2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ADCTEST2 to value 0"]
 impl crate::Resettable for ADCTEST2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

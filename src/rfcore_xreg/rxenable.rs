@@ -18,5 +18,5 @@ impl crate::RegisterSpec for RXENABLE_SPEC {
 impl crate::Readable for RXENABLE_SPEC {}
 #[doc = "`reset()` method sets RXENABLE to value 0"]
 impl crate::Resettable for RXENABLE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

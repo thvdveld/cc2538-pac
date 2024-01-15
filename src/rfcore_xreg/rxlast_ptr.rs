@@ -18,5 +18,5 @@ impl crate::RegisterSpec for RXLAST_PTR_SPEC {
 impl crate::Readable for RXLAST_PTR_SPEC {}
 #[doc = "`reset()` method sets RXLAST_PTR to value 0"]
 impl crate::Resettable for RXLAST_PTR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

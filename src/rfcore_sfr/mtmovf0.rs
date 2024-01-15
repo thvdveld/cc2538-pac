@@ -7,7 +7,7 @@ of an internal register, depending on the value of MTMSEL.MTMOVFSEL. When readin
 pub type MTMOVF0_R = crate::FieldReader;
 #[doc = "Field `MTMOVF0` writer - Indirectly returns and modifies bits \\[7:0\\]
 of an internal register, depending on the value of MTMSEL.MTMOVFSEL. When reading the MTMOVF0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the overflow counter value (MTovf) is latched. When reading the MTM0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the overflow counter value (MTovf) is latched."]
-pub type MTMOVF0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type MTMOVF0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[7:0\\]
 of an internal register, depending on the value of MTMSEL.MTMOVFSEL. When reading the MTMOVF0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the overflow counter value (MTovf) is latched. When reading the MTM0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the overflow counter value (MTovf) is latched."]
@@ -21,10 +21,14 @@ impl W {
 of an internal register, depending on the value of MTMSEL.MTMOVFSEL. When reading the MTMOVF0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the overflow counter value (MTovf) is latched. When reading the MTM0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the overflow counter value (MTovf) is latched."]
     #[inline(always)]
     #[must_use]
-    pub fn mtmovf0(&mut self) -> MTMOVF0_W<MTMOVF0_SPEC, 0> {
-        MTMOVF0_W::new(self)
+    pub fn mtmovf0(&mut self) -> MTMOVF0_W<MTMOVF0_SPEC> {
+        MTMOVF0_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -40,10 +44,10 @@ impl crate::RegisterSpec for MTMOVF0_SPEC {
 impl crate::Readable for MTMOVF0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mtmovf0::W`](W) writer structure"]
 impl crate::Writable for MTMOVF0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MTMOVF0 to value 0"]
 impl crate::Resettable for MTMOVF0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

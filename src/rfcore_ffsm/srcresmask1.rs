@@ -5,7 +5,7 @@ pub type W = crate::W<SRCRESMASK1_SPEC>;
 #[doc = "Field `SRCRESMASK1` reader - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
 pub type SRCRESMASK1_R = crate::FieldReader;
 #[doc = "Field `SRCRESMASK1` writer - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
-pub type SRCRESMASK1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SRCRESMASK1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - Short address matching When there is a match on entry panid_n + short_n, bit n is set in SRCRESMASK."]
     #[inline(always)]
     #[must_use]
-    pub fn srcresmask1(&mut self) -> SRCRESMASK1_W<SRCRESMASK1_SPEC, 0> {
-        SRCRESMASK1_W::new(self)
+    pub fn srcresmask1(&mut self) -> SRCRESMASK1_W<SRCRESMASK1_SPEC> {
+        SRCRESMASK1_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for SRCRESMASK1_SPEC {
 impl crate::Readable for SRCRESMASK1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`srcresmask1::W`](W) writer structure"]
 impl crate::Writable for SRCRESMASK1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRCRESMASK1 to value 0"]
 impl crate::Resettable for SRCRESMASK1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -5,7 +5,7 @@ pub type W = crate::W<SRCSHORTPENDEN0_SPEC>;
 #[doc = "Field `SRCSHORTPENDEN0` reader - 8 LSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
 pub type SRCSHORTPENDEN0_R = crate::FieldReader;
 #[doc = "Field `SRCSHORTPENDEN0` writer - 8 LSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
-pub type SRCSHORTPENDEN0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SRCSHORTPENDEN0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - 8 LSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - 8 LSBs of the 24-bit mask that enables or disables automatic pending for each of the 24 short addresses"]
     #[inline(always)]
     #[must_use]
-    pub fn srcshortpenden0(&mut self) -> SRCSHORTPENDEN0_W<SRCSHORTPENDEN0_SPEC, 0> {
-        SRCSHORTPENDEN0_W::new(self)
+    pub fn srcshortpenden0(&mut self) -> SRCSHORTPENDEN0_W<SRCSHORTPENDEN0_SPEC> {
+        SRCSHORTPENDEN0_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for SRCSHORTPENDEN0_SPEC {
 impl crate::Readable for SRCSHORTPENDEN0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`srcshortpenden0::W`](W) writer structure"]
 impl crate::Writable for SRCSHORTPENDEN0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRCSHORTPENDEN0 to value 0"]
 impl crate::Resettable for SRCSHORTPENDEN0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

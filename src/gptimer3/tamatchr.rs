@@ -5,7 +5,7 @@ pub type W = crate::W<TAMATCHR_SPEC>;
 #[doc = "Field `TAMR` reader - GPTM Timer A match register"]
 pub type TAMR_R = crate::FieldReader<u32>;
 #[doc = "Field `TAMR` writer - GPTM Timer A match register"]
-pub type TAMR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TAMR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - GPTM Timer A match register"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:31 - GPTM Timer A match register"]
     #[inline(always)]
     #[must_use]
-    pub fn tamr(&mut self) -> TAMR_W<TAMATCHR_SPEC, 0> {
-        TAMR_W::new(self)
+    pub fn tamr(&mut self) -> TAMR_W<TAMATCHR_SPEC> {
+        TAMR_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for TAMATCHR_SPEC {
 impl crate::Readable for TAMATCHR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tamatchr::W`](W) writer structure"]
 impl crate::Writable for TAMATCHR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TAMATCHR to value 0"]
 impl crate::Resettable for TAMATCHR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

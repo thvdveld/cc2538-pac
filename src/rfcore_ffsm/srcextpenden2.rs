@@ -7,7 +7,7 @@ bits are don't care."]
 pub type SRCEXTPENDEN2_R = crate::FieldReader;
 #[doc = "Field `SRCEXTPENDEN2` writer - 8 MSBs of the 24-bit mask that enables or disables automatic pending for each of the 12 extended addresses Entry n is mapped to SRCEXTPENDEN\\[2n\\]. All SRCEXTPENDEN\\[2n + 1\\]
 bits are don't care."]
-pub type SRCEXTPENDEN2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SRCEXTPENDEN2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - 8 MSBs of the 24-bit mask that enables or disables automatic pending for each of the 12 extended addresses Entry n is mapped to SRCEXTPENDEN\\[2n\\]. All SRCEXTPENDEN\\[2n + 1\\]
 bits are don't care."]
@@ -21,10 +21,14 @@ impl W {
 bits are don't care."]
     #[inline(always)]
     #[must_use]
-    pub fn srcextpenden2(&mut self) -> SRCEXTPENDEN2_W<SRCEXTPENDEN2_SPEC, 0> {
-        SRCEXTPENDEN2_W::new(self)
+    pub fn srcextpenden2(&mut self) -> SRCEXTPENDEN2_W<SRCEXTPENDEN2_SPEC> {
+        SRCEXTPENDEN2_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -40,10 +44,10 @@ impl crate::RegisterSpec for SRCEXTPENDEN2_SPEC {
 impl crate::Readable for SRCEXTPENDEN2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`srcextpenden2::W`](W) writer structure"]
 impl crate::Writable for SRCEXTPENDEN2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRCEXTPENDEN2 to value 0"]
 impl crate::Resettable for SRCEXTPENDEN2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

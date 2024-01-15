@@ -15,7 +15,7 @@ is enabled to request uDMA transfers 1: The peripheral associated with channel \
 is not able to request uDMA transfers. Channel \\[n\\]
 may be used for software-initiated transfers. Bit 0 corresponds to channel 0. A bit can only be cleared by setting the corresponding CLR\\[n\\]
 bit in the DMAREQMASKCLR register."]
-pub type SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SET_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 request mask set 0: The peripheral associated with channel \\[n\\]
@@ -37,10 +37,14 @@ may be used for software-initiated transfers. Bit 0 corresponds to channel 0. A 
 bit in the DMAREQMASKCLR register."]
     #[inline(always)]
     #[must_use]
-    pub fn set(&mut self) -> SET_W<REQMASKSET_SPEC, 0> {
-        SET_W::new(self)
+    pub fn set(&mut self) -> SET_W<REQMASKSET_SPEC> {
+        SET_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -56,10 +60,10 @@ impl crate::RegisterSpec for REQMASKSET_SPEC {
 impl crate::Readable for REQMASKSET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`reqmaskset::W`](W) writer structure"]
 impl crate::Writable for REQMASKSET_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REQMASKSET to value 0"]
 impl crate::Resettable for REQMASKSET_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

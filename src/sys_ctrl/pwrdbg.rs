@@ -5,7 +5,7 @@ pub type W = crate::W<PWRDBG_SPEC>;
 #[doc = "Field `FORCE_WARM_RESET` reader - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
 pub type FORCE_WARM_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_WARM_RESET` writer - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
-pub type FORCE_WARM_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCE_WARM_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bit 3 - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
     #[inline(always)]
     #[must_use]
-    pub fn force_warm_reset(&mut self) -> FORCE_WARM_RESET_W<PWRDBG_SPEC, 3> {
-        FORCE_WARM_RESET_W::new(self)
+    pub fn force_warm_reset(&mut self) -> FORCE_WARM_RESET_W<PWRDBG_SPEC> {
+        FORCE_WARM_RESET_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for PWRDBG_SPEC {
 impl crate::Readable for PWRDBG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pwrdbg::W`](W) writer structure"]
 impl crate::Writable for PWRDBG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PWRDBG to value 0"]
 impl crate::Resettable for PWRDBG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -5,11 +5,11 @@ pub type W = crate::W<IFLS_SPEC>;
 #[doc = "Field `TXIFLSEL` reader - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO &lt;= 7/8 empty 0x1: TX FIFO &lt;= 3/4 empty 0x2: TX FIFO &lt;= 1/2 empty (default) 0x3: TX FIFO &lt;= 1/4 empty 0x4: TX FIFO &lt;= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
 pub type TXIFLSEL_R = crate::FieldReader;
 #[doc = "Field `TXIFLSEL` writer - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO &lt;= 7/8 empty 0x1: TX FIFO &lt;= 3/4 empty 0x2: TX FIFO &lt;= 1/2 empty (default) 0x3: TX FIFO &lt;= 1/4 empty 0x4: TX FIFO &lt;= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
-pub type TXIFLSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TXIFLSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RXIFLSEL` reader - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
 pub type RXIFLSEL_R = crate::FieldReader;
 #[doc = "Field `RXIFLSEL` writer - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
-pub type RXIFLSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RXIFLSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO &lt;= 7/8 empty 0x1: TX FIFO &lt;= 3/4 empty 0x2: TX FIFO &lt;= 1/2 empty (default) 0x3: TX FIFO &lt;= 1/4 empty 0x4: TX FIFO &lt;= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bits 0:2 - UART Transmit Interrupt FIFO Level Select The trigger points for the transmit interrupt are as follows: 0x0: TX FIFO &lt;= 7/8 empty 0x1: TX FIFO &lt;= 3/4 empty 0x2: TX FIFO &lt;= 1/2 empty (default) 0x3: TX FIFO &lt;= 1/4 empty 0x4: TX FIFO &lt;= 1/8 empty 0x5-0x7: Reserved Note: If the EOT bit in UARTCTL is set, the transmit interrupt is generated once the FIFO is completely empty and all data including stop bits have left the transmit serializer. In this case, the setting of TXIFLSEL is ignored."]
     #[inline(always)]
     #[must_use]
-    pub fn txiflsel(&mut self) -> TXIFLSEL_W<IFLS_SPEC, 0> {
-        TXIFLSEL_W::new(self)
+    pub fn txiflsel(&mut self) -> TXIFLSEL_W<IFLS_SPEC> {
+        TXIFLSEL_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - UART receive interrupt FIFO level select The trigger points for the receive interrupt are as follows: 0x0: RX FIFO >= 1/8 full 0x1: RX FIFO >= 1/4 full 0x2: RX FIFO >= 1/2 full (default) 0x3: RX FIFO >= 3/4 full 0x4: RX FIFO >= 7/8 full 0x5-0x7: Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn rxiflsel(&mut self) -> RXIFLSEL_W<IFLS_SPEC, 3> {
-        RXIFLSEL_W::new(self)
+    pub fn rxiflsel(&mut self) -> RXIFLSEL_W<IFLS_SPEC> {
+        RXIFLSEL_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for IFLS_SPEC {
 impl crate::Readable for IFLS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ifls::W`](W) writer structure"]
 impl crate::Writable for IFLS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IFLS to value 0"]
 impl crate::Resettable for IFLS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

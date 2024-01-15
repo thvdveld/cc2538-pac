@@ -5,7 +5,7 @@ pub type W = crate::W<USB_IRQ_ACK_SPEC>;
 #[doc = "Field `USBACK` reader - USB masked interrupt status: 1: Detected 0: Not detected"]
 pub type USBACK_R = crate::BitReader;
 #[doc = "Field `USBACK` writer - USB masked interrupt status: 1: Detected 0: Not detected"]
-pub type USBACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USBACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - USB masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bit 0 - USB masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn usback(&mut self) -> USBACK_W<USB_IRQ_ACK_SPEC, 0> {
-        USBACK_W::new(self)
+    pub fn usback(&mut self) -> USBACK_W<USB_IRQ_ACK_SPEC> {
+        USBACK_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for USB_IRQ_ACK_SPEC {
 impl crate::Readable for USB_IRQ_ACK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`usb_irq_ack::W`](W) writer structure"]
 impl crate::Writable for USB_IRQ_ACK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USB_IRQ_ACK to value 0"]
 impl crate::Resettable for USB_IRQ_ACK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

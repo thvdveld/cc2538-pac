@@ -5,11 +5,11 @@ pub type W = crate::W<MDMCTRL1_SPEC>;
 #[doc = "Field `CORR_THR` reader - Demodulator correlator threshold value, required before SFD search. Threshold value adjusts how the receiver synchronizes to data from the radio. If the threshold is set too low, sync can more easily be found on noise. If set too high, the sensitivity is reduced, but sync is not likely to be found on noise. In combination with DEM_NUM_ZEROS, the system can be tuned so sensitivity is high with less sync found on noise."]
 pub type CORR_THR_R = crate::FieldReader;
 #[doc = "Field `CORR_THR` writer - Demodulator correlator threshold value, required before SFD search. Threshold value adjusts how the receiver synchronizes to data from the radio. If the threshold is set too low, sync can more easily be found on noise. If set too high, the sensitivity is reduced, but sync is not likely to be found on noise. In combination with DEM_NUM_ZEROS, the system can be tuned so sensitivity is high with less sync found on noise."]
-pub type CORR_THR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CORR_THR_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CORR_THR_SFD` reader - Defines requirements for SFD detection: 0: The correlation value of one of the zero symbols of the preamble must be above the correlation threshold. 1: The correlation value of one zero symbol of the preamble and both symbols in the SFD must be above the correlation threshold."]
 pub type CORR_THR_SFD_R = crate::BitReader;
 #[doc = "Field `CORR_THR_SFD` writer - Defines requirements for SFD detection: 0: The correlation value of one of the zero symbols of the preamble must be above the correlation threshold. 1: The correlation value of one zero symbol of the preamble and both symbols in the SFD must be above the correlation threshold."]
-pub type CORR_THR_SFD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CORR_THR_SFD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - Demodulator correlator threshold value, required before SFD search. Threshold value adjusts how the receiver synchronizes to data from the radio. If the threshold is set too low, sync can more easily be found on noise. If set too high, the sensitivity is reduced, but sync is not likely to be found on noise. In combination with DEM_NUM_ZEROS, the system can be tuned so sensitivity is high with less sync found on noise."]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bits 0:4 - Demodulator correlator threshold value, required before SFD search. Threshold value adjusts how the receiver synchronizes to data from the radio. If the threshold is set too low, sync can more easily be found on noise. If set too high, the sensitivity is reduced, but sync is not likely to be found on noise. In combination with DEM_NUM_ZEROS, the system can be tuned so sensitivity is high with less sync found on noise."]
     #[inline(always)]
     #[must_use]
-    pub fn corr_thr(&mut self) -> CORR_THR_W<MDMCTRL1_SPEC, 0> {
-        CORR_THR_W::new(self)
+    pub fn corr_thr(&mut self) -> CORR_THR_W<MDMCTRL1_SPEC> {
+        CORR_THR_W::new(self, 0)
     }
     #[doc = "Bit 5 - Defines requirements for SFD detection: 0: The correlation value of one of the zero symbols of the preamble must be above the correlation threshold. 1: The correlation value of one zero symbol of the preamble and both symbols in the SFD must be above the correlation threshold."]
     #[inline(always)]
     #[must_use]
-    pub fn corr_thr_sfd(&mut self) -> CORR_THR_SFD_W<MDMCTRL1_SPEC, 5> {
-        CORR_THR_SFD_W::new(self)
+    pub fn corr_thr_sfd(&mut self) -> CORR_THR_SFD_W<MDMCTRL1_SPEC> {
+        CORR_THR_SFD_W::new(self, 5)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for MDMCTRL1_SPEC {
 impl crate::Readable for MDMCTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mdmctrl1::W`](W) writer structure"]
 impl crate::Writable for MDMCTRL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MDMCTRL1 to value 0"]
 impl crate::Resettable for MDMCTRL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

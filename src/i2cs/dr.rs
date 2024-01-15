@@ -5,7 +5,7 @@ pub type W = crate::W<DR_SPEC>;
 #[doc = "Field `DATA` reader - Data for transfer This field contains the data for transfer during a slave receive or transmit operation."]
 pub type DATA_R = crate::FieldReader;
 #[doc = "Field `DATA` writer - Data for transfer This field contains the data for transfer during a slave receive or transmit operation."]
-pub type DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Data for transfer This field contains the data for transfer during a slave receive or transmit operation."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - Data for transfer This field contains the data for transfer during a slave receive or transmit operation."]
     #[inline(always)]
     #[must_use]
-    pub fn data(&mut self) -> DATA_W<DR_SPEC, 0> {
-        DATA_W::new(self)
+    pub fn data(&mut self) -> DATA_W<DR_SPEC> {
+        DATA_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for DR_SPEC {
 impl crate::Readable for DR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dr::W`](W) writer structure"]
 impl crate::Writable for DR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DR to value 0"]
 impl crate::Resettable for DR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

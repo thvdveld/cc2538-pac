@@ -5,11 +5,11 @@ pub type W = crate::W<RFC_OBS_CTRL1_SPEC>;
 #[doc = "Field `RFC_OBS_MUX1` reader - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
 pub type RFC_OBS_MUX1_R = crate::FieldReader;
 #[doc = "Field `RFC_OBS_MUX1` writer - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
-pub type RFC_OBS_MUX1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RFC_OBS_MUX1_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `RFC_OBS_POL1` reader - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
 pub type RFC_OBS_POL1_R = crate::BitReader;
 #[doc = "Field `RFC_OBS_POL1` writer - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
-pub type RFC_OBS_POL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFC_OBS_POL1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bits 0:5 - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[1\\]. See description of RFC_OBS_CTRL0 for details."]
     #[inline(always)]
     #[must_use]
-    pub fn rfc_obs_mux1(&mut self) -> RFC_OBS_MUX1_W<RFC_OBS_CTRL1_SPEC, 0> {
-        RFC_OBS_MUX1_W::new(self)
+    pub fn rfc_obs_mux1(&mut self) -> RFC_OBS_MUX1_W<RFC_OBS_CTRL1_SPEC> {
+        RFC_OBS_MUX1_W::new(self, 0)
     }
     #[doc = "Bit 6 - The signal chosen by RFC_OBS_MUX1 is XORed with this bit."]
     #[inline(always)]
     #[must_use]
-    pub fn rfc_obs_pol1(&mut self) -> RFC_OBS_POL1_W<RFC_OBS_CTRL1_SPEC, 6> {
-        RFC_OBS_POL1_W::new(self)
+    pub fn rfc_obs_pol1(&mut self) -> RFC_OBS_POL1_W<RFC_OBS_CTRL1_SPEC> {
+        RFC_OBS_POL1_W::new(self, 6)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for RFC_OBS_CTRL1_SPEC {
 impl crate::Readable for RFC_OBS_CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rfc_obs_ctrl1::W`](W) writer structure"]
 impl crate::Writable for RFC_OBS_CTRL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RFC_OBS_CTRL1 to value 0"]
 impl crate::Resettable for RFC_OBS_CTRL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -18,5 +18,5 @@ impl crate::RegisterSpec for RXP1_PTR_SPEC {
 impl crate::Readable for RXP1_PTR_SPEC {}
 #[doc = "`reset()` method sets RXP1_PTR to value 0"]
 impl crate::Resettable for RXP1_PTR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

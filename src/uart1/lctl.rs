@@ -5,11 +5,11 @@ pub type W = crate::W<LCTL_SPEC>;
 #[doc = "Field `MASTER` reader - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
 pub type MASTER_R = crate::BitReader;
 #[doc = "Field `MASTER` writer - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
-pub type MASTER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASTER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BLEN` reader - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
 pub type BLEN_R = crate::FieldReader;
 #[doc = "Field `BLEN` writer - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
-pub type BLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bit 0 - LIN master enable 1: The UART operates as a LIN master. 0: The UART operates as a LIN slave."]
     #[inline(always)]
     #[must_use]
-    pub fn master(&mut self) -> MASTER_W<LCTL_SPEC, 0> {
-        MASTER_W::new(self)
+    pub fn master(&mut self) -> MASTER_W<LCTL_SPEC> {
+        MASTER_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Sync break length 0x3: Sync break length is 16T bits 0x2: Sync break length is 15T bits 0x1: Sync break length is 14T bits 0x0: Sync break length is 13T bits (default)"]
     #[inline(always)]
     #[must_use]
-    pub fn blen(&mut self) -> BLEN_W<LCTL_SPEC, 4> {
-        BLEN_W::new(self)
+    pub fn blen(&mut self) -> BLEN_W<LCTL_SPEC> {
+        BLEN_W::new(self, 4)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for LCTL_SPEC {
 impl crate::Readable for LCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lctl::W`](W) writer structure"]
 impl crate::Writable for LCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LCTL to value 0"]
 impl crate::Resettable for LCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

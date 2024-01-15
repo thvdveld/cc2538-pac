@@ -5,19 +5,19 @@ pub type W = crate::W<FSCTRL_SPEC>;
 #[doc = "Field `LODIV_CURRENT` reader - Adjusts divider currents, except mixer and PA buffers"]
 pub type LODIV_CURRENT_R = crate::FieldReader;
 #[doc = "Field `LODIV_CURRENT` writer - Adjusts divider currents, except mixer and PA buffers"]
-pub type LODIV_CURRENT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LODIV_CURRENT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LODIV_BUF_CURRENT_RX` reader - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
 pub type LODIV_BUF_CURRENT_RX_R = crate::FieldReader;
 #[doc = "Field `LODIV_BUF_CURRENT_RX` writer - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
-pub type LODIV_BUF_CURRENT_RX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LODIV_BUF_CURRENT_RX_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LODIV_BUF_CURRENT_TX` reader - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
 pub type LODIV_BUF_CURRENT_TX_R = crate::FieldReader;
 #[doc = "Field `LODIV_BUF_CURRENT_TX` writer - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
-pub type LODIV_BUF_CURRENT_TX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LODIV_BUF_CURRENT_TX_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PRE_CURRENT` reader - Prescaler current setting"]
 pub type PRE_CURRENT_R = crate::FieldReader;
 #[doc = "Field `PRE_CURRENT` writer - Prescaler current setting"]
-pub type PRE_CURRENT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PRE_CURRENT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Adjusts divider currents, except mixer and PA buffers"]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bits 0:1 - Adjusts divider currents, except mixer and PA buffers"]
     #[inline(always)]
     #[must_use]
-    pub fn lodiv_current(&mut self) -> LODIV_CURRENT_W<FSCTRL_SPEC, 0> {
-        LODIV_CURRENT_W::new(self)
+    pub fn lodiv_current(&mut self) -> LODIV_CURRENT_W<FSCTRL_SPEC> {
+        LODIV_CURRENT_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 0"]
     #[inline(always)]
     #[must_use]
-    pub fn lodiv_buf_current_rx(&mut self) -> LODIV_BUF_CURRENT_RX_W<FSCTRL_SPEC, 2> {
-        LODIV_BUF_CURRENT_RX_W::new(self)
+    pub fn lodiv_buf_current_rx(&mut self) -> LODIV_BUF_CURRENT_RX_W<FSCTRL_SPEC> {
+        LODIV_BUF_CURRENT_RX_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Adjusts current in mixer and PA buffers Used when TX_ACTIVE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn lodiv_buf_current_tx(&mut self) -> LODIV_BUF_CURRENT_TX_W<FSCTRL_SPEC, 4> {
-        LODIV_BUF_CURRENT_TX_W::new(self)
+    pub fn lodiv_buf_current_tx(&mut self) -> LODIV_BUF_CURRENT_TX_W<FSCTRL_SPEC> {
+        LODIV_BUF_CURRENT_TX_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Prescaler current setting"]
     #[inline(always)]
     #[must_use]
-    pub fn pre_current(&mut self) -> PRE_CURRENT_W<FSCTRL_SPEC, 6> {
-        PRE_CURRENT_W::new(self)
+    pub fn pre_current(&mut self) -> PRE_CURRENT_W<FSCTRL_SPEC> {
+        PRE_CURRENT_W::new(self, 6)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -81,10 +85,10 @@ impl crate::RegisterSpec for FSCTRL_SPEC {
 impl crate::Readable for FSCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fsctrl::W`](W) writer structure"]
 impl crate::Writable for FSCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FSCTRL to value 0"]
 impl crate::Resettable for FSCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

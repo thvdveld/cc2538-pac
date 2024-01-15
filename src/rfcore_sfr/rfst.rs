@@ -5,7 +5,7 @@ pub type W = crate::W<RFST_SPEC>;
 #[doc = "Field `INSTR` reader - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
 pub type INSTR_R = crate::FieldReader;
 #[doc = "Field `INSTR` writer - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
-pub type INSTR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type INSTR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
     #[inline(always)]
     #[must_use]
-    pub fn instr(&mut self) -> INSTR_W<RFST_SPEC, 0> {
-        INSTR_W::new(self)
+    pub fn instr(&mut self) -> INSTR_W<RFST_SPEC> {
+        INSTR_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for RFST_SPEC {
 impl crate::Readable for RFST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rfst::W`](W) writer structure"]
 impl crate::Writable for RFST_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RFST to value 0"]
 impl crate::Resettable for RFST_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -5,19 +5,19 @@ pub type W = crate::W<SYNC_SPEC>;
 #[doc = "Field `SYNC0` reader - Synchronize GPTM0 0x0: GPTM0 is not affected. 0x1: A time-out event for Timer A of GPTM0 is triggered. 0x2: A time-out event for Timer B of GPTM0 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM0 is triggered."]
 pub type SYNC0_R = crate::FieldReader;
 #[doc = "Field `SYNC0` writer - Synchronize GPTM0 0x0: GPTM0 is not affected. 0x1: A time-out event for Timer A of GPTM0 is triggered. 0x2: A time-out event for Timer B of GPTM0 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM0 is triggered."]
-pub type SYNC0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SYNC0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SYNC1` reader - Synchronize GPTM1 0x0: GPTM1 is not affected. 0x1: A time-out event for Timer A of GPTM1 is triggered. 0x2: A time-out event for Timer B of GPTM1 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM1 is triggered."]
 pub type SYNC1_R = crate::FieldReader;
 #[doc = "Field `SYNC1` writer - Synchronize GPTM1 0x0: GPTM1 is not affected. 0x1: A time-out event for Timer A of GPTM1 is triggered. 0x2: A time-out event for Timer B of GPTM1 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM1 is triggered."]
-pub type SYNC1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SYNC1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SYNC2` reader - Synchronize GPTM2 0x0: GPTM2 is not affected. 0x1: A time-out event for Timer A of GPTM2 is triggered. 0x2: A time-out event for Timer B of GPTM2 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM2 is triggered."]
 pub type SYNC2_R = crate::FieldReader;
 #[doc = "Field `SYNC2` writer - Synchronize GPTM2 0x0: GPTM2 is not affected. 0x1: A time-out event for Timer A of GPTM2 is triggered. 0x2: A time-out event for Timer B of GPTM2 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM2 is triggered."]
-pub type SYNC2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SYNC2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SYNC3` reader - Synchronize GPTM3 0x0: GPTM3 is not affected. 0x1: A time-out event for Timer A of GPTM3 is triggered. 0x2: A time-out event for Timer B of GPTM3 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM3 is triggered."]
 pub type SYNC3_R = crate::FieldReader;
 #[doc = "Field `SYNC3` writer - Synchronize GPTM3 0x0: GPTM3 is not affected. 0x1: A time-out event for Timer A of GPTM3 is triggered. 0x2: A time-out event for Timer B of GPTM3 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM3 is triggered."]
-pub type SYNC3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SYNC3_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Synchronize GPTM0 0x0: GPTM0 is not affected. 0x1: A time-out event for Timer A of GPTM0 is triggered. 0x2: A time-out event for Timer B of GPTM0 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM0 is triggered."]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bits 0:1 - Synchronize GPTM0 0x0: GPTM0 is not affected. 0x1: A time-out event for Timer A of GPTM0 is triggered. 0x2: A time-out event for Timer B of GPTM0 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM0 is triggered."]
     #[inline(always)]
     #[must_use]
-    pub fn sync0(&mut self) -> SYNC0_W<SYNC_SPEC, 0> {
-        SYNC0_W::new(self)
+    pub fn sync0(&mut self) -> SYNC0_W<SYNC_SPEC> {
+        SYNC0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Synchronize GPTM1 0x0: GPTM1 is not affected. 0x1: A time-out event for Timer A of GPTM1 is triggered. 0x2: A time-out event for Timer B of GPTM1 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM1 is triggered."]
     #[inline(always)]
     #[must_use]
-    pub fn sync1(&mut self) -> SYNC1_W<SYNC_SPEC, 2> {
-        SYNC1_W::new(self)
+    pub fn sync1(&mut self) -> SYNC1_W<SYNC_SPEC> {
+        SYNC1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Synchronize GPTM2 0x0: GPTM2 is not affected. 0x1: A time-out event for Timer A of GPTM2 is triggered. 0x2: A time-out event for Timer B of GPTM2 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM2 is triggered."]
     #[inline(always)]
     #[must_use]
-    pub fn sync2(&mut self) -> SYNC2_W<SYNC_SPEC, 4> {
-        SYNC2_W::new(self)
+    pub fn sync2(&mut self) -> SYNC2_W<SYNC_SPEC> {
+        SYNC2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Synchronize GPTM3 0x0: GPTM3 is not affected. 0x1: A time-out event for Timer A of GPTM3 is triggered. 0x2: A time-out event for Timer B of GPTM3 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM3 is triggered."]
     #[inline(always)]
     #[must_use]
-    pub fn sync3(&mut self) -> SYNC3_W<SYNC_SPEC, 6> {
-        SYNC3_W::new(self)
+    pub fn sync3(&mut self) -> SYNC3_W<SYNC_SPEC> {
+        SYNC3_W::new(self, 6)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -81,10 +85,10 @@ impl crate::RegisterSpec for SYNC_SPEC {
 impl crate::Readable for SYNC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sync::W`](W) writer structure"]
 impl crate::Writable for SYNC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SYNC to value 0"]
 impl crate::Resettable for SYNC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

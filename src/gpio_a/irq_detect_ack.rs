@@ -5,131 +5,131 @@ pub type W = crate::W<IRQ_DETECT_ACK_SPEC>;
 #[doc = "Field `PAIACK0` reader - Port A bit 0 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PAIACK0_R = crate::BitReader;
 #[doc = "Field `PAIACK0` writer - Port A bit 0 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PAIACK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAIACK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIACK1` reader - Port A bit 1 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PAIACK1_R = crate::BitReader;
 #[doc = "Field `PAIACK1` writer - Port A bit 1 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PAIACK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAIACK1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIACK2` reader - Port A bit 2 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PAIACK2_R = crate::BitReader;
 #[doc = "Field `PAIACK2` writer - Port A bit 2 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PAIACK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAIACK2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIACK3` reader - Port A bit 3 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PAIACK3_R = crate::BitReader;
 #[doc = "Field `PAIACK3` writer - Port A bit 3 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PAIACK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAIACK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIACK4` reader - Port A bit 4 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PAIACK4_R = crate::BitReader;
 #[doc = "Field `PAIACK4` writer - Port A bit 4 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PAIACK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAIACK4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIACK5` reader - Port A bit 5 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PAIACK5_R = crate::BitReader;
 #[doc = "Field `PAIACK5` writer - Port A bit 5 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PAIACK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAIACK5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIACK6` reader - Port A bit 6 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PAIACK6_R = crate::BitReader;
 #[doc = "Field `PAIACK6` writer - Port A bit 6 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PAIACK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAIACK6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIACK7` reader - Port A bit 7 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PAIACK7_R = crate::BitReader;
 #[doc = "Field `PAIACK7` writer - Port A bit 7 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PAIACK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAIACK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIACK0` reader - Port B bit 0 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PBIACK0_R = crate::BitReader;
 #[doc = "Field `PBIACK0` writer - Port B bit 0 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PBIACK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBIACK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIACK1` reader - Port B bit 1 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PBIACK1_R = crate::BitReader;
 #[doc = "Field `PBIACK1` writer - Port B bit 1 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PBIACK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBIACK1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIACK2` reader - Port B bit 2 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PBIACK2_R = crate::BitReader;
 #[doc = "Field `PBIACK2` writer - Port B bit 2 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PBIACK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBIACK2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIACK3` reader - Port B bit 3 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PBIACK3_R = crate::BitReader;
 #[doc = "Field `PBIACK3` writer - Port B bit 3 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PBIACK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBIACK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIACK4` reader - Port B bit 4 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PBIACK4_R = crate::BitReader;
 #[doc = "Field `PBIACK4` writer - Port B bit 4 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PBIACK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBIACK4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIACK5` reader - Port B bit 5 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PBIACK5_R = crate::BitReader;
 #[doc = "Field `PBIACK5` writer - Port B bit 5 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PBIACK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBIACK5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIACK6` reader - Port B bit 6 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PBIACK6_R = crate::BitReader;
 #[doc = "Field `PBIACK6` writer - Port B bit 6 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PBIACK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBIACK6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIACK7` reader - Port B bit 7 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PBIACK7_R = crate::BitReader;
 #[doc = "Field `PBIACK7` writer - Port B bit 7 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PBIACK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBIACK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIACK0` reader - Port C bit 0 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PCIACK0_R = crate::BitReader;
 #[doc = "Field `PCIACK0` writer - Port C bit 0 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PCIACK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCIACK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIACK1` reader - Port C bit 1 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PCIACK1_R = crate::BitReader;
 #[doc = "Field `PCIACK1` writer - Port C bit 1 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PCIACK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCIACK1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIACK2` reader - Port C bit 2 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PCIACK2_R = crate::BitReader;
 #[doc = "Field `PCIACK2` writer - Port C bit 2 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PCIACK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCIACK2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIACK3` reader - Port C bit 3 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PCIACK3_R = crate::BitReader;
 #[doc = "Field `PCIACK3` writer - Port C bit 3 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PCIACK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCIACK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIACK4` reader - Port C bit 4 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PCIACK4_R = crate::BitReader;
 #[doc = "Field `PCIACK4` writer - Port C bit 4 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PCIACK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCIACK4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIACK5` reader - Port C bit 5 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PCIACK5_R = crate::BitReader;
 #[doc = "Field `PCIACK5` writer - Port C bit 5 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PCIACK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCIACK5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIACK6` reader - Port C bit 6 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PCIACK6_R = crate::BitReader;
 #[doc = "Field `PCIACK6` writer - Port C bit 6 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PCIACK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCIACK6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIACK7` reader - Port C bit 7 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PCIACK7_R = crate::BitReader;
 #[doc = "Field `PCIACK7` writer - Port C bit 7 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PCIACK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCIACK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIACK0` reader - Port D bit 0 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PDIACK0_R = crate::BitReader;
 #[doc = "Field `PDIACK0` writer - Port D bit 0 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PDIACK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDIACK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIACK1` reader - Port D bit 1 masked interrupt status: 1: Detected0: Not detected"]
 pub type PDIACK1_R = crate::BitReader;
 #[doc = "Field `PDIACK1` writer - Port D bit 1 masked interrupt status: 1: Detected0: Not detected"]
-pub type PDIACK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDIACK1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIACK2` reader - Port D bit 2 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PDIACK2_R = crate::BitReader;
 #[doc = "Field `PDIACK2` writer - Port D bit 2 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PDIACK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDIACK2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIACK3` reader - Port D bit 3 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PDIACK3_R = crate::BitReader;
 #[doc = "Field `PDIACK3` writer - Port D bit 3 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PDIACK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDIACK3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIACK4` reader - Port D bit 4 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PDIACK4_R = crate::BitReader;
 #[doc = "Field `PDIACK4` writer - Port D bit 4 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PDIACK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDIACK4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIACK5` reader - Port D bit 5 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PDIACK5_R = crate::BitReader;
 #[doc = "Field `PDIACK5` writer - Port D bit 5 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PDIACK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDIACK5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIACK6` reader - Port D bit 6 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PDIACK6_R = crate::BitReader;
 #[doc = "Field `PDIACK6` writer - Port D bit 6 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PDIACK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDIACK6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIACK7` reader - Port D bit 7 masked interrupt status: 1: Detected 0: Not detected"]
 pub type PDIACK7_R = crate::BitReader;
 #[doc = "Field `PDIACK7` writer - Port D bit 7 masked interrupt status: 1: Detected 0: Not detected"]
-pub type PDIACK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PDIACK7_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Port A bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
@@ -296,196 +296,200 @@ impl W {
     #[doc = "Bit 0 - Port A bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn paiack0(&mut self) -> PAIACK0_W<IRQ_DETECT_ACK_SPEC, 0> {
-        PAIACK0_W::new(self)
+    pub fn paiack0(&mut self) -> PAIACK0_W<IRQ_DETECT_ACK_SPEC> {
+        PAIACK0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Port A bit 1 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn paiack1(&mut self) -> PAIACK1_W<IRQ_DETECT_ACK_SPEC, 1> {
-        PAIACK1_W::new(self)
+    pub fn paiack1(&mut self) -> PAIACK1_W<IRQ_DETECT_ACK_SPEC> {
+        PAIACK1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port A bit 2 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn paiack2(&mut self) -> PAIACK2_W<IRQ_DETECT_ACK_SPEC, 2> {
-        PAIACK2_W::new(self)
+    pub fn paiack2(&mut self) -> PAIACK2_W<IRQ_DETECT_ACK_SPEC> {
+        PAIACK2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port A bit 3 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn paiack3(&mut self) -> PAIACK3_W<IRQ_DETECT_ACK_SPEC, 3> {
-        PAIACK3_W::new(self)
+    pub fn paiack3(&mut self) -> PAIACK3_W<IRQ_DETECT_ACK_SPEC> {
+        PAIACK3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Port A bit 4 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn paiack4(&mut self) -> PAIACK4_W<IRQ_DETECT_ACK_SPEC, 4> {
-        PAIACK4_W::new(self)
+    pub fn paiack4(&mut self) -> PAIACK4_W<IRQ_DETECT_ACK_SPEC> {
+        PAIACK4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Port A bit 5 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn paiack5(&mut self) -> PAIACK5_W<IRQ_DETECT_ACK_SPEC, 5> {
-        PAIACK5_W::new(self)
+    pub fn paiack5(&mut self) -> PAIACK5_W<IRQ_DETECT_ACK_SPEC> {
+        PAIACK5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Port A bit 6 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn paiack6(&mut self) -> PAIACK6_W<IRQ_DETECT_ACK_SPEC, 6> {
-        PAIACK6_W::new(self)
+    pub fn paiack6(&mut self) -> PAIACK6_W<IRQ_DETECT_ACK_SPEC> {
+        PAIACK6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port A bit 7 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn paiack7(&mut self) -> PAIACK7_W<IRQ_DETECT_ACK_SPEC, 7> {
-        PAIACK7_W::new(self)
+    pub fn paiack7(&mut self) -> PAIACK7_W<IRQ_DETECT_ACK_SPEC> {
+        PAIACK7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port B bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pbiack0(&mut self) -> PBIACK0_W<IRQ_DETECT_ACK_SPEC, 8> {
-        PBIACK0_W::new(self)
+    pub fn pbiack0(&mut self) -> PBIACK0_W<IRQ_DETECT_ACK_SPEC> {
+        PBIACK0_W::new(self, 8)
     }
     #[doc = "Bit 9 - Port B bit 1 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pbiack1(&mut self) -> PBIACK1_W<IRQ_DETECT_ACK_SPEC, 9> {
-        PBIACK1_W::new(self)
+    pub fn pbiack1(&mut self) -> PBIACK1_W<IRQ_DETECT_ACK_SPEC> {
+        PBIACK1_W::new(self, 9)
     }
     #[doc = "Bit 10 - Port B bit 2 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pbiack2(&mut self) -> PBIACK2_W<IRQ_DETECT_ACK_SPEC, 10> {
-        PBIACK2_W::new(self)
+    pub fn pbiack2(&mut self) -> PBIACK2_W<IRQ_DETECT_ACK_SPEC> {
+        PBIACK2_W::new(self, 10)
     }
     #[doc = "Bit 11 - Port B bit 3 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pbiack3(&mut self) -> PBIACK3_W<IRQ_DETECT_ACK_SPEC, 11> {
-        PBIACK3_W::new(self)
+    pub fn pbiack3(&mut self) -> PBIACK3_W<IRQ_DETECT_ACK_SPEC> {
+        PBIACK3_W::new(self, 11)
     }
     #[doc = "Bit 12 - Port B bit 4 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pbiack4(&mut self) -> PBIACK4_W<IRQ_DETECT_ACK_SPEC, 12> {
-        PBIACK4_W::new(self)
+    pub fn pbiack4(&mut self) -> PBIACK4_W<IRQ_DETECT_ACK_SPEC> {
+        PBIACK4_W::new(self, 12)
     }
     #[doc = "Bit 13 - Port B bit 5 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pbiack5(&mut self) -> PBIACK5_W<IRQ_DETECT_ACK_SPEC, 13> {
-        PBIACK5_W::new(self)
+    pub fn pbiack5(&mut self) -> PBIACK5_W<IRQ_DETECT_ACK_SPEC> {
+        PBIACK5_W::new(self, 13)
     }
     #[doc = "Bit 14 - Port B bit 6 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pbiack6(&mut self) -> PBIACK6_W<IRQ_DETECT_ACK_SPEC, 14> {
-        PBIACK6_W::new(self)
+    pub fn pbiack6(&mut self) -> PBIACK6_W<IRQ_DETECT_ACK_SPEC> {
+        PBIACK6_W::new(self, 14)
     }
     #[doc = "Bit 15 - Port B bit 7 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pbiack7(&mut self) -> PBIACK7_W<IRQ_DETECT_ACK_SPEC, 15> {
-        PBIACK7_W::new(self)
+    pub fn pbiack7(&mut self) -> PBIACK7_W<IRQ_DETECT_ACK_SPEC> {
+        PBIACK7_W::new(self, 15)
     }
     #[doc = "Bit 16 - Port C bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pciack0(&mut self) -> PCIACK0_W<IRQ_DETECT_ACK_SPEC, 16> {
-        PCIACK0_W::new(self)
+    pub fn pciack0(&mut self) -> PCIACK0_W<IRQ_DETECT_ACK_SPEC> {
+        PCIACK0_W::new(self, 16)
     }
     #[doc = "Bit 17 - Port C bit 1 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pciack1(&mut self) -> PCIACK1_W<IRQ_DETECT_ACK_SPEC, 17> {
-        PCIACK1_W::new(self)
+    pub fn pciack1(&mut self) -> PCIACK1_W<IRQ_DETECT_ACK_SPEC> {
+        PCIACK1_W::new(self, 17)
     }
     #[doc = "Bit 18 - Port C bit 2 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pciack2(&mut self) -> PCIACK2_W<IRQ_DETECT_ACK_SPEC, 18> {
-        PCIACK2_W::new(self)
+    pub fn pciack2(&mut self) -> PCIACK2_W<IRQ_DETECT_ACK_SPEC> {
+        PCIACK2_W::new(self, 18)
     }
     #[doc = "Bit 19 - Port C bit 3 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pciack3(&mut self) -> PCIACK3_W<IRQ_DETECT_ACK_SPEC, 19> {
-        PCIACK3_W::new(self)
+    pub fn pciack3(&mut self) -> PCIACK3_W<IRQ_DETECT_ACK_SPEC> {
+        PCIACK3_W::new(self, 19)
     }
     #[doc = "Bit 20 - Port C bit 4 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pciack4(&mut self) -> PCIACK4_W<IRQ_DETECT_ACK_SPEC, 20> {
-        PCIACK4_W::new(self)
+    pub fn pciack4(&mut self) -> PCIACK4_W<IRQ_DETECT_ACK_SPEC> {
+        PCIACK4_W::new(self, 20)
     }
     #[doc = "Bit 21 - Port C bit 5 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pciack5(&mut self) -> PCIACK5_W<IRQ_DETECT_ACK_SPEC, 21> {
-        PCIACK5_W::new(self)
+    pub fn pciack5(&mut self) -> PCIACK5_W<IRQ_DETECT_ACK_SPEC> {
+        PCIACK5_W::new(self, 21)
     }
     #[doc = "Bit 22 - Port C bit 6 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pciack6(&mut self) -> PCIACK6_W<IRQ_DETECT_ACK_SPEC, 22> {
-        PCIACK6_W::new(self)
+    pub fn pciack6(&mut self) -> PCIACK6_W<IRQ_DETECT_ACK_SPEC> {
+        PCIACK6_W::new(self, 22)
     }
     #[doc = "Bit 23 - Port C bit 7 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pciack7(&mut self) -> PCIACK7_W<IRQ_DETECT_ACK_SPEC, 23> {
-        PCIACK7_W::new(self)
+    pub fn pciack7(&mut self) -> PCIACK7_W<IRQ_DETECT_ACK_SPEC> {
+        PCIACK7_W::new(self, 23)
     }
     #[doc = "Bit 24 - Port D bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pdiack0(&mut self) -> PDIACK0_W<IRQ_DETECT_ACK_SPEC, 24> {
-        PDIACK0_W::new(self)
+    pub fn pdiack0(&mut self) -> PDIACK0_W<IRQ_DETECT_ACK_SPEC> {
+        PDIACK0_W::new(self, 24)
     }
     #[doc = "Bit 25 - Port D bit 1 masked interrupt status: 1: Detected0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pdiack1(&mut self) -> PDIACK1_W<IRQ_DETECT_ACK_SPEC, 25> {
-        PDIACK1_W::new(self)
+    pub fn pdiack1(&mut self) -> PDIACK1_W<IRQ_DETECT_ACK_SPEC> {
+        PDIACK1_W::new(self, 25)
     }
     #[doc = "Bit 26 - Port D bit 2 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pdiack2(&mut self) -> PDIACK2_W<IRQ_DETECT_ACK_SPEC, 26> {
-        PDIACK2_W::new(self)
+    pub fn pdiack2(&mut self) -> PDIACK2_W<IRQ_DETECT_ACK_SPEC> {
+        PDIACK2_W::new(self, 26)
     }
     #[doc = "Bit 27 - Port D bit 3 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pdiack3(&mut self) -> PDIACK3_W<IRQ_DETECT_ACK_SPEC, 27> {
-        PDIACK3_W::new(self)
+    pub fn pdiack3(&mut self) -> PDIACK3_W<IRQ_DETECT_ACK_SPEC> {
+        PDIACK3_W::new(self, 27)
     }
     #[doc = "Bit 28 - Port D bit 4 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pdiack4(&mut self) -> PDIACK4_W<IRQ_DETECT_ACK_SPEC, 28> {
-        PDIACK4_W::new(self)
+    pub fn pdiack4(&mut self) -> PDIACK4_W<IRQ_DETECT_ACK_SPEC> {
+        PDIACK4_W::new(self, 28)
     }
     #[doc = "Bit 29 - Port D bit 5 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pdiack5(&mut self) -> PDIACK5_W<IRQ_DETECT_ACK_SPEC, 29> {
-        PDIACK5_W::new(self)
+    pub fn pdiack5(&mut self) -> PDIACK5_W<IRQ_DETECT_ACK_SPEC> {
+        PDIACK5_W::new(self, 29)
     }
     #[doc = "Bit 30 - Port D bit 6 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pdiack6(&mut self) -> PDIACK6_W<IRQ_DETECT_ACK_SPEC, 30> {
-        PDIACK6_W::new(self)
+    pub fn pdiack6(&mut self) -> PDIACK6_W<IRQ_DETECT_ACK_SPEC> {
+        PDIACK6_W::new(self, 30)
     }
     #[doc = "Bit 31 - Port D bit 7 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pdiack7(&mut self) -> PDIACK7_W<IRQ_DETECT_ACK_SPEC, 31> {
-        PDIACK7_W::new(self)
+    pub fn pdiack7(&mut self) -> PDIACK7_W<IRQ_DETECT_ACK_SPEC> {
+        PDIACK7_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -501,10 +505,10 @@ impl crate::RegisterSpec for IRQ_DETECT_ACK_SPEC {
 impl crate::Readable for IRQ_DETECT_ACK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`irq_detect_ack::W`](W) writer structure"]
 impl crate::Writable for IRQ_DETECT_ACK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IRQ_DETECT_ACK to value 0"]
 impl crate::Resettable for IRQ_DETECT_ACK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -5,7 +5,7 @@ pub type W = crate::W<MAXO_SPEC>;
 #[doc = "Field `USBMAXO` reader - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
 pub type USBMAXO_R = crate::FieldReader;
 #[doc = "Field `USBMAXO` writer - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
-pub type USBMAXO_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type USBMAXO_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - Maximum packet size, in units of 8 bytes, for the selected OUT endpoint The value of this register should match the wMaxPacketSize field in the standard endpoint descriptor for the endpoint. The value must not exceed the available memory."]
     #[inline(always)]
     #[must_use]
-    pub fn usbmaxo(&mut self) -> USBMAXO_W<MAXO_SPEC, 0> {
-        USBMAXO_W::new(self)
+    pub fn usbmaxo(&mut self) -> USBMAXO_W<MAXO_SPEC> {
+        USBMAXO_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for MAXO_SPEC {
 impl crate::Readable for MAXO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`maxo::W`](W) writer structure"]
 impl crate::Writable for MAXO_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MAXO to value 0"]
 impl crate::Resettable for MAXO_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

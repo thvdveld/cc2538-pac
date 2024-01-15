@@ -5,19 +5,19 @@ pub type W = crate::W<CIE_SPEC>;
 #[doc = "Field `SUSPENDIE` reader - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
 pub type SUSPENDIE_R = crate::BitReader;
 #[doc = "Field `SUSPENDIE` writer - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub type SUSPENDIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SUSPENDIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESUMEIE` reader - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
 pub type RESUMEIE_R = crate::BitReader;
 #[doc = "Field `RESUMEIE` writer - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub type RESUMEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESUMEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSTIE` reader - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
 pub type RSTIE_R = crate::BitReader;
 #[doc = "Field `RSTIE` writer - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub type RSTIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSTIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOFIE` reader - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
 pub type SOFIE_R = crate::BitReader;
 #[doc = "Field `SOFIE` writer - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
-pub type SOFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOFIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bit 0 - Suspend interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn suspendie(&mut self) -> SUSPENDIE_W<CIE_SPEC, 0> {
-        SUSPENDIE_W::new(self)
+    pub fn suspendie(&mut self) -> SUSPENDIE_W<CIE_SPEC> {
+        SUSPENDIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Resume interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn resumeie(&mut self) -> RESUMEIE_W<CIE_SPEC, 1> {
-        RESUMEIE_W::new(self)
+    pub fn resumeie(&mut self) -> RESUMEIE_W<CIE_SPEC> {
+        RESUMEIE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reset interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn rstie(&mut self) -> RSTIE_W<CIE_SPEC, 2> {
-        RSTIE_W::new(self)
+    pub fn rstie(&mut self) -> RSTIE_W<CIE_SPEC> {
+        RSTIE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Start-of-frame interrupt enable 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn sofie(&mut self) -> SOFIE_W<CIE_SPEC, 3> {
-        SOFIE_W::new(self)
+    pub fn sofie(&mut self) -> SOFIE_W<CIE_SPEC> {
+        SOFIE_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -81,10 +85,10 @@ impl crate::RegisterSpec for CIE_SPEC {
 impl crate::Readable for CIE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cie::W`](W) writer structure"]
 impl crate::Writable for CIE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CIE to value 0"]
 impl crate::Resettable for CIE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

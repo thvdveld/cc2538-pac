@@ -5,7 +5,7 @@ pub type W = crate::W<FIFOPCTRL_SPEC>;
 #[doc = "Field `FIFOP_THR` reader - Threshold used when generating FIFOP signal"]
 pub type FIFOP_THR_R = crate::FieldReader;
 #[doc = "Field `FIFOP_THR` writer - Threshold used when generating FIFOP signal"]
-pub type FIFOP_THR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type FIFOP_THR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6 - Threshold used when generating FIFOP signal"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:6 - Threshold used when generating FIFOP signal"]
     #[inline(always)]
     #[must_use]
-    pub fn fifop_thr(&mut self) -> FIFOP_THR_W<FIFOPCTRL_SPEC, 0> {
-        FIFOP_THR_W::new(self)
+    pub fn fifop_thr(&mut self) -> FIFOP_THR_W<FIFOPCTRL_SPEC> {
+        FIFOP_THR_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for FIFOPCTRL_SPEC {
 impl crate::Readable for FIFOPCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fifopctrl::W`](W) writer structure"]
 impl crate::Writable for FIFOPCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FIFOPCTRL to value 0"]
 impl crate::Resettable for FIFOPCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

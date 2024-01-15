@@ -7,7 +7,7 @@ The IEEE extended address used during destination address filtering"]
 pub type EXT_ADDR0_R = crate::FieldReader;
 #[doc = "Field `EXT_ADDR0` writer - EXT_ADDR\\[7:0\\]
 The IEEE extended address used during destination address filtering"]
-pub type EXT_ADDR0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type EXT_ADDR0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - EXT_ADDR\\[7:0\\]
 The IEEE extended address used during destination address filtering"]
@@ -21,10 +21,14 @@ impl W {
 The IEEE extended address used during destination address filtering"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_addr0(&mut self) -> EXT_ADDR0_W<EXT_ADDR0_SPEC, 0> {
-        EXT_ADDR0_W::new(self)
+    pub fn ext_addr0(&mut self) -> EXT_ADDR0_W<EXT_ADDR0_SPEC> {
+        EXT_ADDR0_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -40,10 +44,10 @@ impl crate::RegisterSpec for EXT_ADDR0_SPEC {
 impl crate::Readable for EXT_ADDR0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ext_addr0::W`](W) writer structure"]
 impl crate::Writable for EXT_ADDR0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXT_ADDR0 to value 0"]
 impl crate::Resettable for EXT_ADDR0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

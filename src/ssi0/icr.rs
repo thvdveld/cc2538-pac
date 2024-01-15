@@ -5,11 +5,11 @@ pub type W = crate::W<ICR_SPEC>;
 #[doc = "Field `RORIC` reader - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
 pub type RORIC_R = crate::BitReader;
 #[doc = "Field `RORIC` writer - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
-pub type RORIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RORIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTIC` reader - SSI receive time-out interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
 pub type RTIC_R = crate::BitReader;
 #[doc = "Field `RTIC` writer - SSI receive time-out interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
-pub type RTIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bit 0 - SSI receive overrun interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn roric(&mut self) -> RORIC_W<ICR_SPEC, 0> {
-        RORIC_W::new(self)
+    pub fn roric(&mut self) -> RORIC_W<ICR_SPEC> {
+        RORIC_W::new(self, 0)
     }
     #[doc = "Bit 1 - SSI receive time-out interrupt clear (W1C) Reset value: 0x0 0: No effect on interrupt 1: Clears interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn rtic(&mut self) -> RTIC_W<ICR_SPEC, 1> {
-        RTIC_W::new(self)
+    pub fn rtic(&mut self) -> RTIC_W<ICR_SPEC> {
+        RTIC_W::new(self, 1)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for ICR_SPEC {
 impl crate::Readable for ICR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`icr::W`](W) writer structure"]
 impl crate::Writable for ICR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ICR to value 0"]
 impl crate::Resettable for ICR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

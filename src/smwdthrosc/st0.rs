@@ -9,7 +9,7 @@ pub type ST0_R = crate::FieldReader;
 #[doc = "Field `ST0` writer - Sleep Timer count and compare value. When read, this register returns the low bits \\[7:0\\]
 of the Sleep Timer count. When writing this register sets the low bits \\[7:0\\]
 of the compare value."]
-pub type ST0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ST0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Sleep Timer count and compare value. When read, this register returns the low bits \\[7:0\\]
 of the Sleep Timer count. When writing this register sets the low bits \\[7:0\\]
@@ -25,10 +25,14 @@ of the Sleep Timer count. When writing this register sets the low bits \\[7:0\\]
 of the compare value."]
     #[inline(always)]
     #[must_use]
-    pub fn st0(&mut self) -> ST0_W<ST0_SPEC, 0> {
-        ST0_W::new(self)
+    pub fn st0(&mut self) -> ST0_W<ST0_SPEC> {
+        ST0_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -44,10 +48,10 @@ impl crate::RegisterSpec for ST0_SPEC {
 impl crate::Readable for ST0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`st0::W`](W) writer structure"]
 impl crate::Writable for ST0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ST0 to value 0"]
 impl crate::Resettable for ST0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

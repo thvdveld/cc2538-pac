@@ -18,5 +18,5 @@ impl crate::RegisterSpec for TAPV_SPEC {
 impl crate::Readable for TAPV_SPEC {}
 #[doc = "`reset()` method sets TAPV to value 0"]
 impl crate::Resettable for TAPV_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

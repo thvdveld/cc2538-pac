@@ -1,23 +1,27 @@
 #[doc = "Register `CTRL_INT_SET` writer"]
 pub type W = crate::W<CTRL_INT_SET_SPEC>;
 #[doc = "Field `RESULT_AV` writer - If 1 is written to this bit, the result available (irq_result_av) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the result available (irq_result_av) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
-pub type RESULT_AV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESULT_AV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_IN_DONE` writer - If 1 is written to this bit, the DMA data in done (irq_dma_in_done) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the DMA data in done (irq_dma_in_done) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
-pub type DMA_IN_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_IN_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - If 1 is written to this bit, the result available (irq_result_av) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the result available (irq_result_av) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
     #[inline(always)]
     #[must_use]
-    pub fn result_av(&mut self) -> RESULT_AV_W<CTRL_INT_SET_SPEC, 0> {
-        RESULT_AV_W::new(self)
+    pub fn result_av(&mut self) -> RESULT_AV_W<CTRL_INT_SET_SPEC> {
+        RESULT_AV_W::new(self, 0)
     }
     #[doc = "Bit 1 - If 1 is written to this bit, the DMA data in done (irq_dma_in_done) interrupt output is set to one. Writing 0 has no effect. If the interrupt configuration register is programmed to pulse, clearing the DMA data in done (irq_dma_in_done) interrupt is not needed. If it is programmed to level, clearing the interrupt output should be done by writing the interrupt clear register (CTRL_INT_CLR)."]
     #[inline(always)]
     #[must_use]
-    pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<CTRL_INT_SET_SPEC, 1> {
-        DMA_IN_DONE_W::new(self)
+    pub fn dma_in_done(&mut self) -> DMA_IN_DONE_W<CTRL_INT_SET_SPEC> {
+        DMA_IN_DONE_W::new(self, 1)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -31,10 +35,10 @@ impl crate::RegisterSpec for CTRL_INT_SET_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`ctrl_int_set::W`](W) writer structure"]
 impl crate::Writable for CTRL_INT_SET_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL_INT_SET to value 0"]
 impl crate::Resettable for CTRL_INT_SET_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

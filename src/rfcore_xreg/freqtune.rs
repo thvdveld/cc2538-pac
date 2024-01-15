@@ -5,7 +5,7 @@ pub type W = crate::W<FREQTUNE_SPEC>;
 #[doc = "Field `XOSC32M_TUNE` reader - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
 pub type XOSC32M_TUNE_R = crate::FieldReader;
 #[doc = "Field `XOSC32M_TUNE` writer - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
-pub type XOSC32M_TUNE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type XOSC32M_TUNE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:3 - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
     #[inline(always)]
     #[must_use]
-    pub fn xosc32m_tune(&mut self) -> XOSC32M_TUNE_W<FREQTUNE_SPEC, 0> {
-        XOSC32M_TUNE_W::new(self)
+    pub fn xosc32m_tune(&mut self) -> XOSC32M_TUNE_W<FREQTUNE_SPEC> {
+        XOSC32M_TUNE_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for FREQTUNE_SPEC {
 impl crate::Readable for FREQTUNE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`freqtune::W`](W) writer structure"]
 impl crate::Writable for FREQTUNE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FREQTUNE to value 0"]
 impl crate::Resettable for FREQTUNE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

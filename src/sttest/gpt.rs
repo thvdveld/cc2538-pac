@@ -5,11 +5,11 @@ pub type W = crate::W<GPT_SPEC>;
 #[doc = "Field `GPTIDOV` reader - GPTimer increment/decrement override value"]
 pub type GPTIDOV_R = crate::FieldReader;
 #[doc = "Field `GPTIDOV` writer - GPTimer increment/decrement override value"]
-pub type GPTIDOV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type GPTIDOV_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `GPTIDOE` reader - GPTimer increment/decrement override enable"]
 pub type GPTIDOE_R = crate::BitReader;
 #[doc = "Field `GPTIDOE` writer - GPTimer increment/decrement override enable"]
-pub type GPTIDOE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPTIDOE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - GPTimer increment/decrement override value"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bits 0:4 - GPTimer increment/decrement override value"]
     #[inline(always)]
     #[must_use]
-    pub fn gptidov(&mut self) -> GPTIDOV_W<GPT_SPEC, 0> {
-        GPTIDOV_W::new(self)
+    pub fn gptidov(&mut self) -> GPTIDOV_W<GPT_SPEC> {
+        GPTIDOV_W::new(self, 0)
     }
     #[doc = "Bit 8 - GPTimer increment/decrement override enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gptidoe(&mut self) -> GPTIDOE_W<GPT_SPEC, 8> {
-        GPTIDOE_W::new(self)
+    pub fn gptidoe(&mut self) -> GPTIDOE_W<GPT_SPEC> {
+        GPTIDOE_W::new(self, 8)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for GPT_SPEC {
 impl crate::Readable for GPT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpt::W`](W) writer structure"]
 impl crate::Writable for GPT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPT to value 0"]
 impl crate::Resettable for GPT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

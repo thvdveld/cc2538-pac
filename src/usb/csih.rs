@@ -5,19 +5,19 @@ pub type W = crate::W<CSIH_SPEC>;
 #[doc = "Field `INDBLBUF` reader - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
 pub type INDBLBUF_R = crate::BitReader;
 #[doc = "Field `INDBLBUF` writer - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
-pub type INDBLBUF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INDBLBUF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCEDATATOG` reader - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
 pub type FORCEDATATOG_R = crate::BitReader;
 #[doc = "Field `FORCEDATATOG` writer - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
-pub type FORCEDATATOG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FORCEDATATOG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ISO` reader - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
 pub type ISO_R = crate::BitReader;
 #[doc = "Field `ISO` writer - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
-pub type ISO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AUTISET` reader - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
 pub type AUTISET_R = crate::BitReader;
 #[doc = "Field `AUTISET` writer - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
-pub type AUTISET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AUTISET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bit 0 - IN endpoint FIFO double-buffering enable: 0: Double buffering disabled 1: Double buffering enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn indblbuf(&mut self) -> INDBLBUF_W<CSIH_SPEC, 0> {
-        INDBLBUF_W::new(self)
+    pub fn indblbuf(&mut self) -> INDBLBUF_W<CSIH_SPEC> {
+        INDBLBUF_W::new(self, 0)
     }
     #[doc = "Bit 3 - Software sets this bit to force the IN endpoint's data toggle to switch after each data packet is sent regardless of whether an ACK was received. This can be used by interrupt IN endpoints which are used to communicate rate feedback for isochronous endpoints."]
     #[inline(always)]
     #[must_use]
-    pub fn forcedatatog(&mut self) -> FORCEDATATOG_W<CSIH_SPEC, 3> {
-        FORCEDATATOG_W::new(self)
+    pub fn forcedatatog(&mut self) -> FORCEDATATOG_W<CSIH_SPEC> {
+        FORCEDATATOG_W::new(self, 3)
     }
     #[doc = "Bit 6 - Selects IN endpoint type: 0: Bulk/interrupt 1: Isochronous"]
     #[inline(always)]
     #[must_use]
-    pub fn iso(&mut self) -> ISO_W<CSIH_SPEC, 6> {
-        ISO_W::new(self)
+    pub fn iso(&mut self) -> ISO_W<CSIH_SPEC> {
+        ISO_W::new(self, 6)
     }
     #[doc = "Bit 7 - If set by software, the USB_CSIL.INPKTRDY bit is automatically set when a data packet of maximum size (specified by USBMAXI) is loaded into the IN endpoint FIFO. If a packet of less than the maximum packet size is loaded, then USB_CSIL.INPKTRDY will have to be set manually."]
     #[inline(always)]
     #[must_use]
-    pub fn autiset(&mut self) -> AUTISET_W<CSIH_SPEC, 7> {
-        AUTISET_W::new(self)
+    pub fn autiset(&mut self) -> AUTISET_W<CSIH_SPEC> {
+        AUTISET_W::new(self, 7)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -81,10 +85,10 @@ impl crate::RegisterSpec for CSIH_SPEC {
 impl crate::Readable for CSIH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`csih::W`](W) writer structure"]
 impl crate::Writable for CSIH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CSIH to value 0"]
 impl crate::Resettable for CSIH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

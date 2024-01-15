@@ -5,15 +5,15 @@ pub type W = crate::W<CR_SPEC>;
 #[doc = "Field `LPBK` reader - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
 pub type LPBK_R = crate::BitReader;
 #[doc = "Field `LPBK` writer - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
-pub type LPBK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPBK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MFE` reader - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
 pub type MFE_R = crate::BitReader;
 #[doc = "Field `MFE` writer - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
-pub type MFE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MFE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SFE` reader - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
 pub type SFE_R = crate::BitReader;
 #[doc = "Field `SFE` writer - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
-pub type SFE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SFE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
     #[inline(always)]
@@ -35,22 +35,26 @@ impl W {
     #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
     #[inline(always)]
     #[must_use]
-    pub fn lpbk(&mut self) -> LPBK_W<CR_SPEC, 0> {
-        LPBK_W::new(self)
+    pub fn lpbk(&mut self) -> LPBK_W<CR_SPEC> {
+        LPBK_W::new(self, 0)
     }
     #[doc = "Bit 4 - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
     #[inline(always)]
     #[must_use]
-    pub fn mfe(&mut self) -> MFE_W<CR_SPEC, 4> {
-        MFE_W::new(self)
+    pub fn mfe(&mut self) -> MFE_W<CR_SPEC> {
+        MFE_W::new(self, 4)
     }
     #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
     #[inline(always)]
     #[must_use]
-    pub fn sfe(&mut self) -> SFE_W<CR_SPEC, 5> {
-        SFE_W::new(self)
+    pub fn sfe(&mut self) -> SFE_W<CR_SPEC> {
+        SFE_W::new(self, 5)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -66,10 +70,10 @@ impl crate::RegisterSpec for CR_SPEC {
 impl crate::Readable for CR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
 impl crate::Writable for CR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
 impl crate::Resettable for CR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

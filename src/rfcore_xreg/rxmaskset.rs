@@ -5,7 +5,7 @@ pub type W = crate::W<RXMASKSET_SPEC>;
 #[doc = "Field `RXENMASKSET` reader - When written, the written data is ORed with the RXENMASK and stored in RXENMASK."]
 pub type RXENMASKSET_R = crate::FieldReader;
 #[doc = "Field `RXENMASKSET` writer - When written, the written data is ORed with the RXENMASK and stored in RXENMASK."]
-pub type RXENMASKSET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RXENMASKSET_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - When written, the written data is ORed with the RXENMASK and stored in RXENMASK."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - When written, the written data is ORed with the RXENMASK and stored in RXENMASK."]
     #[inline(always)]
     #[must_use]
-    pub fn rxenmaskset(&mut self) -> RXENMASKSET_W<RXMASKSET_SPEC, 0> {
-        RXENMASKSET_W::new(self)
+    pub fn rxenmaskset(&mut self) -> RXENMASKSET_W<RXMASKSET_SPEC> {
+        RXENMASKSET_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for RXMASKSET_SPEC {
 impl crate::Readable for RXMASKSET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rxmaskset::W`](W) writer structure"]
 impl crate::Writable for RXMASKSET_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RXMASKSET to value 0"]
 impl crate::Resettable for RXMASKSET_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

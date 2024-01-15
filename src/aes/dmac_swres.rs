@@ -1,15 +1,19 @@
 #[doc = "Register `DMAC_SWRES` writer"]
 pub type W = crate::W<DMAC_SWRES_SPEC>;
 #[doc = "Field `SWRES` writer - Software reset enable 0 = Disabled 1 = Enabled (self-cleared to 0) Completion of the software reset must be checked through the DMAC_STATUS register."]
-pub type SWRES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SWRES_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Software reset enable 0 = Disabled 1 = Enabled (self-cleared to 0) Completion of the software reset must be checked through the DMAC_STATUS register."]
     #[inline(always)]
     #[must_use]
-    pub fn swres(&mut self) -> SWRES_W<DMAC_SWRES_SPEC, 0> {
-        SWRES_W::new(self)
+    pub fn swres(&mut self) -> SWRES_W<DMAC_SWRES_SPEC> {
+        SWRES_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -23,10 +27,10 @@ impl crate::RegisterSpec for DMAC_SWRES_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`dmac_swres::W`](W) writer structure"]
 impl crate::Writable for DMAC_SWRES_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMAC_SWRES to value 0"]
 impl crate::Resettable for DMAC_SWRES_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

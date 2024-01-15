@@ -18,5 +18,5 @@ impl crate::RegisterSpec for RXFIFOCNT_SPEC {
 impl crate::Readable for RXFIFOCNT_SPEC {}
 #[doc = "`reset()` method sets RXFIFOCNT to value 0"]
 impl crate::Resettable for RXFIFOCNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -7,7 +7,7 @@ pub type OUTPUT_R = crate::BitReader;
 #[doc = "Field `EN` reader - Comparator enable"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Comparator enable"]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Comparator output"]
     #[inline(always)]
@@ -24,10 +24,14 @@ impl W {
     #[doc = "Bit 1 - Comparator enable"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<CMPCTL_SPEC, 1> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<CMPCTL_SPEC> {
+        EN_W::new(self, 1)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -43,10 +47,10 @@ impl crate::RegisterSpec for CMPCTL_SPEC {
 impl crate::Readable for CMPCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmpctl::W`](W) writer structure"]
 impl crate::Writable for CMPCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMPCTL to value 0"]
 impl crate::Resettable for CMPCTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

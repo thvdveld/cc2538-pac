@@ -5,11 +5,11 @@ pub type W = crate::W<PTME1_SPEC>;
 #[doc = "Field `UART0TME` reader - UART0 test mode enable"]
 pub type UART0TME_R = crate::BitReader;
 #[doc = "Field `UART0TME` writer - UART0 test mode enable"]
-pub type UART0TME_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART0TME_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART1TME` reader - UART1 test mode enable"]
 pub type UART1TME_R = crate::BitReader;
 #[doc = "Field `UART1TME` writer - UART1 test mode enable"]
-pub type UART1TME_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART1TME_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 8 - UART0 test mode enable"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bit 8 - UART0 test mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn uart0tme(&mut self) -> UART0TME_W<PTME1_SPEC, 8> {
-        UART0TME_W::new(self)
+    pub fn uart0tme(&mut self) -> UART0TME_W<PTME1_SPEC> {
+        UART0TME_W::new(self, 8)
     }
     #[doc = "Bit 9 - UART1 test mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1tme(&mut self) -> UART1TME_W<PTME1_SPEC, 9> {
-        UART1TME_W::new(self)
+    pub fn uart1tme(&mut self) -> UART1TME_W<PTME1_SPEC> {
+        UART1TME_W::new(self, 9)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for PTME1_SPEC {
 impl crate::Readable for PTME1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptme1::W`](W) writer structure"]
 impl crate::Writable for PTME1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PTME1 to value 0"]
 impl crate::Resettable for PTME1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

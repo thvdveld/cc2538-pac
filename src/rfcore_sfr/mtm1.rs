@@ -7,7 +7,7 @@ of an internal register, depending on the value of MTMSEL.MTMSEL. When reading t
 pub type MTM1_R = crate::FieldReader;
 #[doc = "Field `MTM1` writer - Indirectly returns and modifies bits \\[15:8\\]
 of an internal register, depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000, the timer (MTtim) value is latched. Reading this register with MTMSEL.MTMSEL set to 000 returns the latched value of MTtim\\[15:8\\]."]
-pub type MTM1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type MTM1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[15:8\\]
 of an internal register, depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000, the timer (MTtim) value is latched. Reading this register with MTMSEL.MTMSEL set to 000 returns the latched value of MTtim\\[15:8\\]."]
@@ -21,10 +21,14 @@ impl W {
 of an internal register, depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000, the timer (MTtim) value is latched. Reading this register with MTMSEL.MTMSEL set to 000 returns the latched value of MTtim\\[15:8\\]."]
     #[inline(always)]
     #[must_use]
-    pub fn mtm1(&mut self) -> MTM1_W<MTM1_SPEC, 0> {
-        MTM1_W::new(self)
+    pub fn mtm1(&mut self) -> MTM1_W<MTM1_SPEC> {
+        MTM1_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -40,10 +44,10 @@ impl crate::RegisterSpec for MTM1_SPEC {
 impl crate::Readable for MTM1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mtm1::W`](W) writer structure"]
 impl crate::Writable for MTM1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MTM1 to value 0"]
 impl crate::Resettable for MTM1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

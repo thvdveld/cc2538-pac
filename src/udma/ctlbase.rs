@@ -5,7 +5,7 @@ pub type W = crate::W<CTLBASE_SPEC>;
 #[doc = "Field `ADDR` reader - Channel control base address This field contains the pointer to the base address of the channel control table. The base address must be 1024-byte alligned."]
 pub type ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `ADDR` writer - Channel control base address This field contains the pointer to the base address of the channel control table. The base address must be 1024-byte alligned."]
-pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 22, O, u32>;
+pub type ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 impl R {
     #[doc = "Bits 10:31 - Channel control base address This field contains the pointer to the base address of the channel control table. The base address must be 1024-byte alligned."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 10:31 - Channel control base address This field contains the pointer to the base address of the channel control table. The base address must be 1024-byte alligned."]
     #[inline(always)]
     #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<CTLBASE_SPEC, 10> {
-        ADDR_W::new(self)
+    pub fn addr(&mut self) -> ADDR_W<CTLBASE_SPEC> {
+        ADDR_W::new(self, 10)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for CTLBASE_SPEC {
 impl crate::Readable for CTLBASE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctlbase::W`](W) writer structure"]
 impl crate::Writable for CTLBASE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTLBASE to value 0"]
 impl crate::Resettable for CTLBASE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

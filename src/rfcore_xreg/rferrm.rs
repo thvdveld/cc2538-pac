@@ -5,7 +5,7 @@ pub type W = crate::W<RFERRM_SPEC>;
 #[doc = "Field `RFERRM` reader - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
 pub type RFERRM_R = crate::FieldReader;
 #[doc = "Field `RFERRM` writer - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
-pub type RFERRM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type RFERRM_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6 - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:6 - Bit mask is masking out interrupt sources. Bit position: 6: STROBE_ERR 5: TXUNDERF 4: TXOVERF 3: RXUNDERF 2: RXOVERF 1: RXABO 0: NLOCK"]
     #[inline(always)]
     #[must_use]
-    pub fn rferrm(&mut self) -> RFERRM_W<RFERRM_SPEC, 0> {
-        RFERRM_W::new(self)
+    pub fn rferrm(&mut self) -> RFERRM_W<RFERRM_SPEC> {
+        RFERRM_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for RFERRM_SPEC {
 impl crate::Readable for RFERRM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rferrm::W`](W) writer structure"]
 impl crate::Writable for RFERRM_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RFERRM to value 0"]
 impl crate::Resettable for RFERRM_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

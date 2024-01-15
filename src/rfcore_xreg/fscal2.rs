@@ -5,11 +5,11 @@ pub type W = crate::W<FSCAL2_SPEC>;
 #[doc = "Field `VCO_CAPARR` reader - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
 pub type VCO_CAPARR_R = crate::FieldReader;
 #[doc = "Field `VCO_CAPARR` writer - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
-pub type VCO_CAPARR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type VCO_CAPARR_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `VCO_CAPARR_OE` reader - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
 pub type VCO_CAPARR_OE_R = crate::BitReader;
 #[doc = "Field `VCO_CAPARR_OE` writer - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
-pub type VCO_CAPARR_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VCO_CAPARR_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bits 0:5 - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn vco_caparr(&mut self) -> VCO_CAPARR_W<FSCAL2_SPEC, 0> {
-        VCO_CAPARR_W::new(self)
+    pub fn vco_caparr(&mut self) -> VCO_CAPARR_W<FSCAL2_SPEC> {
+        VCO_CAPARR_W::new(self, 0)
     }
     #[doc = "Bit 6 - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
     #[inline(always)]
     #[must_use]
-    pub fn vco_caparr_oe(&mut self) -> VCO_CAPARR_OE_W<FSCAL2_SPEC, 6> {
-        VCO_CAPARR_OE_W::new(self)
+    pub fn vco_caparr_oe(&mut self) -> VCO_CAPARR_OE_W<FSCAL2_SPEC> {
+        VCO_CAPARR_OE_W::new(self, 6)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for FSCAL2_SPEC {
 impl crate::Readable for FSCAL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fscal2::W`](W) writer structure"]
 impl crate::Writable for FSCAL2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FSCAL2 to value 0"]
 impl crate::Resettable for FSCAL2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

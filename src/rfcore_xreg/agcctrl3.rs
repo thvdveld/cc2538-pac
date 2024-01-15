@@ -5,19 +5,19 @@ pub type W = crate::W<AGCCTRL3_SPEC>;
 #[doc = "Field `AAF_RP_OE` reader - Override the AAF control signals of the AGC with the values stored in AAF_RP."]
 pub type AAF_RP_OE_R = crate::BitReader;
 #[doc = "Field `AAF_RP_OE` writer - Override the AAF control signals of the AGC with the values stored in AAF_RP."]
-pub type AAF_RP_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AAF_RP_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AAF_RP` reader - Overrides the control signals of the AGC to AAF when AAF_RP_OE = 1. When read, it returns the applied signal to the AAF. 00: 9-dB attenuation in AAF 01: 6-dB attenuation in AAF 10: 3-dB attenuation in AAF 11: 0-dB attenuation in AAF (reference level)"]
 pub type AAF_RP_R = crate::FieldReader;
 #[doc = "Field `AAF_RP` writer - Overrides the control signals of the AGC to AAF when AAF_RP_OE = 1. When read, it returns the applied signal to the AAF. 00: 9-dB attenuation in AAF 01: 6-dB attenuation in AAF 10: 3-dB attenuation in AAF 11: 0-dB attenuation in AAF (reference level)"]
-pub type AAF_RP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AAF_RP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `AGC_WIN_SIZE` reader - Window size for the accumulate-and-dump function in the AGC. 00: 16 samples 01: 32 samples 10: 64 samples 11: 128 samples"]
 pub type AGC_WIN_SIZE_R = crate::FieldReader;
 #[doc = "Field `AGC_WIN_SIZE` writer - Window size for the accumulate-and-dump function in the AGC. 00: 16 samples 01: 32 samples 10: 64 samples 11: 128 samples"]
-pub type AGC_WIN_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AGC_WIN_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `AGC_SETTLE_WAIT` reader - Timing for AGC to wait for analog gain to settle after a gain change. During this period, the energy measurement in the AGC is paused. 00: 15 periods 01: 20 periods 10: 25 periods 11: 30 periods"]
 pub type AGC_SETTLE_WAIT_R = crate::FieldReader;
 #[doc = "Field `AGC_SETTLE_WAIT` writer - Timing for AGC to wait for analog gain to settle after a gain change. During this period, the energy measurement in the AGC is paused. 00: 15 periods 01: 20 periods 10: 25 periods 11: 30 periods"]
-pub type AGC_SETTLE_WAIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AGC_SETTLE_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - Override the AAF control signals of the AGC with the values stored in AAF_RP."]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bit 0 - Override the AAF control signals of the AGC with the values stored in AAF_RP."]
     #[inline(always)]
     #[must_use]
-    pub fn aaf_rp_oe(&mut self) -> AAF_RP_OE_W<AGCCTRL3_SPEC, 0> {
-        AAF_RP_OE_W::new(self)
+    pub fn aaf_rp_oe(&mut self) -> AAF_RP_OE_W<AGCCTRL3_SPEC> {
+        AAF_RP_OE_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Overrides the control signals of the AGC to AAF when AAF_RP_OE = 1. When read, it returns the applied signal to the AAF. 00: 9-dB attenuation in AAF 01: 6-dB attenuation in AAF 10: 3-dB attenuation in AAF 11: 0-dB attenuation in AAF (reference level)"]
     #[inline(always)]
     #[must_use]
-    pub fn aaf_rp(&mut self) -> AAF_RP_W<AGCCTRL3_SPEC, 1> {
-        AAF_RP_W::new(self)
+    pub fn aaf_rp(&mut self) -> AAF_RP_W<AGCCTRL3_SPEC> {
+        AAF_RP_W::new(self, 1)
     }
     #[doc = "Bits 3:4 - Window size for the accumulate-and-dump function in the AGC. 00: 16 samples 01: 32 samples 10: 64 samples 11: 128 samples"]
     #[inline(always)]
     #[must_use]
-    pub fn agc_win_size(&mut self) -> AGC_WIN_SIZE_W<AGCCTRL3_SPEC, 3> {
-        AGC_WIN_SIZE_W::new(self)
+    pub fn agc_win_size(&mut self) -> AGC_WIN_SIZE_W<AGCCTRL3_SPEC> {
+        AGC_WIN_SIZE_W::new(self, 3)
     }
     #[doc = "Bits 5:6 - Timing for AGC to wait for analog gain to settle after a gain change. During this period, the energy measurement in the AGC is paused. 00: 15 periods 01: 20 periods 10: 25 periods 11: 30 periods"]
     #[inline(always)]
     #[must_use]
-    pub fn agc_settle_wait(&mut self) -> AGC_SETTLE_WAIT_W<AGCCTRL3_SPEC, 5> {
-        AGC_SETTLE_WAIT_W::new(self)
+    pub fn agc_settle_wait(&mut self) -> AGC_SETTLE_WAIT_W<AGCCTRL3_SPEC> {
+        AGC_SETTLE_WAIT_W::new(self, 5)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -81,10 +85,10 @@ impl crate::RegisterSpec for AGCCTRL3_SPEC {
 impl crate::Readable for AGCCTRL3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`agcctrl3::W`](W) writer structure"]
 impl crate::Writable for AGCCTRL3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AGCCTRL3 to value 0"]
 impl crate::Resettable for AGCCTRL3_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

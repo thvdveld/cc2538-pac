@@ -46,5 +46,5 @@ impl crate::RegisterSpec for DMAC_VERSION_SPEC {
 impl crate::Readable for DMAC_VERSION_SPEC {}
 #[doc = "`reset()` method sets DMAC_VERSION to value 0"]
 impl crate::Resettable for DMAC_VERSION_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

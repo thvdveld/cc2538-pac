@@ -5,7 +5,7 @@ pub type W = crate::W<SHIFT_SPEC>;
 #[doc = "Field `NUM_BITS_TO_SHIFT` reader - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
 pub type NUM_BITS_TO_SHIFT_R = crate::FieldReader;
 #[doc = "Field `NUM_BITS_TO_SHIFT` writer - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
-pub type NUM_BITS_TO_SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type NUM_BITS_TO_SHIFT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:4 - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
     #[inline(always)]
     #[must_use]
-    pub fn num_bits_to_shift(&mut self) -> NUM_BITS_TO_SHIFT_W<SHIFT_SPEC, 0> {
-        NUM_BITS_TO_SHIFT_W::new(self)
+    pub fn num_bits_to_shift(&mut self) -> NUM_BITS_TO_SHIFT_W<SHIFT_SPEC> {
+        NUM_BITS_TO_SHIFT_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for SHIFT_SPEC {
 impl crate::Readable for SHIFT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`shift::W`](W) writer structure"]
 impl crate::Writable for SHIFT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SHIFT to value 0"]
 impl crate::Resettable for SHIFT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

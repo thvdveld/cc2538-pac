@@ -5,7 +5,7 @@ pub type W = crate::W<ILPR_SPEC>;
 #[doc = "Field `ILPDVSR` reader - IrDA low-power divisor This field contains the 8-bit low-power divisor value."]
 pub type ILPDVSR_R = crate::FieldReader;
 #[doc = "Field `ILPDVSR` writer - IrDA low-power divisor This field contains the 8-bit low-power divisor value."]
-pub type ILPDVSR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ILPDVSR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - IrDA low-power divisor This field contains the 8-bit low-power divisor value."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - IrDA low-power divisor This field contains the 8-bit low-power divisor value."]
     #[inline(always)]
     #[must_use]
-    pub fn ilpdvsr(&mut self) -> ILPDVSR_W<ILPR_SPEC, 0> {
-        ILPDVSR_W::new(self)
+    pub fn ilpdvsr(&mut self) -> ILPDVSR_W<ILPR_SPEC> {
+        ILPDVSR_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for ILPR_SPEC {
 impl crate::Readable for ILPR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ilpr::W`](W) writer structure"]
 impl crate::Writable for ILPR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ILPR to value 0"]
 impl crate::Resettable for ILPR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

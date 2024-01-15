@@ -13,7 +13,7 @@ alternate set 0: uDMA channel \\[n\\]
 is using the primary control structure 1: uDMA channel \\[n\\]
 is using the alternate control structure Bit 0 corresponds to channel 0. A bit can only be cleared by setting the corresponding CLR\\[n\\]
 bit in the DMAALTCLR register. Note: For Ping-Pong and Scatter-Gather cycle types, the uDMA controller automatically sets these bits to select the alternate channel control data structure."]
-pub type SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SET_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 alternate set 0: uDMA channel \\[n\\]
@@ -33,10 +33,14 @@ is using the alternate control structure Bit 0 corresponds to channel 0. A bit c
 bit in the DMAALTCLR register. Note: For Ping-Pong and Scatter-Gather cycle types, the uDMA controller automatically sets these bits to select the alternate channel control data structure."]
     #[inline(always)]
     #[must_use]
-    pub fn set(&mut self) -> SET_W<ALTSET_SPEC, 0> {
-        SET_W::new(self)
+    pub fn set(&mut self) -> SET_W<ALTSET_SPEC> {
+        SET_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -52,10 +56,10 @@ impl crate::RegisterSpec for ALTSET_SPEC {
 impl crate::Readable for ALTSET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`altset::W`](W) writer structure"]
 impl crate::Writable for ALTSET_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ALTSET to value 0"]
 impl crate::Resettable for ALTSET_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

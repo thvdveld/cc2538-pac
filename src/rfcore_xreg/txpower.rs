@@ -5,11 +5,11 @@ pub type W = crate::W<TXPOWER_SPEC>;
 #[doc = "Field `PA_BIAS` reader - PA bias control"]
 pub type PA_BIAS_R = crate::FieldReader;
 #[doc = "Field `PA_BIAS` writer - PA bias control"]
-pub type PA_BIAS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PA_BIAS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PA_POWER` reader - PA power control"]
 pub type PA_POWER_R = crate::FieldReader;
 #[doc = "Field `PA_POWER` writer - PA power control"]
-pub type PA_POWER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PA_POWER_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - PA bias control"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bits 0:3 - PA bias control"]
     #[inline(always)]
     #[must_use]
-    pub fn pa_bias(&mut self) -> PA_BIAS_W<TXPOWER_SPEC, 0> {
-        PA_BIAS_W::new(self)
+    pub fn pa_bias(&mut self) -> PA_BIAS_W<TXPOWER_SPEC> {
+        PA_BIAS_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - PA power control"]
     #[inline(always)]
     #[must_use]
-    pub fn pa_power(&mut self) -> PA_POWER_W<TXPOWER_SPEC, 4> {
-        PA_POWER_W::new(self)
+    pub fn pa_power(&mut self) -> PA_POWER_W<TXPOWER_SPEC> {
+        PA_POWER_W::new(self, 4)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for TXPOWER_SPEC {
 impl crate::Readable for TXPOWER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`txpower::W`](W) writer structure"]
 impl crate::Writable for TXPOWER_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TXPOWER to value 0"]
 impl crate::Resettable for TXPOWER_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -22,5 +22,5 @@ impl crate::RegisterSpec for TBR_SPEC {
 impl crate::Readable for TBR_SPEC {}
 #[doc = "`reset()` method sets TBR to value 0"]
 impl crate::Resettable for TBR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

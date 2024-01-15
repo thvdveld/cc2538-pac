@@ -5,7 +5,7 @@ pub type W = crate::W<F4_SPEC>;
 #[doc = "Field `USBF4` reader - Endpoint 4 FIFO register Reading this register unloads one byte from the EP4 OUT FIFO. Writing to this register loads one byte into the EP4 IN FIFO."]
 pub type USBF4_R = crate::FieldReader;
 #[doc = "Field `USBF4` writer - Endpoint 4 FIFO register Reading this register unloads one byte from the EP4 OUT FIFO. Writing to this register loads one byte into the EP4 IN FIFO."]
-pub type USBF4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type USBF4_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Endpoint 4 FIFO register Reading this register unloads one byte from the EP4 OUT FIFO. Writing to this register loads one byte into the EP4 IN FIFO."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:7 - Endpoint 4 FIFO register Reading this register unloads one byte from the EP4 OUT FIFO. Writing to this register loads one byte into the EP4 IN FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn usbf4(&mut self) -> USBF4_W<F4_SPEC, 0> {
-        USBF4_W::new(self)
+    pub fn usbf4(&mut self) -> USBF4_W<F4_SPEC> {
+        USBF4_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for F4_SPEC {
 impl crate::Readable for F4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`f4::W`](W) writer structure"]
 impl crate::Writable for F4_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets F4 to value 0"]
 impl crate::Resettable for F4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

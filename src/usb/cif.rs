@@ -39,5 +39,5 @@ impl crate::RegisterSpec for CIF_SPEC {
 impl crate::Readable for CIF_SPEC {}
 #[doc = "`reset()` method sets CIF to value 0"]
 impl crate::Resettable for CIF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

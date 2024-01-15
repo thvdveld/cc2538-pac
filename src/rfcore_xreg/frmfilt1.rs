@@ -5,23 +5,23 @@ pub type W = crate::W<FRMFILT1_SPEC>;
 #[doc = "Field `MODIFY_FT_FILTER` reader - These bits are used to modify the frame type field of a received frame before frame type filtering is performed. The modification does not influence the frame that is written to the RX FIFO. 00: Leave the frame type as it is. 01: Invert MSB of the frame type. 10: Set MSB of the frame type to 0. 11: Set MSB of the frame type to 1."]
 pub type MODIFY_FT_FILTER_R = crate::FieldReader;
 #[doc = "Field `MODIFY_FT_FILTER` writer - These bits are used to modify the frame type field of a received frame before frame type filtering is performed. The modification does not influence the frame that is written to the RX FIFO. 00: Leave the frame type as it is. 01: Invert MSB of the frame type. 10: Set MSB of the frame type to 0. 11: Set MSB of the frame type to 1."]
-pub type MODIFY_FT_FILTER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MODIFY_FT_FILTER_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ACCEPT_FT_0_BEACON` reader - Defines whether beacon frames are accepted or not. Beacon frames have frame type = 000. 0: Reject 1: Accept"]
 pub type ACCEPT_FT_0_BEACON_R = crate::BitReader;
 #[doc = "Field `ACCEPT_FT_0_BEACON` writer - Defines whether beacon frames are accepted or not. Beacon frames have frame type = 000. 0: Reject 1: Accept"]
-pub type ACCEPT_FT_0_BEACON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACCEPT_FT_0_BEACON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACCEPT_FT_1_DATA` reader - Defines whether data frames are accepted or not. Data frames have frame type = 001. 0: Reject 1: Accept"]
 pub type ACCEPT_FT_1_DATA_R = crate::BitReader;
 #[doc = "Field `ACCEPT_FT_1_DATA` writer - Defines whether data frames are accepted or not. Data frames have frame type = 001. 0: Reject 1: Accept"]
-pub type ACCEPT_FT_1_DATA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACCEPT_FT_1_DATA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACCEPT_FT_2_ACK` reader - Defines whether acknowledgment frames are accepted or not. Acknowledgement frames have frame type = 010. 0: Reject 1: Accept"]
 pub type ACCEPT_FT_2_ACK_R = crate::BitReader;
 #[doc = "Field `ACCEPT_FT_2_ACK` writer - Defines whether acknowledgment frames are accepted or not. Acknowledgement frames have frame type = 010. 0: Reject 1: Accept"]
-pub type ACCEPT_FT_2_ACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACCEPT_FT_2_ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACCEPT_FT_3_MAC_CMD` reader - Defines whether MAC command frames are accepted or not. MAC command frames have frame type = 011. 0: Reject 1: Accept"]
 pub type ACCEPT_FT_3_MAC_CMD_R = crate::BitReader;
 #[doc = "Field `ACCEPT_FT_3_MAC_CMD` writer - Defines whether MAC command frames are accepted or not. MAC command frames have frame type = 011. 0: Reject 1: Accept"]
-pub type ACCEPT_FT_3_MAC_CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACCEPT_FT_3_MAC_CMD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 1:2 - These bits are used to modify the frame type field of a received frame before frame type filtering is performed. The modification does not influence the frame that is written to the RX FIFO. 00: Leave the frame type as it is. 01: Invert MSB of the frame type. 10: Set MSB of the frame type to 0. 11: Set MSB of the frame type to 1."]
     #[inline(always)]
@@ -53,34 +53,38 @@ impl W {
     #[doc = "Bits 1:2 - These bits are used to modify the frame type field of a received frame before frame type filtering is performed. The modification does not influence the frame that is written to the RX FIFO. 00: Leave the frame type as it is. 01: Invert MSB of the frame type. 10: Set MSB of the frame type to 0. 11: Set MSB of the frame type to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn modify_ft_filter(&mut self) -> MODIFY_FT_FILTER_W<FRMFILT1_SPEC, 1> {
-        MODIFY_FT_FILTER_W::new(self)
+    pub fn modify_ft_filter(&mut self) -> MODIFY_FT_FILTER_W<FRMFILT1_SPEC> {
+        MODIFY_FT_FILTER_W::new(self, 1)
     }
     #[doc = "Bit 3 - Defines whether beacon frames are accepted or not. Beacon frames have frame type = 000. 0: Reject 1: Accept"]
     #[inline(always)]
     #[must_use]
-    pub fn accept_ft_0_beacon(&mut self) -> ACCEPT_FT_0_BEACON_W<FRMFILT1_SPEC, 3> {
-        ACCEPT_FT_0_BEACON_W::new(self)
+    pub fn accept_ft_0_beacon(&mut self) -> ACCEPT_FT_0_BEACON_W<FRMFILT1_SPEC> {
+        ACCEPT_FT_0_BEACON_W::new(self, 3)
     }
     #[doc = "Bit 4 - Defines whether data frames are accepted or not. Data frames have frame type = 001. 0: Reject 1: Accept"]
     #[inline(always)]
     #[must_use]
-    pub fn accept_ft_1_data(&mut self) -> ACCEPT_FT_1_DATA_W<FRMFILT1_SPEC, 4> {
-        ACCEPT_FT_1_DATA_W::new(self)
+    pub fn accept_ft_1_data(&mut self) -> ACCEPT_FT_1_DATA_W<FRMFILT1_SPEC> {
+        ACCEPT_FT_1_DATA_W::new(self, 4)
     }
     #[doc = "Bit 5 - Defines whether acknowledgment frames are accepted or not. Acknowledgement frames have frame type = 010. 0: Reject 1: Accept"]
     #[inline(always)]
     #[must_use]
-    pub fn accept_ft_2_ack(&mut self) -> ACCEPT_FT_2_ACK_W<FRMFILT1_SPEC, 5> {
-        ACCEPT_FT_2_ACK_W::new(self)
+    pub fn accept_ft_2_ack(&mut self) -> ACCEPT_FT_2_ACK_W<FRMFILT1_SPEC> {
+        ACCEPT_FT_2_ACK_W::new(self, 5)
     }
     #[doc = "Bit 6 - Defines whether MAC command frames are accepted or not. MAC command frames have frame type = 011. 0: Reject 1: Accept"]
     #[inline(always)]
     #[must_use]
-    pub fn accept_ft_3_mac_cmd(&mut self) -> ACCEPT_FT_3_MAC_CMD_W<FRMFILT1_SPEC, 6> {
-        ACCEPT_FT_3_MAC_CMD_W::new(self)
+    pub fn accept_ft_3_mac_cmd(&mut self) -> ACCEPT_FT_3_MAC_CMD_W<FRMFILT1_SPEC> {
+        ACCEPT_FT_3_MAC_CMD_W::new(self, 6)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -96,10 +100,10 @@ impl crate::RegisterSpec for FRMFILT1_SPEC {
 impl crate::Readable for FRMFILT1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`frmfilt1::W`](W) writer structure"]
 impl crate::Writable for FRMFILT1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FRMFILT1 to value 0"]
 impl crate::Resettable for FRMFILT1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

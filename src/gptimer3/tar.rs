@@ -21,5 +21,5 @@ impl crate::RegisterSpec for TAR_SPEC {
 impl crate::Readable for TAR_SPEC {}
 #[doc = "`reset()` method sets TAR to value 0"]
 impl crate::Resettable for TAR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

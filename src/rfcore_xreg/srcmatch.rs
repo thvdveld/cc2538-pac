@@ -5,15 +5,15 @@ pub type W = crate::W<SRCMATCH_SPEC>;
 #[doc = "Field `SRC_MATCH_EN` reader - Source address matching enable (requires that FRMFILT.FRAME_FILTER_EN = 1)"]
 pub type SRC_MATCH_EN_R = crate::BitReader;
 #[doc = "Field `SRC_MATCH_EN` writer - Source address matching enable (requires that FRMFILT.FRAME_FILTER_EN = 1)"]
-pub type SRC_MATCH_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRC_MATCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AUTOPEND` reader - Automatic acknowledgment pending flag enable When a frame is received, the pending bit in the (possibly) returned acknowledgment is set automatically when the following conditions are met: - FRMFILT.FRAME_FILTER_EN is set. - SRCMATCH.SRC_MATCH_EN is set. - SRCMATCH.AUTOPEND is set. - The received frame matches the current SRCMATCH.PEND_DATAREQ_ONLY setting. - The received source address matches at least one source match table entry, which is enabled in SHORT_ADDR_EN and SHORT_PEND_EN or in EXT_ADDR_EN and EXT_PEND_EN."]
 pub type AUTOPEND_R = crate::BitReader;
 #[doc = "Field `AUTOPEND` writer - Automatic acknowledgment pending flag enable When a frame is received, the pending bit in the (possibly) returned acknowledgment is set automatically when the following conditions are met: - FRMFILT.FRAME_FILTER_EN is set. - SRCMATCH.SRC_MATCH_EN is set. - SRCMATCH.AUTOPEND is set. - The received frame matches the current SRCMATCH.PEND_DATAREQ_ONLY setting. - The received source address matches at least one source match table entry, which is enabled in SHORT_ADDR_EN and SHORT_PEND_EN or in EXT_ADDR_EN and EXT_PEND_EN."]
-pub type AUTOPEND_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AUTOPEND_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PEND_DATAREQ_ONLY` reader - When this bit is set, the AUTOPEND function also requires that the received frame is a DATA REQUEST MAC command frame."]
 pub type PEND_DATAREQ_ONLY_R = crate::BitReader;
 #[doc = "Field `PEND_DATAREQ_ONLY` writer - When this bit is set, the AUTOPEND function also requires that the received frame is a DATA REQUEST MAC command frame."]
-pub type PEND_DATAREQ_ONLY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PEND_DATAREQ_ONLY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Source address matching enable (requires that FRMFILT.FRAME_FILTER_EN = 1)"]
     #[inline(always)]
@@ -35,22 +35,26 @@ impl W {
     #[doc = "Bit 0 - Source address matching enable (requires that FRMFILT.FRAME_FILTER_EN = 1)"]
     #[inline(always)]
     #[must_use]
-    pub fn src_match_en(&mut self) -> SRC_MATCH_EN_W<SRCMATCH_SPEC, 0> {
-        SRC_MATCH_EN_W::new(self)
+    pub fn src_match_en(&mut self) -> SRC_MATCH_EN_W<SRCMATCH_SPEC> {
+        SRC_MATCH_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Automatic acknowledgment pending flag enable When a frame is received, the pending bit in the (possibly) returned acknowledgment is set automatically when the following conditions are met: - FRMFILT.FRAME_FILTER_EN is set. - SRCMATCH.SRC_MATCH_EN is set. - SRCMATCH.AUTOPEND is set. - The received frame matches the current SRCMATCH.PEND_DATAREQ_ONLY setting. - The received source address matches at least one source match table entry, which is enabled in SHORT_ADDR_EN and SHORT_PEND_EN or in EXT_ADDR_EN and EXT_PEND_EN."]
     #[inline(always)]
     #[must_use]
-    pub fn autopend(&mut self) -> AUTOPEND_W<SRCMATCH_SPEC, 1> {
-        AUTOPEND_W::new(self)
+    pub fn autopend(&mut self) -> AUTOPEND_W<SRCMATCH_SPEC> {
+        AUTOPEND_W::new(self, 1)
     }
     #[doc = "Bit 2 - When this bit is set, the AUTOPEND function also requires that the received frame is a DATA REQUEST MAC command frame."]
     #[inline(always)]
     #[must_use]
-    pub fn pend_datareq_only(&mut self) -> PEND_DATAREQ_ONLY_W<SRCMATCH_SPEC, 2> {
-        PEND_DATAREQ_ONLY_W::new(self)
+    pub fn pend_datareq_only(&mut self) -> PEND_DATAREQ_ONLY_W<SRCMATCH_SPEC> {
+        PEND_DATAREQ_ONLY_W::new(self, 2)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -66,10 +70,10 @@ impl crate::RegisterSpec for SRCMATCH_SPEC {
 impl crate::Readable for SRCMATCH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`srcmatch::W`](W) writer structure"]
 impl crate::Writable for SRCMATCH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRCMATCH to value 0"]
 impl crate::Resettable for SRCMATCH_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

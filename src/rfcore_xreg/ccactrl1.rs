@@ -5,11 +5,11 @@ pub type W = crate::W<CCACTRL1_SPEC>;
 #[doc = "Field `CCA_HYST` reader - Sets the level of CCA hysteresis. Unsigned values given in dB"]
 pub type CCA_HYST_R = crate::FieldReader;
 #[doc = "Field `CCA_HYST` writer - Sets the level of CCA hysteresis. Unsigned values given in dB"]
-pub type CCA_HYST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CCA_HYST_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CCA_MODE` reader - 00: CCA always set to 1 01: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
 pub type CCA_MODE_R = crate::FieldReader;
 #[doc = "Field `CCA_MODE` writer - 00: CCA always set to 1 01: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
-pub type CCA_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CCA_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:2 - Sets the level of CCA hysteresis. Unsigned values given in dB"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bits 0:2 - Sets the level of CCA hysteresis. Unsigned values given in dB"]
     #[inline(always)]
     #[must_use]
-    pub fn cca_hyst(&mut self) -> CCA_HYST_W<CCACTRL1_SPEC, 0> {
-        CCA_HYST_W::new(self)
+    pub fn cca_hyst(&mut self) -> CCA_HYST_W<CCACTRL1_SPEC> {
+        CCA_HYST_W::new(self, 0)
     }
     #[doc = "Bits 3:4 - 00: CCA always set to 1 01: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
     #[inline(always)]
     #[must_use]
-    pub fn cca_mode(&mut self) -> CCA_MODE_W<CCACTRL1_SPEC, 3> {
-        CCA_MODE_W::new(self)
+    pub fn cca_mode(&mut self) -> CCA_MODE_W<CCACTRL1_SPEC> {
+        CCA_MODE_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for CCACTRL1_SPEC {
 impl crate::Readable for CCACTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ccactrl1::W`](W) writer structure"]
 impl crate::Writable for CCACTRL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CCACTRL1 to value 0"]
 impl crate::Resettable for CCACTRL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

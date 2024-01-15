@@ -39,5 +39,5 @@ impl crate::RegisterSpec for SW_REV_SPEC {
 impl crate::Readable for SW_REV_SPEC {}
 #[doc = "`reset()` method sets SW_REV to value 0"]
 impl crate::Resettable for SW_REV_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

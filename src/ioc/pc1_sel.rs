@@ -5,7 +5,7 @@ pub type W = crate::W<PC1_SEL_SPEC>;
 #[doc = "Field `PC1_sel` reader - Select one peripheral signal output for PC1."]
 pub type PC1_SEL_R = crate::FieldReader;
 #[doc = "Field `PC1_sel` writer - Select one peripheral signal output for PC1."]
-pub type PC1_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PC1_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PC1."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PC1."]
     #[inline(always)]
     #[must_use]
-    pub fn pc1_sel(&mut self) -> PC1_SEL_W<PC1_SEL_SPEC, 0> {
-        PC1_SEL_W::new(self)
+    pub fn pc1_sel(&mut self) -> PC1_SEL_W<PC1_SEL_SPEC> {
+        PC1_SEL_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for PC1_SEL_SPEC {
 impl crate::Readable for PC1_SEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pc1_sel::W`](W) writer structure"]
 impl crate::Writable for PC1_SEL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PC1_SEL to value 0"]
 impl crate::Resettable for PC1_SEL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

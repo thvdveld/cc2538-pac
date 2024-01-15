@@ -6,7 +6,7 @@ For GCM: -\\[127:0\\]
 - This register is used to store intermediate values and is initialized with 0s when loading a new key. For CCM: -\\[255:0\\]
 - This register is used to store intermediate values. For CBC-MAC: -\\[255:0\\]
 - ZEROES - This register must remain 0."]
-pub type AES_KEY3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type AES_KEY3_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl W {
     #[doc = "Bits 0:31 - AES_KEY3\\[31:0\\]/AES_KEY2\\[159:128\\]
 For GCM: -\\[127:0\\]
@@ -16,10 +16,14 @@ For GCM: -\\[127:0\\]
 - ZEROES - This register must remain 0."]
     #[inline(always)]
     #[must_use]
-    pub fn aes_key3(&mut self) -> AES_KEY3_W<AES_KEY3_0_SPEC, 0> {
-        AES_KEY3_W::new(self)
+    pub fn aes_key3(&mut self) -> AES_KEY3_W<AES_KEY3_0_SPEC> {
+        AES_KEY3_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -33,10 +37,10 @@ impl crate::RegisterSpec for AES_KEY3_0_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`aes_key3_0::W`](W) writer structure"]
 impl crate::Writable for AES_KEY3_0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AES_KEY3_0 to value 0"]
 impl crate::Resettable for AES_KEY3_0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

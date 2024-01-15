@@ -5,15 +5,15 @@ pub type W = crate::W<FSCAL1_SPEC>;
 #[doc = "Field `VCO_CURR` reader - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
 pub type VCO_CURR_R = crate::FieldReader;
 #[doc = "Field `VCO_CURR` writer - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
-pub type VCO_CURR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type VCO_CURR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `VCO_CURR_CAL` reader - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
 pub type VCO_CURR_CAL_R = crate::FieldReader;
 #[doc = "Field `VCO_CURR_CAL` writer - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
-pub type VCO_CURR_CAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type VCO_CURR_CAL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `VCO_CURR_CAL_OE` reader - Override current calibration"]
 pub type VCO_CURR_CAL_OE_R = crate::BitReader;
 #[doc = "Field `VCO_CURR_CAL_OE` writer - Override current calibration"]
-pub type VCO_CURR_CAL_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VCO_CURR_CAL_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
     #[inline(always)]
@@ -35,22 +35,26 @@ impl W {
     #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
     #[inline(always)]
     #[must_use]
-    pub fn vco_curr(&mut self) -> VCO_CURR_W<FSCAL1_SPEC, 0> {
-        VCO_CURR_W::new(self)
+    pub fn vco_curr(&mut self) -> VCO_CURR_W<FSCAL1_SPEC> {
+        VCO_CURR_W::new(self, 0)
     }
     #[doc = "Bits 2:6 - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
     #[inline(always)]
     #[must_use]
-    pub fn vco_curr_cal(&mut self) -> VCO_CURR_CAL_W<FSCAL1_SPEC, 2> {
-        VCO_CURR_CAL_W::new(self)
+    pub fn vco_curr_cal(&mut self) -> VCO_CURR_CAL_W<FSCAL1_SPEC> {
+        VCO_CURR_CAL_W::new(self, 2)
     }
     #[doc = "Bit 7 - Override current calibration"]
     #[inline(always)]
     #[must_use]
-    pub fn vco_curr_cal_oe(&mut self) -> VCO_CURR_CAL_OE_W<FSCAL1_SPEC, 7> {
-        VCO_CURR_CAL_OE_W::new(self)
+    pub fn vco_curr_cal_oe(&mut self) -> VCO_CURR_CAL_OE_W<FSCAL1_SPEC> {
+        VCO_CURR_CAL_OE_W::new(self, 7)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -66,10 +70,10 @@ impl crate::RegisterSpec for FSCAL1_SPEC {
 impl crate::Readable for FSCAL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fscal1::W`](W) writer structure"]
 impl crate::Writable for FSCAL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FSCAL1 to value 0"]
 impl crate::Resettable for FSCAL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

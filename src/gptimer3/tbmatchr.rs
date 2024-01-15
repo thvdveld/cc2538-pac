@@ -5,7 +5,7 @@ pub type W = crate::W<TBMATCHR_SPEC>;
 #[doc = "Field `TBMR` reader - GPTM Timer B match register"]
 pub type TBMR_R = crate::FieldReader<u16>;
 #[doc = "Field `TBMR` writer - GPTM Timer B match register"]
-pub type TBMR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TBMR_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - GPTM Timer B match register"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:15 - GPTM Timer B match register"]
     #[inline(always)]
     #[must_use]
-    pub fn tbmr(&mut self) -> TBMR_W<TBMATCHR_SPEC, 0> {
-        TBMR_W::new(self)
+    pub fn tbmr(&mut self) -> TBMR_W<TBMATCHR_SPEC> {
+        TBMR_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -39,10 +43,10 @@ impl crate::RegisterSpec for TBMATCHR_SPEC {
 impl crate::Readable for TBMATCHR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tbmatchr::W`](W) writer structure"]
 impl crate::Writable for TBMATCHR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TBMATCHR to value 0"]
 impl crate::Resettable for TBMATCHR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

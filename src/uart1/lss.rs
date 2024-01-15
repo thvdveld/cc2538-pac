@@ -18,5 +18,5 @@ impl crate::RegisterSpec for LSS_SPEC {
 impl crate::Readable for LSS_SPEC {}
 #[doc = "`reset()` method sets LSS to value 0"]
 impl crate::Resettable for LSS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

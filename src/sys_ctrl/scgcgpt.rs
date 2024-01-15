@@ -5,19 +5,19 @@ pub type W = crate::W<SCGCGPT_SPEC>;
 #[doc = "Field `GPT0` reader - 0: Clock for GPT0 is gated. 1: Clock for GPT0 is enabled."]
 pub type GPT0_R = crate::BitReader;
 #[doc = "Field `GPT0` writer - 0: Clock for GPT0 is gated. 1: Clock for GPT0 is enabled."]
-pub type GPT0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPT0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPT1` reader - 0: Clock for GPT1 is gated. 1: Clock for GPT1 is enabled."]
 pub type GPT1_R = crate::BitReader;
 #[doc = "Field `GPT1` writer - 0: Clock for GPT1 is gated. 1: Clock for GPT1 is enabled."]
-pub type GPT1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPT1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPT2` reader - 0: Clock for GPT2 is gated. 1: Clock for GPT2 is enabled."]
 pub type GPT2_R = crate::BitReader;
 #[doc = "Field `GPT2` writer - 0: Clock for GPT2 is gated. 1: Clock for GPT2 is enabled."]
-pub type GPT2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPT2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPT3` reader - 0: Clock for GPT3 is gated. 1: Clock for GPT3 is enabled."]
 pub type GPT3_R = crate::BitReader;
 #[doc = "Field `GPT3` writer - 0: Clock for GPT3 is gated. 1: Clock for GPT3 is enabled."]
-pub type GPT3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPT3_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 0: Clock for GPT0 is gated. 1: Clock for GPT0 is enabled."]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bit 0 - 0: Clock for GPT0 is gated. 1: Clock for GPT0 is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn gpt0(&mut self) -> GPT0_W<SCGCGPT_SPEC, 0> {
-        GPT0_W::new(self)
+    pub fn gpt0(&mut self) -> GPT0_W<SCGCGPT_SPEC> {
+        GPT0_W::new(self, 0)
     }
     #[doc = "Bit 1 - 0: Clock for GPT1 is gated. 1: Clock for GPT1 is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn gpt1(&mut self) -> GPT1_W<SCGCGPT_SPEC, 1> {
-        GPT1_W::new(self)
+    pub fn gpt1(&mut self) -> GPT1_W<SCGCGPT_SPEC> {
+        GPT1_W::new(self, 1)
     }
     #[doc = "Bit 2 - 0: Clock for GPT2 is gated. 1: Clock for GPT2 is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn gpt2(&mut self) -> GPT2_W<SCGCGPT_SPEC, 2> {
-        GPT2_W::new(self)
+    pub fn gpt2(&mut self) -> GPT2_W<SCGCGPT_SPEC> {
+        GPT2_W::new(self, 2)
     }
     #[doc = "Bit 3 - 0: Clock for GPT3 is gated. 1: Clock for GPT3 is enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn gpt3(&mut self) -> GPT3_W<SCGCGPT_SPEC, 3> {
-        GPT3_W::new(self)
+    pub fn gpt3(&mut self) -> GPT3_W<SCGCGPT_SPEC> {
+        GPT3_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -82,10 +86,10 @@ impl crate::RegisterSpec for SCGCGPT_SPEC {
 impl crate::Readable for SCGCGPT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scgcgpt::W`](W) writer structure"]
 impl crate::Writable for SCGCGPT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SCGCGPT to value 0"]
 impl crate::Resettable for SCGCGPT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

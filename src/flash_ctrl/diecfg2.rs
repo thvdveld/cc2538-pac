@@ -46,5 +46,5 @@ impl crate::RegisterSpec for DIECFG2_SPEC {
 impl crate::Readable for DIECFG2_SPEC {}
 #[doc = "`reset()` method sets DIECFG2 to value 0"]
 impl crate::Resettable for DIECFG2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

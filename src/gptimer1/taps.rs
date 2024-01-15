@@ -18,5 +18,5 @@ impl crate::RegisterSpec for TAPS_SPEC {
 impl crate::Readable for TAPS_SPEC {}
 #[doc = "`reset()` method sets TAPS to value 0"]
 impl crate::Resettable for TAPS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

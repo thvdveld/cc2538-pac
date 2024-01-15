@@ -5,7 +5,7 @@ pub type W = crate::W<DMAC_CH0_EXTADDR_SPEC>;
 #[doc = "Field `ADDR` reader - Channel external address value When read during operation, it holds the last updated external address after being sent to the master interface."]
 pub type ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `ADDR` writer - Channel external address value When read during operation, it holds the last updated external address after being sent to the master interface."]
-pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Channel external address value When read during operation, it holds the last updated external address after being sent to the master interface."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:31 - Channel external address value When read during operation, it holds the last updated external address after being sent to the master interface."]
     #[inline(always)]
     #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<DMAC_CH0_EXTADDR_SPEC, 0> {
-        ADDR_W::new(self)
+    pub fn addr(&mut self) -> ADDR_W<DMAC_CH0_EXTADDR_SPEC> {
+        ADDR_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for DMAC_CH0_EXTADDR_SPEC {
 impl crate::Readable for DMAC_CH0_EXTADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmac_ch0_extaddr::W`](W) writer structure"]
 impl crate::Writable for DMAC_CH0_EXTADDR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMAC_CH0_EXTADDR to value 0"]
 impl crate::Resettable for DMAC_CH0_EXTADDR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

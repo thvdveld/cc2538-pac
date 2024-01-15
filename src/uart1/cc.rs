@@ -5,7 +5,7 @@ pub type W = crate::W<CC_SPEC>;
 #[doc = "Field `CS` reader - UART baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the UART. bit0 (PIOSC): 1: The UART baud clock is determined by the IO DIV setting in the system controller. 0: The UART baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The UART system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The UART system clock is determined by the SYS DIV setting in the system controller."]
 pub type CS_R = crate::FieldReader;
 #[doc = "Field `CS` writer - UART baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the UART. bit0 (PIOSC): 1: The UART baud clock is determined by the IO DIV setting in the system controller. 0: The UART baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The UART system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The UART system clock is determined by the SYS DIV setting in the system controller."]
-pub type CS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CS_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - UART baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the UART. bit0 (PIOSC): 1: The UART baud clock is determined by the IO DIV setting in the system controller. 0: The UART baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The UART system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The UART system clock is determined by the SYS DIV setting in the system controller."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:2 - UART baud and system clock source The following bits determine the clock source that generates the baud and system clocks for the UART. bit0 (PIOSC): 1: The UART baud clock is determined by the IO DIV setting in the system controller. 0: The UART baud clock is determined by the SYS DIV setting in the system controller. bit1: Unused bit2: (DSEN) Only meaningful when the system is in deep sleep mode. This bit is a don't care when not in sleep mode. 1: The UART system clock is running on the same clock as the baud clock, as per PIOSC setting above. 0: The UART system clock is determined by the SYS DIV setting in the system controller."]
     #[inline(always)]
     #[must_use]
-    pub fn cs(&mut self) -> CS_W<CC_SPEC, 0> {
-        CS_W::new(self)
+    pub fn cs(&mut self) -> CS_W<CC_SPEC> {
+        CS_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for CC_SPEC {
 impl crate::Readable for CC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cc::W`](W) writer structure"]
 impl crate::Writable for CC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CC to value 0"]
 impl crate::Resettable for CC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

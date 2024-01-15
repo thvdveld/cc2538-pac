@@ -18,5 +18,5 @@ impl crate::RegisterSpec for FRML_SPEC {
 impl crate::Readable for FRML_SPEC {}
 #[doc = "`reset()` method sets FRML to value 0"]
 impl crate::Resettable for FRML_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

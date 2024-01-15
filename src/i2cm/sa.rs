@@ -5,11 +5,11 @@ pub type W = crate::W<SA_SPEC>;
 #[doc = "Field `RS` reader - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
 pub type RS_R = crate::BitReader;
 #[doc = "Field `RS` writer - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
-pub type RS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SA` reader - I2C slave address"]
 pub type SA_R = crate::FieldReader;
 #[doc = "Field `SA` writer - I2C slave address"]
-pub type SA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type SA_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bit 0 - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bit 0 - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
     #[inline(always)]
     #[must_use]
-    pub fn rs(&mut self) -> RS_W<SA_SPEC, 0> {
-        RS_W::new(self)
+    pub fn rs(&mut self) -> RS_W<SA_SPEC> {
+        RS_W::new(self, 0)
     }
     #[doc = "Bits 1:7 - I2C slave address"]
     #[inline(always)]
     #[must_use]
-    pub fn sa(&mut self) -> SA_W<SA_SPEC, 1> {
-        SA_W::new(self)
+    pub fn sa(&mut self) -> SA_W<SA_SPEC> {
+        SA_W::new(self, 1)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for SA_SPEC {
 impl crate::Readable for SA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sa::W`](W) writer structure"]
 impl crate::Writable for SA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SA to value 0"]
 impl crate::Resettable for SA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

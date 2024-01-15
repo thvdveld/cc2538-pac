@@ -39,5 +39,5 @@ impl crate::RegisterSpec for RSR_SPEC {
 impl crate::Readable for RSR_SPEC {}
 #[doc = "`reset()` method sets RSR to value 0"]
 impl crate::Resettable for RSR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

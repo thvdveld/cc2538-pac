@@ -25,5 +25,5 @@ impl crate::RegisterSpec for DMAC_OPTIONS_SPEC {
 impl crate::Readable for DMAC_OPTIONS_SPEC {}
 #[doc = "`reset()` method sets DMAC_OPTIONS to value 0"]
 impl crate::Resettable for DMAC_OPTIONS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

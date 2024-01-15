@@ -18,5 +18,5 @@ impl crate::RegisterSpec for RSSISTAT_SPEC {
 impl crate::Readable for RSSISTAT_SPEC {}
 #[doc = "`reset()` method sets RSSISTAT to value 0"]
 impl crate::Resettable for RSSISTAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

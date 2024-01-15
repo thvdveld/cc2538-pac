@@ -5,7 +5,7 @@ pub type W = crate::W<AGCCTRL1_SPEC>;
 #[doc = "Field `AGC_REF` reader - Target value for the AGC control loop, given in 1-dB steps"]
 pub type AGC_REF_R = crate::FieldReader;
 #[doc = "Field `AGC_REF` writer - Target value for the AGC control loop, given in 1-dB steps"]
-pub type AGC_REF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type AGC_REF_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - Target value for the AGC control loop, given in 1-dB steps"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bits 0:5 - Target value for the AGC control loop, given in 1-dB steps"]
     #[inline(always)]
     #[must_use]
-    pub fn agc_ref(&mut self) -> AGC_REF_W<AGCCTRL1_SPEC, 0> {
-        AGC_REF_W::new(self)
+    pub fn agc_ref(&mut self) -> AGC_REF_W<AGCCTRL1_SPEC> {
+        AGC_REF_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for AGCCTRL1_SPEC {
 impl crate::Readable for AGCCTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`agcctrl1::W`](W) writer structure"]
 impl crate::Writable for AGCCTRL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AGCCTRL1 to value 0"]
 impl crate::Resettable for AGCCTRL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

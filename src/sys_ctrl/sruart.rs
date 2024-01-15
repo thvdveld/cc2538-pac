@@ -5,11 +5,11 @@ pub type W = crate::W<SRUART_SPEC>;
 #[doc = "Field `UART0` reader - 0: UART0 module is not reset 1: UART0 module is reset"]
 pub type UART0_R = crate::BitReader;
 #[doc = "Field `UART0` writer - 0: UART0 module is not reset 1: UART0 module is reset"]
-pub type UART0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART1` reader - 0: UART1 module is not reset 1: UART1 module is reset"]
 pub type UART1_R = crate::BitReader;
 #[doc = "Field `UART1` writer - 0: UART1 module is not reset 1: UART1 module is reset"]
-pub type UART1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 0: UART0 module is not reset 1: UART0 module is reset"]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bit 0 - 0: UART0 module is not reset 1: UART0 module is reset"]
     #[inline(always)]
     #[must_use]
-    pub fn uart0(&mut self) -> UART0_W<SRUART_SPEC, 0> {
-        UART0_W::new(self)
+    pub fn uart0(&mut self) -> UART0_W<SRUART_SPEC> {
+        UART0_W::new(self, 0)
     }
     #[doc = "Bit 1 - 0: UART1 module is not reset 1: UART1 module is reset"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1(&mut self) -> UART1_W<SRUART_SPEC, 1> {
-        UART1_W::new(self)
+    pub fn uart1(&mut self) -> UART1_W<SRUART_SPEC> {
+        UART1_W::new(self, 1)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for SRUART_SPEC {
 impl crate::Readable for SRUART_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sruart::W`](W) writer structure"]
 impl crate::Writable for SRUART_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRUART to value 0"]
 impl crate::Resettable for SRUART_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

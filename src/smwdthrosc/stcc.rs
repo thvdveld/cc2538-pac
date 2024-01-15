@@ -5,11 +5,11 @@ pub type W = crate::W<STCC_SPEC>;
 #[doc = "Field `PIN` reader - Pin select Valid settings are 1-7 when either port A, B, C, or D is selected."]
 pub type PIN_R = crate::FieldReader;
 #[doc = "Field `PIN` writer - Pin select Valid settings are 1-7 when either port A, B, C, or D is selected."]
-pub type PIN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PIN_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PORT` reader - Port select Valid settings are 0-3, all others inhibit any capture from occurring 000: Port A selected 001: Port B selected 010: Port C selected 011: Port D selected"]
 pub type PORT_R = crate::FieldReader;
 #[doc = "Field `PORT` writer - Port select Valid settings are 0-3, all others inhibit any capture from occurring 000: Port A selected 001: Port B selected 010: Port C selected 011: Port D selected"]
-pub type PORT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PORT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - Pin select Valid settings are 1-7 when either port A, B, C, or D is selected."]
     #[inline(always)]
@@ -26,16 +26,20 @@ impl W {
     #[doc = "Bits 0:2 - Pin select Valid settings are 1-7 when either port A, B, C, or D is selected."]
     #[inline(always)]
     #[must_use]
-    pub fn pin(&mut self) -> PIN_W<STCC_SPEC, 0> {
-        PIN_W::new(self)
+    pub fn pin(&mut self) -> PIN_W<STCC_SPEC> {
+        PIN_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Port select Valid settings are 0-3, all others inhibit any capture from occurring 000: Port A selected 001: Port B selected 010: Port C selected 011: Port D selected"]
     #[inline(always)]
     #[must_use]
-    pub fn port(&mut self) -> PORT_W<STCC_SPEC, 3> {
-        PORT_W::new(self)
+    pub fn port(&mut self) -> PORT_W<STCC_SPEC> {
+        PORT_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -51,10 +55,10 @@ impl crate::RegisterSpec for STCC_SPEC {
 impl crate::Readable for STCC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stcc::W`](W) writer structure"]
 impl crate::Writable for STCC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STCC to value 0"]
 impl crate::Resettable for STCC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -67,5 +67,5 @@ impl crate::RegisterSpec for RIS_SPEC {
 impl crate::Readable for RIS_SPEC {}
 #[doc = "`reset()` method sets RIS to value 0"]
 impl crate::Resettable for RIS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

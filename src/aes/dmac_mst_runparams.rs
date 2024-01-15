@@ -5,23 +5,23 @@ pub type W = crate::W<DMAC_MST_RUNPARAMS_SPEC>;
 #[doc = "Field `AHB_MST1_BIGEND` reader - Endianess for the AHB master 0: Little endian 1: Big endian"]
 pub type AHB_MST1_BIGEND_R = crate::BitReader;
 #[doc = "Field `AHB_MST1_BIGEND` writer - Endianess for the AHB master 0: Little endian 1: Big endian"]
-pub type AHB_MST1_BIGEND_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHB_MST1_BIGEND_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHB_MST1_LOCK_EN` reader - Locked transform on AHB 0: Transfers are not locked 1: Transfers are locked"]
 pub type AHB_MST1_LOCK_EN_R = crate::BitReader;
 #[doc = "Field `AHB_MST1_LOCK_EN` writer - Locked transform on AHB 0: Transfers are not locked 1: Transfers are locked"]
-pub type AHB_MST1_LOCK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHB_MST1_LOCK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHB_MST1_INCR_EN` reader - Burst length type of AHB transfer 0: Unspecified length burst transfers 1: Fixed length burst or single transfers"]
 pub type AHB_MST1_INCR_EN_R = crate::BitReader;
 #[doc = "Field `AHB_MST1_INCR_EN` writer - Burst length type of AHB transfer 0: Unspecified length burst transfers 1: Fixed length burst or single transfers"]
-pub type AHB_MST1_INCR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHB_MST1_INCR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHB_MST1_IDLE_EN` reader - Idle insertion between consecutive burst transfers on AHB 0: No Idle insertion 1: Idle insertion"]
 pub type AHB_MST1_IDLE_EN_R = crate::BitReader;
 #[doc = "Field `AHB_MST1_IDLE_EN` writer - Idle insertion between consecutive burst transfers on AHB 0: No Idle insertion 1: Idle insertion"]
-pub type AHB_MST1_IDLE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHB_MST1_IDLE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHB_MST1_BURST_SIZE` reader - Maximum burst size that can be performed on the AHB bus 0010b = 4 bytes (default) 0011b = 8 bytes 0100b = 16 bytes 0101b = 32 bytes 0110b = 64 bytes Others = Reserved"]
 pub type AHB_MST1_BURST_SIZE_R = crate::FieldReader;
 #[doc = "Field `AHB_MST1_BURST_SIZE` writer - Maximum burst size that can be performed on the AHB bus 0010b = 4 bytes (default) 0011b = 8 bytes 0100b = 16 bytes 0101b = 32 bytes 0110b = 64 bytes Others = Reserved"]
-pub type AHB_MST1_BURST_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type AHB_MST1_BURST_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 8 - Endianess for the AHB master 0: Little endian 1: Big endian"]
     #[inline(always)]
@@ -53,34 +53,38 @@ impl W {
     #[doc = "Bit 8 - Endianess for the AHB master 0: Little endian 1: Big endian"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_mst1_bigend(&mut self) -> AHB_MST1_BIGEND_W<DMAC_MST_RUNPARAMS_SPEC, 8> {
-        AHB_MST1_BIGEND_W::new(self)
+    pub fn ahb_mst1_bigend(&mut self) -> AHB_MST1_BIGEND_W<DMAC_MST_RUNPARAMS_SPEC> {
+        AHB_MST1_BIGEND_W::new(self, 8)
     }
     #[doc = "Bit 9 - Locked transform on AHB 0: Transfers are not locked 1: Transfers are locked"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_mst1_lock_en(&mut self) -> AHB_MST1_LOCK_EN_W<DMAC_MST_RUNPARAMS_SPEC, 9> {
-        AHB_MST1_LOCK_EN_W::new(self)
+    pub fn ahb_mst1_lock_en(&mut self) -> AHB_MST1_LOCK_EN_W<DMAC_MST_RUNPARAMS_SPEC> {
+        AHB_MST1_LOCK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Burst length type of AHB transfer 0: Unspecified length burst transfers 1: Fixed length burst or single transfers"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_mst1_incr_en(&mut self) -> AHB_MST1_INCR_EN_W<DMAC_MST_RUNPARAMS_SPEC, 10> {
-        AHB_MST1_INCR_EN_W::new(self)
+    pub fn ahb_mst1_incr_en(&mut self) -> AHB_MST1_INCR_EN_W<DMAC_MST_RUNPARAMS_SPEC> {
+        AHB_MST1_INCR_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Idle insertion between consecutive burst transfers on AHB 0: No Idle insertion 1: Idle insertion"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_mst1_idle_en(&mut self) -> AHB_MST1_IDLE_EN_W<DMAC_MST_RUNPARAMS_SPEC, 11> {
-        AHB_MST1_IDLE_EN_W::new(self)
+    pub fn ahb_mst1_idle_en(&mut self) -> AHB_MST1_IDLE_EN_W<DMAC_MST_RUNPARAMS_SPEC> {
+        AHB_MST1_IDLE_EN_W::new(self, 11)
     }
     #[doc = "Bits 12:15 - Maximum burst size that can be performed on the AHB bus 0010b = 4 bytes (default) 0011b = 8 bytes 0100b = 16 bytes 0101b = 32 bytes 0110b = 64 bytes Others = Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn ahb_mst1_burst_size(&mut self) -> AHB_MST1_BURST_SIZE_W<DMAC_MST_RUNPARAMS_SPEC, 12> {
-        AHB_MST1_BURST_SIZE_W::new(self)
+    pub fn ahb_mst1_burst_size(&mut self) -> AHB_MST1_BURST_SIZE_W<DMAC_MST_RUNPARAMS_SPEC> {
+        AHB_MST1_BURST_SIZE_W::new(self, 12)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -96,10 +100,10 @@ impl crate::RegisterSpec for DMAC_MST_RUNPARAMS_SPEC {
 impl crate::Readable for DMAC_MST_RUNPARAMS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmac_mst_runparams::W`](W) writer structure"]
 impl crate::Writable for DMAC_MST_RUNPARAMS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMAC_MST_RUNPARAMS to value 0"]
 impl crate::Resettable for DMAC_MST_RUNPARAMS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

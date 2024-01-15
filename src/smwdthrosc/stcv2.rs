@@ -20,5 +20,5 @@ impl crate::RegisterSpec for STCV2_SPEC {
 impl crate::Readable for STCV2_SPEC {}
 #[doc = "`reset()` method sets STCV2 to value 0"]
 impl crate::Resettable for STCV2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

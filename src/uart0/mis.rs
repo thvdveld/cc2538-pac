@@ -88,5 +88,5 @@ impl crate::RegisterSpec for MIS_SPEC {
 impl crate::Readable for MIS_SPEC {}
 #[doc = "`reset()` method sets MIS to value 0"]
 impl crate::Resettable for MIS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

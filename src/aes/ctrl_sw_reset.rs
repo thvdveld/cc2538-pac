@@ -5,7 +5,7 @@ pub type W = crate::W<CTRL_SW_RESET_SPEC>;
 #[doc = "Field `SW_RESET` reader - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
 pub type SW_RESET_R = crate::BitReader;
 #[doc = "Field `SW_RESET` writer - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
-pub type SW_RESET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SW_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bit 0 - If this bit is set to 1, the following modules are reset: - Master control internal state is reset. That includes interrupt, error status register, and result available interrupt generation FSM. - Key store module state is reset. That includes clearing the written area flags; therefore, the keys must be reloaded to the key store module. Writing 0 has no effect. The bit is self cleared after executing the reset."]
     #[inline(always)]
     #[must_use]
-    pub fn sw_reset(&mut self) -> SW_RESET_W<CTRL_SW_RESET_SPEC, 0> {
-        SW_RESET_W::new(self)
+    pub fn sw_reset(&mut self) -> SW_RESET_W<CTRL_SW_RESET_SPEC> {
+        SW_RESET_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for CTRL_SW_RESET_SPEC {
 impl crate::Readable for CTRL_SW_RESET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl_sw_reset::W`](W) writer structure"]
 impl crate::Writable for CTRL_SW_RESET_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL_SW_RESET to value 0"]
 impl crate::Resettable for CTRL_SW_RESET_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

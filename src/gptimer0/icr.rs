@@ -5,39 +5,39 @@ pub type W = crate::W<ICR_SPEC>;
 #[doc = "Field `TATOCINT` reader - GPTM Timer A time-out interrupt clear"]
 pub type TATOCINT_R = crate::BitReader;
 #[doc = "Field `TATOCINT` writer - GPTM Timer A time-out interrupt clear"]
-pub type TATOCINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TATOCINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAMCINT` reader - GPTM Timer A capture match interrupt clear"]
 pub type CAMCINT_R = crate::BitReader;
 #[doc = "Field `CAMCINT` writer - GPTM Timer A capture match interrupt clear"]
-pub type CAMCINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAMCINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAECINT` reader - GPTM Timer A capture event Interrupt clear"]
 pub type CAECINT_R = crate::BitReader;
 #[doc = "Field `CAECINT` writer - GPTM Timer A capture event Interrupt clear"]
-pub type CAECINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAECINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAMCINT` reader - GPTM Timer A match interrupt clear"]
 pub type TAMCINT_R = crate::BitReader;
 #[doc = "Field `TAMCINT` writer - GPTM Timer A match interrupt clear"]
-pub type TAMCINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TAMCINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TBTOCINT` reader - GPTM Timer B time-out interrupt clear"]
 pub type TBTOCINT_R = crate::BitReader;
 #[doc = "Field `TBTOCINT` writer - GPTM Timer B time-out interrupt clear"]
-pub type TBTOCINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TBTOCINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CBMCINT` reader - GPTM Timer B capture match interrupt clear"]
 pub type CBMCINT_R = crate::BitReader;
 #[doc = "Field `CBMCINT` writer - GPTM Timer B capture match interrupt clear"]
-pub type CBMCINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CBMCINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CBECINT` reader - GPTM Timer B capture event Interrupt clear"]
 pub type CBECINT_R = crate::BitReader;
 #[doc = "Field `CBECINT` writer - GPTM Timer B capture event Interrupt clear"]
-pub type CBECINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CBECINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TBMCINT` reader - GPTM Timer B match interrupt clear"]
 pub type TBMCINT_R = crate::BitReader;
 #[doc = "Field `TBMCINT` writer - GPTM Timer B match interrupt clear"]
-pub type TBMCINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TBMCINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WUECINT` reader - GPTM write update error interrupt clear"]
 pub type WUECINT_R = crate::BitReader;
 #[doc = "Field `WUECINT` writer - GPTM write update error interrupt clear"]
-pub type WUECINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WUECINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
     #[inline(always)]
@@ -89,58 +89,62 @@ impl W {
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn tatocint(&mut self) -> TATOCINT_W<ICR_SPEC, 0> {
-        TATOCINT_W::new(self)
+    pub fn tatocint(&mut self) -> TATOCINT_W<ICR_SPEC> {
+        TATOCINT_W::new(self, 0)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn camcint(&mut self) -> CAMCINT_W<ICR_SPEC, 1> {
-        CAMCINT_W::new(self)
+    pub fn camcint(&mut self) -> CAMCINT_W<ICR_SPEC> {
+        CAMCINT_W::new(self, 1)
     }
     #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn caecint(&mut self) -> CAECINT_W<ICR_SPEC, 2> {
-        CAECINT_W::new(self)
+    pub fn caecint(&mut self) -> CAECINT_W<ICR_SPEC> {
+        CAECINT_W::new(self, 2)
     }
     #[doc = "Bit 4 - GPTM Timer A match interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn tamcint(&mut self) -> TAMCINT_W<ICR_SPEC, 4> {
-        TAMCINT_W::new(self)
+    pub fn tamcint(&mut self) -> TAMCINT_W<ICR_SPEC> {
+        TAMCINT_W::new(self, 4)
     }
     #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn tbtocint(&mut self) -> TBTOCINT_W<ICR_SPEC, 8> {
-        TBTOCINT_W::new(self)
+    pub fn tbtocint(&mut self) -> TBTOCINT_W<ICR_SPEC> {
+        TBTOCINT_W::new(self, 8)
     }
     #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cbmcint(&mut self) -> CBMCINT_W<ICR_SPEC, 9> {
-        CBMCINT_W::new(self)
+    pub fn cbmcint(&mut self) -> CBMCINT_W<ICR_SPEC> {
+        CBMCINT_W::new(self, 9)
     }
     #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cbecint(&mut self) -> CBECINT_W<ICR_SPEC, 10> {
-        CBECINT_W::new(self)
+    pub fn cbecint(&mut self) -> CBECINT_W<ICR_SPEC> {
+        CBECINT_W::new(self, 10)
     }
     #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn tbmcint(&mut self) -> TBMCINT_W<ICR_SPEC, 11> {
-        TBMCINT_W::new(self)
+    pub fn tbmcint(&mut self) -> TBMCINT_W<ICR_SPEC> {
+        TBMCINT_W::new(self, 11)
     }
     #[doc = "Bit 16 - GPTM write update error interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn wuecint(&mut self) -> WUECINT_W<ICR_SPEC, 16> {
-        WUECINT_W::new(self)
+    pub fn wuecint(&mut self) -> WUECINT_W<ICR_SPEC> {
+        WUECINT_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -156,10 +160,10 @@ impl crate::RegisterSpec for ICR_SPEC {
 impl crate::Readable for ICR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`icr::W`](W) writer structure"]
 impl crate::Writable for ICR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ICR to value 0"]
 impl crate::Resettable for ICR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -18,5 +18,5 @@ impl crate::RegisterSpec for RXFIRST_SPEC {
 impl crate::Readable for RXFIRST_SPEC {}
 #[doc = "`reset()` method sets RXFIRST to value 0"]
 impl crate::Resettable for RXFIRST_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

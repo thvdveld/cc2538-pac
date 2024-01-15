@@ -5,19 +5,19 @@ pub type W = crate::W<AGCCTRL2_SPEC>;
 #[doc = "Field `LNA_CURRENT_OE` reader - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
 pub type LNA_CURRENT_OE_R = crate::BitReader;
 #[doc = "Field `LNA_CURRENT_OE` writer - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
-pub type LNA_CURRENT_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LNA_CURRENT_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LNA3_CURRENT` reader - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
 pub type LNA3_CURRENT_R = crate::FieldReader;
 #[doc = "Field `LNA3_CURRENT` writer - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
-pub type LNA3_CURRENT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LNA3_CURRENT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LNA2_CURRENT` reader - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
 pub type LNA2_CURRENT_R = crate::FieldReader;
 #[doc = "Field `LNA2_CURRENT` writer - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
-pub type LNA2_CURRENT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LNA2_CURRENT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `LNA1_CURRENT` reader - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
 pub type LNA1_CURRENT_R = crate::FieldReader;
 #[doc = "Field `LNA1_CURRENT` writer - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
-pub type LNA1_CURRENT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LNA1_CURRENT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
     #[inline(always)]
@@ -44,28 +44,32 @@ impl W {
     #[doc = "Bit 0 - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
     #[inline(always)]
     #[must_use]
-    pub fn lna_current_oe(&mut self) -> LNA_CURRENT_OE_W<AGCCTRL2_SPEC, 0> {
-        LNA_CURRENT_OE_W::new(self)
+    pub fn lna_current_oe(&mut self) -> LNA_CURRENT_OE_W<AGCCTRL2_SPEC> {
+        LNA_CURRENT_OE_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
     #[inline(always)]
     #[must_use]
-    pub fn lna3_current(&mut self) -> LNA3_CURRENT_W<AGCCTRL2_SPEC, 1> {
-        LNA3_CURRENT_W::new(self)
+    pub fn lna3_current(&mut self) -> LNA3_CURRENT_W<AGCCTRL2_SPEC> {
+        LNA3_CURRENT_W::new(self, 1)
     }
     #[doc = "Bits 3:5 - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
     #[inline(always)]
     #[must_use]
-    pub fn lna2_current(&mut self) -> LNA2_CURRENT_W<AGCCTRL2_SPEC, 3> {
-        LNA2_CURRENT_W::new(self)
+    pub fn lna2_current(&mut self) -> LNA2_CURRENT_W<AGCCTRL2_SPEC> {
+        LNA2_CURRENT_W::new(self, 3)
     }
     #[doc = "Bits 6:7 - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
     #[inline(always)]
     #[must_use]
-    pub fn lna1_current(&mut self) -> LNA1_CURRENT_W<AGCCTRL2_SPEC, 6> {
-        LNA1_CURRENT_W::new(self)
+    pub fn lna1_current(&mut self) -> LNA1_CURRENT_W<AGCCTRL2_SPEC> {
+        LNA1_CURRENT_W::new(self, 6)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -81,10 +85,10 @@ impl crate::RegisterSpec for AGCCTRL2_SPEC {
 impl crate::Readable for AGCCTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`agcctrl2::W`](W) writer structure"]
 impl crate::Writable for AGCCTRL2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AGCCTRL2 to value 0"]
 impl crate::Resettable for AGCCTRL2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

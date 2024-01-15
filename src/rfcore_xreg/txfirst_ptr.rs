@@ -18,5 +18,5 @@ impl crate::RegisterSpec for TXFIRST_PTR_SPEC {
 impl crate::Readable for TXFIRST_PTR_SPEC {}
 #[doc = "`reset()` method sets TXFIRST_PTR to value 0"]
 impl crate::Resettable for TXFIRST_PTR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

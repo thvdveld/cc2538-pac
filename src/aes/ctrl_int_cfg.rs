@@ -5,7 +5,7 @@ pub type W = crate::W<CTRL_INT_CFG_SPEC>;
 #[doc = "Field `LEVEL` reader - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
 pub type LEVEL_R = crate::BitReader;
 #[doc = "Field `LEVEL` writer - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
-pub type LEVEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEVEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bit 0 - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
     #[inline(always)]
     #[must_use]
-    pub fn level(&mut self) -> LEVEL_W<CTRL_INT_CFG_SPEC, 0> {
-        LEVEL_W::new(self)
+    pub fn level(&mut self) -> LEVEL_W<CTRL_INT_CFG_SPEC> {
+        LEVEL_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for CTRL_INT_CFG_SPEC {
 impl crate::Readable for CTRL_INT_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl_int_cfg::W`](W) writer structure"]
 impl crate::Writable for CTRL_INT_CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL_INT_CFG to value 0"]
 impl crate::Resettable for CTRL_INT_CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

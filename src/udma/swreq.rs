@@ -2,16 +2,20 @@
 pub type W = crate::W<SWREQ_SPEC>;
 #[doc = "Field `SWREQ` writer - Channel \\[n\\]
 software request These bits generate software requests. Bit 0 corresponds to channel 0. 1: Generate a software request for the corresponding channel 0: No request generated These bits are automatically cleared when the software request has been completed."]
-pub type SWREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SWREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl W {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 software request These bits generate software requests. Bit 0 corresponds to channel 0. 1: Generate a software request for the corresponding channel 0: No request generated These bits are automatically cleared when the software request has been completed."]
     #[inline(always)]
     #[must_use]
-    pub fn swreq(&mut self) -> SWREQ_W<SWREQ_SPEC, 0> {
-        SWREQ_W::new(self)
+    pub fn swreq(&mut self) -> SWREQ_W<SWREQ_SPEC> {
+        SWREQ_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -25,10 +29,10 @@ impl crate::RegisterSpec for SWREQ_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`swreq::W`](W) writer structure"]
 impl crate::Writable for SWREQ_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SWREQ to value 0"]
 impl crate::Resettable for SWREQ_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

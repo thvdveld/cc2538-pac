@@ -7,7 +7,7 @@ assignment select 0: Use the primary channel assignment 1: Use the secondary cha
 pub type CHASGN_R = crate::FieldReader<u32>;
 #[doc = "Field `CHASGN` writer - Channel \\[n\\]
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
-pub type CHASGN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type CHASGN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Channel \\[n\\]
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
@@ -21,10 +21,14 @@ impl W {
 assignment select 0: Use the primary channel assignment 1: Use the secondary channel assignment"]
     #[inline(always)]
     #[must_use]
-    pub fn chasgn(&mut self) -> CHASGN_W<CHASGN_SPEC, 0> {
-        CHASGN_W::new(self)
+    pub fn chasgn(&mut self) -> CHASGN_W<CHASGN_SPEC> {
+        CHASGN_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -40,10 +44,10 @@ impl crate::RegisterSpec for CHASGN_SPEC {
 impl crate::Readable for CHASGN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`chasgn::W`](W) writer structure"]
 impl crate::Writable for CHASGN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CHASGN to value 0"]
 impl crate::Resettable for CHASGN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

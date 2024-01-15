@@ -5,7 +5,7 @@ pub type W = crate::W<STCS_SPEC>;
 #[doc = "Field `VALID` reader - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
 pub type VALID_R = crate::BitReader;
 #[doc = "Field `VALID` writer - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
-pub type VALID_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VALID_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
     #[inline(always)]
@@ -17,10 +17,14 @@ impl W {
     #[doc = "Bit 0 - Capture valid flag Set to 1 when capture value in STCV has been updated Clear explicitly to allow new capture"]
     #[inline(always)]
     #[must_use]
-    pub fn valid(&mut self) -> VALID_W<STCS_SPEC, 0> {
-        VALID_W::new(self)
+    pub fn valid(&mut self) -> VALID_W<STCS_SPEC> {
+        VALID_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -36,10 +40,10 @@ impl crate::RegisterSpec for STCS_SPEC {
 impl crate::Readable for STCS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stcs::W`](W) writer structure"]
 impl crate::Writable for STCS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STCS to value 0"]
 impl crate::Resettable for STCS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -7,7 +7,7 @@ The PAN ID used during destination address filtering"]
 pub type PAN_ID1_R = crate::FieldReader;
 #[doc = "Field `PAN_ID1` writer - PAN_ID\\[15:8\\]
 The PAN ID used during destination address filtering"]
-pub type PAN_ID1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PAN_ID1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - PAN_ID\\[15:8\\]
 The PAN ID used during destination address filtering"]
@@ -21,10 +21,14 @@ impl W {
 The PAN ID used during destination address filtering"]
     #[inline(always)]
     #[must_use]
-    pub fn pan_id1(&mut self) -> PAN_ID1_W<PAN_ID1_SPEC, 0> {
-        PAN_ID1_W::new(self)
+    pub fn pan_id1(&mut self) -> PAN_ID1_W<PAN_ID1_SPEC> {
+        PAN_ID1_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -40,10 +44,10 @@ impl crate::RegisterSpec for PAN_ID1_SPEC {
 impl crate::Readable for PAN_ID1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pan_id1::W`](W) writer structure"]
 impl crate::Writable for PAN_ID1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PAN_ID1 to value 0"]
 impl crate::Resettable for PAN_ID1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

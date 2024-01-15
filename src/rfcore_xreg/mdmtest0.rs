@@ -5,15 +5,15 @@ pub type W = crate::W<MDMTEST0_SPEC>;
 #[doc = "Field `DC_BLOCK_MODE` reader - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
 pub type DC_BLOCK_MODE_R = crate::FieldReader;
 #[doc = "Field `DC_BLOCK_MODE` writer - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
-pub type DC_BLOCK_MODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DC_BLOCK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DC_WIN_SIZE` reader - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
 pub type DC_WIN_SIZE_R = crate::FieldReader;
 #[doc = "Field `DC_WIN_SIZE` writer - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
-pub type DC_WIN_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DC_WIN_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TX_TONE` reader - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
 pub type TX_TONE_R = crate::FieldReader;
 #[doc = "Field `TX_TONE` writer - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
-pub type TX_TONE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TX_TONE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:1 - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
     #[inline(always)]
@@ -35,22 +35,26 @@ impl W {
     #[doc = "Bits 0:1 - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn dc_block_mode(&mut self) -> DC_BLOCK_MODE_W<MDMTEST0_SPEC, 0> {
-        DC_BLOCK_MODE_W::new(self)
+    pub fn dc_block_mode(&mut self) -> DC_BLOCK_MODE_W<MDMTEST0_SPEC> {
+        DC_BLOCK_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
     #[inline(always)]
     #[must_use]
-    pub fn dc_win_size(&mut self) -> DC_WIN_SIZE_W<MDMTEST0_SPEC, 2> {
-        DC_WIN_SIZE_W::new(self)
+    pub fn dc_win_size(&mut self) -> DC_WIN_SIZE_W<MDMTEST0_SPEC> {
+        DC_WIN_SIZE_W::new(self, 2)
     }
     #[doc = "Bits 4:7 - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_tone(&mut self) -> TX_TONE_W<MDMTEST0_SPEC, 4> {
-        TX_TONE_W::new(self)
+    pub fn tx_tone(&mut self) -> TX_TONE_W<MDMTEST0_SPEC> {
+        TX_TONE_W::new(self, 4)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -66,10 +70,10 @@ impl crate::RegisterSpec for MDMTEST0_SPEC {
 impl crate::Readable for MDMTEST0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mdmtest0::W`](W) writer structure"]
 impl crate::Writable for MDMTEST0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MDMTEST0 to value 0"]
 impl crate::Resettable for MDMTEST0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

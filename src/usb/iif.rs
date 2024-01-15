@@ -53,5 +53,5 @@ impl crate::RegisterSpec for IIF_SPEC {
 impl crate::Readable for IIF_SPEC {}
 #[doc = "`reset()` method sets IIF to value 0"]
 impl crate::Resettable for IIF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

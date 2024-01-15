@@ -46,5 +46,5 @@ impl crate::RegisterSpec for REVISION_SPEC {
 impl crate::Readable for REVISION_SPEC {}
 #[doc = "`reset()` method sets REVISION to value 0"]
 impl crate::Resettable for REVISION_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

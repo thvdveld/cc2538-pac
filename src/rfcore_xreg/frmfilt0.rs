@@ -11,11 +11,11 @@ pub type FRAME_FILTER_EN_R = crate::BitReader;
 and FRMFILT1\\[7:1\\], together with the local address information, define the behavior of the filtering algorithm. 0: Frame filtering off. (FRMFILT0\\[6:1\\], FRMFILT1\\[7:1\\]
 and SRCMATCH\\[2:0\\]
 are don't care.) 1: Frame filtering on."]
-pub type FRAME_FILTER_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FRAME_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAN_COORDINATOR` reader - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
 pub type PAN_COORDINATOR_R = crate::BitReader;
 #[doc = "Field `PAN_COORDINATOR` writer - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
-pub type PAN_COORDINATOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PAN_COORDINATOR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAX_FRAME_VERSION` reader - Used for filtering on the frame version field of the frame control field (FCF) If FCF\\[13:12\\]
 (the frame version subfield) is higher than MAX_FRAME_VERSION\\[1:0\\]
 and frame filtering is enabled, the frame is rejected."]
@@ -23,7 +23,7 @@ pub type MAX_FRAME_VERSION_R = crate::FieldReader;
 #[doc = "Field `MAX_FRAME_VERSION` writer - Used for filtering on the frame version field of the frame control field (FCF) If FCF\\[13:12\\]
 (the frame version subfield) is higher than MAX_FRAME_VERSION\\[1:0\\]
 and frame filtering is enabled, the frame is rejected."]
-pub type MAX_FRAME_VERSION_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MAX_FRAME_VERSION_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - Enables frame filtering When this bit is set, the radio performs frame filtering as specified in section 7.5.6.2 of IEEE 802.15.4(b), third filtering level. FRMFILT0\\[6:1\\]
 and FRMFILT1\\[7:1\\], together with the local address information, define the behavior of the filtering algorithm. 0: Frame filtering off. (FRMFILT0\\[6:1\\], FRMFILT1\\[7:1\\]
@@ -53,24 +53,28 @@ and SRCMATCH\\[2:0\\]
 are don't care.) 1: Frame filtering on."]
     #[inline(always)]
     #[must_use]
-    pub fn frame_filter_en(&mut self) -> FRAME_FILTER_EN_W<FRMFILT0_SPEC, 0> {
-        FRAME_FILTER_EN_W::new(self)
+    pub fn frame_filter_en(&mut self) -> FRAME_FILTER_EN_W<FRMFILT0_SPEC> {
+        FRAME_FILTER_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Should be set high when the device is a PAN coordinator, to accept frames with no destination address (as specified in Section 7.5.6.2 in IEEE 802.15.4) 0: Device is not a PAN coordinator 1: Device is a PAN coordinator"]
     #[inline(always)]
     #[must_use]
-    pub fn pan_coordinator(&mut self) -> PAN_COORDINATOR_W<FRMFILT0_SPEC, 1> {
-        PAN_COORDINATOR_W::new(self)
+    pub fn pan_coordinator(&mut self) -> PAN_COORDINATOR_W<FRMFILT0_SPEC> {
+        PAN_COORDINATOR_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Used for filtering on the frame version field of the frame control field (FCF) If FCF\\[13:12\\]
 (the frame version subfield) is higher than MAX_FRAME_VERSION\\[1:0\\]
 and frame filtering is enabled, the frame is rejected."]
     #[inline(always)]
     #[must_use]
-    pub fn max_frame_version(&mut self) -> MAX_FRAME_VERSION_W<FRMFILT0_SPEC, 2> {
-        MAX_FRAME_VERSION_W::new(self)
+    pub fn max_frame_version(&mut self) -> MAX_FRAME_VERSION_W<FRMFILT0_SPEC> {
+        MAX_FRAME_VERSION_W::new(self, 2)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -86,10 +90,10 @@ impl crate::RegisterSpec for FRMFILT0_SPEC {
 impl crate::Readable for FRMFILT0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`frmfilt0::W`](W) writer structure"]
 impl crate::Writable for FRMFILT0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FRMFILT0 to value 0"]
 impl crate::Resettable for FRMFILT0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

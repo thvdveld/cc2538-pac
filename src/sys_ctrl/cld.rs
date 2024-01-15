@@ -5,7 +5,7 @@ pub type W = crate::W<CLD_SPEC>;
 #[doc = "Field `EN` reader - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VALID` reader - 0: CLD status in always-on domain is not equal to status in the EN register. 1: CLD status in always-on domain and EN register are equal."]
 pub type VALID_R = crate::BitReader;
 impl R {
@@ -24,10 +24,14 @@ impl W {
     #[doc = "Bit 0 - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<CLD_SPEC, 0> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<CLD_SPEC> {
+        EN_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -43,10 +47,10 @@ impl crate::RegisterSpec for CLD_SPEC {
 impl crate::Readable for CLD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cld::W`](W) writer structure"]
 impl crate::Writable for CLD_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLD to value 0"]
 impl crate::Resettable for CLD_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

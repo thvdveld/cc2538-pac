@@ -18,5 +18,5 @@ impl crate::RegisterSpec for TBPV_SPEC {
 impl crate::Readable for TBPV_SPEC {}
 #[doc = "`reset()` method sets TBPV to value 0"]
 impl crate::Resettable for TBPV_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

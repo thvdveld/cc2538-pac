@@ -18,5 +18,5 @@ impl crate::RegisterSpec for ADCL_SPEC {
 impl crate::Readable for ADCL_SPEC {}
 #[doc = "`reset()` method sets ADCL to value 0"]
 impl crate::Resettable for ADCL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

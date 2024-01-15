@@ -7,7 +7,7 @@ of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
 pub type GPTMCFG_R = crate::FieldReader;
 #[doc = "Field `GPTMCFG` writer - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
-pub type GPTMCFG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type GPTMCFG_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
@@ -21,10 +21,14 @@ impl W {
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn gptmcfg(&mut self) -> GPTMCFG_W<CFG_SPEC, 0> {
-        GPTMCFG_W::new(self)
+    pub fn gptmcfg(&mut self) -> GPTMCFG_W<CFG_SPEC> {
+        GPTMCFG_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
@@ -40,10 +44,10 @@ impl crate::RegisterSpec for CFG_SPEC {
 impl crate::Readable for CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
 impl crate::Writable for CFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG to value 0"]
 impl crate::Resettable for CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }
