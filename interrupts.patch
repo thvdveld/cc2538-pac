@@ -1,38 +1,81 @@
+diff --git a/interrupts.patch b/interrupts.patch
+index eb58cb7..e69de29 100644
+--- a/interrupts.patch
++++ b/interrupts.patch
+@@ -1,38 +0,0 @@
+-diff --git a/src/lib.rs b/src/lib.rs
+-index ca00d3c..1464858 100644
+---- a/src/lib.rs
+-+++ b/src/lib.rs
+-@@ -164,7 +164,23 @@ pub union Vector {
+- #[doc(hidden)]
+- #[link_section = ".vector_table.interrupts"]
+- #[no_mangle]
+--pub static __INTERRUPTS: [Vector; 164 - 16] = [
+-+pub static __INTERRUPTS: [Vector; 164] = [
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-+    Vector { _reserved: 0 },
+-     Vector { _handler: GPIO_A },
+-     Vector { _handler: GPIO_B },
+-     Vector { _handler: GPIO_C },
+-@@ -842,7 +858,7 @@ pub enum Interrupt {
+- unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
+-     #[inline(always)]
+-     fn number(self) -> u16 {
+--        self as u16 - 16
+-+        self as u16
+-     }
+- }
+- #[doc = "no description available"]
 diff --git a/src/lib.rs b/src/lib.rs
-index ca00d3c..1464858 100644
+index 17d9b4e..073d68c 100644
 --- a/src/lib.rs
 +++ b/src/lib.rs
-@@ -164,7 +164,23 @@ pub union Vector {
+@@ -164,23 +164,7 @@ pub union Vector {
  #[doc(hidden)]
  #[link_section = ".vector_table.interrupts"]
  #[no_mangle]
--pub static __INTERRUPTS: [Vector; 164 - 16] = [
-+pub static __INTERRUPTS: [Vector; 164] = [
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
-+    Vector { _reserved: 0 },
+-pub static __INTERRUPTS: [Vector; 164] = [
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
+-    Vector { _reserved: 0 },
++pub static __INTERRUPTS: [Vector; 164 - 16] = [
      Vector { _handler: GPIO_A },
      Vector { _handler: GPIO_B },
      Vector { _handler: GPIO_C },
-@@ -842,7 +858,7 @@ pub enum Interrupt {
+@@ -858,7 +842,7 @@ pub enum Interrupt {
  unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
      #[inline(always)]
      fn number(self) -> u16 {
--        self as u16 - 16
-+        self as u16
+-        self as u16
++        self as u16 - 16
      }
  }
  #[doc = "no description available"]
