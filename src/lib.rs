@@ -164,23 +164,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 164] = [
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+pub static __INTERRUPTS: [Vector; 164 - 16] = [
     Vector { _handler: GPIO_A },
     Vector { _handler: GPIO_B },
     Vector { _handler: GPIO_C },
@@ -858,7 +842,7 @@ pub enum Interrupt {
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
     fn number(self) -> u16 {
-        self as u16
+        self as u16 - 16
     }
 }
 #[doc = "no description available"]
