@@ -1,514 +1,505 @@
 #[doc = "Register `PI_IEN` reader"]
-pub type R = crate::R<PI_IEN_SPEC>;
+pub type R = crate::R<PiIenSpec>;
 #[doc = "Register `PI_IEN` writer"]
-pub type W = crate::W<PI_IEN_SPEC>;
+pub type W = crate::W<PiIenSpec>;
 #[doc = "Field `PAIEN0` reader - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN0_R = crate::BitReader;
+pub type Paien0R = crate::BitReader;
 #[doc = "Field `PAIEN0` writer - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN0_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Paien0W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIEN1` reader - Port A bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN1_R = crate::BitReader;
+pub type Paien1R = crate::BitReader;
 #[doc = "Field `PAIEN1` writer - Port A bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN1_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Paien1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIEN2` reader - Port A bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN2_R = crate::BitReader;
+pub type Paien2R = crate::BitReader;
 #[doc = "Field `PAIEN2` writer - Port A bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN2_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Paien2W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIEN3` reader - Port A bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN3_R = crate::BitReader;
+pub type Paien3R = crate::BitReader;
 #[doc = "Field `PAIEN3` writer - Port A bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN3_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Paien3W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIEN4` reader - Port A bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN4_R = crate::BitReader;
+pub type Paien4R = crate::BitReader;
 #[doc = "Field `PAIEN4` writer - Port A bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN4_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Paien4W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIEN5` reader - Port A bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN5_R = crate::BitReader;
+pub type Paien5R = crate::BitReader;
 #[doc = "Field `PAIEN5` writer - Port A bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN5_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Paien5W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIEN6` reader - Port A bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN6_R = crate::BitReader;
+pub type Paien6R = crate::BitReader;
 #[doc = "Field `PAIEN6` writer - Port A bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN6_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Paien6W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAIEN7` reader - Port A bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN7_R = crate::BitReader;
+pub type Paien7R = crate::BitReader;
 #[doc = "Field `PAIEN7` writer - Port A bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PAIEN7_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Paien7W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIEN0` reader - Port B bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN0_R = crate::BitReader;
+pub type Pbien0R = crate::BitReader;
 #[doc = "Field `PBIEN0` writer - Port B bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN0_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pbien0W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIEN1` reader - Port B bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN1_R = crate::BitReader;
+pub type Pbien1R = crate::BitReader;
 #[doc = "Field `PBIEN1` writer - Port B bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN1_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pbien1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIEN2` reader - Port B bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN2_R = crate::BitReader;
+pub type Pbien2R = crate::BitReader;
 #[doc = "Field `PBIEN2` writer - Port B bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN2_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pbien2W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIEN3` reader - Port B bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN3_R = crate::BitReader;
+pub type Pbien3R = crate::BitReader;
 #[doc = "Field `PBIEN3` writer - Port B bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN3_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pbien3W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIEN4` reader - Port B bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN4_R = crate::BitReader;
+pub type Pbien4R = crate::BitReader;
 #[doc = "Field `PBIEN4` writer - Port B bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN4_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pbien4W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIEN5` reader - Port B bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN5_R = crate::BitReader;
+pub type Pbien5R = crate::BitReader;
 #[doc = "Field `PBIEN5` writer - Port B bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN5_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pbien5W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIEN6` reader - Port B bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN6_R = crate::BitReader;
+pub type Pbien6R = crate::BitReader;
 #[doc = "Field `PBIEN6` writer - Port B bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN6_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pbien6W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBIEN7` reader - Port B bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN7_R = crate::BitReader;
+pub type Pbien7R = crate::BitReader;
 #[doc = "Field `PBIEN7` writer - Port B bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PBIEN7_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pbien7W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIEN0` reader - Port C bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN0_R = crate::BitReader;
+pub type Pcien0R = crate::BitReader;
 #[doc = "Field `PCIEN0` writer - Port C bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN0_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pcien0W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIEN1` reader - Port C bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN1_R = crate::BitReader;
+pub type Pcien1R = crate::BitReader;
 #[doc = "Field `PCIEN1` writer - Port C bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN1_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pcien1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIEN2` reader - Port C bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN2_R = crate::BitReader;
+pub type Pcien2R = crate::BitReader;
 #[doc = "Field `PCIEN2` writer - Port C bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN2_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pcien2W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIEN3` reader - Port C bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN3_R = crate::BitReader;
+pub type Pcien3R = crate::BitReader;
 #[doc = "Field `PCIEN3` writer - Port C bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN3_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pcien3W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIEN4` reader - Port C bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN4_R = crate::BitReader;
+pub type Pcien4R = crate::BitReader;
 #[doc = "Field `PCIEN4` writer - Port C bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN4_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pcien4W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIEN5` reader - Port C bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN5_R = crate::BitReader;
+pub type Pcien5R = crate::BitReader;
 #[doc = "Field `PCIEN5` writer - Port C bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN5_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pcien5W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIEN6` reader - Port C bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN6_R = crate::BitReader;
+pub type Pcien6R = crate::BitReader;
 #[doc = "Field `PCIEN6` writer - Port C bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN6_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pcien6W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCIEN7` reader - Port C bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN7_R = crate::BitReader;
+pub type Pcien7R = crate::BitReader;
 #[doc = "Field `PCIEN7` writer - Port C bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PCIEN7_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pcien7W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIEN0` reader - Port D bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN0_R = crate::BitReader;
+pub type Pdien0R = crate::BitReader;
 #[doc = "Field `PDIEN0` writer - Port D bit 0 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN0_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pdien0W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIEN1` reader - Port D bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN1_R = crate::BitReader;
+pub type Pdien1R = crate::BitReader;
 #[doc = "Field `PDIEN1` writer - Port D bit 1 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN1_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pdien1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIEN2` reader - Port D bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN2_R = crate::BitReader;
+pub type Pdien2R = crate::BitReader;
 #[doc = "Field `PDIEN2` writer - Port D bit 2 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN2_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pdien2W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIEN3` reader - Port D bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN3_R = crate::BitReader;
+pub type Pdien3R = crate::BitReader;
 #[doc = "Field `PDIEN3` writer - Port D bit 3 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN3_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pdien3W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIEN4` reader - Port D bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN4_R = crate::BitReader;
+pub type Pdien4R = crate::BitReader;
 #[doc = "Field `PDIEN4` writer - Port D bit 4 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN4_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pdien4W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIEN5` reader - Port D bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN5_R = crate::BitReader;
+pub type Pdien5R = crate::BitReader;
 #[doc = "Field `PDIEN5` writer - Port D bit 5 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN5_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pdien5W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIEN6` reader - Port D bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN6_R = crate::BitReader;
+pub type Pdien6R = crate::BitReader;
 #[doc = "Field `PDIEN6` writer - Port D bit 6 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN6_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pdien6W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PDIEN7` reader - Port D bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN7_R = crate::BitReader;
+pub type Pdien7R = crate::BitReader;
 #[doc = "Field `PDIEN7` writer - Port D bit 7 interrupt enable: 1: Enabled 2: Disabled"]
-pub type PDIEN7_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pdien7W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn paien0(&self) -> PAIEN0_R {
-        PAIEN0_R::new((self.bits & 1) != 0)
+    pub fn paien0(&self) -> Paien0R {
+        Paien0R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Port A bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn paien1(&self) -> PAIEN1_R {
-        PAIEN1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn paien1(&self) -> Paien1R {
+        Paien1R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Port A bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn paien2(&self) -> PAIEN2_R {
-        PAIEN2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn paien2(&self) -> Paien2R {
+        Paien2R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Port A bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn paien3(&self) -> PAIEN3_R {
-        PAIEN3_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn paien3(&self) -> Paien3R {
+        Paien3R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Port A bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn paien4(&self) -> PAIEN4_R {
-        PAIEN4_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn paien4(&self) -> Paien4R {
+        Paien4R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Port A bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn paien5(&self) -> PAIEN5_R {
-        PAIEN5_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn paien5(&self) -> Paien5R {
+        Paien5R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Port A bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn paien6(&self) -> PAIEN6_R {
-        PAIEN6_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn paien6(&self) -> Paien6R {
+        Paien6R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Port A bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn paien7(&self) -> PAIEN7_R {
-        PAIEN7_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn paien7(&self) -> Paien7R {
+        Paien7R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Port B bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pbien0(&self) -> PBIEN0_R {
-        PBIEN0_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn pbien0(&self) -> Pbien0R {
+        Pbien0R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Port B bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pbien1(&self) -> PBIEN1_R {
-        PBIEN1_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn pbien1(&self) -> Pbien1R {
+        Pbien1R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Port B bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pbien2(&self) -> PBIEN2_R {
-        PBIEN2_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn pbien2(&self) -> Pbien2R {
+        Pbien2R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Port B bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pbien3(&self) -> PBIEN3_R {
-        PBIEN3_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn pbien3(&self) -> Pbien3R {
+        Pbien3R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Port B bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pbien4(&self) -> PBIEN4_R {
-        PBIEN4_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn pbien4(&self) -> Pbien4R {
+        Pbien4R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Port B bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pbien5(&self) -> PBIEN5_R {
-        PBIEN5_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn pbien5(&self) -> Pbien5R {
+        Pbien5R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Port B bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pbien6(&self) -> PBIEN6_R {
-        PBIEN6_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn pbien6(&self) -> Pbien6R {
+        Pbien6R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Port B bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pbien7(&self) -> PBIEN7_R {
-        PBIEN7_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn pbien7(&self) -> Pbien7R {
+        Pbien7R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Port C bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pcien0(&self) -> PCIEN0_R {
-        PCIEN0_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn pcien0(&self) -> Pcien0R {
+        Pcien0R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Port C bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pcien1(&self) -> PCIEN1_R {
-        PCIEN1_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn pcien1(&self) -> Pcien1R {
+        Pcien1R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Port C bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pcien2(&self) -> PCIEN2_R {
-        PCIEN2_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn pcien2(&self) -> Pcien2R {
+        Pcien2R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Port C bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pcien3(&self) -> PCIEN3_R {
-        PCIEN3_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn pcien3(&self) -> Pcien3R {
+        Pcien3R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Port C bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pcien4(&self) -> PCIEN4_R {
-        PCIEN4_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn pcien4(&self) -> Pcien4R {
+        Pcien4R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Port C bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pcien5(&self) -> PCIEN5_R {
-        PCIEN5_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn pcien5(&self) -> Pcien5R {
+        Pcien5R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Port C bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pcien6(&self) -> PCIEN6_R {
-        PCIEN6_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn pcien6(&self) -> Pcien6R {
+        Pcien6R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Port C bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pcien7(&self) -> PCIEN7_R {
-        PCIEN7_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn pcien7(&self) -> Pcien7R {
+        Pcien7R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Port D bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pdien0(&self) -> PDIEN0_R {
-        PDIEN0_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn pdien0(&self) -> Pdien0R {
+        Pdien0R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Port D bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pdien1(&self) -> PDIEN1_R {
-        PDIEN1_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn pdien1(&self) -> Pdien1R {
+        Pdien1R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Port D bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pdien2(&self) -> PDIEN2_R {
-        PDIEN2_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn pdien2(&self) -> Pdien2R {
+        Pdien2R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Port D bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pdien3(&self) -> PDIEN3_R {
-        PDIEN3_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn pdien3(&self) -> Pdien3R {
+        Pdien3R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Port D bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pdien4(&self) -> PDIEN4_R {
-        PDIEN4_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn pdien4(&self) -> Pdien4R {
+        Pdien4R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Port D bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pdien5(&self) -> PDIEN5_R {
-        PDIEN5_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn pdien5(&self) -> Pdien5R {
+        Pdien5R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Port D bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pdien6(&self) -> PDIEN6_R {
-        PDIEN6_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn pdien6(&self) -> Pdien6R {
+        Pdien6R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Port D bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
-    pub fn pdien7(&self) -> PDIEN7_R {
-        PDIEN7_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn pdien7(&self) -> Pdien7R {
+        Pdien7R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Port A bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien0(&mut self) -> PAIEN0_W<PI_IEN_SPEC> {
-        PAIEN0_W::new(self, 0)
+    pub fn paien0(&mut self) -> Paien0W<PiIenSpec> {
+        Paien0W::new(self, 0)
     }
     #[doc = "Bit 1 - Port A bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien1(&mut self) -> PAIEN1_W<PI_IEN_SPEC> {
-        PAIEN1_W::new(self, 1)
+    pub fn paien1(&mut self) -> Paien1W<PiIenSpec> {
+        Paien1W::new(self, 1)
     }
     #[doc = "Bit 2 - Port A bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien2(&mut self) -> PAIEN2_W<PI_IEN_SPEC> {
-        PAIEN2_W::new(self, 2)
+    pub fn paien2(&mut self) -> Paien2W<PiIenSpec> {
+        Paien2W::new(self, 2)
     }
     #[doc = "Bit 3 - Port A bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien3(&mut self) -> PAIEN3_W<PI_IEN_SPEC> {
-        PAIEN3_W::new(self, 3)
+    pub fn paien3(&mut self) -> Paien3W<PiIenSpec> {
+        Paien3W::new(self, 3)
     }
     #[doc = "Bit 4 - Port A bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien4(&mut self) -> PAIEN4_W<PI_IEN_SPEC> {
-        PAIEN4_W::new(self, 4)
+    pub fn paien4(&mut self) -> Paien4W<PiIenSpec> {
+        Paien4W::new(self, 4)
     }
     #[doc = "Bit 5 - Port A bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien5(&mut self) -> PAIEN5_W<PI_IEN_SPEC> {
-        PAIEN5_W::new(self, 5)
+    pub fn paien5(&mut self) -> Paien5W<PiIenSpec> {
+        Paien5W::new(self, 5)
     }
     #[doc = "Bit 6 - Port A bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien6(&mut self) -> PAIEN6_W<PI_IEN_SPEC> {
-        PAIEN6_W::new(self, 6)
+    pub fn paien6(&mut self) -> Paien6W<PiIenSpec> {
+        Paien6W::new(self, 6)
     }
     #[doc = "Bit 7 - Port A bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn paien7(&mut self) -> PAIEN7_W<PI_IEN_SPEC> {
-        PAIEN7_W::new(self, 7)
+    pub fn paien7(&mut self) -> Paien7W<PiIenSpec> {
+        Paien7W::new(self, 7)
     }
     #[doc = "Bit 8 - Port B bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien0(&mut self) -> PBIEN0_W<PI_IEN_SPEC> {
-        PBIEN0_W::new(self, 8)
+    pub fn pbien0(&mut self) -> Pbien0W<PiIenSpec> {
+        Pbien0W::new(self, 8)
     }
     #[doc = "Bit 9 - Port B bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien1(&mut self) -> PBIEN1_W<PI_IEN_SPEC> {
-        PBIEN1_W::new(self, 9)
+    pub fn pbien1(&mut self) -> Pbien1W<PiIenSpec> {
+        Pbien1W::new(self, 9)
     }
     #[doc = "Bit 10 - Port B bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien2(&mut self) -> PBIEN2_W<PI_IEN_SPEC> {
-        PBIEN2_W::new(self, 10)
+    pub fn pbien2(&mut self) -> Pbien2W<PiIenSpec> {
+        Pbien2W::new(self, 10)
     }
     #[doc = "Bit 11 - Port B bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien3(&mut self) -> PBIEN3_W<PI_IEN_SPEC> {
-        PBIEN3_W::new(self, 11)
+    pub fn pbien3(&mut self) -> Pbien3W<PiIenSpec> {
+        Pbien3W::new(self, 11)
     }
     #[doc = "Bit 12 - Port B bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien4(&mut self) -> PBIEN4_W<PI_IEN_SPEC> {
-        PBIEN4_W::new(self, 12)
+    pub fn pbien4(&mut self) -> Pbien4W<PiIenSpec> {
+        Pbien4W::new(self, 12)
     }
     #[doc = "Bit 13 - Port B bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien5(&mut self) -> PBIEN5_W<PI_IEN_SPEC> {
-        PBIEN5_W::new(self, 13)
+    pub fn pbien5(&mut self) -> Pbien5W<PiIenSpec> {
+        Pbien5W::new(self, 13)
     }
     #[doc = "Bit 14 - Port B bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien6(&mut self) -> PBIEN6_W<PI_IEN_SPEC> {
-        PBIEN6_W::new(self, 14)
+    pub fn pbien6(&mut self) -> Pbien6W<PiIenSpec> {
+        Pbien6W::new(self, 14)
     }
     #[doc = "Bit 15 - Port B bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pbien7(&mut self) -> PBIEN7_W<PI_IEN_SPEC> {
-        PBIEN7_W::new(self, 15)
+    pub fn pbien7(&mut self) -> Pbien7W<PiIenSpec> {
+        Pbien7W::new(self, 15)
     }
     #[doc = "Bit 16 - Port C bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien0(&mut self) -> PCIEN0_W<PI_IEN_SPEC> {
-        PCIEN0_W::new(self, 16)
+    pub fn pcien0(&mut self) -> Pcien0W<PiIenSpec> {
+        Pcien0W::new(self, 16)
     }
     #[doc = "Bit 17 - Port C bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien1(&mut self) -> PCIEN1_W<PI_IEN_SPEC> {
-        PCIEN1_W::new(self, 17)
+    pub fn pcien1(&mut self) -> Pcien1W<PiIenSpec> {
+        Pcien1W::new(self, 17)
     }
     #[doc = "Bit 18 - Port C bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien2(&mut self) -> PCIEN2_W<PI_IEN_SPEC> {
-        PCIEN2_W::new(self, 18)
+    pub fn pcien2(&mut self) -> Pcien2W<PiIenSpec> {
+        Pcien2W::new(self, 18)
     }
     #[doc = "Bit 19 - Port C bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien3(&mut self) -> PCIEN3_W<PI_IEN_SPEC> {
-        PCIEN3_W::new(self, 19)
+    pub fn pcien3(&mut self) -> Pcien3W<PiIenSpec> {
+        Pcien3W::new(self, 19)
     }
     #[doc = "Bit 20 - Port C bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien4(&mut self) -> PCIEN4_W<PI_IEN_SPEC> {
-        PCIEN4_W::new(self, 20)
+    pub fn pcien4(&mut self) -> Pcien4W<PiIenSpec> {
+        Pcien4W::new(self, 20)
     }
     #[doc = "Bit 21 - Port C bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien5(&mut self) -> PCIEN5_W<PI_IEN_SPEC> {
-        PCIEN5_W::new(self, 21)
+    pub fn pcien5(&mut self) -> Pcien5W<PiIenSpec> {
+        Pcien5W::new(self, 21)
     }
     #[doc = "Bit 22 - Port C bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien6(&mut self) -> PCIEN6_W<PI_IEN_SPEC> {
-        PCIEN6_W::new(self, 22)
+    pub fn pcien6(&mut self) -> Pcien6W<PiIenSpec> {
+        Pcien6W::new(self, 22)
     }
     #[doc = "Bit 23 - Port C bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pcien7(&mut self) -> PCIEN7_W<PI_IEN_SPEC> {
-        PCIEN7_W::new(self, 23)
+    pub fn pcien7(&mut self) -> Pcien7W<PiIenSpec> {
+        Pcien7W::new(self, 23)
     }
     #[doc = "Bit 24 - Port D bit 0 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien0(&mut self) -> PDIEN0_W<PI_IEN_SPEC> {
-        PDIEN0_W::new(self, 24)
+    pub fn pdien0(&mut self) -> Pdien0W<PiIenSpec> {
+        Pdien0W::new(self, 24)
     }
     #[doc = "Bit 25 - Port D bit 1 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien1(&mut self) -> PDIEN1_W<PI_IEN_SPEC> {
-        PDIEN1_W::new(self, 25)
+    pub fn pdien1(&mut self) -> Pdien1W<PiIenSpec> {
+        Pdien1W::new(self, 25)
     }
     #[doc = "Bit 26 - Port D bit 2 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien2(&mut self) -> PDIEN2_W<PI_IEN_SPEC> {
-        PDIEN2_W::new(self, 26)
+    pub fn pdien2(&mut self) -> Pdien2W<PiIenSpec> {
+        Pdien2W::new(self, 26)
     }
     #[doc = "Bit 27 - Port D bit 3 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien3(&mut self) -> PDIEN3_W<PI_IEN_SPEC> {
-        PDIEN3_W::new(self, 27)
+    pub fn pdien3(&mut self) -> Pdien3W<PiIenSpec> {
+        Pdien3W::new(self, 27)
     }
     #[doc = "Bit 28 - Port D bit 4 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien4(&mut self) -> PDIEN4_W<PI_IEN_SPEC> {
-        PDIEN4_W::new(self, 28)
+    pub fn pdien4(&mut self) -> Pdien4W<PiIenSpec> {
+        Pdien4W::new(self, 28)
     }
     #[doc = "Bit 29 - Port D bit 5 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien5(&mut self) -> PDIEN5_W<PI_IEN_SPEC> {
-        PDIEN5_W::new(self, 29)
+    pub fn pdien5(&mut self) -> Pdien5W<PiIenSpec> {
+        Pdien5W::new(self, 29)
     }
     #[doc = "Bit 30 - Port D bit 6 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien6(&mut self) -> PDIEN6_W<PI_IEN_SPEC> {
-        PDIEN6_W::new(self, 30)
+    pub fn pdien6(&mut self) -> Pdien6W<PiIenSpec> {
+        Pdien6W::new(self, 30)
     }
     #[doc = "Bit 31 - Port D bit 7 interrupt enable: 1: Enabled 2: Disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn pdien7(&mut self) -> PDIEN7_W<PI_IEN_SPEC> {
-        PDIEN7_W::new(self, 31)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn pdien7(&mut self) -> Pdien7W<PiIenSpec> {
+        Pdien7W::new(self, 31)
     }
 }
 #[doc = "The power-up interrupt enable register selects, for its corresponding port A-D pin, whether interrupts are enabled or disabled.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pi_ien::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pi_ien::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct PI_IEN_SPEC;
-impl crate::RegisterSpec for PI_IEN_SPEC {
+pub struct PiIenSpec;
+impl crate::RegisterSpec for PiIenSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`pi_ien::R`](R) reader structure"]
-impl crate::Readable for PI_IEN_SPEC {}
+impl crate::Readable for PiIenSpec {}
 #[doc = "`write(|w| ..)` method takes [`pi_ien::W`](W) writer structure"]
-impl crate::Writable for PI_IEN_SPEC {
+impl crate::Writable for PiIenSpec {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PI_IEN to value 0"]
-impl crate::Resettable for PI_IEN_SPEC {
+impl crate::Resettable for PiIenSpec {
     const RESET_VALUE: u32 = 0;
 }

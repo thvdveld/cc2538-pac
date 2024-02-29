@@ -1,49 +1,40 @@
 #[doc = "Register `ALENGTH` reader"]
-pub type R = crate::R<ALENGTH_SPEC>;
+pub type R = crate::R<AlengthSpec>;
 #[doc = "Register `ALENGTH` writer"]
-pub type W = crate::W<ALENGTH_SPEC>;
+pub type W = crate::W<AlengthSpec>;
 #[doc = "Field `ALENGTH` reader - This register specifies the length (in 32-bit words) of Vector A."]
-pub type ALENGTH_R = crate::FieldReader<u16>;
+pub type AlengthR = crate::FieldReader<u16>;
 #[doc = "Field `ALENGTH` writer - This register specifies the length (in 32-bit words) of Vector A."]
-pub type ALENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+pub type AlengthW<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8 - This register specifies the length (in 32-bit words) of Vector A."]
     #[inline(always)]
-    pub fn alength(&self) -> ALENGTH_R {
-        ALENGTH_R::new((self.bits & 0x01ff) as u16)
+    pub fn alength(&self) -> AlengthR {
+        AlengthR::new((self.bits & 0x01ff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - This register specifies the length (in 32-bit words) of Vector A."]
     #[inline(always)]
     #[must_use]
-    pub fn alength(&mut self) -> ALENGTH_W<ALENGTH_SPEC> {
-        ALENGTH_W::new(self, 0)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn alength(&mut self) -> AlengthW<AlengthSpec> {
+        AlengthW::new(self, 0)
     }
 }
 #[doc = "PKA vector A length During execution of basic PKCP operations, this register is double buffered and can be written with a new value for the next operation; when not written, the value remains intact. During the execution of sequencer-controlled complex operations, this register may not be written and its value is undefined at the conclusion of the operation. The driver software cannot rely on the written value to remain intact.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`alength::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alength::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct ALENGTH_SPEC;
-impl crate::RegisterSpec for ALENGTH_SPEC {
+pub struct AlengthSpec;
+impl crate::RegisterSpec for AlengthSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`alength::R`](R) reader structure"]
-impl crate::Readable for ALENGTH_SPEC {}
+impl crate::Readable for AlengthSpec {}
 #[doc = "`write(|w| ..)` method takes [`alength::W`](W) writer structure"]
-impl crate::Writable for ALENGTH_SPEC {
+impl crate::Writable for AlengthSpec {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ALENGTH to value 0"]
-impl crate::Resettable for ALENGTH_SPEC {
+impl crate::Resettable for AlengthSpec {
     const RESET_VALUE: u32 = 0;
 }

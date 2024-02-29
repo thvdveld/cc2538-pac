@@ -1,19 +1,19 @@
 #[doc = "Register `CFG` reader"]
-pub type R = crate::R<CFG_SPEC>;
+pub type R = crate::R<CfgSpec>;
 #[doc = "Register `CFG` writer"]
-pub type W = crate::W<CFG_SPEC>;
+pub type W = crate::W<CfgSpec>;
 #[doc = "Field `GPTMCFG` reader - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
-pub type GPTMCFG_R = crate::FieldReader;
+pub type GptmcfgR = crate::FieldReader;
 #[doc = "Field `GPTMCFG` writer - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
-pub type GPTMCFG_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+pub type GptmcfgW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
     #[inline(always)]
-    pub fn gptmcfg(&self) -> GPTMCFG_R {
-        GPTMCFG_R::new((self.bits & 7) as u8)
+    pub fn gptmcfg(&self) -> GptmcfgR {
+        GptmcfgR::new((self.bits & 7) as u8)
     }
 }
 impl W {
@@ -21,33 +21,24 @@ impl W {
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn gptmcfg(&mut self) -> GPTMCFG_W<CFG_SPEC> {
-        GPTMCFG_W::new(self, 0)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn gptmcfg(&mut self) -> GptmcfgW<CfgSpec> {
+        GptmcfgW::new(self, 0)
     }
 }
 #[doc = "GPTM configuration This register configures the global operation of the GPTM. The value written to this register determines whether the GPTM is in 32-bit mode (concatenated timers) or in 16-bit mode (individual, split timers).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct CFG_SPEC;
-impl crate::RegisterSpec for CFG_SPEC {
+pub struct CfgSpec;
+impl crate::RegisterSpec for CfgSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`cfg::R`](R) reader structure"]
-impl crate::Readable for CFG_SPEC {}
+impl crate::Readable for CfgSpec {}
 #[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
-impl crate::Writable for CFG_SPEC {
+impl crate::Writable for CfgSpec {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG to value 0"]
-impl crate::Resettable for CFG_SPEC {
+impl crate::Resettable for CfgSpec {
     const RESET_VALUE: u32 = 0;
 }

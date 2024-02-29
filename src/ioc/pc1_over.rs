@@ -1,49 +1,40 @@
 #[doc = "Register `PC1_OVER` reader"]
-pub type R = crate::R<PC1_OVER_SPEC>;
+pub type R = crate::R<Pc1OverSpec>;
 #[doc = "Register `PC1_OVER` writer"]
-pub type W = crate::W<PC1_OVER_SPEC>;
+pub type W = crate::W<Pc1OverSpec>;
 #[doc = "Field `PC1_over` reader - 0: output disable 1: oe - output enable"]
-pub type PC1_OVER_R = crate::BitReader;
+pub type Pc1OverR = crate::BitReader;
 #[doc = "Field `PC1_over` writer - 0: output disable 1: oe - output enable"]
-pub type PC1_OVER_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type Pc1OverW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - 0: output disable 1: oe - output enable"]
     #[inline(always)]
-    pub fn pc1_over(&self) -> PC1_OVER_R {
-        PC1_OVER_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn pc1_over(&self) -> Pc1OverR {
+        Pc1OverR::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 3 - 0: output disable 1: oe - output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pc1_over(&mut self) -> PC1_OVER_W<PC1_OVER_SPEC> {
-        PC1_OVER_W::new(self, 3)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
+    pub fn pc1_over(&mut self) -> Pc1OverW<Pc1OverSpec> {
+        Pc1OverW::new(self, 3)
     }
 }
 #[doc = "This is the overide configuration register for each pad. PC1 has high drive capability.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pc1_over::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pc1_over::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct PC1_OVER_SPEC;
-impl crate::RegisterSpec for PC1_OVER_SPEC {
+pub struct Pc1OverSpec;
+impl crate::RegisterSpec for Pc1OverSpec {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`pc1_over::R`](R) reader structure"]
-impl crate::Readable for PC1_OVER_SPEC {}
+impl crate::Readable for Pc1OverSpec {}
 #[doc = "`write(|w| ..)` method takes [`pc1_over::W`](W) writer structure"]
-impl crate::Writable for PC1_OVER_SPEC {
+impl crate::Writable for Pc1OverSpec {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PC1_OVER to value 0x04"]
-impl crate::Resettable for PC1_OVER_SPEC {
+impl crate::Resettable for Pc1OverSpec {
     const RESET_VALUE: u32 = 0x04;
 }
