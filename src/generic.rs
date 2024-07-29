@@ -48,8 +48,10 @@ pub trait RegisterSpec {
 #[doc = " Raw field type"]
 pub trait FieldSpec: Sized {
     #[doc = " Raw field type (`u8`, `u16`, `u32`, ...)."]
-    type Ux: Copy + PartialEq + From<Self>;
+    type Ux: Copy + core::fmt::Debug + PartialEq + From<Self>;
 }
+#[doc = " Marker for fields with fixed values"]
+pub trait IsEnum: FieldSpec {}
 #[doc = " Trait implemented by readable registers to enable the `read` method."]
 #[doc = ""]
 #[doc = " Registers marked with `Writable` can be also be `modify`'ed."]
@@ -235,6 +237,14 @@ impl<REG: Readable + Writable> Reg<REG> {
         );
     }
 }
+impl<REG: Readable> core::fmt::Debug for crate::generic::Reg<REG>
+where
+    R<REG>: core::fmt::Debug,
+{
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.read(), f)
+    }
+}
 #[doc(hidden)]
 pub mod raw;
 #[doc = " Register reader."]
@@ -300,6 +310,11 @@ impl<FI: FieldSpec> FieldReader<FI> {
         self.bits
     }
 }
+impl<FI: FieldSpec> core::fmt::Debug for FieldReader<FI> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.bits, f)
+    }
+}
 impl<FI> PartialEq<FI> for FieldReader<FI>
 where
     FI: FieldSpec + Copy,
@@ -336,19 +351,28 @@ impl<FI> BitReader<FI> {
         self.bit()
     }
 }
+impl<FI> core::fmt::Debug for BitReader<FI> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.bits, f)
+    }
+}
 #[doc = " Marker for register/field writers which can take any value of specified width"]
 pub struct Safe;
 #[doc = " You should check that value is allowed to pass to register/field writer marked with this"]
 pub struct Unsafe;
-#[doc = " Write field Proxy with unsafe `bits`"]
-pub type FieldWriter<'a, REG, const WI: u8, FI = u8> = raw::FieldWriter<'a, REG, WI, FI, Unsafe>;
-#[doc = " Write field Proxy with safe `bits`"]
-pub type FieldWriterSafe<'a, REG, const WI: u8, FI = u8> = raw::FieldWriter<'a, REG, WI, FI, Safe>;
-impl<'a, REG, const WI: u8, FI> FieldWriter<'a, REG, WI, FI>
+#[doc = " Marker for field writers are safe to write in specified inclusive range"]
+pub struct Range<const MIN: u64, const MAX: u64>;
+#[doc = " Marker for field writers are safe to write in specified inclusive range"]
+pub struct RangeFrom<const MIN: u64>;
+#[doc = " Marker for field writers are safe to write in specified inclusive range"]
+pub struct RangeTo<const MAX: u64>;
+#[doc = " Write field Proxy"]
+pub type FieldWriter<'a, REG, const WI: u8, FI = u8, Safety = Unsafe> =
+    raw::FieldWriter<'a, REG, WI, FI, Safety>;
+impl<'a, REG, const WI: u8, FI, Safety> FieldWriter<'a, REG, WI, FI, Safety>
 where
     REG: Writable + RegisterSpec,
     FI: FieldSpec,
-    REG::Ux: From<FI::Ux>,
 {
     #[doc = " Field width"]
     pub const WIDTH: u8 = WI;
@@ -362,6 +386,13 @@ where
     pub const fn offset(&self) -> u8 {
         self.o
     }
+}
+impl<'a, REG, const WI: u8, FI, Safety> FieldWriter<'a, REG, WI, FI, Safety>
+where
+    REG: Writable + RegisterSpec,
+    FI: FieldSpec,
+    REG::Ux: From<FI::Ux>,
+{
     #[doc = " Writes raw bits to the field"]
     #[doc = ""]
     #[doc = " # Safety"]
@@ -373,41 +404,81 @@ where
         self.w.bits |= (REG::Ux::from(value) & REG::Ux::mask::<WI>()) << self.o;
         self.w
     }
-    #[doc = " Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: FI) -> &'a mut W<REG> {
-        unsafe { self.bits(FI::Ux::from(variant)) }
-    }
 }
-impl<'a, REG, const WI: u8, FI> FieldWriterSafe<'a, REG, WI, FI>
+impl<'a, REG, const WI: u8, FI> FieldWriter<'a, REG, WI, FI, Safe>
 where
     REG: Writable + RegisterSpec,
     FI: FieldSpec,
     REG::Ux: From<FI::Ux>,
 {
-    #[doc = " Field width"]
-    pub const WIDTH: u8 = WI;
-    #[doc = " Field width"]
-    #[inline(always)]
-    pub const fn width(&self) -> u8 {
-        WI
-    }
-    #[doc = " Field offset"]
-    #[inline(always)]
-    pub const fn offset(&self) -> u8 {
-        self.o
-    }
     #[doc = " Writes raw bits to the field"]
     #[inline(always)]
-    pub fn bits(self, value: FI::Ux) -> &'a mut W<REG> {
-        self.w.bits &= !(REG::Ux::mask::<WI>() << self.o);
-        self.w.bits |= (REG::Ux::from(value) & REG::Ux::mask::<WI>()) << self.o;
-        self.w
+    pub fn set(self, value: FI::Ux) -> &'a mut W<REG> {
+        unsafe { self.bits(value) }
     }
+}
+impl<'a, REG, const WI: u8, FI, const MIN: u64, const MAX: u64>
+    FieldWriter<'a, REG, WI, FI, Range<MIN, MAX>>
+where
+    REG: Writable + RegisterSpec,
+    FI: FieldSpec,
+    REG::Ux: From<FI::Ux>,
+    u64: From<FI::Ux>,
+{
+    #[doc = " Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn set(self, value: FI::Ux) -> &'a mut W<REG> {
+        {
+            let value = u64::from(value);
+            assert!(value >= MIN && value <= MAX);
+        }
+        unsafe { self.bits(value) }
+    }
+}
+impl<'a, REG, const WI: u8, FI, const MIN: u64> FieldWriter<'a, REG, WI, FI, RangeFrom<MIN>>
+where
+    REG: Writable + RegisterSpec,
+    FI: FieldSpec,
+    REG::Ux: From<FI::Ux>,
+    u64: From<FI::Ux>,
+{
+    #[doc = " Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn set(self, value: FI::Ux) -> &'a mut W<REG> {
+        {
+            let value = u64::from(value);
+            assert!(value >= MIN);
+        }
+        unsafe { self.bits(value) }
+    }
+}
+impl<'a, REG, const WI: u8, FI, const MAX: u64> FieldWriter<'a, REG, WI, FI, RangeTo<MAX>>
+where
+    REG: Writable + RegisterSpec,
+    FI: FieldSpec,
+    REG::Ux: From<FI::Ux>,
+    u64: From<FI::Ux>,
+{
+    #[doc = " Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn set(self, value: FI::Ux) -> &'a mut W<REG> {
+        {
+            let value = u64::from(value);
+            assert!(value <= MAX);
+        }
+        unsafe { self.bits(value) }
+    }
+}
+impl<'a, REG, const WI: u8, FI, Safety> FieldWriter<'a, REG, WI, FI, Safety>
+where
+    REG: Writable + RegisterSpec,
+    FI: IsEnum,
+    REG::Ux: From<FI::Ux>,
+{
     #[doc = " Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: FI) -> &'a mut W<REG> {
-        self.bits(FI::Ux::from(variant))
+        unsafe { self.bits(FI::Ux::from(variant)) }
     }
 }
 macro_rules! bit_proxy {
