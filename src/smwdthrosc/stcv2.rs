@@ -11,7 +11,7 @@ of Sleep Timer capture value"]
         Stcv2R::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "Sleep Timer Capture value byte 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stcv2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Sleep Timer Capture value byte 2\n\nYou can [`read`](crate::Reg::read) this register and get [`stcv2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Stcv2Spec;
 impl crate::RegisterSpec for Stcv2Spec {
     type Ux = u32;

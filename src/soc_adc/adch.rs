@@ -9,7 +9,7 @@ impl R {
         AdcR::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "This register contains the most-significant part of ADC conversion result.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`adch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register contains the most-significant part of ADC conversion result.\n\nYou can [`read`](crate::Reg::read) this register and get [`adch::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AdchSpec;
 impl crate::RegisterSpec for AdchSpec {
     type Ux = u32;

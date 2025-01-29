@@ -106,72 +106,61 @@ impl R {
 impl W {
     #[doc = "Bit 4 - UART receive interrupt mask 1: An interrupt is sent to the interrupt controller when the RXRIS bit in the UARTRIS register is set. 0: The RXRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn rxim(&mut self) -> RximW<ImSpec> {
         RximW::new(self, 4)
     }
     #[doc = "Bit 5 - UART transmit interrupt mask 1: An interrupt is sent to the interrupt controller when the TXRIS bit in the UARTRIS register is set. 0: The TXRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn txim(&mut self) -> TximW<ImSpec> {
         TximW::new(self, 5)
     }
     #[doc = "Bit 6 - UART receive time-out interrupt mask 1: An interrupt is sent to the interrupt controller when the RTRIS bit in the UARTRIS register is set. 0: The RTRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn rtim(&mut self) -> RtimW<ImSpec> {
         RtimW::new(self, 6)
     }
     #[doc = "Bit 7 - UART framing error interrupt mask 1: An interrupt is sent to the interrupt controller when the FERIS bit in the UARTRIS register is set. 0: The FERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn feim(&mut self) -> FeimW<ImSpec> {
         FeimW::new(self, 7)
     }
     #[doc = "Bit 8 - UART parity error interrupt mask 1: An interrupt is sent to the interrupt controller when the PERIS bit in the UARTRIS register is set. 0: The PERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn peim(&mut self) -> PeimW<ImSpec> {
         PeimW::new(self, 8)
     }
     #[doc = "Bit 9 - UART break error interrupt mask 1: An interrupt is sent to the interrupt controller when the BERIS bit in the UARTRIS register is set. 0: The BERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn beim(&mut self) -> BeimW<ImSpec> {
         BeimW::new(self, 9)
     }
     #[doc = "Bit 10 - UART overrun error interrupt mask 1: An interrupt is sent to the interrupt controller when the OERIS bit in the UARTRIS register is set. 0: The OERIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn oeim(&mut self) -> OeimW<ImSpec> {
         OeimW::new(self, 10)
     }
     #[doc = "Bit 12 - 9-bit mode interrupt mask 1: An interrupt is sent to the interrupt controller when the 9BITRIS bit in the UARTRIS register is set. 0: The 9BITRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn ninebitim(&mut self) -> NinebitimW<ImSpec> {
         NinebitimW::new(self, 12)
     }
     #[doc = "Bit 13 - LIN mode sync break interrupt mask 1: An interrupt is sent to the interrupt controller when the LMSBRIS bit in the UARTRIS register is set. 0: The LMSBRIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn lmsbim(&mut self) -> LmsbimW<ImSpec> {
         LmsbimW::new(self, 13)
     }
     #[doc = "Bit 14 - LIN mode edge 1 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME1RIS bit in the UARTRIS register is set. 0: The LME1RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn lme1im(&mut self) -> Lme1imW<ImSpec> {
         Lme1imW::new(self, 14)
     }
     #[doc = "Bit 15 - LIN mode edge 5 interrupt mask 1: An interrupt is sent to the interrupt controller when the LME5RIS bit in the UARTRIS register is set. 0: The LME5RIS interrupt is suppressed and not sent to the interrupt controller."]
     #[inline(always)]
-    #[must_use]
     pub fn lme5im(&mut self) -> Lme5imW<ImSpec> {
         Lme5imW::new(self, 15)
     }
 }
-#[doc = "UART interrupt mask The IM register is the interrupt mask set/clear register. On a read, this register gives the current value of the mask on the relevant interrupt. Setting a bit allows the corresponding raw interrupt signal to be routed to the interrupt controller. Clearing a bit prevents the raw interrupt signal from being sent to the interrupt controller.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`im::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`im::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART interrupt mask The IM register is the interrupt mask set/clear register. On a read, this register gives the current value of the mask on the relevant interrupt. Setting a bit allows the corresponding raw interrupt signal to be routed to the interrupt controller. Clearing a bit prevents the raw interrupt signal from being sent to the interrupt controller.\n\nYou can [`read`](crate::Reg::read) this register and get [`im::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`im::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ImSpec;
 impl crate::RegisterSpec for ImSpec {
     type Ux = u32;

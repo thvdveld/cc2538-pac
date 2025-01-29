@@ -16,7 +16,7 @@ impl R {
         Port1AhbErrorR::new(((self.bits >> 12) & 1) != 0)
     }
 }
-#[doc = "DMAC port error raw status register This register provides the actual status of individual port errors. It also indicates which channel is serviced by an external AHB port (which is frozen by a port error). A port error aborts operations on all serviced channels (channel enable bit is forced to 0) and prevents further transfers via that port until the error is cleared by writing to the DMAC_SWRES register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmac_persr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMAC port error raw status register This register provides the actual status of individual port errors. It also indicates which channel is serviced by an external AHB port (which is frozen by a port error). A port error aborts operations on all serviced channels (channel enable bit is forced to 0) and prevents further transfers via that port until the error is cleared by writing to the DMAC_SWRES register.\n\nYou can [`read`](crate::Reg::read) this register and get [`dmac_persr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DmacPersrSpec;
 impl crate::RegisterSpec for DmacPersrSpec {
     type Ux = u32;

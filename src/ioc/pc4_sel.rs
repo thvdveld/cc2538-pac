@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PC4."]
     #[inline(always)]
-    #[must_use]
     pub fn pc4_sel(&mut self) -> Pc4SelW<Pc4SelSpec> {
         Pc4SelW::new(self, 0)
     }
 }
-#[doc = "Peripheral select control for PC4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pc4_sel::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pc4_sel::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Peripheral select control for PC4\n\nYou can [`read`](crate::Reg::read) this register and get [`pc4_sel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pc4_sel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Pc4SelSpec;
 impl crate::RegisterSpec for Pc4SelSpec {
     type Ux = u32;

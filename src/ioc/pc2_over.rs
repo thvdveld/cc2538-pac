@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bit 3 - 0: output disable 1: oe - output enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pc2_over(&mut self) -> Pc2OverW<Pc2OverSpec> {
         Pc2OverW::new(self, 3)
     }
 }
-#[doc = "This is the overide configuration register for each pad. PC2 has high drive capability.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pc2_over::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pc2_over::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This is the overide configuration register for each pad. PC2 has high drive capability.\n\nYou can [`read`](crate::Reg::read) this register and get [`pc2_over::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pc2_over::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Pc2OverSpec;
 impl crate::RegisterSpec for Pc2OverSpec {
     type Ux = u32;

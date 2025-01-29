@@ -37,7 +37,7 @@ impl R {
         DieMajorRevisionR::new(((self.bits >> 12) & 0x0f) as u8)
     }
 }
-#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538. The DIE_*_REVISION registers are an exeception to this, as they are hardwired and are not part of the FLASH information page.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diecfg2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538. The DIE_*_REVISION registers are an exeception to this, as they are hardwired and are not part of the FLASH information page.\n\nYou can [`read`](crate::Reg::read) this register and get [`diecfg2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Diecfg2Spec;
 impl crate::RegisterSpec for Diecfg2Spec {
     type Ux = u32;

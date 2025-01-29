@@ -23,7 +23,7 @@ impl R {
         PortErrR::new(((self.bits >> 17) & 1) != 0)
     }
 }
-#[doc = "DMAC status This register provides the actual state of each DMA channel. It also reports port errors in case these were received by the master interface module during the data transfer.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmac_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMAC status This register provides the actual state of each DMA channel. It also reports port errors in case these were received by the master interface module during the data transfer.\n\nYou can [`read`](crate::Reg::read) this register and get [`dmac_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DmacStatusSpec;
 impl crate::RegisterSpec for DmacStatusSpec {
     type Ux = u32;

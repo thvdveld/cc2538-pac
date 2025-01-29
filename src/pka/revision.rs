@@ -37,7 +37,7 @@ impl R {
         MajorHwRevisionR::new(((self.bits >> 24) & 0x0f) as u8)
     }
 }
-#[doc = "PKA hardware revision register This register allows the host access to the hardware revision number of the PKA engine for software driver matching and diagnostic purposes. It is always located at the highest address in the access space of the module and contains an encoding of the EIP number (with its complement as signature) for recognition of the hardware module.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`revision::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PKA hardware revision register This register allows the host access to the hardware revision number of the PKA engine for software driver matching and diagnostic purposes. It is always located at the highest address in the access space of the module and contains an encoding of the EIP number (with its complement as signature) for recognition of the hardware module.\n\nYou can [`read`](crate::Reg::read) this register and get [`revision::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RevisionSpec;
 impl crate::RegisterSpec for RevisionSpec {
     type Ux = u32;

@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Controls which observable signal from RF Core is to be muxed out to rfc_obs_sigs\\[2\\]. See description of RFC_OBS_CTRL0 for details."]
     #[inline(always)]
-    #[must_use]
     pub fn rfc_obs_mux2(&mut self) -> RfcObsMux2W<RfcObsCtrl2Spec> {
         RfcObsMux2W::new(self, 0)
     }
     #[doc = "Bit 6 - The signal chosen by RFC_OBS_MUX2 is XORed with this bit."]
     #[inline(always)]
-    #[must_use]
     pub fn rfc_obs_pol2(&mut self) -> RfcObsPol2W<RfcObsCtrl2Spec> {
         RfcObsPol2W::new(self, 6)
     }
 }
-#[doc = "RF observation mux control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfc_obs_ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rfc_obs_ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RF observation mux control\n\nYou can [`read`](crate::Reg::read) this register and get [`rfc_obs_ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rfc_obs_ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RfcObsCtrl2Spec;
 impl crate::RegisterSpec for RfcObsCtrl2Spec {
     type Ux = u32;

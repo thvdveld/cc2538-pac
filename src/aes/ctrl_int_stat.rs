@@ -37,7 +37,7 @@ impl R {
         DmaBusErrR::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "Interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_int_stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl_int_stat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CtrlIntStatSpec;
 impl crate::RegisterSpec for CtrlIntStatSpec {
     type Ux = u32;

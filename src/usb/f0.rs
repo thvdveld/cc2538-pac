@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Endpoint 0 FIFO Reading this register unloads one byte from the endpoint 0 FIFO. Writing to this register loads one byte into the endpoint 0 FIFO. The FIFO memory for EP0 is used for incoming and outgoing data packets."]
     #[inline(always)]
-    #[must_use]
     pub fn usbf0(&mut self) -> Usbf0W<F0Spec> {
         Usbf0W::new(self, 0)
     }
 }
-#[doc = "Endpoint 0 FIFO\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`f0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`f0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Endpoint 0 FIFO\n\nYou can [`read`](crate::Reg::read) this register and get [`f0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`f0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct F0Spec;
 impl crate::RegisterSpec for F0Spec {
     type Ux = u32;

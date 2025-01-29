@@ -86,7 +86,7 @@ impl R {
         Sync32kR::new(((self.bits >> 26) & 1) != 0)
     }
 }
-#[doc = "Clock status register This register reflects the current chip status.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock_sta::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Clock status register This register reflects the current chip status.\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_sta::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ClockStaSpec;
 impl crate::RegisterSpec for ClockStaSpec {
     type Ux = u32;

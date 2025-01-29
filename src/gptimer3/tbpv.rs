@@ -9,7 +9,7 @@ impl R {
         PsvR::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "GPTM Timer B prescale value For the 32-bit wide GPTM, this register shows the current free-running value of the Timer B prescaler in the 32-bit modes. Software can use this value in conjunction with the TBV register to determine the time elapsed between an interrupt and the ISR entry. This register is ununsed in 16- or 32-bit GPTM mode.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tbpv::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM Timer B prescale value For the 32-bit wide GPTM, this register shows the current free-running value of the Timer B prescaler in the 32-bit modes. Software can use this value in conjunction with the TBV register to determine the time elapsed between an interrupt and the ISR entry. This register is ununsed in 16- or 32-bit GPTM mode.\n\nYou can [`read`](crate::Reg::read) this register and get [`tbpv::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TbpvSpec;
 impl crate::RegisterSpec for TbpvSpec {
     type Ux = u32;

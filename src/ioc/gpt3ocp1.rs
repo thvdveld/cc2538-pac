@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - 0: PA0 selected as GPT3OCP1 1: PA1 selected as GPT3OCP1 ... 31: PD7 selected as GPT3OCP1"]
     #[inline(always)]
-    #[must_use]
     pub fn input_sel(&mut self) -> InputSelW<Gpt3ocp1Spec> {
         InputSelW::new(self, 0)
     }
 }
-#[doc = "Selects one of the 32 pins on the four 8-pin I/O-ports (port A, port B, port C, and port D) to be the GPT3OCP1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpt3ocp1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpt3ocp1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Selects one of the 32 pins on the four 8-pin I/O-ports (port A, port B, port C, and port D) to be the GPT3OCP1.\n\nYou can [`read`](crate::Reg::read) this register and get [`gpt3ocp1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpt3ocp1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Gpt3ocp1Spec;
 impl crate::RegisterSpec for Gpt3ocp1Spec {
     type Ux = u32;

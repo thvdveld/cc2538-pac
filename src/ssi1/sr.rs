@@ -37,7 +37,7 @@ impl R {
         BsyR::new(((self.bits >> 4) & 1) != 0)
     }
 }
-#[doc = "The SR register contains bits that indicate the FIFO fill status and the SSI busy status.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The SR register contains bits that indicate the FIFO fill status and the SSI busy status.\n\nYou can [`read`](crate::Reg::read) this register and get [`sr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SrSpec;
 impl crate::RegisterSpec for SrSpec {
     type Ux = u32;

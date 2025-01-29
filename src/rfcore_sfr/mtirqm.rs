@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables the MACTIMER_PER interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_perm(&mut self) -> MactimerPermW<MtirqmSpec> {
         MactimerPermW::new(self, 0)
     }
     #[doc = "Bit 1 - Enables the MACTIMER_COMPARE1 interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_compare1m(&mut self) -> MactimerCompare1mW<MtirqmSpec> {
         MactimerCompare1mW::new(self, 1)
     }
     #[doc = "Bit 2 - Enables the MACTIMER_COMPARE2 interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_compare2m(&mut self) -> MactimerCompare2mW<MtirqmSpec> {
         MactimerCompare2mW::new(self, 2)
     }
     #[doc = "Bit 3 - Enables the MACTIMER_OVF_PER interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_ovf_perm(&mut self) -> MactimerOvfPermW<MtirqmSpec> {
         MactimerOvfPermW::new(self, 3)
     }
     #[doc = "Bit 4 - Enables the MACTIMER_OVF_COMPARE1 interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_ovf_compare1m(&mut self) -> MactimerOvfCompare1mW<MtirqmSpec> {
         MactimerOvfCompare1mW::new(self, 4)
     }
     #[doc = "Bit 5 - Enables the MACTIMER_OVF_COMPARE2 interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_ovf_compare2m(&mut self) -> MactimerOvfCompare2mW<MtirqmSpec> {
         MactimerOvfCompare2mW::new(self, 5)
     }
 }
-#[doc = "MAC Timer interrupt mask\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mtirqm::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mtirqm::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MAC Timer interrupt mask\n\nYou can [`read`](crate::Reg::read) this register and get [`mtirqm::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtirqm::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MtirqmSpec;
 impl crate::RegisterSpec for MtirqmSpec {
     type Ux = u32;

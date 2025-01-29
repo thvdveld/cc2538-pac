@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - The TX DACs data source is selected by DAC_SRC according to: 000: Normal operation (from modulator) 001: The DAC_I_O and DAC_Q_O override values 010: ADC data after decimation, magnitude controlled by DAC_I_O and DAC_Q_O 011: I/Q after decimation, channel and DC filtering, magnitude controlled by DAC_I_O and DAC_Q_O 100: CORDIC magnitude output and front-end gain is output, magnitude controlled by DAC_I_O and DAC_Q_O 101: RSSI I output on the I DAC 111: Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn dac_src(&mut self) -> DacSrcW<Dactest2Spec> {
         DacSrcW::new(self, 0)
     }
     #[doc = "Bits 3:4 - Adjustment of output stage Drives RFR_DAC_CASC_CTRL"]
     #[inline(always)]
-    #[must_use]
     pub fn dac_casc_ctrl(&mut self) -> DacCascCtrlW<Dactest2Spec> {
         DacCascCtrlW::new(self, 3)
     }
     #[doc = "Bit 5 - Enable and disable dynamic element matching Drives RFR_DAC_DEM_EN"]
     #[inline(always)]
-    #[must_use]
     pub fn dac_dem_en(&mut self) -> DacDemEnW<Dactest2Spec> {
         DacDemEnW::new(self, 5)
     }
 }
-#[doc = "DAC test setting\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dactest2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dactest2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DAC test setting\n\nYou can [`read`](crate::Reg::read) this register and get [`dactest2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dactest2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Dactest2Spec;
 impl crate::RegisterSpec for Dactest2Spec {
     type Ux = u32;

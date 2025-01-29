@@ -75,42 +75,36 @@ impl R {
 impl W {
     #[doc = "Bit 1 - USB_CS0. INPKTRDY \\[RW\\]: Software sets this bit after loading a data packet into the endpoint 0 FIFO. It is cleared automatically when the data packet has been transmitted. An interrupt is generated when the bit is cleared. USB_CSIL.PKTPRESENT \\[RO\\]: This bit is set when there is at least one packet in the IN endpoint FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn inpktrdy_or_pktpresent(&mut self) -> InpktrdyOrPktpresentW<Cs0CsilSpec> {
         InpktrdyOrPktpresentW::new(self, 1)
     }
     #[doc = "Bit 2 - USB_CS0.SENTSTALL \\[RW\\]: This bit is set when a STALL handshake is sent. An interrupt is generated is generated when this bit is set. Software must clear this bit. USB_CSIL.UNDERRUN \\[RW\\]: In isochronous mode, this bit is set when a zero length data packet is sent after receiving an IN token with USB_CSIL.INPKTRDY not set. In bulk/interrupt mode, this bit is set when a NAK is returned in response to an IN token. Software should clear this bit."]
     #[inline(always)]
-    #[must_use]
     pub fn sentstall_or_underrun(&mut self) -> SentstallOrUnderrunW<Cs0CsilSpec> {
         SentstallOrUnderrunW::new(self, 2)
     }
     #[doc = "Bit 3 - USB_CS0.DATAEND \\[RW\\]: This bit is used to signal the end of the data stage, and must be set: 1. When the last data packet is loaded and USB_CS0.INPKTRDY is set. 2. When the last data packet is unloaded and USB_CS0.CLROUTPKTRDY is set. 3. When USB_CS0.INPKTRDY is set to send a zero-length packet. The USB controller clears this bit automatically. USB_CSIL.FLUSHPACKET \\[RW\\]: Software sets this bit to flush the next packet to be transmitted from the IN endpoint FIFO. The FIFO pointer is reset and the USB_CSIL.INPKTRDY bit is cleared. Note: If the FIFO contains two packets, USB_CSIL.FLUSHPACKET will need to be set twice to completely clear the FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn dataend_or_flushpacket(&mut self) -> DataendOrFlushpacketW<Cs0CsilSpec> {
         DataendOrFlushpacketW::new(self, 3)
     }
     #[doc = "Bit 5 - USB_CS0.SENDSTALL \\[RW\\]: Software sets this bit to terminate the current transaction with a STALL handshake. The bit is cleared automatically when the STALL handshake has been transmitted. USB_CSIL.SENTSTALL \\[RW\\]: For bulk/interrupt mode IN endpoints: This bit is set when a STALL handshake is transmitted. The FIFO is flushed and the USB_CSIL.INPKTRDY bit cleared. Software should clear this bit."]
     #[inline(always)]
-    #[must_use]
     pub fn sendstall_or_sentstall(&mut self) -> SendstallOrSentstallW<Cs0CsilSpec> {
         SendstallOrSentstallW::new(self, 5)
     }
     #[doc = "Bit 6 - USB_CS0.CLROUTPKTRDY \\[RW\\]: Software sets this bit to clear the USB_CS0.OUTPKTRDY bit. It is cleared automatically. USB_CSIL.CLRDATATOG \\[RW\\]: Software sets this bit to reset the IN endpoint data toggle to 0."]
     #[inline(always)]
-    #[must_use]
     pub fn clroutpktrdy_or_clrdatatog(&mut self) -> ClroutpktrdyOrClrdatatogW<Cs0CsilSpec> {
         ClroutpktrdyOrClrdatatogW::new(self, 6)
     }
     #[doc = "Bit 7 - USB_CS0.CLRSETUPEND \\[RW\\]: Software sets this bit to clear the USB_CS0.SETUPEND bit. It is cleared automatically. USB_CSIL.Reserved \\[RO\\]: Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn clrsetupend_or_reserved8(&mut self) -> ClrsetupendOrReserved8W<Cs0CsilSpec> {
         ClrsetupendOrReserved8W::new(self, 7)
     }
 }
-#[doc = "Indexed register: For USB_INDEX = 0: Endpoint 0 control and status For USB_INDEX = 1-5: IN endpoint {1-5} control and status (low byte)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cs0_csil::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cs0_csil::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Indexed register: For USB_INDEX = 0: Endpoint 0 control and status For USB_INDEX = 1-5: IN endpoint {1-5} control and status (low byte)\n\nYou can [`read`](crate::Reg::read) this register and get [`cs0_csil::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cs0_csil::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Cs0CsilSpec;
 impl crate::RegisterSpec for Cs0CsilSpec {
     type Ux = u32;

@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2C0 Master/slave loopback mode 0: Normal mode"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbki2c(&mut self) -> Lpbki2cW<Lpbki2cSpec> {
         Lpbki2cW::new(self, 0)
     }
 }
-#[doc = "I2C internal loopback\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lpbki2c::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lpbki2c::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C internal loopback\n\nYou can [`read`](crate::Reg::read) this register and get [`lpbki2c::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lpbki2c::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Lpbki2cSpec;
 impl crate::RegisterSpec for Lpbki2cSpec {
     type Ux = u32;

@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Interrupt enable for endpoint 0 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn ep0ie(&mut self) -> Ep0ieW<IieSpec> {
         Ep0ieW::new(self, 0)
     }
     #[doc = "Bit 1 - Interrupt enable for IN endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn inep1ie(&mut self) -> Inep1ieW<IieSpec> {
         Inep1ieW::new(self, 1)
     }
     #[doc = "Bit 2 - Interrupt enable for IN endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn inep2ie(&mut self) -> Inep2ieW<IieSpec> {
         Inep2ieW::new(self, 2)
     }
     #[doc = "Bit 3 - Interrupt enable for IN endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn inep3ie(&mut self) -> Inep3ieW<IieSpec> {
         Inep3ieW::new(self, 3)
     }
     #[doc = "Bit 4 - Interrupt enable for IN endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn inep4ie(&mut self) -> Inep4ieW<IieSpec> {
         Inep4ieW::new(self, 4)
     }
     #[doc = "Bit 5 - Interrupt enable for IN endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn inep5ie(&mut self) -> Inep5ieW<IieSpec> {
         Inep5ieW::new(self, 5)
     }
 }
-#[doc = "Interrupt enable mask for IN endpoints 1-5 and endpoint 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iie::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iie::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt enable mask for IN endpoints 1-5 and endpoint 0\n\nYou can [`read`](crate::Reg::read) this register and get [`iie::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iie::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IieSpec;
 impl crate::RegisterSpec for IieSpec {
     type Ux = u32;

@@ -30,7 +30,7 @@ impl R {
         SofifR::new(((self.bits >> 3) & 1) != 0)
     }
 }
-#[doc = "Common USB interrupt flags\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cif::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Common USB interrupt flags\n\nYou can [`read`](crate::Reg::read) this register and get [`cif::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CifSpec;
 impl crate::RegisterSpec for CifSpec {
     type Ux = u32;

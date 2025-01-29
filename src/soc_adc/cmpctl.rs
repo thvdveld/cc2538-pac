@@ -23,12 +23,11 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Comparator enable"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<CmpctlSpec> {
         EnW::new(self, 1)
     }
 }
-#[doc = "Analog comparator control and status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmpctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cmpctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Analog comparator control and status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`cmpctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmpctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CmpctlSpec;
 impl crate::RegisterSpec for CmpctlSpec {
     type Ux = u32;

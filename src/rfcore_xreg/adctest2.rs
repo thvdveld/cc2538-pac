@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Control of DAC DWA scheme 0 = DWA (scrambling) disabled 1 = DWA enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_dac_rot(&mut self) -> AdcDacRotW<Adctest2Spec> {
         AdcDacRotW::new(self, 0)
     }
     #[doc = "Bits 1:2 - Adjust feed forward"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_ff_adj(&mut self) -> AdcFfAdjW<Adctest2Spec> {
         AdcFfAdjW::new(self, 1)
     }
     #[doc = "Bits 3:4 - Controls series resistance of AAF"]
     #[inline(always)]
-    #[must_use]
     pub fn aaf_rs(&mut self) -> AafRsW<Adctest2Spec> {
         AafRsW::new(self, 3)
     }
     #[doc = "Bits 5:6 - Test mode to enable output of ADC data from demodulator. When enabled, raw ADC data is clocked out on the GPIO pins. 00: Test mode disabled 01: Data from the I and Q ADCs are output (data rate 76 MHz) 10: Data from the I ADC is output. Two and two ADC samples grouped (data rate 38 MHz) 11: Data from the Q ADC is output. Two and two ADC samples grouped (data rate 38 MHz)"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_test_mode(&mut self) -> AdcTestModeW<Adctest2Spec> {
         AdcTestModeW::new(self, 5)
     }
 }
-#[doc = "ADC tuning\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`adctest2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`adctest2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ADC tuning\n\nYou can [`read`](crate::Reg::read) this register and get [`adctest2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`adctest2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Adctest2Spec;
 impl crate::RegisterSpec for Adctest2Spec {
     type Ux = u32;

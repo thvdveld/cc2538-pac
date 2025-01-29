@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Selects the event that triggers an MT_EVENT1 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_event1_cfg(&mut self) -> MactimerEvent1CfgW<MtcspcfgSpec> {
         MactimerEvent1CfgW::new(self, 0)
     }
     #[doc = "Bits 4:6 - Selects the event that triggers an MT_EVENT2 pulse 000: MT_per_event 001: MT_cmp1_event 010: MT_cmp2_event 011: MTovf_per_event 100: MTovf_cmp1_event 101: MTovf_cmp2_event 110: Reserved 111: No event"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_evenmt_cfg(&mut self) -> MactimerEvenmtCfgW<MtcspcfgSpec> {
         MactimerEvenmtCfgW::new(self, 4)
     }
 }
-#[doc = "MAC Timer event configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mtcspcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mtcspcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MAC Timer event configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`mtcspcfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtcspcfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MtcspcfgSpec;
 impl crate::RegisterSpec for MtcspcfgSpec {
     type Ux = u32;

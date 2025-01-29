@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ICEMelter 'WAKEUPEMU' power mode override bit. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
     #[inline(always)]
-    #[must_use]
     pub fn icemelter_wkup_pm(&mut self) -> IcemelterWkupPmW<EmuovrSpec> {
         IcemelterWkupPmW::new(self, 0)
     }
     #[doc = "Bit 1 - ICEPick 'Inhibit Sleep' power mode override bit. 'Inhibit Sleep' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
     #[inline(always)]
-    #[must_use]
     pub fn icepick_inhibit_sleep_pm(&mut self) -> IcepickInhibitSleepPmW<EmuovrSpec> {
         IcepickInhibitSleepPmW::new(self, 1)
     }
     #[doc = "Bit 2 - ICEPick 'Force Power' power mode override bit. 'Force Power' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
     #[inline(always)]
-    #[must_use]
     pub fn icepick_force_power_pm(&mut self) -> IcepickForcePowerPmW<EmuovrSpec> {
         IcepickForcePowerPmW::new(self, 2)
     }
     #[doc = "Bit 3 - ICEPick 'Force Active' power mode override bit. 'Force Active' is an ICEPick command. 1 --> Prohibit the system to go into any power down modes. Keeps the emulator attached. 0 --> Does not override any power mode settings from SYSREGS and does not prohibit system to go into any power down modes."]
     #[inline(always)]
-    #[must_use]
     pub fn icepick_force_clock_pm(&mut self) -> IcepickForceClockPmW<EmuovrSpec> {
         IcepickForceClockPmW::new(self, 3)
     }
     #[doc = "Bit 4 - ICEMelter 'WAKEUPEMU' clock gate override bit. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings"]
     #[inline(always)]
-    #[must_use]
     pub fn icemelter_wkup_cg(&mut self) -> IcemelterWkupCgW<EmuovrSpec> {
         IcemelterWkupCgW::new(self, 4)
     }
     #[doc = "Bit 5 - ICEPick 'Inhibit Sleep' clock gate override bit. 'Inhibit Sleep' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
     #[inline(always)]
-    #[must_use]
     pub fn icepick_inhibit_sleep_cg(&mut self) -> IcepickInhibitSleepCgW<EmuovrSpec> {
         IcepickInhibitSleepCgW::new(self, 5)
     }
     #[doc = "Bit 6 - ICEPick 'Force Power' clock gate override bit. 'Force Power' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
     #[inline(always)]
-    #[must_use]
     pub fn icepick_force_power_cg(&mut self) -> IcepickForcePowerCgW<EmuovrSpec> {
         IcepickForcePowerCgW::new(self, 6)
     }
     #[doc = "Bit 7 - ICEPick 'Force Active' clock gate override bit. 'Force Active' is an ICEPick command. 1 --> In non-sleep power mode, peripherals clocks are forced to follow RCG* register settings. It forces CM3 clocks on. 0 --> Does not affect the peripheral clock settings."]
     #[inline(always)]
-    #[must_use]
     pub fn icepick_force_clock_cg(&mut self) -> IcepickForceClockCgW<EmuovrSpec> {
         IcepickForceClockCgW::new(self, 7)
     }
 }
-#[doc = "This register defines the emulator override controls for power mode and peripheral clock gate.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emuovr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`emuovr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register defines the emulator override controls for power mode and peripheral clock gate.\n\nYou can [`read`](crate::Reg::read) this register and get [`emuovr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`emuovr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EmuovrSpec;
 impl crate::RegisterSpec for EmuovrSpec {
     type Ux = u32;

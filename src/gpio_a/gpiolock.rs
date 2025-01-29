@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - A read of this register returns the following values: Locked: 0x00000001 Unlocked: 0x00000000"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<GpiolockSpec> {
         LockW::new(self, 0)
     }
 }
-#[doc = "A write of the value 0x4C4F434B to the GPIOLOCK register unlocks the GPIO commit register (GPIOCR) for write access. A write of any other value reapplies the lock, preventing any register updates. Any write to the commit register (GPIOCR) causes the lock register to be locked.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpiolock::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpiolock::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "A write of the value 0x4C4F434B to the GPIOLOCK register unlocks the GPIO commit register (GPIOCR) for write access. A write of any other value reapplies the lock, preventing any register updates. Any write to the commit register (GPIOCR) causes the lock register to be locked.\n\nYou can [`read`](crate::Reg::read) this register and get [`gpiolock::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpiolock::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GpiolockSpec;
 impl crate::RegisterSpec for GpiolockSpec {
     type Ux = u32;

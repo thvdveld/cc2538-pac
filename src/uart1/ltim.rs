@@ -9,7 +9,7 @@ impl R {
         TimerR::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "UART LIN timer The LTIM register contains the current timer value for the free-running timer that is used to calculate the baud rate when in LIN slave mode. The value in this register is used along with the value in the UART LIN snap shot (LSS) register to adjust the baud rate to match that of the master.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ltim::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART LIN timer The LTIM register contains the current timer value for the free-running timer that is used to calculate the baud rate when in LIN slave mode. The value in this register is used along with the value in the UART LIN snap shot (LSS) register to adjust the baud rate to match that of the master.\n\nYou can [`read`](crate::Reg::read) this register and get [`ltim::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LtimSpec;
 impl crate::RegisterSpec for LtimSpec {
     type Ux = u32;

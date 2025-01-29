@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SSI receive overrun interrupt mask (R/W) Reset value: 0x0 0: RX FIFO Overrun interrupt is masked. 1: RX FIFO Overrun interrupt is not masked"]
     #[inline(always)]
-    #[must_use]
     pub fn rorim(&mut self) -> RorimW<ImSpec> {
         RorimW::new(self, 0)
     }
     #[doc = "Bit 1 - SSI receive time-out interrupt mask (R/W) Reset value: 0x0 0: RX FIFO time-out interrupt is masked. 1: RX FIFO time-out interrupt is not masked"]
     #[inline(always)]
-    #[must_use]
     pub fn rtim(&mut self) -> RtimW<ImSpec> {
         RtimW::new(self, 1)
     }
     #[doc = "Bit 2 - SSI receive FIFO interrupt mask (R/W) Reset value: 0x0 0: RX FIFO half empty or condition interrupt is masked. 1: RX FIFO half empty or less condition interrupt is not masked."]
     #[inline(always)]
-    #[must_use]
     pub fn rxim(&mut self) -> RximW<ImSpec> {
         RximW::new(self, 2)
     }
     #[doc = "Bit 3 - SSI transmit FIFO interrupt mask (R/W) Reset value: 0x0 0: TX FIFO half empty or condition interrupt is masked. 1: TX FIFO half empty or less condition interrupt is not masked."]
     #[inline(always)]
-    #[must_use]
     pub fn txim(&mut self) -> TximW<ImSpec> {
         TximW::new(self, 3)
     }
 }
-#[doc = "The IM register is the interrupt mask set or clear register. It is a read/write register and all bits are cleared on reset. On a read, this register gives the current value of the mask on the corresponding interrupt. Setting a bit sets the mask, preventing the interrupt from being signaled to the interrupt controller. Clearing a bit clears the corresponding mask, enabling the interrupt to be sent to the interrupt controller.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`im::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`im::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The IM register is the interrupt mask set or clear register. It is a read/write register and all bits are cleared on reset. On a read, this register gives the current value of the mask on the corresponding interrupt. Setting a bit sets the mask, preventing the interrupt from being signaled to the interrupt controller. Clearing a bit clears the corresponding mask, enabling the interrupt to be sent to the interrupt controller.\n\nYou can [`read`](crate::Reg::read) this register and get [`im::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`im::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ImSpec;
 impl crate::RegisterSpec for ImSpec {
     type Ux = u32;

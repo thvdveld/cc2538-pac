@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: Enable port A wake-up interrupt. 0: Disable port A wake-up interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn port_a_iwe(&mut self) -> PortAIweW<IweSpec> {
         PortAIweW::new(self, 0)
     }
     #[doc = "Bit 1 - 1: Enable port B wake-up interrupt. 0: Disable port B wake-up interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn port_b_iwe(&mut self) -> PortBIweW<IweSpec> {
         PortBIweW::new(self, 1)
     }
     #[doc = "Bit 2 - 1: Enable port C wake-up interrupt. 0: Disable port C wake-up interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn port_c_iwe(&mut self) -> PortCIweW<IweSpec> {
         PortCIweW::new(self, 2)
     }
     #[doc = "Bit 3 - 1: Enable port D wake-up interrupt. 0: Disable port D wake-up interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn port_d_iwe(&mut self) -> PortDIweW<IweSpec> {
         PortDIweW::new(self, 3)
     }
     #[doc = "Bit 4 - 1: Enable USB wake-up interrupt. 0: Disable USB wake-up interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn usb_iwe(&mut self) -> UsbIweW<IweSpec> {
         UsbIweW::new(self, 4)
     }
     #[doc = "Bit 5 - 1: Enable SM Timer wake-up interrupt. 0: Disable SM Timer wake-up interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sm_timer_iwe(&mut self) -> SmTimerIweW<IweSpec> {
         SmTimerIweW::new(self, 5)
     }
 }
-#[doc = "This register controls interrupt wake-up.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iwe::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iwe::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls interrupt wake-up.\n\nYou can [`read`](crate::Reg::read) this register and get [`iwe::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iwe::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IweSpec;
 impl crate::RegisterSpec for IweSpec {
     type Ux = u32;

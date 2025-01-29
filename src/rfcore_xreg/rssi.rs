@@ -9,7 +9,7 @@ impl R {
         RssiValR::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "RSSI status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rssi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RSSI status register\n\nYou can [`read`](crate::Reg::read) this register and get [`rssi::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RssiSpec;
 impl crate::RegisterSpec for RssiSpec {
     type Ux = u32;

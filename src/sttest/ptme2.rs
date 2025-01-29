@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2C 0 test mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0tme(&mut self) -> I2c0tmeW<Ptme2Spec> {
         I2c0tmeW::new(self, 0)
     }
     #[doc = "Bit 16 - Timer0 test mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn t0tme(&mut self) -> T0tmeW<Ptme2Spec> {
         T0tmeW::new(self, 16)
     }
     #[doc = "Bit 17 - Timer1 test mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn t1tme(&mut self) -> T1tmeW<Ptme2Spec> {
         T1tmeW::new(self, 17)
     }
     #[doc = "Bit 18 - MacTimer test mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mttme(&mut self) -> MttmeW<Ptme2Spec> {
         MttmeW::new(self, 18)
     }
     #[doc = "Bit 19 - Timer3 test mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn t3tme(&mut self) -> T3tmeW<Ptme2Spec> {
         T3tmeW::new(self, 19)
     }
 }
-#[doc = "Peripheral test mode enable 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptme2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptme2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Peripheral test mode enable 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ptme2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ptme2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ptme2Spec;
 impl crate::RegisterSpec for Ptme2Spec {
     type Ux = u32;

@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Defines current in VCO core Sets the multiplier between calibrated current and VCO current."]
     #[inline(always)]
-    #[must_use]
     pub fn vco_curr(&mut self) -> VcoCurrW<Fscal1Spec> {
         VcoCurrW::new(self, 0)
     }
     #[doc = "Bits 2:6 - Calibration result Override value if VCO_CURR_CAL_OE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn vco_curr_cal(&mut self) -> VcoCurrCalW<Fscal1Spec> {
         VcoCurrCalW::new(self, 2)
     }
     #[doc = "Bit 7 - Override current calibration"]
     #[inline(always)]
-    #[must_use]
     pub fn vco_curr_cal_oe(&mut self) -> VcoCurrCalOeW<Fscal1Spec> {
         VcoCurrCalOeW::new(self, 7)
     }
 }
-#[doc = "Tune frequency calibration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fscal1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fscal1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Tune frequency calibration\n\nYou can [`read`](crate::Reg::read) this register and get [`fscal1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fscal1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Fscal1Spec;
 impl crate::RegisterSpec for Fscal1Spec {
     type Ux = u32;

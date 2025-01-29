@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Selects the mode of operation 00: The input signal to the DC blocker is passed to the output without any attempt to remove DC. 01: Enable DC cancellation. Normal operation 10: Freeze estimates of DC when sync is found. Resume estimating DC when searching for the next frame. 11: Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn dc_block_mode(&mut self) -> DcBlockModeW<Mdmtest0Spec> {
         DcBlockModeW::new(self, 0)
     }
     #[doc = "Bits 2:3 - Controls the numbers of samples to be accumulated between each dump of the accumulate-and-dump filter used in DC removal 00: 32 samples 01: 64 samples 10: 128 samples 11: 256 samples"]
     #[inline(always)]
-    #[must_use]
     pub fn dc_win_size(&mut self) -> DcWinSizeW<Mdmtest0Spec> {
         DcWinSizeW::new(self, 2)
     }
     #[doc = "Bits 4:7 - Enables the possibility to transmit a baseband tone by picking samples from the sine tables with a controllable phase step between the samples. The step size is controlled by TX_TONE. If MDMTEST1.MOD_IF is 0, the tone is superpositioned on the modulated data, effectively giving modulation with an IF. If MDMTEST1.MOD_IF is 1, only the tone is transmitted. 0000: -6 MHz 0001: -4 MHz 0010: -3 MHz 0011: -2 MHz 0100: -1 MHz 0101: -500 kHz 0110: -4 kHz 0111: 0 1000: 4 kHz 1001: 500 kHz 1010: 1 MHz 1011: 2 MHz 1100: 3 MHz 1101: 4 MHz 1110: 6 MHz Others: Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_tone(&mut self) -> TxToneW<Mdmtest0Spec> {
         TxToneW::new(self, 4)
     }
 }
-#[doc = "Test register for modem\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mdmtest0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mdmtest0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Test register for modem\n\nYou can [`read`](crate::Reg::read) this register and get [`mdmtest0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mdmtest0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Mdmtest0Spec;
 impl crate::RegisterSpec for Mdmtest0Spec {
     type Ux = u32;

@@ -20,12 +20,11 @@ impl W {
     #[doc = "Bits 0:7 - SHORT_ADDR\\[7:0\\]
 The short address used during destination address filtering"]
     #[inline(always)]
-    #[must_use]
     pub fn short_addr0(&mut self) -> ShortAddr0W<ShortAddr0Spec> {
         ShortAddr0W::new(self, 0)
     }
 }
-#[doc = "Local address information This register is stored in RAM; the reset value is undefined.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`short_addr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`short_addr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Local address information This register is stored in RAM; the reset value is undefined.\n\nYou can [`read`](crate::Reg::read) this register and get [`short_addr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`short_addr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ShortAddr0Spec;
 impl crate::RegisterSpec for ShortAddr0Spec {
     type Ux = u32;

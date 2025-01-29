@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Drives signal rfr_txfilt_fc"]
     #[inline(always)]
-    #[must_use]
     pub fn fc(&mut self) -> FcW<TxfiltcfgSpec> {
         FcW::new(self, 0)
     }
 }
-#[doc = "TX filter configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txfiltcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txfiltcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX filter configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`txfiltcfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`txfiltcfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TxfiltcfgSpec;
 impl crate::RegisterSpec for TxfiltcfgSpec {
     type Ux = u32;

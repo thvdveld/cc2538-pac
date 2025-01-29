@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Self address for 9-bit mode This field contains the address that should be matched when UART9BITAMASK is 0xFF."]
     #[inline(always)]
-    #[must_use]
     pub fn addr(&mut self) -> AddrW<NinebitaddrSpec> {
         AddrW::new(self, 0)
     }
     #[doc = "Bit 15 - Enable 9-bit mode 1: 9-bit mode is enabled. 0: 9-bit mode is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn ninebiten(&mut self) -> NinebitenW<NinebitaddrSpec> {
         NinebitenW::new(self, 15)
     }
 }
-#[doc = "UART 9-bit self address The NINEBITADDR register is used to write the specific address that should be matched with the receiving byte when the 9-bit address mask (NINEBITAMASK) is set to 0xFF. This register is used in conjunction with NINEBITAMASK to form a match for address-byte received.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ninebitaddr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ninebitaddr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART 9-bit self address The NINEBITADDR register is used to write the specific address that should be matched with the receiving byte when the 9-bit address mask (NINEBITAMASK) is set to 0xFF. This register is used in conjunction with NINEBITAMASK to form a match for address-byte received.\n\nYou can [`read`](crate::Reg::read) this register and get [`ninebitaddr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ninebitaddr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct NinebitaddrSpec;
 impl crate::RegisterSpec for NinebitaddrSpec {
     type Ux = u32;

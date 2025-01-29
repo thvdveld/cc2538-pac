@@ -9,7 +9,7 @@ impl R {
         FramehR::new((self.bits & 7) as u8)
     }
 }
-#[doc = "Frame number (high byte)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`frmh::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Frame number (high byte)\n\nYou can [`read`](crate::Reg::read) this register and get [`frmh::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FrmhSpec;
 impl crate::RegisterSpec for FrmhSpec {
     type Ux = u32;

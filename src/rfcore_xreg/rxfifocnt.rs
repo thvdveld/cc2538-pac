@@ -9,7 +9,7 @@ impl R {
         RxfifocntR::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "Number of bytes in RX FIFO\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rxfifocnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Number of bytes in RX FIFO\n\nYou can [`read`](crate::Reg::read) this register and get [`rxfifocnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RxfifocntSpec;
 impl crate::RegisterSpec for RxfifocntSpec {
     type Ux = u32;

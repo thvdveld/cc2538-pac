@@ -44,7 +44,7 @@ impl R {
         Inep5ifR::new(((self.bits >> 5) & 1) != 0)
     }
 }
-#[doc = "Interrupt flags for endpoint 0 and IN endpoints 1-5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iif::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt flags for endpoint 0 and IN endpoints 1-5\n\nYou can [`read`](crate::Reg::read) this register and get [`iif::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IifSpec;
 impl crate::RegisterSpec for IifSpec {
     type Ux = u32;

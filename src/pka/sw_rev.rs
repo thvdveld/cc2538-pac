@@ -30,7 +30,7 @@ impl R {
         FwCapabilitiesR::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
-#[doc = "PKA firmware revision and capabilities register This register allows the host access to the internal firmware revision number of the PKA Engine for software driver matching and diagnostic purposes. This register also contains a field that encodes the capabilities of the embedded firmware. The PKA_SW_REV register is written by the firmware within a few clock cycles after starting up that firmware. The hardware reset value is zero, indicating that the information has not been written yet.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sw_rev::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PKA firmware revision and capabilities register This register allows the host access to the internal firmware revision number of the PKA Engine for software driver matching and diagnostic purposes. This register also contains a field that encodes the capabilities of the embedded firmware. The PKA_SW_REV register is written by the firmware within a few clock cycles after starting up that firmware. The hardware reset value is zero, indicating that the information has not been written yet.\n\nYou can [`read`](crate::Reg::read) this register and get [`sw_rev::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SwRevSpec;
 impl crate::RegisterSpec for SwRevSpec {
     type Ux = u32;

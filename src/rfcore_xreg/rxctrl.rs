@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Control of the output current from the receiver mixers The current increases with increasing setting set."]
     #[inline(always)]
-    #[must_use]
     pub fn mix_current(&mut self) -> MixCurrentW<RxctrlSpec> {
         MixCurrentW::new(self, 0)
     }
     #[doc = "Bits 2:3 - Adjusts front-end LNA PTAT current output (from M = 3 to M = 6), default: M = 5"]
     #[inline(always)]
-    #[must_use]
     pub fn gbias_lna_ref(&mut self) -> GbiasLnaRefW<RxctrlSpec> {
         GbiasLnaRefW::new(self, 2)
     }
     #[doc = "Bits 4:5 - Adjusts front-end LNA2/mixer PTAT current output (from M = 3 to M = 6), default: M = 5"]
     #[inline(always)]
-    #[must_use]
     pub fn gbias_lna2_ref(&mut self) -> GbiasLna2RefW<RxctrlSpec> {
         GbiasLna2RefW::new(self, 4)
     }
 }
-#[doc = "Tune receive section\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rxctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rxctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Tune receive section\n\nYou can [`read`](crate::Reg::read) this register and get [`rxctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rxctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RxctrlSpec;
 impl crate::RegisterSpec for RxctrlSpec {
     type Ux = u32;

@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - 0: PA0 selected as I2C SDA 1: PA1 selected as I2C SDA ... 31: PD7 selected as I2C SDA"]
     #[inline(always)]
-    #[must_use]
     pub fn input_sel(&mut self) -> InputSelW<I2cmssdaSpec> {
         InputSelW::new(self, 0)
     }
 }
-#[doc = "Selects one of the 32 pins on the four 8-pin I/O-ports (port A, port B, port C, and port D) to be the I2C SDA.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2cmssda::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2cmssda::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Selects one of the 32 pins on the four 8-pin I/O-ports (port A, port B, port C, and port D) to be the I2C SDA.\n\nYou can [`read`](crate::Reg::read) this register and get [`i2cmssda::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2cmssda::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2cmssdaSpec;
 impl crate::RegisterSpec for I2cmssdaSpec {
     type Ux = u32;

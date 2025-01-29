@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Control signal Defines the synthesizer boost mode 00: No BW_BOOST 01: BW_BOOST is high during calibration and approximately 30 us into the settling. 10: BW_BOOST is always on (or high). 11: Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn bw_boost_mode(&mut self) -> BwBoostModeW<Fscal0Spec> {
         BwBoostModeW::new(self, 0)
     }
     #[doc = "Bits 2:5 - Digital bit vector defining the charge-pump output current on an exponential scale If FFC_BW_BOOST = 0, the read value is the value stored in CHP_CURRENT. If FFC_BW_BOOST = 1, the read value is CHP_CURRENT + 4. If the addition causes overflow, the signal is saturated."]
     #[inline(always)]
-    #[must_use]
     pub fn chp_current(&mut self) -> ChpCurrentW<Fscal0Spec> {
         ChpCurrentW::new(self, 2)
     }
     #[doc = "Bit 6 - Set this bit to manually disable charge pump by masking the up and down pulses from the phase detector."]
     #[inline(always)]
-    #[must_use]
     pub fn chp_disable(&mut self) -> ChpDisableW<Fscal0Spec> {
         ChpDisableW::new(self, 6)
     }
     #[doc = "Bit 7 - Force on the current comparator in the VCO. This signal is ORed with the signal coming from the calibration module."]
     #[inline(always)]
-    #[must_use]
     pub fn vco_curr_comp_en_ov(&mut self) -> VcoCurrCompEnOvW<Fscal0Spec> {
         VcoCurrCompEnOvW::new(self, 7)
     }
 }
-#[doc = "Tune frequency calibration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fscal0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fscal0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Tune frequency calibration\n\nYou can [`read`](crate::Reg::read) this register and get [`fscal0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fscal0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Fscal0Spec;
 impl crate::RegisterSpec for Fscal0Spec {
     type Ux = u32;

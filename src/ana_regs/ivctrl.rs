@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Controls bias current to PA 00: IREF bias 01: IREF and IVREF bias (CC2530 mode) 10: PTAT bias 11: Increased PTAT slope bias"]
     #[inline(always)]
-    #[must_use]
     pub fn pa_bias_ctrl(&mut self) -> PaBiasCtrlW<IvctrlSpec> {
         PaBiasCtrlW::new(self, 0)
     }
     #[doc = "Bit 2 - Controls DC bias in TXMIX"]
     #[inline(always)]
-    #[must_use]
     pub fn txmix_dc_ctrl(&mut self) -> TxmixDcCtrlW<IvctrlSpec> {
         TxmixDcCtrlW::new(self, 2)
     }
     #[doc = "Bit 3 - Controls bias current to LODIV 1: PTAT bias 0: IVREF bias"]
     #[inline(always)]
-    #[must_use]
     pub fn lodiv_bias_ctrl(&mut self) -> LodivBiasCtrlW<IvctrlSpec> {
         LodivBiasCtrlW::new(self, 3)
     }
     #[doc = "Bits 4:5 - Controls bias current to DAC 00: 100% IVREF, 0% IREF bias 01: 60% IVREF, 40% IREF bias 10: 40% IVREF, 60% IREF bias 11: 0% IVREF, 100% IREF bias"]
     #[inline(always)]
-    #[must_use]
     pub fn dac_curr_ctrl(&mut self) -> DacCurrCtrlW<IvctrlSpec> {
         DacCurrCtrlW::new(self, 4)
     }
 }
-#[doc = "Analog control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ivctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ivctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Analog control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ivctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ivctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IvctrlSpec;
 impl crate::RegisterSpec for IvctrlSpec {
     type Ux = u32;

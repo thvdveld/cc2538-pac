@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set when the MAC Timer counter would have counted to a value equal to MT_per, but instead wraps to 0"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_perf(&mut self) -> MactimerPerfW<MtirqfSpec> {
         MactimerPerfW::new(self, 0)
     }
     #[doc = "Bit 1 - Set when the MAC Timer counter counts to the value set at MT_cmp1"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_compare1f(&mut self) -> MactimerCompare1fW<MtirqfSpec> {
         MactimerCompare1fW::new(self, 1)
     }
     #[doc = "Bit 2 - Set when the MAC Timer counter counts to the value set at MT_cmp2"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_compare2f(&mut self) -> MactimerCompare2fW<MtirqfSpec> {
         MactimerCompare2fW::new(self, 2)
     }
     #[doc = "Bit 3 - Set when the MAC Timer overflow counter would have counted to a value equal to MTovf_per, but instead wraps to 0"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_ovf_perf(&mut self) -> MactimerOvfPerfW<MtirqfSpec> {
         MactimerOvfPerfW::new(self, 3)
     }
     #[doc = "Bit 4 - Set when the MAC Timer overflow counter counts to the value set at Timer 2 MTovf_cmp1"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_ovf_compare1f(&mut self) -> MactimerOvfCompare1fW<MtirqfSpec> {
         MactimerOvfCompare1fW::new(self, 4)
     }
     #[doc = "Bit 5 - Set when the MAC Timer overflow counter counts to the value set at MTovf_cmp2"]
     #[inline(always)]
-    #[must_use]
     pub fn mactimer_ovf_compare2f(&mut self) -> MactimerOvfCompare2fW<MtirqfSpec> {
         MactimerOvfCompare2fW::new(self, 5)
     }
 }
-#[doc = "MAC Timer interrupt flags\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mtirqf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mtirqf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MAC Timer interrupt flags\n\nYou can [`read`](crate::Reg::read) this register and get [`mtirqf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtirqf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MtirqfSpec;
 impl crate::RegisterSpec for MtirqfSpec {
     type Ux = u32;

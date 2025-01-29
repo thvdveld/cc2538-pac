@@ -16,7 +16,7 @@ impl R {
         QrndR::new(((self.bits >> 1) & 1) != 0)
     }
 }
-#[doc = "Random data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfrnd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Random data\n\nYou can [`read`](crate::Reg::read) this register and get [`rfrnd::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RfrndSpec;
 impl crate::RegisterSpec for RfrndSpec {
     type Ux = u32;

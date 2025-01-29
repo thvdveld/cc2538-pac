@@ -9,7 +9,7 @@ impl R {
         RisR::new((self.bits & 1) != 0)
     }
 }
-#[doc = "I2C master raw interrupt status This register specifies whether an interrupt is pending.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ris::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C master raw interrupt status This register specifies whether an interrupt is pending.\n\nYou can [`read`](crate::Reg::read) this register and get [`ris::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RisSpec;
 impl crate::RegisterSpec for RisSpec {
     type Ux = u32;

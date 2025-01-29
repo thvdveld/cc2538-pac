@@ -88,60 +88,51 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GPTM Timer A time-out interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tatocint(&mut self) -> TatocintW<IcrSpec> {
         TatocintW::new(self, 0)
     }
     #[doc = "Bit 1 - GPTM Timer A capture match interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn camcint(&mut self) -> CamcintW<IcrSpec> {
         CamcintW::new(self, 1)
     }
     #[doc = "Bit 2 - GPTM Timer A capture event Interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn caecint(&mut self) -> CaecintW<IcrSpec> {
         CaecintW::new(self, 2)
     }
     #[doc = "Bit 4 - GPTM Timer A match interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tamcint(&mut self) -> TamcintW<IcrSpec> {
         TamcintW::new(self, 4)
     }
     #[doc = "Bit 8 - GPTM Timer B time-out interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tbtocint(&mut self) -> TbtocintW<IcrSpec> {
         TbtocintW::new(self, 8)
     }
     #[doc = "Bit 9 - GPTM Timer B capture match interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cbmcint(&mut self) -> CbmcintW<IcrSpec> {
         CbmcintW::new(self, 9)
     }
     #[doc = "Bit 10 - GPTM Timer B capture event Interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn cbecint(&mut self) -> CbecintW<IcrSpec> {
         CbecintW::new(self, 10)
     }
     #[doc = "Bit 11 - GPTM Timer B match interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tbmcint(&mut self) -> TbmcintW<IcrSpec> {
         TbmcintW::new(self, 11)
     }
     #[doc = "Bit 16 - GPTM write update error interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn wuecint(&mut self) -> WuecintW<IcrSpec> {
         WuecintW::new(self, 16)
     }
 }
-#[doc = "GPTM interrupt clear This register is used to clear the status bits in the RIS and MIS registers. Writing 1 to a bit clears the corresponding bit in the RIS and MIS registers.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`icr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`icr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM interrupt clear This register is used to clear the status bits in the RIS and MIS registers. Writing 1 to a bit clears the corresponding bit in the RIS and MIS registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`icr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IcrSpec;
 impl crate::RegisterSpec for IcrSpec {
     type Ux = u32;

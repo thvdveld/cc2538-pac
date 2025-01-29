@@ -23,7 +23,7 @@ impl R {
         FbrR::new(((self.bits >> 2) & 1) != 0)
     }
 }
-#[doc = "I2C slave control and status This register functions as a control register when written, and a status register when read.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C slave control and status This register functions as a control register when written, and a status register when read.\n\nYou can [`read`](crate::Reg::read) this register and get [`stat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct StatSpec;
 impl crate::RegisterSpec for StatSpec {
     type Ux = u32;

@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Used to set the edge which triggers the USB power up interrupt 0: Rising 1: Falling"]
     #[inline(always)]
-    #[must_use]
     pub fn usb_edge_ctl(&mut self) -> UsbEdgeCtlW<UsbCtrlSpec> {
         UsbEdgeCtlW::new(self, 0)
     }
 }
-#[doc = "This register is used to control which edge of the USB controller input generates a power-up interrupt to the system.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usb_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usb_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register is used to control which edge of the USB controller input generates a power-up interrupt to the system.\n\nYou can [`read`](crate::Reg::read) this register and get [`usb_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usb_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UsbCtrlSpec;
 impl crate::RegisterSpec for UsbCtrlSpec {
     type Ux = u32;

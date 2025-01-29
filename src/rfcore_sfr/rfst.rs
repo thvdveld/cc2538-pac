@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Data written to this register is written to the CSP instruction memory. Reading this register returns the CSP instruction currently being executed."]
     #[inline(always)]
-    #[must_use]
     pub fn instr(&mut self) -> InstrW<RfstSpec> {
         InstrW::new(self, 0)
     }
 }
-#[doc = "RF CSMA-CA/strobe processor\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfst::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rfst::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RF CSMA-CA/strobe processor\n\nYou can [`read`](crate::Reg::read) this register and get [`rfst::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rfst::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RfstSpec;
 impl crate::RegisterSpec for RfstSpec {
     type Ux = u32;

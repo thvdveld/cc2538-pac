@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - GPTM Timer B prescale match"]
     #[inline(always)]
-    #[must_use]
     pub fn tbpsr(&mut self) -> TbpsrW<TbpmrSpec> {
         TbpsrW::new(self, 0)
     }
 }
-#[doc = "GPTM Timer B prescale match This register effectively extends the range ofMTBMATCHR to 24 bits when operating in 16-bit, one-shot or periodic mode.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tbpmr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tbpmr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM Timer B prescale match This register effectively extends the range ofMTBMATCHR to 24 bits when operating in 16-bit, one-shot or periodic mode.\n\nYou can [`read`](crate::Reg::read) this register and get [`tbpmr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tbpmr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TbpmrSpec;
 impl crate::RegisterSpec for TbpmrSpec {
     type Ux = u32;

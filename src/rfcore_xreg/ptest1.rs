@@ -46,31 +46,27 @@ depenancy."]
 impl W {
     #[doc = "Bit 0 - LO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn lodiv_pd(&mut self) -> LodivPdW<Ptest1Spec> {
         LodivPdW::new(self, 0)
     }
     #[doc = "Bit 1 - VCO power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn vco_pd(&mut self) -> VcoPdW<Ptest1Spec> {
         VcoPdW::new(self, 1)
     }
     #[doc = "Bit 2 - Power amplifier power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pa_pd(&mut self) -> PaPdW<Ptest1Spec> {
         PaPdW::new(self, 2)
     }
     #[doc = "Bit 3 - Override enabling and disabling of various modules (for debug and testing only) It is impossible to override hard-coded BIAS_PD\\[1:0\\]
 depenancy."]
     #[inline(always)]
-    #[must_use]
     pub fn pd_override(&mut self) -> PdOverrideW<Ptest1Spec> {
         PdOverrideW::new(self, 3)
     }
 }
-#[doc = "Override power-down register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptest1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptest1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Override power-down register\n\nYou can [`read`](crate::Reg::read) this register and get [`ptest1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ptest1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ptest1Spec;
 impl crate::RegisterSpec for Ptest1Spec {
     type Ux = u32;

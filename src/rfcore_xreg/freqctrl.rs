@@ -36,12 +36,11 @@ are 11 to 86 (11 + 2394 = 2405 and 86 + 2394 = 2480). The device supports the fr
 are 0 to 113. Settings outside of the usable range (114 to 127) give a frequency of 2507 MHz. IEEE 802.15.4-2006 specifies a frequency range from 2405 MHz to 2480 MHz with 16 channels 5 MHz apart. The channels are numbered 11 through 26. For an IEEE 802.15.4-2006 compliant system, the only valid settings are thus FREQ\\[6:0\\]
 = 11 + 5 (channel number - 11)."]
     #[inline(always)]
-    #[must_use]
     pub fn freq(&mut self) -> FreqW<FreqctrlSpec> {
         FreqW::new(self, 0)
     }
 }
-#[doc = "Controls the RF frequency\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`freqctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`freqctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Controls the RF frequency\n\nYou can [`read`](crate::Reg::read) this register and get [`freqctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`freqctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FreqctrlSpec;
 impl crate::RegisterSpec for FreqctrlSpec {
     type Ux = u32;

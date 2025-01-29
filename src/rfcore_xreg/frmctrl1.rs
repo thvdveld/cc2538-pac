@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Defines whether STXON sets bit 6 in the RXENABLE register or leaves it unchanged 0: Does not affect RXENABLE 1: Sets bit 6 in RXENABLE. Used for backward compatibility with the CC2420."]
     #[inline(always)]
-    #[must_use]
     pub fn set_rxenmask_on_tx(&mut self) -> SetRxenmaskOnTxW<Frmctrl1Spec> {
         SetRxenmaskOnTxW::new(self, 0)
     }
     #[doc = "Bit 1 - Defines whether or not TX underflow should be ignored 0: Normal TX operation. TX underflow is detected and TX is aborted if underflow occurs. 1: Ignore TX underflow. Transmit the number of bytes given by the frame-length field."]
     #[inline(always)]
-    #[must_use]
     pub fn ignore_tx_underf(&mut self) -> IgnoreTxUnderfW<Frmctrl1Spec> {
         IgnoreTxUnderfW::new(self, 1)
     }
     #[doc = "Bit 2 - Defines whether the pending data bit in outgoing acknowledgment frames is always set to 1 or controlled by the main FSM and the address filtering 0: Pending data bit is controlled by main FSM and address filtering. 1: Pending data bit is always 1."]
     #[inline(always)]
-    #[must_use]
     pub fn pending_or(&mut self) -> PendingOrW<Frmctrl1Spec> {
         PendingOrW::new(self, 2)
     }
 }
-#[doc = "Frame handling\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`frmctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`frmctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Frame handling\n\nYou can [`read`](crate::Reg::read) this register and get [`frmctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`frmctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Frmctrl1Spec;
 impl crate::RegisterSpec for Frmctrl1Spec {
     type Ux = u32;

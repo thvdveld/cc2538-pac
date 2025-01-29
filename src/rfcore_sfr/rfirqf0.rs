@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reserved 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn act_unused(&mut self) -> ActUnusedW<Rfirqf0Spec> {
         ActUnusedW::new(self, 0)
     }
     #[doc = "Bit 1 - SFD has been received or transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn sfd(&mut self) -> SfdW<Rfirqf0Spec> {
         SfdW::new(self, 1)
     }
     #[doc = "Bit 2 - The number of bytes in the RX FIFO is greater than the threshold. Also raised when a complete frame is received, and when a packet is read out completely and more complete packets are available. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn fifop(&mut self) -> FifopW<Rfirqf0Spec> {
         FifopW::new(self, 2)
     }
     #[doc = "Bit 3 - Source matching is complete. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn src_match_done(&mut self) -> SrcMatchDoneW<Rfirqf0Spec> {
         SrcMatchDoneW::new(self, 3)
     }
     #[doc = "Bit 4 - Source match is found. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn src_match_found(&mut self) -> SrcMatchFoundW<Rfirqf0Spec> {
         SrcMatchFoundW::new(self, 4)
     }
     #[doc = "Bit 5 - Frame has passed frame filtering. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn frame_accepted(&mut self) -> FrameAcceptedW<Rfirqf0Spec> {
         FrameAcceptedW::new(self, 5)
     }
     #[doc = "Bit 6 - A complete frame has been received. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn rxpktdone(&mut self) -> RxpktdoneW<Rfirqf0Spec> {
         RxpktdoneW::new(self, 6)
     }
     #[doc = "Bit 7 - The RXENABLE register has gone from a nonzero state to an all-zero state. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn rxmaskzero(&mut self) -> RxmaskzeroW<Rfirqf0Spec> {
         RxmaskzeroW::new(self, 7)
     }
 }
-#[doc = "RF interrupt flags\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfirqf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rfirqf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RF interrupt flags\n\nYou can [`read`](crate::Reg::read) this register and get [`rfirqf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rfirqf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Rfirqf0Spec;
 impl crate::RegisterSpec for Rfirqf0Spec {
     type Ux = u32;

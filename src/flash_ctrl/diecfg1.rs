@@ -65,7 +65,7 @@ impl R {
         I2cEnR::new(((self.bits >> 24) & 1) != 0)
     }
 }
-#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diecfg1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538.\n\nYou can [`read`](crate::Reg::read) this register and get [`diecfg1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Diecfg1Spec;
 impl crate::RegisterSpec for Diecfg1Spec {
     type Ux = u32;

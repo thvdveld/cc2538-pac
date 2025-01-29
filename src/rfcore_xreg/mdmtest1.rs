@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables loopback of modulated data into the receiver chain 0: An STXCAL instruction calibrates for TX. Use STXON to continue to active TX. 1: An STXCAL instruction enables the loopback mode."]
     #[inline(always)]
-    #[must_use]
     pub fn loopback_en(&mut self) -> LoopbackEnW<Mdmtest1Spec> {
         LoopbackEnW::new(self, 0)
     }
     #[doc = "Bit 2 - 0: Packet sniffer module disabled 1: Packet sniffer module enabled. The received and transmitted data can be observed on GPIO pins."]
     #[inline(always)]
-    #[must_use]
     pub fn rfc_sniff_en(&mut self) -> RfcSniffEnW<Mdmtest1Spec> {
         RfcSniffEnW::new(self, 2)
     }
     #[doc = "Bit 3 - 1: Enable ramping of DAC output amplitude during startup and finish. 0: Disable ramping of DAC output amplitude."]
     #[inline(always)]
-    #[must_use]
     pub fn ramp_amp(&mut self) -> RampAmpW<Mdmtest1Spec> {
         RampAmpW::new(self, 3)
     }
     #[doc = "Bit 4 - 0: Modulation is performed at an IF set by MDMTEST0.TX_TONE. The tone set by MDMTEST0.TX_TONE is superimposed on the data. 1: Modulate a tone set by MDMTEST0.TX_TONE. A tone is transmitted with frequency set by MDMTEST0.TX_TONE."]
     #[inline(always)]
-    #[must_use]
     pub fn mod_if(&mut self) -> ModIfW<Mdmtest1Spec> {
         ModIfW::new(self, 4)
     }
     #[doc = "Bit 5 - 0: Use the normal IF frequency (MDMTEST0.TX_TONE) for automatic IF compensation of channel frequency on TX. 1: Use mirror IF frequency for automatic compensation of channel frequency on TX."]
     #[inline(always)]
-    #[must_use]
     pub fn usemirror_if(&mut self) -> UsemirrorIfW<Mdmtest1Spec> {
         UsemirrorIfW::new(self, 5)
     }
 }
-#[doc = "Test Register for Modem\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mdmtest1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mdmtest1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Test Register for Modem\n\nYou can [`read`](crate::Reg::read) this register and get [`mdmtest1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mdmtest1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Mdmtest1Spec;
 impl crate::RegisterSpec for Mdmtest1Spec {
     type Ux = u32;

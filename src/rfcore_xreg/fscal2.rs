@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - VCO capacitor array setting Programmed during calibration Override value when VCO_CAPARR_OE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn vco_caparr(&mut self) -> VcoCaparrW<Fscal2Spec> {
         VcoCaparrW::new(self, 0)
     }
     #[doc = "Bit 6 - Override the calibration result with the value from VCO_CAPARR\\[5:0\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn vco_caparr_oe(&mut self) -> VcoCaparrOeW<Fscal2Spec> {
         VcoCaparrOeW::new(self, 6)
     }
 }
-#[doc = "Tune frequency calibration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fscal2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fscal2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Tune frequency calibration\n\nYou can [`read`](crate::Reg::read) this register and get [`fscal2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fscal2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Fscal2Spec;
 impl crate::RegisterSpec for Fscal2Spec {
     type Ux = u32;

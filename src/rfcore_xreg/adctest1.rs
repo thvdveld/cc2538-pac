@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Used to adjust capacitor values in ADC"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_c3_adj(&mut self) -> AdcC3AdjW<Adctest1Spec> {
         AdcC3AdjW::new(self, 0)
     }
     #[doc = "Bits 2:3 - Used to adjust capacitor values in ADC"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_c2_adj(&mut self) -> AdcC2AdjW<Adctest1Spec> {
         AdcC2AdjW::new(self, 2)
     }
     #[doc = "Bits 4:7 - ADC test mode selector"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_test_ctrl(&mut self) -> AdcTestCtrlW<Adctest1Spec> {
         AdcTestCtrlW::new(self, 4)
     }
 }
-#[doc = "ADC tuning\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`adctest1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`adctest1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ADC tuning\n\nYou can [`read`](crate::Reg::read) this register and get [`adctest1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`adctest1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Adctest1Spec;
 impl crate::RegisterSpec for Adctest1Spec {
     type Ux = u32;

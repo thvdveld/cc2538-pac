@@ -93,7 +93,6 @@ becomes the on-dir digital regulator status. In priority order for PB\\[0\\]: Wh
 becomes the power-on-reset indicator. When DCEN and DCPIN are set, PB\\[0\\]
 becomes the on-die digital regulator status."]
     #[inline(always)]
-    #[must_use]
     pub fn dcpin(&mut self) -> DcpinW<PmuxSpec> {
         DcpinW::new(self, 0)
     }
@@ -101,7 +100,6 @@ becomes the on-die digital regulator status."]
 or PB\\[0\\]
 pins. PMUX.DCPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
     #[inline(always)]
-    #[must_use]
     pub fn dcen(&mut self) -> DcenW<PmuxSpec> {
         DcenW::new(self, 3)
     }
@@ -109,7 +107,6 @@ pins. PMUX.DCPIN selects the pin to use. This overrides the current configuratio
 becomes the 32-kHz clock output. When 1, PB\\[7\\]
 becomes the 32-kHz clock output."]
     #[inline(always)]
-    #[must_use]
     pub fn ckopin(&mut self) -> CkopinW<PmuxSpec> {
         CkopinW::new(self, 4)
     }
@@ -117,12 +114,11 @@ becomes the 32-kHz clock output."]
 or PB\\[7\\]
 pins. PMUX.CKOPIN selects the pin to use. This overrides the current configuration setting for this pin. The pullup or pulldown is disabled and the direction is set to output for this pin."]
     #[inline(always)]
-    #[must_use]
     pub fn ckoen(&mut self) -> CkoenW<PmuxSpec> {
         CkoenW::new(self, 7)
     }
 }
-#[doc = "The PMUX register can be used to output external decouple control and clock_32k on I/O pins. Decouple control can be output on specific PB pins and clock_32k can be output on a specific PA or PB pin. These features override the current setting of the selected pin when enabled. The pin is set to output, pull-up and -down disabled, and analog mode disabled.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pmux::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pmux::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The PMUX register can be used to output external decouple control and clock_32k on I/O pins. Decouple control can be output on specific PB pins and clock_32k can be output on a specific PA or PB pin. These features override the current setting of the selected pin when enabled. The pin is set to output, pull-up and -down disabled, and analog mode disabled.\n\nYou can [`read`](crate::Reg::read) this register and get [`pmux::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pmux::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PmuxSpec;
 impl crate::RegisterSpec for PmuxSpec {
     type Ux = u32;

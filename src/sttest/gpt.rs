@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - GPTimer increment/decrement override value"]
     #[inline(always)]
-    #[must_use]
     pub fn gptidov(&mut self) -> GptidovW<GptSpec> {
         GptidovW::new(self, 0)
     }
     #[doc = "Bit 8 - GPTimer increment/decrement override enable"]
     #[inline(always)]
-    #[must_use]
     pub fn gptidoe(&mut self) -> GptidoeW<GptSpec> {
         GptidoeW::new(self, 8)
     }
 }
-#[doc = "GPTIMER override values\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTIMER override values\n\nYou can [`read`](crate::Reg::read) this register and get [`gpt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GptSpec;
 impl crate::RegisterSpec for GptSpec {
     type Ux = u32;

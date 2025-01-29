@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - GPTM Timer A register"]
     #[inline(always)]
-    #[must_use]
     pub fn tav(&mut self) -> TavW<TavSpec> {
         TavW::new(self, 0)
     }
@@ -26,7 +25,7 @@ contain the value of the counter and bits \\[23:16\\]
 contain the current, free-running value of the prescaler, which is the upper 8 bits of the count in input edge count, input edge time, PWM and one-shot or periodic up count modes. In one-shot or periodic down count modes, the prescaler stored in \\[23:16\\]
 is a true prescaler, meaning bits \\[23:16\\]
 count down before decrementing the value in bits \\[15:0\\]. The prescaler its \\[31:24\\]
-always read as 0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tav::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tav::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+always read as 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`tav::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tav::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TavSpec;
 impl crate::RegisterSpec for TavSpec {
     type Ux = u32;

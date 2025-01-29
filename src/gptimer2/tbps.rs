@@ -9,7 +9,7 @@ impl R {
         PssR::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "GPTM Timer B prescale snapshot For the 32-bit wide GPTM, this register shows the current value of the Timer B prescaler in the 32-bit modes. This register is ununsed in 16-bit GPTM mode.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tbps::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM Timer B prescale snapshot For the 32-bit wide GPTM, this register shows the current value of the Timer B prescaler in the 32-bit modes. This register is ununsed in 16-bit GPTM mode.\n\nYou can [`read`](crate::Reg::read) this register and get [`tbps::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TbpsSpec;
 impl crate::RegisterSpec for TbpsSpec {
     type Ux = u32;

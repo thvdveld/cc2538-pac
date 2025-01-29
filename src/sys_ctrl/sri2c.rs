@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: I2C0 module is not reset 1: I2C0 module is reset"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0(&mut self) -> I2c0W<Sri2cSpec> {
         I2c0W::new(self, 0)
     }
 }
-#[doc = "This register controls the reset for I2C.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sri2c::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sri2c::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls the reset for I2C.\n\nYou can [`read`](crate::Reg::read) this register and get [`sri2c::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sri2c::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Sri2cSpec;
 impl crate::RegisterSpec for Sri2cSpec {
     type Ux = u32;

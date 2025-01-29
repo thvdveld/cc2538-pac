@@ -16,7 +16,7 @@ impl R {
         CspRunningR::new(((self.bits >> 5) & 1) != 0)
     }
 }
-#[doc = "CSP status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cspstat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CSP status register\n\nYou can [`read`](crate::Reg::read) this register and get [`cspstat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CspstatSpec;
 impl crate::RegisterSpec for CspstatSpec {
     type Ux = u32;

@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2C loopback 1: The controller in a test mode loopback configuration. 0: Normal operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbk(&mut self) -> LpbkW<CrSpec> {
         LpbkW::new(self, 0)
     }
     #[doc = "Bit 4 - I2C master function enable 1: Master mode is enabled. 0: Master mode is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn mfe(&mut self) -> MfeW<CrSpec> {
         MfeW::new(self, 4)
     }
     #[doc = "Bit 5 - I2C slave function enable 1: Slave mode is enabled. 0: Slave mode is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn sfe(&mut self) -> SfeW<CrSpec> {
         SfeW::new(self, 5)
     }
 }
-#[doc = "I2C master configuration This register configures the mode (master or slave) and sets the interface for test mode loopback.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C master configuration This register configures the mode (master or slave) and sets the interface for test mode loopback.\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CrSpec;
 impl crate::RegisterSpec for CrSpec {
     type Ux = u32;

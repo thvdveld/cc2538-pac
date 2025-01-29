@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Defines whether or not a 12-symbol time-out should be used after frame reception has ended. 0: No time-out 1: 12-symbol-period time-out"]
     #[inline(always)]
-    #[must_use]
     pub fn rx2rx_time_off(&mut self) -> Rx2rxTimeOffW<FsmctrlSpec> {
         Rx2rxTimeOffW::new(self, 0)
     }
     #[doc = "Bit 1 - Controls timing of transmission of acknowledge frames 0: The acknowledge frame is sent 12 symbol periods after the end of the received frame which requests the aknowledge. 1: The acknowledge frame is sent at the first backoff-slot boundary more than 12 symbol periods after the end of the received frame which requests the aknowledge."]
     #[inline(always)]
-    #[must_use]
     pub fn slotted_ack(&mut self) -> SlottedAckW<FsmctrlSpec> {
         SlottedAckW::new(self, 1)
     }
 }
-#[doc = "FSM options\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fsmctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fsmctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "FSM options\n\nYou can [`read`](crate::Reg::read) this register and get [`fsmctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fsmctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FsmctrlSpec;
 impl crate::RegisterSpec for FsmctrlSpec {
     type Ux = u32;

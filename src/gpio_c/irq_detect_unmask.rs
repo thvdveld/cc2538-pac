@@ -295,198 +295,166 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Port A bit 0 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack0(&mut self) -> Paiack0W<IrqDetectUnmaskSpec> {
         Paiack0W::new(self, 0)
     }
     #[doc = "Bit 1 - Port A bit 1 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack1(&mut self) -> Paiack1W<IrqDetectUnmaskSpec> {
         Paiack1W::new(self, 1)
     }
     #[doc = "Bit 2 - Port A bit 2 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack2(&mut self) -> Paiack2W<IrqDetectUnmaskSpec> {
         Paiack2W::new(self, 2)
     }
     #[doc = "Bit 3 - Port A bit 3 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack3(&mut self) -> Paiack3W<IrqDetectUnmaskSpec> {
         Paiack3W::new(self, 3)
     }
     #[doc = "Bit 4 - Port A bit 4 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack4(&mut self) -> Paiack4W<IrqDetectUnmaskSpec> {
         Paiack4W::new(self, 4)
     }
     #[doc = "Bit 5 - Port A bit 5 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack5(&mut self) -> Paiack5W<IrqDetectUnmaskSpec> {
         Paiack5W::new(self, 5)
     }
     #[doc = "Bit 6 - Port A bit 6 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack6(&mut self) -> Paiack6W<IrqDetectUnmaskSpec> {
         Paiack6W::new(self, 6)
     }
     #[doc = "Bit 7 - Port A bit 7 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack7(&mut self) -> Paiack7W<IrqDetectUnmaskSpec> {
         Paiack7W::new(self, 7)
     }
     #[doc = "Bit 8 - Port B bit 0 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack0(&mut self) -> Pbiack0W<IrqDetectUnmaskSpec> {
         Pbiack0W::new(self, 8)
     }
     #[doc = "Bit 9 - Port B bit 1 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack1(&mut self) -> Pbiack1W<IrqDetectUnmaskSpec> {
         Pbiack1W::new(self, 9)
     }
     #[doc = "Bit 10 - Port B bit 2 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack2(&mut self) -> Pbiack2W<IrqDetectUnmaskSpec> {
         Pbiack2W::new(self, 10)
     }
     #[doc = "Bit 11 - Port B bit 3 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack3(&mut self) -> Pbiack3W<IrqDetectUnmaskSpec> {
         Pbiack3W::new(self, 11)
     }
     #[doc = "Bit 12 - Port B bit 4 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack4(&mut self) -> Pbiack4W<IrqDetectUnmaskSpec> {
         Pbiack4W::new(self, 12)
     }
     #[doc = "Bit 13 - Port B bit 5 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack5(&mut self) -> Pbiack5W<IrqDetectUnmaskSpec> {
         Pbiack5W::new(self, 13)
     }
     #[doc = "Bit 14 - Port B bit 6 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack6(&mut self) -> Pbiack6W<IrqDetectUnmaskSpec> {
         Pbiack6W::new(self, 14)
     }
     #[doc = "Bit 15 - Port B bit 7 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack7(&mut self) -> Pbiack7W<IrqDetectUnmaskSpec> {
         Pbiack7W::new(self, 15)
     }
     #[doc = "Bit 16 - Port C bit 0 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack0(&mut self) -> Pciack0W<IrqDetectUnmaskSpec> {
         Pciack0W::new(self, 16)
     }
     #[doc = "Bit 17 - Port C bit 1 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack1(&mut self) -> Pciack1W<IrqDetectUnmaskSpec> {
         Pciack1W::new(self, 17)
     }
     #[doc = "Bit 18 - Port C bit 2 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack2(&mut self) -> Pciack2W<IrqDetectUnmaskSpec> {
         Pciack2W::new(self, 18)
     }
     #[doc = "Bit 19 - Port C bit 3 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack3(&mut self) -> Pciack3W<IrqDetectUnmaskSpec> {
         Pciack3W::new(self, 19)
     }
     #[doc = "Bit 20 - Port C bit 4 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack4(&mut self) -> Pciack4W<IrqDetectUnmaskSpec> {
         Pciack4W::new(self, 20)
     }
     #[doc = "Bit 21 - Port C bit 5 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack5(&mut self) -> Pciack5W<IrqDetectUnmaskSpec> {
         Pciack5W::new(self, 21)
     }
     #[doc = "Bit 22 - Port C bit 6 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack6(&mut self) -> Pciack6W<IrqDetectUnmaskSpec> {
         Pciack6W::new(self, 22)
     }
     #[doc = "Bit 23 - Port C bit 7 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack7(&mut self) -> Pciack7W<IrqDetectUnmaskSpec> {
         Pciack7W::new(self, 23)
     }
     #[doc = "Bit 24 - Port D bit 0 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack0(&mut self) -> Pdiack0W<IrqDetectUnmaskSpec> {
         Pdiack0W::new(self, 24)
     }
     #[doc = "Bit 25 - Port D bit 1 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack1(&mut self) -> Pdiack1W<IrqDetectUnmaskSpec> {
         Pdiack1W::new(self, 25)
     }
     #[doc = "Bit 26 - Port D bit 2 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack2(&mut self) -> Pdiack2W<IrqDetectUnmaskSpec> {
         Pdiack2W::new(self, 26)
     }
     #[doc = "Bit 27 - Port D bit 3 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack3(&mut self) -> Pdiack3W<IrqDetectUnmaskSpec> {
         Pdiack3W::new(self, 27)
     }
     #[doc = "Bit 28 - Port D bit 4 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack4(&mut self) -> Pdiack4W<IrqDetectUnmaskSpec> {
         Pdiack4W::new(self, 28)
     }
     #[doc = "Bit 29 - Port D bit 5 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack5(&mut self) -> Pdiack5W<IrqDetectUnmaskSpec> {
         Pdiack5W::new(self, 29)
     }
     #[doc = "Bit 30 - Port D bit 6 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack6(&mut self) -> Pdiack6W<IrqDetectUnmaskSpec> {
         Pdiack6W::new(self, 30)
     }
     #[doc = "Bit 31 - Port D bit 7 unmasked interrupt status: 1: Detected 0: Undetected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack7(&mut self) -> Pdiack7W<IrqDetectUnmaskSpec> {
         Pdiack7W::new(self, 31)
     }
 }
-#[doc = "Same functionality as IRQ_DETECT_ACK, but this register handles masked interrupts\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`irq_detect_unmask::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`irq_detect_unmask::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Same functionality as IRQ_DETECT_ACK, but this register handles masked interrupts\n\nYou can [`read`](crate::Reg::read) this register and get [`irq_detect_unmask::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irq_detect_unmask::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IrqDetectUnmaskSpec;
 impl crate::RegisterSpec for IrqDetectUnmaskSpec {
     type Ux = u32;

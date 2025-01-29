@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write 1 to override the AGC LNA current setting with the values above (LNA1_CURRENT, LNA2_CURRENT, and LNA3_CURRENT)."]
     #[inline(always)]
-    #[must_use]
     pub fn lna_current_oe(&mut self) -> LnaCurrentOeW<Agcctrl2Spec> {
         LnaCurrentOeW::new(self, 0)
     }
     #[doc = "Bits 1:2 - Overrride value for LNA 3 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: 6-dB gain 11: 9-dB gain"]
     #[inline(always)]
-    #[must_use]
     pub fn lna3_current(&mut self) -> Lna3CurrentW<Agcctrl2Spec> {
         Lna3CurrentW::new(self, 1)
     }
     #[doc = "Bits 3:5 - Overrride value for LNA 2 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 000: 0-dB gain (reference level) 001: 3-dB gain 010: 6-dB gain 011: 9-dB gain 100: 12-dB gain 101: 15-dB gain 110: 18-dB gain 111: 21-dB gain"]
     #[inline(always)]
-    #[must_use]
     pub fn lna2_current(&mut self) -> Lna2CurrentW<Agcctrl2Spec> {
         Lna2CurrentW::new(self, 3)
     }
     #[doc = "Bits 6:7 - Overrride value for LNA 1 Used only when LNA_CURRENT_OE = 1 When read, this register returns the current applied gain setting. 00: 0-dB gain (reference level) 01: 3-dB gain 10: Reserved 11: 6-dB gain"]
     #[inline(always)]
-    #[must_use]
     pub fn lna1_current(&mut self) -> Lna1CurrentW<Agcctrl2Spec> {
         Lna1CurrentW::new(self, 6)
     }
 }
-#[doc = "AGC gain override\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`agcctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`agcctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "AGC gain override\n\nYou can [`read`](crate::Reg::read) this register and get [`agcctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`agcctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Agcctrl2Spec;
 impl crate::RegisterSpec for Agcctrl2Spec {
     type Ux = u32;

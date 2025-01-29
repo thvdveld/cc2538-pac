@@ -110,72 +110,61 @@ impl W {
     #[doc = "Bits 0:1 - GPTM Timer B mode 0x0: Reserved 0x1: One-shot timer mode 0x2: Periodic timer mode 0x3: Capture mode The timer mode is based on the timer configuration defined by bits \\[2:0\\]
 in the GPTMCFG register."]
     #[inline(always)]
-    #[must_use]
     pub fn tbmr(&mut self) -> TbmrW<TbmrSpec> {
         TbmrW::new(self, 0)
     }
     #[doc = "Bit 2 - GPTM Timer B capture mode 0: Edge-count mode 1: Edge-time mode"]
     #[inline(always)]
-    #[must_use]
     pub fn tbcmr(&mut self) -> TbcmrW<TbmrSpec> {
         TbcmrW::new(self, 2)
     }
     #[doc = "Bit 3 - GPTM Timer B alternate mode 0: Capture mode is enabled. 1: PWM mode is enabled. Note: To enable PWM mode, the TBCM bit must be cleared and the TBMR field must be configured to 0x2."]
     #[inline(always)]
-    #[must_use]
     pub fn tbams(&mut self) -> TbamsW<TbmrSpec> {
         TbamsW::new(self, 3)
     }
     #[doc = "Bit 4 - GPTM Timer B count direction 0: The timer counts down. 1: The timer counts up. When counting up, the timer starts from a value of 0x0."]
     #[inline(always)]
-    #[must_use]
     pub fn tbcdir(&mut self) -> TbcdirW<TbmrSpec> {
         TbcdirW::new(self, 4)
     }
     #[doc = "Bit 5 - GPTM Timer B match interrupt enable 0: The match interrupt is disabled. 1: An interrupt is generated when the match value in the GPTMTBMATCHR register is reached in the one-shot and periodic modes."]
     #[inline(always)]
-    #[must_use]
     pub fn tbmie(&mut self) -> TbmieW<TbmrSpec> {
         TbmieW::new(self, 5)
     }
     #[doc = "Bit 6 - GPTM Timer B wait-on-trigger 0: Timer B begins counting as soon as it is enabled. 1: If Timer B is enabled (TBEN is set in the GPTMCTL register), Timer B does not begin counting until it receives a trigger from the timer in the previous position in the daisy-chain."]
     #[inline(always)]
-    #[must_use]
     pub fn tbwot(&mut self) -> TbwotW<TbmrSpec> {
         TbwotW::new(self, 6)
     }
     #[doc = "Bit 7 - GPTM Timer B snap-shot mode 0: Snap-shot mode is disabled. 1: If Timer B is configured in the periodic mode, the actual free-running value of Timer A is loaded into the GPTM Timer B (GPTMTBR) register at the time-out event."]
     #[inline(always)]
-    #[must_use]
     pub fn tbsnaps(&mut self) -> TbsnapsW<TbmrSpec> {
         TbsnapsW::new(self, 7)
     }
     #[doc = "Bit 8 - GPTM Timer B PWM interval load write 0: Update the GPTMTBR register with the value in the GPTMTBILR register on the next cycle. If the prescaler is used, update the GPTMTBPS register with the value in the GPTMTBPR register on the next cycle. 1: Update the GPTMTBR register with the value in the GPTMTBILR register on the next cycle. If the prescaler is used, update the GPTMTBPS register with the value in the GPTMTBPR register on the next time-out."]
     #[inline(always)]
-    #[must_use]
     pub fn tbild(&mut self) -> TbildW<TbmrSpec> {
         TbildW::new(self, 8)
     }
     #[doc = "Bit 9 - GPTM Timer B PWM interrupt enable This bit enables interrupts in PWM mode on rising, falling, or both edges of the CCP output. 0: Interrupt is disabled. 1: Interrupt is enabled. This bit is valid only in PWM mode."]
     #[inline(always)]
-    #[must_use]
     pub fn tbpwmie(&mut self) -> TbpwmieW<TbmrSpec> {
         TbpwmieW::new(self, 9)
     }
     #[doc = "Bit 10 - Timer B match register update mode 0: Update the GPTMBMATCHR and the GPTMBPR, if used on the next cycle. 1: Update the GPTMBMATCHR and the GPTMBPR, if used on the next time-out. If the timer is disabled (TAEN is clear) when this bit is set, GPTMTBMATCHR and GPTMTBPR are updated when the timer is enabled. If the timer is stalled (TBSTALL is set), GPTMTBMATCHR and GPTMTBPR are updated according to the configuration of this bit."]
     #[inline(always)]
-    #[must_use]
     pub fn tbmrsu(&mut self) -> TbmrsuW<TbmrSpec> {
         TbmrsuW::new(self, 10)
     }
     #[doc = "Bit 11 - Legacy PWM operation 0: Legacy operation 1: CCP is set to 1 on time-out."]
     #[inline(always)]
-    #[must_use]
     pub fn tbplo(&mut self) -> TbploW<TbmrSpec> {
         TbploW::new(self, 11)
     }
 }
-#[doc = "GPTM Timer B mode This register configures the GPTM based on the configuration selected in the CFG register. This register controls the modes for Timer B when it is used individually. When Timer A and Timer B are concatenated, this register is ignored and TBMR controls the modes for both Timer A and Timer B.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tbmr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tbmr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM Timer B mode This register configures the GPTM based on the configuration selected in the CFG register. This register controls the modes for Timer B when it is used individually. When Timer A and Timer B are concatenated, this register is ignored and TBMR controls the modes for both Timer A and Timer B.\n\nYou can [`read`](crate::Reg::read) this register and get [`tbmr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tbmr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TbmrSpec;
 impl crate::RegisterSpec for TbmrSpec {
     type Ux = u32;

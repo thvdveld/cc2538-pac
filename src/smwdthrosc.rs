@@ -77,73 +77,73 @@ impl RegisterBlock {
         &self.stcv3
     }
 }
-#[doc = "WDCTL (rw) register accessor: Watchdog Timer Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wdctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wdctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdctl`]
+#[doc = "WDCTL (rw) register accessor: Watchdog Timer Control\n\nYou can [`read`](crate::Reg::read) this register and get [`wdctl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdctl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdctl`]
 module"]
 #[doc(alias = "WDCTL")]
 pub type Wdctl = crate::Reg<wdctl::WdctlSpec>;
 #[doc = "Watchdog Timer Control"]
 pub mod wdctl;
-#[doc = "ST0 (rw) register accessor: Sleep Timer 0 count and compare\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`st0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`st0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st0`]
+#[doc = "ST0 (rw) register accessor: Sleep Timer 0 count and compare\n\nYou can [`read`](crate::Reg::read) this register and get [`st0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`st0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st0`]
 module"]
 #[doc(alias = "ST0")]
 pub type St0 = crate::Reg<st0::St0Spec>;
 #[doc = "Sleep Timer 0 count and compare"]
 pub mod st0;
-#[doc = "ST1 (rw) register accessor: Sleep Timer 1 count and compare\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`st1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`st1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st1`]
+#[doc = "ST1 (rw) register accessor: Sleep Timer 1 count and compare\n\nYou can [`read`](crate::Reg::read) this register and get [`st1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`st1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st1`]
 module"]
 #[doc(alias = "ST1")]
 pub type St1 = crate::Reg<st1::St1Spec>;
 #[doc = "Sleep Timer 1 count and compare"]
 pub mod st1;
-#[doc = "ST2 (rw) register accessor: Sleep Timer 2 count and compare\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`st2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`st2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st2`]
+#[doc = "ST2 (rw) register accessor: Sleep Timer 2 count and compare\n\nYou can [`read`](crate::Reg::read) this register and get [`st2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`st2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st2`]
 module"]
 #[doc(alias = "ST2")]
 pub type St2 = crate::Reg<st2::St2Spec>;
 #[doc = "Sleep Timer 2 count and compare"]
 pub mod st2;
-#[doc = "ST3 (rw) register accessor: Sleep Timer 3 count and compare\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`st3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`st3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st3`]
+#[doc = "ST3 (rw) register accessor: Sleep Timer 3 count and compare\n\nYou can [`read`](crate::Reg::read) this register and get [`st3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`st3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@st3`]
 module"]
 #[doc(alias = "ST3")]
 pub type St3 = crate::Reg<st3::St3Spec>;
 #[doc = "Sleep Timer 3 count and compare"]
 pub mod st3;
-#[doc = "STLOAD (r) register accessor: Sleep Timer load status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stload::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stload`]
+#[doc = "STLOAD (r) register accessor: Sleep Timer load status\n\nYou can [`read`](crate::Reg::read) this register and get [`stload::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stload`]
 module"]
 #[doc(alias = "STLOAD")]
 pub type Stload = crate::Reg<stload::StloadSpec>;
 #[doc = "Sleep Timer load status"]
 pub mod stload;
-#[doc = "STCC (rw) register accessor: Sleep Timer Capture control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stcc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stcc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcc`]
+#[doc = "STCC (rw) register accessor: Sleep Timer Capture control\n\nYou can [`read`](crate::Reg::read) this register and get [`stcc::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`stcc::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcc`]
 module"]
 #[doc(alias = "STCC")]
 pub type Stcc = crate::Reg<stcc::StccSpec>;
 #[doc = "Sleep Timer Capture control"]
 pub mod stcc;
-#[doc = "STCS (rw) register accessor: Sleep Timer Capture status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stcs::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stcs::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcs`]
+#[doc = "STCS (rw) register accessor: Sleep Timer Capture status\n\nYou can [`read`](crate::Reg::read) this register and get [`stcs::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`stcs::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcs`]
 module"]
 #[doc(alias = "STCS")]
 pub type Stcs = crate::Reg<stcs::StcsSpec>;
 #[doc = "Sleep Timer Capture status"]
 pub mod stcs;
-#[doc = "STCV0 (r) register accessor: Sleep Timer Capture value byte 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stcv0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcv0`]
+#[doc = "STCV0 (r) register accessor: Sleep Timer Capture value byte 0\n\nYou can [`read`](crate::Reg::read) this register and get [`stcv0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcv0`]
 module"]
 #[doc(alias = "STCV0")]
 pub type Stcv0 = crate::Reg<stcv0::Stcv0Spec>;
 #[doc = "Sleep Timer Capture value byte 0"]
 pub mod stcv0;
-#[doc = "STCV1 (r) register accessor: Sleep Timer Capture value byte 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stcv1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcv1`]
+#[doc = "STCV1 (r) register accessor: Sleep Timer Capture value byte 1\n\nYou can [`read`](crate::Reg::read) this register and get [`stcv1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcv1`]
 module"]
 #[doc(alias = "STCV1")]
 pub type Stcv1 = crate::Reg<stcv1::Stcv1Spec>;
 #[doc = "Sleep Timer Capture value byte 1"]
 pub mod stcv1;
-#[doc = "STCV2 (r) register accessor: Sleep Timer Capture value byte 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stcv2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcv2`]
+#[doc = "STCV2 (r) register accessor: Sleep Timer Capture value byte 2\n\nYou can [`read`](crate::Reg::read) this register and get [`stcv2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcv2`]
 module"]
 #[doc(alias = "STCV2")]
 pub type Stcv2 = crate::Reg<stcv2::Stcv2Spec>;
 #[doc = "Sleep Timer Capture value byte 2"]
 pub mod stcv2;
-#[doc = "STCV3 (r) register accessor: Sleep Timer Capture value byte 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stcv3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcv3`]
+#[doc = "STCV3 (r) register accessor: Sleep Timer Capture value byte 3\n\nYou can [`read`](crate::Reg::read) this register and get [`stcv3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@stcv3`]
 module"]
 #[doc(alias = "STCV3")]
 pub type Stcv3 = crate::Reg<stcv3::Stcv3Spec>;

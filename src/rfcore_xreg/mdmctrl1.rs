@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Demodulator correlator threshold value, required before SFD search. Threshold value adjusts how the receiver synchronizes to data from the radio. If the threshold is set too low, sync can more easily be found on noise. If set too high, the sensitivity is reduced, but sync is not likely to be found on noise. In combination with DEM_NUM_ZEROS, the system can be tuned so sensitivity is high with less sync found on noise."]
     #[inline(always)]
-    #[must_use]
     pub fn corr_thr(&mut self) -> CorrThrW<Mdmctrl1Spec> {
         CorrThrW::new(self, 0)
     }
     #[doc = "Bit 5 - Defines requirements for SFD detection: 0: The correlation value of one of the zero symbols of the preamble must be above the correlation threshold. 1: The correlation value of one zero symbol of the preamble and both symbols in the SFD must be above the correlation threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn corr_thr_sfd(&mut self) -> CorrThrSfdW<Mdmctrl1Spec> {
         CorrThrSfdW::new(self, 5)
     }
 }
-#[doc = "Controls modem\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mdmctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mdmctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Controls modem\n\nYou can [`read`](crate::Reg::read) this register and get [`mdmctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mdmctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Mdmctrl1Spec;
 impl crate::RegisterSpec for Mdmctrl1Spec {
     type Ux = u32;

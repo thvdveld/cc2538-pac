@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - GPTimer0 16-bit loopback modes 00: Normal operation 01: Timer A PWM connected to Timer B capture 10: Timer A capture connected to Timer B PWM 11: Reserved, defaults to normal operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbk16gpt0(&mut self) -> Lpbk16gpt0W<LpbkgptSpec> {
         Lpbk16gpt0W::new(self, 0)
     }
     #[doc = "Bits 2:3 - GPTimer1 16-bit loopback modes 00: Normal operation 01: Timer A PWM connected to Timer B capture 10: Timer A capture connected to Timer B PWM 11: Reserved, defaults to normal operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbk16gpt1(&mut self) -> Lpbk16gpt1W<LpbkgptSpec> {
         Lpbk16gpt1W::new(self, 2)
     }
     #[doc = "Bits 4:5 - GPTimer2 16-bit loopback modes 00: Normal operation 01: Timer A PWM connected to Timer B capture 10: Timer A capture connected to Timer B PWM 11: Reserved, defaults to normal operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbk16gpt2(&mut self) -> Lpbk16gpt2W<LpbkgptSpec> {
         Lpbk16gpt2W::new(self, 4)
     }
     #[doc = "Bits 6:7 - GPTimer3 16-bit loopback modes 00: Normal operation 01: Timer A PWM connected to Timer B capture 10: Timer A capture connected to Timer B PWM 11: Reserved, defaults to normal operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbk16gpt3(&mut self) -> Lpbk16gpt3W<LpbkgptSpec> {
         Lpbk16gpt3W::new(self, 6)
     }
     #[doc = "Bits 16:17 - GPTimer1 32-bit RTC loopback modes 00: Normal operation 01: GPT0 timerA PWM connected to GPT1 capture 10: GPT0 capture connected to GPT1 PWM Timer A 11: Reserved, defaults to normal operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbk32gpt1(&mut self) -> Lpbk32gpt1W<LpbkgptSpec> {
         Lpbk32gpt1W::new(self, 16)
     }
     #[doc = "Bits 18:19 - GPTimer2 32-bit RTC loopback modes 00: Normal operation 01: GPT0 Timer A PWM connected to GPT2 capture 10: GPT0 capture connected to GPT2 PWM Timer A 11: Reserved, defaults to normal operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbk32gpt2(&mut self) -> Lpbk32gpt2W<LpbkgptSpec> {
         Lpbk32gpt2W::new(self, 18)
     }
     #[doc = "Bits 20:21 - GPTimer3 32-bit RTC loopback modes 00: Normal operation 01: GPT0 GPTimerA PWM connected to GPT3 capture 10: GPT0 capture connected to GPT3 PWM GPTimer A 11: Reserved, defaults to normal operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lpbk32gpt3(&mut self) -> Lpbk32gpt3W<LpbkgptSpec> {
         Lpbk32gpt3W::new(self, 20)
     }
 }
-#[doc = "GPTIMER Internal loopback\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lpbkgpt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lpbkgpt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTIMER Internal loopback\n\nYou can [`read`](crate::Reg::read) this register and get [`lpbkgpt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lpbkgpt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LpbkgptSpec;
 impl crate::RegisterSpec for LpbkgptSpec {
     type Ux = u32;

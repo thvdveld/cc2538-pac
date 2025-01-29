@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Interrupt enable for OUT endpoint 1 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn outep1ie(&mut self) -> Outep1ieW<OieSpec> {
         Outep1ieW::new(self, 1)
     }
     #[doc = "Bit 2 - Interrupt enable for OUT endpoint 2 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn outep2ie(&mut self) -> Outep2ieW<OieSpec> {
         Outep2ieW::new(self, 2)
     }
     #[doc = "Bit 3 - Interrupt enable for OUT endpoint 3 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn outep3ie(&mut self) -> Outep3ieW<OieSpec> {
         Outep3ieW::new(self, 3)
     }
     #[doc = "Bit 4 - Interrupt enable for OUT endpoint 4 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn outep4ie(&mut self) -> Outep4ieW<OieSpec> {
         Outep4ieW::new(self, 4)
     }
     #[doc = "Bit 5 - Interrupt enable for OUT endpoint 5 0: Interrupt disabled 1: Interrupt enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn outep5ie(&mut self) -> Outep5ieW<OieSpec> {
         Outep5ieW::new(self, 5)
     }
 }
-#[doc = "Interrupt enable mask for OUT endpoints 1-5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`oie::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`oie::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt enable mask for OUT endpoints 1-5\n\nYou can [`read`](crate::Reg::read) this register and get [`oie::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`oie::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OieSpec;
 impl crate::RegisterSpec for OieSpec {
     type Ux = u32;

@@ -73,36 +73,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Erase bit Start an erase operation by setting this bit to 1. Cleared by hardware when the operation completes. Writes to this bit are ignored when FCTL.BUSY is 1. If FCTL.WRITE is set simultaneously with this bit, the erase operation is started first, then the write is started."]
     #[inline(always)]
-    #[must_use]
     pub fn erase(&mut self) -> EraseW<FctlSpec> {
         EraseW::new(self, 0)
     }
     #[doc = "Bit 1 - Write bit Start a write sequence by setting this bit to 1. Cleared by hardware when the operation completes. Writes to this bit are ignored when FCTL.BUSY is 1. If FCTL.ERASE is set simultaneously with this bit, the erase operation is started first, then the write is started."]
     #[inline(always)]
-    #[must_use]
     pub fn write(&mut self) -> WriteW<FctlSpec> {
         WriteW::new(self, 1)
     }
     #[doc = "Bits 2:3 - Cache Mode Disabling the cache increases the power consumption and reduces performance. Prefetching improves performance at the expense of a potential increase in power consumption. Real-time mode provides predictable flash read access time, the execution time is equal to cache disabled mode, but the power consumption is lower. 00: Cache disabled 01: Cache enabled 10: Cache enabled, with prefetch 11: Real-time mode Note: The read value always represents the current cache mode. Writing a new cache mode starts a cache mode change request that does not take effect until the controller is ready. Writes to this register are ignored if there is a current cache change request in progress."]
     #[inline(always)]
-    #[must_use]
     pub fn cm(&mut self) -> CmW<FctlSpec> {
         CmW::new(self, 2)
     }
     #[doc = "Bit 8 - Flash erase or write operation on APB bus must assert this when accessing the information page"]
     #[inline(always)]
-    #[must_use]
     pub fn sel_info_page(&mut self) -> SelInfoPageW<FctlSpec> {
         SelInfoPageW::new(self, 8)
     }
     #[doc = "Bit 9 - Lock bit for lock bit page 0: Neither write nor erase not allowed 1: Both write and erase allowed"]
     #[inline(always)]
-    #[must_use]
     pub fn upper_page_access(&mut self) -> UpperPageAccessW<FctlSpec> {
         UpperPageAccessW::new(self, 9)
     }
 }
-#[doc = "Flash control This register provides control and monitoring functions for the flash module.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Flash control This register provides control and monitoring functions for the flash module.\n\nYou can [`read`](crate::Reg::read) this register and get [`fctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FctlSpec;
 impl crate::RegisterSpec for FctlSpec {
     type Ux = u32;

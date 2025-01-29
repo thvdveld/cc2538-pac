@@ -72,7 +72,7 @@ impl R {
         TypeR::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
-#[doc = "Options register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_options::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Options register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl_options::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CtrlOptionsSpec;
 impl crate::RegisterSpec for CtrlOptionsSpec {
     type Ux = u32;

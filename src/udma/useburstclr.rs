@@ -11,13 +11,12 @@ useburst clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\]
 bit in the DMAUSEBURSTSET register meaning that uDMA channel \\[n\\]
 responds to single and burst requests."]
     #[inline(always)]
-    #[must_use]
     pub fn clr(&mut self) -> ClrW<UseburstclrSpec> {
         ClrW::new(self, 0)
     }
 }
 #[doc = "DMA channel useburst clear Each bit of the USEBURSTCLR register represents the corresponding uDMA channel. Setting a bit clears the corresponding SET\\[n\\]
-bit in the USEBURSTSET register.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`useburstclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+bit in the USEBURSTSET register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`useburstclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UseburstclrSpec;
 impl crate::RegisterSpec for UseburstclrSpec {
     type Ux = u32;

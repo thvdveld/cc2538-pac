@@ -68,42 +68,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Antialiasing filter power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn aaf_pd(&mut self) -> AafPdW<Ptest0Spec> {
         AafPdW::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit mixer power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn txmix_pd(&mut self) -> TxmixPdW<Ptest0Spec> {
         TxmixPdW::new(self, 1)
     }
     #[doc = "Bits 2:3 - Low-noise amplifier power-down signal Defines LNA/mixer power-down modes: 00: Power up 01: LNA off, mixer/regulator on 10: LNA/mixer off, regulator on 11: PD When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn lna_pd(&mut self) -> LnaPdW<Ptest0Spec> {
         LnaPdW::new(self, 2)
     }
     #[doc = "Bit 4 - DAC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn dac_pd(&mut self) -> DacPdW<Ptest0Spec> {
         DacPdW::new(self, 4)
     }
     #[doc = "Bit 5 - ADC power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_pd(&mut self) -> AdcPdW<Ptest0Spec> {
         AdcPdW::new(self, 5)
     }
     #[doc = "Bit 6 - Charge pump power-down signal When PD_OVERRIDE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn chp_pd(&mut self) -> ChpPdW<Ptest0Spec> {
         ChpPdW::new(self, 6)
     }
 }
-#[doc = "Override power-down register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptest0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptest0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Override power-down register\n\nYou can [`read`](crate::Reg::read) this register and get [`ptest0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ptest0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ptest0Spec;
 impl crate::RegisterSpec for Ptest0Spec {
     type Ux = u32;

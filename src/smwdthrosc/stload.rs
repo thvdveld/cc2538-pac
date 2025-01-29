@@ -9,7 +9,7 @@ impl R {
         StloadR::new((self.bits & 1) != 0)
     }
 }
-#[doc = "Sleep Timer load status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stload::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Sleep Timer load status\n\nYou can [`read`](crate::Reg::read) this register and get [`stload::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct StloadSpec;
 impl crate::RegisterSpec for StloadSpec {
     type Ux = u32;

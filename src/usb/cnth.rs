@@ -9,7 +9,7 @@ impl R {
         FifocnthR::new((self.bits & 7) as u8)
     }
 }
-#[doc = "Indexed register: For USB_INDEX = 1-5: Number of received in the OUT endpoint {1-5} FIFO (high byte)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cnth::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Indexed register: For USB_INDEX = 1-5: Number of received in the OUT endpoint {1-5} FIFO (high byte)\n\nYou can [`read`](crate::Reg::read) this register and get [`cnth::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CnthSpec;
 impl crate::RegisterSpec for CnthSpec {
     type Ux = u32;

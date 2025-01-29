@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Set to 1 to connect the temperature sensor to the SOC_ADC. See also RFCORE_XREG_ATEST register description to enable the temperature sensor."]
     #[inline(always)]
-    #[must_use]
     pub fn adctm(&mut self) -> AdctmW<Tr0Spec> {
         AdctmW::new(self, 1)
     }
 }
-#[doc = "Test register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Test register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`tr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Tr0Spec;
 impl crate::RegisterSpec for Tr0Spec {
     type Ux = u32;

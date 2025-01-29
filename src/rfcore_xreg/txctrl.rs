@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Transmit mixers core current Current increases with increasing setting."]
     #[inline(always)]
-    #[must_use]
     pub fn txmix_current(&mut self) -> TxmixCurrentW<TxctrlSpec> {
         TxmixCurrentW::new(self, 0)
     }
     #[doc = "Bits 2:3 - Adjusts the DC level to the TX mixer."]
     #[inline(always)]
-    #[must_use]
     pub fn dac_dc(&mut self) -> DacDcW<TxctrlSpec> {
         DacDcW::new(self, 2)
     }
     #[doc = "Bits 4:6 - Change the current in the DAC."]
     #[inline(always)]
-    #[must_use]
     pub fn dac_curr(&mut self) -> DacCurrW<TxctrlSpec> {
         DacCurrW::new(self, 4)
     }
 }
-#[doc = "Controls the TX settings\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Controls the TX settings\n\nYou can [`read`](crate::Reg::read) this register and get [`txctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`txctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TxctrlSpec;
 impl crate::RegisterSpec for TxctrlSpec {
     type Ux = u32;

@@ -75,42 +75,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This bit is set when a data packet has been received. Software should clear this bit when the packet has been unloaded from the OUT endpoint FIFO. An interrupt is generated when the bit is set."]
     #[inline(always)]
-    #[must_use]
     pub fn outpktrdy(&mut self) -> OutpktrdyW<CsolSpec> {
         OutpktrdyW::new(self, 0)
     }
     #[doc = "Bit 2 - For isochronous mode OUT endpoints: This bit is set when an OUT packet cannot be loaded into the OUT endpoint FIFO. Firmware should clear this bit."]
     #[inline(always)]
-    #[must_use]
     pub fn overrun(&mut self) -> OverrunW<CsolSpec> {
         OverrunW::new(self, 2)
     }
     #[doc = "Bit 4 - Software sets this bit to flush the next packet to be read from the endpoint OUT FIFO. Note: If the FIFO contains two packets, USB_CSOL.FLUSHPACKET will need to be set twice to completely clear the FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn flushpacket(&mut self) -> FlushpacketW<CsolSpec> {
         FlushpacketW::new(self, 4)
     }
     #[doc = "Bit 5 - For bulk/interrupt mode OUT endpoints: Software sets this bit to issue a STALL handshake. Software clears this bit to terminate the stall condition."]
     #[inline(always)]
-    #[must_use]
     pub fn sendstall(&mut self) -> SendstallW<CsolSpec> {
         SendstallW::new(self, 5)
     }
     #[doc = "Bit 6 - This bit is set when a STALL handshake is transmitted. An interrupt is generated when this bit is set. Software should clear this bit."]
     #[inline(always)]
-    #[must_use]
     pub fn sentstall(&mut self) -> SentstallW<CsolSpec> {
         SentstallW::new(self, 6)
     }
     #[doc = "Bit 7 - Software sets this bit to reset the endpoint data toggle to 0."]
     #[inline(always)]
-    #[must_use]
     pub fn clrdatatog(&mut self) -> ClrdatatogW<CsolSpec> {
         ClrdatatogW::new(self, 7)
     }
 }
-#[doc = "Indexed register: For USB_INDEX = 1-5: OUT endpoint {1-5} control and status (low byte)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`csol::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`csol::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Indexed register: For USB_INDEX = 1-5: OUT endpoint {1-5} control and status (low byte)\n\nYou can [`read`](crate::Reg::read) this register and get [`csol::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`csol::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CsolSpec;
 impl crate::RegisterSpec for CsolSpec {
     type Ux = u32;

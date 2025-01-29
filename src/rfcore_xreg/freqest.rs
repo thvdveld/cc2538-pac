@@ -9,7 +9,7 @@ impl R {
         FreqestR::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "Estimated RF frequency offset\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`freqest::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Estimated RF frequency offset\n\nYou can [`read`](crate::Reg::read) this register and get [`freqest::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FreqestSpec;
 impl crate::RegisterSpec for FreqestSpec {
     type Ux = u32;

@@ -23,12 +23,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: CLD is disabled. 1: CLD is enabled. Writing to this register shall be ignored if VALID = 0"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<CldSpec> {
         EnW::new(self, 0)
     }
 }
-#[doc = "This register controls the clock loss detection feature.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cld::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cld::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls the clock loss detection feature.\n\nYou can [`read`](crate::Reg::read) this register and get [`cld::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cld::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CldSpec;
 impl crate::RegisterSpec for CldSpec {
     type Ux = u32;

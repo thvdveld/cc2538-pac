@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PB7."]
     #[inline(always)]
-    #[must_use]
     pub fn pb7_sel(&mut self) -> Pb7SelW<Pb7SelSpec> {
         Pb7SelW::new(self, 0)
     }
 }
-#[doc = "Peripheral select control for PB7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pb7_sel::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pb7_sel::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Peripheral select control for PB7\n\nYou can [`read`](crate::Reg::read) this register and get [`pb7_sel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pb7_sel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Pb7SelSpec;
 impl crate::RegisterSpec for Pb7SelSpec {
     type Ux = u32;

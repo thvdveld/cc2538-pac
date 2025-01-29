@@ -11,13 +11,12 @@ request mask clear 0: No effect 1: Setting a bit clears the corresponding SET\\[
 bit in the DMAREQMASKSET register meaning that the peripheral associated with channel \\[n\\]
 is enabled to request uDMA transfers."]
     #[inline(always)]
-    #[must_use]
     pub fn clr(&mut self) -> ClrW<ReqmaskclrSpec> {
         ClrW::new(self, 0)
     }
 }
 #[doc = "DMA channel request mask clear Each bit of the REQMASKCLR register represents the corresponding uDMA channel. Setting a bit clears the corresponding SET\\[n\\]
-bit in the REQMASKSET register.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reqmaskclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+bit in the REQMASKSET register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reqmaskclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ReqmaskclrSpec;
 impl crate::RegisterSpec for ReqmaskclrSpec {
     type Ux = u32;

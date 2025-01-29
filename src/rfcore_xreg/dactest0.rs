@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Q-branch DAC override value when DAC_SRC = 001 If DAC_SRC is set to be ADC data, CORDIC magnitude, or channel filtered data, then DAC_Q_O controls the part of the word in question that is actually multiplexed to the DAC, as described below. 000111: Bits 7:0 001000: Bits 8:1 001001: Bits 9:2 ... If an invalid setting is chosen, the DAC outputs only zeros (minimum value)."]
     #[inline(always)]
-    #[must_use]
     pub fn dac_q_o(&mut self) -> DacQOW<Dactest0Spec> {
         DacQOW::new(self, 0)
     }
 }
-#[doc = "DAC override value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dactest0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dactest0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DAC override value\n\nYou can [`read`](crate::Reg::read) this register and get [`dactest0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dactest0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Dactest0Spec;
 impl crate::RegisterSpec for Dactest0Spec {
     type Ux = u32;

@@ -9,7 +9,7 @@ impl R {
         TssR::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "LIN snap shot The LSS register captures the free-running timer value when either the sync edge 1 or the sync edge 5 is detected in LIN mode.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lss::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LIN snap shot The LSS register captures the free-running timer value when either the sync edge 1 or the sync edge 5 is detected in LIN mode.\n\nYou can [`read`](crate::Reg::read) this register and get [`lss::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LssSpec;
 impl crate::RegisterSpec for LssSpec {
     type Ux = u32;

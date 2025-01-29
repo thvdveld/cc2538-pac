@@ -30,7 +30,7 @@ impl R {
         AltclkR::new(((self.bits >> 6) & 1) != 0)
     }
 }
-#[doc = "GPTM peripheral properties The PP register provides information regarding the properties of the general-purpose Timer module.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pp::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM peripheral properties The PP register provides information regarding the properties of the general-purpose Timer module.\n\nYou can [`read`](crate::Reg::read) this register and get [`pp::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PpSpec;
 impl crate::RegisterSpec for PpSpec {
     type Ux = u32;

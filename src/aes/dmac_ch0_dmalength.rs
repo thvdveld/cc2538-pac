@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Channel DMA length in bytes During configuration, this register contains the DMA transfer length in bytes. During operation, it contains the last updated value of the DMA transfer length after being sent to the master interface. Note: Setting this register to a nonzero value starts the transfer if the channel is enabled. Therefore, this register must be written last when setting up a DMA channel."]
     #[inline(always)]
-    #[must_use]
     pub fn dmalen(&mut self) -> DmalenW<DmacCh0DmalengthSpec> {
         DmalenW::new(self, 0)
     }
 }
-#[doc = "Channel DMA length\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmac_ch0_dmalength::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmac_ch0_dmalength::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel DMA length\n\nYou can [`read`](crate::Reg::read) this register and get [`dmac_ch0_dmalength::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmac_ch0_dmalength::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DmacCh0DmalengthSpec;
 impl crate::RegisterSpec for DmacCh0DmalengthSpec {
     type Ux = u32;

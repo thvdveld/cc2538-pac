@@ -20,12 +20,11 @@ impl W {
     #[doc = "Bits 0:2 - GPTM configuration The GPTMCFG values are defined as follows: 0x0: 32-bit timer configuration. 0x1: 32-bit real-time clock 0x2: Reserved 0x3: Reserved 0x4: 16-bit timer configuration. The function is controlled by bits \\[1:0\\]
 of GPTMTAMR and GPTMTBMR. 0x5-0x7: Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn gptmcfg(&mut self) -> GptmcfgW<CfgSpec> {
         GptmcfgW::new(self, 0)
     }
 }
-#[doc = "GPTM configuration This register configures the global operation of the GPTM. The value written to this register determines whether the GPTM is in 32-bit mode (concatenated timers) or in 16-bit mode (individual, split timers).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM configuration This register configures the global operation of the GPTM. The value written to this register determines whether the GPTM is in 32-bit mode (concatenated timers) or in 16-bit mode (individual, split timers).\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CfgSpec;
 impl crate::RegisterSpec for CfgSpec {
     type Ux = u32;

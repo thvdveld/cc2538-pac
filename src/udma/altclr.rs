@@ -11,13 +11,12 @@ alternate clear 0: No effect 1: Setting a bit clears the corresponding SET\\[n\\
 bit in the DMAALTSET register meaning that channel \\[n\\]
 is using the primary control structure. Note: For Ping-Pong and Scatter-Gather cycle types, the uDMA controller automatically sets these bits to select the alternate channel control data structure."]
     #[inline(always)]
-    #[must_use]
     pub fn clr(&mut self) -> ClrW<AltclrSpec> {
         ClrW::new(self, 0)
     }
 }
 #[doc = "DMA channel primary alternate clear Each bit of the ALTCLR register represents the corresponding uDMA channel. Setting a bit clears the corresponding SET\\[n\\]
-bit in the ALTSET register.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`altclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+bit in the ALTSET register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`altclr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AltclrSpec;
 impl crate::RegisterSpec for AltclrSpec {
     type Ux = u32;

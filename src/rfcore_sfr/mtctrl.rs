@@ -41,24 +41,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write 1 to start timer, write 0 to stop timer. When read, it returns the last written value."]
     #[inline(always)]
-    #[must_use]
     pub fn run(&mut self) -> RunW<MtctrlSpec> {
         RunW::new(self, 0)
     }
     #[doc = "Bit 1 - 0: Starting and stopping of timer is immediate; that is, synchronous with clk_rf_32m. 1: Starting and stopping of timer occurs at the first positive edge of the 32-kHz clock. For more details regarding timer start and stop, see Section 22.4."]
     #[inline(always)]
-    #[must_use]
     pub fn sync(&mut self) -> SyncW<MtctrlSpec> {
         SyncW::new(self, 1)
     }
     #[doc = "Bit 3 - 0: Reading MTM0 with MTMSEL.MTMSEL = 000 latches the high byte of the timer, making it ready to be read from MTM1. Reading MTMOVF0 with MTMSEL.MTMOVFSEL = 000 latches the two most-significant bytes of the overflow counter, making it possible to read these from MTMOVF1 and MTMOVF2. 1: Reading MTM0 with MTMSEL.MTMSEL = 000 latches the high byte of the timer and the entire overflow counter at once, making it possible to read the values from MTM1, MTMOVF0, MTMOVF1, and MTMOVF2."]
     #[inline(always)]
-    #[must_use]
     pub fn latch_mode(&mut self) -> LatchModeW<MtctrlSpec> {
         LatchModeW::new(self, 3)
     }
 }
-#[doc = "MAC Timer control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mtctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mtctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MAC Timer control register\n\nYou can [`read`](crate::Reg::read) this register and get [`mtctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MtctrlSpec;
 impl crate::RegisterSpec for MtctrlSpec {
     type Ux = u32;

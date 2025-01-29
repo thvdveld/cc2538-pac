@@ -67,7 +67,7 @@ of the interrupts output bus) is the direct complement of the run bit in the PKA
         FirstLnmeFifoDepthR::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
-#[doc = "PKA hardware options register This register provides the host with a means to determine the hardware configuration implemented in this PKA engine, focused on options that have an effect on software interacting with the module. Note: (32 x (1st LNME nr. of PEs + 1st LNME FIFO RAM depth - 10)) equals the maximum modulus vector length (in bits) that can be handled by the modular exponentiation and ECC operations executed on a PKA engine that includes an LNME.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`options::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PKA hardware options register This register provides the host with a means to determine the hardware configuration implemented in this PKA engine, focused on options that have an effect on software interacting with the module. Note: (32 x (1st LNME nr. of PEs + 1st LNME FIFO RAM depth - 10)) equals the maximum modulus vector length (in bits) that can be handled by the modular exponentiation and ECC operations executed on a PKA engine that includes an LNME.\n\nYou can [`read`](crate::Reg::read) this register and get [`options::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OptionsSpec;
 impl crate::RegisterSpec for OptionsSpec {
     type Ux = u32;

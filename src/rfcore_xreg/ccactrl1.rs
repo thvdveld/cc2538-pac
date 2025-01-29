@@ -6,9 +6,9 @@ pub type W = crate::W<Ccactrl1Spec>;
 pub type CcaHystR = crate::FieldReader;
 #[doc = "Field `CCA_HYST` writer - Sets the level of CCA hysteresis. Unsigned values given in dB"]
 pub type CcaHystW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `CCA_MODE` reader - 00: CCA always set to 1 01: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
+#[doc = "Field `CCA_MODE` reader - 00: CCA always set to 1 01: CCA = 1 when RSSI < CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI < CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
 pub type CcaModeR = crate::FieldReader;
-#[doc = "Field `CCA_MODE` writer - 00: CCA always set to 1 01: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
+#[doc = "Field `CCA_MODE` writer - 00: CCA always set to 1 01: CCA = 1 when RSSI < CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI < CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
 pub type CcaModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:2 - Sets the level of CCA hysteresis. Unsigned values given in dB"]
@@ -16,7 +16,7 @@ impl R {
     pub fn cca_hyst(&self) -> CcaHystR {
         CcaHystR::new((self.bits & 7) as u8)
     }
-    #[doc = "Bits 3:4 - 00: CCA always set to 1 01: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
+    #[doc = "Bits 3:4 - 00: CCA always set to 1 01: CCA = 1 when RSSI < CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI < CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
     #[inline(always)]
     pub fn cca_mode(&self) -> CcaModeR {
         CcaModeR::new(((self.bits >> 3) & 3) as u8)
@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Sets the level of CCA hysteresis. Unsigned values given in dB"]
     #[inline(always)]
-    #[must_use]
     pub fn cca_hyst(&mut self) -> CcaHystW<Ccactrl1Spec> {
         CcaHystW::new(self, 0)
     }
-    #[doc = "Bits 3:4 - 00: CCA always set to 1 01: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI &lt; CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
+    #[doc = "Bits 3:4 - 00: CCA always set to 1 01: CCA = 1 when RSSI < CCA_THR - CCA_HYST; CCA = 0 when RSSI >= CCA_THR 10: CCA = 1 when not receiving a frame, else CCA = 0 11: CCA = 1 when RSSI < CCA_THR - CCA_HYST and not receiving a frame; CCA = 0 when RSSI >= CCA_THR or when receiving a frame"]
     #[inline(always)]
-    #[must_use]
     pub fn cca_mode(&mut self) -> CcaModeW<Ccactrl1Spec> {
         CcaModeW::new(self, 3)
     }
 }
-#[doc = "Other CCA Options\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ccactrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ccactrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Other CCA Options\n\nYou can [`read`](crate::Reg::read) this register and get [`ccactrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ccactrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ccactrl1Spec;
 impl crate::RegisterSpec for Ccactrl1Spec {
     type Ux = u32;

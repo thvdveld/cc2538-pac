@@ -13,36 +13,31 @@ pub type DmaBusErrW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - If 1 is written to this bit, the result available (irq_result_av) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
     #[inline(always)]
-    #[must_use]
     pub fn result_av(&mut self) -> ResultAvW<CtrlIntClrSpec> {
         ResultAvW::new(self, 0)
     }
     #[doc = "Bit 1 - If 1 is written to this bit, the DMA in done (irq_dma_in_done) interrupt output is cleared. Writing 0 has no effect. Note that clearing an interrupt makes sense only if the interrupt output is programmed as level (refer to CTRL_INT_CFG)."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_in_done(&mut self) -> DmaInDoneW<CtrlIntClrSpec> {
         DmaInDoneW::new(self, 1)
     }
     #[doc = "Bit 29 - If 1 is written to this bit, the key store read error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn key_st_rd_err(&mut self) -> KeyStRdErrW<CtrlIntClrSpec> {
         KeyStRdErrW::new(self, 29)
     }
     #[doc = "Bit 30 - If 1 is written to this bit, the key store write error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn key_st_wr_err(&mut self) -> KeyStWrErrW<CtrlIntClrSpec> {
         KeyStWrErrW::new(self, 30)
     }
     #[doc = "Bit 31 - If 1 is written to this bit, the DMA bus error status is cleared. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_bus_err(&mut self) -> DmaBusErrW<CtrlIntClrSpec> {
         DmaBusErrW::new(self, 31)
     }
 }
-#[doc = "Interrupt clear\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt clear\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CtrlIntClrSpec;
 impl crate::RegisterSpec for CtrlIntClrSpec {
     type Ux = u32;

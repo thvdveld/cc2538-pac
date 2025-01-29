@@ -29,18 +29,16 @@ impl W {
     #[doc = "Bits 0:6 - n - obs_sigs\\[n\\]
 output on output 7: 0: rfc_obs_sig0 1: rfc_obs_sig1 2: rfc_obs_sig2 Others: Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SelW<Obssel7Spec> {
         SelW::new(self, 0)
     }
     #[doc = "Bit 7 - Observation output 7 enable control for PC7 0: Observation output disabled 1: Observation output enabled Note: If enabled, this overwrites the standard GPIO behavior of PC7."]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<Obssel7Spec> {
         EnW::new(self, 7)
     }
 }
-#[doc = "Select output signal on observation output 7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`obssel7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`obssel7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Select output signal on observation output 7\n\nYou can [`read`](crate::Reg::read) this register and get [`obssel7::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`obssel7::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Obssel7Spec;
 impl crate::RegisterSpec for Obssel7Spec {
     type Ux = u32;

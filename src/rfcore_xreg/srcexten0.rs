@@ -24,12 +24,11 @@ impl W {
 bits are read only. Read access: Extended address enable for table entry n (0 to 11) is mapped to EXT_ADDR_EN\\[2n\\]
 and EXT_ADDR_EN\\[2n + 1\\]. Optional safety feature: To ensure that an entry in the source matching table is not used while it is being updated, set the corresponding EXT_ADDR_EN bit to 0 while updating."]
     #[inline(always)]
-    #[must_use]
     pub fn ext_addr_en(&mut self) -> ExtAddrEnW<Srcexten0Spec> {
         ExtAddrEnW::new(self, 0)
     }
 }
-#[doc = "Extended address matching\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`srcexten0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`srcexten0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Extended address matching\n\nYou can [`read`](crate::Reg::read) this register and get [`srcexten0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srcexten0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Srcexten0Spec;
 impl crate::RegisterSpec for Srcexten0Spec {
     type Ux = u32;

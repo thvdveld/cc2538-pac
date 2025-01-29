@@ -25,19 +25,17 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: Clock for SSI0 is gated. 1: Clock for SSI0 is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn ssi0(&mut self) -> Ssi0W<ScgcssiSpec> {
         Ssi0W::new(self, 0)
     }
     #[doc = "Bit 1 - 0: Clock for SSI1 is gated. 1: Clock for SSI1 is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn ssi1(&mut self) -> Ssi1W<ScgcssiSpec> {
         Ssi1W::new(self, 1)
     }
 }
 #[doc = "This register defines the module clocks for SSI\\[1:0\\]
-when the CPU is insSleep mode. This register setting is don't care for PM1-3, because the system clock is powered down in these modes.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scgcssi::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scgcssi::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+when the CPU is insSleep mode. This register setting is don't care for PM1-3, because the system clock is powered down in these modes.\n\nYou can [`read`](crate::Reg::read) this register and get [`scgcssi::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scgcssi::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ScgcssiSpec;
 impl crate::RegisterSpec for ScgcssiSpec {
     type Ux = u32;

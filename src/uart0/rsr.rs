@@ -30,7 +30,7 @@ impl R {
         OeR::new(((self.bits >> 3) & 1) != 0)
     }
 }
-#[doc = "UART receive status and error clear The RSR/ECR register is the receive status register and error clear register. In addition to the DR register, receive status can also be read from the RSR register. If the status is read from this register, then the status information corresponds to the entry read from DR before reading RSR. The status information for overrun is set immediately when an overrun condition occurs. The RSR register cannot be written. Read-only status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rsr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART receive status and error clear The RSR/ECR register is the receive status register and error clear register. In addition to the DR register, receive status can also be read from the RSR register. If the status is read from this register, then the status information corresponds to the entry read from DR before reading RSR. The status information for overrun is set immediately when an overrun condition occurs. The RSR register cannot be written. Read-only status register\n\nYou can [`read`](crate::Reg::read) this register and get [`rsr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RsrSpec;
 impl crate::RegisterSpec for RsrSpec {
     type Ux = u32;

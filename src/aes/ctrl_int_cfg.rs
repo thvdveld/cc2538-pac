@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - If this bit is 0, the interrupt output is a pulse. If this bit is set to 1, the interrupt is a level interrupt that must be cleared by writing the interrupt clear register. This bit is applicable for both interrupt output signals."]
     #[inline(always)]
-    #[must_use]
     pub fn level(&mut self) -> LevelW<CtrlIntCfgSpec> {
         LevelW::new(self, 0)
     }
 }
-#[doc = "Interrupt configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_int_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_int_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl_int_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl_int_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CtrlIntCfgSpec;
 impl crate::RegisterSpec for CtrlIntCfgSpec {
     type Ux = u32;

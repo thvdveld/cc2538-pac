@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - uDMA channel 0 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    #[must_use]
     pub fn ch0sel(&mut self) -> Ch0selW<Chmap0Spec> {
         Ch0selW::new(self, 0)
     }
     #[doc = "Bits 4:7 - uDMA channel 1 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    #[must_use]
     pub fn ch1sel(&mut self) -> Ch1selW<Chmap0Spec> {
         Ch1selW::new(self, 4)
     }
     #[doc = "Bits 8:11 - uDMA channel 2 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    #[must_use]
     pub fn ch2sel(&mut self) -> Ch2selW<Chmap0Spec> {
         Ch2selW::new(self, 8)
     }
     #[doc = "Bits 12:15 - uDMA channel 3 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    #[must_use]
     pub fn ch3sel(&mut self) -> Ch3selW<Chmap0Spec> {
         Ch3selW::new(self, 12)
     }
     #[doc = "Bits 16:19 - uDMA channel 4 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    #[must_use]
     pub fn ch4sel(&mut self) -> Ch4selW<Chmap0Spec> {
         Ch4selW::new(self, 16)
     }
     #[doc = "Bits 20:23 - uDMA channel 5 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    #[must_use]
     pub fn ch5sel(&mut self) -> Ch5selW<Chmap0Spec> {
         Ch5selW::new(self, 20)
     }
     #[doc = "Bits 24:27 - uDMA channel 6 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    #[must_use]
     pub fn ch6sel(&mut self) -> Ch6selW<Chmap0Spec> {
         Ch6selW::new(self, 24)
     }
     #[doc = "Bits 28:31 - uDMA channel 7 source select See section titled \"Channel Assignments\" in Micro Direct Memory Access chapter."]
     #[inline(always)]
-    #[must_use]
     pub fn ch7sel(&mut self) -> Ch7selW<Chmap0Spec> {
         Ch7selW::new(self, 28)
     }
 }
-#[doc = "DMA channel map select 0 Each 4-bit field of the CHMAP0 register configures the uDMA channel assignment as specified in the uDMA channel assignment table in the \"Channel Assignments\" section.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chmap0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chmap0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA channel map select 0 Each 4-bit field of the CHMAP0 register configures the uDMA channel assignment as specified in the uDMA channel assignment table in the \"Channel Assignments\" section.\n\nYou can [`read`](crate::Reg::read) this register and get [`chmap0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chmap0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Chmap0Spec;
 impl crate::RegisterSpec for Chmap0Spec {
     type Ux = u32;

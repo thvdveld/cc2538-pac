@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The frequency synthesizer failed to achieve lock after time-out, or lock is lost during reception. The receiver must be restarted to clear this error situation. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn nlock(&mut self) -> NlockW<RferrfSpec> {
         NlockW::new(self, 0)
     }
     #[doc = "Bit 1 - Reception of a frame was aborted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn rxabo(&mut self) -> RxaboW<RferrfSpec> {
         RxaboW::new(self, 1)
     }
     #[doc = "Bit 2 - RX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn rxoverf(&mut self) -> RxoverfW<RferrfSpec> {
         RxoverfW::new(self, 2)
     }
     #[doc = "Bit 3 - RX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn rxunderf(&mut self) -> RxunderfW<RferrfSpec> {
         RxunderfW::new(self, 3)
     }
     #[doc = "Bit 4 - TX FIFO overflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn txoverf(&mut self) -> TxoverfW<RferrfSpec> {
         TxoverfW::new(self, 4)
     }
     #[doc = "Bit 5 - TX FIFO underflowed. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn txunderf(&mut self) -> TxunderfW<RferrfSpec> {
         TxunderfW::new(self, 5)
     }
     #[doc = "Bit 6 - A command strobe was issued when it could not be processed. Triggered if trying to disable the radio when it is already disabled, or when trying to do a SACK, SACKPEND, or SNACK command when not in active RX. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn strobeerr(&mut self) -> StrobeerrW<RferrfSpec> {
         StrobeerrW::new(self, 6)
     }
 }
-#[doc = "RF error interrupt flags\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rferrf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rferrf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RF error interrupt flags\n\nYou can [`read`](crate::Reg::read) this register and get [`rferrf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rferrf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RferrfSpec;
 impl crate::RegisterSpec for RferrfSpec {
     type Ux = u32;

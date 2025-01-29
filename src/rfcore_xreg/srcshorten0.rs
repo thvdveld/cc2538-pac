@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - 7:0 part of the 24-bit word SHORT_ADDR_EN that enables or disables source address matching for each of the 24 short address table entries Optional safety feature: To ensure that an entry in the source matching table is not used while it is being updated, set the corresponding SHORT_ADDR_EN bit to 0 while updating."]
     #[inline(always)]
-    #[must_use]
     pub fn short_addr_en(&mut self) -> ShortAddrEnW<Srcshorten0Spec> {
         ShortAddrEnW::new(self, 0)
     }
 }
-#[doc = "Short address matching\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`srcshorten0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`srcshorten0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Short address matching\n\nYou can [`read`](crate::Reg::read) this register and get [`srcshorten0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srcshorten0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Srcshorten0Spec;
 impl crate::RegisterSpec for Srcshorten0Spec {
     type Ux = u32;

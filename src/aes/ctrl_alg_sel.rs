@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - If set to one, selects the Key Store as destination for the DMA The maximum transfer size to DMA engine is set to 32 bytes (however transfers of 16, 24 and 32 bytes are allowed)"]
     #[inline(always)]
-    #[must_use]
     pub fn keystore(&mut self) -> KeystoreW<CtrlAlgSelSpec> {
         KeystoreW::new(self, 0)
     }
     #[doc = "Bit 1 - If set to one, selects the AES engine as source/destination for the DMA The read and write maximum transfer size to the DMA engine is set to 16 bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn aes(&mut self) -> AesW<CtrlAlgSelSpec> {
         AesW::new(self, 1)
     }
     #[doc = "Bit 2 - If set to one, selects the hash engine as destination for the DMA The maximum transfer size to DMA engine is set to 64 bytes for reading and 32 bytes for writing (the latter is only applicable if the hash result is written out through the DMA)."]
     #[inline(always)]
-    #[must_use]
     pub fn hash(&mut self) -> HashW<CtrlAlgSelSpec> {
         HashW::new(self, 2)
     }
     #[doc = "Bit 31 - If this bit is cleared to 0, the DMA operation involves only data. If this bit is set, the DMA operation includes a TAG (Authentication Result / Digest). For SHA-256 operation, a DMA must be set up for both input data and TAG. For any other selected module, setting this bit only allows a DMA that reads the TAG. No data allowed to be transferred to or from the selected module via the DMA."]
     #[inline(always)]
-    #[must_use]
     pub fn tag(&mut self) -> TagW<CtrlAlgSelSpec> {
         TagW::new(self, 31)
     }
 }
-#[doc = "Algorithm select This algorithm selection register configures the internal destination of the DMA controller.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_alg_sel::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_alg_sel::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Algorithm select This algorithm selection register configures the internal destination of the DMA controller.\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl_alg_sel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl_alg_sel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CtrlAlgSelSpec;
 impl crate::RegisterSpec for CtrlAlgSelSpec {
     type Ux = u32;

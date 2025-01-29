@@ -48,24 +48,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables detection of and entry into suspend mode."]
     #[inline(always)]
-    #[must_use]
     pub fn suspenden(&mut self) -> SuspendenW<PowSpec> {
         SuspendenW::new(self, 0)
     }
     #[doc = "Bit 2 - Drives resume signaling for remote wakeup According to the USB Specification, the resume signal must be held active for at least 1 ms and no more than 15 ms. It is recommended to keep this bit set for approximately 10 ms."]
     #[inline(always)]
-    #[must_use]
     pub fn resume(&mut self) -> ResumeW<PowSpec> {
         ResumeW::new(self, 2)
     }
     #[doc = "Bit 7 - For isochronous mode IN endpoints: When set, the USB controller will wait for an SOF token from the time USB_CSIL.INPKTRDY is set before sending the packet. If an IN token is received before an SOF token, then a zero length data packet will be sent."]
     #[inline(always)]
-    #[must_use]
     pub fn isowaitsof(&mut self) -> IsowaitsofW<PowSpec> {
         IsowaitsofW::new(self, 7)
     }
 }
-#[doc = "Power management and control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pow::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pow::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Power management and control register\n\nYou can [`read`](crate::Reg::read) this register and get [`pow::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pow::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PowSpec;
 impl crate::RegisterSpec for PowSpec {
     type Ux = u32;

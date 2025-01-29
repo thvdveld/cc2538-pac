@@ -79,7 +79,7 @@ impl R {
         Lme5misR::new(((self.bits >> 15) & 1) != 0)
     }
 }
-#[doc = "UART masked interrupt status The MIS register is the masked interrupt status register. On a read, this register gives the current masked status value of the corresponding interrupt. A write has no effect.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART masked interrupt status The MIS register is the masked interrupt status register. On a read, this register gives the current masked status value of the corresponding interrupt. A write has no effect.\n\nYou can [`read`](crate::Reg::read) this register and get [`mis::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MisSpec;
 impl crate::RegisterSpec for MisSpec {
     type Ux = u32;

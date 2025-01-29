@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - When written, the written data is inverted and ANDed with the RXENMASK and stored in RXENMASK. For example, if 1 is written to one or more bit positions in this register, the corresponding bits are cleared in RXENMASK."]
     #[inline(always)]
-    #[must_use]
     pub fn rxenmaskclr(&mut self) -> RxenmaskclrW<RxmaskclrSpec> {
         RxenmaskclrW::new(self, 0)
     }
 }
-#[doc = "RX disabling\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rxmaskclr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rxmaskclr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RX disabling\n\nYou can [`read`](crate::Reg::read) this register and get [`rxmaskclr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rxmaskclr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RxmaskclrSpec;
 impl crate::RegisterSpec for RxmaskclrSpec {
     type Ux = u32;

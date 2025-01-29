@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bits 2:3 - Controls the 16-bit random-number generator (see User Guide Chapter 16) When 01 is written, the setting automatically returns to 00 when the operation completes. 00: Normal operation (13x unrolling) 01: Clock the LFSR once (13x unrolling) 10: Reserved 11: Stopped. The random-number generator is turned off."]
     #[inline(always)]
-    #[must_use]
     pub fn rctrl(&mut self) -> RctrlW<Adccon1Spec> {
         RctrlW::new(self, 2)
     }
     #[doc = "Bits 4:5 - Start select Selects the event that starts a new conversion sequence 00: Not implemented 01: Full speed. Do not wait for triggers 10: Timer 1 channel 0 compare event 11: ADCCON1.ST = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn stsel(&mut self) -> StselW<Adccon1Spec> {
         StselW::new(self, 4)
     }
     #[doc = "Bit 6 - Start conversion Read as 1 until conversion completes 0: No conversion in progress. 1: Start a conversion sequence if ADCCON1.STSEL = 11 and no sequence is running."]
     #[inline(always)]
-    #[must_use]
     pub fn st(&mut self) -> StW<Adccon1Spec> {
         StW::new(self, 6)
     }
     #[doc = "Bit 7 - End of conversion. Cleared when ADCH has been read. If a new conversion is completed before the previous data has been read, the EOC bit remains high. 0: Conversion not complete 1: Conversion completed"]
     #[inline(always)]
-    #[must_use]
     pub fn eoc(&mut self) -> EocW<Adccon1Spec> {
         EocW::new(self, 7)
     }
 }
-#[doc = "This register controls the ADC.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`adccon1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`adccon1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls the ADC.\n\nYou can [`read`](crate::Reg::read) this register and get [`adccon1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`adccon1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Adccon1Spec;
 impl crate::RegisterSpec for Adccon1Spec {
     type Ux = u32;

@@ -58,7 +58,7 @@ impl R {
         ChipidR::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
-#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diecfg0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "These settings are a function of the FLASH information page bit settings, which are programmed during production test, and are subject for specific configuration for multiple device flavors of cc2538.\n\nYou can [`read`](crate::Reg::read) this register and get [`diecfg0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Diecfg0Spec;
 impl crate::RegisterSpec for Diecfg0Spec {
     type Ux = u32;

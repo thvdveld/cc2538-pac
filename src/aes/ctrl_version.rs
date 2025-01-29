@@ -39,7 +39,7 @@ impl R {
         MajorVersionR::new(((self.bits >> 24) & 0x0f) as u8)
     }
 }
-#[doc = "Version register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_version::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Version register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl_version::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CtrlVersionSpec;
 impl crate::RegisterSpec for CtrlVersionSpec {
     type Ux = u32;

@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Defines the kind of TX filter that is used. The normal TX filter is as defined by the IEEE 802.15.4 standard. Extra filtering may be applied to lower the out-of-band emissions. 0: Normal TX filtering 1: Enable extra filtering"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_filter(&mut self) -> TxFilterW<Mdmctrl0Spec> {
         TxFilterW::new(self, 0)
     }
     #[doc = "Bits 1:4 - The number of preamble bytes (two zero-symbols) to be sent in TX mode before the SFD, encoded in steps of 2 symbols (1 byte). The reset value of 2 is compliant with IEEE 802.15.4. 0000: 2 leading-zero bytes 0001: 3 leading-zero bytes 0010: 4 leading-zero bytes ... 1111: 17 leading-zero bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn preamble_length(&mut self) -> PreambleLengthW<Mdmctrl0Spec> {
         PreambleLengthW::new(self, 1)
     }
     #[doc = "Bit 5 - Defines the behavior or the frequency offset averaging filter. 0: Lock average level after preamble match. Restart frequency offset calibration when searching for the next frame. 1: Continuously update average level."]
     #[inline(always)]
-    #[must_use]
     pub fn demod_avg_mode(&mut self) -> DemodAvgModeW<Mdmctrl0Spec> {
         DemodAvgModeW::new(self, 5)
     }
     #[doc = "Bits 6:7 - Sets how many zero symbols must be detected before the sync word when searching for sync. Only one zero symbol is required to have a correlation value above the correlation threshold set in the MDMCTRL1 register. 00: Reserved 01: 1 zero symbol 10: 2 zero symbols 11: 3 zero symbols"]
     #[inline(always)]
-    #[must_use]
     pub fn dem_num_zeros(&mut self) -> DemNumZerosW<Mdmctrl0Spec> {
         DemNumZerosW::new(self, 6)
     }
 }
-#[doc = "Controls modem\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mdmctrl0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mdmctrl0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Controls modem\n\nYou can [`read`](crate::Reg::read) this register and get [`mdmctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mdmctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Mdmctrl0Spec;
 impl crate::RegisterSpec for Mdmctrl0Spec {
     type Ux = u32;

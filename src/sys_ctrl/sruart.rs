@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: UART0 module is not reset 1: UART0 module is reset"]
     #[inline(always)]
-    #[must_use]
     pub fn uart0(&mut self) -> Uart0W<SruartSpec> {
         Uart0W::new(self, 0)
     }
     #[doc = "Bit 1 - 0: UART1 module is not reset 1: UART1 module is reset"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1(&mut self) -> Uart1W<SruartSpec> {
         Uart1W::new(self, 1)
     }
 }
-#[doc = "This register controls the reset for UART\\[1:0\\].\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sruart::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sruart::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls the reset for UART\\[1:0\\].\n\nYou can [`read`](crate::Reg::read) this register and get [`sruart::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sruart::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SruartSpec;
 impl crate::RegisterSpec for SruartSpec {
     type Ux = u32;

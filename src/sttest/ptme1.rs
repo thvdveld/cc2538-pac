@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 8 - UART0 test mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn uart0tme(&mut self) -> Uart0tmeW<Ptme1Spec> {
         Uart0tmeW::new(self, 8)
     }
     #[doc = "Bit 9 - UART1 test mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1tme(&mut self) -> Uart1tmeW<Ptme1Spec> {
         Uart1tmeW::new(self, 9)
     }
 }
-#[doc = "Peripheral test mode enable 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptme1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptme1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Peripheral test mode enable 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ptme1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ptme1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ptme1Spec;
 impl crate::RegisterSpec for Ptme1Spec {
     type Ux = u32;

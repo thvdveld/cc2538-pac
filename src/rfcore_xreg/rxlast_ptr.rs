@@ -9,7 +9,7 @@ impl R {
         RxlastPtrR::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "RX FIFO pointer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rxlast_ptr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RX FIFO pointer\n\nYou can [`read`](crate::Reg::read) this register and get [`rxlast_ptr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RxlastPtrSpec;
 impl crate::RegisterSpec for RxlastPtrSpec {
     type Ux = u32;

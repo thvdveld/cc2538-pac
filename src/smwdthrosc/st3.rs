@@ -24,12 +24,11 @@ impl W {
 of the Sleep Timer count. When writing this register sets the high bits \\[31:24\\]
 of the compare value. The value read is latched at the time of reading register ST0. The value written is latched when ST0 is written."]
     #[inline(always)]
-    #[must_use]
     pub fn st3(&mut self) -> St3W<St3Spec> {
         St3W::new(self, 0)
     }
 }
-#[doc = "Sleep Timer 3 count and compare\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`st3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`st3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Sleep Timer 3 count and compare\n\nYou can [`read`](crate::Reg::read) this register and get [`st3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`st3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct St3Spec;
 impl crate::RegisterSpec for St3Spec {
     type Ux = u32;

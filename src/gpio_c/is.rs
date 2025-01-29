@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Bits set: Level on corresponding pin is detected Bits cleared: Edge on corresponding pin is detected"]
     #[inline(always)]
-    #[must_use]
     pub fn is(&mut self) -> IsW<IsSpec> {
         IsW::new(self, 0)
     }
 }
-#[doc = "The IS register is the interrupt sense register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`is::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`is::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The IS register is the interrupt sense register.\n\nYou can [`read`](crate::Reg::read) this register and get [`is::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`is::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IsSpec;
 impl crate::RegisterSpec for IsSpec {
     type Ux = u32;

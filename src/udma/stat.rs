@@ -23,7 +23,7 @@ impl R {
         DmachansR::new(((self.bits >> 16) & 0x1f) as u8)
     }
 }
-#[doc = "DMA status The STAT register returns the status of the uDMA controller. This register cannot be read when the uDMA controller is in the reset state.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA status The STAT register returns the status of the uDMA controller. This register cannot be read when the uDMA controller is in the reset state.\n\nYou can [`read`](crate::Reg::read) this register and get [`stat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct StatSpec;
 impl crate::RegisterSpec for StatSpec {
     type Ux = u32;

@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Tune crystal oscillator The default setting 1111 leaves the XOSC untuned. Changing the setting from the default setting (1111) switches in extra capacitance to the oscillator, effectively lowering the XOSC frequency. Hence, a higher setting gives a higher frequency."]
     #[inline(always)]
-    #[must_use]
     pub fn xosc32m_tune(&mut self) -> Xosc32mTuneW<FreqtuneSpec> {
         Xosc32mTuneW::new(self, 0)
     }
 }
-#[doc = "Crystal oscillator frequency tuning\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`freqtune::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`freqtune::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Crystal oscillator frequency tuning\n\nYou can [`read`](crate::Reg::read) this register and get [`freqtune::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`freqtune::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FreqtuneSpec;
 impl crate::RegisterSpec for FreqtuneSpec {
     type Ux = u32;

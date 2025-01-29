@@ -5,12 +5,11 @@ pub type MastenW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Controller master enable 0: Disables the uDMA controller. 1: Enables the uDMA controller."]
     #[inline(always)]
-    #[must_use]
     pub fn masten(&mut self) -> MastenW<CfgSpec> {
         MastenW::new(self, 0)
     }
 }
-#[doc = "DMA configuration The CFG register controls the configuration of the uDMA controller.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA configuration The CFG register controls the configuration of the uDMA controller.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CfgSpec;
 impl crate::RegisterSpec for CfgSpec {
     type Ux = u32;

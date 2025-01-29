@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Receive and send The R/S bit specifies if the next operation is a receive (high) or transmit (low). 0: Transmit 1: Receive"]
     #[inline(always)]
-    #[must_use]
     pub fn rs(&mut self) -> RsW<SaSpec> {
         RsW::new(self, 0)
     }
     #[doc = "Bits 1:7 - I2C slave address"]
     #[inline(always)]
-    #[must_use]
     pub fn sa(&mut self) -> SaW<SaSpec> {
         SaW::new(self, 1)
     }
 }
-#[doc = "I2C master slave address This register consists of eight bits, seven address bits (A6-A0), and a receive and send bit, which determines if the next operation is a receive (high) or transmit (low).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sa::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sa::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C master slave address This register consists of eight bits, seven address bits (A6-A0), and a receive and send bit, which determines if the next operation is a receive (high) or transmit (low).\n\nYou can [`read`](crate::Reg::read) this register and get [`sa::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sa::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SaSpec;
 impl crate::RegisterSpec for SaSpec {
     type Ux = u32;

@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bits 1:2 - These bits are used to modify the frame type field of a received frame before frame type filtering is performed. The modification does not influence the frame that is written to the RX FIFO. 00: Leave the frame type as it is. 01: Invert MSB of the frame type. 10: Set MSB of the frame type to 0. 11: Set MSB of the frame type to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn modify_ft_filter(&mut self) -> ModifyFtFilterW<Frmfilt1Spec> {
         ModifyFtFilterW::new(self, 1)
     }
     #[doc = "Bit 3 - Defines whether beacon frames are accepted or not. Beacon frames have frame type = 000. 0: Reject 1: Accept"]
     #[inline(always)]
-    #[must_use]
     pub fn accept_ft_0_beacon(&mut self) -> AcceptFt0BeaconW<Frmfilt1Spec> {
         AcceptFt0BeaconW::new(self, 3)
     }
     #[doc = "Bit 4 - Defines whether data frames are accepted or not. Data frames have frame type = 001. 0: Reject 1: Accept"]
     #[inline(always)]
-    #[must_use]
     pub fn accept_ft_1_data(&mut self) -> AcceptFt1DataW<Frmfilt1Spec> {
         AcceptFt1DataW::new(self, 4)
     }
     #[doc = "Bit 5 - Defines whether acknowledgment frames are accepted or not. Acknowledgement frames have frame type = 010. 0: Reject 1: Accept"]
     #[inline(always)]
-    #[must_use]
     pub fn accept_ft_2_ack(&mut self) -> AcceptFt2AckW<Frmfilt1Spec> {
         AcceptFt2AckW::new(self, 5)
     }
     #[doc = "Bit 6 - Defines whether MAC command frames are accepted or not. MAC command frames have frame type = 011. 0: Reject 1: Accept"]
     #[inline(always)]
-    #[must_use]
     pub fn accept_ft_3_mac_cmd(&mut self) -> AcceptFt3MacCmdW<Frmfilt1Spec> {
         AcceptFt3MacCmdW::new(self, 6)
     }
 }
-#[doc = "The frame filtering function rejects unintended frames as specified by IEEE 802.15.4, section 7.5.6.2, third filtering level. In addition, it provides filtering on: - The eight different frame types (see the FRMFILT1 register) - The reserved bits in the frame control field (FCF) The function is controlled by: - The FRMFILT0 and FRMFILT1 registers - The PAN_ID, SHORT_ADDR, and EXT_ADDR values in RAM\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`frmfilt1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`frmfilt1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The frame filtering function rejects unintended frames as specified by IEEE 802.15.4, section 7.5.6.2, third filtering level. In addition, it provides filtering on: - The eight different frame types (see the FRMFILT1 register) - The reserved bits in the frame control field (FCF) The function is controlled by: - The FRMFILT0 and FRMFILT1 registers - The PAN_ID, SHORT_ADDR, and EXT_ADDR values in RAM\n\nYou can [`read`](crate::Reg::read) this register and get [`frmfilt1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`frmfilt1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Frmfilt1Spec;
 impl crate::RegisterSpec for Frmfilt1Spec {
     type Ux = u32;

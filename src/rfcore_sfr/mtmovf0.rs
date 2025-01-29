@@ -20,12 +20,11 @@ impl W {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[7:0\\]
 of an internal register, depending on the value of MTMSEL.MTMOVFSEL. When reading the MTMOVF0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 0, the overflow counter value (MTovf) is latched. When reading the MTM0 register with MTMSEL.MTMOVFSEL set to 000 and MTCTRL.LATCH_MODE set to 1, the overflow counter value (MTovf) is latched."]
     #[inline(always)]
-    #[must_use]
     pub fn mtmovf0(&mut self) -> Mtmovf0W<Mtmovf0Spec> {
         Mtmovf0W::new(self, 0)
     }
 }
-#[doc = "MAC Timer multiplexed overflow register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mtmovf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mtmovf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MAC Timer multiplexed overflow register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`mtmovf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtmovf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Mtmovf0Spec;
 impl crate::RegisterSpec for Mtmovf0Spec {
     type Ux = u32;

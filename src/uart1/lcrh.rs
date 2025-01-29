@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - UART send break 1: A low level is continually output on the UnTx signal, after completing transmission of the current character. For the proper execution of the break command, software must set this bit for at least two frames (character periods). 0: Normal use"]
     #[inline(always)]
-    #[must_use]
     pub fn brk(&mut self) -> BrkW<LcrhSpec> {
         BrkW::new(self, 0)
     }
     #[doc = "Bit 1 - UART parity enable 1: Parity checking and generation is enabled. 0: Parity is disabled and no parity bit is added to the data frame."]
     #[inline(always)]
-    #[must_use]
     pub fn pen(&mut self) -> PenW<LcrhSpec> {
         PenW::new(self, 1)
     }
     #[doc = "Bit 2 - UART even parity select 1: Even parity generation and checking is performed during transmission and reception, which checks for an even number of 1s in data and parity bits. 0: Odd parity is performed, which checks for an odd number of 1s. This bit has no effect when parity is disabled by the PEN bit."]
     #[inline(always)]
-    #[must_use]
     pub fn eps(&mut self) -> EpsW<LcrhSpec> {
         EpsW::new(self, 2)
     }
     #[doc = "Bit 3 - UART two stop bits select 1: Two stop bits are transmitted at the end of a frame. The receive logic does not check for two stop bits being received. 0: One stop bit is transmitted at the end of a frame."]
     #[inline(always)]
-    #[must_use]
     pub fn stp2(&mut self) -> Stp2W<LcrhSpec> {
         Stp2W::new(self, 3)
     }
     #[doc = "Bit 4 - UART enable FIFOs 1: The transmit and receive FIFObuffers are enabled (FIFOmode). 0: The FIFOs are disabled (Character mode). The FIFOs become 1-byte-deep holding registers."]
     #[inline(always)]
-    #[must_use]
     pub fn fen(&mut self) -> FenW<LcrhSpec> {
         FenW::new(self, 4)
     }
     #[doc = "Bits 5:6 - UART word length The bits indicate the number of data bits transmitted or received in a frame as follows: 0x0: 5 bits (default) 0x1: 6 bits 0x2: 7 bits 0x3: 8 bits"]
     #[inline(always)]
-    #[must_use]
     pub fn wlen(&mut self) -> WlenW<LcrhSpec> {
         WlenW::new(self, 5)
     }
     #[doc = "Bit 7 - UART stick parity select When bits 1, 2, and 7 of UARTLCRH are set, the parity bit is transmitted and checked as a 0. When bits 1 and 7 are set and 2 is cleared, the parity bit is transmitted and checked as a 1. When this bit is cleared, stick parity is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn sps(&mut self) -> SpsW<LcrhSpec> {
         SpsW::new(self, 7)
     }
 }
-#[doc = "UART line control The LCRH register is the line control register. Serial parameters such as data length, parity, and stop bit selection are implemented in this register. When updating the baud-rate divisor (IBRD and/or IFRD), the LCRH register must also be written. The write strobe for the baud-rate divisor registers is tied to the LCRH register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcrh::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcrh::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART line control The LCRH register is the line control register. Serial parameters such as data length, parity, and stop bit selection are implemented in this register. When updating the baud-rate divisor (IBRD and/or IFRD), the LCRH register must also be written. The write strobe for the baud-rate divisor registers is tied to the LCRH register.\n\nYou can [`read`](crate::Reg::read) this register and get [`lcrh::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lcrh::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LcrhSpec;
 impl crate::RegisterSpec for LcrhSpec {
     type Ux = u32;

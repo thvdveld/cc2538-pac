@@ -23,7 +23,7 @@ impl R {
         StopmisR::new(((self.bits >> 2) & 1) != 0)
     }
 }
-#[doc = "I2C slave masked interrupt status This register specifies whether an interrupt was signaled.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C slave masked interrupt status This register specifies whether an interrupt was signaled.\n\nYou can [`read`](crate::Reg::read) this register and get [`mis::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MisSpec;
 impl crate::RegisterSpec for MisSpec {
     type Ux = u32;

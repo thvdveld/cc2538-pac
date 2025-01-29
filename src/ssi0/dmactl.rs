@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Receive DMA enable 0: uDMA for the receive FIFO is disabled. 1: uDMA for the receive FIFO is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn rxdmae(&mut self) -> RxdmaeW<DmactlSpec> {
         RxdmaeW::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit DMA enable 0: uDMA for the transmit FIFO is disabled. 1: uDMA for the transmit FIFO is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn txdmae(&mut self) -> TxdmaeW<DmactlSpec> {
         TxdmaeW::new(self, 1)
     }
 }
-#[doc = "The DMACTL register is the uDMA control register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmactl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmactl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The DMACTL register is the uDMA control register.\n\nYou can [`read`](crate::Reg::read) this register and get [`dmactl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmactl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DmactlSpec;
 impl crate::RegisterSpec for DmactlSpec {
     type Ux = u32;

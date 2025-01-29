@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Select one peripheral signal output for PA2."]
     #[inline(always)]
-    #[must_use]
     pub fn pa2_sel(&mut self) -> Pa2SelW<Pa2SelSpec> {
         Pa2SelW::new(self, 0)
     }
 }
-#[doc = "Peripheral select control for PA2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pa2_sel::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pa2_sel::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Peripheral select control for PA2\n\nYou can [`read`](crate::Reg::read) this register and get [`pa2_sel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pa2_sel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Pa2SelSpec;
 impl crate::RegisterSpec for Pa2SelSpec {
     type Ux = u32;

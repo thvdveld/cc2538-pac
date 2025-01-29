@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables DAC2 for enhanced ADC stability"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_dac2_en(&mut self) -> AdcDac2EnW<Adctest0Spec> {
         AdcDac2EnW::new(self, 0)
     }
     #[doc = "Bits 1:3 - Gm-control for test and debug"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_gm_adj(&mut self) -> AdcGmAdjW<Adctest0Spec> {
         AdcGmAdjW::new(self, 1)
     }
     #[doc = "Bits 4:5 - Quantizer threshold control for test and debug"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_quant_adj(&mut self) -> AdcQuantAdjW<Adctest0Spec> {
         AdcQuantAdjW::new(self, 4)
     }
     #[doc = "Bits 6:7 - Quantizer threshold control for test and debug"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_vref_adj(&mut self) -> AdcVrefAdjW<Adctest0Spec> {
         AdcVrefAdjW::new(self, 6)
     }
 }
-#[doc = "ADC tuning\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`adctest0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`adctest0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ADC tuning\n\nYou can [`read`](crate::Reg::read) this register and get [`adctest0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`adctest0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Adctest0Spec;
 impl crate::RegisterSpec for Adctest0Spec {
     type Ux = u32;

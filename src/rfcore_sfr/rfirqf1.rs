@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - An acknowledgement frame has been completely transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn txackdone(&mut self) -> TxackdoneW<Rfirqf1Spec> {
         TxackdoneW::new(self, 0)
     }
     #[doc = "Bit 1 - A complete frame has been transmitted. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn txdone(&mut self) -> TxdoneW<Rfirqf1Spec> {
         TxdoneW::new(self, 1)
     }
     #[doc = "Bit 2 - Radio state-machine has entered the IDLE state. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn rfidle(&mut self) -> RfidleW<Rfirqf1Spec> {
         RfidleW::new(self, 2)
     }
     #[doc = "Bit 3 - Manual interrupt generated from CSP 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn csp_manint(&mut self) -> CspManintW<Rfirqf1Spec> {
         CspManintW::new(self, 3)
     }
     #[doc = "Bit 4 - CSP has stopped program execution. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn csp_stop(&mut self) -> CspStopW<Rfirqf1Spec> {
         CspStopW::new(self, 4)
     }
     #[doc = "Bit 5 - Execution continued after a wait instruction in CSP. 0: No interrupt pending 1: Interrupt pending"]
     #[inline(always)]
-    #[must_use]
     pub fn csp_wait(&mut self) -> CspWaitW<Rfirqf1Spec> {
         CspWaitW::new(self, 5)
     }
 }
-#[doc = "RF interrupt flags\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfirqf1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rfirqf1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RF interrupt flags\n\nYou can [`read`](crate::Reg::read) this register and get [`rfirqf1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rfirqf1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Rfirqf1Spec;
 impl crate::RegisterSpec for Rfirqf1Spec {
     type Ux = u32;

@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - 00: No action 01: PM1 10: PM2 11: PM3"]
     #[inline(always)]
-    #[must_use]
     pub fn pm(&mut self) -> PmW<PmctlSpec> {
         PmW::new(self, 0)
     }
 }
-#[doc = "This register controls the power mode. Note: The Corresponding PM is not entered before the WFI instruction is asserted. To enter PM1-3 the DEEPSLEEP bit in SYSCTRL must be 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pmctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pmctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls the power mode. Note: The Corresponding PM is not entered before the WFI instruction is asserted. To enter PM1-3 the DEEPSLEEP bit in SYSCTRL must be 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`pmctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pmctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PmctlSpec;
 impl crate::RegisterSpec for PmctlSpec {
     type Ux = u32;

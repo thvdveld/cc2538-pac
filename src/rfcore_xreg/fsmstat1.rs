@@ -58,7 +58,7 @@ impl R {
         FifoR::new(((self.bits >> 7) & 1) != 0)
     }
 }
-#[doc = "Radio status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fsmstat1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Radio status register\n\nYou can [`read`](crate::Reg::read) this register and get [`fsmstat1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Fsmstat1Spec;
 impl crate::RegisterSpec for Fsmstat1Spec {
     type Ux = u32;

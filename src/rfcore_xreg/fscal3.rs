@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Calibration accuracy setting for the cap_array calibration part of the calibration 00: 80 XOSC periods 01: 100 XOSC periods 10: 125 XOSC periods 11: 250 XOSC periods"]
     #[inline(always)]
-    #[must_use]
     pub fn vco_caparr_cal_ctrl(&mut self) -> VcoCaparrCalCtrlW<Fscal3Spec> {
         VcoCaparrCalCtrlW::new(self, 0)
     }
     #[doc = "Bits 2:5 - Bit vector for programming varactor control voltage from VC DAC"]
     #[inline(always)]
-    #[must_use]
     pub fn vco_vc_dac(&mut self) -> VcoVcDacW<Fscal3Spec> {
         VcoVcDacW::new(self, 2)
     }
     #[doc = "Bit 6 - Enables the VCO DAC when 1"]
     #[inline(always)]
-    #[must_use]
     pub fn vco_dac_en_ov(&mut self) -> VcoDacEnOvW<Fscal3Spec> {
         VcoDacEnOvW::new(self, 6)
     }
 }
-#[doc = "Tune frequency calibration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fscal3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fscal3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Tune frequency calibration\n\nYou can [`read`](crate::Reg::read) this register and get [`fscal3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fscal3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Fscal3Spec;
 impl crate::RegisterSpec for Fscal3Spec {
     type Ux = u32;

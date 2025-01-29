@@ -295,198 +295,166 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Port A bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pairc0(&mut self) -> Pairc0W<PEdgeCtrlSpec> {
         Pairc0W::new(self, 0)
     }
     #[doc = "Bit 1 - Port A bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pairc1(&mut self) -> Pairc1W<PEdgeCtrlSpec> {
         Pairc1W::new(self, 1)
     }
     #[doc = "Bit 2 - Port A bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pairc2(&mut self) -> Pairc2W<PEdgeCtrlSpec> {
         Pairc2W::new(self, 2)
     }
     #[doc = "Bit 3 - Port A bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pairc3(&mut self) -> Pairc3W<PEdgeCtrlSpec> {
         Pairc3W::new(self, 3)
     }
     #[doc = "Bit 4 - Port A bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pairc4(&mut self) -> Pairc4W<PEdgeCtrlSpec> {
         Pairc4W::new(self, 4)
     }
     #[doc = "Bit 5 - Port A bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pairc5(&mut self) -> Pairc5W<PEdgeCtrlSpec> {
         Pairc5W::new(self, 5)
     }
     #[doc = "Bit 6 - Port A bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pairc6(&mut self) -> Pairc6W<PEdgeCtrlSpec> {
         Pairc6W::new(self, 6)
     }
     #[doc = "Bit 7 - Port A bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pairc7(&mut self) -> Pairc7W<PEdgeCtrlSpec> {
         Pairc7W::new(self, 7)
     }
     #[doc = "Bit 8 - Port B bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pbirc0(&mut self) -> Pbirc0W<PEdgeCtrlSpec> {
         Pbirc0W::new(self, 8)
     }
     #[doc = "Bit 9 - Port B bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pbirc1(&mut self) -> Pbirc1W<PEdgeCtrlSpec> {
         Pbirc1W::new(self, 9)
     }
     #[doc = "Bit 10 - Port B bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pbirc2(&mut self) -> Pbirc2W<PEdgeCtrlSpec> {
         Pbirc2W::new(self, 10)
     }
     #[doc = "Bit 11 - Port B bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pbirc3(&mut self) -> Pbirc3W<PEdgeCtrlSpec> {
         Pbirc3W::new(self, 11)
     }
     #[doc = "Bit 12 - Port B bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pbirc4(&mut self) -> Pbirc4W<PEdgeCtrlSpec> {
         Pbirc4W::new(self, 12)
     }
     #[doc = "Bit 13 - Port B bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pbirc5(&mut self) -> Pbirc5W<PEdgeCtrlSpec> {
         Pbirc5W::new(self, 13)
     }
     #[doc = "Bit 14 - Port B bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pbirc6(&mut self) -> Pbirc6W<PEdgeCtrlSpec> {
         Pbirc6W::new(self, 14)
     }
     #[doc = "Bit 15 - Port B bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pbirc7(&mut self) -> Pbirc7W<PEdgeCtrlSpec> {
         Pbirc7W::new(self, 15)
     }
     #[doc = "Bit 16 - Port C bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pcirc0(&mut self) -> Pcirc0W<PEdgeCtrlSpec> {
         Pcirc0W::new(self, 16)
     }
     #[doc = "Bit 17 - Port C bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pcirc1(&mut self) -> Pcirc1W<PEdgeCtrlSpec> {
         Pcirc1W::new(self, 17)
     }
     #[doc = "Bit 18 - Port C bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pcirc2(&mut self) -> Pcirc2W<PEdgeCtrlSpec> {
         Pcirc2W::new(self, 18)
     }
     #[doc = "Bit 19 - Port C bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pcirc3(&mut self) -> Pcirc3W<PEdgeCtrlSpec> {
         Pcirc3W::new(self, 19)
     }
     #[doc = "Bit 20 - Port C bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pcirc4(&mut self) -> Pcirc4W<PEdgeCtrlSpec> {
         Pcirc4W::new(self, 20)
     }
     #[doc = "Bit 21 - Port C bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pcirc5(&mut self) -> Pcirc5W<PEdgeCtrlSpec> {
         Pcirc5W::new(self, 21)
     }
     #[doc = "Bit 22 - Port C bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pcirc6(&mut self) -> Pcirc6W<PEdgeCtrlSpec> {
         Pcirc6W::new(self, 22)
     }
     #[doc = "Bit 23 - Port C bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pcirc7(&mut self) -> Pcirc7W<PEdgeCtrlSpec> {
         Pcirc7W::new(self, 23)
     }
     #[doc = "Bit 24 - Port D bit 0 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pdirc0(&mut self) -> Pdirc0W<PEdgeCtrlSpec> {
         Pdirc0W::new(self, 24)
     }
     #[doc = "Bit 25 - Port D bit 1 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pdirc1(&mut self) -> Pdirc1W<PEdgeCtrlSpec> {
         Pdirc1W::new(self, 25)
     }
     #[doc = "Bit 26 - Port D bit 2 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pdirc2(&mut self) -> Pdirc2W<PEdgeCtrlSpec> {
         Pdirc2W::new(self, 26)
     }
     #[doc = "Bit 27 - Port D bit 3 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pdirc3(&mut self) -> Pdirc3W<PEdgeCtrlSpec> {
         Pdirc3W::new(self, 27)
     }
     #[doc = "Bit 28 - Port D bit 4 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pdirc4(&mut self) -> Pdirc4W<PEdgeCtrlSpec> {
         Pdirc4W::new(self, 28)
     }
     #[doc = "Bit 29 - Port D bit 5 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pdirc5(&mut self) -> Pdirc5W<PEdgeCtrlSpec> {
         Pdirc5W::new(self, 29)
     }
     #[doc = "Bit 30 - Port D bit 6 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pdirc6(&mut self) -> Pdirc6W<PEdgeCtrlSpec> {
         Pdirc6W::new(self, 30)
     }
     #[doc = "Bit 31 - Port D bit 7 interrupt request condition: 0: Rising 1: Falling edge"]
     #[inline(always)]
-    #[must_use]
     pub fn pdirc7(&mut self) -> Pdirc7W<PEdgeCtrlSpec> {
         Pdirc7W::new(self, 31)
     }
 }
-#[doc = "The port edge control register is used to control which edge of each port input causes that port to generate a power-up interrupt to the system.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`p_edge_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`p_edge_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The port edge control register is used to control which edge of each port input causes that port to generate a power-up interrupt to the system.\n\nYou can [`read`](crate::Reg::read) this register and get [`p_edge_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`p_edge_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PEdgeCtrlSpec;
 impl crate::RegisterSpec for PEdgeCtrlSpec {
     type Ux = u32;

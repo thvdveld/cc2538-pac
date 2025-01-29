@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Source address matching enable (requires that FRMFILT.FRAME_FILTER_EN = 1)"]
     #[inline(always)]
-    #[must_use]
     pub fn src_match_en(&mut self) -> SrcMatchEnW<SrcmatchSpec> {
         SrcMatchEnW::new(self, 0)
     }
     #[doc = "Bit 1 - Automatic acknowledgment pending flag enable When a frame is received, the pending bit in the (possibly) returned acknowledgment is set automatically when the following conditions are met: - FRMFILT.FRAME_FILTER_EN is set. - SRCMATCH.SRC_MATCH_EN is set. - SRCMATCH.AUTOPEND is set. - The received frame matches the current SRCMATCH.PEND_DATAREQ_ONLY setting. - The received source address matches at least one source match table entry, which is enabled in SHORT_ADDR_EN and SHORT_PEND_EN or in EXT_ADDR_EN and EXT_PEND_EN."]
     #[inline(always)]
-    #[must_use]
     pub fn autopend(&mut self) -> AutopendW<SrcmatchSpec> {
         AutopendW::new(self, 1)
     }
     #[doc = "Bit 2 - When this bit is set, the AUTOPEND function also requires that the received frame is a DATA REQUEST MAC command frame."]
     #[inline(always)]
-    #[must_use]
     pub fn pend_datareq_only(&mut self) -> PendDatareqOnlyW<SrcmatchSpec> {
         PendDatareqOnlyW::new(self, 2)
     }
 }
-#[doc = "Source address matching and pending bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`srcmatch::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`srcmatch::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Source address matching and pending bits\n\nYou can [`read`](crate::Reg::read) this register and get [`srcmatch::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srcmatch::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SrcmatchSpec;
 impl crate::RegisterSpec for SrcmatchSpec {
     type Ux = u32;

@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Index of the currently selected endpoint The index is set to 0 to enable access to endpoint 0 control and status registers The index is set to 1, 2, 3, 4 or 5 to enable access to IN/OUT endpoint 1, 2, 3, 4 or 5 control and status registers, respectively"]
     #[inline(always)]
-    #[must_use]
     pub fn usbindex(&mut self) -> UsbindexW<IndexSpec> {
         UsbindexW::new(self, 0)
     }
 }
-#[doc = "Index register for selecting the endpoint status and control registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`index::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`index::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Index register for selecting the endpoint status and control registers\n\nYou can [`read`](crate::Reg::read) this register and get [`index::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`index::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IndexSpec;
 impl crate::RegisterSpec for IndexSpec {
     type Ux = u32;

@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Single channel select. Selects the channel number of the single conversion that is triggered by writing to ADCCON3. 0000: AIN0 0001: AIN1 0010: AIN2 0011: AIN3 0100: AIN4 0101: AIN5 0110: AIN6 0111: AIN7 1000: AIN0-AIN1 1001: AIN2-AIN3 1010: AIN4-AIN5 1011: AIN6-AIN7 1100: GND 1101: Reserved 1110: Temperature sensor 1111: VDD/3"]
     #[inline(always)]
-    #[must_use]
     pub fn ech(&mut self) -> EchW<Adccon3Spec> {
         EchW::new(self, 0)
     }
     #[doc = "Bits 4:5 - Sets the decimation rate used for the extra conversion The decimation rate also determines the resolution and the time required to complete the conversion. 00: 64 decimation rate (7 bits ENOB) 01: 128 decimation rate (9 bits ENOB) 10: 256 decimation rate (10 bits ENOB) 11: 512 decimation rate (12 bits ENOB)"]
     #[inline(always)]
-    #[must_use]
     pub fn ediv(&mut self) -> EdivW<Adccon3Spec> {
         EdivW::new(self, 4)
     }
     #[doc = "Bits 6:7 - Selects reference voltage used for the extra conversion 00: Internal reference 01: External reference on AIN7 pin 10: AVDD5 pin 11: External reference on AIN6-AIN7 differential input"]
     #[inline(always)]
-    #[must_use]
     pub fn eref(&mut self) -> ErefW<Adccon3Spec> {
         ErefW::new(self, 6)
     }
 }
-#[doc = "This register controls the ADC.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`adccon3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`adccon3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls the ADC.\n\nYou can [`read`](crate::Reg::read) this register and get [`adccon3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`adccon3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Adccon3Spec;
 impl crate::RegisterSpec for Adccon3Spec {
     type Ux = u32;

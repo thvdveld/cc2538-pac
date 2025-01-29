@@ -20,12 +20,11 @@ impl W {
     #[doc = "Bits 0:7 - EXT_ADDR\\[7:0\\]
 The IEEE extended address used during destination address filtering"]
     #[inline(always)]
-    #[must_use]
     pub fn ext_addr0(&mut self) -> ExtAddr0W<ExtAddr0Spec> {
         ExtAddr0W::new(self, 0)
     }
 }
-#[doc = "Local address information This register is stored in RAM; the reset value is undefined.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ext_addr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ext_addr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Local address information This register is stored in RAM; the reset value is undefined.\n\nYou can [`read`](crate::Reg::read) this register and get [`ext_addr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ext_addr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ExtAddr0Spec;
 impl crate::RegisterSpec for ExtAddr0Spec {
     type Ux = u32;

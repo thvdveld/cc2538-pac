@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Random value or CRC result/input data, high byte When written, a CRC16 calculation is triggered, and the data value written is processed starting with the MSB. The value returned when reading from this register is the 8 MSBs of the LFSR. When used for random-number generation, reading this register returns the 8 MSBs of the random number. When used for CRC calculations, reading this register returns the 8 MSBs of the CRC result."]
     #[inline(always)]
-    #[must_use]
     pub fn rndh(&mut self) -> RndhW<RndhSpec> {
         RndhW::new(self, 0)
     }
 }
-#[doc = "This register contains random-number-generator data; high byte.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rndh::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rndh::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register contains random-number-generator data; high byte.\n\nYou can [`read`](crate::Reg::read) this register and get [`rndh::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rndh::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RndhSpec;
 impl crate::RegisterSpec for RndhSpec {
     type Ux = u32;

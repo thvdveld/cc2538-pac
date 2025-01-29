@@ -9,7 +9,7 @@ impl R {
         FifocntOrFifocntlR::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "Indexed register: For USB_INDEX = 0: Number of received bytes in the endpoint 0 FIFO For USB_INDEX = 1-5: Number of received bytes in the OUT endpoint {1-5} FIFO (low byte)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cnt0_cntl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Indexed register: For USB_INDEX = 0: Number of received bytes in the endpoint 0 FIFO For USB_INDEX = 1-5: Number of received bytes in the OUT endpoint {1-5} FIFO (low byte)\n\nYou can [`read`](crate::Reg::read) this register and get [`cnt0_cntl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Cnt0CntlSpec;
 impl crate::RegisterSpec for Cnt0CntlSpec {
     type Ux = u32;

@@ -16,7 +16,7 @@ impl R {
         NrOfChannelsR::new(((self.bits >> 8) & 0x0f) as u8)
     }
 }
-#[doc = "DMAC options register These registers contain information regarding the different options configured in this DMAC.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmac_options::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMAC options register These registers contain information regarding the different options configured in this DMAC.\n\nYou can [`read`](crate::Reg::read) this register and get [`dmac_options::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DmacOptionsSpec;
 impl crate::RegisterSpec for DmacOptionsSpec {
     type Ux = u32;

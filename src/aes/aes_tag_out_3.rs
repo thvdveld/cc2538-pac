@@ -11,7 +11,7 @@ For a host read operation, these registers contain the last 128-bit TAG output o
         AesTagR::new(self.bits)
     }
 }
-#[doc = "TAG registers The tag registers can be accessed via DMA or directly with host reads. These registers buffer the TAG from the EIP-120t. The registers are shared with the intermediate authentication result registers, but cannot be read until the processing is finished. While processing, a read from these registers returns 0s. If an operation does not return a TAG, reading from these registers returns an IV. If an operation returns a TAG plus an IV and both need to be read by the host, the host must first read the TAG followed by the IV. Reading these in reverse order returns the IV twice.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`aes_tag_out_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TAG registers The tag registers can be accessed via DMA or directly with host reads. These registers buffer the TAG from the EIP-120t. The registers are shared with the intermediate authentication result registers, but cannot be read until the processing is finished. While processing, a read from these registers returns 0s. If an operation does not return a TAG, reading from these registers returns an IV. If an operation returns a TAG plus an IV and both need to be read by the host, the host must first read the TAG followed by the IV. Reading these in reverse order returns the IV twice.\n\nYou can [`read`](crate::Reg::read) this register and get [`aes_tag_out_3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AesTagOut3Spec;
 impl crate::RegisterSpec for AesTagOut3Spec {
     type Ux = u32;

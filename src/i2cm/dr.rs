@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Data transferred Data transferred during transaction"]
     #[inline(always)]
-    #[must_use]
     pub fn data(&mut self) -> DataW<DrSpec> {
         DataW::new(self, 0)
     }
 }
-#[doc = "I2C master data This register contains the data to be transmitted when in the master transmit state and the data received when in the master receive state.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C master data This register contains the data to be transmitted when in the master transmit state and the data received when in the master receive state.\n\nYou can [`read`](crate::Reg::read) this register and get [`dr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DrSpec;
 impl crate::RegisterSpec for DrSpec {
     type Ux = u32;

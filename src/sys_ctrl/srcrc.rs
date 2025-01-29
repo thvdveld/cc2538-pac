@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
     #[inline(always)]
-    #[must_use]
     pub fn crc_ren_rf(&mut self) -> CrcRenRfW<SrcrcSpec> {
         CrcRenRfW::new(self, 0)
     }
     #[doc = "Bit 8 - 1: Enable reset of chip if CRC fails. 0: Disable reset feature of chip due to CRC."]
     #[inline(always)]
-    #[must_use]
     pub fn crc_ren_usb(&mut self) -> CrcRenUsbW<SrcrcSpec> {
         CrcRenUsbW::new(self, 8)
     }
 }
-#[doc = "This register controls CRC on state retention.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`srcrc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`srcrc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls CRC on state retention.\n\nYou can [`read`](crate::Reg::read) this register and get [`srcrc::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srcrc::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SrcrcSpec;
 impl crate::RegisterSpec for SrcrcSpec {
     type Ux = u32;

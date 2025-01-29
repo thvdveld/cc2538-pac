@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - If this bit is set to 0, the result available (irq_result_av) interrupt output is disabled and remains 0. If this bit is set to 1, the result available interrupt output is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn result_av(&mut self) -> ResultAvW<CtrlIntEnSpec> {
         ResultAvW::new(self, 0)
     }
     #[doc = "Bit 1 - If this bit is set to 0, the DMA input done (irq_dma_in_done) interrupt output is disabled and remains 0. If this bit is set to 1, the DMA input done interrupt output is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_in_done(&mut self) -> DmaInDoneW<CtrlIntEnSpec> {
         DmaInDoneW::new(self, 1)
     }
 }
-#[doc = "Interrupt enable\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl_int_en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl_int_en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt enable\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl_int_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl_int_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CtrlIntEnSpec;
 impl crate::RegisterSpec for CtrlIntEnSpec {
     type Ux = u32;

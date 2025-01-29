@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bit 3 - 0: No action 1: When written high, the chip is reset in the same manner as a CLD event and is readable from the RST field in the CLOCK_STA register."]
     #[inline(always)]
-    #[must_use]
     pub fn force_warm_reset(&mut self) -> ForceWarmResetW<PwrdbgSpec> {
         ForceWarmResetW::new(self, 3)
     }
 }
-#[doc = "Power debug register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pwrdbg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pwrdbg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Power debug register\n\nYou can [`read`](crate::Reg::read) this register and get [`pwrdbg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwrdbg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PwrdbgSpec;
 impl crate::RegisterSpec for PwrdbgSpec {
     type Ux = u32;

@@ -295,198 +295,166 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Port A bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack0(&mut self) -> Paiack0W<IrqDetectAckSpec> {
         Paiack0W::new(self, 0)
     }
     #[doc = "Bit 1 - Port A bit 1 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack1(&mut self) -> Paiack1W<IrqDetectAckSpec> {
         Paiack1W::new(self, 1)
     }
     #[doc = "Bit 2 - Port A bit 2 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack2(&mut self) -> Paiack2W<IrqDetectAckSpec> {
         Paiack2W::new(self, 2)
     }
     #[doc = "Bit 3 - Port A bit 3 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack3(&mut self) -> Paiack3W<IrqDetectAckSpec> {
         Paiack3W::new(self, 3)
     }
     #[doc = "Bit 4 - Port A bit 4 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack4(&mut self) -> Paiack4W<IrqDetectAckSpec> {
         Paiack4W::new(self, 4)
     }
     #[doc = "Bit 5 - Port A bit 5 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack5(&mut self) -> Paiack5W<IrqDetectAckSpec> {
         Paiack5W::new(self, 5)
     }
     #[doc = "Bit 6 - Port A bit 6 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack6(&mut self) -> Paiack6W<IrqDetectAckSpec> {
         Paiack6W::new(self, 6)
     }
     #[doc = "Bit 7 - Port A bit 7 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn paiack7(&mut self) -> Paiack7W<IrqDetectAckSpec> {
         Paiack7W::new(self, 7)
     }
     #[doc = "Bit 8 - Port B bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack0(&mut self) -> Pbiack0W<IrqDetectAckSpec> {
         Pbiack0W::new(self, 8)
     }
     #[doc = "Bit 9 - Port B bit 1 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack1(&mut self) -> Pbiack1W<IrqDetectAckSpec> {
         Pbiack1W::new(self, 9)
     }
     #[doc = "Bit 10 - Port B bit 2 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack2(&mut self) -> Pbiack2W<IrqDetectAckSpec> {
         Pbiack2W::new(self, 10)
     }
     #[doc = "Bit 11 - Port B bit 3 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack3(&mut self) -> Pbiack3W<IrqDetectAckSpec> {
         Pbiack3W::new(self, 11)
     }
     #[doc = "Bit 12 - Port B bit 4 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack4(&mut self) -> Pbiack4W<IrqDetectAckSpec> {
         Pbiack4W::new(self, 12)
     }
     #[doc = "Bit 13 - Port B bit 5 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack5(&mut self) -> Pbiack5W<IrqDetectAckSpec> {
         Pbiack5W::new(self, 13)
     }
     #[doc = "Bit 14 - Port B bit 6 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack6(&mut self) -> Pbiack6W<IrqDetectAckSpec> {
         Pbiack6W::new(self, 14)
     }
     #[doc = "Bit 15 - Port B bit 7 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pbiack7(&mut self) -> Pbiack7W<IrqDetectAckSpec> {
         Pbiack7W::new(self, 15)
     }
     #[doc = "Bit 16 - Port C bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack0(&mut self) -> Pciack0W<IrqDetectAckSpec> {
         Pciack0W::new(self, 16)
     }
     #[doc = "Bit 17 - Port C bit 1 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack1(&mut self) -> Pciack1W<IrqDetectAckSpec> {
         Pciack1W::new(self, 17)
     }
     #[doc = "Bit 18 - Port C bit 2 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack2(&mut self) -> Pciack2W<IrqDetectAckSpec> {
         Pciack2W::new(self, 18)
     }
     #[doc = "Bit 19 - Port C bit 3 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack3(&mut self) -> Pciack3W<IrqDetectAckSpec> {
         Pciack3W::new(self, 19)
     }
     #[doc = "Bit 20 - Port C bit 4 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack4(&mut self) -> Pciack4W<IrqDetectAckSpec> {
         Pciack4W::new(self, 20)
     }
     #[doc = "Bit 21 - Port C bit 5 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack5(&mut self) -> Pciack5W<IrqDetectAckSpec> {
         Pciack5W::new(self, 21)
     }
     #[doc = "Bit 22 - Port C bit 6 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack6(&mut self) -> Pciack6W<IrqDetectAckSpec> {
         Pciack6W::new(self, 22)
     }
     #[doc = "Bit 23 - Port C bit 7 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pciack7(&mut self) -> Pciack7W<IrqDetectAckSpec> {
         Pciack7W::new(self, 23)
     }
     #[doc = "Bit 24 - Port D bit 0 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack0(&mut self) -> Pdiack0W<IrqDetectAckSpec> {
         Pdiack0W::new(self, 24)
     }
     #[doc = "Bit 25 - Port D bit 1 masked interrupt status: 1: Detected0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack1(&mut self) -> Pdiack1W<IrqDetectAckSpec> {
         Pdiack1W::new(self, 25)
     }
     #[doc = "Bit 26 - Port D bit 2 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack2(&mut self) -> Pdiack2W<IrqDetectAckSpec> {
         Pdiack2W::new(self, 26)
     }
     #[doc = "Bit 27 - Port D bit 3 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack3(&mut self) -> Pdiack3W<IrqDetectAckSpec> {
         Pdiack3W::new(self, 27)
     }
     #[doc = "Bit 28 - Port D bit 4 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack4(&mut self) -> Pdiack4W<IrqDetectAckSpec> {
         Pdiack4W::new(self, 28)
     }
     #[doc = "Bit 29 - Port D bit 5 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack5(&mut self) -> Pdiack5W<IrqDetectAckSpec> {
         Pdiack5W::new(self, 29)
     }
     #[doc = "Bit 30 - Port D bit 6 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack6(&mut self) -> Pdiack6W<IrqDetectAckSpec> {
         Pdiack6W::new(self, 30)
     }
     #[doc = "Bit 31 - Port D bit 7 masked interrupt status: 1: Detected 0: Not detected"]
     #[inline(always)]
-    #[must_use]
     pub fn pdiack7(&mut self) -> Pdiack7W<IrqDetectAckSpec> {
         Pdiack7W::new(self, 31)
     }
 }
-#[doc = "If the IRQ detect ACK register is read, the value returned can be used to determine which enabled I/O port is responsible for creating a power-up interrupt to the system. Writing the IRQ detect ACK register is used to clear any number of individual port bits that may be signaling that an edge was detected as configured by the port edge control register and the interrupt control register. There is a self-clearing function to this register that generates a reset pulse to clear any interrupt which has its corresponding bit set to 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`irq_detect_ack::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`irq_detect_ack::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "If the IRQ detect ACK register is read, the value returned can be used to determine which enabled I/O port is responsible for creating a power-up interrupt to the system. Writing the IRQ detect ACK register is used to clear any number of individual port bits that may be signaling that an edge was detected as configured by the port edge control register and the interrupt control register. There is a self-clearing function to this register that generates a reset pulse to clear any interrupt which has its corresponding bit set to 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`irq_detect_ack::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irq_detect_ack::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IrqDetectAckSpec;
 impl crate::RegisterSpec for IrqDetectAckSpec {
     type Ux = u32;

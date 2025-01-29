@@ -23,7 +23,7 @@ impl R {
         CalDoneR::new(((self.bits >> 7) & 1) != 0)
     }
 }
-#[doc = "Radio status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fsmstat0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Radio status register\n\nYou can [`read`](crate::Reg::read) this register and get [`fsmstat0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Fsmstat0Spec;
 impl crate::RegisterSpec for Fsmstat0Spec {
     type Ux = u32;

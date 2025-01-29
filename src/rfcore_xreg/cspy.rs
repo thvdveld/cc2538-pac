@@ -9,7 +9,7 @@ impl R {
         CspyR::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "CSP Y data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cspy::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CSP Y data register\n\nYou can [`read`](crate::Reg::read) this register and get [`cspy::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CspySpec;
 impl crate::RegisterSpec for CspySpec {
     type Ux = u32;

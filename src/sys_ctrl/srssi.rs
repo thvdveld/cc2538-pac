@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: SSI0 module is not reset 1: SSI0 module is reset"]
     #[inline(always)]
-    #[must_use]
     pub fn ssi0(&mut self) -> Ssi0W<SrssiSpec> {
         Ssi0W::new(self, 0)
     }
     #[doc = "Bit 1 - 0: SSI1 module is not reset 1: SSI1 module is reset"]
     #[inline(always)]
-    #[must_use]
     pub fn ssi1(&mut self) -> Ssi1W<SrssiSpec> {
         Ssi1W::new(self, 1)
     }
 }
-#[doc = "This register controls the reset for SSI\\[1:0\\].\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`srssi::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`srssi::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register controls the reset for SSI\\[1:0\\].\n\nYou can [`read`](crate::Reg::read) this register and get [`srssi::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srssi::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SrssiSpec;
 impl crate::RegisterSpec for SrssiSpec {
     type Ux = u32;

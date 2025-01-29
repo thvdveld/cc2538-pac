@@ -20,12 +20,11 @@ impl W {
     #[doc = "Bits 0:7 - Indirectly returns and modifies bits \\[15:8\\]
 of an internal register, depending on the value of MTMSEL.MTMSEL. When reading the MTM0 register with MTMSEL.MTMSEL set to 000, the timer (MTtim) value is latched. Reading this register with MTMSEL.MTMSEL set to 000 returns the latched value of MTtim\\[15:8\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn mtm1(&mut self) -> Mtm1W<Mtm1Spec> {
         Mtm1W::new(self, 0)
     }
 }
-#[doc = "MAC Timer multiplexed register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mtm1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mtm1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MAC Timer multiplexed register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`mtm1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtm1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Mtm1Spec;
 impl crate::RegisterSpec for Mtm1Spec {
     type Ux = u32;

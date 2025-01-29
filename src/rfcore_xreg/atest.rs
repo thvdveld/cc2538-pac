@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Controls the analog test mode: 00 0000: Disabled 00 0001: Enables the temperature sensor (see also the CCTEST_TR0 register description). Other values reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn atest_ctrl(&mut self) -> AtestCtrlW<AtestSpec> {
         AtestCtrlW::new(self, 0)
     }
 }
-#[doc = "Analog test control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`atest::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`atest::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Analog test control\n\nYou can [`read`](crate::Reg::read) this register and get [`atest::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`atest::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AtestSpec;
 impl crate::RegisterSpec for AtestSpec {
     type Ux = u32;

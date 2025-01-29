@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Bit mask is masking out interrupt sources. Bit position: 5: CSP_WAIT 4: CSP_STOP 3: CSP_MANINT 2: RF_IDLE 1: TXDONE 0: TXACKDONE"]
     #[inline(always)]
-    #[must_use]
     pub fn rfirqm(&mut self) -> RfirqmW<Rfirqm1Spec> {
         RfirqmW::new(self, 0)
     }
 }
-#[doc = "RF interrupt masks\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfirqm1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rfirqm1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RF interrupt masks\n\nYou can [`read`](crate::Reg::read) this register and get [`rfirqm1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rfirqm1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Rfirqm1Spec;
 impl crate::RegisterSpec for Rfirqm1Spec {
     type Ux = u32;

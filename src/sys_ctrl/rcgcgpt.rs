@@ -43,31 +43,27 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: Clock for GPT0 is gated. 1: Clock for GPT0 is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn gpt0(&mut self) -> Gpt0W<RcgcgptSpec> {
         Gpt0W::new(self, 0)
     }
     #[doc = "Bit 1 - 0: Clock for GPT1 is gated. 1: Clock for GPT1 is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn gpt1(&mut self) -> Gpt1W<RcgcgptSpec> {
         Gpt1W::new(self, 1)
     }
     #[doc = "Bit 2 - 0: Clock for GPT2 is gated. 1: Clock for GPT2 is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn gpt2(&mut self) -> Gpt2W<RcgcgptSpec> {
         Gpt2W::new(self, 2)
     }
     #[doc = "Bit 3 - 0: Clock for GPT3 is gated. 1: Clock for GPT3 is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn gpt3(&mut self) -> Gpt3W<RcgcgptSpec> {
         Gpt3W::new(self, 3)
     }
 }
 #[doc = "This register defines the module clocks for GPT\\[3:0\\]
-when the CPU is in active (run) mode. This register setting is don't care for PM1-3, because the system clock is powered down in these modes.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rcgcgpt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rcgcgpt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+when the CPU is in active (run) mode. This register setting is don't care for PM1-3, because the system clock is powered down in these modes.\n\nYou can [`read`](crate::Reg::read) this register and get [`rcgcgpt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rcgcgpt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RcgcgptSpec;
 impl crate::RegisterSpec for RcgcgptSpec {
     type Ux = u32;

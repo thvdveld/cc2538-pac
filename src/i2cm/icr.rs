@@ -5,12 +5,11 @@ pub type IcW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Interrupt clear Writing 1 to this bit clears the RIS bit in the I2CMRIS register and the MIS bit in the I2CMMIS register. Reading this register returns no meaningful data."]
     #[inline(always)]
-    #[must_use]
     pub fn ic(&mut self) -> IcW<IcrSpec> {
         IcW::new(self, 0)
     }
 }
-#[doc = "I2C master interrupt clear This register clears the raw and masked interrupts.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`icr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C master interrupt clear This register clears the raw and masked interrupts.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IcrSpec;
 impl crate::RegisterSpec for IcrSpec {
     type Ux = u32;

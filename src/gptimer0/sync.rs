@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Synchronize GPTM0 0x0: GPTM0 is not affected. 0x1: A time-out event for Timer A of GPTM0 is triggered. 0x2: A time-out event for Timer B of GPTM0 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM0 is triggered."]
     #[inline(always)]
-    #[must_use]
     pub fn sync0(&mut self) -> Sync0W<SyncSpec> {
         Sync0W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Synchronize GPTM1 0x0: GPTM1 is not affected. 0x1: A time-out event for Timer A of GPTM1 is triggered. 0x2: A time-out event for Timer B of GPTM1 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM1 is triggered."]
     #[inline(always)]
-    #[must_use]
     pub fn sync1(&mut self) -> Sync1W<SyncSpec> {
         Sync1W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Synchronize GPTM2 0x0: GPTM2 is not affected. 0x1: A time-out event for Timer A of GPTM2 is triggered. 0x2: A time-out event for Timer B of GPTM2 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM2 is triggered."]
     #[inline(always)]
-    #[must_use]
     pub fn sync2(&mut self) -> Sync2W<SyncSpec> {
         Sync2W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Synchronize GPTM3 0x0: GPTM3 is not affected. 0x1: A time-out event for Timer A of GPTM3 is triggered. 0x2: A time-out event for Timer B of GPTM3 is triggered. 0x3: A time-out event for Timer A and Timer B of GPTM3 is triggered."]
     #[inline(always)]
-    #[must_use]
     pub fn sync3(&mut self) -> Sync3W<SyncSpec> {
         Sync3W::new(self, 6)
     }
 }
-#[doc = "GPTM synchronize Note: This register is implemented on GPTM 0 base address only. This register does however, allow software to synchronize a number of timers.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sync::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sync::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM synchronize Note: This register is implemented on GPTM 0 base address only. This register does however, allow software to synchronize a number of timers.\n\nYou can [`read`](crate::Reg::read) this register and get [`sync::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sync::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SyncSpec;
 impl crate::RegisterSpec for SyncSpec {
     type Ux = u32;

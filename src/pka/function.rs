@@ -136,92 +136,78 @@ of the PKA_DIVMSW register - can only be used with basic PKCP operations, except
 impl W {
     #[doc = "Bit 0 - Perform multiply operation"]
     #[inline(always)]
-    #[must_use]
     pub fn multiply(&mut self) -> MultiplyW<FunctionSpec> {
         MultiplyW::new(self, 0)
     }
     #[doc = "Bit 1 - Perform combined add/subtract operation"]
     #[inline(always)]
-    #[must_use]
     pub fn addsub(&mut self) -> AddsubW<FunctionSpec> {
         AddsubW::new(self, 1)
     }
     #[doc = "Bit 3 - Loads the location of the Most Significant one bit within the result word indicated in the PKA_MSW register into bits \\[4:0\\]
 of the PKA_DIVMSW register - can only be used with basic PKCP operations, except for Divide, Modulo and Compare."]
     #[inline(always)]
-    #[must_use]
     pub fn ms_one(&mut self) -> MsOneW<FunctionSpec> {
         MsOneW::new(self, 3)
     }
     #[doc = "Bit 4 - Perform add operation"]
     #[inline(always)]
-    #[must_use]
     pub fn add(&mut self) -> AddW<FunctionSpec> {
         AddW::new(self, 4)
     }
     #[doc = "Bit 5 - Perform subtract operation"]
     #[inline(always)]
-    #[must_use]
     pub fn subtract(&mut self) -> SubtractW<FunctionSpec> {
         SubtractW::new(self, 5)
     }
     #[doc = "Bit 6 - Perform right shift operation"]
     #[inline(always)]
-    #[must_use]
     pub fn rshift(&mut self) -> RshiftW<FunctionSpec> {
         RshiftW::new(self, 6)
     }
     #[doc = "Bit 7 - Perform left shift operation"]
     #[inline(always)]
-    #[must_use]
     pub fn lshift(&mut self) -> LshiftW<FunctionSpec> {
         LshiftW::new(self, 7)
     }
     #[doc = "Bit 8 - Perform divide operation"]
     #[inline(always)]
-    #[must_use]
     pub fn divide(&mut self) -> DivideW<FunctionSpec> {
         DivideW::new(self, 8)
     }
     #[doc = "Bit 9 - Perform modulo operation"]
     #[inline(always)]
-    #[must_use]
     pub fn modulo(&mut self) -> ModuloW<FunctionSpec> {
         ModuloW::new(self, 9)
     }
     #[doc = "Bit 10 - Perform compare operation"]
     #[inline(always)]
-    #[must_use]
     pub fn compare(&mut self) -> CompareW<FunctionSpec> {
         CompareW::new(self, 10)
     }
     #[doc = "Bit 11 - Perform copy operation"]
     #[inline(always)]
-    #[must_use]
     pub fn copy(&mut self) -> CopyW<FunctionSpec> {
         CopyW::new(self, 11)
     }
     #[doc = "Bits 12:14 - These bits select the complex sequencer operation to perform: 000b: None 001b: ExpMod-CRT 010b: ExpMod-ACT4 (compatible with EIP2315) 011b: ECC-ADD (if available in firmware, otherwise reserved) 100b: ExpMod-ACT2 (compatible with EIP2316) 101b: ECC-MUL (if available in firmware, otherwise reserved) 110b: ExpMod-variable 111b: ModInv (if available in firmware, otherwise reserved) The encoding of these operations is determined by sequencer firmware."]
     #[inline(always)]
-    #[must_use]
     pub fn sequencer_operations(&mut self) -> SequencerOperationsW<FunctionSpec> {
         SequencerOperationsW::new(self, 12)
     }
     #[doc = "Bit 15 - The host sets this bit to instruct the PKA module to begin processing the basic PKCP or complex sequencer operation. This bit is reset low automatically when the operation is complete. The complement of this bit is output as interrupts\\[1\\]. After a reset, the run bit is always set to 1b. Depending on the option, program ROM or program RAM, the following applies: Program ROM - The first sequencer instruction sets the bit to 0b. This is done immediately after the hardware reset is released. Program RAM - The sequencer must set the bit to 0b. As a valid firmware may not have been loaded, the sequencer is held in software reset after the hardware reset is released (the reset bit in PKA_SEQ_CRTL is set to 1b). After the FW image is loaded and the Reset bit is cleared, the sequencer starts to execute the FW. The first instruction clears the run bit. In both cases a few clock cycles are needed before the first instruction is executed and the run bit state has been propagated."]
     #[inline(always)]
-    #[must_use]
     pub fn run(&mut self) -> RunW<FunctionSpec> {
         RunW::new(self, 15)
     }
     #[doc = "Bit 24 - When written with a 1b, updating of the PKA_COMPARE, PKA_MSW and PKA_DIVMSW registers, as well as resetting the run bit is stalled beyond the point that a running operation is actually finished. Use this to allow software enough time to read results from a previous operation when the newly started operation is known to take only a short amount of time. If a result is waiting, the result registers is updated and the run bit is reset in the clock cycle following writing the stall result bit back to 0b. The Stall result function may only be used for basic PKCP operations."]
     #[inline(always)]
-    #[must_use]
     pub fn stall_result(&mut self) -> StallResultW<FunctionSpec> {
         StallResultW::new(self, 24)
     }
 }
 #[doc = "PKA function This register contains the control bits to start basic PKCP as well as complex sequencer operations. The run bit can be used to poll for the completion of the operation. Modifying bits \\[11:0\\]
-is made impossible during the execution of a basic PKCP operation. During the execution of sequencer-controlled complex operations, this register is modified; the run and stall result bits are set to zero at the conclusion, but other bits are undefined. Attention: Continuously reading this register to poll the run bit is not allowed when executing complex sequencer operations (the sequencer cannot access the PKCP when this is done). Leave at least one sysclk cycle between poll operations.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`function::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`function::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+is made impossible during the execution of a basic PKCP operation. During the execution of sequencer-controlled complex operations, this register is modified; the run and stall result bits are set to zero at the conclusion, but other bits are undefined. Attention: Continuously reading this register to poll the run bit is not allowed when executing complex sequencer operations (the sequencer cannot access the PKCP when this is done). Leave at least one sysclk cycle between poll operations.\n\nYou can [`read`](crate::Reg::read) this register and get [`function::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`function::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FunctionSpec;
 impl crate::RegisterSpec for FunctionSpec {
     type Ux = u32;

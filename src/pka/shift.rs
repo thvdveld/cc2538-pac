@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - This register specifies the number of bits to shift the input vector (in the range 0-31) during a Rshift or Lshift operation."]
     #[inline(always)]
-    #[must_use]
     pub fn num_bits_to_shift(&mut self) -> NumBitsToShiftW<ShiftSpec> {
         NumBitsToShiftW::new(self, 0)
     }
 }
-#[doc = "PKA bit shift value For basic PKCP operations, modifying the contents of this register is made impossible while the operation is being performed. For the ExpMod-variable and ExpMod-CRT operations, this register is used to indicate the number of odd powers to use (directly as a value in the range 1-16). For the ModInv and ECC operations, this register is used to hold a completion code.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`shift::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`shift::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PKA bit shift value For basic PKCP operations, modifying the contents of this register is made impossible while the operation is being performed. For the ExpMod-variable and ExpMod-CRT operations, this register is used to indicate the number of odd powers to use (directly as a value in the range 1-16). For the ModInv and ECC operations, this register is used to hold a completion code.\n\nYou can [`read`](crate::Reg::read) this register and get [`shift::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shift::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ShiftSpec;
 impl crate::RegisterSpec for ShiftSpec {
     type Ux = u32;

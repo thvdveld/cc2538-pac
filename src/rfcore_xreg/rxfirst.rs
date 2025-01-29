@@ -9,7 +9,7 @@ impl R {
         DataR::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "First byte in RX FIFO\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rxfirst::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "First byte in RX FIFO\n\nYou can [`read`](crate::Reg::read) this register and get [`rxfirst::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RxfirstSpec;
 impl crate::RegisterSpec for RxfirstSpec {
     type Ux = u32;
